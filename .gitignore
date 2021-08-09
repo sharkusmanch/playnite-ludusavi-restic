@@ -1,0 +1,5 @@
+bin/
+dist/
+obj/
+tmp/
+*.sln
