@@ -87,7 +87,7 @@ namespace LudusaviRestic
             IList<string> files = new List<string>();
 
             string command = settings.LudusaviExecutablePath.Trim();
-            string args = $"backup --api --merge \"{game.Name}\"";
+            string args = $"backup --api --try-update --merge \"{game.Name}\"";
 
             string stdout;
             int exitCode;
@@ -102,8 +102,6 @@ namespace LudusaviRestic
                 return files;
             }
 
-            logger.Debug($"Got {game.Name} data from ludusavi");
-
             JObject gameData = JObject.Parse(stdout);
 
             int totalGames = (int)gameData["overall"]["totalGames"];
@@ -111,9 +109,11 @@ namespace LudusaviRestic
             if (totalGames != 1)
             {
                 logger.Error("Unable to get game info from ludusavi");
+                SendErrorNotification($"No save files found for {game.Name}");
                 return files;
             }
 
+            logger.Debug($"Got {game.Name} data from ludusavi");
 
             JObject filesMap = (JObject)gameData["games"][$"{game}"]["files"];
 
