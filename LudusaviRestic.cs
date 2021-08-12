@@ -87,22 +87,22 @@ namespace LudusaviRestic
             IList<string> files = new List<string>();
 
             string command = settings.LudusaviExecutablePath.Trim();
-            string args = $"backup --api --try-update --merge \"{game.Name}\"";
+            string args = $"backup --api --try-update --preview --merge \"{game.Name}\"";
 
             string stdout;
             int exitCode;
+            JObject gameData;
 
             try
             {
                 (exitCode, stdout) = ExecuteCommand(command, args);
+                gameData = JObject.Parse(stdout);
             }
             catch (Exception e)
             {
                 logger.Debug(e, "Failed to get files from ludusavi");
                 return files;
             }
-
-            JObject gameData = JObject.Parse(stdout);
 
             int totalGames = (int)gameData["overall"]["totalGames"];
 
