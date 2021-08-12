@@ -5,44 +5,46 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
              d:DesignHeight="400" d:DesignWidth="600">
-    <StackPanel>
-        <StackPanel Margin="15">
-            <TextBlock Text="Ludusavi path" />
-            <TextBox Margin="0,2,0,0" Text="{Binding LudusaviExecutablePath}" />
-            <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
-                <Button Content="Browse" Click="OnBrowseLudusaviExecutablePath" />
+    <ScrollViewer Margin="0,10,0,0">
+        <StackPanel>
+            <StackPanel Margin="15">
+                <TextBlock Text="Ludusavi path" />
+                <TextBox Margin="0,2,0,0" Text="{Binding LudusaviExecutablePath}" />
+                <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
+                    <Button Content="Browse" Click="OnBrowseLudusaviExecutablePath" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Margin="15">
+                <TextBlock Text="Restic path" />
+                <TextBox Margin="0,2,0,0" Text="{Binding ResticExecutablePath}" />
+                <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
+                    <Button Content="Browse" Click="OnBrowseResticExecutablePath" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Margin="15">
+                <TextBlock Text="Restic repository" />
+                <TextBox Margin="0,2,0,0" Text="{Binding ResticRepository}" />
+            </StackPanel>
+
+            <StackPanel Margin="15">
+                <TextBlock Text="Restic repository password" />
+                <TextBox Margin="0,2,0,0" Text="{Binding ResticPassword}" />
+            </StackPanel>
+
+            <StackPanel Margin="15">
+                <TextBlock Text="Rclone config" />
+                <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPath}" />
+                <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
+                    <Button Content="Browse" Click="OnBrowseRcloneConfPath" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Margin="15">
+                <TextBlock Text="Rclone config password" />
+                <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPassword}" />
             </StackPanel>
         </StackPanel>
-
-        <StackPanel Margin="15">
-            <TextBlock Text="Restic path" />
-            <TextBox Margin="0,2,0,0" Text="{Binding ResticExecutablePath}" />
-            <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
-                <Button Content="Browse" Click="OnBrowseResticExecutablePath" />
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel Margin="15">
-            <TextBlock Text="Restic repository" />
-            <TextBox Margin="0,2,0,0" Text="{Binding ResticRepository}" />
-        </StackPanel>
-
-        <StackPanel Margin="15">
-            <TextBlock Text="Restic repository password" />
-            <TextBox Margin="0,2,0,0" Text="{Binding ResticPassword}" />
-        </StackPanel>
-
-        <StackPanel Margin="15">
-            <TextBlock Text="Rclone config" />
-            <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPath}" />
-            <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
-                <Button Content="Browse" Click="OnBrowseRcloneConfPath" />
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel Margin="15">
-            <TextBlock Text="Rclone config password" />
-            <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPassword}" />
-        </StackPanel>
-    </StackPanel>
+    </ScrollViewer>
 </UserControl>

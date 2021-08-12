@@ -16,7 +16,9 @@ Goal of this project is to provide a thin layer connecting these two existing to
 ## Prerequisites
 
 - This plugin requires that `ludusavi` and `restic` are installed.
-- Rclone may be optionally installed and configured to allow many more cloud backends to
+    - [ludusavi installation doc](https://github.com/mtkennerly/ludusavi#installation)
+    - [restic installation doc](https://restic.readthedocs.io/en/latest/020_installation.html)
+- [rclone](https://github.com/rclone/rclone) may be optionally installed and configured to allow many more cloud backends to
 - A restic repository designated to host snapshots of game save data.
 
 ## Getting Started
