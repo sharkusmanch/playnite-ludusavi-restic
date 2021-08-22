@@ -17,9 +17,8 @@ namespace LudusaviRestic
             process.StartInfo.CreateNoWindow = true;
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.RedirectStandardError = true;
-            process.Start();
 
-            string stdout = process.StandardOutput.ReadToEnd();
+            process.Start();
             process.WaitForExit();
 
             return process;

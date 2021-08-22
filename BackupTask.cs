@@ -45,6 +45,12 @@ namespace LudusaviRestic
         private static void Backup(Game game, BackupContext context)
         {
             IList<String> files = GameFiles(game, context);
+            
+            if (files.Count == 0)
+            {
+                return;
+            }
+
             CreateSnapshot(files, context, game);
         }
 
@@ -62,6 +68,7 @@ namespace LudusaviRestic
             catch (Exception e)
             {
                 logger.Debug(e, "Failed to get files from ludusavi");
+                SendErrorNotification("Failed to get files from ludusavi", context);
                 return files;
             }
 
