@@ -45,7 +45,7 @@ namespace LudusaviRestic
         private static void Backup(Game game, BackupContext context)
         {
             IList<String> files = GameFiles(game, context);
-            
+
             if (files.Count == 0)
             {
                 return;
@@ -62,8 +62,8 @@ namespace LudusaviRestic
 
             try
             {
-                Process process = LudusaviCommand.Backup(context, game.Name);
-                gameData = JObject.Parse(process.StandardOutput.ReadToEnd());
+                CommandResult ludusavi = LudusaviCommand.Backup(context, game.Name);
+                gameData = JObject.Parse(ludusavi.StdOut);
             }
             catch (Exception e)
             {
@@ -97,7 +97,7 @@ namespace LudusaviRestic
         {
             string backupArgs = $"--tag  \"{game}\" {string.Join(" ", files)}";
 
-            Process process;
+            CommandResult process;
 
             try
             {

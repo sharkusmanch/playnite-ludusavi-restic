@@ -4,37 +4,37 @@ namespace LudusaviRestic
 {
     public class ResticCommand : BaseCommand
     {
-        public static Process Version(BackupContext context)
+        public static CommandResult Version(BackupContext context)
         {
             return ResticExecute(context, "version");
         }
 
-        public static Process Unlock(BackupContext context)
+        public static CommandResult Unlock(BackupContext context)
         {
             return ResticExecute(context, "unlock");
         }
 
-        public static Process Stats(BackupContext context)
+        public static CommandResult Stats(BackupContext context)
         {
             return ResticExecute(context, "stats");
         }
 
-        public static Process Backup(BackupContext context, string args)
+        public static CommandResult Backup(BackupContext context, string args)
         {
             return ResticExecute(context, $"backup {args}");
         }
 
-        public static Process List(BackupContext context, string args)
+        public static CommandResult List(BackupContext context, string args)
         {
             return ResticExecute(context, $"list {args}");
         }
 
-        public static Process Verify(BackupContext context)
+        public static CommandResult Verify(BackupContext context)
         {
             return List(context, "keys");
         }
 
-        private static Process ResticExecute(BackupContext context, string args)
+        private static CommandResult ResticExecute(BackupContext context, string args)
         {
             string command = context.Settings.ResticExecutablePath.Trim();
             return ExecuteCommand(command, args);

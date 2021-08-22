@@ -56,8 +56,8 @@ namespace LudusaviRestic
 
                 try 
                 {
-                    Process restic = ResticCommand.Verify(context);
-                    Process ludusavi = LudusaviCommand.Version(context);
+                    CommandResult restic = ResticCommand.Verify(context);
+                    CommandResult ludusavi = LudusaviCommand.Version(context);
 
                     if (restic.ExitCode == 0)
                     {
@@ -65,7 +65,7 @@ namespace LudusaviRestic
                     }
                     else
                     {
-                        result += $"\n\nrestic - {restic.StandardError.ReadToEnd()}";
+                        result += $"\n\nrestic - {restic.StdErr}";
                     }
 
                     if (ludusavi.ExitCode == 0)
@@ -74,7 +74,7 @@ namespace LudusaviRestic
                     }
                     else
                     {
-                        result += $"\n\nludusavi - {ludusavi.StandardError.ReadToEnd()}";
+                        result += $"\n\nludusavi - {ludusavi.StdOut}";
                     }
 
                     this.plugin.PlayniteApi.Dialogs.ShowMessage(result);

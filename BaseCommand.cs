@@ -7,7 +7,7 @@ namespace LudusaviRestic
     {
         protected static readonly ILogger logger = LogManager.GetLogger();
 
-        protected static Process ExecuteCommand(string command, string args)
+        protected static CommandResult ExecuteCommand(string command, string args)
         {
             Process process = new Process();
             process.StartInfo.FileName = command;
@@ -18,10 +18,10 @@ namespace LudusaviRestic
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.RedirectStandardError = true;
 
-            process.Start();
-            process.WaitForExit();
+            logger.Debug(process.StartInfo.FileName);
+            logger.Debug(process.StartInfo.Arguments);
 
-            return process;
+            return new CommandResult(process);
         }
     }
 }
