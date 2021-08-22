@@ -17,8 +17,8 @@ namespace LudusaviRestic
             }
         }
 
-        private string ludisaviExecutablePath = "ludusavi";
-        public string LudusaviExecutablePath { get { return ludisaviExecutablePath; } set { ludisaviExecutablePath = value; NotifyPropertyChanged("LudusaviExecutablePath"); } }
+        private string ludusaviExecutablePath = "ludusavi";
+        public string LudusaviExecutablePath { get { return ludusaviExecutablePath; } set { ludusaviExecutablePath = value; NotifyPropertyChanged("LudusaviExecutablePath"); } }
 
         private string resticExecutablePath = "restic";
         public string ResticExecutablePath { get { return resticExecutablePath; } set { resticExecutablePath = value; NotifyPropertyChanged("ResticExecutablePath"); } }
@@ -50,7 +50,7 @@ namespace LudusaviRestic
             // LoadPluginSettings returns null if not saved data is available.
             if (savedSettings != null)
             {
-                LudusaviExecutablePath = savedSettings.ludisaviExecutablePath;
+                LudusaviExecutablePath = savedSettings.ludusaviExecutablePath;
                 ResticExecutablePath = savedSettings.resticExecutablePath;
                 ResticRepository = savedSettings.resticRepository;
                 ResticPassword = savedSettings.resticPassword;

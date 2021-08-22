@@ -24,7 +24,7 @@
             </StackPanel>
 
             <StackPanel Margin="15">
-                <TextBlock Text="Restic repository" />
+                <TextBlock Text="Restic repository path" />
                 <TextBox Margin="0,2,0,0" Text="{Binding ResticRepository}" />
             </StackPanel>
 
