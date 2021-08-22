@@ -1,6 +1,5 @@
 using Playnite.SDK;
 using Playnite.SDK.Models;
-using Playnite.SDK.Plugins;
 using System.Diagnostics;
 using System;
 using System.Collections.Generic;
@@ -53,17 +52,12 @@ namespace LudusaviRestic
         {
             IList<string> files = new List<string>();
 
-            string command = context.Settings.LudusaviExecutablePath.Trim();
-            string args = $"backup --api --try-update --preview --merge \"{game.Name}\"";
-
-            string stdout;
-            int exitCode;
             JObject gameData;
 
             try
             {
-                (exitCode, stdout) = ExecuteCommand(command, args);
-                gameData = JObject.Parse(stdout);
+                Process process = LudusaviCommand.Backup(context, game.Name);
+                gameData = JObject.Parse(process.StandardOutput.ReadToEnd());
             }
             catch (Exception e)
             {
@@ -94,15 +88,13 @@ namespace LudusaviRestic
 
         private static void CreateSnapshot(IList<string> files, BackupContext context, Game game)
         {
-            string command = context.Settings.ResticExecutablePath.Trim();
-            string backupArgs = $"backup --tag  \"{game}\" {string.Join(" ", files)}";
+            string backupArgs = $"--tag  \"{game}\" {string.Join(" ", files)}";
 
-            string stdout;
-            int exitCode;
+            Process process;
 
             try
             {
-                (exitCode, stdout) =  ExecuteCommand(command, backupArgs);
+                process =  ResticCommand.Backup(context, backupArgs);
             }
             catch (Exception e)
             {
@@ -110,7 +102,7 @@ namespace LudusaviRestic
                 return;
             }
 
-            switch (exitCode)
+            switch (process.ExitCode)
             {
                 case 1:
                     logger.Error($"Failed to create restic game saves snapshot {game.Name}");
@@ -124,24 +116,6 @@ namespace LudusaviRestic
                     SendInfoNotification($"Successfully created game data snapshot for {game.Name}", context);
                     break;
             }
-        }
-
-        private static (int, string) ExecuteCommand(string command, string args)
-        {
-            Process process = new Process();
-            process.StartInfo.FileName = command;
-            process.StartInfo.Arguments = args;
-            process.StartInfo.UseShellExecute = false;
-            process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            process.StartInfo.CreateNoWindow = true;
-            process.StartInfo.RedirectStandardOutput = true;
-            process.StartInfo.RedirectStandardError = true;
-            process.Start();
-
-            string stdout = process.StandardOutput.ReadToEnd();
-            process.WaitForExit();
-
-            return (process.ExitCode, stdout);
         }
 
         private static void SendNotification(string message, NotificationType type, BackupContext context) 

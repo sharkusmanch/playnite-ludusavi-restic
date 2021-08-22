@@ -1,8 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
-using Playnite.SDK;
-using Playnite.SDK.Plugins;
-using Playnite.SDK.Models;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace LudusaviRestic
 {
@@ -44,6 +44,46 @@ namespace LudusaviRestic
             {
                 this.plugin.settings.RcloneConfigPath = choice;
             }
+        }
+
+        public void OnVerify(object sender, RoutedEventArgs e)
+        {
+            BackupContext context = new BackupContext(this.plugin.PlayniteApi, this.plugin.settings);
+
+            Task.Run(() =>
+            {
+                string result = "Ludusavi Restic Settings Verification:";
+
+                try 
+                {
+                    Process restic = ResticCommand.Verify(context);
+                    Process ludusavi = LudusaviCommand.Version(context);
+
+                    if (restic.ExitCode == 0)
+                    {
+                        result += "\n\nrestic - repository connection succeeded";
+                    }
+                    else
+                    {
+                        result += $"\n\nrestic - {restic.StandardError.ReadToEnd()}";
+                    }
+
+                    if (ludusavi.ExitCode == 0)
+                    {
+                        result += "\n\nludusavi - verification succeeded";
+                    }
+                    else
+                    {
+                        result += $"\n\nludusavi - {ludusavi.StandardError.ReadToEnd()}";
+                    }
+
+                    this.plugin.PlayniteApi.Dialogs.ShowMessage(result);
+                }
+                catch (Exception ex)
+                {
+                    this.plugin.PlayniteApi.Dialogs.ShowMessage($"Ludusavi Restic Settings Verification failed: {ex.ToString()}");
+                }
+            });
         }
     }
 }

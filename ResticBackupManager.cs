@@ -1,9 +1,6 @@
 using Playnite.SDK;
 using Playnite.SDK.Models;
-using Playnite.SDK.Plugins;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 
 namespace LudusaviRestic
 {

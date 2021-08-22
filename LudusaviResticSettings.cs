@@ -4,7 +4,7 @@ using System.ComponentModel;
 
 namespace LudusaviRestic
 {
-    public class LudusaviResticSettings : ISettings
+    public class LudusaviResticSettings : ISettings, INotifyPropertyChanged
     {
         private readonly LudusaviRestic plugin;
 

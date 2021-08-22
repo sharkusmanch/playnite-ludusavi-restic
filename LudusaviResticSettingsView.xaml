@@ -45,6 +45,8 @@
                 <TextBlock Text="Rclone config password" />
                 <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPassword}" />
             </StackPanel>
+
+            <Button Name="VerifyButton" Content="Verify" Click="OnVerify" />
         </StackPanel>
     </ScrollViewer>
 </UserControl>
