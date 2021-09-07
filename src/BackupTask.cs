@@ -125,7 +125,7 @@ namespace LudusaviRestic
             }
         }
 
-        private static void SendNotification(string message, NotificationType type, BackupContext context) 
+        private static void SendNotification(string message, NotificationType type, BackupContext context)
         {
             context.API.Notifications.Add(new NotificationMessage(context.NotificationID, message, type));
         }

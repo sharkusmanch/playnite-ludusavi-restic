@@ -1,0 +1,8 @@
+AddonId: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
+Packages:
+  - Version: 0.2.0
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2021-09-06
+    PackageUrl: https://github.com/sharkusmanch//playnite-ludusavi-restic/releases/download/v0.2.0/LudusaviRestic_v0.2.0.pext
+    Changelog:
+      - Playnite 9 support
