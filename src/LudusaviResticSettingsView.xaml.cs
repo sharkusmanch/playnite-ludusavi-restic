@@ -24,7 +24,7 @@ namespace LudusaviRestic
 
             if (choice.Length > 0)
             {
-                this.plugin.settings.Settings.LudusaviExecutablePath = choice;
+                this.plugin.settings.LudusaviExecutablePath = choice;
             }
         }
 
@@ -34,7 +34,7 @@ namespace LudusaviRestic
 
             if (choice.Length > 0)
             {
-                this.plugin.settings.Settings.ResticExecutablePath = choice;
+                this.plugin.settings.ResticExecutablePath = choice;
             }
         }
 
@@ -44,13 +44,13 @@ namespace LudusaviRestic
 
             if (choice.Length > 0)
             {
-                this.plugin.settings.Settings.RcloneConfigPath = choice;
+                this.plugin.settings.RcloneConfigPath = choice;
             }
         }
 
         public void OnVerify(object sender, RoutedEventArgs e)
         {
-            BackupContext context = new BackupContext(this.plugin.PlayniteApi, this.plugin.settings.Settings);
+            BackupContext context = new BackupContext(this.plugin.PlayniteApi, this.plugin.settings);
 
             Task.Run(() =>
             {

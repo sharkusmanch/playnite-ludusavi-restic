@@ -1,47 +1,61 @@
 ﻿using Playnite.SDK;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace LudusaviRestic
 {
-    public class LudusaviResticSettings
-    {
-        private static readonly ILogger logger = LogManager.GetLogger();
-
-        public string LudusaviExecutablePath { get; set; } = string.Empty;
-        public string ResticExecutablePath { get; set; } = string.Empty;
-        public string ResticRepository { get; set; } = string.Empty;
-        public string ResticPassword { get; set; } = string.Empty;
-        public string RcloneConfigPath { get; set; } = string.Empty;
-        public string RcloneConfigPassword { get; set; } = string.Empty;
-    }
-
-    public class LudusaviResticSettingsViewModel : ObservableObject, ISettings
+    public class LudusaviResticSettings : ISettings, INotifyPropertyChanged
     {
         private readonly LudusaviRestic plugin;
-        private LudusaviResticSettings editingClone { get; set; }
-        private LudusaviResticSettings settings;
-        public LudusaviResticSettings Settings
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged(string propertyName)
         {
-            get => settings;
-            set
+            if (PropertyChanged != null)
             {
-                settings = value;
-                OnPropertyChanged();
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
 
-        public LudusaviResticSettingsViewModel(LudusaviRestic plugin)
+        private string ludusaviExecutablePath = "ludusavi";
+        public string LudusaviExecutablePath { get { return ludusaviExecutablePath; } set { ludusaviExecutablePath = value; NotifyPropertyChanged("LudusaviExecutablePath"); } }
+
+        private string resticExecutablePath = "restic";
+        public string ResticExecutablePath { get { return resticExecutablePath; } set { resticExecutablePath = value; NotifyPropertyChanged("ResticExecutablePath"); } }
+        private string resticRepository;
+        public string ResticRepository { get { return resticRepository; } set { resticRepository = value; NotifyPropertyChanged("ResticRepository"); } }
+        private string resticPassword;
+        public string ResticPassword { get { return resticPassword; } set { resticPassword = value; NotifyPropertyChanged("ResticPassword"); } }
+        private string rcloneConfigPath;
+        public string RcloneConfigPath { get { return rcloneConfigPath; } set { rcloneConfigPath = value; NotifyPropertyChanged("RcloneConfigPath"); } }
+        private string rcloneConfigPassword;
+        public string RcloneConfigPassword { get { return rcloneConfigPassword; } set { rcloneConfigPassword = value; NotifyPropertyChanged("RcloneConfigPassword"); } }
+
+        // Parameterless constructor must exist if you want to use LoadPluginSettings method.
+        public LudusaviResticSettings()
         {
+        }
+
+        public LudusaviResticSettings(LudusaviRestic plugin)
+        {
+            // Injecting your plugin instance is required for Save/Load method because Playnite saves data to a location based on what plugin requested the operation.
             this.plugin = plugin;
+            Load();
+        }
+        private void Load()
+        {
+            // Load saved settings.
             var savedSettings = plugin.LoadPluginSettings<LudusaviResticSettings>();
 
+            // LoadPluginSettings returns null if not saved data is available.
             if (savedSettings != null)
             {
-                Settings = savedSettings;
-            }
-            else
-            {
-                Settings = new LudusaviResticSettings();
+                LudusaviExecutablePath = savedSettings.ludusaviExecutablePath;
+                ResticExecutablePath = savedSettings.resticExecutablePath;
+                ResticRepository = savedSettings.resticRepository;
+                ResticPassword = savedSettings.resticPassword;
+                RcloneConfigPath = savedSettings.rcloneConfigPath;
+                RcloneConfigPassword = savedSettings.rcloneConfigPassword;
             }
         }
 
@@ -53,7 +67,8 @@ namespace LudusaviRestic
         public void CancelEdit()
         {
             // Code executed when user decides to cancel any changes made since BeginEdit was called.
-            Settings = editingClone;
+            // This method should revert any changes made to Option1 and Option2.
+            Load();
         }
 
         public void EndEdit()

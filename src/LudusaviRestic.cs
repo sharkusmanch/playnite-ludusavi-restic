@@ -9,7 +9,7 @@ namespace LudusaviRestic
 {
     public class LudusaviRestic : GenericPlugin
     {
-        public LudusaviResticSettingsViewModel settings { get; set; }
+        public LudusaviResticSettings settings { get; set; }
         private static readonly ILogger logger = LogManager.GetLogger();
 
         public override Guid Id { get; } = Guid.Parse("e9861c36-68a8-4654-8071-a9c50612bc24");
@@ -18,12 +18,12 @@ namespace LudusaviRestic
 
         public LudusaviRestic(IPlayniteAPI api) : base(api)
         {
-            this.settings = new LudusaviResticSettingsViewModel(this);
+            this.settings = new LudusaviResticSettings(this);
             Properties = new GenericPluginProperties
             {
                 HasSettings = true
             };
-            this.manager = new ResticBackupManager(this.settings.Settings, this.PlayniteApi);
+            this.manager = new ResticBackupManager(this.settings, this.PlayniteApi);
         }
 
         public override IEnumerable<GameMenuItem> GetGameMenuItems(GetGameMenuItemsArgs menuArgs)
