@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Diagnostics;
 using System.Threading.Tasks;
+using Playnite.SDK;
 
 namespace LudusaviRestic
 {
     public partial class LudusaviResticSettingsView : UserControl
     {
         private LudusaviRestic plugin;
+        private static readonly ILogger logger = LogManager.GetLogger();
 
         public LudusaviResticSettingsView(LudusaviRestic plugin)
         {
+            logger.Debug("LudusaviResticSettingsView init");
             InitializeComponent();
             this.plugin = plugin;
         }
@@ -54,7 +56,7 @@ namespace LudusaviRestic
             {
                 string result = "Ludusavi Restic Settings Verification:";
 
-                try 
+                try
                 {
                     CommandResult restic = ResticCommand.Verify(context);
                     CommandResult ludusavi = LudusaviCommand.Version(context);

@@ -1,5 +1,3 @@
-using System.Diagnostics;
-
 namespace LudusaviRestic
 {
     public class LudusaviCommand : BaseCommand

@@ -1,6 +1,5 @@
 using Playnite.SDK;
 using Playnite.SDK.Models;
-using System.Diagnostics;
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
@@ -101,7 +100,7 @@ namespace LudusaviRestic
 
             try
             {
-                process =  ResticCommand.Backup(context, backupArgs);
+                process = ResticCommand.Backup(context, backupArgs);
             }
             catch (Exception e)
             {
@@ -125,7 +124,7 @@ namespace LudusaviRestic
             }
         }
 
-        private static void SendNotification(string message, NotificationType type, BackupContext context) 
+        private static void SendNotification(string message, NotificationType type, BackupContext context)
         {
             context.API.Notifications.Add(new NotificationMessage(context.NotificationID, message, type));
         }
