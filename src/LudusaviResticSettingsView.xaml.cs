@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Diagnostics;
 using System.Threading.Tasks;
+using Playnite.SDK;
 
 namespace LudusaviRestic
 {
     public partial class LudusaviResticSettingsView : UserControl
     {
         private LudusaviRestic plugin;
+        private static readonly ILogger logger = LogManager.GetLogger();
 
         public LudusaviResticSettingsView(LudusaviRestic plugin)
         {
+            logger.Debug("LudusaviResticSettingsView init");
             InitializeComponent();
             this.plugin = plugin;
         }
@@ -22,7 +24,7 @@ namespace LudusaviRestic
 
             if (choice.Length > 0)
             {
-                this.plugin.settings.LudusaviExecutablePath = choice;
+                this.plugin.settings.Settings.LudusaviExecutablePath = choice;
             }
         }
 
@@ -32,7 +34,7 @@ namespace LudusaviRestic
 
             if (choice.Length > 0)
             {
-                this.plugin.settings.ResticExecutablePath = choice;
+                this.plugin.settings.Settings.ResticExecutablePath = choice;
             }
         }
 
@@ -42,19 +44,19 @@ namespace LudusaviRestic
 
             if (choice.Length > 0)
             {
-                this.plugin.settings.RcloneConfigPath = choice;
+                this.plugin.settings.Settings.RcloneConfigPath = choice;
             }
         }
 
         public void OnVerify(object sender, RoutedEventArgs e)
         {
-            BackupContext context = new BackupContext(this.plugin.PlayniteApi, this.plugin.settings);
+            BackupContext context = new BackupContext(this.plugin.PlayniteApi, this.plugin.settings.Settings);
 
             Task.Run(() =>
             {
                 string result = "Ludusavi Restic Settings Verification:";
 
-                try 
+                try
                 {
                     CommandResult restic = ResticCommand.Verify(context);
                     CommandResult ludusavi = LudusaviCommand.Version(context);

@@ -11,17 +11,17 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsBase" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
-    <PackageReference Include="PlayniteSDK" Version="5.4.0" />
+    <PackageReference Include="PlayniteSDK" Version="6.0.0-preview3" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="extension.yaml">
+    <None Include="../extension.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="icon.png">
+    <None Include="../icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
