@@ -1,6 +1,5 @@
 using Playnite.SDK;
 using Playnite.SDK.Models;
-using System.Diagnostics;
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
@@ -101,7 +100,7 @@ namespace LudusaviRestic
 
             try
             {
-                process =  ResticCommand.Backup(context, backupArgs);
+                process = ResticCommand.Backup(context, backupArgs);
             }
             catch (Exception e)
             {

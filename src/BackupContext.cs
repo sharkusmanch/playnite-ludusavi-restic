@@ -9,8 +9,8 @@ namespace LudusaviRestic
         private IPlayniteAPI api;
         private LudusaviResticSettings settings;
 
-        public IPlayniteAPI API { get { return this.api; }}
-        public LudusaviResticSettings Settings { get { return this.settings; }}
+        public IPlayniteAPI API { get { return this.api; } }
+        public LudusaviResticSettings Settings { get { return this.settings; } }
 
         public BackupContext(IPlayniteAPI api, LudusaviResticSettings settings)
         {

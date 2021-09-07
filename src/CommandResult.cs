@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using Playnite.SDK;
 
 namespace LudusaviRestic
 {
@@ -9,9 +8,9 @@ namespace LudusaviRestic
         private string stdout;
         private string stderr;
 
-        public int ExitCode  { get { return this.exitCode; }}
-        public string StdOut  { get { return this.stdout; }}
-        public string StdErr  { get { return this.stderr; }}
+        public int ExitCode  { get { return this.exitCode; } }
+        public string StdOut  { get { return this.stdout; } }
+        public string StdErr  { get { return this.stderr; } }
 
         public CommandResult(Process process)
         {
