@@ -5,3 +5,8 @@ Version: 0.2.0
 Module: LudusaviRestic.dll
 Type: GenericPlugin
 Icon: icon.png
+Links:
+  - Name: GitHub
+    Url: https://github.com/sharkusmanch/playnite-ludusavi-restic
+  - Name: Playnite Forums thread
+    Url: https://playnite.link/forum/thread-773.html
