@@ -86,7 +86,7 @@ namespace LudusaviRestic
 
             foreach (JProperty property in filesMap.Properties())
             {
-                files.Add($"\"{property.Name}\"");
+                files.Add($"{property.Name}");
             }
 
             return files;
@@ -94,7 +94,19 @@ namespace LudusaviRestic
 
         private static void CreateSnapshot(IList<string> files, BackupContext context, Game game)
         {
-            string backupArgs = $"--tag  \"{game}\" {string.Join(" ", files)}";
+            // write files list to tempfile and pass to restic with --files-from
+            string listfile = System.IO.Path.GetTempFileName();
+            System.IO.FileInfo listfileinfo = new System.IO.FileInfo(listfile);
+            listfileinfo.Attributes = System.IO.FileAttributes.Temporary;
+            System.IO.StreamWriter listfilewriter = System.IO.File.AppendText(listfile);
+            foreach (string filename in files)
+            {
+                listfilewriter.WriteLine(filename);
+            }
+            listfilewriter.Flush();
+            listfilewriter.Close();
+
+            string backupArgs = $"--tag  \"{game}\" --files-from-verbatim \"{listfile}\"";
 
             CommandResult process;
 
@@ -120,6 +132,8 @@ namespace LudusaviRestic
                     break;
                 default:
                     SendInfoNotification($"Successfully created game data snapshot for {game.Name}", context);
+                    // Delete file list on success
+                    System.IO.File.Delete(listfile);
                     break;
             }
         }
