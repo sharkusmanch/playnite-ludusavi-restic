@@ -3,7 +3,7 @@ Packages:
   - Version: 0.2.1
     RequiredApiVersion: 6.0.0
     ReleaseDate: 2021-11-19
-    PackageUrl: https://github.com/sharkusmanch//playnite-ludusavi-restic/releases/download/v0.2.1LudusaviRestic_v0.2.1.pext
+    PackageUrl: https://github.com/sharkusmanch//playnite-ludusavi-restic/releases/download/v0.2.1/LudusaviRestic_v0.2.1.pext
     Changelog:
       - Create temporary file containing save paths to pass to restic (masonh)
   - Version: 0.2.0
