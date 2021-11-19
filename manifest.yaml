@@ -1,5 +1,11 @@
 AddonId: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
 Packages:
+  - Version: 0.2.1
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2021-11-19
+    PackageUrl: https://github.com/sharkusmanch//playnite-ludusavi-restic/releases/download/v0.2.1LudusaviRestic_v0.2.1.pext
+    Changelog:
+      - Create temporary file containing save paths to pass to restic (masonh)
   - Version: 0.2.0
     RequiredApiVersion: 6.0.0
     ReleaseDate: 2021-09-06
