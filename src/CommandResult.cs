@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Text;
 
 namespace LudusaviRestic
 {
@@ -15,10 +16,16 @@ namespace LudusaviRestic
         public CommandResult(Process process)
         {
             process.Start();
-            this.stdout = process.StandardOutput.ReadToEnd();
+            this.stdout = TransformProcessOutput(process.StandardOutput.ReadToEnd());
             process.WaitForExit(4000);
-            this.stderr = process.StandardError.ReadToEnd();
+            this.stderr = TransformProcessOutput(process.StandardError.ReadToEnd());
             this.exitCode = process.ExitCode;
+        }
+
+        private string TransformProcessOutput(string output)
+        {
+            byte[] bytes = Encoding.Default.GetBytes(output);
+            return Encoding.UTF8.GetString(bytes);
         }
     }
 }

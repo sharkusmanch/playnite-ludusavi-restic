@@ -1,5 +1,11 @@
 AddonId: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
 Packages:
+  - Version: 0.2.2
+    RequiredApiVersion: 6.0.0
+    ReleaseDate: 2022-01-24
+    PackageUrl: https://github.com/sharkusmanch//playnite-ludusavi-restic/releases/download/v0.2.2/LudusaviRestic_v0.2.2.pext
+    Changelog:
+      - Fix case when some characters in game titles caused backup to fail (thanks Chucky2401)
   - Version: 0.2.1
     RequiredApiVersion: 6.0.0
     ReleaseDate: 2021-11-19
