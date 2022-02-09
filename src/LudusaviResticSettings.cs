@@ -34,15 +34,17 @@ namespace LudusaviRestic
         public string RcloneConfigPassword { get { return rcloneConfigPassword; } set { rcloneConfigPassword = value; NotifyPropertyChanged("RcloneConfigPassword"); } }
 
         private bool backupDuringGameplay = false;
-        public bool BackupDuringGameplay { get {return backupDuringGameplay; } set { backupDuringGameplay = value; ; NotifyPropertyChanged("BackupDuringGameplay"); } }
+        public bool BackupDuringGameplay { get { return backupDuringGameplay; } set { backupDuringGameplay = value; ; NotifyPropertyChanged("BackupDuringGameplay"); } }
         // Parameterless constructor must exist if you want to use LoadPluginSettings method.
 
         private List<string> errors;
 
         private int gameplayBackupInterval = 5;
-        public int GameplayBackupInterval {
+        public int GameplayBackupInterval
+        {
             get { return gameplayBackupInterval; }
-            set {
+            set
+            {
                 string rawValue = value.ToString();
                 int intValue;
 

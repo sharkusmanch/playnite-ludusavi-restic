@@ -63,13 +63,13 @@ namespace LudusaviRestic
         {
             Game game = (Game)obj;
             logger.Debug("Creating gameplay save data backup");
-            this.manager.PerformBackup(game, new List<string>{"gameplay"});
+            this.manager.PerformBackup(game, new List<string> { "gameplay" });
         }
 
         public override void OnGameStopped(OnGameStoppedEventArgs args)
         {
             this.timer?.Dispose();
-            this.manager.PerformBackup(args.Game, new List<string>{"game-stopped"});
+            this.manager.PerformBackup(args.Game, new List<string> { "game-stopped" });
         }
 
         public override ISettings GetSettings(bool firstRunSettings)
