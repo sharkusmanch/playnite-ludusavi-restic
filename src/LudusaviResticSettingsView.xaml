@@ -8,6 +8,15 @@
     <ScrollViewer Margin="0,10,0,0">
         <StackPanel>
             <StackPanel Margin="15">
+                <CheckBox IsChecked="{Binding BackupDuringGameplay}" Content="Backup during gameplay" />
+            </StackPanel>
+
+            <StackPanel Margin="15">
+                <TextBlock Text="Gameplay save backup interval (minutes)" />
+                <TextBox Margin="0,2,0,0" Text="{Binding GameplayBackupInterval}" />
+            </StackPanel>
+
+            <StackPanel Margin="15">
                 <TextBlock Text="Ludusavi path" />
                 <TextBox Margin="0,2,0,0" Text="{Binding LudusaviExecutablePath}" />
                 <StackPanel Margin="0,2,0,0" Orientation="Horizontal">

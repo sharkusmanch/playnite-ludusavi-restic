@@ -14,26 +14,36 @@ namespace LudusaviRestic
         private Game game;
         private SemaphoreSlim semaphore;
         private BackupContext context;
+        private List<string> extraTags;
 
         public BackupTask(Game game, SemaphoreSlim semaphore, BackupContext context)
         {
             this.game = game;
             this.semaphore = semaphore;
             this.context = context;
+            this.extraTags = new List<string>();
+        }
+
+        public BackupTask(Game game, SemaphoreSlim semaphore, BackupContext context, List<string> extraTags)
+        {
+            this.game = game;
+            this.semaphore = semaphore;
+            this.context = context;
+            this.extraTags = extraTags;
         }
 
         public void Run()
         {
-            Task.Run(() => Backup(this.semaphore, this.context, this.game));
+            Task.Run(() => Backup(this.semaphore, this.context, this.game, this.extraTags));
         }
 
 
-        private static void Backup(SemaphoreSlim semaphore, BackupContext context, Game game)
+        private static void Backup(SemaphoreSlim semaphore, BackupContext context, Game game, List<string> extraTags)
         {
             try
             {
                 semaphore.Wait();
-                Backup(game, context);
+                Backup(game, context, extraTags);
             }
             finally
             {
@@ -41,7 +51,7 @@ namespace LudusaviRestic
             }
         }
 
-        private static void Backup(Game game, BackupContext context)
+        private static void Backup(Game game, BackupContext context, List<string> extraTags)
         {
             IList<String> files = GameFiles(game, context);
 
@@ -50,7 +60,7 @@ namespace LudusaviRestic
                 return;
             }
 
-            CreateSnapshot(files, context, game);
+            CreateSnapshot(files, context, game, extraTags);
         }
 
         private static IList<String> GameFiles(Game game, BackupContext context)
@@ -92,7 +102,19 @@ namespace LudusaviRestic
             return files;
         }
 
-        private static void CreateSnapshot(IList<string> files, BackupContext context, Game game)
+        private static string ConstructTags(Game game, List<string> extraTags)
+        {
+            string tags = $"--tag \"{game}\"";
+
+            foreach (string tag in extraTags)
+            {
+                tags += $" --tag \"{tag}\"";
+            }
+
+            return tags;
+        }
+
+        private static void CreateSnapshot(IList<string> files, BackupContext context, Game game, List<string> extraTags)
         {
             // write files list to tempfile and pass to restic with --files-from
             string listfile = System.IO.Path.GetTempFileName();
@@ -106,7 +128,9 @@ namespace LudusaviRestic
             listfilewriter.Flush();
             listfilewriter.Close();
 
-            string backupArgs = $"--tag  \"{game}\" --files-from-verbatim \"{listfile}\"";
+            string tags = ConstructTags(game, extraTags);
+            string backupArgs = $"{tags} --files-from-verbatim \"{listfile}\"";
+            // string backupArgs = $"--tag  \"{game}\" --files-from-verbatim \"{listfile}\"";
 
             CommandResult process;
 

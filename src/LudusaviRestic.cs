@@ -1,9 +1,11 @@
 ﻿using Playnite.SDK;
 using Playnite.SDK.Events;
 using Playnite.SDK.Plugins;
+using Playnite.SDK.Models;
 using System;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using System.Threading;
 
 namespace LudusaviRestic
 {
@@ -15,6 +17,7 @@ namespace LudusaviRestic
         public override Guid Id { get; } = Guid.Parse("e9861c36-68a8-4654-8071-a9c50612bc24");
 
         private ResticBackupManager manager;
+        private Timer timer;
 
         public LudusaviRestic(IPlayniteAPI api) : base(api)
         {
@@ -37,16 +40,36 @@ namespace LudusaviRestic
                     Action = args => {
                         foreach (var game in args.Games)
                         {
-                            this.manager.PerformBackup(game);
+                            this.manager.PerformBackup(game, new List<string>{"manual"});
                         }
                     }
                 }
             };
         }
 
+        public override void OnGameStarted(OnGameStartedEventArgs args)
+        {
+            if (args?.Game is null) return;
+
+            if (settings.BackupDuringGameplay)
+            {
+                this.timer = new Timer(CreateSnapshotAsync, args.Game,
+                    settings.GameplayBackupInterval * 60000,
+                    settings.GameplayBackupInterval * 60000);
+            }
+        }
+
+        private async void CreateSnapshotAsync(Object obj)
+        {
+            Game game = (Game)obj;
+            logger.Debug("Creating gameplay save data backup");
+            this.manager.PerformBackup(game, new List<string> { "gameplay" });
+        }
+
         public override void OnGameStopped(OnGameStoppedEventArgs args)
         {
-            this.manager.PerformBackup(args.Game);
+            this.timer?.Dispose();
+            this.manager.PerformBackup(args.Game, new List<string> { "game-stopped" });
         }
 
         public override ISettings GetSettings(bool firstRunSettings)

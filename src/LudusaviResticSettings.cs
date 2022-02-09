@@ -1,5 +1,6 @@
 ﻿using Playnite.SDK;
 using System.Collections.Generic;
+using System;
 using System.ComponentModel;
 
 namespace LudusaviRestic
@@ -7,6 +8,7 @@ namespace LudusaviRestic
     public class LudusaviResticSettings : ISettings, INotifyPropertyChanged
     {
         private readonly LudusaviRestic plugin;
+        private static readonly ILogger logger = LogManager.GetLogger();
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)
@@ -31,7 +33,35 @@ namespace LudusaviRestic
         private string rcloneConfigPassword;
         public string RcloneConfigPassword { get { return rcloneConfigPassword; } set { rcloneConfigPassword = value; NotifyPropertyChanged("RcloneConfigPassword"); } }
 
+        private bool backupDuringGameplay = false;
+        public bool BackupDuringGameplay { get { return backupDuringGameplay; } set { backupDuringGameplay = value; ; NotifyPropertyChanged("BackupDuringGameplay"); } }
         // Parameterless constructor must exist if you want to use LoadPluginSettings method.
+
+        private List<string> errors;
+
+        private int gameplayBackupInterval = 5;
+        public int GameplayBackupInterval
+        {
+            get { return gameplayBackupInterval; }
+            set
+            {
+                string rawValue = value.ToString();
+                int intValue;
+
+                bool success = int.TryParse(rawValue, out intValue) && intValue > 0;
+
+                if (success)
+                {
+                    gameplayBackupInterval = intValue;
+                    NotifyPropertyChanged("GameplayBackupInterval");
+                }
+                else
+                {
+                    this.errors.Add("Backup interval must be a positive integer");
+                }
+            }
+        }
+
         public LudusaviResticSettings()
         {
         }
@@ -56,12 +86,14 @@ namespace LudusaviRestic
                 ResticPassword = savedSettings.resticPassword;
                 RcloneConfigPath = savedSettings.rcloneConfigPath;
                 RcloneConfigPassword = savedSettings.rcloneConfigPassword;
+                BackupDuringGameplay = savedSettings.backupDuringGameplay;
+                GameplayBackupInterval = savedSettings.gameplayBackupInterval;
             }
         }
 
         public void BeginEdit()
         {
-            // Code executed when settings view is opened and user starts editing values.
+            this.errors = new List<string>();
         }
 
         public void CancelEdit()
@@ -80,11 +112,9 @@ namespace LudusaviRestic
 
         public bool VerifySettings(out List<string> errors)
         {
-            // Code execute when user decides to confirm changes made since BeginEdit was called.
-            // Executed before EndEdit is called and EndEdit is not called if false is returned.
-            // List of errors is presented to user if verification fails.
-            errors = new List<string>();
-            return true;
+            errors = new List<string>(this.errors);
+            this.errors.Clear();
+            return errors.Count == 0;
         }
     }
 }
