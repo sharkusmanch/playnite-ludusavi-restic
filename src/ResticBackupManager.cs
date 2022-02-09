@@ -1,6 +1,7 @@
 using Playnite.SDK;
 using Playnite.SDK.Models;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace LudusaviRestic
 {
@@ -18,7 +19,12 @@ namespace LudusaviRestic
 
         public void PerformBackup(Game game)
         {
-            BackupTask task = new BackupTask(game, this.semaphore, this.context);
+            PerformBackup(game, new List<string>());
+        }
+
+        public void PerformBackup(Game game, List<string> extraTags)
+        {
+            BackupTask task = new BackupTask(game, this.semaphore, this.context, extraTags);
             task.Run();
         }
     }
