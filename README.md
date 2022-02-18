@@ -76,3 +76,8 @@ d8ce2c32  2021-08-09 11:57:58  GAMING-DESKTOP  Death's Door
 -----------------------------------------------------------
 5 snapshots
 ```
+
+
+## Help with localization
+
+https://crowdin.com/project/playnite-ludusavi-restic
