@@ -8,54 +8,54 @@
     <ScrollViewer Margin="0,10,0,0">
         <StackPanel>
             <StackPanel Margin="15">
-                <CheckBox IsChecked="{Binding BackupDuringGameplay}" Content="Backup during gameplay" />
+                <CheckBox IsChecked="{Binding BackupDuringGameplay}" Content="{DynamicResource LOCLuduRestBackupDuringGameplay}" />
             </StackPanel>
 
             <StackPanel Margin="15">
-                <TextBlock Text="Gameplay save backup interval (minutes)" />
+                <TextBlock Text="{DynamicResource LOCLuduRestGameplayBackupInt}" />
                 <TextBox Margin="0,2,0,0" Text="{Binding GameplayBackupInterval}" />
             </StackPanel>
 
             <StackPanel Margin="15">
-                <TextBlock Text="Ludusavi path" />
+                <TextBlock Text="{DynamicResource LOCLuduRestLuduPath}" />
                 <TextBox Margin="0,2,0,0" Text="{Binding LudusaviExecutablePath}" />
                 <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
-                    <Button Content="Browse" Click="OnBrowseLudusaviExecutablePath" />
+                    <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseLudusaviExecutablePath" />
                 </StackPanel>
             </StackPanel>
 
             <StackPanel Margin="15">
-                <TextBlock Text="Restic path" />
+                <TextBlock Text="{DynamicResource LOCLuduRestResticPath}" />
                 <TextBox Margin="0,2,0,0" Text="{Binding ResticExecutablePath}" />
                 <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
-                    <Button Content="Browse" Click="OnBrowseResticExecutablePath" />
+                    <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseResticExecutablePath" />
                 </StackPanel>
             </StackPanel>
 
             <StackPanel Margin="15">
-                <TextBlock Text="Restic repository path" />
+                <TextBlock Text="{DynamicResource LOCLuduRestRepoPath}" />
                 <TextBox Margin="0,2,0,0" Text="{Binding ResticRepository}" />
             </StackPanel>
 
             <StackPanel Margin="15">
-                <TextBlock Text="Restic repository password" />
+                <TextBlock Text="{DynamicResource LOCLuduRestRepoPass}" />
                 <TextBox Margin="0,2,0,0" Text="{Binding ResticPassword}" />
             </StackPanel>
 
             <StackPanel Margin="15">
-                <TextBlock Text="Rclone config" />
+                <TextBlock Text="{DynamicResource LOCLuduRestRcloneConf}" />
                 <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPath}" />
                 <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
-                    <Button Content="Browse" Click="OnBrowseRcloneConfPath" />
+                    <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseRcloneConfPath" />
                 </StackPanel>
             </StackPanel>
 
             <StackPanel Margin="15">
-                <TextBlock Text="Rclone config password" />
+                <TextBlock Text="{DynamicResource LOCLuduRestRcloneConfPass}" />
                 <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPassword}" />
             </StackPanel>
 
-            <Button Name="VerifyButton" Content="Verify" Click="OnVerify" />
+            <Button Name="VerifyButton" Content="{DynamicResource LOCLuduRestVerify}" Click="OnVerify" />
         </StackPanel>
     </ScrollViewer>
 </UserControl>
