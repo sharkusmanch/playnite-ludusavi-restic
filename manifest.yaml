@@ -5,7 +5,7 @@ Packages:
     ReleaseDate: 2022-02-17
     PackageUrl: https://github.com/sharkusmanch//playnite-ludusavi-restic/releases/download/v0.3.1/LudusaviRestic_v0.3.1.pext
     Changelog:
-      - Add localizations
+      - Add crowdin localizations
   - Version: 0.3.0
     RequiredApiVersion: 6.0.0
     ReleaseDate: 2022-02-09
