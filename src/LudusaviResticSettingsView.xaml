@@ -5,57 +5,89 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
              d:DesignHeight="400" d:DesignWidth="600">
-    <ScrollViewer Margin="0,10,0,0">
-        <StackPanel>
-            <StackPanel Margin="15">
-                <CheckBox IsChecked="{Binding BackupDuringGameplay}" Content="{DynamicResource LOCLuduRestBackupDuringGameplay}" />
-            </StackPanel>
 
-            <StackPanel Margin="15">
-                <TextBlock Text="{DynamicResource LOCLuduRestGameplayBackupInt}" />
-                <TextBox Margin="0,2,0,0" Text="{Binding GameplayBackupInterval}" />
-            </StackPanel>
+        <TabControl Name="tcSettings">
+            <TabItem Header="{DynamicResource LOCLuduRestTabRepo}">
+                <ScrollViewer Margin="0,10,0,0">
+                    <StackPanel>
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestLuduPath}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding LudusaviExecutablePath}" />
+                            <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
+                                <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseLudusaviExecutablePath" />
+                            </StackPanel>
+                        </StackPanel>
 
-            <StackPanel Margin="15">
-                <TextBlock Text="{DynamicResource LOCLuduRestLuduPath}" />
-                <TextBox Margin="0,2,0,0" Text="{Binding LudusaviExecutablePath}" />
-                <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
-                    <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseLudusaviExecutablePath" />
-                </StackPanel>
-            </StackPanel>
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestResticPath}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding ResticExecutablePath}" />
+                            <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
+                                <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseResticExecutablePath" />
+                            </StackPanel>
+                        </StackPanel>
 
-            <StackPanel Margin="15">
-                <TextBlock Text="{DynamicResource LOCLuduRestResticPath}" />
-                <TextBox Margin="0,2,0,0" Text="{Binding ResticExecutablePath}" />
-                <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
-                    <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseResticExecutablePath" />
-                </StackPanel>
-            </StackPanel>
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestRepoPath}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding ResticRepository}" />
+                        </StackPanel>
 
-            <StackPanel Margin="15">
-                <TextBlock Text="{DynamicResource LOCLuduRestRepoPath}" />
-                <TextBox Margin="0,2,0,0" Text="{Binding ResticRepository}" />
-            </StackPanel>
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestRepoPass}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding ResticPassword}" />
+                        </StackPanel>
 
-            <StackPanel Margin="15">
-                <TextBlock Text="{DynamicResource LOCLuduRestRepoPass}" />
-                <TextBox Margin="0,2,0,0" Text="{Binding ResticPassword}" />
-            </StackPanel>
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestRcloneConf}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPath}" />
+                            <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
+                                <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseRcloneConfPath" />
+                            </StackPanel>
+                        </StackPanel>
 
-            <StackPanel Margin="15">
-                <TextBlock Text="{DynamicResource LOCLuduRestRcloneConf}" />
-                <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPath}" />
-                <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
-                    <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseRcloneConfPath" />
-                </StackPanel>
-            </StackPanel>
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestRcloneConfPass}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPassword}" />
+                        </StackPanel>
 
-            <StackPanel Margin="15">
-                <TextBlock Text="{DynamicResource LOCLuduRestRcloneConfPass}" />
-                <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPassword}" />
-            </StackPanel>
+                        <Button Name="VerifyButton" Content="{DynamicResource LOCLuduRestVerify}" Click="OnVerify" />
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
 
-            <Button Name="VerifyButton" Content="{DynamicResource LOCLuduRestVerify}" Click="OnVerify" />
-        </StackPanel>
-    </ScrollViewer>
+            <TabItem Header="{DynamicResource LOCLuduRestTabBackup}">
+                <ScrollViewer Margin="0,10,0,0">
+                    <StackPanel>
+                        <StackPanel Margin="15">
+                            <CheckBox IsChecked="{Binding BackupDuringGameplay}" Content="{DynamicResource LOCLuduRestBackupDuringGameplay}"
+                                Checked="OnBackupDuringGameplayChecked" Unchecked="OnBackupDuringGameplayUnchecked" />
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestGameplayBackupInt}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding GameplayBackupInterval}" IsEnabled="{Binding BackupDuringGameplay}" x:Name="GameplayBackupInterval"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <CheckBox IsChecked="{Binding AdditionalTagging}" Content="{DynamicResource LOCLuduRestBackupTagDiff}"
+                                Checked="OnAdditionalTaggingChecked" Unchecked="OnAdditionalTaggingUnchecked" />
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestBackupManualTag}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding ManualSnapshotTag}" IsEnabled="{Binding AdditionalTagging}" x:Name="ManualSnapshotTag"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestBackupGameStopTag}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding GameStoppedSnapshotTag}" IsEnabled="{Binding AdditionalTagging}" x:Name="GameStoppedSnapshotTag"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestBackupGameplayTag}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding GameplaySnapshotTag}" IsEnabled="{Binding AdditionalTagging}" x:Name="GameplaySnapshotTag"/>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
 </UserControl>

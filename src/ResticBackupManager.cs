@@ -22,10 +22,59 @@ namespace LudusaviRestic
             PerformBackup(game, new List<string>());
         }
 
-        public void PerformBackup(Game game, List<string> extraTags)
+        public void PerformBackup(Game game, IList<string> extraTags)
         {
             BackupTask task = new BackupTask(game, this.semaphore, this.context, extraTags);
             task.Run();
+        }
+
+        public void PerformGameStoppedBackup(Game game)
+        {
+            PerformBackup(game, GamestoppedBackupTags());
+        }
+
+        public void PerformManualBackup(Game game)
+        {
+            PerformBackup(game, ManualBackupTags());
+        }
+
+        public void PerformGameplayBackup(Game game)
+        {
+            PerformBackup(game, GameplayBackupTags());
+        }
+
+        private IList<string> ManualBackupTags()
+        {
+            IList<string> tags = new List<string>();
+
+            if (this.context.Settings.AdditionalTagging)
+            {
+                tags.Add(this.context.Settings.ManualSnapshotTag);
+            }
+
+            return tags;
+        }
+        private IList<string> GameplayBackupTags()
+        {
+            IList<string> tags = new List<string>();
+
+            if (this.context.Settings.AdditionalTagging)
+            {
+                tags.Add(this.context.Settings.GameplaySnapshotTag);
+            }
+
+            return tags;
+        }
+        private IList<string> GamestoppedBackupTags()
+        {
+            IList<string> tags = new List<string>();
+
+            if (this.context.Settings.AdditionalTagging)
+            {
+                tags.Add(this.context.Settings.GameStoppedSnapshotTag);
+            }
+
+            return tags;
         }
     }
 }

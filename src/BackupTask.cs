@@ -14,7 +14,7 @@ namespace LudusaviRestic
         private Game game;
         private SemaphoreSlim semaphore;
         private BackupContext context;
-        private List<string> extraTags;
+        private IList<string> extraTags;
 
         public BackupTask(Game game, SemaphoreSlim semaphore, BackupContext context)
         {
@@ -24,7 +24,7 @@ namespace LudusaviRestic
             this.extraTags = new List<string>();
         }
 
-        public BackupTask(Game game, SemaphoreSlim semaphore, BackupContext context, List<string> extraTags)
+        public BackupTask(Game game, SemaphoreSlim semaphore, BackupContext context, IList<string> extraTags)
         {
             this.game = game;
             this.semaphore = semaphore;
@@ -38,7 +38,7 @@ namespace LudusaviRestic
         }
 
 
-        private static void Backup(SemaphoreSlim semaphore, BackupContext context, Game game, List<string> extraTags)
+        private static void Backup(SemaphoreSlim semaphore, BackupContext context, Game game, IList<string> extraTags)
         {
             try
             {
@@ -51,7 +51,7 @@ namespace LudusaviRestic
             }
         }
 
-        private static void Backup(Game game, BackupContext context, List<string> extraTags)
+        private static void Backup(Game game, BackupContext context, IList<string> extraTags)
         {
             IList<String> files = GameFiles(game, context);
 
@@ -102,7 +102,7 @@ namespace LudusaviRestic
             return files;
         }
 
-        private static string ConstructTags(Game game, List<string> extraTags)
+        private static string ConstructTags(Game game, IList<string> extraTags)
         {
             string tags = $"--tag \"{game}\"";
 
@@ -114,7 +114,7 @@ namespace LudusaviRestic
             return tags;
         }
 
-        private static void CreateSnapshot(IList<string> files, BackupContext context, Game game, List<string> extraTags)
+        private static void CreateSnapshot(IList<string> files, BackupContext context, Game game, IList<string> extraTags)
         {
             // write files list to tempfile and pass to restic with --files-from
             string listfile = System.IO.Path.GetTempFileName();
@@ -130,7 +130,6 @@ namespace LudusaviRestic
 
             string tags = ConstructTags(game, extraTags);
             string backupArgs = $"{tags} --files-from-verbatim \"{listfile}\"";
-            // string backupArgs = $"--tag  \"{game}\" --files-from-verbatim \"{listfile}\"";
 
             CommandResult process;
 
