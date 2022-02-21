@@ -48,6 +48,29 @@ namespace LudusaviRestic
             }
         }
 
+        private void OnBackupDuringGameplayChecked(object sender, RoutedEventArgs e)
+        {
+            GameplayBackupInterval.IsEnabled = true;
+        }
+
+        private void OnBackupDuringGameplayUnchecked(object sender, RoutedEventArgs e)
+        {
+            GameplayBackupInterval.IsEnabled = false;
+        }
+        private void OnAdditionalTaggingChecked(object sender, RoutedEventArgs e)
+        {
+            GameStoppedSnapshotTag.IsEnabled = true;
+            ManualSnapshotTag.IsEnabled = true;
+            GameplaySnapshotTag.IsEnabled = true;
+        }
+
+        private void OnAdditionalTaggingUnchecked(object sender, RoutedEventArgs e)
+        {
+            GameStoppedSnapshotTag.IsEnabled = false;
+            ManualSnapshotTag.IsEnabled = false;
+            GameplaySnapshotTag.IsEnabled = false;
+        }
+
         public void OnVerify(object sender, RoutedEventArgs e)
         {
             BackupContext context = new BackupContext(this.plugin.PlayniteApi, this.plugin.settings);

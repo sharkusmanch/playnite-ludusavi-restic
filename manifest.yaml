@@ -1,5 +1,12 @@
 AddonId: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
 Packages:
+  - Version: 0.3.2
+    RequiredApiVersion: 6.2.2
+    ReleaseDate: 2022-02-21
+    PackageUrl: https://github.com/sharkusmanch//playnite-ludusavi-restic/releases/download/v0.3.2/LudusaviRestic_v0.3.2.pext
+    Changelog:
+      - Add options to configure backup behavior and tagging
+      - Organize extension settings into tabs
   - Version: 0.3.1
     RequiredApiVersion: 6.0.0
     ReleaseDate: 2022-02-17
