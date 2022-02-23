@@ -17,5 +17,7 @@
     <sys:String x:Key="LOCLuduRestBackupGameStopTag">Game stopped backup tag</sys:String>
     <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Create save snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGM">Ludusavi Restic Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Backing up</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Processing</sys:String>
 </ResourceDictionary>

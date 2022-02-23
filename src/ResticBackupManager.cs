@@ -17,6 +17,16 @@ namespace LudusaviRestic
             this.context = new BackupContext(api, settings);
         }
 
+        public void BackupAllGames()
+        {
+            new BackupAllTask(this.semaphore, this.context, new List<string>()).Run();
+        }
+
+        public void BackupAllGames(IList<string> extraTags)
+        {
+            new BackupAllTask(this.semaphore, this.context, extraTags).Run();
+        }
+
         public void PerformBackup(Game game)
         {
             PerformBackup(game, new List<string>());
@@ -24,7 +34,7 @@ namespace LudusaviRestic
 
         public void PerformBackup(Game game, IList<string> extraTags)
         {
-            BackupTask task = new BackupTask(game, this.semaphore, this.context, extraTags);
+            BackupGameTask task = new BackupGameTask(game, this.semaphore, this.context, extraTags);
             task.Run();
         }
 
