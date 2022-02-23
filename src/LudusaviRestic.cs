@@ -29,6 +29,21 @@ namespace LudusaviRestic
             this.manager = new ResticBackupManager(this.settings, this.PlayniteApi);
         }
 
+        public override IEnumerable<MainMenuItem> GetMainMenuItems(GetMainMenuItemsArgs menuArgs)
+        {
+            return new List<MainMenuItem>
+            {
+                new MainMenuItem
+                {
+                    Description = "Backup all games",
+                    MenuSection = "@" + ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                    Action = args => {
+                        this.manager.BackupAllGames();
+                    }
+                }
+            };
+        }
+
         public override IEnumerable<GameMenuItem> GetGameMenuItems(GetGameMenuItemsArgs menuArgs)
         {
             return new List<GameMenuItem>
