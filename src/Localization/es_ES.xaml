@@ -1,23 +1,44 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
     <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Copia de seguridad durante el juego</sys:String>
+
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervalo de copia de seguridad para guardar el juego (minutos)</sys:String>
+
     <sys:String x:Key="LOCLuduRestBrowse">Navegar</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPath">Ruta del repositorio Ristic</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPass">Contraseña del repositorio de Ristic</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConf">Configuración de Rclone</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Contraseña de configuración de Rclone</sys:String>
+
     <sys:String x:Key="LOCLuduRestVerify">Verificar</sys:String>
+
     <sys:String x:Key="LOCLuduRestResticPath">Ruta del ejecutable Rstic</sys:String>
+
     <sys:String x:Key="LOCLuduRestLuduPath">Ruta del ejecutable de Ludusavi</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabBackup">Respaldo</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabRepo">Repositorio</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupTagDiff">Agregue etiquetas adicionales a las instantáneas para diferenciar eventos</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupManualTag">Etiqueta de copia de seguridad manual</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameStopTag">Juego detenido etiqueta de copia de seguridad</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameplayTag">Etiqueta de copia de seguridad del juego</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Crear instantánea guardada</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">copia de seguridad</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Procesando</sys:String>
+
 </ResourceDictionary>
