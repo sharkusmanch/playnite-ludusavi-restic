@@ -10,14 +10,14 @@
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
-    <sys:String x:Key="LOCLuduRestTabBackup">Backup</sys:String>
-    <sys:String x:Key="LOCLuduRestTabRepo">Repository</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Add additonal tags to snapshots to differentiate events</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Manual backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Game stopped backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Create save snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">Záloha</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">úložiště</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Přidejte do snímků další značky, abyste odlišili události</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Manuální záložní štítek</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Záložní značka hry zastavena</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Záložní značka hry</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Vytvořte snímek uložení</sys:String>
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Backing up</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Processing</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Zálohování</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">zpracovává se</sys:String>
 </ResourceDictionary>
