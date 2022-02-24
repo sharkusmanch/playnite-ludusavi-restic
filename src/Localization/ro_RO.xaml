@@ -1,46 +1,23 @@
-<?xml version="1.0"?>
-
+﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-
     <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
-
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
-
     <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
-
     <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
-
     <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
-
     <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
-
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
-
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
-
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
-
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
-
     <sys:String x:Key="LOCLuduRestTabBackup">Backup</sys:String>
-
-    <sys:String x:Key="LOCLuduRestTabRepo">Repository</sys:String>
-
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Add additonal tags to snapshots to differentiate events</sys:String>
-
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Manual backup tag</sys:String>
-
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Game stopped backup tag</sys:String>
-
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
-
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Create save snapshot</sys:String>
-
+    <sys:String x:Key="LOCLuduRestTabRepo">Repertoriu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Adăugați etichete suplimentare la instantanee pentru a diferenția evenimentele</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Etichetă de rezervă manuală</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Etichetă de rezervă pentru joc oprit</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Etichetă de rezervă pentru joc</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Creați un instantaneu de salvare</sys:String>
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
-
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Backing up</sys:String>
-
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Processing</sys:String>
-
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Făcând înapoi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Prelucrare</sys:String>
 </ResourceDictionary>
-
