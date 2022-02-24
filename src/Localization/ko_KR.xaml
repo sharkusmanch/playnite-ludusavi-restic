@@ -1,23 +1,44 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
     <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+
     <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabBackup">지원</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabRepo">저장소</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupTagDiff">이벤트를 구별하기 위해 스냅샷에 추가 태그 추가</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupManualTag">수동 백업 태그</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameStopTag">게임 중지 백업 태그</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameplayTag">게임 플레이 백업 태그</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGMCreate">저장 스냅샷 생성</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">루두사비레스틱</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">백업</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">처리</sys:String>
+
 </ResourceDictionary>
