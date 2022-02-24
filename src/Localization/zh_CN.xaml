@@ -10,14 +10,14 @@
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
-    <sys:String x:Key="LOCLuduRestTabBackup">Backup</sys:String>
-    <sys:String x:Key="LOCLuduRestTabRepo">Repository</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Add additonal tags to snapshots to differentiate events</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Manual backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Game stopped backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Create save snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Backing up</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Processing</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">备份</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">存储库</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">向快照添加附加标签以区分事件</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">手动备份标签</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">游戏停止备份标签</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">游戏备份标签</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">创建保存快照</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGM">卢杜萨维</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">备份</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">加工</sys:String>
 </ResourceDictionary>
