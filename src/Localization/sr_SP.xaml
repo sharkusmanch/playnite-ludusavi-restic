@@ -10,14 +10,14 @@
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
-    <sys:String x:Key="LOCLuduRestTabBackup">Backup</sys:String>
-    <sys:String x:Key="LOCLuduRestTabRepo">Repository</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Add additonal tags to snapshots to differentiate events</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Manual backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Game stopped backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Create save snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Backing up</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Processing</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">Бацкуп</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">Репозиторијум</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Додајте додатне ознаке у снимке да бисте разликовали догађаје</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Ручна резервна ознака</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Ознака за резервну копију игре је заустављена</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Ознака резервне копије игре</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Направите снимак снимања</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGM">ЛудусавиРестиц</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Прављење резервних копија</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Обрада</sys:String>
 </ResourceDictionary>
