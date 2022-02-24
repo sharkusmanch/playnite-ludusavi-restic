@@ -10,14 +10,14 @@
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
-    <sys:String x:Key="LOCLuduRestTabBackup">Backup</sys:String>
-    <sys:String x:Key="LOCLuduRestTabRepo">Repository</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Add additonal tags to snapshots to differentiate events</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Manual backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Game stopped backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Create save snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">Còpia de seguretat</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">Repositori</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Afegiu etiquetes addicionals a les instantànies per diferenciar els esdeveniments</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Etiqueta de còpia de seguretat manual</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Etiqueta de còpia de seguretat del joc aturat</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Etiqueta de còpia de seguretat del joc</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Crea una instantània desa</sys:String>
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Backing up</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Processing</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Còpia de seguretat</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Tramitació</sys:String>
 </ResourceDictionary>
