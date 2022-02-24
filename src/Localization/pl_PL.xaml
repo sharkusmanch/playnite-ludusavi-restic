@@ -10,14 +10,14 @@
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
-    <sys:String x:Key="LOCLuduRestTabBackup">Backup</sys:String>
-    <sys:String x:Key="LOCLuduRestTabRepo">Repository</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Add additonal tags to snapshots to differentiate events</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Manual backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Game stopped backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Create save snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">Utworzyć kopię zapasową</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">Magazyn</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Dodaj dodatkowe tagi do zrzutów, aby rozróżnić zdarzenia</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Ręczny tag kopii zapasowej</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Gra zatrzymała tworzenie kopii zapasowej tagu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Tag kopii zapasowej rozgrywki</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Utwórz zapisz migawkę</sys:String>
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Backing up</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Processing</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Tworzenie kopii zapasowej</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Przetwarzanie</sys:String>
 </ResourceDictionary>
