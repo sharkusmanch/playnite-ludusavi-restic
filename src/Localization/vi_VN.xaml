@@ -10,14 +10,14 @@
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
-    <sys:String x:Key="LOCLuduRestTabBackup">Backup</sys:String>
-    <sys:String x:Key="LOCLuduRestTabRepo">Repository</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Add additonal tags to snapshots to differentiate events</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Manual backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Game stopped backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Create save snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">Sao lưu</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">Kho</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Thêm thẻ bổ trợ vào ảnh chụp nhanh để phân biệt các sự kiện</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Thẻ sao lưu thủ công</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Thẻ sao lưu trò chơi đã dừng</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Thẻ dự phòng trò chơi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Tạo ảnh chụp nhanh lưu</sys:String>
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Backing up</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Processing</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Sao lưu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Xử lý</sys:String>
 </ResourceDictionary>
