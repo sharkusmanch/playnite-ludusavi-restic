@@ -1,23 +1,44 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
     <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+
     <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabBackup">Záloha</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabRepo">úložiště</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupTagDiff">Přidejte do snímků další značky, abyste odlišili události</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupManualTag">Manuální záložní štítek</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameStopTag">Záložní značka hry zastavena</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameplayTag">Záložní značka hry</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Vytvořte snímek uložení</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Zálohování</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">zpracovává se</sys:String>
+
 </ResourceDictionary>
