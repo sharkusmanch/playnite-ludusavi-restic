@@ -29,18 +29,34 @@ namespace LudusaviRestic
             this.manager = new ResticBackupManager(this.settings, this.PlayniteApi);
         }
 
+        public override IEnumerable<MainMenuItem> GetMainMenuItems(GetMainMenuItemsArgs menuArgs)
+        {
+            return new List<MainMenuItem>
+            {
+                new MainMenuItem
+                {
+                    Description = "Backup all games",
+                    MenuSection = "@" + ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                    Action = args => {
+                        this.manager.BackupAllGames();
+                    }
+                }
+            };
+        }
+
         public override IEnumerable<GameMenuItem> GetGameMenuItems(GetGameMenuItemsArgs menuArgs)
         {
             return new List<GameMenuItem>
             {
                 new GameMenuItem
                 {
-                    Description = "Create save snapshot",
-                    MenuSection = "Ludusavi Restic Snapshot",
+                    Description = ResourceProvider.GetString("LOCLuduRestBackupGMCreate"),
+                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+
                     Action = args => {
                         foreach (var game in args.Games)
                         {
-                            this.manager.PerformBackup(game, new List<string>{"manual"});
+                            this.manager.PerformManualBackup(game);
                         }
                     }
                 }
@@ -53,23 +69,22 @@ namespace LudusaviRestic
 
             if (settings.BackupDuringGameplay)
             {
-                this.timer = new Timer(CreateSnapshotAsync, args.Game,
+                this.timer = new Timer(GameplayBackupTimerElapsed, args.Game,
                     settings.GameplayBackupInterval * 60000,
                     settings.GameplayBackupInterval * 60000);
             }
         }
 
-        private async void CreateSnapshotAsync(Object obj)
+        private void GameplayBackupTimerElapsed(Object obj)
         {
             Game game = (Game)obj;
-            logger.Debug("Creating gameplay save data backup");
-            this.manager.PerformBackup(game, new List<string> { "gameplay" });
+            this.manager.PerformGameplayBackup(game);
         }
 
         public override void OnGameStopped(OnGameStoppedEventArgs args)
         {
             this.timer?.Dispose();
-            this.manager.PerformBackup(args.Game, new List<string> { "game-stopped" });
+            this.manager.PerformGameStoppedBackup(args.Game);
         }
 
         public override ISettings GetSettings(bool firstRunSettings)
@@ -79,7 +94,6 @@ namespace LudusaviRestic
 
         public override UserControl GetSettingsView(bool firstRunSettings)
         {
-            logger.Debug("GetSettingsView");
             return new LudusaviResticSettingsView(this);
         }
     }

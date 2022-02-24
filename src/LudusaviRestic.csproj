@@ -5,13 +5,17 @@
      <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsBase" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
-    <PackageReference Include="PlayniteSDK" Version="6.0.0-preview3" />
+    <PackageReference Include="PlayniteSDK" Version="6.2.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +28,14 @@
     <None Include="../icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Localization/*.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

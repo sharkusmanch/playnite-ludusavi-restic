@@ -7,6 +7,11 @@ namespace LudusaviRestic
             return LudusaviExecute(context, "--version");
         }
 
+        public static CommandResult BackupAll(BackupContext context)
+        {
+            return LudusaviExecute(context, $"backup --api --try-update --preview --merge");
+        }
+
         public static CommandResult Backup(BackupContext context, string game)
         {
             return LudusaviExecute(context, $"backup --api --try-update --preview --merge \"{game}\"");
