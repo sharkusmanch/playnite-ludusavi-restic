@@ -1,23 +1,44 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
     <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+
     <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabBackup">Utworzyć kopię zapasową</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabRepo">Magazyn</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupTagDiff">Dodaj dodatkowe tagi do zrzutów, aby rozróżnić zdarzenia</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupManualTag">Ręczny tag kopii zapasowej</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameStopTag">Gra zatrzymała tworzenie kopii zapasowej tagu</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameplayTag">Tag kopii zapasowej rozgrywki</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Utwórz zapisz migawkę</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Tworzenie kopii zapasowej</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Przetwarzanie</sys:String>
+
 </ResourceDictionary>
