@@ -8,33 +8,19 @@ using System.Threading;
 
 namespace LudusaviRestic
 {
-    public abstract class BaseBackupTask
+    public abstract class BaseBackupTask : BaseResticTask
     {
-        protected static readonly ILogger logger = LogManager.GetLogger();
-        protected SemaphoreSlim semaphore;
-        protected BackupContext context;
         protected IList<string> extraTags;
 
-        public BaseBackupTask(SemaphoreSlim semaphore, BackupContext context)
+        public BaseBackupTask(SemaphoreSlim semaphore, BackupContext context) : base(semaphore, context)
         {
-            this.semaphore = semaphore;
-            this.context = context;
             this.extraTags = new List<string>();
         }
 
-        public BaseBackupTask(SemaphoreSlim semaphore, BackupContext context, IList<string> extraTags)
+        public BaseBackupTask(SemaphoreSlim semaphore, BackupContext context, IList<string> extraTags) : base(semaphore, context)
         {
-            this.semaphore = semaphore;
-            this.context = context;
             this.extraTags = extraTags;
         }
-
-        public void Run()
-        {
-            Task.Run(() => this.Backup());
-        }
-
-        protected abstract void Backup();
 
         protected static IList<String> GameFilesToList(JObject filesMap)
         {
@@ -47,24 +33,6 @@ namespace LudusaviRestic
 
             return files;
         }
-
-        protected static string ConstructTags(string game, IList<string> extraTags)
-        {
-            string tags = $"--tag \"{game}\"";
-
-            foreach (string tag in extraTags)
-            {
-                tags += $" --tag \"{tag}\"";
-            }
-
-            return tags;
-        }
-
-        protected static string ConstructTags(Game game, IList<string> extraTags)
-        {
-            return ConstructTags(game.Name, extraTags);
-        }
-
 
         private static string WriteFilesToTempFile(IList<string> files)
         {

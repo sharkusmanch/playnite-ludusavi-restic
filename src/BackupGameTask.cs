@@ -22,7 +22,7 @@ namespace LudusaviRestic
             this.game = game;
         }
 
-        protected override void Backup()
+        protected override void RunTask()
         {
             Backup(this.semaphore, this.context, this.game, this.extraTags);
         }

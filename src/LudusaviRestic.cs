@@ -59,6 +59,22 @@ namespace LudusaviRestic
                             this.manager.PerformManualBackup(game);
                         }
                     }
+                },
+                new GameMenuItem
+                {
+                    Description = ResourceProvider.GetString("LOCLuduRestBackupGMRestore"),
+                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+
+                    Action = args => {
+                        if (args.Games.Count != 1)
+                        {
+                            this.PlayniteApi.Dialogs.ShowMessage(ResourceProvider.GetString("LOCLuduRestBackupRestoreMultipleWarn"));
+                        }
+                        else
+                        {
+                            this.manager.StartRestore(args.Games[0]);
+                        }
+                    }
                 }
             };
         }

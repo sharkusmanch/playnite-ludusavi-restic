@@ -6,7 +6,7 @@ namespace LudusaviRestic
     public class BackupContext
     {
         public readonly string NotificationID = "Lususavi Restic";
-        private IPlayniteAPI api;
+        public IPlayniteAPI api;
         private LudusaviResticSettings settings;
 
         public IPlayniteAPI API { get { return this.api; } }

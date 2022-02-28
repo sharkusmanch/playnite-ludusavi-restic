@@ -17,7 +17,7 @@ namespace LudusaviRestic
         {
         }
 
-        protected override void Backup()
+        protected override void RunTask()
         {
             Backup(this.semaphore, this.context, this.extraTags);
         }

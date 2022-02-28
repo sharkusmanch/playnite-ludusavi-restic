@@ -53,6 +53,14 @@ namespace LudusaviRestic
             PerformBackup(game, GameplayBackupTags());
         }
 
+        public void StartRestore(Game game)
+        {
+            logger.Debug($"Starting restore for #{game.Name}");
+
+            RestoreGameTask task = new RestoreGameTask(game, this.semaphore, this.context);
+            task.Run();
+        }
+
         private IList<string> ManualBackupTags()
         {
             IList<string> tags = new List<string>();

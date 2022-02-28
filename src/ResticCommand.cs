@@ -22,6 +22,16 @@ namespace LudusaviRestic
             return ResticExecute(context, $"backup {args}");
         }
 
+        public static CommandResult Snapshots(BackupContext context, string args)
+        {
+            return ResticExecute(context, $"snapshots {args}");
+        }
+        
+        public static CommandResult Restore(BackupContext context, string args)
+        { 
+            return ResticExecute(context, $"restore {args}");
+        }
+
         public static CommandResult List(BackupContext context, string args)
         {
             return ResticExecute(context, $"list {args}");
