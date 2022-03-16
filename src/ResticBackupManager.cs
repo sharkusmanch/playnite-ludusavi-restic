@@ -45,7 +45,7 @@ namespace LudusaviRestic
 
             PerformBackup(game, tags);
         }
-        
+
         public void PerformGameStoppedBackup(Game game)
         {
             PerformBackup(game, GamestoppedBackupTags());
