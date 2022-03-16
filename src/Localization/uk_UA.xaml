@@ -1,23 +1,52 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
     <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+
     <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabBackup">Резервне копіювання</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabRepo">репозиторій</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupTagDiff">Додайте додаткові теги до знімків, щоб розрізняти події</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupManualTag">Тег резервного копіювання вручну</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameStopTag">Тег резервного копіювання гри зупинено</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameplayTag">Тег резервного копіювання ігрового процесу</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Створити знімок збереження</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Резервне копіювання</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Обробка</sys:String>
+
 </ResourceDictionary>

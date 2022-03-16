@@ -1,23 +1,52 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
     <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+
     <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+
     <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+
     <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+
     <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabBackup">دعم</sys:String>
+
     <sys:String x:Key="LOCLuduRestTabRepo">مخزن</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupTagDiff">أضف علامات إضافية إلى اللقطات للتمييز بين الأحداث</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupManualTag">علامة النسخ الاحتياطي اليدوي</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameStopTag">توقفت اللعبة عن علامة النسخ الاحتياطي</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGameplayTag">علامة النسخ الاحتياطي اللعب</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGMCreate">إنشاء حفظ لقطة</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">لودوسافي</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">النسخة الإحتياطية</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">معالجة</sys:String>
+
 </ResourceDictionary>
