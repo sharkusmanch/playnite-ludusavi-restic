@@ -40,3 +40,7 @@ def pack(ctx, toolbox="~/AppData/Local/Playnite/Toolbox.exe"):
 @task
 def style(ctx):
     ctx.run("dotnet format src")
+
+@task
+def clean(ctx):
+  shutil.rmtree("dist")

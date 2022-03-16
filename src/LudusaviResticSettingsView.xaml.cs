@@ -57,6 +57,17 @@ namespace LudusaviRestic
         {
             GameplayBackupInterval.IsEnabled = false;
         }
+        private void OnBackupWhenGameStoppedChecked(object sender, RoutedEventArgs e)
+        {
+            PromptForGameStoppedTag.IsEnabled = true;
+        }
+
+        private void OnBackupWhenGameStoppedUnchecked(object sender, RoutedEventArgs e)
+        {
+            PromptForGameStoppedTag.IsEnabled = false;
+            PromptForGameStoppedTag.IsChecked = false;
+        }
+
         private void OnAdditionalTaggingChecked(object sender, RoutedEventArgs e)
         {
             GameStoppedSnapshotTag.IsEnabled = true;

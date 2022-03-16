@@ -38,6 +38,14 @@ namespace LudusaviRestic
             task.Run();
         }
 
+        public void PerformGameStoppedBackup(Game game, string backupTag)
+        {
+            var tags = GamestoppedBackupTags();
+            tags.Add(backupTag);
+
+            PerformBackup(game, tags);
+        }
+
         public void PerformGameStoppedBackup(Game game)
         {
             PerformBackup(game, GamestoppedBackupTags());
