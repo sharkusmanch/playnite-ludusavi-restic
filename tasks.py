@@ -43,4 +43,4 @@ def style(ctx):
 
 @task
 def clean(ctx):
-    shutil.rmtree("dist")
+  shutil.rmtree("dist")
