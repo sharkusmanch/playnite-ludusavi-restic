@@ -36,6 +36,10 @@ namespace LudusaviRestic
         public bool BackupDuringGameplay { get { return backupDuringGameplay; } set { backupDuringGameplay = value; ; NotifyPropertyChanged("BackupDuringGameplay"); } }
         private bool additionalTagging = false;
         public bool AdditionalTagging { get { return additionalTagging; } set { additionalTagging = value; ; NotifyPropertyChanged("AdditionalTagging"); } }
+        private bool backupWhenGameStopped = true;
+        public bool BackupWhenGameStopped { get { return backupWhenGameStopped; } set { backupWhenGameStopped = value; ; NotifyPropertyChanged("BackupWhenGameStopped"); } }
+        private bool promptForGameStoppedTag = false;
+        public bool PromptForGameStoppedTag { get { return promptForGameStoppedTag; } set { promptForGameStoppedTag = value; ; NotifyPropertyChanged("PromptForGameStoppedTag"); } }
         private string manualSnapshotTag = "manual";
         public string ManualSnapshotTag { get { return manualSnapshotTag; } set { manualSnapshotTag = value; ; NotifyPropertyChanged("ManualSnapshotTag"); } }
         private string gameStoppedSnapshotTag = "game-stopped";

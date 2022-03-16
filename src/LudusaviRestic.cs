@@ -84,7 +84,33 @@ namespace LudusaviRestic
         public override void OnGameStopped(OnGameStoppedEventArgs args)
         {
             this.timer?.Dispose();
-            this.manager.PerformGameStoppedBackup(args.Game);
+
+            if (this.settings.BackupWhenGameStopped)
+            {
+                string caption = ResourceProvider.GetString("LOCLuduRestGameStoppedPromptCaption");
+                string message = ResourceProvider.GetString("LOCLuduRestGameStoppedPromptMessage");
+
+
+                if (this.settings.PromptForGameStoppedTag)
+                {
+                    StringSelectionDialogResult result = PlayniteApi.Dialogs.SelectString(
+                        $"{message}: {args.Game.Name}",
+                        caption,
+                        ""
+                    );
+
+                    if (result.Result)
+                    {
+                        logger.Debug($"Custom backup tag provided: {result.SelectedString}");
+                    }
+
+                    this.manager.PerformGameStoppedBackup(args.Game, result.SelectedString);
+                }
+                else
+                {
+                    this.manager.PerformGameStoppedBackup(args.Game);
+                }
+            }
         }
 
         public override ISettings GetSettings(bool firstRunSettings)

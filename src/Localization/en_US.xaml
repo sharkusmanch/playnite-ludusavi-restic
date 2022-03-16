@@ -4,6 +4,14 @@
 
     <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
 
     <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
