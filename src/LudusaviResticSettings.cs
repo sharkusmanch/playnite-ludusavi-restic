@@ -101,6 +101,7 @@ namespace LudusaviRestic
                 ManualSnapshotTag = savedSettings.ManualSnapshotTag;
                 GameStoppedSnapshotTag = savedSettings.GameStoppedSnapshotTag;
                 GameplaySnapshotTag = savedSettings.GameplaySnapshotTag;
+                PromptForGameStoppedTag = savedSettings.PromptForGameStoppedTag;
             }
         }
 
