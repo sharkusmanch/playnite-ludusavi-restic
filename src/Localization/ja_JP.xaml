@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">ゲームプレイ中のバックアップ</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">ゲーム停止時のバックアップ</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">ゲームが停止したときにバックアップタグのプロンプトを表示する</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">ゲームのバックアップタグ</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">のバックアップタグを入力してください</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">ゲームプレイの保存バックアップ間隔（分）</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">ブラウズ</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Resticリポジトリパス</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Resticリポジトリのパスワード</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone構成</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone構成パスワード</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">確認</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Restic実行可能パス</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi実行可能パス</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">バックアップ</sys:String>
 
@@ -43,13 +43,13 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">保存スナップショットを作成する</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Add backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">バックアップインクルードタグを追加</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Remove backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">バックアップインクルードタグを削除する</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Add backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">バックアップ除外タグを追加する</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Remove backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">バックアップ除外タグを削除する</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
@@ -57,17 +57,17 @@
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">処理</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupMode">Backup Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupMode">バックアップモード</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Exclude Mode: All games are eligible to backup by default. Games can have the exclude tag added to prevent backing up.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">除外モード：すべてのゲームはデフォルトでバックアップの対象となります。ゲームには、バックアップを防ぐために除外タグを追加できます。
 
-Include Mode: No games are backed up. Games can have the include tag added to be eligible for backup.</sys:String>
+インクルードモード：ゲームはバックアップされません。ゲームには、バックアップの対象となるようにincludeタグを追加できます。</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exclude Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">除外モード</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Include Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">インクルードモード</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Include Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] バックアップを含める</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] バックアップを除外する</sys:String>
 </ResourceDictionary>
