@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:LR="clr-namespace:LudusaviRestic"
+             xmlns:beh="clr-namespace:LudusaviRestic.Behaviors"
              mc:Ignorable="d"
              d:DesignHeight="400" d:DesignWidth="600">
 
@@ -57,6 +59,14 @@
             <TabItem Header="{DynamicResource LOCLuduRestTabBackup}">
                 <ScrollViewer Margin="0,10,0,0">
                     <StackPanel>
+                        <StackPanel Margin="10">
+                            <TextBlock Text="{DynamicResource LOCLuduRestBackupMode}" VerticalAlignment="Center"/>
+                            <ComboBox MinWidth="100" Margin="10,0,0,0" VerticalAlignment="Center"
+                                SelectedValue="{Binding BackupExecutionMode}"
+                                beh:SelectorBehaviors.EnumSource="{x:Type LR:ExecutionMode}" />
+                            <TextBlock Margin="20,10,0,0" Text="{DynamicResource LOCLuduRestBackupModeNote}" TextWrapping="Wrap"/>
+                        </StackPanel>
+
                         <StackPanel Margin="15">
                             <CheckBox IsChecked="{Binding BackupWhenGameStopped}" Content="{DynamicResource LOCLuduRestBackupWhenGameStopped}" x:Name="BackupWhenGameStopped"
                                 Checked="OnBackupWhenGameStoppedChecked" Unchecked="OnBackupWhenGameStoppedUnchecked" />

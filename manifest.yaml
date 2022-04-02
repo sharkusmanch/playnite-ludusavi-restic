@@ -1,5 +1,15 @@
 AddonId: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
 Packages:
+  - Version: 0.6.0
+    RequiredApiVersion: 6.2.2
+    ReleaseDate: 2022-04-02
+    PackageUrl: https://github.com/sharkusmanch//playnite-ludusavi-restic/releases/download/v0.6.0/LudusaviRestic_v0.6.0.pext
+    Changelog:
+      - Add backup execution modes - Include and Exclude
+      - In exclude mode (default), all games are backed up except those with the exclude tag present
+      - In include mode, only games with the include tag are backed up
+      - Added Game Menu items to add/remove include/exclude tags
+      - Added a Troubleshooting doc to help diagnose common issues backing up
   - Version: 0.5.1
     RequiredApiVersion: 6.2.2
     ReleaseDate: 2022-03-24
