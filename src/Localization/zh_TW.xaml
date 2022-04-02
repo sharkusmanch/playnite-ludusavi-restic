@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">遊戲過程中的備份</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">遊戲停止時備份</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">遊戲停止時提示備份標籤</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">遊戲備份標籤</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">輸入備用標籤</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">遊戲保存備份間隔（分鐘）</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">瀏覽</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">靜態存儲庫路徑</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Restic 存儲庫密碼</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">克隆配置</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">rclone 配置密碼</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">核實</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">靜態可執行路徑</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi 可執行文件路徑</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">備份</sys:String>
 
@@ -43,13 +43,13 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">創建保存快照</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Add backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">添加備份包含標籤</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Remove backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">刪除備份包含標籤</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Add backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">添加備份排除標記</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Remove backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">刪除備份排除標記</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGM">盧杜薩維</sys:String>
 
@@ -57,17 +57,17 @@
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">加工</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupMode">Backup Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupMode">備份模式</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Exclude Mode: All games are eligible to backup by default. Games can have the exclude tag added to prevent backing up.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">排除模式：默認情況下，所有遊戲都可以備份。遊戲可以添加排除標籤以防止備份。
 
-Include Mode: No games are backed up. Games can have the include tag added to be eligible for backup.</sys:String>
+包含模式：不備份任何遊戲。遊戲可以添加包含標籤以符合備份條件。</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exclude Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">排除模式</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Include Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">包含模式</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Include Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] 包括備份</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] 排除備份</sys:String>
 </ResourceDictionary>
