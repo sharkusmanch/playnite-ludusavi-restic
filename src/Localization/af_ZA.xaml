@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Rugsteun tydens spel</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Rugsteun wanneer speletjie gestop het</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Vra vir rugsteunmerker wanneer speletjie gestop het</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Speletjie-rugsteunmerker</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Voer rugsteunmerker in vir</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Speletjie stoor rugsteuninterval (minute)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Snuffel</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Restiese bewaarplekpad</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Restiese bewaarplek wagwoord</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone konfigurasie</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone konfigurasie wagwoord</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Verifieer</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Restiese uitvoerbare pad</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi uitvoerbare pad</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Ondersteuning</sys:String>
 
@@ -43,13 +43,13 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Skep stoor momentopname</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Add backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Voeg rugsteun insluit merker by</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Remove backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Verwyder rugsteun insluit merker</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Add backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Voeg rugsteunuitsluitmerker by</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Remove backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Verwyder rugsteunuitsluitmerker</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
@@ -57,17 +57,17 @@
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Verwerking</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupMode">Backup Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupMode">Rugsteunmodus</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Exclude Mode: All games are eligible to backup by default. Games can have the exclude tag added to prevent backing up.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Sluit af: Alle speletjies kom by verstek in aanmerking vir rugsteun. Speletjies kan die uitsluitmerker bygevoeg hê om rugsteun te voorkom.
 
-Include Mode: No games are backed up. Games can have the include tag added to be eligible for backup.</sys:String>
+Insluitmodus: Geen speletjies word gerugsteun nie. Speletjies kan die insluit-merker bygevoeg hê om vir rugsteun in aanmerking te kom.</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exclude Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Sluit modus uit</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Include Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Sluit modus in</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Include Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Sluit rugsteun in</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Sluit rugsteun uit</sys:String>
 </ResourceDictionary>
