@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Sauvegarde pendant le jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Sauvegarde à l'arrêt du jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Demander une balise de sauvegarde lorsque le jeu s'arrête</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Balise de sauvegarde du jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Entrez la balise de sauvegarde pour</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervalle de sauvegarde de la jouabilité (minutes)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Parcourir</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Chemin d'accès au référentiel Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Mot de passe du référentiel Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Configuration Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Mot de passe de configuration Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Vérifier</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Chemin exécutable restreint</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Chemin de l'exécutable Ludusavi</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Sauvegarde</sys:String>
 
@@ -43,13 +43,13 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Créer un instantané de sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Add backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Ajouter une balise d'inclusion de sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Remove backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Supprimer la balise d'inclusion de sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Add backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Ajouter une balise d'exclusion de sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Remove backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Supprimer la balise d'exclusion de sauvegarde</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
@@ -57,17 +57,17 @@
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Traitement</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupMode">Backup Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupMode">Mode de sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Exclude Mode: All games are eligible to backup by default. Games can have the exclude tag added to prevent backing up.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Mode d'exclusion : tous les jeux sont éligibles à la sauvegarde par défaut. Les jeux peuvent avoir la balise d'exclusion ajoutée pour empêcher la sauvegarde.
 
-Include Mode: No games are backed up. Games can have the include tag added to be eligible for backup.</sys:String>
+Mode Inclure : Aucun jeu n'est sauvegardé. Les jeux peuvent avoir la balise include ajoutée pour être éligibles à la sauvegarde.</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exclude Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exclure le mode</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Include Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Inclure le mode</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Include Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Inclure la sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclure la sauvegarde</sys:String>
 </ResourceDictionary>
