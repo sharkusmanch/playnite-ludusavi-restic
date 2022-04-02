@@ -41,6 +41,10 @@ irrecoverably lost.
 
 - Update optional variables as needed: rclone config, rclone config password, path to `ludusavi`, path to `restic`
 
+## Troubleshooting
+
+See the [troubleshooting doc](https://github.com/sharkusmanch/playnite-ludusavi-restic/blob/master/Troubleshooting.md)
+
 ## View backups
 
 View data and snapshots stored in the game data repository is handled by `restic`
