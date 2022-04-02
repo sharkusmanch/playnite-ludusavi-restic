@@ -42,6 +42,14 @@
     <sys:String x:Key="LOCLuduRestBackupGameplayTag">Thẻ dự phòng trò chơi</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Tạo ảnh chụp nhanh lưu</sys:String>
+    
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Add backup include tag</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Remove backup include tag</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Add backup exclude tag</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Remove backup exclude tag</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
@@ -49,4 +57,18 @@
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Xử lý</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">Backup Mode</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Exclude Mode: All games are eligible to backup by default. Games can have the exclude tag added to prevent backing up.
+
+Include Mode: No games are backed up. Games can have the include tag added to be eligible for backup.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exclude Mode</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Include Mode</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Include Backup</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup</sys:String>
+    
 </ResourceDictionary>
