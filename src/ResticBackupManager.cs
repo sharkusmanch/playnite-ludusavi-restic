@@ -34,6 +34,19 @@ namespace LudusaviRestic
 
         public void PerformBackup(Game game, IList<string> extraTags)
         {
+            LudusaviResticSettings settings = this.context.Settings;
+
+            if (settings.BackupExecutionMode == ExecutionMode.Exclude && game.TagIds.Contains(settings.ExcludeTagID))
+            {
+                logger.Info($"Skipping backup of {game.Name} due to exclude tag");
+                return;
+            }
+            else if (settings.BackupExecutionMode == ExecutionMode.Include && !game.TagIds.Contains(settings.IncludeTagID))
+            {
+                logger.Info($"Skipping backup of {game.Name} due to lacking include tag");
+                return;
+            }
+
             BackupGameTask task = new BackupGameTask(game, this.semaphore, this.context, extraTags);
             task.Run();
         }

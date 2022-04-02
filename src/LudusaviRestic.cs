@@ -29,6 +29,18 @@ namespace LudusaviRestic
             this.manager = new ResticBackupManager(this.settings, this.PlayniteApi);
         }
 
+        private void LocalizeTags()
+        {
+            if (PlayniteApi.Database.Tags.Get(this.settings.ExcludeTagID) is Tag excludeTag)
+            {
+                excludeTag.Name = ResourceProvider.GetString("LOCLuduRestBackupExcludeTag");
+            }
+            if (PlayniteApi.Database.Tags.Get(this.settings.IncludeTagID) is Tag includeTag)
+            {
+                includeTag.Name = ResourceProvider.GetString("LOCLuduRestBackupIncludeTag");
+            }
+        }
+
         public override IEnumerable<MainMenuItem> GetMainMenuItems(GetMainMenuItemsArgs menuArgs)
         {
             return new List<MainMenuItem>
@@ -59,8 +71,92 @@ namespace LudusaviRestic
                             this.manager.PerformManualBackup(game);
                         }
                     }
+                },
+                new GameMenuItem
+                {
+                    Description = ResourceProvider.GetString("LOCLuduRestBackupGMIncludeAdd"),
+                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+
+                    Action = args => {
+                        foreach (var game in args.Games)
+                        {
+                            AddTag(game, this.settings.IncludeTagID);
+                            PlayniteApi.Database.Games.Update(game);
+                        }
+                    }
+                },
+                new GameMenuItem
+                {
+                    Description = ResourceProvider.GetString("LOCLuduRestBackupGMIncludeRemove"),
+                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+
+                    Action = args => {
+                        foreach (var game in args.Games)
+                        {
+                            RemoveTag(game, this.settings.IncludeTagID);
+                            PlayniteApi.Database.Games.Update(game);
+                        }
+                    }
+                },
+                new GameMenuItem
+                {
+                    Description = ResourceProvider.GetString("LOCLuduRestBackupGMExcludeAdd"),
+                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+
+                    Action = args => {
+                        foreach (var game in args.Games)
+                        {
+                            AddTag(game, this.settings.ExcludeTagID);
+                            PlayniteApi.Database.Games.Update(game);
+                        }
+                    }
+                },
+                new GameMenuItem
+                {
+                    Description = ResourceProvider.GetString("LOCLuduRestBackupGMExcludeRemove"),
+                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+
+                    Action = args => {
+                        foreach (var game in args.Games)
+                        {
+                            RemoveTag(game, this.settings.ExcludeTagID);
+                            PlayniteApi.Database.Games.Update(game);
+                        }
+                    }
                 }
             };
+        }
+
+        private bool AddTag(Game game, Guid tagId)
+        {
+            if (game is Game && tagId != Guid.Empty)
+            {
+                if (game.TagIds is List<Guid> ids)
+                {
+                    return ids.AddMissing(tagId);
+                }
+                else
+                {
+                    game.TagIds = new List<Guid> { tagId };
+                }
+            }
+            return false;
+        }
+        private bool RemoveTag(Game game, Guid tagId)
+        {
+            if (game is Game && tagId != Guid.Empty)
+            {
+                if (game.TagIds is List<Guid> ids)
+                {
+                    return ids.Remove(tagId);
+                }
+            }
+            return false;
+        }
+
+        public override void OnApplicationStarted(OnApplicationStartedEventArgs args)
+        {
+            LocalizeTags();
         }
 
         public override void OnGameStarted(OnGameStartedEventArgs args)

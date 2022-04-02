@@ -22,6 +22,45 @@ namespace LudusaviRestic
         private string ludusaviExecutablePath = "ludusavi";
         public string LudusaviExecutablePath { get { return ludusaviExecutablePath; } set { ludusaviExecutablePath = value; NotifyPropertyChanged("LudusaviExecutablePath"); } }
 
+        private ExecutionMode backupExecutionMode = ExecutionMode.Exclude;
+
+        public ExecutionMode BackupExecutionMode { get { return backupExecutionMode; } set { backupExecutionMode = value; NotifyPropertyChanged("BackupExecutionMode"); } }
+
+        private Guid excludeTagID = Guid.Empty;
+        public Guid ExcludeTagID
+        {
+            get
+            {
+                if (plugin != null && excludeTagID == Guid.Empty)
+                {
+                    excludeTagID = plugin.PlayniteApi.Database.Tags.Add("[LR] Exclude").Id;
+                }
+                else if (plugin != null && plugin.PlayniteApi.Database.Tags.Get(excludeTagID) == null)
+                {
+                    excludeTagID = plugin.PlayniteApi.Database.Tags.Add("[LR] Exclude").Id;
+                }
+                return excludeTagID;
+            }
+            set => excludeTagID = value;
+        }
+        private Guid includeTagID = Guid.Empty;
+        public Guid IncludeTagID
+        {
+            get
+            {
+                if (plugin != null && includeTagID == Guid.Empty)
+                {
+                    includeTagID = plugin.PlayniteApi.Database.Tags.Add("[LR] Include").Id;
+                }
+                else if (plugin != null && plugin.PlayniteApi.Database.Tags.Get(includeTagID) == null)
+                {
+                    includeTagID = plugin.PlayniteApi.Database.Tags.Add("[LR] Include").Id;
+                }
+                return includeTagID;
+            }
+            set => includeTagID = value;
+        }
+
         private string resticExecutablePath = "restic";
         public string ResticExecutablePath { get { return resticExecutablePath; } set { resticExecutablePath = value; NotifyPropertyChanged("ResticExecutablePath"); } }
         private string resticRepository;
@@ -102,6 +141,7 @@ namespace LudusaviRestic
                 GameStoppedSnapshotTag = savedSettings.GameStoppedSnapshotTag;
                 GameplaySnapshotTag = savedSettings.GameplaySnapshotTag;
                 PromptForGameStoppedTag = savedSettings.PromptForGameStoppedTag;
+                BackupExecutionMode = savedSettings.BackupExecutionMode;
             }
         }
 
@@ -117,11 +157,14 @@ namespace LudusaviRestic
             Load();
         }
 
+        public void Save()
+        {
+            plugin.SavePluginSettings(this);
+        }
+
         public void EndEdit()
         {
-            // Code executed when user decides to confirm changes made since BeginEdit was called.
-            // This method should save settings made to Option1 and Option2.
-            plugin.SavePluginSettings(this);
+            Save();
         }
 
         public bool VerifySettings(out List<string> errors)
