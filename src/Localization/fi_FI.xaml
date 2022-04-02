@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Varmuuskopiointi pelin aikana</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Varmuuskopiointi pelin pysähtyessä</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Pyydä varmuuskopiotagia pelin pysähtyessä</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Pelin varmuuskopiotunniste</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Anna varatunniste kohteelle</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Pelin varmuuskopiointiväli (minuutteja)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Selaa</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Rajoitettu arkiston polku</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Restic arkiston salasana</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone-asetus</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config salasana</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Vahvista</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Rajoita suoritettavaa polkua</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi suoritettava polku</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Varmuuskopioida</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Luo tallennustilanne</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Lisää varmuuskopiotagi</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Poista varmuuskopion sisällyttämistunniste</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Lisää poissulkemisen varatunniste</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Poista varmuuskopion poissulkemistagi</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Varmuuskopiointi</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Käsittely</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">Varmuuskopiointitila</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Poissulkemistila: Kaikki pelit ovat oletuksena varmuuskopioitavia. Peleihin voidaan lisätä poissulkemistunniste varmuuskopioinnin estämiseksi.
+
+Sisällystila: Pelejä ei varmuuskopioida. Peleihin voidaan lisätä include-tunniste, jotta ne voidaan varmuuskopioida.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Sulje tila pois</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Sisällytä tila</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Sisällytä varmuuskopio</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Sulje pois varmuuskopio</sys:String>
 </ResourceDictionary>

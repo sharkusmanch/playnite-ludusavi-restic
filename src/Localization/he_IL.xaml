@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">גיבוי במהלך המשחק</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">גיבוי כאשר המשחק הופסק</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">בקש תג גיבוי כאשר המשחק הופסק</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">תג גיבוי למשחק</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">הזן תג גיבוי עבור</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">מרווח גיבוי של משחק (דקות)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">לְדַפדֵף</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">נתיב מאגר רסטי</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">סיסמת מאגר רסטיק</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">תצורת Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">סיסמת תצורת Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">תאשר</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">נתיב הפעלה רסטי</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">נתיב ההפעלה של Ludusavi</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">גיבוי</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">צור תמונת מצב של שמירה</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">הוסף גיבוי כולל תג</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">הסר גיבוי כולל תג</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">הוסף תג אי הכללה של גיבוי</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">הסר תג אי הכללה של גיבוי</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">גיבוי</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">מעבד</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">מצב גיבוי</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">מצב אי הכללה: כל המשחקים כשירים לגיבוי כברירת מחדל. למשחקים ניתן להוסיף את תג ה-exclude כדי למנוע גיבוי.
+
+מצב כלול: אין גיבוי של משחקים. למשחקים אפשר להוסיף את תג include כדי להיות כשירים לגיבוי.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">מצב אי הכללה</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">מצב כלול</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] כלול גיבוי</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] אל תכלול גיבוי</sys:String>
 </ResourceDictionary>

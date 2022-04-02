@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Säkerhetskopiering under spel</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Säkerhetskopiera när spelet slutade</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Fråga efter backup-tagg när spelet slutade</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Spel backup tag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Ange backup-tagg för</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay spara backup intervall (minuter)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Bläddra</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Restic förvarsväg</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository lösenord</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone-konfiguration</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone konfigurationslösenord</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Kontrollera</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Restic körbar sökväg</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi körbar sökväg</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Säkerhetskopiering</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Skapa spara ögonblicksbild</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Lägg till backup include-tagg</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Ta bort backup include-tagg</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Lägg till backup exclude-tagg</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Ta bort backup exclude-tagg</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Backar</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Bearbetning</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">Säkerhetskopieringsläge</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Exkluderingsläge: Alla spel är kvalificerade för säkerhetskopiering som standard. Spel kan ha exkluderingstaggen tillagd för att förhindra säkerhetskopiering.
+
+Inkluderingsläge: Inga spel säkerhetskopieras. Spel kan ha include-taggen tillagd för att vara kvalificerad för säkerhetskopiering.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exkluderingsläge</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Inkludera läge</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Inkludera säkerhetskopiering</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Uteslut säkerhetskopiering</sys:String>
 </ResourceDictionary>

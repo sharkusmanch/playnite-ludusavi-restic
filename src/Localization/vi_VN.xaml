@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Sao lưu trong quá trình chơi trò chơi</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Sao lưu khi trò chơi dừng lại</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Nhắc thẻ dự phòng khi trò chơi dừng lại</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Thẻ sao lưu trò chơi</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Nhập thẻ dự phòng cho</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay lưu khoảng thời gian dự phòng (phút)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Duyệt qua</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Đường dẫn kho lưu trữ Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Mật khẩu kho lưu trữ Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Cấu hình Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Mật khẩu cấu hình Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Xác minh</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Đường dẫn thực thi Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Đường dẫn thực thi Ludusavi</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Sao lưu</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Tạo ảnh chụp nhanh lưu</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Thêm thẻ bao gồm dự phòng</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Xóa thẻ bao gồm dự phòng</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Thêm thẻ loại trừ dự phòng</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Xóa thẻ loại trừ dự phòng</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Sao lưu</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Xử lý</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">Chế độ sao lưu</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Chế độ Loại trừ: Tất cả các trò chơi đều đủ điều kiện để sao lưu theo mặc định. Trò chơi có thể có thêm thẻ loại trừ để ngăn sao lưu.
+
+Chế độ bao gồm: Không có trò chơi nào được sao lưu. Trò chơi có thể có thêm thẻ bao gồm để đủ điều kiện để sao lưu.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Chế độ Loại trừ</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Chế độ bao gồm</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Bao gồm Sao lưu</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Loại trừ Sao lưu</sys:String>
 </ResourceDictionary>

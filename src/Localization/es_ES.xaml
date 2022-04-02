@@ -3,13 +3,13 @@
 
     <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Copia de seguridad durante el juego</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Copia de seguridad cuando el juego se detuvo</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Solicitar una etiqueta de copia de seguridad cuando el juego se detuvo</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Etiqueta de copia de seguridad del juego</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Ingrese la etiqueta de respaldo para</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervalo de copia de seguridad para guardar el juego (minutos)</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Crear instantánea guardada</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Añadir etiqueta de inclusión de copia de seguridad</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Eliminar la etiqueta de inclusión de la copia de seguridad</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Añadir etiqueta de exclusión de copia de seguridad</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Eliminar etiqueta de exclusión de copia de seguridad</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">copia de seguridad</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Procesando</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">Modo de copia de seguridad</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Modo de exclusión: todos los juegos son elegibles para realizar una copia de seguridad de forma predeterminada. Los juegos pueden tener la etiqueta de exclusión agregada para evitar la copia de seguridad.
+
+Modo Incluir: No se realiza copia de seguridad de ningún juego. Los juegos pueden tener la etiqueta de inclusión agregada para ser elegibles para la copia de seguridad.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Modo de exclusión</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Modo de inclusión</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Incluir copia de seguridad</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Excluir copia de seguridad</sys:String>
 </ResourceDictionary>

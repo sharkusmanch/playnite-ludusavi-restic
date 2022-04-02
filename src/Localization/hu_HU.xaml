@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Biztonsági mentés játék közben</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Biztonsági mentés, amikor a játék leállt</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">A játék leállításakor biztonsági mentési címke kérése</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Játék tartalék címke</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Adja meg a következőhöz tartozó biztonsági címkét</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Játékmenet mentési időköz (perc)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Tallózás</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Restic adattár elérési útja</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository jelszó</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone konfig</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone konfigurációs jelszó</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Ellenőrizze</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">A végrehajtható elérési út korlátozása</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi végrehajtható elérési út</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">biztonsági mentés</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Hozzon létre mentési pillanatképet</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Adjon hozzá biztonsági másolatot</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Távolítsa el a biztonsági másolatot tartalmazó címkét</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Tartalék kizárási címke hozzáadása</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Távolítsa el a tartalék kizárási címkét</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Biztonsági mentés</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Feldolgozás</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">Biztonsági mentés mód</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Kizárási mód: Alapértelmezés szerint minden játék jogosult biztonsági mentésre. A játékokhoz hozzáadható az exkluzív címke, hogy megakadályozza a biztonsági mentést.
+
+Belefoglalás mód: A játékról nincs biztonsági mentés. A játékokhoz hozzá lehet adni az include címkét, hogy alkalmasak legyenek biztonsági mentésre.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Mód kizárása</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Belefoglalás mód</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Tartalmazza a biztonsági másolatot</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Biztonsági mentés kizárása</sys:String>
 </ResourceDictionary>

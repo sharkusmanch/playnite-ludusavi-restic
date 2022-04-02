@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Резервна копија током игре</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Прављење резервне копије када се игра заустави</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Затражите резервну ознаку када се игра заустави</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Ознака резервне копије игре</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Унесите резервну ознаку за</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Интервал резервне копије чувања игре (минути)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Прегледај</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Путања Рестиц репозиторијума</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Рестиц лозинка за складиште</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Рцлоне цонфиг</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Рцлоне конфигурациона лозинка</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Проверити</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Рестиц извршна путања</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Лудусави извршна путања</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Бацкуп</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Направите снимак снимања</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Додајте ознаку укључивања резервне копије</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Уклоните ознаку укључивања резервне копије</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Додајте ознаку за изузимање резервне копије</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Уклоните ознаку за изузимање резервне копије</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">ЛудусавиРестиц</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Прављење резервних копија</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Обрада</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">Бацкуп Моде</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Режим искључења: Све игре подразумевано испуњавају услове за прављење резервних копија. Игре могу да додају ознаку за изузимање да би се спречило прављење резервних копија.
+
+Режим укључивања: нема резервне копије ниједне игре. Игре могу да имају додану ознаку укључивања да би биле квалификоване за прављење резервних копија.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Екцлуде Моде</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Инцлуде Моде</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Укључи резервну копију</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Искључи резервну копију</sys:String>
 </ResourceDictionary>

@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Còpia de seguretat durant el joc</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Còpia de seguretat quan s'atura el joc</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Sol·licita l'etiqueta de seguretat quan el joc s'atura</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Etiqueta de còpia de seguretat del joc</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Introduïu l'etiqueta de seguretat per a</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Interval de còpia de seguretat de desar el joc (minuts)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Navega</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Ruta del repositori Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Contrasenya del repositori Restic</sys:String>
 
     <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Contrasenya de configuració de Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Verificar</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Ruta executable de Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ruta executable de Ludusavi</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Còpia de seguretat</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Crea una instantània desa</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Afegeix l'etiqueta d'inclusió de còpia de seguretat</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Elimina l'etiqueta d'inclusió de la còpia de seguretat</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Afegeix una etiqueta d'exclusió de seguretat</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Elimina l'etiqueta d'exclusió de la còpia de seguretat</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Còpia de seguretat</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Tramitació</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">Mode de còpia de seguretat</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Mode d'exclusió: tots els jocs són aptes per a una còpia de seguretat de manera predeterminada. Els jocs poden tenir l'etiqueta d'exclusió afegit per evitar la còpia de seguretat.
+
+Mode d'inclou: no es fa una còpia de seguretat de cap joc. Els jocs poden tenir l'etiqueta d'inclusió afegit per ser aptes per a la còpia de seguretat.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Mode d'exclusió</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Mode d'inclou</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Inclou la còpia de seguretat</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclou la còpia de seguretat</sys:String>
 </ResourceDictionary>

@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Резервное копирование во время игры</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Бэкап при остановке игры</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Запрашивать резервный тег, когда игра остановлена</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Тег резервной копии игры</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Введите резервный тег для</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Интервал резервного копирования сохранения игрового процесса (минуты)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Просматривать</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Путь репозитория Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Пароль репозитория Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Конфигурация Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Пароль конфигурации Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Проверять</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Restic исполняемый путь</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Исполняемый путь Ludusavi</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Резервный</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Создать снимок сохранения</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Добавить тег включения резервной копии</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Удалить тег включения резервной копии</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Добавить резервный тег исключения</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Удалить тег исключения из резервной копии</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">ЛудусавиРестич</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Резервное копирование</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Обработка</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">Режим резервного копирования</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Режим исключения: по умолчанию все игры имеют право на резервное копирование. В игры можно добавить тег исключения, чтобы предотвратить резервное копирование.
+
+Режим включения: резервные копии игр не сохраняются. В играх может быть добавлен тег включения, чтобы иметь право на резервное копирование.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Режим исключения</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Включить режим</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Включить резервное копирование</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Исключить резервное копирование</sys:String>
 </ResourceDictionary>

@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup durante o jogo</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup quando o jogo parou</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Solicitar tag de backup quando o jogo parou</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Etiqueta de backup do jogo</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Insira a tag de backup para</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervalo de backup de jogo salvo (minutos)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Navegar</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Caminho do repositório Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Senha do repositório Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Configuração Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Senha de configuração do Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Verificar</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Caminho executável Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Caminho executável do Ludusavi</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Cópia de segurança</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Criar salvar instantâneo</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Adicionar tag de inclusão de backup</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Remover a etiqueta de inclusão de backup</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Adicionar tag de exclusão de backup</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Remover tag de exclusão de backup</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Fazendo backup</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Em processamento</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">Modo de backup</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Modo de exclusão: Todos os jogos são elegíveis para backup por padrão. Os jogos podem ter a tag de exclusão adicionada para evitar o backup.
+
+Modo Incluir: Nenhum jogo é copiado. Os jogos podem ter a tag de inclusão adicionada para serem elegíveis para backup.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Modo Excluir</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Modo Incluir</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Incluir Backup</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Excluir Backup</sys:String>
 </ResourceDictionary>

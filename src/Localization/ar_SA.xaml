@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">النسخ الاحتياطي أثناء اللعب</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">النسخ الاحتياطي عند توقف اللعبة</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">المطالبة بعلامة النسخ الاحتياطي عند توقف اللعبة</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">علامة النسخ الاحتياطي للعبة</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">أدخل علامة احتياطية لـ</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">طريقة اللعب - حفظ الفاصل الزمني للنسخ الاحتياطي (بالدقائق)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">تصفح</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">مسار المستودع Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">كلمة مرور مستودع Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">تكوين Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">كلمة مرور تكوين Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">يؤكد</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">مسار قابل للتنفيذ Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">مسار Ludusavi القابل للتنفيذ</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">دعم</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">إنشاء حفظ لقطة</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">إضافة نسخة احتياطية تشمل العلامة</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">إزالة النسخة الاحتياطية تشمل العلامة</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">إضافة نسخة احتياطية استبعاد العلامة</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">إزالة النسخة الاحتياطية استبعاد العلامة</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">لودوسافي</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">النسخة الإحتياطية</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">معالجة</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">وضع النسخ الاحتياطي</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">وضع الاستبعاد: جميع الألعاب مؤهلة للنسخ الاحتياطي افتراضيًا. يمكن إضافة علامة الاستبعاد للألعاب لمنع النسخ الاحتياطي.
+
+وضع التضمين: لا يتم نسخ أي ألعاب احتياطيًا. يمكن إضافة علامة التضمين للألعاب لتكون مؤهلة للنسخ الاحتياطي.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">وضع الاستبعاد</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">تضمين الوضع</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] تضمين النسخ الاحتياطي</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] استبعاد النسخ الاحتياطي</sys:String>
 </ResourceDictionary>

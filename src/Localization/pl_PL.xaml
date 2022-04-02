@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Kopia zapasowa podczas rozgrywki</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Kopia zapasowa po zatrzymaniu gry</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Pytaj o tag zapasowy po zatrzymaniu gry</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Tag kopii zapasowej gry</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Wpisz zapasowy tag dla</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Interwał tworzenia kopii zapasowej gry (minuty)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Przeglądaj</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Restic ścieżka repozytorium</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Restic hasło do repozytorium</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Konfiguracja Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Hasło do konfiguracji Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Zweryfikować</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Restic ścieżka wykonywalna</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ścieżka wykonywalna Ludusavi</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Utworzyć kopię zapasową</sys:String>
 
@@ -43,10 +43,31 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Utwórz zapisz migawkę</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Dodaj kopię zapasową dołącz tag</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Usuń kopię zapasową dołącz tag</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Dodaj zapasowy tag wykluczenia</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Usuń zapasowy tag wykluczenia</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Tworzenie kopii zapasowej</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Przetwarzanie</sys:String>
 
+    <sys:String x:Key="LOCLuduRestBackupMode">Tryb kopii zapasowej</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Tryb wykluczania: Domyślnie kopie zapasowe wszystkich gier można tworzyć. Gry mogą mieć dodany tag wykluczenia, aby zapobiec tworzeniu kopii zapasowych.
+
+Włącz tryb: kopie zapasowe gier nie są tworzone. Gry mogą mieć dodany tag dołączania, aby kwalifikować się do tworzenia kopii zapasowych.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Wyklucz tryb</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Uwzględnij tryb</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Dołącz kopię zapasową</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Wyklucz kopię zapasową</sys:String>
 </ResourceDictionary>
