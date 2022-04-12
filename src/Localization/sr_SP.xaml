@@ -70,4 +70,6 @@
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Укључи резервну копију</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Искључи резервну копију</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
 </ResourceDictionary>
