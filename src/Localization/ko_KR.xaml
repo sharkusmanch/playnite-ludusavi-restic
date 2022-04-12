@@ -70,4 +70,6 @@
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] 백업 포함</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] 백업 제외</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">게임 제거 시 세이브 백업 생성</sys:String>
 </ResourceDictionary>
