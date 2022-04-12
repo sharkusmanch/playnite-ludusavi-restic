@@ -70,4 +70,6 @@ Include-Modus: Es werden keine Spiele gesichert. Spielen kann das Include-Tag hi
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Sicherung einschließen</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Sicherung ausschließen</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
 </ResourceDictionary>
