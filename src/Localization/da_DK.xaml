@@ -70,4 +70,6 @@ Inkluder-tilstand: Ingen spil er sikkerhedskopieret. Spil kan have inkluderet ta
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Inkluder sikkerhedskopiering</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Udelad sikkerhedskopiering</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Opret gem backup, når spillet er afinstalleret</sys:String>
 </ResourceDictionary>
