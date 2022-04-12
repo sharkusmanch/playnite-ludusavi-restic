@@ -70,4 +70,6 @@
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] 包括備份</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] 排除備份</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">卸載遊戲時創建保存備份</sys:String>
 </ResourceDictionary>

@@ -70,4 +70,6 @@ Modo Incluir: Nenhum jogo é copiado. Os jogos podem ter a tag de inclusão adic
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Incluir Backup</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Excluir Backup</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Criar backup salvo quando o jogo for desinstalado</sys:String>
 </ResourceDictionary>

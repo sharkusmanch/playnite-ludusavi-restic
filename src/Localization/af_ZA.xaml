@@ -70,4 +70,6 @@ Insluitmodus: Geen speletjies word gerugsteun nie. Speletjies kan die insluit-me
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Sluit rugsteun in</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Sluit rugsteun uit</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Skep stoor-rugsteun wanneer speletjie gedeïnstalleer word</sys:String>
 </ResourceDictionary>

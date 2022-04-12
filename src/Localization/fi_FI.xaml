@@ -70,4 +70,6 @@ Sisällystila: Pelejä ei varmuuskopioida. Peleihin voidaan lisätä include-tun
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Sisällytä varmuuskopio</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Sulje pois varmuuskopio</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Luo varmuuskopio, kun peli poistetaan</sys:String>
 </ResourceDictionary>

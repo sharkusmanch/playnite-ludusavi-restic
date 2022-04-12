@@ -70,4 +70,6 @@
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] כלול גיבוי</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] אל תכלול גיבוי</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">צור גיבוי שמירה כאשר המשחק מוסר</sys:String>
 </ResourceDictionary>
