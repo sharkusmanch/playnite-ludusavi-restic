@@ -71,5 +71,5 @@ Dahil Etme Modu: Hiçbir oyun yedeklenmez. Oyunlara, yedeklemeye uygun olması i
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Yedeklemeyi Hariç Tut</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Oyun kaldırıldığında kaydetme yedeği oluştur</sys:String>
 </ResourceDictionary>
