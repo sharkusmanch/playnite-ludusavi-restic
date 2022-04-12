@@ -71,5 +71,5 @@ Modo Incluir: No se realiza copia de seguridad de ningún juego. Los juegos pued
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Excluir copia de seguridad</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Crear una copia de seguridad guardada cuando se desinstale el juego</sys:String>
 </ResourceDictionary>
