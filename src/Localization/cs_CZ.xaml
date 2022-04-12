@@ -70,4 +70,6 @@ Režim Zahrnout: Nejsou zálohovány žádné hry. Hry mohou mít přidán tag i
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Zahrnout zálohu</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Vyloučit zálohování</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
 </ResourceDictionary>
