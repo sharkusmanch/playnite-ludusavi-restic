@@ -70,4 +70,6 @@ Mode Inclure : Aucun jeu n'est sauvegardé. Les jeux peuvent avoir la balise in
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Inclure la sauvegarde</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclure la sauvegarde</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Créer une sauvegarde de sauvegarde lorsque le jeu est désinstallé</sys:String>
 </ResourceDictionary>
