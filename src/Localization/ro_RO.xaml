@@ -71,5 +71,5 @@ Mod Include: Nu se face backup pentru niciun joc. Jocurile pot avea eticheta inc
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Excludeți Backup</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Creați o copie de rezervă pentru salvare când jocul este dezinstalat</sys:String>
 </ResourceDictionary>
