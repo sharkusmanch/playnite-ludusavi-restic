@@ -79,6 +79,8 @@ namespace LudusaviRestic
         public bool BackupWhenGameStopped { get { return backupWhenGameStopped; } set { backupWhenGameStopped = value; ; NotifyPropertyChanged("BackupWhenGameStopped"); } }
         private bool promptForGameStoppedTag = false;
         public bool PromptForGameStoppedTag { get { return promptForGameStoppedTag; } set { promptForGameStoppedTag = value; ; NotifyPropertyChanged("PromptForGameStoppedTag"); } }
+        private bool backupOnUninstall = false;
+        public bool BackupOnUninstall { get { return backupOnUninstall; } set { backupOnUninstall = value; ; NotifyPropertyChanged("BackupOnUninstall"); } }
         private string manualSnapshotTag = "manual";
         public string ManualSnapshotTag { get { return manualSnapshotTag; } set { manualSnapshotTag = value; ; NotifyPropertyChanged("ManualSnapshotTag"); } }
         private string gameStoppedSnapshotTag = "game-stopped";
@@ -142,6 +144,7 @@ namespace LudusaviRestic
                 GameplaySnapshotTag = savedSettings.GameplaySnapshotTag;
                 PromptForGameStoppedTag = savedSettings.PromptForGameStoppedTag;
                 BackupExecutionMode = savedSettings.BackupExecutionMode;
+                BackupOnUninstall = savedSettings.BackupOnUninstall;
             }
         }
 

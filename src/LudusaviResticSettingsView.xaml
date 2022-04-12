@@ -68,6 +68,10 @@
                         </StackPanel>
 
                         <StackPanel Margin="15">
+                            <CheckBox IsChecked="{Binding BackupOnUninstall}" Content="{DynamicResource LOCLuduRestBackupOnUninstall}" />
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
                             <CheckBox IsChecked="{Binding BackupWhenGameStopped}" Content="{DynamicResource LOCLuduRestBackupWhenGameStopped}" x:Name="BackupWhenGameStopped"
                                 Checked="OnBackupWhenGameStoppedChecked" Unchecked="OnBackupWhenGameStoppedUnchecked" />
                         </StackPanel>
