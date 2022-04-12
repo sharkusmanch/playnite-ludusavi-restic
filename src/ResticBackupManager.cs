@@ -2,6 +2,7 @@ using Playnite.SDK;
 using Playnite.SDK.Models;
 using System.Threading;
 using System.Collections.Generic;
+using System;
 
 namespace LudusaviRestic
 {
@@ -32,16 +33,22 @@ namespace LudusaviRestic
             PerformBackup(game, new List<string>());
         }
 
+        private bool GameHasTag(Game game, Guid tagId)
+        {
+            return game.TagIds != null && game.TagIds.Contains(tagId);
+        }
+
         public void PerformBackup(Game game, IList<string> extraTags)
         {
+            logger.Debug($"Backup #{game.Name}");
             LudusaviResticSettings settings = this.context.Settings;
 
-            if (settings.BackupExecutionMode == ExecutionMode.Exclude && game.TagIds.Contains(settings.ExcludeTagID))
+            if (settings.BackupExecutionMode == ExecutionMode.Exclude && GameHasTag(game, settings.ExcludeTagID))
             {
                 logger.Info($"Skipping backup of {game.Name} due to exclude tag");
                 return;
             }
-            else if (settings.BackupExecutionMode == ExecutionMode.Include && !game.TagIds.Contains(settings.IncludeTagID))
+            else if (settings.BackupExecutionMode == ExecutionMode.Include && !GameHasTag(game, settings.IncludeTagID))
             {
                 logger.Info($"Skipping backup of {game.Name} due to lacking include tag");
                 return;

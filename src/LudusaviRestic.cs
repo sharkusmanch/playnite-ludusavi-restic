@@ -159,6 +159,14 @@ namespace LudusaviRestic
             LocalizeTags();
         }
 
+        public override void OnGameUninstalled(OnGameUninstalledEventArgs args)
+        {
+            if (settings.BackupOnUninstall)
+            {
+                this.manager.PerformBackup(args.Game);
+            }
+        }
+
         public override void OnGameStarted(OnGameStartedEventArgs args)
         {
             if (args?.Game is null) return;
