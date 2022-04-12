@@ -70,4 +70,6 @@ Modalità Includi: non viene eseguito il backup dei giochi. I giochi possono ave
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Includi backup</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Escludi backup</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
 </ResourceDictionary>
