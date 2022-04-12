@@ -71,5 +71,5 @@ Włącz tryb: kopie zapasowe gier nie są tworzone. Gry mogą mieć dodany tag d
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Wyklucz kopię zapasową</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Utwórz kopię zapasową zapisu po odinstalowaniu gry</sys:String>
 </ResourceDictionary>
