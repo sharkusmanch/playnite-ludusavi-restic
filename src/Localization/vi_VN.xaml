@@ -70,4 +70,6 @@ Chế độ bao gồm: Không có trò chơi nào được sao lưu. Trò chơi 
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Bao gồm Sao lưu</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Loại trừ Sao lưu</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
 </ResourceDictionary>
