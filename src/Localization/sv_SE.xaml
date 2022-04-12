@@ -70,4 +70,6 @@ Inkluderingsläge: Inga spel säkerhetskopieras. Spel kan ha include-taggen till
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Inkludera säkerhetskopiering</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Uteslut säkerhetskopiering</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
 </ResourceDictionary>
