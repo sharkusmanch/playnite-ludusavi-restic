@@ -71,5 +71,5 @@ Mode d'inclou: no es fa una còpia de seguretat de cap joc. Els jocs poden tenir
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclou la còpia de seguretat</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Crea una còpia de seguretat quan es desinstal·li el joc</sys:String>
 </ResourceDictionary>
