@@ -70,4 +70,6 @@ Include-modus: er wordt geen back-up van games gemaakt. Aan games kan de include
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Inclusief back-up</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Back-up uitsluiten</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
 </ResourceDictionary>
