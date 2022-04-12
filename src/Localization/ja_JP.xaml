@@ -71,5 +71,5 @@
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] バックアップを除外する</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">ゲームがアンインストールされたときに保存バックアップを作成する</sys:String>
 </ResourceDictionary>
