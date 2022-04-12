@@ -70,4 +70,6 @@ Belefoglalás mód: A játékról nincs biztonsági mentés. A játékokhoz hozz
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Tartalmazza a biztonsági másolatot</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Biztonsági mentés kizárása</sys:String>
+
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Készítsen biztonsági másolatot a játék eltávolítása után</sys:String>
 </ResourceDictionary>
