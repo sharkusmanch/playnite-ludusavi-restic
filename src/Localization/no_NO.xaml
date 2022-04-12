@@ -71,5 +71,5 @@ Inkluderingsmodus: Ingen spill er sikkerhetskopiert. Spill kan ha include-taggen
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Ekskluder sikkerhetskopiering</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Lag lagre sikkerhetskopi når spillet er avinstallert</sys:String>
 </ResourceDictionary>
