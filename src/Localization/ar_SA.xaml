@@ -71,5 +71,5 @@
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] استبعاد النسخ الاحتياطي</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">إنشاء نسخة احتياطية حفظ عند إلغاء تثبيت اللعبة</sys:String>
 </ResourceDictionary>
