@@ -23,21 +23,21 @@
 
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Пароль конфигурации Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Проверять</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Проверить</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic исполняемый путь</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Исполняемый файл Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Исполняемый путь Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Исполняемый файл Ludusavi</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabBackup">Резервный</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">Бэкап</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabRepo">Репозиторий</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Добавьте дополнительные теги к снимкам, чтобы различать события</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Добавить дополнительные теги к снимкам, чтобы различать события</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupManualTag">Тег резервного копирования вручную</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Тег резервного копирования игры остановлен</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Тег резервного копирования остановленной игры</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGameplayTag">Тег резервного копирования игрового процесса</sys:String>
 
@@ -47,11 +47,11 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Удалить тег включения резервной копии</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Добавить резервный тег исключения</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Добавить резервный тег исключения бэкапа</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Удалить тег исключения из резервной копии</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Удалить тег исключения бэкапа</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGM">ЛудусавиРестич</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGM">LudisaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Резервное копирование</sys:String>
 
