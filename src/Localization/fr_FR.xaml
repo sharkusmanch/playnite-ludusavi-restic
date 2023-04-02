@@ -11,7 +11,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Entrez la balise de sauvegarde pour</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervalle de sauvegarde de la jouabilité (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervalle de sauvegarde en jeu (minutes)</sys:String>
 
     <sys:String x:Key="LOCLuduRestBrowse">Parcourir</sys:String>
 
@@ -25,7 +25,7 @@
 
     <sys:String x:Key="LOCLuduRestVerify">Vérifier</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Chemin exécutable restreint</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Chemin de l'exécutable Restic</sys:String>
 
     <sys:String x:Key="LOCLuduRestLuduPath">Chemin de l'exécutable Ludusavi</sys:String>
 
@@ -39,7 +39,7 @@
 
     <sys:String x:Key="LOCLuduRestBackupGameStopTag">Balise de sauvegarde du jeu arrêté</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Balise de sauvegarde de gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Balise de sauvegarde en jeu</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Créer un instantané de sauvegarde</sys:String>
 
