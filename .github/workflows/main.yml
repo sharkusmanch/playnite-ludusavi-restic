@@ -30,7 +30,7 @@ jobs:
 
           invoke pack --toolbox ./tmp/playnite/Toolbox.exe
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: artifacts
           path: |
