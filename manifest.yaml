@@ -1,5 +1,12 @@
 AddonId: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
 Packages:
+  - Version: 0.6.2
+    RequiredApiVersion: 6.11.0
+    ReleaseDate: 2024-02-13
+    PackageUrl: https://github.com/sharkusmanch/playnite-ludusavi-restic/releases/download/v0.6.2/LudusaviRestic_v0.6.2.pext
+    Changelog:
+      - Bump dependency versions
+      - Remove use of --merge ludusavi flag
   - Version: 0.6.1
     RequiredApiVersion: 6.2.2
     ReleaseDate: 2022-04-11

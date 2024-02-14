@@ -1,12 +1,10 @@
 ﻿Id: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
 Name: Ludusavi Restic
 Author: sharkusmanch
-Version: 0.6.1
+Version: 0.6.2
 Module: LudusaviRestic.dll
 Type: GenericPlugin
 Icon: icon.png
 Links:
-  - Name: GitHub
-    Url: https://github.com/sharkusmanch/playnite-ludusavi-restic
-  - Name: Playnite Forums thread
-    Url: https://playnite.link/forum/thread-773.html
+- Name: GitHub
+  Url: https://github.com/sharkusmanch/playnite-ludusavi-restic
