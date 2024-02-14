@@ -1,0 +1,45 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  all:
+  - task: clean
+  - task: format
+  - task: build
+  - task: test
+  - task: pack
+  - task: install
+
+  build:
+    cmds:
+    - dotnet build src --configuration Release
+
+  test:
+    cmds:
+    - dotnet test tests
+
+  format:
+    cmds:
+    - dotnet format src
+
+  pack:
+    deps:
+    - build
+    cmds:
+    - powershell cp -Recurse -Force src/bin/Release/net462/ .\dist\raw\
+    - ~/AppData/Local/Playnite/Toolbox.exe pack src/bin/Release/net462/ dist
+    # - powershell mv ./dist/*.pext
+
+  clean:
+    cmds:
+    - powershell -command "Remove-Item -Force -Recurse .\dist -ErrorAction Ignore" || true
+    - powershell -command "Remove-Item -Force -Recurse .\src\bin\ -ErrorAction Ignore" || true
+
+  install:
+    cmds:
+    - powershell ./dist/*.pext
+
+  logs:
+    cmds:
+    - powershell "Get-Content ~/Appdata/Roaming/Playnite/extensions.log" -Wait
