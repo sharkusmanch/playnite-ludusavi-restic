@@ -15,7 +15,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsBase" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
-    <PackageReference Include="PlayniteSDK" Version="6.2.2" />
+    <PackageReference Include="PlayniteSDK" Version="6.11.0" />
   </ItemGroup>
 
   <ItemGroup>
