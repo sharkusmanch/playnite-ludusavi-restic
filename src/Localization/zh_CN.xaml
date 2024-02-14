@@ -1,75 +1,75 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">游戏过程中的备份</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">在游玩时进行备份</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">游戏停止时备份</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">在游戏停止时备份</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">游戏停止时提示备份标签</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">当游戏停止时提示备份标签</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">游戏备份标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">输入备用标签</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">输入备用标签于</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">游戏保存备份间隔（分钟）</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">游玩存档备份间隔（分钟）</sys:String>
 
     <sys:String x:Key="LOCLuduRestBrowse">浏览</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">静态存储库路径</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Restic 存储库路径</sys:String>
 
     <sys:String x:Key="LOCLuduRestRepoPass">Restic 存储库密码</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">克隆配置</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone 配置</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">rclone 配置密码</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone 配置密码</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">核实</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">校验</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">静态可执行路径</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Restic 可执行文件路径</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi 可执行文件路径</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">录读加一可执行文件路径</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">备份</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabRepo">存储库</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">向快照添加附加标签以区分事件</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">向快照添加额外标签以区分事件</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupManualTag">手动备份标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">游戏停止备份标签</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">游戏停止所备份标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">游戏备份标签</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">游玩备份标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">创建保存快照</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">创建存档快照</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">添加备份包含标签</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">添加备份（包含标签）</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">删除备份包含标签</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">删除备份（包含标签）</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">添加备份排除标记</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">添加备份排除标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">删除备份排除标记</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">删除备份排除标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGM">卢杜萨维</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGM">录读加一 Restic 增强版-LudusaviRestic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">备份</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">正在备份</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">加工</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">处理中</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupMode">备份模式</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">排除模式：默认情况下，所有游戏都可以备份。游戏可以添加排除标签以防止备份。
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">排除模式：默认情况下，所有游戏都可被备份。可为游戏添加排除标签，以防止被备份。
 
-包含模式：不备份任何游戏。游戏可以添加包含标签以符合备份条件。</sys:String>
+包含模式：不备份任何游戏。可为游戏添加包含标签，以允许被备份。</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">排除模式</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">包含模式</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] 包括备份</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] 包含备份</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] 排除备份</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">卸载游戏时创建保存备份</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">当游戏已卸载时，创建存档备份</sys:String>
 </ResourceDictionary>
