@@ -48,9 +48,14 @@ namespace LudusaviRestic
             return files;
         }
 
+        private static string SanitizeTag(string tag)
+        {
+            return tag.Replace(",", "_");
+        }
+
         protected static string ConstructTags(string game, IList<string> extraTags)
         {
-            string tags = $"--tag \"{game}\"";
+            string tags = $"--tag \"{SanitizeTag(game)}\"";
 
             foreach (string tag in extraTags)
             {

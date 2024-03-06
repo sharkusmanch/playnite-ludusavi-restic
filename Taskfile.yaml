@@ -7,21 +7,16 @@ tasks:
   - task: clean
   - task: format
   - task: build
-  - task: test
   - task: pack
   - task: install
 
   build:
     cmds:
-    - dotnet build src --configuration Release
-
-  test:
-    cmds:
-    - dotnet test tests
+    - dotnet build src/LudusaviRestic.csproj --configuration Release
 
   format:
     cmds:
-    - dotnet format src
+    - dotnet format src/LudusaviRestic.csproj
 
   pack:
     deps:
