@@ -20,19 +20,17 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          pip install invoke pyyaml
-          invoke build
 
-          mkdir tmp
-          curl -L -O https://github.com/JosefNemec/Playnite/releases/download/10.32/Playnite1032.zip
-          unzip Playnite1032.zip -d tmp/playnite
-
-          invoke pack --toolbox ./tmp/playnite/Toolbox.exe
-
-      - uses: actions/upload-artifact@v4
+      - uses: robinraju/release-downloader@v1.8
+        id: download_playnite
         with:
-          name: artifacts
-          path: |
-            dist/*.pext
-            dist/*.zip
+          repository: "JosefNemec/Playnite"
+          latest: true
+          tarBall: false
+          zipBall: false
+          fileName: "Playnite*.zip"
+          out-file-path: playnite
+          extract: true
+
+      - run: |
+          dotnet build src -c Release

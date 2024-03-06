@@ -1,0 +1,62 @@
+---
+name: "Release"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: robinraju/release-downloader@v1.8
+        id: download_playnite
+        with:
+          repository: "JosefNemec/Playnite"
+          latest: true
+          tarBall: false
+          zipBall: false
+          fileName: "Playnite*.zip"
+          out-file-path: playnite
+          extract: true
+
+      - run: |
+          dotnet build src -c Release
+          playnite/Toolbox.exe pack src/bin/Release/net462/ dist
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: artifacts
+          path: |
+            dist/*.pext
+
+  release:
+    name: "Release"
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get Version
+        id: version
+        uses: mikefarah/yq@master
+        with:
+          cmd: yq '.Version' extension.yaml
+
+      - name: Pull artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: artifacts
+
+      - run: |
+          mv LudusaviRestic_*.pext LudusaviRestic_v${{ steps.version.outputs.result }}.pext
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.ACTIONS_TOKEN }}"
+          prerelease: false
+          automatic_release_tag: "v${{ steps.version.outputs.result }}"
+          files: |
+            *.pext
