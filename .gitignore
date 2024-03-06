@@ -1,5 +1,7 @@
 bin/
 dist/
+.distraw/
 obj/
 tmp/
 *.sln
+*.pext
