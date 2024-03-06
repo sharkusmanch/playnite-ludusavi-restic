@@ -28,14 +28,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-<<<<<<< Updated upstream:.github/workflows/main.yml
-          invoke pack --toolbox ./tmp/playnite/Toolbox.exe
-
-      - uses: actions/upload-artifact@v4
-=======
       - uses: robinraju/release-downloader@v1.8
         id: download_playnite
->>>>>>> Stashed changes:.github/workflows/pull_request.yaml
         with:
           repository: "JosefNemec/Playnite"
           latest: true
