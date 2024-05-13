@@ -9,12 +9,12 @@ namespace LudusaviRestic
 
         public static CommandResult BackupAll(BackupContext context)
         {
-            return LudusaviExecute(context, $"backup --api --try-update --preview");
+            return LudusaviExecute(context, $"backup --api --preview");
         }
 
         public static CommandResult Backup(BackupContext context, string game)
         {
-            return LudusaviExecute(context, $"backup --api --try-update --preview \"{game}\"");
+            return LudusaviExecute(context, $"backup --api --preview \"{game}\"");
         }
 
         private static CommandResult LudusaviExecute(BackupContext context, string args)
