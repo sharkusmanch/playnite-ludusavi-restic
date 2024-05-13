@@ -5,7 +5,7 @@ Packages:
     ReleaseDate: 2024-05-13
     PackageUrl: https://github.com/sharkusmanch/playnite-ludusavi-restic/releases/download/v0.6.4/LudusaviRestic_v0.6.4.pext
     Changelog:
-      - Fix restic tags for game names containing a comma
+      - Remove use of --try-update ludusavi flag
   - Version: 0.6.3
     RequiredApiVersion: 6.11.0
     ReleaseDate: 2024-03-05
