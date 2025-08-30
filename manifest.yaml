@@ -1,5 +1,12 @@
 AddonId: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
 Packages:
+  - Version: 0.7.0
+    RequiredApiVersion: 6.12.0
+    ReleaseDate: 2025-08-30
+    PackageUrl: https://github.com/sharkusmanch/playnite-ludusavi-restic/releases/download/v0.7.0/LudusaviRestic_v0.7.0.pext
+    Changelog:
+      - Prompt user for an optional custom tag when performing a manual backup
+      - Improved Ludusavi output parsing. Files marked as ignored are now excluded from backup
   - Version: 0.6.4
     RequiredApiVersion: 6.11.0
     ReleaseDate: 2024-05-13

@@ -54,7 +54,34 @@ namespace LudusaviRestic
 
             logger.Debug($"Got {game.Name} data from ludusavi");
 
-            return GameFilesToList((JObject)gameData["games"][$"{game}"]["files"]);
+            var filesToken = gameData["games"][$"{game}"]["files"];
+            var filePaths = new List<string>();
+
+            if (filesToken is JArray filesArray)
+            {
+                // Old format: array of file objects
+                foreach (var file in filesArray)
+                {
+                    if (file["ignored"] == null || !file["ignored"].Value<bool>())
+                    {
+                        filePaths.Add(file["path"].ToString());
+                    }
+                }
+            }
+            else if (filesToken is JObject filesObj)
+            {
+                // New format: object/dictionary of file paths to file info
+                foreach (var prop in filesObj.Properties())
+                {
+                    var fileInfo = prop.Value;
+                    if (fileInfo["ignored"] == null || !fileInfo["ignored"].Value<bool>())
+                    {
+                        filePaths.Add(prop.Name);
+                    }
+                }
+            }
+
+            return filePaths;
         }
 
         protected static void Backup(SemaphoreSlim semaphore, BackupContext context, Game game, IList<string> extraTags)
