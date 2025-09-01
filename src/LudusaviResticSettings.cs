@@ -87,6 +87,25 @@ namespace LudusaviRestic
         public string GameStoppedSnapshotTag { get { return gameStoppedSnapshotTag; } set { gameStoppedSnapshotTag = value; ; NotifyPropertyChanged("GameStoppedSnapshotTag"); } }
         private string gameplaySnapshotTag = "gameplay";
         public string GameplaySnapshotTag { get { return gameplaySnapshotTag; } set { gameplaySnapshotTag = value; ; NotifyPropertyChanged("GameplaySnapshotTag"); } }
+
+        private bool enableRetentionPolicy = false;
+        public bool EnableRetentionPolicy { get { return enableRetentionPolicy; } set { enableRetentionPolicy = value; NotifyPropertyChanged("EnableRetentionPolicy"); } }
+
+        private int keepLast = 10;
+        public int KeepLast { get { return keepLast; } set { keepLast = value; NotifyPropertyChanged("KeepLast"); } }
+
+        private int keepDaily = 7;
+        public int KeepDaily { get { return keepDaily; } set { keepDaily = value; NotifyPropertyChanged("KeepDaily"); } }
+
+        private int keepWeekly = 4;
+        public int KeepWeekly { get { return keepWeekly; } set { keepWeekly = value; NotifyPropertyChanged("KeepWeekly"); } }
+
+        private int keepMonthly = 12;
+        public int KeepMonthly { get { return keepMonthly; } set { keepMonthly = value; NotifyPropertyChanged("KeepMonthly"); } }
+
+        private int keepYearly = 5;
+        public int KeepYearly { get { return keepYearly; } set { keepYearly = value; NotifyPropertyChanged("KeepYearly"); } }
+
         private List<string> errors;
 
         private int gameplayBackupInterval = 5;
@@ -130,14 +149,14 @@ namespace LudusaviRestic
             // LoadPluginSettings returns null if not saved data is available.
             if (savedSettings != null)
             {
-                LudusaviExecutablePath = savedSettings.ludusaviExecutablePath;
-                ResticExecutablePath = savedSettings.resticExecutablePath;
-                ResticRepository = savedSettings.resticRepository;
-                ResticPassword = savedSettings.resticPassword;
-                RcloneConfigPath = savedSettings.rcloneConfigPath;
-                RcloneConfigPassword = savedSettings.rcloneConfigPassword;
-                BackupDuringGameplay = savedSettings.backupDuringGameplay;
-                GameplayBackupInterval = savedSettings.gameplayBackupInterval;
+                LudusaviExecutablePath = savedSettings.LudusaviExecutablePath;
+                ResticExecutablePath = savedSettings.ResticExecutablePath;
+                ResticRepository = savedSettings.ResticRepository;
+                ResticPassword = savedSettings.ResticPassword;
+                RcloneConfigPath = savedSettings.RcloneConfigPath;
+                RcloneConfigPassword = savedSettings.RcloneConfigPassword;
+                BackupDuringGameplay = savedSettings.BackupDuringGameplay;
+                GameplayBackupInterval = savedSettings.GameplayBackupInterval;
                 AdditionalTagging = savedSettings.AdditionalTagging;
                 ManualSnapshotTag = savedSettings.ManualSnapshotTag;
                 GameStoppedSnapshotTag = savedSettings.GameStoppedSnapshotTag;
@@ -145,6 +164,63 @@ namespace LudusaviRestic
                 PromptForGameStoppedTag = savedSettings.PromptForGameStoppedTag;
                 BackupExecutionMode = savedSettings.BackupExecutionMode;
                 BackupOnUninstall = savedSettings.BackupOnUninstall;
+                BackupWhenGameStopped = savedSettings.BackupWhenGameStopped;
+
+                // Load tag IDs if available
+                if (savedSettings.ExcludeTagID != Guid.Empty)
+                    excludeTagID = savedSettings.ExcludeTagID;
+                if (savedSettings.IncludeTagID != Guid.Empty)
+                    includeTagID = savedSettings.IncludeTagID;
+
+                // Load retention policy settings
+                KeepLast = savedSettings.KeepLast;
+                KeepDaily = savedSettings.KeepDaily;
+                KeepWeekly = savedSettings.KeepWeekly;
+                KeepMonthly = savedSettings.KeepMonthly;
+                KeepYearly = savedSettings.KeepYearly;
+                EnableRetentionPolicy = savedSettings.EnableRetentionPolicy;
+            }
+
+            // Auto-detect restic executable if not configured or invalid
+            if (string.IsNullOrWhiteSpace(ResticExecutablePath) || ResticExecutablePath == "restic")
+            {
+                var detectedPath = ResticUtility.DetectResticExecutable();
+                if (!string.IsNullOrWhiteSpace(detectedPath))
+                {
+                    ResticExecutablePath = detectedPath;
+                    logger.Info($"Auto-detected restic executable: {detectedPath}");
+                }
+            }
+            else if (!ResticUtility.IsValidResticExecutable(ResticExecutablePath))
+            {
+                logger.Warn($"Configured restic executable path is invalid: {ResticExecutablePath}");
+                var detectedPath = ResticUtility.DetectResticExecutable();
+                if (!string.IsNullOrWhiteSpace(detectedPath))
+                {
+                    ResticExecutablePath = detectedPath;
+                    logger.Info($"Auto-detected alternative restic executable: {detectedPath}");
+                }
+            }
+
+            // Auto-detect ludusavi executable if not configured or invalid
+            if (string.IsNullOrWhiteSpace(LudusaviExecutablePath) || LudusaviExecutablePath == "ludusavi")
+            {
+                var detectedPath = ResticUtility.DetectLudusaviExecutable();
+                if (!string.IsNullOrWhiteSpace(detectedPath))
+                {
+                    LudusaviExecutablePath = detectedPath;
+                    logger.Info($"Auto-detected ludusavi executable: {detectedPath}");
+                }
+            }
+            else if (!ResticUtility.IsValidLudusaviExecutable(LudusaviExecutablePath))
+            {
+                logger.Warn($"Configured ludusavi executable path is invalid: {LudusaviExecutablePath}");
+                var detectedPath = ResticUtility.DetectLudusaviExecutable();
+                if (!string.IsNullOrWhiteSpace(detectedPath))
+                {
+                    LudusaviExecutablePath = detectedPath;
+                    logger.Info($"Auto-detected alternative ludusavi executable: {detectedPath}");
+                }
             }
         }
 
@@ -162,6 +238,7 @@ namespace LudusaviRestic
 
         public void Save()
         {
+            // The plugin base class provides SavePluginSettings method
             plugin.SavePluginSettings(this);
         }
 

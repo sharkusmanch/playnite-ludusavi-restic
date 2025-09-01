@@ -32,6 +32,78 @@ namespace LudusaviRestic
             return List(context, "keys");
         }
 
+        public static CommandResult ListSnapshots(BackupContext context)
+        {
+            return ResticExecute(context, "snapshots --json");
+        }
+
+        public static CommandResult ForgetSnapshot(BackupContext context, string snapshotId)
+        {
+            return ResticExecute(context, $"forget {snapshotId}");
+        }
+
+        public static CommandResult Prune(BackupContext context)
+        {
+            return ResticExecute(context, "prune");
+        }
+
+        public static CommandResult PruneDryRun(BackupContext context)
+        {
+            return ResticExecute(context, "prune --dry-run");
+        }
+
+        public static CommandResult ForgetWithRetention(BackupContext context)
+        {
+            var settings = context.Settings;
+            if (!settings.EnableRetentionPolicy)
+            {
+                return Prune(context);
+            }
+
+            var retentionArgs = $"forget --keep-last {settings.KeepLast} " +
+                               $"--keep-daily {settings.KeepDaily} " +
+                               $"--keep-weekly {settings.KeepWeekly} " +
+                               $"--keep-monthly {settings.KeepMonthly} " +
+                               $"--keep-yearly {settings.KeepYearly} " +
+                               "--prune";
+
+            return ResticExecute(context, retentionArgs);
+        }
+
+        public static CommandResult ForgetWithRetentionDryRun(BackupContext context)
+        {
+            var settings = context.Settings;
+            if (!settings.EnableRetentionPolicy)
+            {
+                // Return a check command as a placeholder when retention is disabled
+                return Check(context);
+            }
+
+            var retentionArgs = $"forget --keep-last {settings.KeepLast} " +
+                               $"--keep-daily {settings.KeepDaily} " +
+                               $"--keep-weekly {settings.KeepWeekly} " +
+                               $"--keep-monthly {settings.KeepMonthly} " +
+                               $"--keep-yearly {settings.KeepYearly} " +
+                               "--dry-run";
+
+            return ResticExecute(context, retentionArgs);
+        }
+
+        public static CommandResult Check(BackupContext context)
+        {
+            return ResticExecute(context, "check");
+        }
+
+        public static CommandResult CheckWithData(BackupContext context)
+        {
+            return ResticExecute(context, "check --read-data");
+        }
+
+        public static CommandResult Init(BackupContext context)
+        {
+            return ResticExecute(context, "init");
+        }
+
         private static CommandResult ResticExecute(BackupContext context, string args)
         {
             string command = context.Settings.ResticExecutablePath.Trim();

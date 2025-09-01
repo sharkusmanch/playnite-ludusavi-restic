@@ -28,6 +28,20 @@ namespace LudusaviRestic
             }
         }
 
+        public void OnAutoDetectLudusavi(object sender, RoutedEventArgs e)
+        {
+            var detectedPath = ResticUtility.DetectLudusaviExecutable();
+            if (!string.IsNullOrWhiteSpace(detectedPath))
+            {
+                this.plugin.settings.LudusaviExecutablePath = detectedPath;
+                this.plugin.PlayniteApi.Dialogs.ShowMessage($"Ludusavi executable detected at: {detectedPath}", "Auto-Detection Successful");
+            }
+            else
+            {
+                this.plugin.PlayniteApi.Dialogs.ShowMessage("Could not automatically detect ludusavi executable. Please specify the path manually.", "Auto-Detection Failed");
+            }
+        }
+
         public void OnBrowseResticExecutablePath(object sender, RoutedEventArgs e)
         {
             var choice = this.plugin.PlayniteApi.Dialogs.SelectFile("Executable|*.exe");
@@ -35,6 +49,20 @@ namespace LudusaviRestic
             if (choice.Length > 0)
             {
                 this.plugin.settings.ResticExecutablePath = choice;
+            }
+        }
+
+        public void OnAutoDetectRestic(object sender, RoutedEventArgs e)
+        {
+            var detectedPath = ResticUtility.DetectResticExecutable();
+            if (!string.IsNullOrWhiteSpace(detectedPath))
+            {
+                this.plugin.settings.ResticExecutablePath = detectedPath;
+                this.plugin.PlayniteApi.Dialogs.ShowMessage($"Restic executable detected at: {detectedPath}", "Auto-Detection Successful");
+            }
+            else
+            {
+                this.plugin.PlayniteApi.Dialogs.ShowMessage("Could not automatically detect restic executable. Please specify the path manually.", "Auto-Detection Failed");
             }
         }
 
@@ -80,6 +108,24 @@ namespace LudusaviRestic
             GameStoppedSnapshotTag.IsEnabled = false;
             ManualSnapshotTag.IsEnabled = false;
             GameplaySnapshotTag.IsEnabled = false;
+        }
+
+        private void OnRetentionPolicyChecked(object sender, RoutedEventArgs e)
+        {
+            KeepLast.IsEnabled = true;
+            KeepDaily.IsEnabled = true;
+            KeepWeekly.IsEnabled = true;
+            KeepMonthly.IsEnabled = true;
+            KeepYearly.IsEnabled = true;
+        }
+
+        private void OnRetentionPolicyUnchecked(object sender, RoutedEventArgs e)
+        {
+            KeepLast.IsEnabled = false;
+            KeepDaily.IsEnabled = false;
+            KeepWeekly.IsEnabled = false;
+            KeepMonthly.IsEnabled = false;
+            KeepYearly.IsEnabled = false;
         }
 
         public void OnVerify(object sender, RoutedEventArgs e)

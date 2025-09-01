@@ -1,5 +1,31 @@
 AddonId: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
 Packages:
+  - Version: 1.0.0
+    RequiredApiVersion: 6.12.0
+    ReleaseDate: 2025-09-01
+    PackageUrl: https://github.com/sharkusmanch/playnite-ludusavi-restic/releases/download/v1.0.0/LudusaviRestic_v1.0.0.pext
+    Changelog:
+      - Add backup browser interface to view and manage backup snapshots
+      - Add game filter dropdown to filter snapshots by game name
+      - Add repository maintenance operations (check integrity, prune, retention policy)
+      - Add configurable retention policy settings (keep last, daily, weekly, monthly, yearly)
+      - Add loading indicators for better user experience during long operations
+      - Reorganize maintenance operations into main menu structure
+      - Add setup wizard for improved first-time user onboarding
+      - Add automatic restic executable detection (PATH, Scoop, Chocolatey, common locations)
+      - Add automatic ludusavi executable detection with same detection methods
+      - Add repository initialization functionality
+      - Add configuration validation with helpful prompts
+      - Improve user experience with guided setup process
+      - Add dry run capability for all pruning operations with user confirmation
+      - Add detailed pruning results window with deletion summaries and filtering
+      - Add dedicated prune maintenance option separate from full maintenance
+      - Show detailed statistics: snapshots deleted, games affected, data removed
+      - Allow filtering pruning results by game name with expandable details
+      - Add game right-click context menu option to view snapshots for specific games
+      - Fix settings persistence issue preventing configuration from being saved after restart
+      - Fix null key error in pruning operations when snapshots have missing game names or tags
+      - Fix backup browser and setup wizard windows to use Playnite's theme styling
   - Version: 0.7.0
     RequiredApiVersion: 6.12.0
     ReleaseDate: 2025-08-30

@@ -17,6 +17,7 @@
                             <TextBox Margin="0,2,0,0" Text="{Binding LudusaviExecutablePath}" />
                             <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
                                 <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseLudusaviExecutablePath" />
+                                <Button Content="Auto-Detect" Click="OnAutoDetectLudusavi" Margin="5,0,0,0" />
                             </StackPanel>
                         </StackPanel>
 
@@ -25,6 +26,7 @@
                             <TextBox Margin="0,2,0,0" Text="{Binding ResticExecutablePath}" />
                             <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
                                 <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseResticExecutablePath" />
+                                <Button Content="Auto-Detect" Click="OnAutoDetectRestic" Margin="5,0,0,0" />
                             </StackPanel>
                         </StackPanel>
 
@@ -108,6 +110,62 @@
                         <StackPanel Margin="15">
                             <TextBlock Text="{DynamicResource LOCLuduRestBackupGameplayTag}" />
                             <TextBox Margin="0,2,0,0" Text="{Binding GameplaySnapshotTag}" IsEnabled="{Binding AdditionalTagging}" x:Name="GameplaySnapshotTag"/>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Retention Policy">
+                <ScrollViewer Margin="0,10,0,0">
+                    <StackPanel>
+                        <StackPanel Margin="15">
+                            <CheckBox IsChecked="{Binding EnableRetentionPolicy}" Content="Enable automatic retention policy"
+                                Checked="OnRetentionPolicyChecked" Unchecked="OnRetentionPolicyUnchecked" />
+                            <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" FontStyle="Italic">
+                                When enabled, these policies will be applied during maintenance operations to automatically remove old snapshots.
+                            </TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="Keep last N snapshots:" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding KeepLast}" IsEnabled="{Binding EnableRetentionPolicy}" x:Name="KeepLast"/>
+                            <TextBlock Margin="0,2,0,0" FontSize="11" Foreground="Gray">Keep the most recent snapshots regardless of age</TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="Keep daily snapshots for N days:" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding KeepDaily}" IsEnabled="{Binding EnableRetentionPolicy}" x:Name="KeepDaily"/>
+                            <TextBlock Margin="0,2,0,0" FontSize="11" Foreground="Gray">Keep one snapshot per day for this many days</TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="Keep weekly snapshots for N weeks:" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding KeepWeekly}" IsEnabled="{Binding EnableRetentionPolicy}" x:Name="KeepWeekly"/>
+                            <TextBlock Margin="0,2,0,0" FontSize="11" Foreground="Gray">Keep one snapshot per week for this many weeks</TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="Keep monthly snapshots for N months:" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding KeepMonthly}" IsEnabled="{Binding EnableRetentionPolicy}" x:Name="KeepMonthly"/>
+                            <TextBlock Margin="0,2,0,0" FontSize="11" Foreground="Gray">Keep one snapshot per month for this many months</TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="Keep yearly snapshots for N years:" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding KeepYearly}" IsEnabled="{Binding EnableRetentionPolicy}" x:Name="KeepYearly"/>
+                            <TextBlock Margin="0,2,0,0" FontSize="11" Foreground="Gray">Keep one snapshot per year for this many years</TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock TextWrapping="Wrap" FontWeight="Bold">
+                                Example with default settings:
+                            </TextBlock>
+                            <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" FontSize="11">
+                                • Keep the latest 10 snapshots
+                                • Plus 1 snapshot per day for 7 days
+                                • Plus 1 snapshot per week for 4 weeks
+                                • Plus 1 snapshot per month for 12 months
+                                • Plus 1 snapshot per year for 5 years
+                            </TextBlock>
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
