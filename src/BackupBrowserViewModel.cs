@@ -28,9 +28,25 @@ namespace LudusaviRestic
             get => snapshots;
             set
             {
+                if (snapshots != null)
+                {
+                    snapshots.CollectionChanged -= Snapshots_CollectionChanged;
+                }
                 snapshots = value;
+                if (snapshots != null)
+                {
+                    snapshots.CollectionChanged += Snapshots_CollectionChanged;
+                }
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(SnapshotCount));
             }
+        }
+
+        public int SnapshotCount => Snapshots?.Count ?? 0;
+
+        private void Snapshots_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            OnPropertyChanged(nameof(SnapshotCount));
         }
 
         public ObservableCollection<string> GameFilters
@@ -76,7 +92,7 @@ namespace LudusaviRestic
 
         public ICommand RefreshCommand { get; }
         public ICommand DeleteSnapshotCommand { get; }
-    public ICommand RestoreSnapshotCommand { get; }
+        public ICommand RestoreSnapshotCommand { get; }
 
         public BackupBrowserViewModel(BackupContext context)
         {

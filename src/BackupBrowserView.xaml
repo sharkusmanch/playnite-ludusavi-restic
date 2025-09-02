@@ -69,7 +69,7 @@
                     <Run Text="{DynamicResource LOCLuduRestTotalSnapshots}"/>
                     <Run Text=":"/>
                     <Run Text=" "/>
-                    <Run Text="{Binding Snapshots.Count}"/>
+                    <Run Text="{Binding SnapshotCount, Mode=OneWay}"/>
                 </TextBlock>
             </StatusBarItem>
             <StatusBarItem HorizontalAlignment="Right">
