@@ -14,10 +14,10 @@
 
         <!-- Toolbar -->
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
-            <Button Content="Refresh" Command="{Binding RefreshCommand}" Margin="0,0,10,0" Padding="10,5"/>
-            <Button Content="Restore Selected" Command="{Binding RestoreSnapshotCommand}" Margin="0,0,10,0" Padding="10,5"/>
-            <Button Content="Delete Selected" Command="{Binding DeleteSnapshotCommand}" Margin="0,0,10,0" Padding="10,5"/>
-            <Label Content="Filter by Game:" VerticalAlignment="Center" Margin="10,0,5,0"/>
+            <Button Content="{DynamicResource LOCLuduRestRefresh}" Command="{Binding RefreshCommand}" Margin="0,0,10,0" Padding="10,5"/>
+            <Button Content="{DynamicResource LOCLuduRestRestoreSelected}" Command="{Binding RestoreSnapshotCommand}" Margin="0,0,10,0" Padding="10,5"/>
+            <Button Content="{DynamicResource LOCLuduRestDeleteSelected}" Command="{Binding DeleteSnapshotCommand}" Margin="0,0,10,0" Padding="10,5"/>
+            <Label Content="{DynamicResource LOCLuduRestFilterByGame}" VerticalAlignment="Center" Margin="10,0,5,0"/>
             <ComboBox ItemsSource="{Binding GameFilters}"
                       SelectedItem="{Binding SelectedGameFilter}"
                       Width="200"
@@ -39,9 +39,9 @@
                   BorderBrush="{DynamicResource ControlBorderBrush}"
                   AlternationCount="2">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Snapshot ID" Binding="{Binding ShortId}" Width="80"/>
-                <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat='yyyy-MM-dd HH:mm:ss'}" Width="150"/>
-                <DataGridTextColumn Header="Tags" Binding="{Binding TagsDisplay}" Width="*"/>
+                <DataGridTextColumn Header="{DynamicResource LOCLuduRestSnapshotIdHeader}" Binding="{Binding ShortId}" Width="80"/>
+                <DataGridTextColumn Header="{DynamicResource LOCLuduRestDateHeader}" Binding="{Binding Date, StringFormat='yyyy-MM-dd HH:mm:ss'}" Width="150"/>
+                <DataGridTextColumn Header="{DynamicResource LOCLuduRestTagsHeader}" Binding="{Binding TagsDisplay}" Width="*"/>
             </DataGrid.Columns>
             <DataGrid.RowStyle>
                 <Style TargetType="DataGridRow">
@@ -65,7 +65,12 @@
         <!-- Status Bar -->
         <StatusBar Grid.Row="2">
             <StatusBarItem>
-                <TextBlock Text="{Binding Snapshots.Count, StringFormat='Total snapshots: {0}'}"/>
+                <TextBlock>
+                    <Run Text="{DynamicResource LOCLuduRestTotalSnapshots}"/>
+                    <Run Text=":"/>
+                    <Run Text=" "/>
+                    <Run Text="{Binding Snapshots.Count}"/>
+                </TextBlock>
             </StatusBarItem>
             <StatusBarItem HorizontalAlignment="Right">
                 <ProgressBar Width="100" Height="16" IsIndeterminate="{Binding IsLoading}"

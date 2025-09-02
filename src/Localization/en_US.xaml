@@ -173,6 +173,59 @@ This appears to be your first time using the extension or your configuration is 
     <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restoring snapshot...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Snapshot restored successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestRefresh">Refresh</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSelected">Restore Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSelected">Delete Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestFilterByGame">Filter by Game:</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">Snapshot ID</sys:String>
+    <sys:String x:Key="LOCLuduRestDateHeader">Date</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsHeader">Tags</sys:String>
+    <sys:String x:Key="LOCLuduRestTotalSnapshots">Total snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetect">Auto-Detect</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Retention Policy</sys:String>
+    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Enable automatic retention policy</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">When enabled, these policies will be applied during maintenance operations to automatically remove old snapshots.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastLabel">Keep last N snapshots:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastHelp">Keep the most recent snapshots regardless of age</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Keep daily snapshots for N days:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Keep one snapshot per day for this many days</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Keep weekly snapshots for N weeks:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Keep one snapshot per week for this many weeks</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Keep monthly snapshots for N months:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Keep one snapshot per month for this many months</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Keep yearly snapshots for N years:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Keep one snapshot per year for this many years</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Example with default settings:</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Pruning Results</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Summary information will appear here</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Snapshots Deleted</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesAffected">Games Affected</sys:String>
+    <sys:String x:Key="LOCLuduRestDataDeleted">Data Deleted</sys:String>
+    <sys:String x:Key="LOCLuduRestStatus">Status</sys:String>
+    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Deleted Snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestClearFilter">Clear Filter</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">Game</sys:String>
+    <sys:String x:Key="LOCLuduRestDateTimeHeader">Date/Time</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Games Summary</sys:String>
+    <sys:String x:Key="LOCLuduRestGameNameHeader">Game Name</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Tags Summary</sys:String>
+    <sys:String x:Key="LOCLuduRestTagHeader">Tag</sys:String>
+    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Occurrences</sys:String>
+    <sys:String x:Key="LOCLuduRestRawOutputTab">Raw Output</sys:String>
+    <sys:String x:Key="LOCLuduRestClose">Close</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Enter an optional custom tag for this manual backup (leave blank for none):</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Manual Backup Tag</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreConfirm">Restore snapshot {0} to {1}? This may overwrite existing files.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restoring snapshot {0}...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} restored successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreFailed">Failed to restore snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreError">Error restoring snapshot: {0}</sys:String>
 
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>

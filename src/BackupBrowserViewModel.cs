@@ -256,8 +256,8 @@ namespace LudusaviRestic
             }
 
             var confirm = context.API.Dialogs.ShowMessage(
-                $"Restore snapshot {SelectedSnapshot.ShortId} to {destination}? This may overwrite existing files.",
-                "Restore Snapshot",
+                string.Format(ResourceProvider.GetString("LOCLuduRestRestoreConfirm"), SelectedSnapshot.ShortId, destination),
+                ResourceProvider.GetString("LOCLuduRestRestoreSnapshotTitle"),
                 System.Windows.MessageBoxButton.YesNo,
                 System.Windows.MessageBoxImage.Warning);
 
@@ -267,7 +267,7 @@ namespace LudusaviRestic
             }
 
             GlobalProgressOptions globalProgressOptions = new GlobalProgressOptions(
-                $"Restoring snapshot {SelectedSnapshot.ShortId}...",
+                string.Format(ResourceProvider.GetString("LOCLuduRestRestoringSnapshotProgressFmt"), SelectedSnapshot.ShortId),
                 true
             );
             globalProgressOptions.IsIndeterminate = true;
@@ -279,18 +279,18 @@ namespace LudusaviRestic
                     var result = ResticCommand.RestoreSnapshot(context, SelectedSnapshot.Id, destination);
                     if (result.ExitCode == 0)
                     {
-                        context.API.Dialogs.ShowMessage($"Snapshot {SelectedSnapshot.ShortId} restored successfully.", "Restore Complete");
+                        context.API.Dialogs.ShowMessage(string.Format(ResourceProvider.GetString("LOCLuduRestRestoreCompletedFmt"), SelectedSnapshot.ShortId), ResourceProvider.GetString("LOCLuduRestRestoreComplete"));
                     }
                     else
                     {
                         logger.Error($"Failed to restore snapshot: {result.StdErr}");
-                        context.API.Dialogs.ShowErrorMessage($"Failed to restore snapshot: {result.StdErr}");
+                        context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestRestoreFailed"), result.StdErr));
                     }
                 }
                 catch (Exception ex)
                 {
                     logger.Error(ex, "Error restoring snapshot");
-                    context.API.Dialogs.ShowErrorMessage($"Error restoring snapshot: {ex.Message}");
+                    context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestRestoreError"), ex.Message));
                 }
             }, globalProgressOptions);
         }
