@@ -16,6 +16,25 @@ namespace LudusaviRestic
             logger.Debug("LudusaviResticSettingsView init");
             InitializeComponent();
             this.plugin = plugin;
+            // Initialize password fields with current settings values
+            Loaded += (s, e) =>
+            {
+                try
+                {
+                    if (ResticPasswordBox != null)
+                    {
+                        ResticPasswordBox.Password = this.plugin.settings.ResticPassword ?? string.Empty;
+                    }
+                    if (RclonePasswordBox != null)
+                    {
+                        RclonePasswordBox.Password = this.plugin.settings.RcloneConfigPassword ?? string.Empty;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    logger.Error(ex, "Error initializing password fields");
+                }
+            };
         }
 
         public void OnBrowseLudusaviExecutablePath(object sender, RoutedEventArgs e)
@@ -166,6 +185,100 @@ namespace LudusaviRestic
                     this.plugin.PlayniteApi.Dialogs.ShowMessage(string.Format(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsVerificationFailed"), ex.ToString()));
                 }
             });
+        }
+
+        private void SyncResticPasswordToSettings(string value)
+        {
+            this.plugin.settings.ResticPassword = value;
+        }
+
+        private void SyncRclonePasswordToSettings(string value)
+        {
+            this.plugin.settings.RcloneConfigPassword = value;
+        }
+
+        public void OnResticPasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (ResticPasswordBox != null && ResticPasswordText != null && ResticPasswordText.Visibility == Visibility.Collapsed)
+            {
+                SyncResticPasswordToSettings(ResticPasswordBox.Password);
+            }
+        }
+
+        public void OnResticPasswordTextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (ResticPasswordText != null && ResticPasswordText.Visibility == Visibility.Visible)
+            {
+                SyncResticPasswordToSettings(ResticPasswordText.Text);
+            }
+        }
+
+        public void OnRclonePasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (RclonePasswordBox != null && RclonePasswordText != null && RclonePasswordText.Visibility == Visibility.Collapsed)
+            {
+                SyncRclonePasswordToSettings(RclonePasswordBox.Password);
+            }
+        }
+
+        public void OnRclonePasswordTextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (RclonePasswordText != null && RclonePasswordText.Visibility == Visibility.Visible)
+            {
+                SyncRclonePasswordToSettings(RclonePasswordText.Text);
+            }
+        }
+
+        public void OnToggleResticPasswordVisibility(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (ResticPasswordText.Visibility == Visibility.Collapsed)
+                {
+                    // Show password
+                    ResticPasswordText.Text = ResticPasswordBox.Password;
+                    ResticPasswordBox.Visibility = Visibility.Collapsed;
+                    ResticPasswordText.Visibility = Visibility.Visible;
+                    ResticPasswordToggle.Content = this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestHide");
+                }
+                else
+                {
+                    // Hide password
+                    ResticPasswordBox.Password = ResticPasswordText.Text;
+                    ResticPasswordText.Visibility = Visibility.Collapsed;
+                    ResticPasswordBox.Visibility = Visibility.Visible;
+                    ResticPasswordToggle.Content = this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestShow");
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Error toggling restic password visibility");
+            }
+        }
+
+        public void OnToggleRclonePasswordVisibility(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (RclonePasswordText.Visibility == Visibility.Collapsed)
+                {
+                    RclonePasswordText.Text = RclonePasswordBox.Password;
+                    RclonePasswordBox.Visibility = Visibility.Collapsed;
+                    RclonePasswordText.Visibility = Visibility.Visible;
+                    RclonePasswordToggle.Content = this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestHide");
+                }
+                else
+                {
+                    RclonePasswordBox.Password = RclonePasswordText.Text;
+                    RclonePasswordText.Visibility = Visibility.Collapsed;
+                    RclonePasswordBox.Visibility = Visibility.Visible;
+                    RclonePasswordToggle.Content = this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestShow");
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Error toggling rclone password visibility");
+            }
         }
     }
 }

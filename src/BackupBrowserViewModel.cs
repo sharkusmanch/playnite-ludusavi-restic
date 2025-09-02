@@ -9,6 +9,7 @@ using Newtonsoft.Json.Linq;
 using System.Linq;
 using System.Globalization;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace LudusaviRestic
 {
@@ -90,9 +91,8 @@ namespace LudusaviRestic
             }
         }
 
-        public ICommand RefreshCommand { get; }
-        public ICommand DeleteSnapshotCommand { get; }
-        public ICommand RestoreSnapshotCommand { get; }
+        public ICommand RefreshCommand { get; private set; }
+        public ICommand DeleteSnapshotCommand { get; private set; }
 
         public BackupBrowserViewModel(BackupContext context)
         {
@@ -103,8 +103,6 @@ namespace LudusaviRestic
 
             RefreshCommand = new RelayCommand(RefreshSnapshots);
             DeleteSnapshotCommand = new RelayCommand(DeleteSnapshot, CanDeleteSnapshot);
-            RestoreSnapshotCommand = new RelayCommand(RestoreSnapshot, CanRestoreSnapshot);
-
             RefreshSnapshots();
         }
 
@@ -114,29 +112,23 @@ namespace LudusaviRestic
             this.Snapshots = new ObservableCollection<BackupSnapshot>();
             this.allSnapshots = new ObservableCollection<BackupSnapshot>();
             this.GameFilters = new ObservableCollection<string>();
-
+            this.selectedGameFilter = gameFilter; // preset desired filter; will be applied after load
             RefreshCommand = new RelayCommand(RefreshSnapshots);
             DeleteSnapshotCommand = new RelayCommand(DeleteSnapshot, CanDeleteSnapshot);
-            RestoreSnapshotCommand = new RelayCommand(RestoreSnapshot, CanRestoreSnapshot);
-
-            // Set the initial game filter
-            this.selectedGameFilter = gameFilter;
-
             RefreshSnapshots();
         }
 
         private void ApplyFilter()
         {
             if (allSnapshots == null) return;
-
             if (string.IsNullOrEmpty(SelectedGameFilter) || SelectedGameFilter == "All Games")
             {
                 Snapshots = new ObservableCollection<BackupSnapshot>(allSnapshots);
             }
             else
             {
-                var filteredSnapshots = allSnapshots.Where(s => s.GameName == SelectedGameFilter).ToList();
-                Snapshots = new ObservableCollection<BackupSnapshot>(filteredSnapshots);
+                var filtered = allSnapshots.Where(s => s.GameName == SelectedGameFilter).ToList();
+                Snapshots = new ObservableCollection<BackupSnapshot>(filtered);
             }
         }
 
@@ -145,10 +137,10 @@ namespace LudusaviRestic
             GlobalProgressOptions globalProgressOptions = new GlobalProgressOptions(
                 "Loading backup snapshots...",
                 true
-            );
-            globalProgressOptions.IsIndeterminate = true;
+            )
+            { IsIndeterminate = true };
 
-            context.API.Dialogs.ActivateGlobalProgress((activateGlobalProgress) =>
+            context.API.Dialogs.ActivateGlobalProgress(_ =>
             {
                 try
                 {
@@ -157,48 +149,34 @@ namespace LudusaviRestic
                     {
                         var snapshotArray = JArray.Parse(result.StdOut);
                         var snapshotList = new ObservableCollection<BackupSnapshot>();
-
                         foreach (var item in snapshotArray)
                         {
-                            var snapshot = new BackupSnapshot
+                            snapshotList.Add(new BackupSnapshot
                             {
                                 Id = item["short_id"]?.ToString() ?? item["id"]?.ToString(),
                                 Date = DateTime.Parse(item["time"]?.ToString(), null, DateTimeStyles.RoundtripKind),
                                 Tags = item["tags"]?.ToObject<List<string>>() ?? new List<string>()
-                            };
-                            snapshotList.Add(snapshot);
+                            });
                         }
-
                         allSnapshots = snapshotList;
-
-                        // Extract unique game names (first tag) for filtering
-                        var gameNames = allSnapshots
-                            .Select(s => s.GameName)
-                            .Where(name => name != "Unknown")
-                            .Distinct()
-                            .OrderBy(name => name)
-                            .ToList();
-
-                        GameFilters = new ObservableCollection<string> { "All Games" };
-                        foreach (var gameName in gameNames)
+                        var gameNames = allSnapshots.Select(s => s.GameName).Where(n => n != "Unknown").Distinct().OrderBy(n => n).ToList();
+                        GameFilters = new ObservableCollection<string>(new[] { "All Games" }.Concat(gameNames));
+                        // If a specific game filter was preset (e.g., via game context menu), try to apply it
+                        if (!string.IsNullOrEmpty(selectedGameFilter) && GameFilters.Contains(selectedGameFilter))
                         {
-                            GameFilters.Add(gameName);
-                        }
-
-                        // Set default filter or preserve existing filter
-                        if (string.IsNullOrEmpty(SelectedGameFilter))
-                        {
-                            SelectedGameFilter = "All Games";
+                            SelectedGameFilter = selectedGameFilter; // triggers ApplyFilter()
                         }
                         else
                         {
-                            // Ensure the pre-set filter exists in the list, if not default to "All Games"
-                            if (!GameFilters.Contains(SelectedGameFilter))
+                            if (string.IsNullOrEmpty(SelectedGameFilter) || !GameFilters.Contains(SelectedGameFilter))
                             {
                                 SelectedGameFilter = "All Games";
                             }
+                            else
+                            {
+                                ApplyFilter();
+                            }
                         }
-                        ApplyFilter();
                     }
                     else
                     {
@@ -213,103 +191,42 @@ namespace LudusaviRestic
                 }
             }, globalProgressOptions);
         }
-        private bool CanDeleteSnapshot()
-        {
-            return SelectedSnapshot != null && !IsLoading;
-        }
+
+        private bool CanDeleteSnapshot() => SelectedSnapshot != null && !IsLoading;
 
         private void DeleteSnapshot()
         {
             if (SelectedSnapshot == null) return;
-
             var result = context.API.Dialogs.ShowMessage(
                 string.Format(ResourceProvider.GetString("LOCLuduRestDeleteSnapshotConfirmation"), SelectedSnapshot.ShortId, SelectedSnapshot.Date.ToString("yyyy-MM-dd HH:mm")),
                 ResourceProvider.GetString("LOCLuduRestDeleteBackupSnapshot"),
                 System.Windows.MessageBoxButton.YesNo,
                 System.Windows.MessageBoxImage.Warning);
-
-            if (result == System.Windows.MessageBoxResult.Yes)
+            if (result != System.Windows.MessageBoxResult.Yes) return;
+            try
             {
-                try
+                var deleteResult = ResticCommand.ForgetSnapshot(context, SelectedSnapshot.Id);
+                if (deleteResult.ExitCode == 0)
                 {
-                    var deleteResult = ResticCommand.ForgetSnapshot(context, SelectedSnapshot.Id);
-                    if (deleteResult.ExitCode == 0)
-                    {
-                        // Remove from both collections
-                        Snapshots.Remove(SelectedSnapshot);
-                        allSnapshots.Remove(SelectedSnapshot);
-                        SelectedSnapshot = null;
-                        context.API.Dialogs.ShowMessage(ResourceProvider.GetString("LOCLuduRestSnapshotDeletedSuccessfully"), ResourceProvider.GetString("LOCLuduRestSuccess"));
-                    }
-                    else
-                    {
-                        logger.Error($"Failed to delete snapshot: {deleteResult.StdErr}");
-                        context.API.Dialogs.ShowErrorMessage($"Failed to delete snapshot: {deleteResult.StdErr}");
-                    }
+                    Snapshots.Remove(SelectedSnapshot);
+                    allSnapshots.Remove(SelectedSnapshot);
+                    SelectedSnapshot = null;
+                    context.API.Dialogs.ShowMessage(ResourceProvider.GetString("LOCLuduRestSnapshotDeletedSuccessfully"), ResourceProvider.GetString("LOCLuduRestSuccess"));
                 }
-                catch (Exception ex)
+                else
                 {
-                    logger.Error(ex, "Error deleting snapshot");
-                    context.API.Dialogs.ShowErrorMessage($"Error deleting snapshot: {ex.Message}");
+                    logger.Error($"Failed to delete snapshot: {deleteResult.StdErr}");
+                    context.API.Dialogs.ShowErrorMessage($"Failed to delete snapshot: {deleteResult.StdErr}");
                 }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Error deleting snapshot");
+                context.API.Dialogs.ShowErrorMessage($"Error deleting snapshot: {ex.Message}");
             }
         }
 
-        private bool CanRestoreSnapshot()
-        {
-            return SelectedSnapshot != null && !IsLoading;
-        }
-
-        private void RestoreSnapshot()
-        {
-            if (SelectedSnapshot == null) return;
-
-            // Ask user to select destination directory
-            var destination = context.API.Dialogs.SelectFolder();
-            if (string.IsNullOrEmpty(destination))
-            {
-                return; // user cancelled
-            }
-
-            var confirm = context.API.Dialogs.ShowMessage(
-                string.Format(ResourceProvider.GetString("LOCLuduRestRestoreConfirm"), SelectedSnapshot.ShortId, destination),
-                ResourceProvider.GetString("LOCLuduRestRestoreSnapshotTitle"),
-                System.Windows.MessageBoxButton.YesNo,
-                System.Windows.MessageBoxImage.Warning);
-
-            if (confirm != System.Windows.MessageBoxResult.Yes)
-            {
-                return;
-            }
-
-            GlobalProgressOptions globalProgressOptions = new GlobalProgressOptions(
-                string.Format(ResourceProvider.GetString("LOCLuduRestRestoringSnapshotProgressFmt"), SelectedSnapshot.ShortId),
-                true
-            );
-            globalProgressOptions.IsIndeterminate = true;
-
-            context.API.Dialogs.ActivateGlobalProgress(a =>
-            {
-                try
-                {
-                    var result = ResticCommand.RestoreSnapshot(context, SelectedSnapshot.Id, destination);
-                    if (result.ExitCode == 0)
-                    {
-                        context.API.Dialogs.ShowMessage(string.Format(ResourceProvider.GetString("LOCLuduRestRestoreCompletedFmt"), SelectedSnapshot.ShortId), ResourceProvider.GetString("LOCLuduRestRestoreComplete"));
-                    }
-                    else
-                    {
-                        logger.Error($"Failed to restore snapshot: {result.StdErr}");
-                        context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestRestoreFailed"), result.StdErr));
-                    }
-                }
-                catch (Exception ex)
-                {
-                    logger.Error(ex, "Error restoring snapshot");
-                    context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestRestoreError"), ex.Message));
-                }
-            }, globalProgressOptions);
-        }
+        // Restore feature fully removed.
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

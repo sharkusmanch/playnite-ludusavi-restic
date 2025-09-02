@@ -18,6 +18,8 @@
     <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
 
     <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestShow">Show</sys:String>
+    <sys:String x:Key="LOCLuduRestHide">Hide</sys:String>
 
     <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
 
@@ -226,6 +228,14 @@ This appears to be your first time using the extension or your configuration is 
     <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Failed to restore snapshot: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Error restoring snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (game: {1}) contains {2} files.
+New files: {3}
+Existing files (will be overwritten): {4}
+Suggested restore folder: {5}
+
+Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(none)</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Cannot determine game name tag for this snapshot.</sys:String>
 
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>

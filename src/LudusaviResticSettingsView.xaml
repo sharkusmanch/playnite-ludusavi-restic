@@ -37,7 +37,15 @@
 
                         <StackPanel Margin="15">
                             <TextBlock Text="{DynamicResource LOCLuduRestRepoPass}" />
-                            <TextBox Margin="0,2,0,0" Text="{Binding ResticPassword}" />
+                            <Grid Margin="0,2,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <PasswordBox x:Name="ResticPasswordBox" Grid.Column="0" PasswordChanged="OnResticPasswordChanged" />
+                                <TextBox x:Name="ResticPasswordText" Grid.Column="0" Visibility="Collapsed" TextChanged="OnResticPasswordTextChanged" />
+                                <Button x:Name="ResticPasswordToggle" Grid.Column="1" Margin="5,0,0,0" Click="OnToggleResticPasswordVisibility" Content="{DynamicResource LOCLuduRestShow}" />
+                            </Grid>
                         </StackPanel>
 
                         <StackPanel Margin="15">
@@ -50,7 +58,15 @@
 
                         <StackPanel Margin="15">
                             <TextBlock Text="{DynamicResource LOCLuduRestRcloneConfPass}" />
-                            <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPassword}" />
+                            <Grid Margin="0,2,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <PasswordBox x:Name="RclonePasswordBox" Grid.Column="0" PasswordChanged="OnRclonePasswordChanged" />
+                                <TextBox x:Name="RclonePasswordText" Grid.Column="0" Visibility="Collapsed" TextChanged="OnRclonePasswordTextChanged" />
+                                <Button x:Name="RclonePasswordToggle" Grid.Column="1" Margin="5,0,0,0" Click="OnToggleRclonePasswordVisibility" Content="{DynamicResource LOCLuduRestShow}" />
+                            </Grid>
                         </StackPanel>
 
                         <Button Name="VerifyButton" Content="{DynamicResource LOCLuduRestVerify}" Click="OnVerify" />

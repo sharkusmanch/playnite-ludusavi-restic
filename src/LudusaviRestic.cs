@@ -207,35 +207,7 @@ namespace LudusaviRestic
                                 .Where(s => (s["tags"] != null && s["tags"].Any(t => string.Equals(t.ToString(), game.Name, StringComparison.OrdinalIgnoreCase))))
                                 .OrderByDescending(s => DateTime.Parse(s["time"].ToString()))
                                 .ToList();
-                            if (gameSnapshots.Count == 0)
-                            {
-                                PlayniteApi.Dialogs.ShowMessage(GetLocalizedString("LOCLuduRestNoSnapshotsForGame", "LOCLuduRestNoSnapshotsForGame"));
-                                return;
-                            }
-                            var latest = gameSnapshots.First();
-                            var shortId = latest["short_id"]?.ToString() ?? latest["id"]?.ToString();
-                            var fullId = latest["id"]?.ToString();
-                            var destination = PlayniteApi.Dialogs.SelectFolder();
-                            if (string.IsNullOrEmpty(destination)) return;
-                            var confirm = PlayniteApi.Dialogs.ShowMessage(
-                                string.Format(GetLocalizedString("LOCLuduRestConfirmRestoreLatest", "LOCLuduRestConfirmRestoreLatest"), shortId, game.Name, destination),
-                                GetLocalizedString("LOCLuduRestRestoreSnapshotTitle", "LOCLuduRestRestoreSnapshotTitle"),
-                                MessageBoxButton.YesNo,
-                                MessageBoxImage.Warning);
-                            if (confirm != MessageBoxResult.Yes) return;
-                            var progressOptions = new GlobalProgressOptions(GetLocalizedString("LOCLuduRestRestoringSnapshotProgress", "LOCLuduRestRestoringSnapshotProgress"), true) { IsIndeterminate = true };
-                            PlayniteApi.Dialogs.ActivateGlobalProgress(a =>
-                            {
-                                var restoreResult = ResticCommand.RestoreSnapshot(context, fullId, destination);
-                                if (restoreResult.ExitCode == 0)
-                                {
-                                    PlayniteApi.Dialogs.ShowMessage(GetLocalizedString("LOCLuduRestRestoreCompleted", "LOCLuduRestRestoreCompleted"));
-                                }
-                                else
-                                {
-                                    PlayniteApi.Dialogs.ShowErrorMessage($"Failed to restore snapshot: {restoreResult.StdErr}");
-                                }
-                            }, progressOptions);
+                            PlayniteApi.Dialogs.ShowMessage(GetLocalizedString("LOCLuduRestRestoreFeatureRemoved", "LOCLuduRestRestoreFeatureRemoved"));
                         }
                         catch (Exception ex)
                         {

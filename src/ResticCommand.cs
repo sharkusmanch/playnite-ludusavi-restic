@@ -37,11 +37,6 @@ namespace LudusaviRestic
             return ResticExecute(context, "snapshots --json");
         }
 
-        public static CommandResult RestoreSnapshot(BackupContext context, string snapshotId, string targetDir)
-        {
-            return ResticExecute(context, $"restore {snapshotId} --target \"{targetDir}\"");
-        }
-
         public static CommandResult ForgetSnapshot(BackupContext context, string snapshotId)
         {
             return ResticExecute(context, $"forget {snapshotId}");
