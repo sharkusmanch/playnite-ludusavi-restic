@@ -150,41 +150,52 @@ namespace LudusaviRestic
         public void OnVerify(object sender, RoutedEventArgs e)
         {
             BackupContext context = new BackupContext(this.plugin.PlayniteApi, this.plugin.settings);
+            var api = this.plugin.PlayniteApi;
+            var resources = api.Resources;
+            string title = resources.GetString("LOCLuduRestSettingsVerificationTitle");
+            string verifyingRestic = resources.GetString("LOCLuduRestVerifyingRestic");
+            string verifyingLudusavi = resources.GetString("LOCLuduRestVerifyingLudusavi");
 
-            Task.Run(() =>
+            GlobalProgressOptions gpo = new GlobalProgressOptions(title, true)
             {
-                string result = this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsVerificationTitle");
+                IsIndeterminate = true
+            };
 
+            api.Dialogs.ActivateGlobalProgress(progress =>
+            {
                 try
                 {
-                    CommandResult restic = ResticCommand.Verify(context);
-                    CommandResult ludusavi = LudusaviCommand.Version(context);
+                    string result = title;
 
+                    progress.Text = verifyingRestic;
+                    var restic = ResticCommand.Verify(context);
                     if (restic.ExitCode == 0)
                     {
-                        result += "\n\n" + this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestResticConnectionSucceeded");
+                        result += "\n\n" + resources.GetString("LOCLuduRestResticConnectionSucceeded");
                     }
                     else
                     {
                         result += $"\n\nrestic - {restic.StdErr}";
                     }
 
+                    progress.Text = verifyingLudusavi;
+                    var ludusavi = LudusaviCommand.Version(context);
                     if (ludusavi.ExitCode == 0)
                     {
-                        result += "\n\n" + this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestLudusaviVerificationSucceeded");
+                        result += "\n\n" + resources.GetString("LOCLuduRestLudusaviVerificationSucceeded");
                     }
                     else
                     {
                         result += $"\n\nludusavi - {ludusavi.StdOut}";
                     }
 
-                    this.plugin.PlayniteApi.Dialogs.ShowMessage(result);
+                    api.Dialogs.ShowMessage(result, title);
                 }
                 catch (Exception ex)
                 {
-                    this.plugin.PlayniteApi.Dialogs.ShowMessage(string.Format(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsVerificationFailed"), ex.ToString()));
+                    api.Dialogs.ShowMessage(string.Format(resources.GetString("LOCLuduRestSettingsVerificationFailed"), ex.ToString()), title);
                 }
-            });
+            }, gpo);
         }
 
         private void SyncResticPasswordToSettings(string value)

@@ -111,6 +111,8 @@ Include Mode: No games are backed up. Games can have the include tag added to be
     <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restic executable detected at: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Settings Verification failed: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verifying restic repository connection...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Verifying ludusavi executable...</sys:String>
 
     <!-- Maintenance operation strings -->
     <sys:String x:Key="LOCLuduRestMaintenanceComplete">Maintenance Complete</sys:String>
