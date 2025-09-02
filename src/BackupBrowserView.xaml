@@ -1,0 +1,81 @@
+<UserControl x:Class="LudusaviRestic.BackupBrowserView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Toolbar -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <Button Content="{DynamicResource LOCLuduRestRefresh}" Command="{Binding RefreshCommand}" Margin="0,0,10,0" Padding="10,5"/>
+            <Button Content="{DynamicResource LOCLuduRestRestoreSelected}" Command="{Binding RestoreSnapshotCommand}" Margin="0,0,10,0" Padding="10,5" IsEnabled="{Binding SelectedSnapshot}"/>
+            <Button Content="{DynamicResource LOCLuduRestDeleteSelected}" Command="{Binding DeleteSnapshotCommand}" Margin="0,0,10,0" Padding="10,5"/>
+            <Label Content="{DynamicResource LOCLuduRestFilterByGame}" VerticalAlignment="Center" Margin="10,0,5,0"/>
+            <ComboBox ItemsSource="{Binding GameFilters}"
+                      SelectedItem="{Binding SelectedGameFilter}"
+                      Width="200"
+                      VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Snapshots List -->
+        <DataGrid Grid.Row="1"
+                  ItemsSource="{Binding Snapshots}"
+                  SelectedItem="{Binding SelectedSnapshot}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  GridLinesVisibility="Horizontal"
+                  HeadersVisibility="Column"
+                  SelectionMode="Single"
+                  Margin="10"
+                  Background="{DynamicResource ControlBackgroundBrush}"
+                  Foreground="{DynamicResource TextBrush}"
+                  BorderBrush="{DynamicResource ControlBorderBrush}"
+                  AlternationCount="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{DynamicResource LOCLuduRestSnapshotIdHeader}" Binding="{Binding ShortId}" Width="80"/>
+                <DataGridTextColumn Header="{DynamicResource LOCLuduRestDateHeader}" Binding="{Binding Date, StringFormat='yyyy-MM-dd HH:mm:ss'}" Width="150"/>
+                <DataGridTextColumn Header="{DynamicResource LOCLuduRestTagsHeader}" Binding="{Binding TagsDisplay}" Width="*"/>
+            </DataGrid.Columns>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Height" Value="25"/>
+                    <Setter Property="Background" Value="{DynamicResource GridItemBackgroundBrush}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource GridItemBorderBrush}"/>
+                    <Style.Triggers>
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                            <Setter Property="Background" Value="{DynamicResource GridItemAlternateBackgroundBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource SelectionBackgroundBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource SelectionTextBrush}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+        </DataGrid>
+
+        <!-- Status Bar -->
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock>
+                    <Run Text="{DynamicResource LOCLuduRestTotalSnapshots}"/>
+                    <Run Text=":"/>
+                    <Run Text=" "/>
+                    <Run Text="{Binding SnapshotCount, Mode=OneWay}"/>
+                </TextBlock>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <ProgressBar Width="100" Height="16" IsIndeterminate="{Binding IsLoading}"
+                             Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</UserControl>

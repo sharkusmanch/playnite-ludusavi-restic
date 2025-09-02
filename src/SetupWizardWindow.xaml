@@ -1,0 +1,180 @@
+<Window x:Class="LudusaviRestic.SetupWizardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ludusavi Restic Setup Wizard" Height="500" Width="600"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource TextBrush}">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Welcome to Ludusavi Restic!" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBlock Text="This wizard will help you set up your backup repository." TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <!-- Content -->
+        <TabControl Grid.Row="1" Name="WizardTabs" SelectionChanged="WizardTabs_SelectionChanged">
+            <!-- Step 1: Executables -->
+            <TabItem Header="1. Executables" Name="ExecutablesTab">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Executable Configuration" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <TextBlock Text="First, we need to locate the required executables on your system." TextWrapping="Wrap" Margin="0,0,0,15"/>
+
+                        <!-- Restic Section -->
+                        <Border BorderBrush="LightGray" BorderThickness="1" Padding="10" Margin="0,0,0,15">
+                            <StackPanel>
+                                <TextBlock Text="Restic Executable" FontWeight="Bold" Margin="0,0,0,5"/>
+                                <TextBlock Text="Restic is used for creating and managing backup repositories." TextWrapping="Wrap" Margin="0,0,0,10" FontStyle="Italic"/>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Executable Path:" VerticalAlignment="Center" Margin="0,0,10,5"/>
+                                    <TextBox Grid.Row="0" Grid.Column="1" Name="ResticPathTextBox" Margin="0,0,10,5" TextChanged="ResticPathTextBox_TextChanged"/>
+                                    <Button Grid.Row="0" Grid.Column="2" Content="Browse..." Click="BrowseRestic_Click" Padding="10,5" Margin="0,0,0,5"/>
+
+                                    <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="Auto-Detect Restic" Click="AutoDetectRestic_Click"
+                                            Margin="0,5,0,5" Padding="10,5" HorizontalAlignment="Left"/>
+
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Name="ResticStatusText"
+                                               Margin="0,5,0,0" TextWrapping="Wrap" FontStyle="Italic"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Ludusavi Section -->
+                        <Border BorderBrush="LightGray" BorderThickness="1" Padding="10">
+                            <StackPanel>
+                                <TextBlock Text="Ludusavi Executable" FontWeight="Bold" Margin="0,0,0,5"/>
+                                <TextBlock Text="Ludusavi is used for backing up save game data." TextWrapping="Wrap" Margin="0,0,0,10" FontStyle="Italic"/>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Executable Path:" VerticalAlignment="Center" Margin="0,0,10,5"/>
+                                    <TextBox Grid.Row="0" Grid.Column="1" Name="LudusaviPathTextBox" Margin="0,0,10,5" TextChanged="LudusaviPathTextBox_TextChanged"/>
+                                    <Button Grid.Row="0" Grid.Column="2" Content="Browse..." Click="BrowseLudusavi_Click" Padding="10,5" Margin="0,0,0,5"/>
+
+                                    <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="Auto-Detect Ludusavi" Click="AutoDetectLudusavi_Click"
+                                            Margin="0,5,0,5" Padding="10,5" HorizontalAlignment="Left"/>
+
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Name="LudusaviStatusText"
+                                               Margin="0,5,0,0" TextWrapping="Wrap" FontStyle="Italic"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- Step 2: Repository Setup -->
+            <TabItem Header="2. Repository" Name="RepositoryTab">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Repository Configuration" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBlock Text="Choose where to store your backup repository and set a password." TextWrapping="Wrap" Margin="0,0,0,10"/>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Repository Path:" VerticalAlignment="Center" Margin="0,0,10,5"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Name="RepositoryPathTextBox" Margin="0,0,10,5"/>
+                        <Button Grid.Row="0" Grid.Column="2" Content="Browse..." Click="BrowseRepository_Click" Padding="10,5" Margin="0,0,0,5"/>
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="Suggested locations:" Margin="0,5,0,5"/>
+                        <ComboBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Name="SuggestedPathsComboBox"
+                                  SelectionChanged="SuggestedPaths_SelectionChanged" Margin="0,0,0,10"/>
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Repository Password:" VerticalAlignment="Center" Margin="0,0,10,5"/>
+                        <PasswordBox Grid.Row="3" Grid.Column="1" Name="RepositoryPasswordBox" Margin="0,0,10,5"/>
+
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="Confirm Password:" VerticalAlignment="Center" Margin="0,0,10,5"/>
+                        <PasswordBox Grid.Row="4" Grid.Column="1" Name="ConfirmPasswordBox" Margin="0,0,10,5"/>
+
+                        <CheckBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Name="CreateNewRepositoryCheckBox"
+                                  Content="Initialize new repository (uncheck if repository already exists)"
+                                  IsChecked="True" Margin="0,10,0,0"/>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Step 3: Summary -->
+            <TabItem Header="3. Summary" Name="SummaryTab">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Setup Summary" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBlock Text="Please review your configuration before proceeding." Margin="0,0,0,20"/>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Restic Executable:" FontWeight="Bold" Margin="0,0,10,5"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Name="SummaryResticPath" Margin="0,0,0,5"/>
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Repository Path:" FontWeight="Bold" Margin="0,0,10,5"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Name="SummaryRepositoryPath" Margin="0,0,0,5"/>
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Password Set:" FontWeight="Bold" Margin="0,0,10,5"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" Name="SummaryPasswordStatus" Margin="0,0,0,5"/>
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Initialize Repository:" FontWeight="Bold" Margin="0,0,10,5"/>
+                        <TextBlock Grid.Row="3" Grid.Column="1" Name="SummaryInitStatus" Margin="0,0,0,5"/>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Name="PreviousButton" Content="Previous" Click="Previous_Click" Padding="15,5" Margin="0,0,10,0" IsEnabled="False"/>
+            <Button Name="NextButton" Content="Next" Click="Next_Click" Padding="15,5" Margin="0,0,10,0"/>
+            <Button Name="FinishButton" Content="Finish" Click="Finish_Click" Padding="15,5" Margin="0,0,10,0" Visibility="Collapsed"/>
+            <Button Content="Cancel" Click="Cancel_Click" Padding="15,5"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -17,6 +17,7 @@
                             <TextBox Margin="0,2,0,0" Text="{Binding LudusaviExecutablePath}" />
                             <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
                                 <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseLudusaviExecutablePath" />
+                                <Button Content="{DynamicResource LOCLuduRestAutoDetect}" Click="OnAutoDetectLudusavi" Margin="5,0,0,0" />
                             </StackPanel>
                         </StackPanel>
 
@@ -25,6 +26,7 @@
                             <TextBox Margin="0,2,0,0" Text="{Binding ResticExecutablePath}" />
                             <StackPanel Margin="0,2,0,0" Orientation="Horizontal">
                                 <Button Content="{DynamicResource LOCLuduRestBrowse}" Click="OnBrowseResticExecutablePath" />
+                                <Button Content="{DynamicResource LOCLuduRestAutoDetect}" Click="OnAutoDetectRestic" Margin="5,0,0,0" />
                             </StackPanel>
                         </StackPanel>
 
@@ -35,7 +37,15 @@
 
                         <StackPanel Margin="15">
                             <TextBlock Text="{DynamicResource LOCLuduRestRepoPass}" />
-                            <TextBox Margin="0,2,0,0" Text="{Binding ResticPassword}" />
+                            <Grid Margin="0,2,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <PasswordBox x:Name="ResticPasswordBox" Grid.Column="0" PasswordChanged="OnResticPasswordChanged" />
+                                <TextBox x:Name="ResticPasswordText" Grid.Column="0" Visibility="Collapsed" TextChanged="OnResticPasswordTextChanged" />
+                                <Button x:Name="ResticPasswordToggle" Grid.Column="1" Margin="5,0,0,0" Click="OnToggleResticPasswordVisibility" Content="{DynamicResource LOCLuduRestShow}" />
+                            </Grid>
                         </StackPanel>
 
                         <StackPanel Margin="15">
@@ -48,7 +58,15 @@
 
                         <StackPanel Margin="15">
                             <TextBlock Text="{DynamicResource LOCLuduRestRcloneConfPass}" />
-                            <TextBox Margin="0,2,0,0" Text="{Binding RcloneConfigPassword}" />
+                            <Grid Margin="0,2,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <PasswordBox x:Name="RclonePasswordBox" Grid.Column="0" PasswordChanged="OnRclonePasswordChanged" />
+                                <TextBox x:Name="RclonePasswordText" Grid.Column="0" Visibility="Collapsed" TextChanged="OnRclonePasswordTextChanged" />
+                                <Button x:Name="RclonePasswordToggle" Grid.Column="1" Margin="5,0,0,0" Click="OnToggleRclonePasswordVisibility" Content="{DynamicResource LOCLuduRestShow}" />
+                            </Grid>
                         </StackPanel>
 
                         <Button Name="VerifyButton" Content="{DynamicResource LOCLuduRestVerify}" Click="OnVerify" />
@@ -108,6 +126,54 @@
                         <StackPanel Margin="15">
                             <TextBlock Text="{DynamicResource LOCLuduRestBackupGameplayTag}" />
                             <TextBox Margin="0,2,0,0" Text="{Binding GameplaySnapshotTag}" IsEnabled="{Binding AdditionalTagging}" x:Name="GameplaySnapshotTag"/>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="{DynamicResource LOCLuduRestRetentionPolicyTab}">
+                <ScrollViewer Margin="0,10,0,0">
+                    <StackPanel>
+                        <StackPanel Margin="15">
+                            <CheckBox IsChecked="{Binding EnableRetentionPolicy}" Content="{DynamicResource LOCLuduRestEnableRetentionPolicy}"
+                                Checked="OnRetentionPolicyChecked" Unchecked="OnRetentionPolicyUnchecked" />
+                            <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" FontStyle="Italic">
+                                {DynamicResource LOCLuduRestRetentionPolicyHelp}
+                            </TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestKeepLastLabel}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding KeepLast}" IsEnabled="{Binding EnableRetentionPolicy}" x:Name="KeepLast"/>
+                            <TextBlock Margin="0,2,0,0" FontSize="11" Foreground="Gray" Text="{DynamicResource LOCLuduRestKeepLastHelp}" />
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestKeepDailyLabel}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding KeepDaily}" IsEnabled="{Binding EnableRetentionPolicy}" x:Name="KeepDaily"/>
+                            <TextBlock Margin="0,2,0,0" FontSize="11" Foreground="Gray" Text="{DynamicResource LOCLuduRestKeepDailyHelp}" />
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestKeepWeeklyLabel}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding KeepWeekly}" IsEnabled="{Binding EnableRetentionPolicy}" x:Name="KeepWeekly"/>
+                            <TextBlock Margin="0,2,0,0" FontSize="11" Foreground="Gray" Text="{DynamicResource LOCLuduRestKeepWeeklyHelp}" />
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestKeepMonthlyLabel}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding KeepMonthly}" IsEnabled="{Binding EnableRetentionPolicy}" x:Name="KeepMonthly"/>
+                            <TextBlock Margin="0,2,0,0" FontSize="11" Foreground="Gray" Text="{DynamicResource LOCLuduRestKeepMonthlyHelp}" />
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestKeepYearlyLabel}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding KeepYearly}" IsEnabled="{Binding EnableRetentionPolicy}" x:Name="KeepYearly"/>
+                            <TextBlock Margin="0,2,0,0" FontSize="11" Foreground="Gray" Text="{DynamicResource LOCLuduRestKeepYearlyHelp}" />
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <TextBlock TextWrapping="Wrap" FontWeight="Bold" Text="{DynamicResource LOCLuduRestRetentionExampleHeader}" />
+                            <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" FontSize="11" Text="{DynamicResource LOCLuduRestRetentionExample}" />
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>

@@ -1,5 +1,15 @@
 AddonId: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
 Packages:
+  - Version: 1.0.0
+    RequiredApiVersion: 6.12.0
+    ReleaseDate: 2025-09-01
+    PackageUrl: https://github.com/sharkusmanch/playnite-ludusavi-restic/releases/download/v1.0.0/LudusaviRestic_v1.0.0.pext
+    Changelog:
+      - New backup browser UI with snapshot list, game filtering, and deletion
+      - Maintenance suite - repository check, prune, and configurable retention policy (last/daily/weekly/monthly/yearly)
+      - Detailed prune results window (snapshots deleted, games affected, data removed) with filtering and summaries
+      - Dry‑run preview & confirmation for maintenance/prune/retention actions
+      - First‑run setup wizard with auto‑detection (restic & ludusavi), repository init, and validation feedback
   - Version: 0.7.0
     RequiredApiVersion: 6.12.0
     ReleaseDate: 2025-08-30

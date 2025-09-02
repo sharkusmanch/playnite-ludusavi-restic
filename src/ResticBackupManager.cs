@@ -76,8 +76,8 @@ namespace LudusaviRestic
             var tags = ManualBackupTags();
             // Prompt user for an optional custom tag
             var result = this.context.API.Dialogs.SelectString(
-                "Enter an optional custom tag for this manual backup (leave blank for none):",
-                "Manual Backup Tag",
+                ResourceProvider.GetString("LOCLuduRestManualBackupTagPrompt"),
+                ResourceProvider.GetString("LOCLuduRestManualBackupTagTitle"),
                 ""
             );
             if (result?.Result == true && !string.IsNullOrWhiteSpace(result.SelectedString))
