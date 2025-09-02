@@ -1,75 +1,295 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Δημιουργία αντιγράφων ασφαλείας κατά τη διάρκεια του παιχνιδιού</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Αντίγραφο ασφαλείας κατά την αναπαραγωγή</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Δημιουργία αντιγράφων ασφαλείας όταν το παιχνίδι σταμάτησε</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Αντίγραφο ασφαλείας όταν το παιχνίδι σταματήσει</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Προτροπή για εφεδρική ετικέτα όταν σταματήσει το παιχνίδι</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Προτροπή αντιγράφου ασφαλείας ετικέτας όταν το παιχνίδι σταματήσει</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Εφεδρική ετικέτα παιχνιδιού</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Ετικέτα αντιγράφου ασφαλείας παιχνιδιού</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Εισαγάγετε εφεδρική ετικέτα για</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Εισάγετε την ετικέτα αντιγράφου ασφαλείας για</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Διάστημα αποθήκευσης αντιγράφων ασφαλείας παιχνιδιού (λεπτά)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Χρονικό διάστημα αποθήκευσης αντιγράφων ασφαλείας παιχνιδιού (λεπτά)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Ξεφυλλίζω</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Περιήγηση</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Διαδρομή αποθετηρίου Restic</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Διαδρομή αντικατάστασης αποθετηρίου</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Κωδικός πρόσβασης αποθετηρίου Restic</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Κωδικός πρόσβασης Restic repository</sys:String>
+    <sys:String x:Key="LOCLuduRestShow">Εμφάνιση</sys:String>
+    <sys:String x:Key="LOCLuduRestHide">Απόκρυψη</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Ρύθμιση Rclone</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Ρύθμιση κλώνου</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Κωδικός πρόσβασης διαμόρφωσης Rclone</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Κωδικός πρόσβασης ρύθμισης Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Επαληθεύω</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Επαλήθευση</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic εκτελέσιμη διαδρομή</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Παρατεταμένη διαδρομή εκτελέσιμου</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Εκτελέσιμο μονοπάτι Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi εκτελέσιμη διαδρομή</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabBackup">Αντιγράφων ασφαλείας</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">Αντίγραφα Ασφαλείας</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabRepo">Αποθήκη</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">Αποθετήριο</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Προσθέστε πρόσθετες ετικέτες στα στιγμιότυπα για να διαφοροποιήσετε τα συμβάντα</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Προσθήκη πρόσθετων ετικετών στα στιγμιότυπα για τη διαφοροποίηση συμβάντων</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Μη αυτόματη εφεδρική ετικέτα</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Μη αυτόματη αντιγραφή ετικέτας</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Το παιχνίδι διακόπηκε εφεδρική ετικέτα</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Παιχνίδι σταμάτησε την ετικέτα αντιγράφου ασφαλείας</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Εφεδρική ετικέτα παιχνιδιού</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Ετικέτα αντιγράφου ασφαλείας παιχνιδιού</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Δημιουργία στιγμιότυπου αποθήκευσης</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Προσθήκη εφεδρικής ετικέτας συμπερίληψης</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Προσθήκη αντιγράφου ασφαλείας ετικέτας</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Κατάργηση εφεδρικής ετικέτας συμπερίληψης</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Αφαίρεση αντιγράφου ασφαλείας ετικέτας</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Προσθήκη εφεδρικής ετικέτας εξαίρεσης</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Προσθήκη αντιγράφου ασφαλείας εξαίρεσης ετικέτας</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Κατάργηση εφεδρικής ετικέτας εξαίρεσης</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Αφαίρεση ετικέτας εξαίρεσης αντιγράφου ασφαλείας</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Υποστηρίζω</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Δημιουργία αντιγράφων ασφαλείας</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Επεξεργασία</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupMode">Λειτουργία δημιουργίας αντιγράφων ασφαλείας</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupMode">Λειτουργία Αντιγράφου Ασφαλείας</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Λειτουργία εξαίρεσης: Όλα τα παιχνίδια είναι κατάλληλα για δημιουργία αντιγράφων ασφαλείας από προεπιλογή. Τα παιχνίδια μπορούν να έχουν την ετικέτα εξαίρεσης για να αποτρέψουν τη δημιουργία αντιγράφων ασφαλείας.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Λειτουργία εξαίρεσης: Όλα τα παιχνίδια είναι επιλέξιμα για δημιουργία αντιγράφων ασφαλείας από προεπιλογή. Τα παιχνίδια μπορούν να έχουν την ετικέτα εξαίρεσης που προστίθεται για την αποφυγή δημιουργίας αντιγράφων ασφαλείας.
 
-Λειτουργία συμπερίληψης: Δεν υπάρχουν αντίγραφα ασφαλείας για παιχνίδια. Τα παιχνίδια μπορούν να έχουν την ετικέτα συμπερίληψης για να είναι κατάλληλα για δημιουργία αντιγράφων ασφαλείας.</sys:String>
+Λειτουργία συμπερίληψης: Δεν δημιουργούνται αντίγραφα ασφαλείας παιχνιδιών. Τα παιχνίδια μπορούν να έχουν την ετικέτα ενσωμάτωσης ώστε να είναι επιλέξιμα για δημιουργία αντιγράφων ασφαλείας.</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Λειτουργία εξαίρεσης</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Λειτουργία Εξαίρεσης</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Συμπερίληψη Λειτουργίας</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Λειτουργία Συμπερίληψης</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Συμπεριλάβετε το Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Include Backup</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Εξαίρεση δημιουργίας αντιγράφων ασφαλείας</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Δημιουργήστε αντίγραφο ασφαλείας κατά την απεγκατάσταση του παιχνιδιού</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Δημιουργία αντιγράφου ασφαλείας όταν το παιχνίδι απεγκατασταθεί</sys:String>
+
+    <!-- Setup Wizard Strings -->
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Βρέθηκε και επαληθεύθηκε το Restic εκτελέσιμο.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Δεν ήταν δυνατή η αυτόματη ανίχνευση της αντίστασης. Παρακαλώ καθορίστε τη διαδρομή χειροκίνητα.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Βρέθηκαν και επαληθεύτηκαν εκτελέσιμα Ludusavi.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ Δεν ήταν δυνατή η αυτόματη ανίχνευση του ludusavi. Παρακαλώ καθορίστε τη διαδρομή χειροκίνητα.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticRequired">Παρακαλώ καθορίστε τη διαδρομή για το εκτελέσιμο restice.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Το Restic executable είναι έγκυρο.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid">«Μη έγκυρο εκτελέσιμο restic ή μη προσιτό.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Παρακαλώ καθορίστε τη διαδρομή για το εκτελέσιμο ludusavi.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Το εκτελέσιμο Ludusavi είναι έγκυρο.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">◆ Μη έγκυρο εκτελέσιμο ludusavi ή μη προσβάσιμο.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Ναι</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryNo">Όχι</sys:String>
+
+    <!-- Game Menu Items -->
+    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Προβολή στιγμιότυπων αντιγράφων ασφαλείας</sys:String>
+
+    <!-- Settings Auto-Detection -->
+    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Αυτόματη Ανίχνευση Επιτυχής</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Αποτυχία Αυτόματης Ανίχνευσης</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ανιχνεύθηκε εκτελέσιμο Ludusavi στο: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Αδύνατη η αυτόματη ανίχνευση του εκτελέσιμου ludusavi. Παρακαλώ καθορίστε τη διαδρομή χειροκίνητα.</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">Ανιχνεύθηκε στέρεο εκτελέσιμο στο: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticNotDetected">Αδύνατη η αυτόματη ανίχνευση του εκτελέσιμου restic. Παρακαλώ καθορίστε τη διαδρομή χειροκίνητα.</sys:String>
+
+    <!-- Settings verification -->
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Επαλήθευση Ρυθμίσεων:</sys:String>
+    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - επιτυχία σύνδεσης αποθετηρίου</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - επιτυχία επαλήθευσης</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Αυτόματη Ανίχνευση Επιτυχής</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Αποτυχία Αυτόματης Ανίχνευσης</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Ανιχνεύθηκε εκτελέσιμο Ludusavi στο: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Αδύνατη η αυτόματη ανίχνευση του εκτελέσιμου ludusavi. Παρακαλώ καθορίστε τη διαδρομή χειροκίνητα.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Ανιχνεύθηκε στέρεο εκτελέσιμο στο: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Αδύνατη η αυτόματη ανίχνευση του εκτελέσιμου restic. Παρακαλώ καθορίστε τη διαδρομή χειροκίνητα.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Ρυθμίσεις Επαλήθευση απέτυχε: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">Επαλήθευση σύνδεσης restic repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Επαλήθευση εκτελέσιμου ludusavi...</sys:String>
+
+    <!-- Maintenance operation strings -->
+    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Η Συντήρηση Ολοκληρώθηκε</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Η πλήρης συντήρηση ολοκληρώθηκε επιτυχώς.</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationComplete">Η Επαλήθευση Ολοκληρώθηκε</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Η επαλήθευση του χώρου αποθήκευσης ολοκληρώθηκε επιτυχώς.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Πολιτική Διατήρησης Απενεργοποιημένη</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Η πολιτική διατήρησης είναι απενεργοποιημένη. Παρακαλώ ενεργοποιήστε την στις ρυθμίσεις της επέκτασης για να χρησιμοποιήσετε αυτή τη δυνατότητα.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Η Πολιτική Διατήρησης Ολοκληρώθηκε</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Η πολιτική διατήρησης εφαρμόστηκε επιτυχώς. Τα παλιά στιγμιότυπα έχουν διαγραφεί.</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Η λειτουργία αυτόματης αποθήκευσης ολοκληρώθηκε επιτυχώς.</sys:String>
+
+    <!-- Dialog prompts -->
+    <sys:String x:Key="LOCLuduRestFullMaintenance">Πλήρης Συντήρηση</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Θα θέλατε να εκτελέσετε πρώτα ένα ξηρό τρέξιμο για να δείτε τι θα κλαδευτεί πριν από την πραγματικότητα τη διαγραφή δεδομένων?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicy">Πολιτική Διατήρησης</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Θα θέλατε να εκτελέσετε πρώτα ένα ξηρό τρέξιμο για να δείτε τι θα διαγράφηκε πριν από την αφαίρεση στιγμιότυπα?</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">Συντονισμός</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Θα θέλατε να εκτελέσετε πρώτα ένα ξηρό τρέξιμο για να δείτε τι θα κλαδευτεί πριν από την πραγματικότητα τη διαγραφή δεδομένων?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithPruning">Συνεχίστε με το κλαδί?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Το ξηρό τρέξιμο ολοκληρώθηκε. Τα στιγμιότυπα {0} θα κλαδευτούν. Θέλετε να προχωρήσετε με το πραγματικό κλάδεμα?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Η ξηρή εκτέλεση ολοκληρώθηκε. Τα στιγμιότυπα {0} θα διαγραφούν. Θέλετε να προχωρήσετε στην εφαρμογή της πολιτικής διατήρησης?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithRetention">Προχωρήστε με την Πολιτική Διατήρησης?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Αυτό θα διαγράψει παλιά στιγμιότυπα σύμφωνα με την πολιτική διατήρησής σας:
+
+• Κρατήστε τα τελευταία στιγμιότυπα {0}
+• Κρατήστε καθημερινά στιγμιότυπα για {1} ημέρες
+• Κρατήστε εβδομαδιαία στιγμιότυπα για {2} εβδομάδες
+• Κρατήστε μηνιαία στιγμιότυπα για {3} μήνες
+• Κρατήστε ετήσια στιγμιότυπα για {4} χρόνια
+
+Θα θέλατε να εκτελέσετε πρώτα ένα ξηρό τρέξιμο για να δείτε τι θα διαγραφεί?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Η προεπισκόπηση ολοκληρώθηκε. Τα στιγμιότυπα {0} θα διαγραφούν σύμφωνα με την πολιτική διατήρησης. Θέλετε να προχωρήσετε με τη διαγραφή?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Συνεχίστε με Διαγραφή?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">Εκκαθάριση Αποθετηρίου</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Το κλαδέμα θα αφαιρέσει τις αχρησιμοποίητες blobs δεδομένων από το αποθετήριο. Αυτή η λειτουργία είναι μη αναστρέψιμη.
+
+Θα θέλατε να εκτελέσετε ένα ξηρό τρέξιμο πρώτα για να δείτε τι θα πρέπει να αφαιρεθεί πριν πραγματικά τη διαγραφή δεδομένων?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Το ξηρό τρέξιμο ολοκληρώθηκε. Αυτή η λειτουργία θα αφαιρέσει τα αχρησιμοποίητα δεδομένα από το αποθετήριο. Θέλετε να προχωρήσετε με το πραγματικό κλάδεμα?</sys:String>
+
+    <!-- Welcome and setup -->
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Καλώς Ήλθατε - Απαιτείται Εγκατάσταση</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeMessage">Καλώς ήλθατε στο Ludusavi Restic!
+
+Αυτό φαίνεται να είναι η πρώτη σας φορά χρησιμοποιώντας την επέκταση ή η ρύθμιση παραμέτρων σας είναι ελλιπής. Θα θέλατε να εκτελέσετε τον οδηγό εγκατάστασης για να ρυθμίσετε το αποθετήριο αντιγράφων ασφαλείας?</sys:String>
+    <sys:String x:Key="LOCLuduRestConfigurationRequired">Απαιτείται Ρύθμιση Παραμέτρων</sys:String>
+    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Το Ludusavi Restic δεν έχει ρυθμιστεί ακόμα. Θα θέλατε να εκτελέσετε τον οδηγό εγκατάστασης?</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Μη Έγκυρη Ρύθμιση Παραμέτρων</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticMessage">Το ρυθμισμένο εκτελέσιμο restic δεν είναι έγκυρο ή προσιτό. Θα θέλατε να εκτελέσετε τον οδηγό εγκατάστασης για να το διορθώσετε?</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupComplete">Η Ρύθμιση Ολοκληρώθηκε</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Η ρύθμιση ολοκληρώθηκε επιτυχώς! Τώρα μπορείτε να χρησιμοποιήσετε όλες τις δυνατότητες αντιγράφων ασφαλείας.</sys:String>
+
+    <!-- Backup browser -->
+    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Διαγραφή Στιγμιότυπου Αντιγράφου Ασφαλείας</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Είστε βέβαιοι ότι θέλετε να διαγράψετε στιγμιότυπο {0} από {1}?</sys:String>
+    <sys:String x:Key="LOCLuduRestSuccess">Επιτυχία</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Το στιγμιότυπο διαγράφηκε επιτυχώς.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Επαναφορά τελευταίου στιγμιότυπου</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Δεν βρέθηκαν στιγμιότυπα για αυτό το παιχνίδι.</sys:String>
+    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Επαναφορά στιγμιότυπου {0} για {1} στο φάκελο:\n{2}\n\nΤα υπάρχοντα αρχεία μπορεί να αντικατασταθούν. Συνέχεια?</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Επαναφορά στιγμιότυπου...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompleted">Το στιγμιότυπο επαναφέρθηκε επιτυχώς.</sys:String>
+    <sys:String x:Key="LOCLuduRestRefresh">Ανανέωση</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSelected">Επαναφορά Επιλεγμένων</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSelected">Διαγραφή Επιλεγμένων</sys:String>
+    <sys:String x:Key="LOCLuduRestFilterByGame">Φιλτράρισμα ανά παιχνίδι:</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">Ταυτότητα Στιγμιότυπου</sys:String>
+    <sys:String x:Key="LOCLuduRestDateHeader">Ημερομηνία</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsHeader">Ετικέτες</sys:String>
+    <sys:String x:Key="LOCLuduRestTotalSnapshots">Σύνολο στιγμιότυπων</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetect">Αυτόματος Ανίχνευση</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Πολιτική Διατήρησης</sys:String>
+    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Ενεργοποίηση αυτόματης πολιτικής διατήρησης</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">Όταν ενεργοποιηθεί, αυτές οι πολιτικές θα εφαρμοστούν κατά τη διάρκεια εργασιών συντήρησης για να αφαιρεθούν αυτόματα τα παλιά στιγμιότυπα.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastLabel">Κρατήστε τα τελευταία στιγμιότυπα N:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastHelp">Κρατήστε τα πιο πρόσφατα στιγμιότυπα ανεξάρτητα από την ηλικία</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Κρατήστε καθημερινά στιγμιότυπα για τις ημέρες Ν:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Κρατήστε ένα στιγμιότυπο την ημέρα για τόσες μέρες</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Κρατήστε εβδομαδιαία στιγμιότυπα για N εβδομάδες:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Κρατήστε ένα στιγμιότυπο την εβδομάδα για πολλές εβδομάδες</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Κρατήστε μηνιαία στιγμιότυπα για τους μήνες Ν:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Κρατήστε ένα στιγμιότυπο το μήνα για τόσους μήνες</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Κρατήστε ετήσια στιγμιότυπα για τα έτη Ν:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Κρατήστε ένα στιγμιότυπο το χρόνο για πολλά χρόνια</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Παράδειγμα με προεπιλεγμένες ρυθμίσεις:</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample">• Κρατήστε τα τελευταία 10 στιγμιότυπα
+• Συν 1 στιγμιότυπο την ημέρα για 7 ημέρες
+• Συν 1 στιγμιότυπο την εβδομάδα για 4 εβδομάδες
+• Συν 1 στιγμιότυπο ανά μήνα για 12 μήνες
+• Συν 1 στιγμιότυπο ανά έτος για 5 χρόνια</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Αποτελέσματα Κλάδεσης</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Οι συνοπτικές πληροφορίες θα εμφανιστούν εδώ</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Διαγραμμένα Στιγμιότυπα</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesAffected">Παιχνίδια Επηρεάζονται</sys:String>
+    <sys:String x:Key="LOCLuduRestDataDeleted">Τα Δεδομένα Διαγράφηκαν</sys:String>
+    <sys:String x:Key="LOCLuduRestStatus">Κατάσταση</sys:String>
+    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Διαγραμμένα Στιγμιότυπα</sys:String>
+    <sys:String x:Key="LOCLuduRestClearFilter">Καθαρισμός Φίλτρου</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">Παιχνίδι</sys:String>
+    <sys:String x:Key="LOCLuduRestDateTimeHeader">Ημερομηνία/Ώρα</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Περίληψη Παιχνιδιών</sys:String>
+    <sys:String x:Key="LOCLuduRestGameNameHeader">Όνομα Παιχνιδιού</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Περίληψη Ετικετών</sys:String>
+    <sys:String x:Key="LOCLuduRestTagHeader">Ετικέτα</sys:String>
+    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Εμφανίσεις</sys:String>
+    <sys:String x:Key="LOCLuduRestRawOutputTab">Ακατέργαστη Έξοδος</sys:String>
+    <sys:String x:Key="LOCLuduRestClose">Κλείσιμο</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Εισάγετε μια προαιρετική προσαρμοσμένη ετικέτα για αυτό το χειροκίνητο αντίγραφο ασφαλείας (αφήστε κενό για κανένα):</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Χειροκίνητη Ετικέτα Αντιγράφου Ασφαλείας</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreConfirm">Επαναφορά στιγμιότυπου {0} στο {1}? Αυτό μπορεί να αντικαταστήσει τα υπάρχοντα αρχεία.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Επαναφορά στιγμιότυπου {0}...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} επαναφέρθηκε με επιτυχία.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreFailed">Αποτυχία επαναφοράς στιγμιοτύπου: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreError">Σφάλμα επαναφοράς στιγμιότυπου: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestorePreview">Στιγμιότυπο {0} (παιχνίδι: {1}) περιέχει αρχεία {2} .
+Νέα αρχεία: {3}
+Υπάρχοντα αρχεία (θα αντικατασταθούν): {4}
+Προτεινόμενος φάκελος επαναφοράς: {5}
+
+Επιλέξτε Ναι για να χρησιμοποιήσετε τον προτεινόμενο φάκελο, Όχι για να επιλέξετε ένα άλλο, ή Ακυρώσετε να ματαιώσετε.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(κανένα)</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Αδυναμία καθορισμού ετικέτας ονόματος παιχνιδιού για αυτό το στιγμιότυπο.</sys:String>
+
+    <!-- Main menu items -->
+    <sys:String x:Key="LOCLuduRestSetupWizard">Οδηγός εγκατάστασης</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllGames">Αντίγραφο ασφαλείας όλων των παιχνιδιών</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Περιήγηση στιγμιότυπων αντιγράφων ασφαλείας</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceAll">Όλα (έλεγχος + κλάδεμα)</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceVerify">Επαλήθευση</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Διαγραφή παλαιών στιγμιότυπων</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenancePrune">Εκτέλεση αχρησιμοποίητων δεδομένων</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceSection">Συντήρηση</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSection">Ρύθμιση</sys:String>
+
+    <!-- Dialog strings -->
+    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Επιλέξτε Restic Executable</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Επιλέξτε Εκτελέσιμο Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Επιλέξτε Τοποθεσία Χώρου Αποθήκευσης</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Εκτελέσιμα αρχεία (*.exe) *.exeâ € ™️ Όλα τα αρχεία (*.*) *.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Εκτελέσιμο *.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Εμπιστευτικό *.Conf</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Εκτέλεση πλήρους συντήρησης...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Επαλήθευση αποθετηρίου...</sys:String>
+
+    <!-- Validation messages -->
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Παρακαλώ καθορίστε τη διαδρομή για το εκτελέσιμο restice.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Το Restic executable είναι έγκυρο.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">«Μη έγκυρο εκτελέσιμο restic ή μη προσιτό.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Παρακαλώ καθορίστε τη διαδρομή για το εκτελέσιμο ludusavi.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Το εκτελέσιμο Ludusavi είναι έγκυρο.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">◆ Μη έγκυρο εκτελέσιμο ludusavi ή μη προσβάσιμο.</sys:String>
+
+    <!-- Setup validation -->
+    <sys:String x:Key="LOCLuduRestValidationError">Σφάλμα Επικύρωσης</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticPath">Παρακαλώ καθορίστε τη διαδρομή για το εκτελέσιμο restice.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticInvalid">Το συγκεκριμένο εκτελέσιμο restic δεν είναι έγκυρο ή προσβάσιμο.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Παρακαλούμε προσδιορίστε τη διαδρομή του αποθετηρίου.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Παρακαλώ εισάγετε έναν κωδικό πρόσβασης αποθετηρίου.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Οι κωδικοί πρόσβασης δεν ταιριάζουν.</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryYes">Ναι</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryNo">Όχι</sys:String>
+
+    <!-- Progress and initialization messages -->
+    <sys:String x:Key="LOCLuduRestInitializingRepository">Αρχικοποίηση αποθετηρίου...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Εφαρμογή πολιτικής διατήρησης...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Εκτέλεση προεπισκόπησης πολιτικής διατήρησης...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Εφαρμογή πολιτικής διατήρησης και κλαδέματος...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Έλεγχος ακεραιότητας χώρου αποθήκευσης...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Τρέξιμο prune ξηρό τρέξι...</sys:String>
+    <sys:String x:Key="LOCLuduRestPruningUnusedData">Κλάδεμα αχρησιμοποίητων δεδομένων...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Έλεγχος της ακεραιότητας του αποθετηρίου με επαλήθευση δεδομένων...</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationFailed">Αποτυχία αρχικοποίησης του αποθετηρίου. Παρακαλώ ελέγξτε τα αρχεία καταγραφής για λεπτομέρειες.</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationError">Σφάλμα Αρχικοποίησης</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupError">Σφάλμα Εγκατάστασης</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupErrorMessage">Παρουσιάστηκε σφάλμα κατά την εγκατάσταση: {0}</sys:String>
+
 </ResourceDictionary>

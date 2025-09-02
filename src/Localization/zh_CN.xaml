@@ -1,75 +1,295 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">在游玩时进行备份</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">游戏中的备份</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">在游戏停止时备份</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">游戏停止时备份</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">当游戏停止时提示备份标签</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">游戏停止时提示备份标签</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">游戏备份标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">输入备用标签于</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">输入备份标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">游玩存档备份间隔（分钟）</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">游戏保存备份间隔(分钟)</sys:String>
 
     <sys:String x:Key="LOCLuduRestBrowse">浏览</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic 存储库路径</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">庄严的仓库路径</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic 存储库密码</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">庄严的仓库密码</sys:String>
+    <sys:String x:Key="LOCLuduRestShow">显示</sys:String>
+    <sys:String x:Key="LOCLuduRestHide">隐藏</sys:String>
 
     <sys:String x:Key="LOCLuduRestRcloneConf">Rclone 配置</sys:String>
 
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone 配置密码</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">校验</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">验证</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic 可执行文件路径</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">庄严可执行路径</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">录读加一可执行文件路径</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi可执行路径</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">备份</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabRepo">存储库</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">向快照添加额外标签以区分事件</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">添加插件标签到快照以区分事件</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupManualTag">手动备份标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">游戏停止所备份标签</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">游戏停止备份标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">游玩备份标签</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">游戏备份标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">创建存档快照</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">创建保存快照</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">添加备份（包含标签）</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">添加备份包含标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">删除备份（包含标签）</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">删除备份包含标签</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">添加备份排除标签</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">删除备份排除标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGM">录读加一 Restic 增强版-LudusaviRestic</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">正在备份</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">备份中</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">处理中</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupMode">备份模式</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">排除模式：默认情况下，所有游戏都可被备份。可为游戏添加排除标签，以防止被备份。
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">排除模式：默认所有游戏都可以备份。游戏可以添加排除标签以防止备份。
 
-包含模式：不备份任何游戏。可为游戏添加包含标签，以允许被备份。</sys:String>
+包括模式：没有备份游戏。游戏可以添加包含标签以获得备份资格。</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">排除模式</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">包含模式</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] 包含备份</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] 包括备份</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] 排除备份</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">当游戏已卸载时，创建存档备份</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">当游戏卸载时创建保存备份</sys:String>
+
+    <!-- Setup Wizard Strings -->
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ 可以找到并验证庄严的可执行文件。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ 无法自动检测树脂. 请手动指定路径.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">★ 发现并验证Ludusavi可执行文件。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ 无法自动检测ludusavi。请手动指定路径。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticRequired">请指定重新设置可执行文件的路径。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ 神圣可执行程序有效。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid">无效的restic 可执行文件或不可访问。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">请指定用于 ludusavi 可执行文件的路径。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi可执行程序有效。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">无效的 ludusavi 可执行文件或不可访问。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryYes">否</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryNo">否</sys:String>
+
+    <!-- Game Menu Items -->
+    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">查看备份快照</sys:String>
+
+    <!-- Settings Auto-Detection -->
+    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">自动检测成功</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">自动检测失败</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviDetected">在 {0} 检测到Ludusavi 可执行程序</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">无法自动检测ludusavi可执行文件。请手动指定路径。</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">检测到神秘可执行文件: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticNotDetected">无法自动检测树脂执行。请手动指定路径。</sys:String>
+
+    <!-- Settings verification -->
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi庄园设置验证：</sys:String>
+    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - 版本库连接成功</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - 验证成功</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">自动检测成功</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">自动检测失败</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">在 {0} 检测到Ludusavi 可执行程序</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">无法自动检测ludusavi可执行文件。请手动指定路径。</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">检测到神秘可执行文件: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">无法自动检测树脂执行。请手动指定路径。</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Ravi庄严设置验证失败: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">正在验证restic 仓库连接...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">正在验证 ludusavi 可执行文件...</sys:String>
+
+    <!-- Maintenance operation strings -->
+    <sys:String x:Key="LOCLuduRestMaintenanceComplete">维护完成</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">完整维护已成功完成。</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationComplete">验证完成</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">仓库验证成功完成。</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">保留策略已禁用</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">保留策略已禁用。请在扩展设置中启用它来使用此功能。</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">保留策略完成</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">保留策略应用成功。旧快照已删除。</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">清理操作成功完成。</sys:String>
+
+    <!-- Dialog prompts -->
+    <sys:String x:Key="LOCLuduRestFullMaintenance">完全维护</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">您想先执行一个干燥运行，看看在实际删除数据之前会打印些什么？</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicy">保留政策</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">你想先运行干了，看看在实际删除快照之前会删除什么吗？</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">清理中</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">您想先执行一个干燥运行，看看在实际删除数据之前会打印些什么？</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithPruning">是否继续打印？</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">干燥已经完成。 {0} 快照将被打印。您想要继续实际打印吗？</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">运行完成。 {0} 快照将被删除。您想要继续应用保留政策吗？</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithRetention">是否继续保留政策？</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
+
+• Keep last {0} snapshots
+• Keep daily snapshots for {1} days
+• Keep weekly snapshots for {2} weeks
+• Keep monthly snapshots for {3} months
+• Keep yearly snapshots for {4} years
+
+Would you like to perform a dry run first to see what would be deleted?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">预览已完成。 {0} 快照将根据保留政策被删除。您想要继续删除吗？</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithDeletion">是否继续删除？</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">修理仓库</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning 将从资源库中删除未使用的数据博客。此操作是不可逆的。
+
+您想先运行干燥，看看在实际删除数据之前会删除哪些内容？</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">运行完成。此操作将从资源库中移除未使用的数据。您想要继续实际打印吗？</sys:String>
+
+    <!-- Welcome and setup -->
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - 需要设置</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeMessage">欢迎来到Ludusavi Restic！
+
+这似乎是你第一次使用扩展或您的配置不完整。 您想运行安装向导来配置您的备份仓库吗？</sys:String>
+    <sys:String x:Key="LOCLuduRestConfigurationRequired">需要配置</sys:String>
+    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Ravi尚未配置。你想要运行安装向导吗？</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidConfiguration">无效的配置</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticMessage">配置的restic 可执行文件无效或不可访问。您想运行安装向导来解决这个问题？</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupComplete">安装完成</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">设置成功完成！您现在可以使用所有备份功能。</sys:String>
+
+    <!-- Backup browser -->
+    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">删除备份快照</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Are you sure you want to delete snapshot {0} from {1}?</sys:String>
+    <sys:String x:Key="LOCLuduRestSuccess">成功</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">快照已成功删除。</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">恢复最新快照</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">没有找到这场游戏的快照。</sys:String>
+    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restore snapshot {0} for {1} to folder:\n{2}\n\nExisting files may be overwritten. Continue?</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">正在恢复快照...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompleted">快照已成功恢复。</sys:String>
+    <sys:String x:Key="LOCLuduRestRefresh">刷新</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSelected">还原选中的</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSelected">删除选中的</sys:String>
+    <sys:String x:Key="LOCLuduRestFilterByGame">通过游戏筛选：</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">快照ID</sys:String>
+    <sys:String x:Key="LOCLuduRestDateHeader">日期</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsHeader">标签</sys:String>
+    <sys:String x:Key="LOCLuduRestTotalSnapshots">总快照</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetect">自动检测</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">保留政策</sys:String>
+    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">启用自动保留策略</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">启用时，这些策略将在维护操作中应用以自动移除旧的快照。</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastLabel">保留最后的 N 快照：</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastHelp">不论年龄，保留最新快照</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyLabel">每日快照持续N天：</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyHelp">这么多天每天保持一张快照</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">保持每周快照的 N 周：</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">这么多周内每周保留一张快照</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">保持月快照为 N 个月：</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">这么多个月每月保持一张快照</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">保持每年的 N 年快照：</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">这么多年每年保持一张快照</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">使用默认设置的示例：</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">打印结果</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">摘要信息将显示在此处</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">快照已删除</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesAffected">游戏受影响</sys:String>
+    <sys:String x:Key="LOCLuduRestDataDeleted">数据已删除</sys:String>
+    <sys:String x:Key="LOCLuduRestStatus">状态</sys:String>
+    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">已删除快照</sys:String>
+    <sys:String x:Key="LOCLuduRestClearFilter">清除过滤器</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">游戏</sys:String>
+    <sys:String x:Key="LOCLuduRestDateTimeHeader">日期/时间</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesSummaryTab">游戏摘要</sys:String>
+    <sys:String x:Key="LOCLuduRestGameNameHeader">游戏名称</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsSummaryTab">标签摘要</sys:String>
+    <sys:String x:Key="LOCLuduRestTagHeader">标签</sys:String>
+    <sys:String x:Key="LOCLuduRestOccurrencesHeader">出现的情况</sys:String>
+    <sys:String x:Key="LOCLuduRestRawOutputTab">原始输出</sys:String>
+    <sys:String x:Key="LOCLuduRestClose">关闭</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">输入此手动备份的可选自定义标签(留空不填)：</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">手动备份标签</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreConfirm">恢复快照 {0} 到 {1}？这可能覆盖现有文件。</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">正在恢复快照 {0}...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">快照 {0} 已成功恢复。</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreFailed">恢复快照失败: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreError">恢复快照时出错： {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestorePreview">快照 {0} (游戏: {1}) 包含 {2} 文件。
+新文件： {3}
+现有文件(将被覆盖)： {4}
+建议还原文件夹： {5}
+
+选择使用建议的文件夹， 不选择另一个，或取消中止。</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(无)</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">无法确定这个快照的游戏名称标签。</sys:String>
+
+    <!-- Main menu items -->
+    <sys:String x:Key="LOCLuduRestSetupWizard">设置向导</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllGames">备份所有游戏</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">浏览备份快照</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceAll">所有 (勾选+打印)</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceVerify">验证</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">删除旧快照</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenancePrune">清理未使用的数据</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceSection">维护费</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSection">设置</sys:String>
+
+    <!-- Dialog strings -->
+    <sys:String x:Key="LOCLuduRestSelectResticExecutable">选择庄严可执行的</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">选择 Ludusavi 可执行文件</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">选择仓库位置</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">可执行文件 (*.exe)|*.exe|所有文件 (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">conf|*.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">正在运行完整维护...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">正在验证仓库...</sys:String>
+
+    <!-- Validation messages -->
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">请指定重新设置可执行文件的路径。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ 神圣可执行程序有效。</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">无效的restic 可执行文件或不可访问。</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">请指定用于 ludusavi 可执行文件的路径。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi可执行程序有效。</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">无效的 ludusavi 可执行文件或不可访问。</sys:String>
+
+    <!-- Setup validation -->
+    <sys:String x:Key="LOCLuduRestValidationError">验证错误</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticPath">请指定重新设置可执行文件的路径。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticInvalid">指定的restic 可执行文件无效或不可访问。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">请指定仓库路径。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">请输入仓库密码。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">密码不匹配。</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryYes">否</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryNo">否</sys:String>
+
+    <!-- Progress and initialization messages -->
+    <sys:String x:Key="LOCLuduRestInitializingRepository">正在初始化仓库...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">正在应用保留政策...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">正在运行保留政策预览...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">正在应用保留策略和打印...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">正在检查仓库完整性...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">正在干燥运行...</sys:String>
+    <sys:String x:Key="LOCLuduRestPruningUnusedData">正在打印未使用的数据...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">正在通过数据验证检查仓库的完整性...</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationFailed">无法初始化仓库。请检查日志的详细信息。</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationError">初始化错误</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupError">设置错误</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupErrorMessage">设置过程中发生错误: {0}</sys:String>
+
 </ResourceDictionary>
