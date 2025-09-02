@@ -76,6 +76,7 @@ namespace LudusaviRestic
 
         public ICommand RefreshCommand { get; }
         public ICommand DeleteSnapshotCommand { get; }
+    public ICommand RestoreSnapshotCommand { get; }
 
         public BackupBrowserViewModel(BackupContext context)
         {
@@ -86,6 +87,7 @@ namespace LudusaviRestic
 
             RefreshCommand = new RelayCommand(RefreshSnapshots);
             DeleteSnapshotCommand = new RelayCommand(DeleteSnapshot, CanDeleteSnapshot);
+            RestoreSnapshotCommand = new RelayCommand(RestoreSnapshot, CanRestoreSnapshot);
 
             RefreshSnapshots();
         }
@@ -99,6 +101,7 @@ namespace LudusaviRestic
 
             RefreshCommand = new RelayCommand(RefreshSnapshots);
             DeleteSnapshotCommand = new RelayCommand(DeleteSnapshot, CanDeleteSnapshot);
+            RestoreSnapshotCommand = new RelayCommand(RestoreSnapshot, CanRestoreSnapshot);
 
             // Set the initial game filter
             this.selectedGameFilter = gameFilter;
@@ -234,6 +237,62 @@ namespace LudusaviRestic
                     context.API.Dialogs.ShowErrorMessage($"Error deleting snapshot: {ex.Message}");
                 }
             }
+        }
+
+        private bool CanRestoreSnapshot()
+        {
+            return SelectedSnapshot != null && !IsLoading;
+        }
+
+        private void RestoreSnapshot()
+        {
+            if (SelectedSnapshot == null) return;
+
+            // Ask user to select destination directory
+            var destination = context.API.Dialogs.SelectFolder();
+            if (string.IsNullOrEmpty(destination))
+            {
+                return; // user cancelled
+            }
+
+            var confirm = context.API.Dialogs.ShowMessage(
+                $"Restore snapshot {SelectedSnapshot.ShortId} to {destination}? This may overwrite existing files.",
+                "Restore Snapshot",
+                System.Windows.MessageBoxButton.YesNo,
+                System.Windows.MessageBoxImage.Warning);
+
+            if (confirm != System.Windows.MessageBoxResult.Yes)
+            {
+                return;
+            }
+
+            GlobalProgressOptions globalProgressOptions = new GlobalProgressOptions(
+                $"Restoring snapshot {SelectedSnapshot.ShortId}...",
+                true
+            );
+            globalProgressOptions.IsIndeterminate = true;
+
+            context.API.Dialogs.ActivateGlobalProgress(a =>
+            {
+                try
+                {
+                    var result = ResticCommand.RestoreSnapshot(context, SelectedSnapshot.Id, destination);
+                    if (result.ExitCode == 0)
+                    {
+                        context.API.Dialogs.ShowMessage($"Snapshot {SelectedSnapshot.ShortId} restored successfully.", "Restore Complete");
+                    }
+                    else
+                    {
+                        logger.Error($"Failed to restore snapshot: {result.StdErr}");
+                        context.API.Dialogs.ShowErrorMessage($"Failed to restore snapshot: {result.StdErr}");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    logger.Error(ex, "Error restoring snapshot");
+                    context.API.Dialogs.ShowErrorMessage($"Error restoring snapshot: {ex.Message}");
+                }
+            }, globalProgressOptions);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

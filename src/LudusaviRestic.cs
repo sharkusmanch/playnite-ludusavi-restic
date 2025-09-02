@@ -187,6 +187,65 @@ namespace LudusaviRestic
             {
                 new GameMenuItem
                 {
+                    Description = GetLocalizedString("LOCLuduRestRestoreLatestSnapshot", "LOCLuduRestRestoreLatestSnapshot"),
+                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
+                    Action = args => {
+                        if (!CheckConfiguration() || args.Games.Count == 0) return;
+                        var game = args.Games.First();
+                        var context = new BackupContext(this.PlayniteApi, this.settings);
+                        // List snapshots and pick latest for this game
+                        var listResult = ResticCommand.ListSnapshots(context);
+                        if (listResult.ExitCode != 0)
+                        {
+                            PlayniteApi.Dialogs.ShowErrorMessage($"Failed to list snapshots: {listResult.StdErr}");
+                            return;
+                        }
+                        try
+                        {
+                            var snapshots = Newtonsoft.Json.Linq.JArray.Parse(listResult.StdOut);
+                            var gameSnapshots = snapshots
+                                .Where(s => (s["tags"] != null && s["tags"].Any(t => string.Equals(t.ToString(), game.Name, StringComparison.OrdinalIgnoreCase))))
+                                .OrderByDescending(s => DateTime.Parse(s["time"].ToString()))
+                                .ToList();
+                            if (gameSnapshots.Count == 0)
+                            {
+                                PlayniteApi.Dialogs.ShowMessage(GetLocalizedString("LOCLuduRestNoSnapshotsForGame", "LOCLuduRestNoSnapshotsForGame"));
+                                return;
+                            }
+                            var latest = gameSnapshots.First();
+                            var shortId = latest["short_id"]?.ToString() ?? latest["id"]?.ToString();
+                            var fullId = latest["id"]?.ToString();
+                            var destination = PlayniteApi.Dialogs.SelectFolder();
+                            if (string.IsNullOrEmpty(destination)) return;
+                            var confirm = PlayniteApi.Dialogs.ShowMessage(
+                                string.Format(GetLocalizedString("LOCLuduRestConfirmRestoreLatest", "LOCLuduRestConfirmRestoreLatest"), shortId, game.Name, destination),
+                                GetLocalizedString("LOCLuduRestRestoreSnapshotTitle", "LOCLuduRestRestoreSnapshotTitle"),
+                                MessageBoxButton.YesNo,
+                                MessageBoxImage.Warning);
+                            if (confirm != MessageBoxResult.Yes) return;
+                            var progressOptions = new GlobalProgressOptions(GetLocalizedString("LOCLuduRestRestoringSnapshotProgress", "LOCLuduRestRestoringSnapshotProgress"), true) { IsIndeterminate = true };
+                            PlayniteApi.Dialogs.ActivateGlobalProgress(a =>
+                            {
+                                var restoreResult = ResticCommand.RestoreSnapshot(context, fullId, destination);
+                                if (restoreResult.ExitCode == 0)
+                                {
+                                    PlayniteApi.Dialogs.ShowMessage(GetLocalizedString("LOCLuduRestRestoreCompleted", "LOCLuduRestRestoreCompleted"));
+                                }
+                                else
+                                {
+                                    PlayniteApi.Dialogs.ShowErrorMessage($"Failed to restore snapshot: {restoreResult.StdErr}");
+                                }
+                            }, progressOptions);
+                        }
+                        catch (Exception ex)
+                        {
+                            logger.Error(ex, "Error parsing snapshots for restore");
+                            PlayniteApi.Dialogs.ShowErrorMessage($"Error preparing restore: {ex.Message}");
+                        }
+                    }
+                },
+                new GameMenuItem
+                {
                     Description = GetLocalizedString("LOCLuduRestBackupGMCreate", "LOCLuduRestBackupGMCreate"),
                     MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
 

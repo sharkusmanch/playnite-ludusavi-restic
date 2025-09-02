@@ -15,6 +15,7 @@
         <!-- Toolbar -->
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
             <Button Content="Refresh" Command="{Binding RefreshCommand}" Margin="0,0,10,0" Padding="10,5"/>
+            <Button Content="Restore Selected" Command="{Binding RestoreSnapshotCommand}" Margin="0,0,10,0" Padding="10,5"/>
             <Button Content="Delete Selected" Command="{Binding DeleteSnapshotCommand}" Margin="0,0,10,0" Padding="10,5"/>
             <Label Content="Filter by Game:" VerticalAlignment="Center" Margin="10,0,5,0"/>
             <ComboBox ItemsSource="{Binding GameFilters}"
