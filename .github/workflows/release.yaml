@@ -46,7 +46,7 @@ jobs:
           cmd: yq '.Version' extension.yaml
 
       - name: Pull artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: artifacts
 
