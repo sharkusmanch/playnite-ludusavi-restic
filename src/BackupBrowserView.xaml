@@ -32,7 +32,11 @@
                   GridLinesVisibility="Horizontal"
                   HeadersVisibility="Column"
                   SelectionMode="Single"
-                  Margin="10">
+                  Margin="10"
+                  Background="{DynamicResource ControlBackgroundBrush}"
+                  Foreground="{DynamicResource TextBrush}"
+                  BorderBrush="{DynamicResource ControlBorderBrush}"
+                  AlternationCount="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Snapshot ID" Binding="{Binding ShortId}" Width="80"/>
                 <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat='yyyy-MM-dd HH:mm:ss'}" Width="150"/>
@@ -41,6 +45,18 @@
             <DataGrid.RowStyle>
                 <Style TargetType="DataGridRow">
                     <Setter Property="Height" Value="25"/>
+                    <Setter Property="Background" Value="{DynamicResource GridItemBackgroundBrush}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource GridItemBorderBrush}"/>
+                    <Style.Triggers>
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                            <Setter Property="Background" Value="{DynamicResource GridItemAlternateBackgroundBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource SelectionBackgroundBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource SelectionTextBrush}"/>
+                        </Trigger>
+                    </Style.Triggers>
                 </Style>
             </DataGrid.RowStyle>
         </DataGrid>

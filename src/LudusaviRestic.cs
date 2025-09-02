@@ -1,4 +1,4 @@
-﻿using Playnite.SDK;
+using Playnite.SDK;
 using Playnite.SDK.Events;
 using Playnite.SDK.Plugins;
 using Playnite.SDK.Models;
@@ -9,6 +9,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
 using System.Threading;
+using System.IO;
+using System.Reflection;
 
 namespace LudusaviRestic
 {
@@ -30,36 +32,87 @@ namespace LudusaviRestic
                 HasSettings = true
             };
             this.manager = new ResticBackupManager(this.settings, this.PlayniteApi);
+
+            // Initialize localization
+            InitializeLocalization();
+        }
+
+        private void InitializeLocalization()
+        {
+            try
+            {
+                // Try to load the en_US localization file directly
+                var pluginDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                var localizationFile = Path.Combine(pluginDir, "Localization", "en_US.xaml");
+
+                logger.Debug($"Looking for localization file at: {localizationFile}");
+
+                if (File.Exists(localizationFile))
+                {
+                    logger.Debug("Localization file exists, attempting to load...");
+                    // The file exists, Playnite should be able to load it automatically
+                }
+                else
+                {
+                    logger.Error($"Localization file not found at: {localizationFile}");
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Error checking localization file");
+            }
+        }
+
+        private string GetLocalizedString(string key, string fallback = null)
+        {
+            try
+            {
+                var result = PlayniteApi.Resources.GetString(key);
+                if (string.IsNullOrEmpty(result) || result.StartsWith("<") && result.EndsWith(">"))
+                {
+                    // If the key isn't found or shows as <KEY>, return fallback
+                    return fallback ?? key;
+                }
+                return result;
+            }
+            catch
+            {
+                return fallback ?? key;
+            }
         }
 
         private void LocalizeTags()
         {
             if (PlayniteApi.Database.Tags.Get(this.settings.ExcludeTagID) is Tag excludeTag)
             {
-                excludeTag.Name = ResourceProvider.GetString("LOCLuduRestBackupExcludeTag");
+                excludeTag.Name = GetLocalizedString("LOCLuduRestBackupExcludeTag", "LOCLuduRestBackupExcludeTag");
             }
             if (PlayniteApi.Database.Tags.Get(this.settings.IncludeTagID) is Tag includeTag)
             {
-                includeTag.Name = ResourceProvider.GetString("LOCLuduRestBackupIncludeTag");
+                includeTag.Name = GetLocalizedString("LOCLuduRestBackupIncludeTag", "LOCLuduRestBackupIncludeTag");
             }
         }
 
         public override IEnumerable<MainMenuItem> GetMainMenuItems(GetMainMenuItemsArgs menuArgs)
         {
+            // Debug: Check if we can access localization
+            logger.Debug($"Trying to get LOCLuduRestBackupGM: '{GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM")}'");
+            logger.Debug($"Trying to get LOCLuduRestSetupWizard: '{GetLocalizedString("LOCLuduRestSetupWizard", "LOCLuduRestSetupWizard")}'");
+
             return new List<MainMenuItem>
             {
                 new MainMenuItem
                 {
-                    Description = "Setup wizard",
-                    MenuSection = "@" + ResourceProvider.GetString("LOCLuduRestBackupGM") + "|Setup",
+                    Description = GetLocalizedString("LOCLuduRestSetupWizard", "Setup wizard"),
+                    MenuSection = "@" + GetLocalizedString("LOCLuduRestBackupGM", "LudusaviRestic") + "|" + GetLocalizedString("LOCLuduRestSetupSection", "Setup"),
                     Action = args => {
                         RunSetupWizard();
                     }
                 },
                 new MainMenuItem
                 {
-                    Description = "Backup all games",
-                    MenuSection = "@" + ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                    Description = GetLocalizedString("LOCLuduRestBackupAllGames", "Backup all games"),
+                    MenuSection = "@" + GetLocalizedString("LOCLuduRestBackupGM", "LudusaviRestic"),
                     Action = args => {
                         if (CheckConfiguration())
                         {
@@ -69,8 +122,8 @@ namespace LudusaviRestic
                 },
                 new MainMenuItem
                 {
-                    Description = "Browse backup snapshots",
-                    MenuSection = "@" + ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                    Description = GetLocalizedString("LOCLuduRestBrowseBackupSnapshots", "LOCLuduRestBrowseBackupSnapshots"),
+                    MenuSection = "@" + GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
                     Action = args => {
                         if (CheckConfiguration())
                         {
@@ -83,8 +136,8 @@ namespace LudusaviRestic
                 },
                 new MainMenuItem
                 {
-                    Description = "All (check + prune)",
-                    MenuSection = "@" + ResourceProvider.GetString("LOCLuduRestBackupGM") + "|Maintenance",
+                    Description = GetLocalizedString("LOCLuduRestMaintenanceAll", "LOCLuduRestMaintenanceAll"),
+                    MenuSection = "@" + GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM") + "|" + GetLocalizedString("LOCLuduRestMaintenanceSection", "LOCLuduRestMaintenanceSection"),
                     Action = args => {
                         if (CheckConfiguration())
                         {
@@ -94,8 +147,8 @@ namespace LudusaviRestic
                 },
                 new MainMenuItem
                 {
-                    Description = "Verify",
-                    MenuSection = "@" + ResourceProvider.GetString("LOCLuduRestBackupGM") + "|Maintenance",
+                    Description = GetLocalizedString("LOCLuduRestMaintenanceVerify", "LOCLuduRestMaintenanceVerify"),
+                    MenuSection = "@" + GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM") + "|" + GetLocalizedString("LOCLuduRestMaintenanceSection", "LOCLuduRestMaintenanceSection"),
                     Action = args => {
                         if (CheckConfiguration())
                         {
@@ -105,8 +158,8 @@ namespace LudusaviRestic
                 },
                 new MainMenuItem
                 {
-                    Description = "Delete old snapshots",
-                    MenuSection = "@" + ResourceProvider.GetString("LOCLuduRestBackupGM") + "|Maintenance",
+                    Description = GetLocalizedString("LOCLuduRestMaintenanceDeleteOld", "LOCLuduRestMaintenanceDeleteOld"),
+                    MenuSection = "@" + GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM") + "|" + GetLocalizedString("LOCLuduRestMaintenanceSection", "LOCLuduRestMaintenanceSection"),
                     Action = args => {
                         if (CheckConfiguration())
                         {
@@ -116,8 +169,8 @@ namespace LudusaviRestic
                 },
                 new MainMenuItem
                 {
-                    Description = "Prune unused data",
-                    MenuSection = "@" + ResourceProvider.GetString("LOCLuduRestBackupGM") + "|Maintenance",
+                    Description = GetLocalizedString("LOCLuduRestMaintenancePrune", "LOCLuduRestMaintenancePrune"),
+                    MenuSection = "@" + GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM") + "|" + GetLocalizedString("LOCLuduRestMaintenanceSection", "LOCLuduRestMaintenanceSection"),
                     Action = args => {
                         if (CheckConfiguration())
                         {
@@ -134,8 +187,8 @@ namespace LudusaviRestic
             {
                 new GameMenuItem
                 {
-                    Description = ResourceProvider.GetString("LOCLuduRestBackupGMCreate"),
-                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                    Description = GetLocalizedString("LOCLuduRestBackupGMCreate", "LOCLuduRestBackupGMCreate"),
+                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
 
                     Action = args => {
                         foreach (var game in args.Games)
@@ -146,8 +199,8 @@ namespace LudusaviRestic
                 },
                 new GameMenuItem
                 {
-                    Description = "View backup snapshots",
-                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                    Description = GetLocalizedString("LOCLuduRestViewBackupSnapshots", "LOCLuduRestViewBackupSnapshots"),
+                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
 
                     Action = args => {
                         if (CheckConfiguration() && args.Games.Count > 0)
@@ -162,8 +215,8 @@ namespace LudusaviRestic
                 },
                 new GameMenuItem
                 {
-                    Description = ResourceProvider.GetString("LOCLuduRestBackupGMIncludeAdd"),
-                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                    Description = GetLocalizedString("LOCLuduRestBackupGMIncludeAdd", "LOCLuduRestBackupGMIncludeAdd"),
+                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
 
                     Action = args => {
                         foreach (var game in args.Games)
@@ -175,8 +228,8 @@ namespace LudusaviRestic
                 },
                 new GameMenuItem
                 {
-                    Description = ResourceProvider.GetString("LOCLuduRestBackupGMIncludeRemove"),
-                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                    Description = GetLocalizedString("LOCLuduRestBackupGMIncludeRemove", "LOCLuduRestBackupGMIncludeRemove"),
+                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
 
                     Action = args => {
                         foreach (var game in args.Games)
@@ -188,8 +241,8 @@ namespace LudusaviRestic
                 },
                 new GameMenuItem
                 {
-                    Description = ResourceProvider.GetString("LOCLuduRestBackupGMExcludeAdd"),
-                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                    Description = GetLocalizedString("LOCLuduRestBackupGMExcludeAdd", "LOCLuduRestBackupGMExcludeAdd"),
+                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
 
                     Action = args => {
                         foreach (var game in args.Games)
@@ -201,8 +254,8 @@ namespace LudusaviRestic
                 },
                 new GameMenuItem
                 {
-                    Description = ResourceProvider.GetString("LOCLuduRestBackupGMExcludeRemove"),
-                    MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                    Description = GetLocalizedString("LOCLuduRestBackupGMExcludeRemove", "LOCLuduRestBackupGMExcludeRemove"),
+                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
 
                     Action = args => {
                         foreach (var game in args.Games)
@@ -248,8 +301,8 @@ namespace LudusaviRestic
 
             // Ask if user wants to do a dry run first
             var dryRunResult = PlayniteApi.Dialogs.ShowMessage(
-                "Would you like to perform a dry run first to see what would be pruned before actually deleting data?",
-                "Full Maintenance",
+                GetLocalizedString("LOCLuduRestMaintenanceDryRunPrompt", "LOCLuduRestMaintenanceDryRunPrompt"),
+                GetLocalizedString("LOCLuduRestFullMaintenance", "LOCLuduRestFullMaintenance"),
                 System.Windows.MessageBoxButton.YesNoCancel,
                 System.Windows.MessageBoxImage.Question);
 
@@ -259,7 +312,7 @@ namespace LudusaviRestic
             bool performDryRun = dryRunResult == System.Windows.MessageBoxResult.Yes;
 
             GlobalProgressOptions globalProgressOptions = new GlobalProgressOptions(
-                "Running full maintenance...",
+                GetLocalizedString("LOCLuduRestProgressRunningMaintenance", "LOCLuduRestProgressRunningMaintenance"),
                 true
             );
             globalProgressOptions.IsIndeterminate = true;
@@ -268,7 +321,7 @@ namespace LudusaviRestic
             {
                 try
                 {
-                    activateGlobalProgress.Text = "Checking repository integrity...";
+                    activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestCheckingRepositoryIntegrity", "LOCLuduRestCheckingRepositoryIntegrity");
                     var checkResult = ResticCommand.Check(context);
 
                     if (checkResult.ExitCode != 0)
@@ -281,7 +334,7 @@ namespace LudusaviRestic
                     // Perform dry run if requested
                     if (performDryRun)
                     {
-                        activateGlobalProgress.Text = "Running prune dry run...";
+                        activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestRunningPruneDryRun", "LOCLuduRestRunningPruneDryRun");
                         var dryRunPruneResult = ResticCommand.PruneDryRun(context);
                         var parsedDryRun = PruneResultParser.ParsePruneOutput(dryRunPruneResult, true);
 
@@ -294,8 +347,8 @@ namespace LudusaviRestic
 
                             // Ask if user wants to proceed
                             var proceedResult = PlayniteApi.Dialogs.ShowMessage(
-                                $"Dry run completed. {parsedDryRun.SnapshotsDeleted} snapshots would be pruned. Do you want to proceed with the actual pruning?",
-                                "Proceed with Pruning?",
+                                string.Format(GetLocalizedString("LOCLuduRestDryRunCompletedMessage", "LOCLuduRestDryRunCompletedMessage"), parsedDryRun.SnapshotsDeleted),
+                                GetLocalizedString("LOCLuduRestProceedWithPruning", "LOCLuduRestProceedWithPruning"),
                                 System.Windows.MessageBoxButton.YesNo,
                                 System.Windows.MessageBoxImage.Question);
 
@@ -305,7 +358,7 @@ namespace LudusaviRestic
                     }
 
                     // Perform actual prune
-                    activateGlobalProgress.Text = "Pruning unused data...";
+                    activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestPruningUnusedData", "LOCLuduRestPruningUnusedData");
                     var pruneResult = ResticCommand.Prune(context);
                     var parsedResult = PruneResultParser.ParsePruneOutput(pruneResult, false);
 
@@ -319,7 +372,7 @@ namespace LudusaviRestic
                             resultsWindow.ShowDialog();
                         });
 
-                        PlayniteApi.Dialogs.ShowMessage("Full maintenance completed successfully.", "Maintenance Complete");
+                        PlayniteApi.Dialogs.ShowMessage(GetLocalizedString("LOCLuduRestMaintenanceCompletedSuccessfully", "LOCLuduRestMaintenanceCompletedSuccessfully"), GetLocalizedString("LOCLuduRestMaintenanceComplete", "LOCLuduRestMaintenanceComplete"));
                     }
                     else
                     {
@@ -340,7 +393,7 @@ namespace LudusaviRestic
             var context = new BackupContext(this.PlayniteApi, this.settings);
 
             GlobalProgressOptions globalProgressOptions = new GlobalProgressOptions(
-                "Verifying repository...",
+                GetLocalizedString("LOCLuduRestProgressVerifyingRepository", "LOCLuduRestProgressVerifyingRepository"),
                 true
             );
             globalProgressOptions.IsIndeterminate = true;
@@ -349,12 +402,12 @@ namespace LudusaviRestic
             {
                 try
                 {
-                    activateGlobalProgress.Text = "Checking repository integrity with data verification...";
+                    activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestCheckingRepositoryIntegrityWithData", "LOCLuduRestCheckingRepositoryIntegrityWithData");
                     var checkResult = ResticCommand.CheckWithData(context);
 
                     if (checkResult.ExitCode == 0)
                     {
-                        PlayniteApi.Dialogs.ShowMessage("Repository verification completed successfully.", "Verification Complete");
+                        PlayniteApi.Dialogs.ShowMessage(GetLocalizedString("LOCLuduRestVerificationCompletedSuccessfully", "LOCLuduRestVerificationCompletedSuccessfully"), GetLocalizedString("LOCLuduRestVerificationComplete", "LOCLuduRestVerificationComplete"));
                     }
                     else
                     {
@@ -376,22 +429,18 @@ namespace LudusaviRestic
 
             if (!this.settings.EnableRetentionPolicy)
             {
-                PlayniteApi.Dialogs.ShowMessage("Retention policy is disabled. Please enable it in the extension settings to use this feature.", "Retention Policy Disabled");
+                PlayniteApi.Dialogs.ShowMessage(GetLocalizedString("LOCLuduRestRetentionPolicyDisabledMessage", "LOCLuduRestRetentionPolicyDisabledMessage"), GetLocalizedString("LOCLuduRestRetentionPolicyDisabled", "LOCLuduRestRetentionPolicyDisabled"));
                 return;
             }
 
             // Show confirmation dialog with retention policy details and ask about dry run
-            var message = $"This will delete old snapshots according to your retention policy:\n\n" +
-                         $"• Keep last {this.settings.KeepLast} snapshots\n" +
-                         $"• Keep daily snapshots for {this.settings.KeepDaily} days\n" +
-                         $"• Keep weekly snapshots for {this.settings.KeepWeekly} weeks\n" +
-                         $"• Keep monthly snapshots for {this.settings.KeepMonthly} months\n" +
-                         $"• Keep yearly snapshots for {this.settings.KeepYearly} years\n\n" +
-                         "Would you like to perform a dry run first to see what would be deleted?";
+            var message = string.Format(GetLocalizedString("LOCLuduRestRetentionPolicyDetails", "LOCLuduRestRetentionPolicyDetails"),
+                         this.settings.KeepLast, this.settings.KeepDaily, this.settings.KeepWeekly,
+                         this.settings.KeepMonthly, this.settings.KeepYearly);
 
             var dryRunResult = PlayniteApi.Dialogs.ShowMessage(
                 message,
-                "Apply Retention Policy",
+                GetLocalizedString("LOCLuduRestRetentionPolicy", "LOCLuduRestRetentionPolicy"),
                 System.Windows.MessageBoxButton.YesNoCancel,
                 System.Windows.MessageBoxImage.Question);
 
@@ -401,7 +450,7 @@ namespace LudusaviRestic
             bool performDryRun = dryRunResult == System.Windows.MessageBoxResult.Yes;
 
             GlobalProgressOptions globalProgressOptions = new GlobalProgressOptions(
-                "Applying retention policy...",
+                GetLocalizedString("LOCLuduRestApplyingRetentionPolicy", "LOCLuduRestApplyingRetentionPolicy"),
                 true
             );
             globalProgressOptions.IsIndeterminate = true;
@@ -413,7 +462,7 @@ namespace LudusaviRestic
                     // Perform dry run if requested
                     if (performDryRun)
                     {
-                        activateGlobalProgress.Text = "Running retention policy preview...";
+                        activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestRunningRetentionPreview", "LOCLuduRestRunningRetentionPreview");
                         var dryRunForgetResult = ResticCommand.ForgetWithRetentionDryRun(context);
                         var parsedDryRun = PruneResultParser.ParseForgetOutput(dryRunForgetResult, true);
 
@@ -426,8 +475,8 @@ namespace LudusaviRestic
 
                             // Ask if user wants to proceed
                             var proceedResult = PlayniteApi.Dialogs.ShowMessage(
-                                $"Preview completed. {parsedDryRun.SnapshotsDeleted} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?",
-                                "Proceed with Deletion?",
+                                string.Format(GetLocalizedString("LOCLuduRestRetentionPreviewCompleted", "LOCLuduRestRetentionPreviewCompleted"), parsedDryRun.SnapshotsDeleted),
+                                GetLocalizedString("LOCLuduRestProceedWithDeletion", "LOCLuduRestProceedWithDeletion"),
                                 System.Windows.MessageBoxButton.YesNo,
                                 System.Windows.MessageBoxImage.Question);
 
@@ -437,7 +486,7 @@ namespace LudusaviRestic
                     }
 
                     // Apply actual retention policy
-                    activateGlobalProgress.Text = "Applying retention policy and pruning...";
+                    activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestApplyingRetentionAndPruning", "LOCLuduRestApplyingRetentionAndPruning");
                     var retentionResult = ResticCommand.ForgetWithRetention(context);
                     var parsedResult = PruneResultParser.ParseForgetOutput(retentionResult, false);
 
@@ -451,7 +500,7 @@ namespace LudusaviRestic
                             resultsWindow.ShowDialog();
                         });
 
-                        PlayniteApi.Dialogs.ShowMessage("Retention policy applied successfully. Old snapshots have been deleted.", "Retention Policy Complete");
+                        PlayniteApi.Dialogs.ShowMessage(GetLocalizedString("LOCLuduRestRetentionPolicyCompletedSuccessfully", "LOCLuduRestRetentionPolicyCompletedSuccessfully"), GetLocalizedString("LOCLuduRestRetentionPolicyComplete", "LOCLuduRestRetentionPolicyComplete"));
                     }
                     else
                     {
@@ -473,9 +522,8 @@ namespace LudusaviRestic
 
             // Ask if user wants to do a dry run first
             var dryRunResult = PlayniteApi.Dialogs.ShowMessage(
-                "Pruning will remove unused data blobs from the repository. This operation is irreversible.\n\n" +
-                "Would you like to perform a dry run first to see what would be removed before actually deleting data?",
-                "Prune Repository",
+                GetLocalizedString("LOCLuduRestPruneWarningMessage", "LOCLuduRestPruneWarningMessage"),
+                GetLocalizedString("LOCLuduRestPruneRepository", "LOCLuduRestPruneRepository"),
                 System.Windows.MessageBoxButton.YesNoCancel,
                 System.Windows.MessageBoxImage.Question);
 
@@ -497,7 +545,7 @@ namespace LudusaviRestic
                     // Perform dry run if requested
                     if (performDryRun)
                     {
-                        activateGlobalProgress.Text = "Running prune dry run...";
+                        activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestRunningPruneDryRun", "LOCLuduRestRunningPruneDryRun");
                         var dryRunPruneResult = ResticCommand.PruneDryRun(context);
                         var parsedDryRun = PruneResultParser.ParsePruneOutput(dryRunPruneResult, true);
 
@@ -510,8 +558,8 @@ namespace LudusaviRestic
 
                             // Ask if user wants to proceed
                             var proceedResult = PlayniteApi.Dialogs.ShowMessage(
-                                $"Dry run completed. This operation would remove unused data from the repository. Do you want to proceed with the actual pruning?",
-                                "Proceed with Pruning?",
+                                GetLocalizedString("LOCLuduRestPruneDryRunCompleted", "LOCLuduRestPruneDryRunCompleted"),
+                                GetLocalizedString("LOCLuduRestProceedWithPruning", "LOCLuduRestProceedWithPruning"),
                                 System.Windows.MessageBoxButton.YesNo,
                                 System.Windows.MessageBoxImage.Question);
 
@@ -521,7 +569,7 @@ namespace LudusaviRestic
                     }
 
                     // Perform actual prune
-                    activateGlobalProgress.Text = "Pruning unused data...";
+                    activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestPruningUnusedData", "LOCLuduRestPruningUnusedData");
                     var pruneResult = ResticCommand.Prune(context);
                     var parsedResult = PruneResultParser.ParsePruneOutput(pruneResult, false);
 
@@ -535,7 +583,7 @@ namespace LudusaviRestic
                             resultsWindow.ShowDialog();
                         });
 
-                        PlayniteApi.Dialogs.ShowMessage("Prune operation completed successfully.", "Prune Complete");
+                        PlayniteApi.Dialogs.ShowMessage(GetLocalizedString("LOCLuduRestPruneCompletedSuccessfully", "LOCLuduRestPruneCompletedSuccessfully"), GetLocalizedString("LOCLuduRestPruneComplete", "LOCLuduRestPruneComplete"));
                     }
                     else
                     {
@@ -564,8 +612,8 @@ namespace LudusaviRestic
                     new Action(() =>
                     {
                         var result = PlayniteApi.Dialogs.ShowMessage(
-                            "Welcome to Ludusavi Restic!\n\nThis appears to be your first time using the extension or your configuration is incomplete. Would you like to run the setup wizard to configure your backup repository?",
-                            "Welcome - Setup Required",
+                            GetLocalizedString("LOCLuduRestWelcomeMessage", "LOCLuduRestWelcomeMessage"),
+                            GetLocalizedString("LOCLuduRestWelcomeSetupRequired", "LOCLuduRestWelcomeSetupRequired"),
                             MessageBoxButton.YesNo,
                             MessageBoxImage.Information);
 
@@ -610,8 +658,8 @@ namespace LudusaviRestic
 
             if (this.settings.BackupWhenGameStopped)
             {
-                string caption = ResourceProvider.GetString("LOCLuduRestGameStoppedPromptCaption");
-                string message = ResourceProvider.GetString("LOCLuduRestGameStoppedPromptMessage");
+                string caption = GetLocalizedString("LOCLuduRestGameStoppedPromptCaption", "LOCLuduRestGameStoppedPromptCaption");
+                string message = GetLocalizedString("LOCLuduRestGameStoppedPromptMessage", "LOCLuduRestGameStoppedPromptMessage");
 
 
                 if (this.settings.PromptForGameStoppedTag)
@@ -654,8 +702,8 @@ namespace LudusaviRestic
                 string.IsNullOrWhiteSpace(settings.ResticPassword))
             {
                 var result = PlayniteApi.Dialogs.ShowMessage(
-                    "Ludusavi Restic is not configured yet. Would you like to run the setup wizard?",
-                    "Configuration Required",
+                    GetLocalizedString("LOCLuduRestNotConfiguredMessage", "LOCLuduRestNotConfiguredMessage"),
+                    GetLocalizedString("LOCLuduRestConfigurationRequired", "LOCLuduRestConfigurationRequired"),
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Question);
 
@@ -670,8 +718,8 @@ namespace LudusaviRestic
             if (!ResticUtility.IsValidResticExecutable(settings.ResticExecutablePath))
             {
                 var result = PlayniteApi.Dialogs.ShowMessage(
-                    "The configured restic executable is not valid or accessible. Would you like to run the setup wizard to fix this?",
-                    "Invalid Configuration",
+                    GetLocalizedString("LOCLuduRestInvalidResticMessage", "LOCLuduRestInvalidResticMessage"),
+                    GetLocalizedString("LOCLuduRestInvalidConfiguration", "LOCLuduRestInvalidConfiguration"),
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Warning);
 
@@ -723,8 +771,8 @@ namespace LudusaviRestic
                     settings.Save();
 
                     PlayniteApi.Dialogs.ShowMessage(
-                        "Setup completed successfully! You can now use all backup features.",
-                        "Setup Complete",
+                        GetLocalizedString("LOCLuduRestSetupCompletedMessage", "LOCLuduRestSetupCompletedMessage"),
+                        GetLocalizedString("LOCLuduRestSetupComplete", "LOCLuduRestSetupComplete"),
                         MessageBoxButton.OK,
                         MessageBoxImage.Information);
                 }

@@ -34,31 +34,31 @@
             </Grid.ColumnDefinitions>
 
             <!-- Stats Cards -->
-            <Border Grid.Row="0" Grid.Column="0" Background="#F0F0F0" Padding="10" Margin="0,0,5,0" CornerRadius="5">
+            <Border Grid.Row="0" Grid.Column="0" Background="{DynamicResource PanelSeparatorBrush}" Padding="10" Margin="0,0,5,0" CornerRadius="5">
                 <StackPanel>
-                    <TextBlock Name="SnapshotsDeletedText" Text="0" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Snapshots Deleted" FontSize="12" HorizontalAlignment="Center"/>
+                    <TextBlock Name="SnapshotsDeletedText" Text="0" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Foreground="{DynamicResource TextBrush}"/>
+                    <TextBlock Text="Snapshots Deleted" FontSize="12" HorizontalAlignment="Center" Foreground="{DynamicResource TextBrush}"/>
                 </StackPanel>
             </Border>
 
-            <Border Grid.Row="0" Grid.Column="1" Background="#F0F0F0" Padding="10" Margin="5,0,5,0" CornerRadius="5">
+            <Border Grid.Row="0" Grid.Column="1" Background="{DynamicResource PanelSeparatorBrush}" Padding="10" Margin="5,0,5,0" CornerRadius="5">
                 <StackPanel>
-                    <TextBlock Name="GamesAffectedText" Text="0" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Games Affected" FontSize="12" HorizontalAlignment="Center"/>
+                    <TextBlock Name="GamesAffectedText" Text="0" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Foreground="{DynamicResource TextBrush}"/>
+                    <TextBlock Text="Games Affected" FontSize="12" HorizontalAlignment="Center" Foreground="{DynamicResource TextBrush}"/>
                 </StackPanel>
             </Border>
 
-            <Border Grid.Row="0" Grid.Column="2" Background="#F0F0F0" Padding="10" Margin="5,0,5,0" CornerRadius="5">
+            <Border Grid.Row="0" Grid.Column="2" Background="{DynamicResource PanelSeparatorBrush}" Padding="10" Margin="5,0,5,0" CornerRadius="5">
                 <StackPanel>
-                    <TextBlock Name="DataDeletedText" Text="0 B" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Data Deleted" FontSize="12" HorizontalAlignment="Center"/>
+                    <TextBlock Name="DataDeletedText" Text="0 B" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Foreground="{DynamicResource TextBrush}"/>
+                    <TextBlock Text="Data Deleted" FontSize="12" HorizontalAlignment="Center" Foreground="{DynamicResource TextBrush}"/>
                 </StackPanel>
             </Border>
 
-            <Border Grid.Row="0" Grid.Column="3" Background="#F0F0F0" Padding="10" Margin="5,0,0,0" CornerRadius="5">
+            <Border Grid.Row="0" Grid.Column="3" Background="{DynamicResource PanelSeparatorBrush}" Padding="10" Margin="5,0,0,0" CornerRadius="5">
                 <StackPanel>
-                    <TextBlock Name="StatusText" Text="Success" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center"/>
-                    <TextBlock Text="Status" FontSize="12" HorizontalAlignment="Center"/>
+                    <TextBlock Name="StatusText" Text="Success" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Foreground="{DynamicResource TextBrush}"/>
+                    <TextBlock Text="Status" FontSize="12" HorizontalAlignment="Center" Foreground="{DynamicResource TextBrush}"/>
                 </StackPanel>
             </Border>
         </Grid>
@@ -83,13 +83,32 @@
                     <!-- Snapshots List -->
                     <DataGrid Grid.Row="1" Name="SnapshotsDataGrid" AutoGenerateColumns="False"
                               IsReadOnly="True" CanUserSortColumns="True" GridLinesVisibility="Horizontal"
-                              AlternatingRowBackground="#F8F8F8">
+                              Background="{DynamicResource ControlBackgroundBrush}"
+                              Foreground="{DynamicResource TextBrush}"
+                              BorderBrush="{DynamicResource ControlBorderBrush}"
+                              AlternationCount="2">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Snapshot ID" Binding="{Binding ShortId}" Width="100"/>
                             <DataGridTextColumn Header="Game" Binding="{Binding GameName}" Width="200"/>
                             <DataGridTextColumn Header="Date/Time" Binding="{Binding Time, StringFormat='yyyy-MM-dd HH:mm'}" Width="130"/>
                             <DataGridTextColumn Header="Tags" Binding="{Binding TagsString}" Width="*"/>
                         </DataGrid.Columns>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Setter Property="Background" Value="{DynamicResource GridItemBackgroundBrush}"/>
+                                <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource GridItemBorderBrush}"/>
+                                <Style.Triggers>
+                                    <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                                        <Setter Property="Background" Value="{DynamicResource GridItemAlternateBackgroundBrush}"/>
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="{DynamicResource SelectionBackgroundBrush}"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource SelectionTextBrush}"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
                     </DataGrid>
                 </Grid>
             </TabItem>
@@ -98,11 +117,30 @@
             <TabItem Header="Games Summary">
                 <DataGrid Name="GamesSummaryDataGrid" AutoGenerateColumns="False"
                           IsReadOnly="True" CanUserSortColumns="True" GridLinesVisibility="Horizontal"
-                          AlternatingRowBackground="#F8F8F8">
+                          Background="{DynamicResource ControlBackgroundBrush}"
+                          Foreground="{DynamicResource TextBrush}"
+                          BorderBrush="{DynamicResource ControlBorderBrush}"
+                          AlternationCount="2">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Game Name" Binding="{Binding Key}" Width="*"/>
                         <DataGridTextColumn Header="Snapshots Deleted" Binding="{Binding Value}" Width="150"/>
                     </DataGrid.Columns>
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Background" Value="{DynamicResource GridItemBackgroundBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource GridItemBorderBrush}"/>
+                            <Style.Triggers>
+                                <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                                    <Setter Property="Background" Value="{DynamicResource GridItemAlternateBackgroundBrush}"/>
+                                </Trigger>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="{DynamicResource SelectionBackgroundBrush}"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource SelectionTextBrush}"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.RowStyle>
                 </DataGrid>
             </TabItem>
 
@@ -110,11 +148,30 @@
             <TabItem Header="Tags Summary">
                 <DataGrid Name="TagsSummaryDataGrid" AutoGenerateColumns="False"
                           IsReadOnly="True" CanUserSortColumns="True" GridLinesVisibility="Horizontal"
-                          AlternatingRowBackground="#F8F8F8">
+                          Background="{DynamicResource ControlBackgroundBrush}"
+                          Foreground="{DynamicResource TextBrush}"
+                          BorderBrush="{DynamicResource ControlBorderBrush}"
+                          AlternationCount="2">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Tag" Binding="{Binding Key}" Width="*"/>
                         <DataGridTextColumn Header="Occurrences" Binding="{Binding Value}" Width="150"/>
                     </DataGrid.Columns>
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Background" Value="{DynamicResource GridItemBackgroundBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource GridItemBorderBrush}"/>
+                            <Style.Triggers>
+                                <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                                    <Setter Property="Background" Value="{DynamicResource GridItemAlternateBackgroundBrush}"/>
+                                </Trigger>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="{DynamicResource SelectionBackgroundBrush}"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource SelectionTextBrush}"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.RowStyle>
                 </DataGrid>
             </TabItem>
 
@@ -123,7 +180,8 @@
                 <ScrollViewer>
                     <TextBox Name="RawOutputTextBox" IsReadOnly="True" TextWrapping="Wrap"
                              VerticalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="11"
-                             Background="#F8F8F8" Padding="10"/>
+                             Background="{DynamicResource ControlBackgroundBrush}"
+                             Foreground="{DynamicResource TextBrush}" Padding="10"/>
                 </ScrollViewer>
             </TabItem>
         </TabControl>

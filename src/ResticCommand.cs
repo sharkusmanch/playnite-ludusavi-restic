@@ -44,12 +44,12 @@ namespace LudusaviRestic
 
         public static CommandResult Prune(BackupContext context)
         {
-            return ResticExecute(context, "prune");
+            return ResticExecute(context, "prune --json");
         }
 
         public static CommandResult PruneDryRun(BackupContext context)
         {
-            return ResticExecute(context, "prune --dry-run");
+            return ResticExecute(context, "prune --json --dry-run");
         }
 
         public static CommandResult ForgetWithRetention(BackupContext context)
@@ -65,7 +65,7 @@ namespace LudusaviRestic
                                $"--keep-weekly {settings.KeepWeekly} " +
                                $"--keep-monthly {settings.KeepMonthly} " +
                                $"--keep-yearly {settings.KeepYearly} " +
-                               "--prune";
+                               "--group-by tags --json --prune";
 
             return ResticExecute(context, retentionArgs);
         }
@@ -84,7 +84,7 @@ namespace LudusaviRestic
                                $"--keep-weekly {settings.KeepWeekly} " +
                                $"--keep-monthly {settings.KeepMonthly} " +
                                $"--keep-yearly {settings.KeepYearly} " +
-                               "--dry-run";
+                               "--group-by tags --json --dry-run";
 
             return ResticExecute(context, retentionArgs);
         }

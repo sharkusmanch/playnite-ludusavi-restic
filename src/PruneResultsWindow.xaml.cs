@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Collections.ObjectModel;
+using Playnite.SDK;
 
 namespace LudusaviRestic
 {
@@ -17,7 +18,27 @@ namespace LudusaviRestic
         {
             InitializeComponent();
             this.pruneResult = result;
+            ApplyPlayniteTheme();
             InitializeData();
+        }
+
+        private void ApplyPlayniteTheme()
+        {
+            // Try to get the current Playnite API instance from the BackupContext
+            // This is a basic approach - in a full implementation, we'd pass the API through
+            try
+            {
+                var app = System.Windows.Application.Current;
+                if (app?.Resources != null)
+                {
+                    // The DynamicResource bindings in XAML should automatically pick up theme changes
+                    // This method serves as a placeholder for any additional theme setup if needed
+                }
+            }
+            catch
+            {
+                // If theme resources aren't available, the DynamicResource bindings should still work
+            }
         }
 
         private void InitializeData()

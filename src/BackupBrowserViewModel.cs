@@ -204,8 +204,8 @@ namespace LudusaviRestic
             if (SelectedSnapshot == null) return;
 
             var result = context.API.Dialogs.ShowMessage(
-                $"Are you sure you want to delete snapshot {SelectedSnapshot.ShortId} from {SelectedSnapshot.Date:yyyy-MM-dd HH:mm}?",
-                "Delete Backup Snapshot",
+                string.Format(ResourceProvider.GetString("LOCLuduRestDeleteSnapshotConfirmation"), SelectedSnapshot.ShortId, SelectedSnapshot.Date.ToString("yyyy-MM-dd HH:mm")),
+                ResourceProvider.GetString("LOCLuduRestDeleteBackupSnapshot"),
                 System.Windows.MessageBoxButton.YesNo,
                 System.Windows.MessageBoxImage.Warning);
 
@@ -220,7 +220,7 @@ namespace LudusaviRestic
                         Snapshots.Remove(SelectedSnapshot);
                         allSnapshots.Remove(SelectedSnapshot);
                         SelectedSnapshot = null;
-                        context.API.Dialogs.ShowMessage("Snapshot deleted successfully.", "Success");
+                        context.API.Dialogs.ShowMessage(ResourceProvider.GetString("LOCLuduRestSnapshotDeletedSuccessfully"), ResourceProvider.GetString("LOCLuduRestSuccess"));
                     }
                     else
                     {

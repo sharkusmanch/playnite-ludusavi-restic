@@ -20,7 +20,7 @@ namespace LudusaviRestic
 
         public void OnBrowseLudusaviExecutablePath(object sender, RoutedEventArgs e)
         {
-            var choice = this.plugin.PlayniteApi.Dialogs.SelectFile("Executable|*.exe");
+            var choice = this.plugin.PlayniteApi.Dialogs.SelectFile(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestExecutableFilterShort"));
 
             if (choice.Length > 0)
             {
@@ -34,17 +34,17 @@ namespace LudusaviRestic
             if (!string.IsNullOrWhiteSpace(detectedPath))
             {
                 this.plugin.settings.LudusaviExecutablePath = detectedPath;
-                this.plugin.PlayniteApi.Dialogs.ShowMessage($"Ludusavi executable detected at: {detectedPath}", "Auto-Detection Successful");
+                this.plugin.PlayniteApi.Dialogs.ShowMessage(string.Format(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsLudusaviDetected"), detectedPath), this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectSuccess"));
             }
             else
             {
-                this.plugin.PlayniteApi.Dialogs.ShowMessage("Could not automatically detect ludusavi executable. Please specify the path manually.", "Auto-Detection Failed");
+                this.plugin.PlayniteApi.Dialogs.ShowMessage(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsLudusaviNotDetected"), this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectFailed"));
             }
         }
 
         public void OnBrowseResticExecutablePath(object sender, RoutedEventArgs e)
         {
-            var choice = this.plugin.PlayniteApi.Dialogs.SelectFile("Executable|*.exe");
+            var choice = this.plugin.PlayniteApi.Dialogs.SelectFile(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestExecutableFilterShort"));
 
             if (choice.Length > 0)
             {
@@ -58,17 +58,17 @@ namespace LudusaviRestic
             if (!string.IsNullOrWhiteSpace(detectedPath))
             {
                 this.plugin.settings.ResticExecutablePath = detectedPath;
-                this.plugin.PlayniteApi.Dialogs.ShowMessage($"Restic executable detected at: {detectedPath}", "Auto-Detection Successful");
+                this.plugin.PlayniteApi.Dialogs.ShowMessage(string.Format(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsResticDetected"), detectedPath), this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectSuccess"));
             }
             else
             {
-                this.plugin.PlayniteApi.Dialogs.ShowMessage("Could not automatically detect restic executable. Please specify the path manually.", "Auto-Detection Failed");
+                this.plugin.PlayniteApi.Dialogs.ShowMessage(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsResticNotDetected"), this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectFailed"));
             }
         }
 
         public void OnBrowseRcloneConfPath(object sender, RoutedEventArgs e)
         {
-            var choice = this.plugin.PlayniteApi.Dialogs.SelectFile("Conf|*.conf");
+            var choice = this.plugin.PlayniteApi.Dialogs.SelectFile(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestConfigFilter"));
 
             if (choice.Length > 0)
             {
@@ -134,7 +134,7 @@ namespace LudusaviRestic
 
             Task.Run(() =>
             {
-                string result = "Ludusavi Restic Settings Verification:";
+                string result = this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsVerificationTitle");
 
                 try
                 {
@@ -143,7 +143,7 @@ namespace LudusaviRestic
 
                     if (restic.ExitCode == 0)
                     {
-                        result += "\n\nrestic - repository connection succeeded";
+                        result += "\n\n" + this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestResticConnectionSucceeded");
                     }
                     else
                     {
@@ -152,7 +152,7 @@ namespace LudusaviRestic
 
                     if (ludusavi.ExitCode == 0)
                     {
-                        result += "\n\nludusavi - verification succeeded";
+                        result += "\n\n" + this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestLudusaviVerificationSucceeded");
                     }
                     else
                     {
@@ -163,7 +163,7 @@ namespace LudusaviRestic
                 }
                 catch (Exception ex)
                 {
-                    this.plugin.PlayniteApi.Dialogs.ShowMessage($"Ludusavi Restic Settings Verification failed: {ex.ToString()}");
+                    this.plugin.PlayniteApi.Dialogs.ShowMessage(string.Format(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsVerificationFailed"), ex.ToString()));
                 }
             });
         }

@@ -71,12 +71,12 @@ namespace LudusaviRestic
             if (!string.IsNullOrWhiteSpace(detectedPath))
             {
                 ResticPathTextBox.Text = detectedPath;
-                ResticStatusText.Text = "✓ Restic executable found and verified.";
+                ResticStatusText.Text = context.API.Resources.GetString("LOCLuduRestSetupResticFoundVerified");
                 ResticStatusText.Foreground = System.Windows.Media.Brushes.Green;
             }
             else
             {
-                ResticStatusText.Text = "⚠ Could not automatically detect restic. Please specify the path manually.";
+                ResticStatusText.Text = context.API.Resources.GetString("LOCLuduRestSetupResticNotFound");
                 ResticStatusText.Foreground = System.Windows.Media.Brushes.Orange;
             }
         }
@@ -87,12 +87,12 @@ namespace LudusaviRestic
             if (!string.IsNullOrWhiteSpace(detectedPath))
             {
                 LudusaviPathTextBox.Text = detectedPath;
-                LudusaviStatusText.Text = "✓ Ludusavi executable found and verified.";
+                LudusaviStatusText.Text = context.API.Resources.GetString("LOCLuduRestSetupLudusaviFoundVerified");
                 LudusaviStatusText.Foreground = System.Windows.Media.Brushes.Green;
             }
             else
             {
-                LudusaviStatusText.Text = "⚠ Could not automatically detect ludusavi. Please specify the path manually.";
+                LudusaviStatusText.Text = context.API.Resources.GetString("LOCLuduRestSetupLudusaviNotFound");
                 LudusaviStatusText.Foreground = System.Windows.Media.Brushes.Orange;
             }
         }
@@ -106,8 +106,8 @@ namespace LudusaviRestic
         {
             var dialog = new OpenFileDialog
             {
-                Title = "Select Restic Executable",
-                Filter = "Executable files (*.exe)|*.exe|All files (*.*)|*.*",
+                Title = context.API.Resources.GetString("LOCLuduRestSelectResticExecutable"),
+                Filter = context.API.Resources.GetString("LOCLuduRestExecutableFilter"),
                 CheckFileExists = true
             };
 
@@ -123,19 +123,19 @@ namespace LudusaviRestic
             var path = ResticPathTextBox.Text.Trim();
             if (string.IsNullOrWhiteSpace(path))
             {
-                ResticStatusText.Text = "Please specify the path to restic executable.";
+                ResticStatusText.Text = context.API.Resources.GetString("LOCLuduRestPleaseSpecifyResticPath");
                 ResticStatusText.Foreground = System.Windows.Media.Brushes.Red;
                 return;
             }
 
             if (ResticUtility.IsValidResticExecutable(path))
             {
-                ResticStatusText.Text = "✓ Restic executable is valid.";
+                ResticStatusText.Text = context.API.Resources.GetString("LOCLuduRestValidResticExecutable");
                 ResticStatusText.Foreground = System.Windows.Media.Brushes.Green;
             }
             else
             {
-                ResticStatusText.Text = "✗ Invalid restic executable or not accessible.";
+                ResticStatusText.Text = context.API.Resources.GetString("LOCLuduRestInvalidResticExecutable");
                 ResticStatusText.Foreground = System.Windows.Media.Brushes.Red;
             }
         }
@@ -154,8 +154,8 @@ namespace LudusaviRestic
         {
             var dialog = new OpenFileDialog
             {
-                Title = "Select Ludusavi Executable",
-                Filter = "Executable files (*.exe)|*.exe|All files (*.*)|*.*",
+                Title = context.API.Resources.GetString("LOCLuduRestSelectLudusaviExecutable"),
+                Filter = context.API.Resources.GetString("LOCLuduRestExecutableFilter"),
                 CheckFileExists = true
             };
 
@@ -171,19 +171,19 @@ namespace LudusaviRestic
             var path = LudusaviPathTextBox.Text.Trim();
             if (string.IsNullOrWhiteSpace(path))
             {
-                LudusaviStatusText.Text = "Please specify the path to ludusavi executable.";
+                LudusaviStatusText.Text = context.API.Resources.GetString("LOCLuduRestPleaseSpecifyLudusaviPath");
                 LudusaviStatusText.Foreground = System.Windows.Media.Brushes.Red;
                 return;
             }
 
             if (ResticUtility.IsValidLudusaviExecutable(path))
             {
-                LudusaviStatusText.Text = "✓ Ludusavi executable is valid.";
+                LudusaviStatusText.Text = context.API.Resources.GetString("LOCLuduRestValidLudusaviExecutable");
                 LudusaviStatusText.Foreground = System.Windows.Media.Brushes.Green;
             }
             else
             {
-                LudusaviStatusText.Text = "✗ Invalid ludusavi executable or not accessible.";
+                LudusaviStatusText.Text = context.API.Resources.GetString("LOCLuduRestInvalidLudusaviExecutable");
                 LudusaviStatusText.Foreground = System.Windows.Media.Brushes.Red;
             }
         }
@@ -197,7 +197,7 @@ namespace LudusaviRestic
         {
             var dialog = new System.Windows.Forms.FolderBrowserDialog
             {
-                Description = "Select Repository Location",
+                Description = context.API.Resources.GetString("LOCLuduRestSelectRepositoryLocation"),
                 ShowNewFolderButton = true
             };
 
@@ -251,13 +251,13 @@ namespace LudusaviRestic
                     var resticPath = ResticPathTextBox.Text.Trim();
                     if (string.IsNullOrWhiteSpace(resticPath))
                     {
-                        MessageBox.Show("Please specify the path to restic executable.", "Validation Error",
+                        MessageBox.Show(context.API.Resources.GetString("LOCLuduRestValidationResticPath"), context.API.Resources.GetString("LOCLuduRestValidationError"),
                                       MessageBoxButton.OK, MessageBoxImage.Warning);
                         return false;
                     }
                     if (!ResticUtility.IsValidResticExecutable(resticPath))
                     {
-                        MessageBox.Show("The specified restic executable is not valid or accessible.", "Validation Error",
+                        MessageBox.Show(context.API.Resources.GetString("LOCLuduRestValidationResticInvalid"), context.API.Resources.GetString("LOCLuduRestValidationError"),
                                       MessageBoxButton.OK, MessageBoxImage.Warning);
                         return false;
                     }
@@ -267,7 +267,7 @@ namespace LudusaviRestic
                     var repoPath = RepositoryPathTextBox.Text.Trim();
                     if (string.IsNullOrWhiteSpace(repoPath))
                     {
-                        MessageBox.Show("Please specify the repository path.", "Validation Error",
+                        MessageBox.Show(context.API.Resources.GetString("LOCLuduRestValidationRepositoryPath"), context.API.Resources.GetString("LOCLuduRestValidationError"),
                                       MessageBoxButton.OK, MessageBoxImage.Warning);
                         return false;
                     }
@@ -277,14 +277,14 @@ namespace LudusaviRestic
 
                     if (string.IsNullOrWhiteSpace(password))
                     {
-                        MessageBox.Show("Please enter a repository password.", "Validation Error",
+                        MessageBox.Show(context.API.Resources.GetString("LOCLuduRestValidationRepositoryPassword"), context.API.Resources.GetString("LOCLuduRestValidationError"),
                                       MessageBoxButton.OK, MessageBoxImage.Warning);
                         return false;
                     }
 
                     if (password != confirmPassword)
                     {
-                        MessageBox.Show("Passwords do not match.", "Validation Error",
+                        MessageBox.Show(context.API.Resources.GetString("LOCLuduRestValidationPasswordMismatch"), context.API.Resources.GetString("LOCLuduRestValidationError"),
                                       MessageBoxButton.OK, MessageBoxImage.Warning);
                         return false;
                     }
@@ -300,8 +300,10 @@ namespace LudusaviRestic
         {
             SummaryResticPath.Text = ResticPathTextBox.Text;
             SummaryRepositoryPath.Text = RepositoryPathTextBox.Text;
-            SummaryPasswordStatus.Text = string.IsNullOrWhiteSpace(RepositoryPasswordBox.Password) ? "No" : "Yes";
-            SummaryInitStatus.Text = CreateNewRepositoryCheckBox.IsChecked == true ? "Yes" : "No";
+            SummaryPasswordStatus.Text = string.IsNullOrWhiteSpace(RepositoryPasswordBox.Password) ?
+                context.API.Resources.GetString("LOCLuduRestSummaryNo") : context.API.Resources.GetString("LOCLuduRestSummaryYes");
+            SummaryInitStatus.Text = CreateNewRepositoryCheckBox.IsChecked == true ?
+                context.API.Resources.GetString("LOCLuduRestSummaryYes") : context.API.Resources.GetString("LOCLuduRestSummaryNo");
         }
 
         private void UpdateNavigationButtons()
@@ -336,7 +338,7 @@ namespace LudusaviRestic
                     var tempContext = new BackupContext(context.API, ResultSettings);
 
                     // Show progress
-                    var progressOptions = new GlobalProgressOptions("Initializing repository...", true)
+                    var progressOptions = new GlobalProgressOptions(context.API.Resources.GetString("LOCLuduRestInitializingRepository"), true)
                     {
                         IsIndeterminate = true
                     };
@@ -367,8 +369,8 @@ namespace LudusaviRestic
 
                     if (!initSuccess)
                     {
-                        MessageBox.Show("Failed to initialize the repository. Please check the logs for details.",
-                                      "Initialization Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show(context.API.Resources.GetString("LOCLuduRestInitializationFailed"),
+                                      context.API.Resources.GetString("LOCLuduRestInitializationError"), MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
                     }
                 }
@@ -380,7 +382,7 @@ namespace LudusaviRestic
             catch (Exception ex)
             {
                 logger.Error(ex, "Error during setup completion");
-                MessageBox.Show($"An error occurred during setup: {ex.Message}", "Setup Error",
+                MessageBox.Show(string.Format(context.API.Resources.GetString("LOCLuduRestSetupErrorMessage"), ex.Message), context.API.Resources.GetString("LOCLuduRestSetupError"),
                               MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
