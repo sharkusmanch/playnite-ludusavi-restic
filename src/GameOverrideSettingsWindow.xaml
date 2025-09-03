@@ -1,0 +1,64 @@
+<Window x:Class="LudusaviRestic.GameOverrideSettingsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="{DynamicResource LOCLuduRestPerGameWindowTitle}" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner"
+    ResizeMode="NoResize">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Width="600" Height="420">
+            <StackPanel Margin="0,0,0,8">
+                <TextBlock Text="{DynamicResource LOCLuduRestPerGameGameLabel}" FontWeight="Bold"/>
+                <TextBlock Text="{Binding GameName}" Margin="0,0,0,8"/>
+
+                <CheckBox Content="{DynamicResource LOCLuduRestPerGameEnableCustom}" IsChecked="{Binding OverrideGlobalSettings}" Margin="0,0,0,12"/>
+
+                <StackPanel IsEnabled="{Binding OverrideGlobalSettings}">
+                    <GroupBox Header="{DynamicResource LOCLuduRestPerGameGroupBackupTriggers}" Margin="0,0,0,10">
+                        <StackPanel>
+                            <CheckBox Content="{DynamicResource LOCLuduRestPerGameBackupOnStopLabel}" IsChecked="{Binding BackupOnGameStopped}"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,4,0,0" VerticalAlignment="Center">
+                                <CheckBox Content="{DynamicResource LOCLuduRestPerGameBackupDuringGameplayLabel}" IsChecked="{Binding BackupDuringGameplay}"/>
+                                <TextBlock Text="{DynamicResource LOCLuduRestPerGameIntervalMinutes}" Margin="16,0,4,0" VerticalAlignment="Center"/>
+                                <TextBox Width="60" Text="{Binding GameplayBackupIntervalMinutes}"/>
+                            </StackPanel>
+                            <CheckBox Content="{DynamicResource LOCLuduRestPerGameBackupOnUninstallLabel}" IsChecked="{Binding BackupOnUninstall}" Margin="0,4,0,0"/>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <GroupBox Header="{DynamicResource LOCLuduRestPerGameGroupRetention}" Margin="0,0,0,10">
+                        <StackPanel>
+                            <CheckBox Content="{DynamicResource LOCLuduRestPerGameUseCustomRetention}" IsChecked="{Binding UseCustomRetention}" Margin="0,0,0,6"/>
+                            <UniformGrid Columns="2" Margin="0,4,0,0" IsEnabled="{Binding UseCustomRetention}">
+                                <TextBlock Text="{DynamicResource LOCLuduRestPerGameKeepLast}" VerticalAlignment="Center"/>
+                                <TextBox Text="{Binding KeepLast}" Width="60" Margin="0,2,0,2"/>
+                                <TextBlock Text="{DynamicResource LOCLuduRestPerGameKeepDaily}" VerticalAlignment="Center"/>
+                                <TextBox Text="{Binding KeepDaily}" Width="60" Margin="0,2,0,2"/>
+                                <TextBlock Text="{DynamicResource LOCLuduRestPerGameKeepWeekly}" VerticalAlignment="Center"/>
+                                <TextBox Text="{Binding KeepWeekly}" Width="60" Margin="0,2,0,2"/>
+                                <TextBlock Text="{DynamicResource LOCLuduRestPerGameKeepMonthly}" VerticalAlignment="Center"/>
+                                <TextBox Text="{Binding KeepMonthly}" Width="60" Margin="0,2,0,2"/>
+                                <TextBlock Text="{DynamicResource LOCLuduRestPerGameKeepYearly}" VerticalAlignment="Center"/>
+                                <TextBox Text="{Binding KeepYearly}" Width="60" Margin="0,2,0,2"/>
+                            </UniformGrid>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <GroupBox Header="{DynamicResource LOCLuduRestPerGameGroupCustomTags}">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource LOCLuduRestPerGameCustomTagsHelp}" TextWrapping="Wrap"/>
+                            <TextBox Text="{Binding CustomTagsText}" Margin="0,4,0,0"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" >
+            <Button Content="{DynamicResource LOCLuduRestPerGameReset}" Margin="0,0,8,0" Width="75" IsEnabled="{Binding OverrideGlobalSettings}" Click="Reset_Click"/>
+            <Button Content="{DynamicResource LOCLuduRestPerGameSave}" Margin="0,0,8,0" Width="75" Click="Save_Click"/>
+            <Button Content="{DynamicResource LOCLuduRestPerGameCancel}" Width="75" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

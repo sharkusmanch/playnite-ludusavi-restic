@@ -1,27 +1,27 @@
 using System.Diagnostics;
-using Playnite.SDK;
 
 namespace LudusaviRestic
 {
-    public class BaseCommand
+    public abstract class BaseCommand
     {
-        protected static readonly ILogger logger = LogManager.GetLogger();
-
-        protected static CommandResult ExecuteCommand(string command, string args)
+        protected static CommandResult ExecuteCommand(string fileName, string args)
         {
-            Process process = new Process();
-            process.StartInfo.FileName = command;
-            process.StartInfo.Arguments = args;
-            process.StartInfo.UseShellExecute = false;
-            process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            process.StartInfo.CreateNoWindow = true;
-            process.StartInfo.RedirectStandardOutput = true;
-            process.StartInfo.RedirectStandardError = true;
-
-            logger.Debug(process.StartInfo.FileName);
-            logger.Debug(process.StartInfo.Arguments);
+            var process = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = fileName,
+                    Arguments = args,
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    CreateNoWindow = true,
+                    WindowStyle = ProcessWindowStyle.Hidden
+                }
+            };
 
             return new CommandResult(process);
         }
     }
 }
+

@@ -292,4 +292,78 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestSetupError">Setup Error</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">An error occurred during setup: {0}</sys:String>
 
+    <!-- Per-game override menu / dialogs -->
+    <sys:String x:Key="LOCLuduRestGameMenuConfigureOverrides">Configure backup settings...</sys:String>
+    <sys:String x:Key="LOCLuduRestMainMenuViewOverrides">View games with custom backup settings</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesDialogTitle">Custom Backup Overrides</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesDialogNoGames">No games currently have custom backup settings.</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesDialogListHeader">Games with custom backup settings:</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesDialogClearAllPrompt">Clear all custom settings for these games? (Yes = clear, No = keep)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesCleared">Overrides Cleared</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesClearedMessage">All custom per-game backup settings have been removed.</sys:String>
+
+    <!-- Per-game settings dialog new localized strings -->
+    <sys:String x:Key="LOCLuduRestPerGameHeader">Backup Settings for: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameStatusUsingCustom">Using custom settings</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameStatusUsingGlobal">Using global settings</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameCustomSettingsHeader">Custom Settings:</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameBackupOnStop">• Backup on game stop: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameBackupDuringGameplay">• Backup during gameplay: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameBackupOnUninstall">• Backup on uninstall: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameCustomRetention">• Custom retention: Last {0}, Daily {1}, Weekly {2}, Monthly {3}, Yearly {4}</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameCustomTags">• Custom tags: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptReset">Reset to global settings?</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameSettingsResetMessage">Game backup settings have been reset to use global defaults.</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameSettingsResetTitle">Settings Reset</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptConfigure">Configure custom settings for this game?</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameDialogTitle">Game Backup Settings</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameErrorOpening">Error opening backup settings: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptOverride">Create custom backup settings for '{0}'?\n\nYes = custom settings. No = use global.</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameOverrideTitle">Override Global Settings?</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameUseGlobalMessage">Game will use global backup settings.</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameSettingsSavedTitle">Settings Saved</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptBackupOnStop">Backup when game stops? (Yes/No) Cancel = global</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptBackupOnStopTitle">Backup on Game Stop</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptBackupDuringGameplay">Backup during gameplay? (Yes/No) Cancel = global</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptBackupDuringGameplayTitle">Backup During Gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameIntervalPrompt">Interval (minutes):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameIntervalTitle">Backup Interval</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptBackupOnUninstall">Backup on uninstall? (Yes/No) Cancel = global</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptBackupOnUninstallTitle">Backup on Uninstall</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptCustomRetention">Custom retention policy?</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptCustomRetentionTitle">Custom Retention</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptCustomTags">Add custom tags?</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptCustomTagsTitle">Custom Tags</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptTagsInput">Tags (comma separated):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameSettingsSavedMessage">Custom backup settings saved for '{0}'.</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameErrorConfiguring">Error configuring settings: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameRetentionKeepLastPrompt">Keep Last (0 = disable):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameRetentionKeepDailyPrompt">Keep Daily (0 = disable):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameRetentionKeepWeeklyPrompt">Keep Weekly (0 = disable):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameRetentionKeepMonthlyPrompt">Keep Monthly (0 = disable):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameRetentionKeepYearlyPrompt">Keep Yearly (0 = disable):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGamePromptCustomRetentionTitle">Retention Settings</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameErrorRetention">Error configuring retention: {0}</sys:String>
+    <!-- Per-game settings window UI labels -->
+    <sys:String x:Key="LOCLuduRestPerGameWindowTitle">Per-Game Backup Settings</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameGameLabel">Game:</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameEnableCustom">Enable custom settings for this game</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameGroupBackupTriggers">Backup Triggers</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameBackupOnStopLabel">Backup when game stops</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameBackupDuringGameplayLabel">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameIntervalMinutes">Interval (minutes):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameBackupOnUninstallLabel">Backup on uninstall</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameGroupRetention">Retention Overrides</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameUseCustomRetention">Use custom retention for this game</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameKeepLast">Keep Last:</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameKeepDaily">Daily (days):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameKeepWeekly">Weekly (weeks):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameKeepMonthly">Monthly (months):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameKeepYearly">Yearly (years):</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameGroupCustomTags">Custom Tags</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameCustomTagsHelp">Comma separated tags to always add to this game's backups:</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameReset">Reset</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameSave">Save</sys:String>
+    <sys:String x:Key="LOCLuduRestPerGameCancel">Cancel</sys:String>
+
 </ResourceDictionary>

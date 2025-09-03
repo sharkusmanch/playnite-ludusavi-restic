@@ -1,257 +1,124 @@
-﻿using Playnite.SDK;
-using System.Collections.Generic;
+using Playnite.SDK;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace LudusaviRestic
 {
     public class LudusaviResticSettings : ISettings, INotifyPropertyChanged
     {
-        private readonly LudusaviRestic plugin;
-        private static readonly ILogger logger = LogManager.GetLogger();
+        private IPlayniteAPI api;
+
+        // Core executables / paths
+        public string ResticExecutablePath { get; set; } = "";
+        public string LudusaviExecutablePath { get; set; } = "";
+        public string ResticRepository { get; set; } = "";
+        public string ResticPassword { get; set; } = "";
+        public string RcloneConfigPath { get; set; } = "";
+        public string RcloneConfigPassword { get; set; } = "";
+
+        // Backup execution include/exclude tagging
+        public ExecutionMode BackupExecutionMode { get; set; } = ExecutionMode.Exclude;
+        public Guid IncludeTagID { get; set; } = Guid.Empty;
+        public Guid ExcludeTagID { get; set; } = Guid.Empty;
+
+        // Backup triggers
+        public bool BackupDuringGameplay { get; set; } = false;
+        public int GameplayBackupIntervalMinutes { get; set; } = 15;
+        public bool BackupWhenGameStopped { get; set; } = true;
+        public bool PromptForGameStoppedTag { get; set; } = false;
+        public bool BackupOnUninstall { get; set; } = true;
+
+        // Additional tagging
+        public bool AdditionalTagging { get; set; } = true;
+        public string ManualSnapshotTag { get; set; } = "manual";
+        public string GameStoppedSnapshotTag { get; set; } = "stop";
+        public string GameplaySnapshotTag { get; set; } = "gameplay";
+
+        // Retention policy
+        public bool EnableRetentionPolicy { get; set; } = false;
+        public int KeepLast { get; set; } = 10;
+        public int KeepDaily { get; set; } = 7;
+        public int KeepWeekly { get; set; } = 4;
+        public int KeepMonthly { get; set; } = 12;
+        public int KeepYearly { get; set; } = 5;
+
+        // Game specific overrides
+        public Dictionary<Guid, GameSpecificSettings> GameSettings { get; set; } = new Dictionary<Guid, GameSpecificSettings>();
+
+        // Copy for editing
+        private LudusaviResticSettings editingClone;
 
         public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged(string propertyName)
+        private void OnPropertyChanged([CallerMemberName] string name = null)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
-        private string ludusaviExecutablePath = "ludusavi";
-        public string LudusaviExecutablePath { get { return ludusaviExecutablePath; } set { ludusaviExecutablePath = value; NotifyPropertyChanged("LudusaviExecutablePath"); } }
+        public LudusaviResticSettings() { }
 
-        private ExecutionMode backupExecutionMode = ExecutionMode.Exclude;
-
-        public ExecutionMode BackupExecutionMode { get { return backupExecutionMode; } set { backupExecutionMode = value; NotifyPropertyChanged("BackupExecutionMode"); } }
-
-        private Guid excludeTagID = Guid.Empty;
-        public Guid ExcludeTagID
+        public LudusaviResticSettings(IPlayniteAPI api)
         {
-            get
-            {
-                if (plugin != null && excludeTagID == Guid.Empty)
-                {
-                    excludeTagID = plugin.PlayniteApi.Database.Tags.Add("[LR] Exclude").Id;
-                }
-                else if (plugin != null && plugin.PlayniteApi.Database.Tags.Get(excludeTagID) == null)
-                {
-                    excludeTagID = plugin.PlayniteApi.Database.Tags.Add("[LR] Exclude").Id;
-                }
-                return excludeTagID;
-            }
-            set => excludeTagID = value;
-        }
-        private Guid includeTagID = Guid.Empty;
-        public Guid IncludeTagID
-        {
-            get
-            {
-                if (plugin != null && includeTagID == Guid.Empty)
-                {
-                    includeTagID = plugin.PlayniteApi.Database.Tags.Add("[LR] Include").Id;
-                }
-                else if (plugin != null && plugin.PlayniteApi.Database.Tags.Get(includeTagID) == null)
-                {
-                    includeTagID = plugin.PlayniteApi.Database.Tags.Add("[LR] Include").Id;
-                }
-                return includeTagID;
-            }
-            set => includeTagID = value;
-        }
-
-        private string resticExecutablePath = "restic";
-        public string ResticExecutablePath { get { return resticExecutablePath; } set { resticExecutablePath = value; NotifyPropertyChanged("ResticExecutablePath"); } }
-        private string resticRepository;
-        public string ResticRepository { get { return resticRepository; } set { resticRepository = value; NotifyPropertyChanged("ResticRepository"); } }
-        private string resticPassword;
-        public string ResticPassword { get { return resticPassword; } set { resticPassword = value; NotifyPropertyChanged("ResticPassword"); } }
-        private string rcloneConfigPath;
-        public string RcloneConfigPath { get { return rcloneConfigPath; } set { rcloneConfigPath = value; NotifyPropertyChanged("RcloneConfigPath"); } }
-        private string rcloneConfigPassword;
-        public string RcloneConfigPassword { get { return rcloneConfigPassword; } set { rcloneConfigPassword = value; NotifyPropertyChanged("RcloneConfigPassword"); } }
-        private bool backupDuringGameplay = false;
-        public bool BackupDuringGameplay { get { return backupDuringGameplay; } set { backupDuringGameplay = value; ; NotifyPropertyChanged("BackupDuringGameplay"); } }
-        private bool additionalTagging = false;
-        public bool AdditionalTagging { get { return additionalTagging; } set { additionalTagging = value; ; NotifyPropertyChanged("AdditionalTagging"); } }
-        private bool backupWhenGameStopped = true;
-        public bool BackupWhenGameStopped { get { return backupWhenGameStopped; } set { backupWhenGameStopped = value; ; NotifyPropertyChanged("BackupWhenGameStopped"); } }
-        private bool promptForGameStoppedTag = false;
-        public bool PromptForGameStoppedTag { get { return promptForGameStoppedTag; } set { promptForGameStoppedTag = value; ; NotifyPropertyChanged("PromptForGameStoppedTag"); } }
-        private bool backupOnUninstall = false;
-        public bool BackupOnUninstall { get { return backupOnUninstall; } set { backupOnUninstall = value; ; NotifyPropertyChanged("BackupOnUninstall"); } }
-        private string manualSnapshotTag = "manual";
-        public string ManualSnapshotTag { get { return manualSnapshotTag; } set { manualSnapshotTag = value; ; NotifyPropertyChanged("ManualSnapshotTag"); } }
-        private string gameStoppedSnapshotTag = "game-stopped";
-        public string GameStoppedSnapshotTag { get { return gameStoppedSnapshotTag; } set { gameStoppedSnapshotTag = value; ; NotifyPropertyChanged("GameStoppedSnapshotTag"); } }
-        private string gameplaySnapshotTag = "gameplay";
-        public string GameplaySnapshotTag { get { return gameplaySnapshotTag; } set { gameplaySnapshotTag = value; ; NotifyPropertyChanged("GameplaySnapshotTag"); } }
-
-        private bool enableRetentionPolicy = false;
-        public bool EnableRetentionPolicy { get { return enableRetentionPolicy; } set { enableRetentionPolicy = value; NotifyPropertyChanged("EnableRetentionPolicy"); } }
-
-        private int keepLast = 10;
-        public int KeepLast { get { return keepLast; } set { keepLast = value; NotifyPropertyChanged("KeepLast"); } }
-
-        private int keepDaily = 7;
-        public int KeepDaily { get { return keepDaily; } set { keepDaily = value; NotifyPropertyChanged("KeepDaily"); } }
-
-        private int keepWeekly = 4;
-        public int KeepWeekly { get { return keepWeekly; } set { keepWeekly = value; NotifyPropertyChanged("KeepWeekly"); } }
-
-        private int keepMonthly = 12;
-        public int KeepMonthly { get { return keepMonthly; } set { keepMonthly = value; NotifyPropertyChanged("KeepMonthly"); } }
-
-        private int keepYearly = 5;
-        public int KeepYearly { get { return keepYearly; } set { keepYearly = value; NotifyPropertyChanged("KeepYearly"); } }
-
-        private List<string> errors;
-
-        private int gameplayBackupInterval = 5;
-        public int GameplayBackupInterval
-        {
-            get { return gameplayBackupInterval; }
-            set
-            {
-                string rawValue = value.ToString();
-                int intValue;
-
-                bool success = int.TryParse(rawValue, out intValue) && intValue > 0;
-
-                if (success)
-                {
-                    gameplayBackupInterval = intValue;
-                    NotifyPropertyChanged("GameplayBackupInterval");
-                }
-                else
-                {
-                    this.errors.Add("Backup interval must be a positive integer");
-                }
-            }
-        }
-
-        public LudusaviResticSettings()
-        {
-        }
-
-        public LudusaviResticSettings(LudusaviRestic plugin)
-        {
-            // Injecting your plugin instance is required for Save/Load method because Playnite saves data to a location based on what plugin requested the operation.
-            this.plugin = plugin;
-            Load();
-        }
-        private void Load()
-        {
-            // Load saved settings.
-            var savedSettings = plugin.LoadPluginSettings<LudusaviResticSettings>();
-
-            // LoadPluginSettings returns null if not saved data is available.
-            if (savedSettings != null)
-            {
-                LudusaviExecutablePath = savedSettings.LudusaviExecutablePath;
-                ResticExecutablePath = savedSettings.ResticExecutablePath;
-                ResticRepository = savedSettings.ResticRepository;
-                ResticPassword = savedSettings.ResticPassword;
-                RcloneConfigPath = savedSettings.RcloneConfigPath;
-                RcloneConfigPassword = savedSettings.RcloneConfigPassword;
-                BackupDuringGameplay = savedSettings.BackupDuringGameplay;
-                GameplayBackupInterval = savedSettings.GameplayBackupInterval;
-                AdditionalTagging = savedSettings.AdditionalTagging;
-                ManualSnapshotTag = savedSettings.ManualSnapshotTag;
-                GameStoppedSnapshotTag = savedSettings.GameStoppedSnapshotTag;
-                GameplaySnapshotTag = savedSettings.GameplaySnapshotTag;
-                PromptForGameStoppedTag = savedSettings.PromptForGameStoppedTag;
-                BackupExecutionMode = savedSettings.BackupExecutionMode;
-                BackupOnUninstall = savedSettings.BackupOnUninstall;
-                BackupWhenGameStopped = savedSettings.BackupWhenGameStopped;
-
-                // Load tag IDs if available
-                if (savedSettings.ExcludeTagID != Guid.Empty)
-                    excludeTagID = savedSettings.ExcludeTagID;
-                if (savedSettings.IncludeTagID != Guid.Empty)
-                    includeTagID = savedSettings.IncludeTagID;
-
-                // Load retention policy settings
-                KeepLast = savedSettings.KeepLast;
-                KeepDaily = savedSettings.KeepDaily;
-                KeepWeekly = savedSettings.KeepWeekly;
-                KeepMonthly = savedSettings.KeepMonthly;
-                KeepYearly = savedSettings.KeepYearly;
-                EnableRetentionPolicy = savedSettings.EnableRetentionPolicy;
-            }
-
-            // Auto-detect restic executable if not configured or invalid
-            if (string.IsNullOrWhiteSpace(ResticExecutablePath) || ResticExecutablePath == "restic")
-            {
-                var detectedPath = ResticUtility.DetectResticExecutable();
-                if (!string.IsNullOrWhiteSpace(detectedPath))
-                {
-                    ResticExecutablePath = detectedPath;
-                    logger.Info($"Auto-detected restic executable: {detectedPath}");
-                }
-            }
-            else if (!ResticUtility.IsValidResticExecutable(ResticExecutablePath))
-            {
-                logger.Warn($"Configured restic executable path is invalid: {ResticExecutablePath}");
-                var detectedPath = ResticUtility.DetectResticExecutable();
-                if (!string.IsNullOrWhiteSpace(detectedPath))
-                {
-                    ResticExecutablePath = detectedPath;
-                    logger.Info($"Auto-detected alternative restic executable: {detectedPath}");
-                }
-            }
-
-            // Auto-detect ludusavi executable if not configured or invalid
-            if (string.IsNullOrWhiteSpace(LudusaviExecutablePath) || LudusaviExecutablePath == "ludusavi")
-            {
-                var detectedPath = ResticUtility.DetectLudusaviExecutable();
-                if (!string.IsNullOrWhiteSpace(detectedPath))
-                {
-                    LudusaviExecutablePath = detectedPath;
-                    logger.Info($"Auto-detected ludusavi executable: {detectedPath}");
-                }
-            }
-            else if (!ResticUtility.IsValidLudusaviExecutable(LudusaviExecutablePath))
-            {
-                logger.Warn($"Configured ludusavi executable path is invalid: {LudusaviExecutablePath}");
-                var detectedPath = ResticUtility.DetectLudusaviExecutable();
-                if (!string.IsNullOrWhiteSpace(detectedPath))
-                {
-                    LudusaviExecutablePath = detectedPath;
-                    logger.Info($"Auto-detected alternative ludusavi executable: {detectedPath}");
-                }
-            }
+            this.api = api;
         }
 
         public void BeginEdit()
         {
-            this.errors = new List<string>();
+            editingClone = (LudusaviResticSettings)MemberwiseClone();
+            // Deep copy dictionary
+            editingClone.GameSettings = new Dictionary<Guid, GameSpecificSettings>(GameSettings);
         }
 
         public void CancelEdit()
         {
-            // Code executed when user decides to cancel any changes made since BeginEdit was called.
-            // This method should revert any changes made to Option1 and Option2.
-            Load();
-        }
-
-        public void Save()
-        {
-            // The plugin base class provides SavePluginSettings method
-            plugin.SavePluginSettings(this);
+            if (editingClone != null)
+            {
+                foreach (var prop in GetType().GetProperties())
+                {
+                    if (!prop.CanRead || !prop.CanWrite) continue;
+                    prop.SetValue(this, prop.GetValue(editingClone));
+                }
+            }
         }
 
         public void EndEdit()
         {
-            Save();
+            editingClone = null;
         }
 
         public bool VerifySettings(out List<string> errors)
         {
-            errors = new List<string>(this.errors);
-            this.errors.Clear();
+            errors = new List<string>();
             return errors.Count == 0;
+        }
+
+        public GameSpecificSettings GetGameSettings(Guid gameId)
+        {
+            if (GameSettings == null)
+            {
+                GameSettings = new Dictionary<Guid, GameSpecificSettings>();
+            }
+            if (GameSettings.TryGetValue(gameId, out var settings))
+            {
+                return settings;
+            }
+            return null;
+        }
+
+        public void SetGameSettings(Guid gameId, GameSpecificSettings settings)
+        {
+            if (GameSettings == null)
+            {
+                GameSettings = new Dictionary<Guid, GameSpecificSettings>();
+            }
+            GameSettings[gameId] = settings;
+        }
+
+        public void RemoveGameSettings(Guid gameId)
+        {
+            GameSettings?.Remove(gameId);
         }
     }
 }
+

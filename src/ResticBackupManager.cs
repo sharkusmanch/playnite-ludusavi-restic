@@ -54,7 +54,25 @@ namespace LudusaviRestic
                 return;
             }
 
-            BackupGameTask task = new BackupGameTask(game, this.semaphore, this.context, extraTags);
+            // Merge in any custom game-specific tags
+            var mergedTags = new List<string>(extraTags);
+            try
+            {
+                var gameSettings = settings.GetGameSettings(game.Id);
+                if (gameSettings?.OverrideGlobalSettings == true && gameSettings.CustomTags != null)
+                {
+                    foreach (var t in gameSettings.CustomTags)
+                    {
+                        if (!string.IsNullOrWhiteSpace(t))
+                        {
+                            mergedTags.Add(t.Trim());
+                        }
+                    }
+                }
+            }
+            catch { }
+
+            BackupGameTask task = new BackupGameTask(game, this.semaphore, this.context, mergedTags);
             task.Run();
         }
 
