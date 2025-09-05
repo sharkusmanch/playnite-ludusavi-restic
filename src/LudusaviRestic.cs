@@ -5,6 +5,8 @@ using Playnite.SDK.Plugins;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace LudusaviRestic
@@ -14,6 +16,23 @@ namespace LudusaviRestic
         internal LudusaviResticSettings settings { get; private set; }
         private ResticBackupManager backupManager;
         private static readonly ILogger logger = LogManager.GetLogger();
+
+        private static string SafeLoc(string key, string fallback)
+        {
+            try
+            {
+                var val = ResourceProvider.GetString(key);
+                if (string.IsNullOrWhiteSpace(val) || (val.StartsWith("<!") && val.EndsWith("!>")))
+                {
+                    return fallback;
+                }
+                return val;
+            }
+            catch
+            {
+                return fallback;
+            }
+        }
 
         public override Guid Id { get; } = Guid.Parse("e9861c36-68a8-4654-8071-a9c50612bc24");
 
@@ -25,6 +44,98 @@ namespace LudusaviRestic
             {
                 HasSettings = true
             };
+
+            // Defer localization diagnostics to OnApplicationStarted (Playnite loads dictionaries automatically from plugin folder root).
+        }
+        public override void OnApplicationStarted(OnApplicationStartedEventArgs args)
+        {
+            try
+            {
+                var asmPath = Path.GetDirectoryName(GetType().Assembly.Location);
+                logger.Info($"[LudusaviRestic] Assembly path: {asmPath}");
+                // Playnite copies plugin contents into Extensions/<Id> directory; ensure Localization dir exists there.
+                if (!string.IsNullOrEmpty(asmPath))
+                {
+                    // Typical structure: .../Extensions/LudusaviRestic_<guid>/LudusaviRestic.dll
+                    var locDir = Path.Combine(asmPath, "Localization");
+                    logger.Info($"[LudusaviRestic] Expected localization dir: {locDir} Exists={Directory.Exists(locDir)}");
+                    if (Directory.Exists(locDir))
+                    {
+                        var files = Directory.GetFiles(locDir, "*.xaml");
+                        logger.Info($"[LudusaviRestic] Localization files present: {string.Join(", ", files.Select(Path.GetFileName))}");
+                        // Spot check one key via ResourceProvider to see what we get
+                        var test = ResourceProvider.GetString("LOCLuduRestBackupAllGames");
+                        logger.Info($"[LudusaviRestic] Test lookup LOCLuduRestBackupAllGames => '{test}'");
+                    }
+                }
+
+                EnsureLocalizationLoaded();
+            }
+            catch (Exception ex)
+            {
+                logger.Warn(ex, "[LudusaviRestic] OnApplicationStarted localization diagnostics failed");
+            }
+        }
+
+        private bool localizationAttempted;
+        private void EnsureLocalizationLoaded()
+        {
+            if (localizationAttempted) return; // only once
+            localizationAttempted = true;
+            try
+            {
+                // If a known key already resolves properly, skip
+                var probe = ResourceProvider.GetString("LOCLuduRestBackupAllGames");
+                if (!string.IsNullOrEmpty(probe) && !(probe.StartsWith("<!") && probe.EndsWith("!>")))
+                {
+                    logger.Info("[LudusaviRestic] Localization already resolved by Playnite.");
+                    return;
+                }
+
+                var asmPath = Path.GetDirectoryName(GetType().Assembly.Location);
+                if (string.IsNullOrEmpty(asmPath)) return;
+                var locDir = Path.Combine(asmPath, "Localization");
+                if (!Directory.Exists(locDir))
+                {
+                    logger.Warn("[LudusaviRestic] Localization directory not found; keys will show placeholders.");
+                    return;
+                }
+
+                // Determine current UI language; fallback to en_US
+                var lang = PlayniteApi?.ApplicationSettings?.Language ?? "en_US";
+                var primaryFile = Path.Combine(locDir, lang + ".xaml");
+                var fallbackFile = Path.Combine(locDir, "en_US.xaml");
+                var filesToLoad = new List<string>();
+                if (File.Exists(primaryFile)) filesToLoad.Add(primaryFile);
+                if (File.Exists(fallbackFile) && !filesToLoad.Contains(fallbackFile)) filesToLoad.Add(fallbackFile);
+                if (filesToLoad.Count == 0)
+                {
+                    logger.Warn($"[LudusaviRestic] No localization files found for '{lang}' nor fallback en_US.");
+                    return;
+                }
+                foreach (var f in filesToLoad)
+                {
+                    try
+                    {
+                        using (var fs = File.OpenRead(f))
+                        {
+                            var dict = (ResourceDictionary)System.Windows.Markup.XamlReader.Load(fs);
+                            Application.Current?.Resources?.MergedDictionaries.Add(dict);
+                            logger.Info($"[LudusaviRestic] Loaded localization dictionary {Path.GetFileName(f)} ({dict.Count} entries)");
+                        }
+                    }
+                    catch (Exception exFile)
+                    {
+                        logger.Warn(exFile, $"[LudusaviRestic] Failed to load localization dictionary {f}");
+                    }
+                }
+                var probeAfter = ResourceProvider.GetString("LOCLuduRestBackupAllGames");
+                logger.Info($"[LudusaviRestic] Post-load probe LOCLuduRestBackupAllGames => '{probeAfter}'");
+            }
+            catch (Exception ex)
+            {
+                logger.Warn(ex, "[LudusaviRestic] EnsureLocalizationLoaded failed");
+            }
         }
 
         public override ISettings GetSettings(bool firstRunSettings) => settings;
@@ -36,8 +147,8 @@ namespace LudusaviRestic
             // Manual backup create snapshot
             items.Add(new GameMenuItem
             {
-                Description = ResourceProvider.GetString("LOCLuduRestBackupGMCreate"),
-                MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                Description = SafeLoc("LOCLuduRestBackupGMCreate", "Create save snapshot"),
+                MenuSection = SafeLoc("LOCLuduRestBackupGM", "LudusaviRestic"),
                 Action = a =>
                 {
                     foreach (var g in args.Games) backupManager.PerformManualBackup(g);
@@ -46,62 +157,56 @@ namespace LudusaviRestic
             // Include tag add/remove
             items.Add(new GameMenuItem
             {
-                Description = ResourceProvider.GetString("LOCLuduRestBackupGMIncludeAdd"),
-                MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                Description = SafeLoc("LOCLuduRestBackupGMIncludeAdd", "Add backup include tag"),
+                MenuSection = SafeLoc("LOCLuduRestBackupGM", "LudusaviRestic"),
                 Action = a => ToggleTag(args.Games, settings.IncludeTagID, true, true)
             });
             items.Add(new GameMenuItem
             {
-                Description = ResourceProvider.GetString("LOCLuduRestBackupGMIncludeRemove"),
-                MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                Description = SafeLoc("LOCLuduRestBackupGMIncludeRemove", "Remove backup include tag"),
+                MenuSection = SafeLoc("LOCLuduRestBackupGM", "LudusaviRestic"),
                 Action = a => ToggleTag(args.Games, settings.IncludeTagID, false, true)
             });
             // Exclude tag add/remove
             items.Add(new GameMenuItem
             {
-                Description = ResourceProvider.GetString("LOCLuduRestBackupGMExcludeAdd"),
-                MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                Description = SafeLoc("LOCLuduRestBackupGMExcludeAdd", "Add backup exclude tag"),
+                MenuSection = SafeLoc("LOCLuduRestBackupGM", "LudusaviRestic"),
                 Action = a => ToggleTag(args.Games, settings.ExcludeTagID, true, false)
             });
             items.Add(new GameMenuItem
             {
-                Description = ResourceProvider.GetString("LOCLuduRestBackupGMExcludeRemove"),
-                MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                Description = SafeLoc("LOCLuduRestBackupGMExcludeRemove", "Remove backup exclude tag"),
+                MenuSection = SafeLoc("LOCLuduRestBackupGM", "LudusaviRestic"),
                 Action = a => ToggleTag(args.Games, settings.ExcludeTagID, false, false)
             });
             // View snapshots
             items.Add(new GameMenuItem
             {
-                Description = ResourceProvider.GetString("LOCLuduRestViewBackupSnapshots"),
-                MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                Description = SafeLoc("LOCLuduRestViewBackupSnapshots", "View backup snapshots"),
+                MenuSection = SafeLoc("LOCLuduRestBackupGM", "LudusaviRestic"),
                 Action = a =>
                 {
                     foreach (var g in args.Games)
                     {
-                        var ctx = new BackupContext(PlayniteApi, settings);
-                        var win = new BackupBrowserWindow(ctx, g.Name);
-                        win.ShowDialog();
+                        ShowBackupBrowser(g.Name);
                     }
                 }
             });
             // Configure overrides (new window)
             items.Add(new GameMenuItem
             {
-                Description = ResourceProvider.GetString("LOCLuduRestGameMenuConfigureOverrides"),
-                MenuSection = ResourceProvider.GetString("LOCLuduRestBackupGM"),
+                Description = SafeLoc("LOCLuduRestGameMenuConfigureOverrides", "Configure backup settings..."),
+                MenuSection = SafeLoc("LOCLuduRestBackupGM", "LudusaviRestic"),
                 Action = a =>
                 {
                     foreach (var g in args.Games)
                     {
                         try
                         {
-                            var win = new GameOverrideSettingsWindow(g, settings, PlayniteApi)
+                            if (ShowPerGameSettings(g))
                             {
-                                Owner = PlayniteApi.Dialogs.GetCurrentAppWindow()
-                            };
-                            if (win.ShowDialog() == true)
-                            {
-                                SavePluginSettings(settings);
+                                SavePluginSettings(settings); // persist after save
                             }
                         }
                         catch (Exception ex)
@@ -120,24 +225,22 @@ namespace LudusaviRestic
             var items = new List<MainMenuItem>();
             items.Add(new MainMenuItem
             {
-                Description = ResourceProvider.GetString("LOCLuduRestBackupAllGames"),
+                Description = SafeLoc("LOCLuduRestBackupAllGames", "Backup all games"),
                 MenuSection = root,
                 Action = a => backupManager.BackupAllGames()
             });
             items.Add(new MainMenuItem
             {
-                Description = ResourceProvider.GetString("LOCLuduRestBrowseBackupSnapshots"),
+                Description = SafeLoc("LOCLuduRestBrowseBackupSnapshots", "Browse backup snapshots"),
                 MenuSection = root,
                 Action = a =>
                 {
-                    var ctx = new BackupContext(PlayniteApi, settings);
-                    var win = new BackupBrowserWindow(ctx);
-                    win.ShowDialog();
+                    ShowBackupBrowser();
                 }
             });
             items.Add(new MainMenuItem
             {
-                Description = ResourceProvider.GetString("LOCLuduRestMainMenuViewOverrides"),
+                Description = SafeLoc("LOCLuduRestMainMenuViewOverrides", "View games with custom backup settings"),
                 MenuSection = root,
                 Action = a => ShowOverridesSummary()
             });
@@ -148,48 +251,24 @@ namespace LudusaviRestic
         {
             try
             {
-                if (settings.GameSettings == null || settings.GameSettings.Count == 0 || !settings.GameSettings.Any(kv => kv.Value.OverrideGlobalSettings))
+                EnsureLocalizationLoaded();
+                var window = PlayniteApi.Dialogs.CreateWindow(new WindowCreationOptions
                 {
-                    PlayniteApi.Dialogs.ShowMessage(ResourceProvider.GetString("LOCLuduRestOverridesDialogNoGames"), ResourceProvider.GetString("LOCLuduRestOverridesDialogTitle"));
-                    return;
-                }
-
-                var lines = new List<string>();
-                foreach (var kv in settings.GameSettings.Where(k => k.Value.OverrideGlobalSettings))
-                {
-                    var game = PlayniteApi.Database.Games.Get(kv.Key);
-                    if (game != null)
-                    {
-                        lines.Add(game.Name);
-                    }
-                }
-
-                if (lines.Count == 0)
-                {
-                    PlayniteApi.Dialogs.ShowMessage(ResourceProvider.GetString("LOCLuduRestOverridesDialogNoGames"), ResourceProvider.GetString("LOCLuduRestOverridesDialogTitle"));
-                    return;
-                }
-
-                var listHeader = ResourceProvider.GetString("LOCLuduRestOverridesDialogListHeader");
-                var message = listHeader + "\n\n" + string.Join("\n", lines.OrderBy(l => l));
-                var clearPrompt = ResourceProvider.GetString("LOCLuduRestOverridesDialogClearAllPrompt");
-
-                var result = PlayniteApi.Dialogs.ShowMessage(message + "\n\n" + clearPrompt, ResourceProvider.GetString("LOCLuduRestOverridesDialogTitle"), System.Windows.MessageBoxButton.YesNo);
-                if (result == System.Windows.MessageBoxResult.Yes)
-                {
-                    var keys = settings.GameSettings.Where(k => k.Value.OverrideGlobalSettings).Select(k => k.Key).ToList();
-                    foreach (var k in keys)
-                    {
-                        settings.GameSettings.Remove(k);
-                    }
-                    SavePluginSettings(settings);
-                    PlayniteApi.Dialogs.ShowMessage(ResourceProvider.GetString("LOCLuduRestOverridesClearedMessage"), ResourceProvider.GetString("LOCLuduRestOverridesCleared"));
-                }
+                    ShowMaximizeButton = false,
+                    ShowMinimizeButton = false
+                });
+                window.Title = SafeLoc("LOCLuduRestOverridesWindowTitle", "Custom Backup Overrides");
+                window.Width = 700;
+                window.Height = 480;
+                var view = new OverridesSummaryView(this, PlayniteApi, settings);
+                window.Content = view;
+                window.Owner = PlayniteApi.Dialogs.GetCurrentAppWindow();
+                window.ShowDialog();
             }
             catch (Exception ex)
             {
-                logger.Error(ex, "Error showing overrides summary");
-                PlayniteApi.Dialogs.ShowErrorMessage(ex.Message, ResourceProvider.GetString("LOCLuduRestOverridesDialogTitle"));
+                logger.Error(ex, "Error showing overrides manager");
+                PlayniteApi.Dialogs.ShowErrorMessage(ex.Message, SafeLoc("LOCLuduRestOverridesDialogTitle", "Custom Backup Overrides"));
             }
         }
 
@@ -226,6 +305,48 @@ namespace LudusaviRestic
                     PlayniteApi.Database.Games.Update(g);
                 }
             }
+        }
+
+        private void ShowBackupBrowser(string gameFilter = null)
+        {
+            try
+            {
+                var ctx = new BackupContext(PlayniteApi, settings);
+                var window = PlayniteApi.Dialogs.CreateWindow(new WindowCreationOptions
+                {
+                    ShowMaximizeButton = true,
+                    ShowMinimizeButton = false
+                });
+                window.Title = gameFilter == null ? SafeLoc("LOCLuduRestBrowseBackupSnapshots", "Browse backup snapshots") : $"Backup Browser - {gameFilter}";
+                window.Height = 600;
+                window.Width = 800;
+                window.Content = new BackupBrowserView { DataContext = new BackupBrowserViewModel(ctx, gameFilter) };
+                window.Owner = PlayniteApi.Dialogs.GetCurrentAppWindow();
+                window.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Error opening backup browser");
+            }
+        }
+
+        public bool ShowPerGameSettings(Game game)
+        {
+            var view = new GameOverrideSettingsView(game, settings);
+            var saved = false;
+            view.CloseRequested += (s, ok) => { saved = ok; ((System.Windows.Window)System.Windows.Window.GetWindow(view)).Close(); };
+            var window = PlayniteApi.Dialogs.CreateWindow(new WindowCreationOptions
+            {
+                ShowMaximizeButton = false,
+                ShowMinimizeButton = false
+            });
+            window.Title = SafeLoc("LOCLuduRestPerGameWindowTitle", "Per-Game Backup Settings");
+            window.Height = 520;
+            window.Width = 660;
+            window.Content = view;
+            window.Owner = PlayniteApi.Dialogs.GetCurrentAppWindow();
+            window.ShowDialog();
+            return saved;
         }
     }
 }

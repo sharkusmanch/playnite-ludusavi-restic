@@ -14,27 +14,45 @@ namespace LudusaviRestic
         private readonly Game game;
         public string GameName => game.Name;
 
-        // Localization helper properties (fallback safe)
-        public string L_GameLabel => ResourceProvider.GetString("LOCLuduRestPerGameGameLabel") ?? "Game:";
-        public string L_WindowTitle => ResourceProvider.GetString("LOCLuduRestPerGameWindowTitle") ?? "Per-Game Backup Settings";
-        public string L_EnableCustom => ResourceProvider.GetString("LOCLuduRestPerGameEnableCustom") ?? "Enable custom settings for this game";
-        public string L_GroupBackupTriggers => ResourceProvider.GetString("LOCLuduRestPerGameGroupBackupTriggers") ?? "Backup Triggers";
-        public string L_BackupOnStop => ResourceProvider.GetString("LOCLuduRestPerGameBackupOnStopLabel") ?? "Backup when game stops";
-        public string L_BackupDuringGameplay => ResourceProvider.GetString("LOCLuduRestPerGameBackupDuringGameplayLabel") ?? "Backup during gameplay";
-        public string L_IntervalMinutes => ResourceProvider.GetString("LOCLuduRestPerGameIntervalMinutes") ?? "Interval (minutes):";
-        public string L_BackupOnUninstall => ResourceProvider.GetString("LOCLuduRestPerGameBackupOnUninstallLabel") ?? "Backup on uninstall";
-        public string L_GroupRetention => ResourceProvider.GetString("LOCLuduRestPerGameGroupRetention") ?? "Retention Overrides";
-        public string L_UseCustomRetention => ResourceProvider.GetString("LOCLuduRestPerGameUseCustomRetention") ?? "Use custom retention for this game";
-        public string L_KeepLast => ResourceProvider.GetString("LOCLuduRestPerGameKeepLast") ?? "Keep Last:";
-        public string L_KeepDaily => ResourceProvider.GetString("LOCLuduRestPerGameKeepDaily") ?? "Daily (days):";
-        public string L_KeepWeekly => ResourceProvider.GetString("LOCLuduRestPerGameKeepWeekly") ?? "Weekly (weeks):";
-        public string L_KeepMonthly => ResourceProvider.GetString("LOCLuduRestPerGameKeepMonthly") ?? "Monthly (months):";
-        public string L_KeepYearly => ResourceProvider.GetString("LOCLuduRestPerGameKeepYearly") ?? "Yearly (years):";
-        public string L_GroupCustomTags => ResourceProvider.GetString("LOCLuduRestPerGameGroupCustomTags") ?? "Custom Tags";
-        public string L_CustomTagsHelp => ResourceProvider.GetString("LOCLuduRestPerGameCustomTagsHelp") ?? "Comma separated tags to always add to this game's backups:";
-        public string L_Reset => ResourceProvider.GetString("LOCLuduRestPerGameReset") ?? "Reset";
-        public string L_Save => ResourceProvider.GetString("LOCLuduRestPerGameSave") ?? "Save";
-        public string L_Cancel => ResourceProvider.GetString("LOCLuduRestPerGameCancel") ?? "Cancel";
+        // Localization helper with robust fallback (ResourceProvider may return null OR empty string)
+        private string Loc(string key, string fallback)
+        {
+            try
+            {
+                var val = ResourceProvider.GetString(key);
+                // Playnite shows missing keys as <!KEY!>
+                if (string.IsNullOrWhiteSpace(val) || (val.StartsWith("<!") && val.EndsWith("!>")))
+                {
+                    return fallback;
+                }
+                return val;
+            }
+            catch
+            {
+                return fallback;
+            }
+        }
+
+        public string L_GameLabel => Loc("LOCLuduRestPerGameGameLabel", "Game:");
+        public string L_WindowTitle => Loc("LOCLuduRestPerGameWindowTitle", "Per-Game Backup Settings");
+        public string L_EnableCustom => Loc("LOCLuduRestPerGameEnableCustom", "Enable custom settings for this game");
+        public string L_GroupBackupTriggers => Loc("LOCLuduRestPerGameGroupBackupTriggers", "Backup Triggers");
+        public string L_BackupOnStop => Loc("LOCLuduRestPerGameBackupOnStopLabel", "Backup when game stops");
+        public string L_BackupDuringGameplay => Loc("LOCLuduRestPerGameBackupDuringGameplayLabel", "Backup during gameplay");
+        public string L_IntervalMinutes => Loc("LOCLuduRestPerGameIntervalMinutes", "Interval (minutes):");
+        public string L_BackupOnUninstall => Loc("LOCLuduRestPerGameBackupOnUninstallLabel", "Backup on uninstall");
+        public string L_GroupRetention => Loc("LOCLuduRestPerGameGroupRetention", "Retention Overrides");
+        public string L_UseCustomRetention => Loc("LOCLuduRestPerGameUseCustomRetention", "Use custom retention for this game");
+        public string L_KeepLast => Loc("LOCLuduRestPerGameKeepLast", "Keep Last:");
+        public string L_KeepDaily => Loc("LOCLuduRestPerGameKeepDaily", "Daily (days):");
+        public string L_KeepWeekly => Loc("LOCLuduRestPerGameKeepWeekly", "Weekly (weeks):");
+        public string L_KeepMonthly => Loc("LOCLuduRestPerGameKeepMonthly", "Monthly (months):");
+        public string L_KeepYearly => Loc("LOCLuduRestPerGameKeepYearly", "Yearly (years):");
+        public string L_GroupCustomTags => Loc("LOCLuduRestPerGameGroupCustomTags", "Custom Tags");
+        public string L_CustomTagsHelp => Loc("LOCLuduRestPerGameCustomTagsHelp", "Comma separated tags to always add to this game's backups:");
+        public string L_Reset => Loc("LOCLuduRestPerGameReset", "Reset");
+        public string L_Save => Loc("LOCLuduRestPerGameSave", "Save");
+        public string L_Cancel => Loc("LOCLuduRestPerGameCancel", "Cancel");
 
         private bool overrideGlobalSettings;
         public bool OverrideGlobalSettings { get => overrideGlobalSettings; set { overrideGlobalSettings = value; OnPropertyChanged(); } }

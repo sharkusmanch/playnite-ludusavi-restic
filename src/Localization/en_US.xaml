@@ -301,6 +301,12 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestOverridesDialogClearAllPrompt">Clear all custom settings for these games? (Yes = clear, No = keep)</sys:String>
     <sys:String x:Key="LOCLuduRestOverridesCleared">Overrides Cleared</sys:String>
     <sys:String x:Key="LOCLuduRestOverridesClearedMessage">All custom per-game backup settings have been removed.</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesWindowTitle">Custom Backup Overrides</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesListHeader">Games with custom backup settings</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesClearAll">Clear All</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesRemove">Remove</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesEdit">Edit</sys:String>
+    <sys:String x:Key="LOCLuduRestOverridesRefresh">Refresh</sys:String>
 
     <!-- Per-game settings dialog new localized strings -->
     <sys:String x:Key="LOCLuduRestPerGameHeader">Backup Settings for: {0}</sys:String>
@@ -342,7 +348,6 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestPerGameRetentionKeepWeeklyPrompt">Keep Weekly (0 = disable):</sys:String>
     <sys:String x:Key="LOCLuduRestPerGameRetentionKeepMonthlyPrompt">Keep Monthly (0 = disable):</sys:String>
     <sys:String x:Key="LOCLuduRestPerGameRetentionKeepYearlyPrompt">Keep Yearly (0 = disable):</sys:String>
-    <sys:String x:Key="LOCLuduRestPerGamePromptCustomRetentionTitle">Retention Settings</sys:String>
     <sys:String x:Key="LOCLuduRestPerGameErrorRetention">Error configuring retention: {0}</sys:String>
     <!-- Per-game settings window UI labels -->
     <sys:String x:Key="LOCLuduRestPerGameWindowTitle">Per-Game Backup Settings</sys:String>

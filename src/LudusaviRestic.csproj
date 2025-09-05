@@ -32,9 +32,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Localization/*.xaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <!-- Localization dictionaries: use None + Always copy to ensure physical presence in plugin root for Playnite to auto-load -->
+    <None Include="Localization\*.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 
