@@ -25,7 +25,7 @@ jobs:
           dotnet build src -c Release
           playnite/Toolbox.exe pack src/bin/Release/net462/ dist
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: artifacts
           path: |
@@ -46,7 +46,7 @@ jobs:
           cmd: yq '.Version' extension.yaml
 
       - name: Pull artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: artifacts
 
