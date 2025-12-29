@@ -18,8 +18,8 @@
     <sys:String x:Key="LOCLuduRestRepoPath">Chemin d'accès au référentiel Restic</sys:String>
 
     <sys:String x:Key="LOCLuduRestRepoPass">Mot de passe du référentiel Restic</sys:String>
-    <sys:String x:Key="LOCLuduRestShow">Show</sys:String>
-    <sys:String x:Key="LOCLuduRestHide">Hide</sys:String>
+    <sys:String x:Key="LOCLuduRestShow">Afficher</sys:String>
+    <sys:String x:Key="LOCLuduRestHide">Masquer</sys:String>
 
     <sys:String x:Key="LOCLuduRestRcloneConf">Configuration Rclone</sys:String>
 
