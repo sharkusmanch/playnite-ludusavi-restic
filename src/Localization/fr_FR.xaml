@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Sauvegarde pendant le jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Sauvegarder en cours de jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Sauvegarde à l'arrêt du jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Sauvegarder à l’arrêt du jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Demander une balise de sauvegarde lorsque le jeu s'arrête</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Solliciter une étiquette de sauvegarde à l’arrêt du jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Balise de sauvegarde du jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Étiquette de sauvegarde du jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Entrez la balise de sauvegarde pour</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Saisissez l’étiquette de sauvegarde pour</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervalle de sauvegarde en jeu (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervalle de sauvegarde en cours de jeu (en minutes)</sys:String>
 
     <sys:String x:Key="LOCLuduRestBrowse">Parcourir</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Chemin d'accès au référentiel Restic</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Chemin d’accès au dépôt Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Mot de passe du référentiel Restic</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Mot de passe du dépôt Restic</sys:String>
     <sys:String x:Key="LOCLuduRestShow">Afficher</sys:String>
     <sys:String x:Key="LOCLuduRestHide">Masquer</sys:String>
 
@@ -27,23 +27,23 @@
 
     <sys:String x:Key="LOCLuduRestVerify">Vérifier</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Chemin de l'exécutable Restic</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Chemin d’accès à l’exécutable Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Chemin de l'exécutable Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Chemin d’accès à l’exécutable Ludusavi</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Sauvegarde</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabRepo">Dépôt</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Ajoutez des balises supplémentaires aux instantanés pour différencier les événements</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Ajouter des étiquettes supplémentaires aux sauvegardes en fonction des circonstances</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Balise de sauvegarde manuelle</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Étiquette de sauvegarde manuelle</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Balise de sauvegarde du jeu arrêté</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Étiquette de sauvegarde à l’arrêt du jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Balise de sauvegarde en jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Étiquette de sauvegarde en cours de jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Créer un instantané de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Créer une copie des fichiers de sauvegarde</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Ajouter une balise d'inclusion de sauvegarde</sys:String>
 
@@ -86,8 +86,8 @@ Mode Inclure : Aucun jeu n'est sauvegardé. Les jeux peuvent avoir la balise d'
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Please specify the path to ludusavi executable.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Yes</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryNo">No</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Oui</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryNo">Non</sys:String>
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">View backup snapshots</sys:String>
@@ -163,7 +163,7 @@ This appears to be your first time using the extension or your configuration is 
     <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic is not configured yet. Would you like to run the setup wizard?</sys:String>
     <sys:String x:Key="LOCLuduRestInvalidConfiguration">Invalid Configuration</sys:String>
     <sys:String x:Key="LOCLuduRestInvalidResticMessage">The configured restic executable is not valid or accessible. Would you like to run the setup wizard to fix this?</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupComplete">Setup Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupComplete">Configuration terminée</sys:String>
     <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Setup completed successfully! You can now use all backup features.</sys:String>
 
     <!-- Backup browser -->
@@ -275,8 +275,8 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Please specify the repository path.</sys:String>
     <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Please enter a repository password.</sys:String>
     <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Passwords do not match.</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryYes">Yes</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryNo">No</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryYes">Oui</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryNo">Non</sys:String>
 
     <!-- Progress and initialization messages -->
     <sys:String x:Key="LOCLuduRestInitializingRepository">Initializing repository...</sys:String>
