@@ -136,9 +136,7 @@
                         <StackPanel Margin="15">
                             <CheckBox IsChecked="{Binding EnableRetentionPolicy}" Content="{DynamicResource LOCLuduRestEnableRetentionPolicy}"
                                 Checked="OnRetentionPolicyChecked" Unchecked="OnRetentionPolicyUnchecked" />
-                            <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" FontStyle="Italic">
-                                {DynamicResource LOCLuduRestRetentionPolicyHelp}
-                            </TextBlock>
+                            <TextBlock Margin="10,10,0,0" TextWrapping="Wrap" FontStyle="Italic" Text="{DynamicResource LOCLuduRestRetentionPolicyHelp}" />
                         </StackPanel>
 
                         <StackPanel Margin="15">
