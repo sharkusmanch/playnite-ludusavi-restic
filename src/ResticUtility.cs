@@ -43,6 +43,15 @@ namespace LudusaviRestic
             var currentDir = Directory.GetCurrentDirectory();
             candidatePaths.Add(Path.Combine(currentDir, "restic.exe"));
 
+            // 6. Check common Backrest installation paths
+            var localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            candidatePaths.Add(Path.Combine(localAppData, "Programs", "Backrest", "restic.exe"));
+            candidatePaths.Add(Path.Combine(programFiles, "Backrest", "restic.exe"));
+            // Since Playnite is currently a 32-bit application, programFiles points to "C:\Program Files (x86)";
+            // using the %ProgramW6432% environment variable allows searching in "C:\Program Files"
+            var programFiles64 = Environment.ExpandEnvironmentVariables("%ProgramW6432%");
+            candidatePaths.Add(Path.Combine(programFiles64, "Backrest", "restic.exe"));
+
             foreach (var path in candidatePaths)
             {
                 if (IsValidResticExecutable(path))
