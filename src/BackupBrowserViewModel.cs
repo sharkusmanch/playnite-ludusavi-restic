@@ -208,8 +208,8 @@ namespace LudusaviRestic
                 var deleteResult = ResticCommand.ForgetSnapshot(context, SelectedSnapshot.Id);
                 if (deleteResult.ExitCode == 0)
                 {
-                    Snapshots.Remove(SelectedSnapshot);
                     allSnapshots.Remove(SelectedSnapshot);
+                    Snapshots.Remove(SelectedSnapshot);
                     SelectedSnapshot = null;
                     context.API.Dialogs.ShowMessage(ResourceProvider.GetString("LOCLuduRestSnapshotDeletedSuccessfully"), ResourceProvider.GetString("LOCLuduRestSuccess"));
                 }
