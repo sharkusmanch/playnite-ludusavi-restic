@@ -40,7 +40,7 @@
                   AlternationCount="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="{DynamicResource LOCLuduRestSnapshotIdHeader}" Binding="{Binding ShortId}" Width="80"/>
-                <DataGridTextColumn Header="{DynamicResource LOCLuduRestDateHeader}" Binding="{Binding Date, StringFormat='yyyy-MM-dd HH:mm:ss'}" Width="150"/>
+                <DataGridTextColumn Header="{DynamicResource LOCLuduRestDateTimeHeader}" Binding="{Binding Date, StringFormat='yyyy-MM-dd HH:mm:ss'}" Width="150"/>
                 <DataGridTextColumn Header="{DynamicResource LOCLuduRestTagsHeader}" Binding="{Binding TagsDisplay}" Width="*"/>
             </DataGrid.Columns>
             <DataGrid.RowStyle>
