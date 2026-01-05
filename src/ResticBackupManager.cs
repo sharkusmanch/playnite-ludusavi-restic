@@ -73,6 +73,14 @@ namespace LudusaviRestic
 
         public void PerformManualBackup(Game game)
         {
+            IList<Game> games = new List<Game>();
+            games.Add(game);
+
+            PerformManualBackup(games);
+        }
+
+        public void PerformManualBackup(IList<Game> games)
+        {
             var tags = ManualBackupTags();
             // Prompt user for an optional custom tag
             var result = this.context.API.Dialogs.SelectString(
@@ -84,7 +92,10 @@ namespace LudusaviRestic
             {
                 tags.Add(result.SelectedString.Trim());
             }
-            PerformBackup(game, tags);
+            foreach (var game in games)
+            {
+                PerformBackup(game, tags);
+            }
         }
 
         public void PerformGameplayBackup(Game game)
