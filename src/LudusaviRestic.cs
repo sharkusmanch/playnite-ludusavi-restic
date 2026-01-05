@@ -222,9 +222,9 @@ namespace LudusaviRestic
                     MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
 
                     Action = args => {
-                        foreach (var game in args.Games)
+                        if (CheckConfiguration() && args.Games.Count > 0)
                         {
-                            this.manager.PerformManualBackup(game);
+                            this.manager.PerformManualBackup(args.Games);
                         }
                     }
                 },
