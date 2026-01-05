@@ -1,5 +1,16 @@
 AddonId: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
 Packages:
+  - Version: 1.1.0
+    RequiredApiVersion: 6.14.0
+    ReleaseDate: 2026-01-05
+    PackageUrl: https://github.com/sharkusmanch/playnite-ludusavi-restic/releases/download/v1.1.0/LudusaviRestic_v1.1.0.pext
+    Changelog:
+      - Fix retention policy help text not being interpolated (thanks @Lynilia)
+      - Fix deleted snapshots reappearing when changing filter in backup browser (thanks @Lynilia)
+      - Fix manual backup prompting for snapshot tag for each game when multiple selected (thanks @Lynilia)
+      - Add Backrest installation paths to restic executable auto-detection (thanks @Lynilia)
+      - Change Date column header to Date/Time in backup browser (thanks @Lynilia)
+      - Update PlayniteSDK to 6.14.0
   - Version: 1.0.0
     RequiredApiVersion: 6.12.0
     ReleaseDate: 2025-09-01
