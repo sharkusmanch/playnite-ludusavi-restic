@@ -17,9 +17,11 @@ jobs:
           latest: true
           tarBall: false
           zipBall: false
-          fileName: "Playnite*.zip"
+          fileName: "*.7z"
           out-file-path: playnite
-          extract: true
+
+      - name: Extract Playnite
+        run: 7z x playnite/*.7z -oplaynite
 
       - run: |
           dotnet build src -c Release
