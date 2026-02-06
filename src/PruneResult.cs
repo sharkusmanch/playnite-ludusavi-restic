@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
+using Playnite.SDK;
 
 namespace LudusaviRestic
 {
@@ -59,6 +60,7 @@ namespace LudusaviRestic
 
     public static class PruneResultParser
     {
+        private static readonly ILogger logger = LogManager.GetLogger();
         public static PruneResult ParsePruneOutput(CommandResult result, bool isDryRun = false)
         {
             var pruneResult = new PruneResult
@@ -180,22 +182,26 @@ namespace LudusaviRestic
 
         private static void ParseForgetSnapshots(PruneResult result, string output)
         {
+            logger.Debug($"ParseForgetSnapshots: output length={output?.Length ?? 0}, starts with='{output?.Substring(0, Math.Min(100, output?.Length ?? 0))}'");
             try
             {
                 // Try to parse as JSON first
                 if (output.Trim().StartsWith("{") || output.Trim().StartsWith("["))
                 {
+                    logger.Debug("ParseForgetSnapshots: detected JSON, using JSON parser");
                     ParseForgetSnapshotsJson(result, output);
                 }
                 else
                 {
                     // Fallback to text parsing for non-JSON output
+                    logger.Debug("ParseForgetSnapshots: no JSON detected, using text parser");
                     ParseForgetSnapshotsText(result, output);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 // If JSON parsing fails, fall back to text parsing
+                logger.Error(ex, "ParseForgetSnapshots: JSON parsing failed, falling back to text parser");
                 ParseForgetSnapshotsText(result, output);
             }
 
@@ -209,58 +215,80 @@ namespace LudusaviRestic
 
         private static void ParseForgetSnapshotsJson(PruneResult result, string output)
         {
-            // Parse JSON output from restic forget --json
-            var lines = output.Split('\n').Where(l => l.Trim().StartsWith("{")).ToArray();
+            // restic forget --json outputs a JSON array of ForgetGroups:
+            // [{"tags":[...],"keep":[{snapshot...}],"remove":[{snapshot...}],"reasons":[...]}]
+            // With --prune, output may be JSON array followed by text prune output.
+            // Extract the JSON array portion first.
+            var jsonPart = ExtractJsonArray(output);
+            logger.Debug($"ParseForgetSnapshotsJson: ExtractJsonArray returned {(jsonPart == null ? "null" : $"{jsonPart.Length} chars")}");
+            if (jsonPart == null) return;
 
-            foreach (var line in lines)
+            try
             {
-                try
+                var groups = JArray.Parse(jsonPart);
+                logger.Debug($"ParseForgetSnapshotsJson: parsed {groups.Count} ForgetGroups");
+                foreach (var group in groups)
                 {
-                    var jsonOutput = JObject.Parse(line);
+                    var removeArray = group["remove"] as JArray;
+                    logger.Debug($"ParseForgetSnapshotsJson: group tags={group["tags"]}, remove count={removeArray?.Count ?? 0}, keep count={(group["keep"] as JArray)?.Count ?? 0}");
+                    if (removeArray == null) continue;
 
-                    // Check for "remove" action in the JSON
-                    if (jsonOutput["action"]?.ToString() == "remove")
+                    foreach (var snapshot in removeArray)
                     {
-                        var snapshot = jsonOutput["snapshot"];
-                        if (snapshot != null)
+                        var deletedSnapshot = new DeletedSnapshot
                         {
-                            var deletedSnapshot = new DeletedSnapshot
-                            {
-                                Id = snapshot["id"]?.ToString(),
-                                ShortId = snapshot["short_id"]?.ToString() ?? snapshot["id"]?.ToString()?.Substring(0, 8),
-                                Host = snapshot["hostname"]?.ToString()
-                            };
+                            Id = snapshot["id"]?.ToString(),
+                            ShortId = snapshot["short_id"]?.ToString() ?? snapshot["id"]?.ToString()?.Substring(0, 8),
+                            Host = snapshot["hostname"]?.ToString()
+                        };
 
-                            // Parse time
-                            if (DateTime.TryParse(snapshot["time"]?.ToString(), out DateTime time))
-                            {
-                                deletedSnapshot.Time = time;
-                            }
-
-                            // Parse tags
-                            var tags = snapshot["tags"]?.ToObject<List<string>>();
-                            if (tags != null && tags.Count > 0)
-                            {
-                                deletedSnapshot.Tags = tags;
-                                deletedSnapshot.GameName = tags[0]; // First tag is the game name
-                            }
-
-                            // Parse paths
-                            var paths = snapshot["paths"]?.ToObject<List<string>>();
-                            if (paths != null)
-                            {
-                                deletedSnapshot.Paths = paths;
-                            }
-
-                            result.DeletedSnapshots.Add(deletedSnapshot);
+                        if (DateTime.TryParse(snapshot["time"]?.ToString(), out DateTime time))
+                        {
+                            deletedSnapshot.Time = time;
                         }
+
+                        var tags = snapshot["tags"]?.ToObject<List<string>>();
+                        if (tags != null && tags.Count > 0)
+                        {
+                            deletedSnapshot.Tags = tags;
+                            deletedSnapshot.GameName = tags[0];
+                        }
+
+                        var paths = snapshot["paths"]?.ToObject<List<string>>();
+                        if (paths != null)
+                        {
+                            deletedSnapshot.Paths = paths;
+                        }
+
+                        result.DeletedSnapshots.Add(deletedSnapshot);
                     }
                 }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine($"Error parsing forget JSON line: {ex.Message}");
-                }
             }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error parsing forget JSON: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Extracts the JSON array portion from output that may contain mixed JSON and text
+        /// (e.g. restic forget --prune --json outputs JSON array then text prune output).
+        /// </summary>
+        private static string ExtractJsonArray(string output)
+        {
+            int start = output.IndexOf('[');
+            if (start < 0) return null;
+
+            int depth = 0;
+            for (int i = start; i < output.Length; i++)
+            {
+                if (output[i] == '[') depth++;
+                else if (output[i] == ']') depth--;
+
+                if (depth == 0)
+                    return output.Substring(start, i - start + 1);
+            }
+            return null;
         }
 
         private static void ParseForgetSnapshotsText(PruneResult result, string output)
@@ -345,6 +373,39 @@ namespace LudusaviRestic
             {
                 result.DeletedSnapshots.Add(currentSnapshot);
             }
+        }
+
+        public static PruneResult MergeForgetResults(IList<CommandResult> results, bool isDryRun)
+        {
+            logger.Debug($"MergeForgetResults: merging {results.Count} results, isDryRun={isDryRun}");
+            var merged = new PruneResult
+            {
+                Success = true,
+                IsDryRun = isDryRun,
+                RawOutput = ""
+            };
+
+            foreach (var result in results)
+            {
+                var parsed = ParseForgetOutput(result, isDryRun);
+                logger.Debug($"MergeForgetResults: parsed result - success={parsed.Success}, deleted={parsed.SnapshotsDeleted}");
+                merged.DeletedSnapshots.AddRange(parsed.DeletedSnapshots);
+                merged.RawOutput += parsed.RawOutput + "\n";
+                if (!parsed.Success)
+                {
+                    merged.Success = false;
+                }
+            }
+
+            merged.SnapshotsDeleted = merged.DeletedSnapshots.Count;
+            merged.GamesAffected = merged.DeletedSnapshots
+                .Where(s => !string.IsNullOrEmpty(s.GameName))
+                .Select(s => s.GameName)
+                .Distinct()
+                .Count();
+
+            logger.Debug($"MergeForgetResults: total deleted={merged.SnapshotsDeleted}, games affected={merged.GamesAffected}");
+            return merged;
         }
 
         private static void ParseDataDeleted(PruneResult result, string output)

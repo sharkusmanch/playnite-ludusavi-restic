@@ -190,7 +190,17 @@
                             <DataGridTextColumn Header="{DynamicResource LOCLuduRestGameNameHeader}"
                                                 Binding="{Binding GameName}" IsReadOnly="True" Width="*" />
                             <DataGridTextColumn Header="{DynamicResource LOCLuduRestOverrideIntervalHeader}"
-                                                Binding="{Binding IntervalMinutes}" Width="120" />
+                                                Binding="{Binding IntervalMinutes}" Width="100" />
+                            <DataGridTextColumn Header="{DynamicResource LOCLuduRestOverrideKeepLastHeader}"
+                                                Binding="{Binding KeepLast}" Width="80" />
+                            <DataGridTextColumn Header="{DynamicResource LOCLuduRestOverrideKeepDailyHeader}"
+                                                Binding="{Binding KeepDaily}" Width="80" />
+                            <DataGridTextColumn Header="{DynamicResource LOCLuduRestOverrideKeepWeeklyHeader}"
+                                                Binding="{Binding KeepWeekly}" Width="80" />
+                            <DataGridTextColumn Header="{DynamicResource LOCLuduRestOverrideKeepMonthlyHeader}"
+                                                Binding="{Binding KeepMonthly}" Width="80" />
+                            <DataGridTextColumn Header="{DynamicResource LOCLuduRestOverrideKeepYearlyHeader}"
+                                                Binding="{Binding KeepYearly}" Width="80" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </DockPanel>

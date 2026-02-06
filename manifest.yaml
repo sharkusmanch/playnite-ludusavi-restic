@@ -5,6 +5,7 @@ Packages:
     ReleaseDate: 2026-02-05
     PackageUrl: https://github.com/sharkusmanch/playnite-ludusavi-restic/releases/download/v1.2.0/LudusaviRestic_v1.2.0.pext
     Changelog:
+      - Add per-game backup interval overrides with settings tab and game context menu
       - Remove non-functional restore menu items (fixes #77)
   - Version: 1.1.0
     RequiredApiVersion: 6.14.0
