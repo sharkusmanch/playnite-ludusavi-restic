@@ -15,7 +15,6 @@
         <!-- Toolbar -->
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
             <Button Content="{DynamicResource LOCLuduRestRefresh}" Command="{Binding RefreshCommand}" Margin="0,0,10,0" Padding="10,5"/>
-            <Button Content="{DynamicResource LOCLuduRestRestoreSelected}" Command="{Binding RestoreSnapshotCommand}" Margin="0,0,10,0" Padding="10,5" IsEnabled="{Binding SelectedSnapshot}"/>
             <Button Content="{DynamicResource LOCLuduRestDeleteSelected}" Command="{Binding DeleteSnapshotCommand}" Margin="0,0,10,0" Padding="10,5"/>
             <Label Content="{DynamicResource LOCLuduRestFilterByGame}" VerticalAlignment="Center" Margin="10,0,5,0"/>
             <ComboBox ItemsSource="{Binding GameFilters}"
