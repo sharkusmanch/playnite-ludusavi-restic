@@ -69,9 +69,9 @@
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Λειτουργία Συμπερίληψης</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Include Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Συμπερίληψη αντιγράφων ασφαλείας</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Εξαίρεση αντιγράφων ασφαλείας</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Δημιουργία αντιγράφου ασφαλείας όταν το παιχνίδι απεγκατασταθεί</sys:String>
 
