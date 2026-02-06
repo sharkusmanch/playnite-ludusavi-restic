@@ -63,5 +63,53 @@ namespace LudusaviRestic.Tests
 
             Assert.Empty(files);
         }
+
+        [Fact]
+        public void NormalizePath_UncExtendedPrefix_StrippedToStandardUnc()
+        {
+            var result = BaseBackupTask.NormalizePath(@"\\?\UNC\SERVER\Share\path\file.txt");
+
+            Assert.Equal(@"\\SERVER\Share\path\file.txt", result);
+        }
+
+        [Fact]
+        public void NormalizePath_UncExtendedWithForwardSlashes_Normalized()
+        {
+            var result = BaseBackupTask.NormalizePath("\\\\?\\UNC\\SERVER\\Share/games/save/data.dat");
+
+            Assert.Equal(@"\\SERVER\Share\games\save\data.dat", result);
+        }
+
+        [Fact]
+        public void NormalizePath_LocalExtendedPrefix_Stripped()
+        {
+            var result = BaseBackupTask.NormalizePath(@"\\?\C:\Users\test\saves\game.dat");
+
+            Assert.Equal(@"C:\Users\test\saves\game.dat", result);
+        }
+
+        [Fact]
+        public void NormalizePath_ForwardSlashes_ConvertedToBackslashes()
+        {
+            var result = BaseBackupTask.NormalizePath("C:/Users/test/saves/game.dat");
+
+            Assert.Equal(@"C:\Users\test\saves\game.dat", result);
+        }
+
+        [Fact]
+        public void NormalizePath_StandardPath_Unchanged()
+        {
+            var result = BaseBackupTask.NormalizePath(@"C:\Users\test\saves\game.dat");
+
+            Assert.Equal(@"C:\Users\test\saves\game.dat", result);
+        }
+
+        [Fact]
+        public void NormalizePath_StandardUncPath_Unchanged()
+        {
+            var result = BaseBackupTask.NormalizePath(@"\\SERVER\Share\path\file.txt");
+
+            Assert.Equal(@"\\SERVER\Share\path\file.txt", result);
+        }
     }
 }

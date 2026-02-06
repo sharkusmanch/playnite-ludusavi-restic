@@ -71,6 +71,25 @@ namespace LudusaviRestic
         }
 
 
+        internal static string NormalizePath(string path)
+        {
+            // Normalize forward slashes to backslashes (ludusavi uses forward slashes)
+            path = path.Replace('/', '\\');
+
+            // Strip extended-length UNC prefix: \\?\UNC\server\share → \\server\share
+            if (path.StartsWith("\\\\?\\UNC\\"))
+            {
+                path = "\\\\" + path.Substring(8);
+            }
+            // Strip extended-length local prefix: \\?\C:\path → C:\path
+            else if (path.StartsWith("\\\\?\\"))
+            {
+                path = path.Substring(4);
+            }
+
+            return path;
+        }
+
         private static string WriteFilesToTempFile(IList<string> files)
         {
             string listfile = System.IO.Path.GetTempFileName();
@@ -80,7 +99,7 @@ namespace LudusaviRestic
 
             foreach (string filename in files)
             {
-                listfilewriter.WriteLine(filename);
+                listfilewriter.WriteLine(NormalizePath(filename));
             }
             listfilewriter.Flush();
             listfilewriter.Close();
