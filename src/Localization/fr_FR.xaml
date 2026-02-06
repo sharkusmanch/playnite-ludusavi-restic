@@ -61,9 +61,9 @@
 
     <sys:String x:Key="LOCLuduRestBackupMode">Mode de sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Exclude Mode: All games are eligible to backup by default. Games can have the exclude tag added to prevent backing up.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Mode Exclusion : Tous les jeux sont inclus dans la sauvegarde par défaut. Il est possible d'ajouter une étiquette d'exclusion à un jeu pour l'empêcher d'être sauvegardé.
 
-Include Mode: No games are backed up. Games can have the include tag added to be eligible for backup.</sys:String>
+Mode Inclusion : Aucun jeu n'est sauvegardé. Il est possible d'ajouter une étiquette d'inclusion à un jeu pour l'inclure dans la sauvegarde.</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Mode Exclure</sys:String>
 
@@ -137,21 +137,21 @@ Include Mode: No games are backed up. Games can have the include tag added to be
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Course à sec terminée. Les instantanés {0} seront supprimés. Voulez-vous procéder à la taille réelle ?</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Séchage terminé. Les instantanés {0} seront supprimés. Voulez-vous poursuivre l'application de la politique de rétention ?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">Procéder à la politique de rétention ?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Cette opération supprimera les anciens instantanés conformément à votre politique de rétention :
 
-• Keep last {0} snapshots
-• Keep daily snapshots for {1} days
-• Keep weekly snapshots for {2} weeks
-• Keep monthly snapshots for {3} months
-• Keep yearly snapshots for {4} years
+• Conserver les {0} derniers instantanés
+• Conserver les instantanés quotidiens pendant {1} jours
+• Conserver les instantanés hebdomadaires pendant {2} semaines
+• Conserver les instantanés mensuels pendant {3} mois
+• Conserver les instantanés annuels pendant {4} ans
 
-Would you like to perform a dry run first to see what would be deleted?</sys:String>
+Souhaitez-vous effectuer une simulation au préalable pour voir ce qui serait supprimé ?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Aperçu terminé. Les instantanés {0} seront supprimés selon la politique de rétention. Voulez-vous continuer la suppression?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">Procéder à la suppression ?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">Nettoyer le dépôt</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is irreversible.
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">L'élagage supprimera les blocs de données inutilisés du référentiel. Cette opération est irréversible.
 
-Would you like to perform a dry run first to see what would be removed before actually deleting data?</sys:String>
+Souhaitez-vous effectuer une simulation au préalable pour visualiser les données qui seraient supprimées ?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Séchage terminé. Cette opération supprimera les données inutilisées du référentiel. Voulez-vous procéder à l'épuration réelle ?</sys:String>
 
     <!-- Welcome and setup -->
@@ -200,11 +200,11 @@ Cela semble être votre première utilisation de l'extension ou votre configurat
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Garder des instantanés annuels pendant N ans :</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Garder un instantané par an pendant autant d'années</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exemple avec les paramètres par défaut :</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
-• Plus 1 snapshot per day for 7 days
-• Plus 1 snapshot per week for 4 weeks
-• Plus 1 snapshot per month for 12 months
-• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample">• Conserver les 10 derniers instantanés
+• Ajouter 1 instantané par jour pendant 7 jours
+• Ajouter 1 instantané par semaine pendant 4 semaines
+• Ajouter 1 instantané par mois pendant 12 mois
+• Ajouter 1 instantané par an pendant 5 ans</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Résultats d'agrandissement</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Des informations sommaires apparaîtront ici</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Instantanés supprimés</sys:String>
