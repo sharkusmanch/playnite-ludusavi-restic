@@ -239,6 +239,28 @@ Trieu Sí per utilitzar la carpeta suggerida, No per triar-ne una altra o Cancel
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(cap)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">No es pot determinar l'etiqueta de nom del joc per a aquesta instantània.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Substitucions de joc</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Substitueix l'interval de còpia de seguretat del joc i la política de retenció per a jocs específics. Els jocs que no figuren a la llista utilitzen els valors predeterminats globals. Afegeix substitucions des del menú contextual del joc. Els camps de retenció en blanc estan desactivats (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Mantenir l'últim</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Mantenir diàriament</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Mantenir setmanalment</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Mantenir mensualment</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Mantenir anualment</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Elimina la selecció</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Estableix l'interval de còpia de seguretat</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Substitució de l'interval de còpia de seguretat</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Introduïu l'interval de còpia de seguretat en minuts per a {0} (actual: {1}, predeterminat global: {2}). Deixeu-ho en blanc per eliminar la substitució.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Estableix la política de retenció</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Substitució de la política de retenció</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Defineix valors per anul·lar la política de retenció global per a aquest joc. Els camps en blanc estan desactivats (definits a 0), de manera que només s'aplicaran els valors que especifiques.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Desa</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Cancel·la</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} joc(s) tenen anul·lacions de retenció per joc.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Instantànies de llistat...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">No s'han trobat instantànies al repositori.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Assistent de configuració</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Còpia de seguretat de tots els jocs</sys:String>
@@ -286,6 +308,9 @@ Trieu Sí per utilitzar la carpeta suggerida, No per triar-ne una altra o Cancel
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">S'està comprovant la integritat del repositori...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Executant una prova de pruna seca...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">S'estan retallant les dades no utilitzades...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Repositori de poda...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">L'aplicació de la política de retenció ha fallat per a un o més jocs. Consulteu la sortida en brut per obtenir més informació.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">No s'eliminarà cap instantània. Totes les instantànies coincideixen amb la política de retenció actual.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Comprovació de la integritat del repositori amb la verificació de dades...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">No s'ha pogut inicialitzar el repositori. Consulteu els registres per obtenir més informació.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Error d'inicialització</sys:String>
