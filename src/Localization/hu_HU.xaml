@@ -239,6 +239,28 @@ Válassza az Igen lehetőséget a javasolt mappa használatához, a Nem lehetős
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(egyik sem)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Nem lehet meghatározni a játék nevét ehhez a pillanatképhez.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Játékfelülírások</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Felülírhatja a játékmenet biztonsági mentési időközét és megőrzési szabályzatát adott játékokra vonatkozóan. A listán nem szereplő játékok a globális alapértelmezett beállításokat használják. Felülírásokat adhat hozzá a játék jobb gombbal elérhető menüjéből. Az üres megőrzési mezők le vannak tiltva (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Intervallum (perc)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Tartsa az utolsót</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Naponta tartandó</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Heti rendszerességgel</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Havonta megtartandó</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Évente tartandó</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Kijelölt eltávolítása</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Biztonsági mentési időköz beállítása</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Biztonsági mentési intervallum felülbírálása</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Adja meg a biztonsági mentések időközét percben a {0} értékhez (jelenlegi: {1}, globális alapértelmezett: {2}). Hagyja üresen a felülírás eltávolításához.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Megőrzési szabályzat beállítása</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Megőrzési szabályzat felülbírálása</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Állítson be értékeket a játék globális adatmegőrzési szabályzatának felülírásához. Az üres mezők le vannak tiltva (0-ra vannak állítva), így csak a megadott értékek lesznek érvényesek.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Megtakarítás</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Mégsem</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} játék(ok) játékonkénti adatmegőrzési felülbírálatokkal rendelkeznek.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Pillanatképek listázása...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Nem találhatók pillanatképek a tárházban.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Beállítóvarázsló</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Az összes játék biztonsági mentése</sys:String>
@@ -286,6 +308,9 @@ Válassza az Igen lehetőséget a javasolt mappa használatához, a Nem lehetős
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">A tárház integritásának ellenőrzése...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Száraz futás aszalt szilvával...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Nem használt adatok törlése...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Adattár metszése...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Egy vagy több játék adatmegőrzési szabályzatának alkalmazása sikertelen. A részletekért tekintse meg a nyers kimenetet.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Egyetlen pillanatkép sem törlődik. Minden pillanatkép megfelel a jelenlegi adatmegőrzési szabályzatnak.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Adattár integritásának ellenőrzése adatellenőrzéssel...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Nem sikerült inicializálni a tárházat. Kérjük, ellenőrizze a naplókat a részletekért.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Inicializálási hiba</sys:String>
