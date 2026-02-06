@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Threading.Tasks;
@@ -28,6 +30,10 @@ namespace LudusaviRestic
                     if (RclonePasswordBox != null)
                     {
                         RclonePasswordBox.Password = this.plugin.settings.RcloneConfigPassword ?? string.Empty;
+                    }
+                    if (OverridesDataGrid != null)
+                    {
+                        RefreshOverridesGrid();
                     }
                 }
                 catch (Exception ex)
@@ -145,6 +151,88 @@ namespace LudusaviRestic
             KeepWeekly.IsEnabled = false;
             KeepMonthly.IsEnabled = false;
             KeepYearly.IsEnabled = false;
+        }
+
+        private void RefreshOverridesGrid()
+        {
+            var items = this.plugin.settings.GameIntervalOverrides.Select(kvp =>
+            {
+                var item = kvp.Value;
+                item.GameId = kvp.Key;
+                return item;
+            }).ToList();
+            OverridesDataGrid.ItemsSource = items;
+        }
+
+        public void OnRemoveOverride(object sender, RoutedEventArgs e)
+        {
+            if (OverridesDataGrid.SelectedItem is GameOverride selected && selected.GameId != null)
+            {
+                this.plugin.settings.GameIntervalOverrides.Remove(selected.GameId);
+                RefreshOverridesGrid();
+            }
+        }
+
+        private void OnOverrideCellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            if (e.EditAction == DataGridEditAction.Commit && e.Row.Item is GameOverride item && item.GameId != null)
+            {
+                var textBox = e.EditingElement as System.Windows.Controls.TextBox;
+                if (textBox == null) return;
+
+                int columnIndex = e.Column.DisplayIndex;
+                var target = this.plugin.settings.GameIntervalOverrides[item.GameId];
+
+                if (columnIndex == 1) // IntervalMinutes (nullable)
+                {
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        target.IntervalMinutes = null;
+                    }
+                    else
+                    {
+                        int val;
+                        if (int.TryParse(textBox.Text, out val) && val > 0)
+                        {
+                            target.IntervalMinutes = val;
+                        }
+                        else
+                        {
+                            e.Cancel = true;
+                        }
+                    }
+                }
+                else if (columnIndex >= 2 && columnIndex <= 6) // Retention columns
+                {
+                    int? parsedValue;
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        parsedValue = null;
+                    }
+                    else
+                    {
+                        int val;
+                        if (int.TryParse(textBox.Text, out val) && val >= 0)
+                        {
+                            parsedValue = val;
+                        }
+                        else
+                        {
+                            e.Cancel = true;
+                            return;
+                        }
+                    }
+
+                    switch (columnIndex)
+                    {
+                        case 2: target.KeepLast = parsedValue; break;
+                        case 3: target.KeepDaily = parsedValue; break;
+                        case 4: target.KeepWeekly = parsedValue; break;
+                        case 5: target.KeepMonthly = parsedValue; break;
+                        case 6: target.KeepYearly = parsedValue; break;
+                    }
+                }
+            }
         }
 
         public void OnVerify(object sender, RoutedEventArgs e)

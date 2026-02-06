@@ -106,6 +106,13 @@ namespace LudusaviRestic
         private int keepYearly = 5;
         public int KeepYearly { get { return keepYearly; } set { keepYearly = value; NotifyPropertyChanged("KeepYearly"); } }
 
+        private Dictionary<string, GameOverride> gameIntervalOverrides = new Dictionary<string, GameOverride>();
+        public Dictionary<string, GameOverride> GameIntervalOverrides
+        {
+            get { return gameIntervalOverrides; }
+            set { gameIntervalOverrides = value ?? new Dictionary<string, GameOverride>(); }
+        }
+
         private List<string> errors;
 
         private int gameplayBackupInterval = 5;
@@ -179,6 +186,7 @@ namespace LudusaviRestic
                 KeepMonthly = savedSettings.KeepMonthly;
                 KeepYearly = savedSettings.KeepYearly;
                 EnableRetentionPolicy = savedSettings.EnableRetentionPolicy;
+                GameIntervalOverrides = savedSettings.GameIntervalOverrides;
             }
 
             // Auto-detect restic executable if not configured or invalid
@@ -223,6 +231,29 @@ namespace LudusaviRestic
                 }
             }
         }
+
+        internal int GetEffectiveInterval(Guid gameId)
+        {
+            GameOverride over;
+            if (gameIntervalOverrides.TryGetValue(gameId.ToString(), out over) && over.HasIntervalOverride)
+            {
+                return over.IntervalMinutes.Value;
+            }
+            return GameplayBackupInterval;
+        }
+
+        internal GameOverride FindOverrideByGameName(string gameName)
+        {
+            foreach (var kvp in gameIntervalOverrides)
+            {
+                if (string.Equals(kvp.Value.GameName, gameName, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    return kvp.Value;
+                }
+            }
+            return null;
+        }
+
 
         public void BeginEdit()
         {
