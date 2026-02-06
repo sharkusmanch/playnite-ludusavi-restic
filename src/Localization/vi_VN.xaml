@@ -239,6 +239,28 @@ Chọn Có để sử dụng thư mục được đề xuất, Không để ch�
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(không có)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Không thể xác định thẻ tên trò chơi cho ảnh chụp màn hình này.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Ghi đè trò chơi</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Ghi đè khoảng thời gian sao lưu trò chơi và chính sách lưu giữ cho các trò chơi cụ thể. Các trò chơi không được liệt kê sẽ sử dụng cài đặt mặc định chung. Thêm các ghi đè từ menu chuột phải của trò chơi. Các trường lưu giữ trống sẽ bị vô hiệu hóa (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Khoảng thời gian (phút)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Giữ lại cuối cùng</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Giữ hàng ngày</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Giữ hàng tuần</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Giữ hàng tháng</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Giữ lại hàng năm</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Xóa mục đã chọn</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Đặt khoảng thời gian sao lưu</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Ghi đè khoảng thời gian sao lưu</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Nhập khoảng thời gian sao lưu tính bằng phút cho {0} (hiện tại: {1}, mặc định toàn cầu: {2}). Để trống nếu muốn xóa ghi đè.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Thiết lập chính sách lưu giữ</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Ghi đè chính sách lưu giữ</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Đặt các giá trị để ghi đè chính sách lưu giữ toàn cầu cho trò chơi này. Các trường trống sẽ bị vô hiệu hóa (được đặt thành 0), vì vậy chỉ các giá trị bạn chỉ định mới được áp dụng.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Cứu</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Hủy bỏ</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} trò chơi có các thiết lập ghi đè riêng cho từng trò chơi.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Liệt kê các ảnh chụp màn hình...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Không tìm thấy ảnh chụp nào trong kho lưu trữ.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Trình hướng dẫn thiết lập</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Sao lưu tất cả trò chơi</sys:String>
@@ -286,6 +308,9 @@ Chọn Có để sử dụng thư mục được đề xuất, Không để ch�
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Kiểm tra tính toàn vẹn của kho lưu trữ...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Chạy thử nghiệm cắt tỉa cây mận khô...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Loại bỏ dữ liệu không sử dụng...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Cắt tỉa kho lưu trữ...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Việc áp dụng chính sách lưu giữ dữ liệu đã thất bại đối với một hoặc nhiều trò chơi. Vui lòng kiểm tra kết quả đầu ra gốc để biết chi tiết.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Không có ảnh chụp nào sẽ bị xóa. Tất cả ảnh chụp đều tuân thủ chính sách lưu giữ hiện hành.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Kiểm tra tính toàn vẹn của kho lưu trữ bằng cách xác minh dữ liệu...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Không thể khởi tạo kho lưu trữ. Vui lòng kiểm tra nhật ký để biết thêm chi tiết.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Lỗi khởi tạo</sys:String>
