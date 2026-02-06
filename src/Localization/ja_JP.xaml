@@ -239,6 +239,28 @@
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(なし)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">このスナップショットのゲーム名タグを決定できません。</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">ゲームオーバーライド</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">特定のゲームのゲームプレイのバックアップ間隔と保持ポリシーをオーバーライドします。リストにないゲームはグローバルデフォルトを使用します。ゲームの右クリックメニューからオーバーライドを追加できます。空白の保持フィールドは無効（0）になります。</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">間隔（分）</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">最後に残す</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">毎日続ける</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">毎週保存</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">毎月保存</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">毎年保存</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">選択項目を削除</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">バックアップ間隔を設定する</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">バックアップ間隔のオーバーライド</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">{0} のバックアップ間隔を分単位で入力します（現在: {1}、グローバルデフォルト: {2}）。上書きを削除するには空白のままにしてください。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">保持ポリシーを設定する</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">保持ポリシーのオーバーライド</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">このゲームのグローバル保持ポリシーを上書きする値を設定します。空白のフィールドは無効（0に設定）となり、指定した値のみが適用されます。</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">保存</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">キャンセル</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} ゲームにはゲームごとの保持オーバーライドがあります。</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">スナップショットを一覧表示しています...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">リポジトリ内にスナップショットが見つかりません。</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">ウィザードのセットアップ</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">すべてのゲームをバックアップ</sys:String>
@@ -286,6 +308,9 @@
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">リポジトリの整合性を確認しています...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">削除ドライランを実行中...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">未使用データを剪定中...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">リポジトリを整理しています...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">1つ以上のゲームで保持ポリシーの適用に失敗しました。詳細は生の出力を確認してください。</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">スナップショットは削除されません。すべてのスナップショットは現在の保持ポリシーと一致しています。</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">データ検証でリポジトリの整合性を確認しています...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">リポジトリの初期化に失敗しました。詳細はログを確認してください。</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">初期化エラー</sys:String>
