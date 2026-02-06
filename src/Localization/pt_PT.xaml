@@ -61,9 +61,9 @@
 
     <sys:String x:Key="LOCLuduRestBackupMode">Modo de Backup</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Exclude Mode: All games are eligible to backup by default. Games can have the exclude tag added to prevent backing up.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Modo Apagar: Todos os jogos são elegíveis para cópia de segurança por defeito. É possível adicionar a etiqueta de eliminação aos jogos para impedir que sejam incluídos no backup.
 
-Include Mode: No games are backed up. Games can have the include tag added to be eligible for backup.</sys:String>
+Modo Incluir: Nenhum jogo é incluído no backup. É possível adicionar a etiqueta de inclusão aos jogos para que sejam elegíveis para backup.</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Modo de exclusão</sys:String>
 
@@ -149,9 +149,9 @@ Você gostaria de realizar uma corrida seca primeiro para ver o que seria exclu�
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Pré-visualização completa. {0} snapshots serão excluídos de acordo com a política de retenção. Você quer prosseguir com a exclusão?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">Prosseguir com exclusão?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">Limpar Repositório</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is irreversible.
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">A limpeza removerá os blocos de dados não utilizados do repositório. Esta operação é irreversível.
 
-Would you like to perform a dry run first to see what would be removed before actually deleting data?</sys:String>
+Gostaria de realizar primeiro uma simulação para ver o que seria removido antes de eliminar os dados de facto?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Executado com sucesso. Esta operação removeria dados não utilizados do repositório. Você deseja prosseguir com a limpeza atual?</sys:String>
 
     <!-- Welcome and setup -->
