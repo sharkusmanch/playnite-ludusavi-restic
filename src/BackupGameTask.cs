@@ -27,34 +27,17 @@ namespace LudusaviRestic
             Backup(this.semaphore, this.context, this.game, this.extraTags);
         }
 
-        protected static IList<String> GameFiles(Game game, BackupContext context)
+        internal static IList<string> ParseGameFiles(string gameName, string ludusaviJson)
         {
-            JObject gameData;
-
-            try
-            {
-                CommandResult ludusavi = LudusaviCommand.Backup(context, game.Name);
-                gameData = JObject.Parse(ludusavi.StdOut);
-            }
-            catch (Exception e)
-            {
-                logger.Debug(e, "Failed to get files from ludusavi");
-                SendErrorNotification("Failed to get files from ludusavi", context);
-                return new List<string>(); ;
-            }
-
+            var gameData = JObject.Parse(ludusaviJson);
             int totalGames = (int)gameData["overall"]["totalGames"];
 
             if (totalGames != 1)
             {
-                logger.Error("Unable to get game info from ludusavi");
-                SendErrorNotification($"No save files found for {game.Name}", context);
-                return new List<string>(); ;
+                return new List<string>();
             }
 
-            logger.Debug($"Got {game.Name} data from ludusavi");
-
-            var filesToken = gameData["games"][$"{game}"]["files"];
+            var filesToken = gameData["games"][gameName]["files"];
             var filePaths = new List<string>();
 
             if (filesToken is JArray filesArray)
@@ -82,6 +65,31 @@ namespace LudusaviRestic
             }
 
             return filePaths;
+        }
+
+        protected static IList<String> GameFiles(Game game, BackupContext context)
+        {
+            try
+            {
+                CommandResult ludusavi = LudusaviCommand.Backup(context, game.Name);
+                var files = ParseGameFiles(game.Name, ludusavi.StdOut);
+                if (files.Count == 0)
+                {
+                    logger.Error("Unable to get game info from ludusavi");
+                    SendErrorNotification($"No save files found for {game.Name}", context);
+                }
+                else
+                {
+                    logger.Debug($"Got {game.Name} data from ludusavi");
+                }
+                return files;
+            }
+            catch (Exception e)
+            {
+                logger.Debug(e, "Failed to get files from ludusavi");
+                SendErrorNotification("Failed to get files from ludusavi", context);
+                return new List<string>();
+            }
         }
 
         protected static void Backup(SemaphoreSlim semaphore, BackupContext context, Game game, IList<string> extraTags)

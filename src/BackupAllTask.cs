@@ -22,6 +22,22 @@ namespace LudusaviRestic
             Backup(this.semaphore, this.context, this.extraTags);
         }
 
+        internal static IDictionary<string, IList<string>> ParseAllGameFiles(string ludusaviJson)
+        {
+            var gameData = JObject.Parse(ludusaviJson);
+            var games = (JObject)gameData["games"];
+            var result = new Dictionary<string, IList<string>>();
+
+            foreach (JProperty game in games.Properties())
+            {
+                string gameName = game.Name;
+                IList<string> files = GameFilesToList((JObject)game.Value["files"]);
+                result[gameName] = files;
+            }
+
+            return result;
+        }
+
         private static void Backup(SemaphoreSlim semaphore, BackupContext context, IList<string> extraTags)
         {
             GlobalProgressOptions globalProgressOptions = new GlobalProgressOptions(
@@ -32,12 +48,12 @@ namespace LudusaviRestic
 
             context.API.Dialogs.ActivateGlobalProgress((activateGlobalProgress) =>
             {
-                JObject gameData;
+                string ludusaviOutput;
 
                 try
                 {
                     CommandResult ludusavi = LudusaviCommand.BackupAll(context);
-                    gameData = JObject.Parse(ludusavi.StdOut);
+                    ludusaviOutput = ludusavi.StdOut;
                 }
                 catch (Exception e)
                 {
@@ -48,23 +64,21 @@ namespace LudusaviRestic
 
                 logger.Debug($"Got all game data from ludusavi");
 
-                JObject games = (JObject)gameData["games"];
+                var allFiles = ParseAllGameFiles(ludusaviOutput);
                 string backupText = $"{ResourceProvider.GetString("LOCLuduRestBackupGM")} - {ResourceProvider.GetString("LOCLuduRestBackupGPBackingUp")}";
 
-                activateGlobalProgress.ProgressMaxValue = (double)gameData["overall"]["totalGames"];
+                activateGlobalProgress.ProgressMaxValue = allFiles.Count;
 
-                foreach (JProperty game in games.Properties())
+                foreach (var entry in allFiles)
                 {
-                    activateGlobalProgress.Text = $"{backupText} - {activateGlobalProgress.CurrentProgressValue + 1} of {gameData["overall"]["totalGames"]}";
+                    activateGlobalProgress.Text = $"{backupText} - {activateGlobalProgress.CurrentProgressValue + 1} of {allFiles.Count}";
 
                     if (activateGlobalProgress.CancelToken.IsCancellationRequested)
                     {
                         break;
                     }
 
-                    string gameName = game.Name;
-                    IList<String> files = GameFilesToList((JObject)game.Value["files"]);
-                    CreateSnapshot(files, context, gameName, extraTags);
+                    CreateSnapshot(entry.Value, context, entry.Key, extraTags);
 
                     activateGlobalProgress.CurrentProgressValue++;
                 }

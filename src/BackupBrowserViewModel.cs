@@ -118,18 +118,44 @@ namespace LudusaviRestic
             RefreshSnapshots();
         }
 
+        internal static IList<BackupSnapshot> FilterSnapshots(IList<BackupSnapshot> all, string gameFilter)
+        {
+            if (all == null) return new List<BackupSnapshot>();
+            if (string.IsNullOrEmpty(gameFilter) || gameFilter == "All Games")
+            {
+                return new List<BackupSnapshot>(all);
+            }
+            return all.Where(s => s.GameName == gameFilter).ToList();
+        }
+
         private void ApplyFilter()
         {
             if (allSnapshots == null) return;
-            if (string.IsNullOrEmpty(SelectedGameFilter) || SelectedGameFilter == "All Games")
+            Snapshots = new ObservableCollection<BackupSnapshot>(FilterSnapshots(allSnapshots, SelectedGameFilter));
+        }
+
+        internal static IList<BackupSnapshot> ParseSnapshots(string json)
+        {
+            var snapshotArray = JArray.Parse(json);
+            var snapshotList = new List<BackupSnapshot>();
+            foreach (var item in snapshotArray)
             {
-                Snapshots = new ObservableCollection<BackupSnapshot>(allSnapshots);
+                snapshotList.Add(new BackupSnapshot
+                {
+                    Id = item["short_id"]?.ToString() ?? item["id"]?.ToString(),
+                    Date = DateTime.Parse(item["time"]?.ToString(), null, DateTimeStyles.RoundtripKind),
+                    Tags = item["tags"]?.ToObject<List<string>>() ?? new List<string>()
+                });
             }
-            else
-            {
-                var filtered = allSnapshots.Where(s => s.GameName == SelectedGameFilter).ToList();
-                Snapshots = new ObservableCollection<BackupSnapshot>(filtered);
-            }
+            return snapshotList;
+        }
+
+        internal static IList<string> BuildGameFilters(IList<BackupSnapshot> snapshots)
+        {
+            var gameNames = snapshots.Select(s => s.GameName).Where(n => n != "Unknown").Distinct().OrderBy(n => n).ToList();
+            var filters = new List<string> { "All Games" };
+            filters.AddRange(gameNames);
+            return filters;
         }
 
         private void RefreshSnapshots()
@@ -147,20 +173,9 @@ namespace LudusaviRestic
                     var result = ResticCommand.ListSnapshots(context);
                     if (result.ExitCode == 0)
                     {
-                        var snapshotArray = JArray.Parse(result.StdOut);
-                        var snapshotList = new ObservableCollection<BackupSnapshot>();
-                        foreach (var item in snapshotArray)
-                        {
-                            snapshotList.Add(new BackupSnapshot
-                            {
-                                Id = item["short_id"]?.ToString() ?? item["id"]?.ToString(),
-                                Date = DateTime.Parse(item["time"]?.ToString(), null, DateTimeStyles.RoundtripKind),
-                                Tags = item["tags"]?.ToObject<List<string>>() ?? new List<string>()
-                            });
-                        }
-                        allSnapshots = snapshotList;
-                        var gameNames = allSnapshots.Select(s => s.GameName).Where(n => n != "Unknown").Distinct().OrderBy(n => n).ToList();
-                        GameFilters = new ObservableCollection<string>(new[] { "All Games" }.Concat(gameNames));
+                        var parsed = ParseSnapshots(result.StdOut);
+                        allSnapshots = new ObservableCollection<BackupSnapshot>(parsed);
+                        GameFilters = new ObservableCollection<string>(BuildGameFilters(parsed));
                         // If a specific game filter was preset (e.g., via game context menu), try to apply it
                         if (!string.IsNullOrEmpty(selectedGameFilter) && GameFilters.Contains(selectedGameFilter))
                         {
@@ -225,8 +240,6 @@ namespace LudusaviRestic
                 context.API.Dialogs.ShowErrorMessage($"Error deleting snapshot: {ex.Message}");
             }
         }
-
-        // Restore feature fully removed.
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

@@ -34,3 +34,11 @@ jobs:
 
       - run: |
           dotnet build src -c Release
+
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: |
+          dotnet test tests/LudusaviRestic.Tests.csproj
