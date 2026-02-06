@@ -239,6 +239,28 @@
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(ниједан)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Није могуће одредити ознаку имена игре за овај снимак.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Замене игара</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Замените интервал резервне копије играња и политику задржавања за одређене игре. Игре које нису наведене користе глобалне подразумеване вредности. Додајте замене из менија игре који се добија десним кликом миша. Празна поља за задржавање су онемогућена (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Интервал (мин)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Остави последње</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Држите свакодневно</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Одржавајте недељно</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Одржавајте месечно</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Чувајте годишње</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Уклони изабрано</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Подесите интервал резервне копије</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Надјачавање интервала резервне копије</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Унесите интервал прављења резервне копије у минутима за {0} (тренутно: {1}, глобално подразумевано: {2}). Оставите празно да бисте уклонили замену.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Постави политику задржавања</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Замена политике задржавања</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Поставите вредности да бисте заменили глобалну политику задржавања за ову игру. Празна поља су онемогућена (подешена на 0), тако да ће се примењивати само вредности које наведете.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Сачувај</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Откажи</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} игра(е) имају замене задржавања по игри.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Листање снимака...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Није пронађен ниједан снимак у спремишту.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Чаробњак за подешавање</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Направите резервну копију свих игара</sys:String>
@@ -286,6 +308,9 @@
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Провера интегритета спремишта...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Трчање пробног тренинга са сувим шљивама...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Уклањање неискоришћених података...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Орезивање спремишта...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Примена политике задржавања није успела за једну или више игара. Проверите сирови излаз за детаље.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Ниједан снимак неће бити обрисан. Сви снимци одговарају тренутној политици чувања.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Провера интегритета спремишта са верификацијом података...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Иницијализација спремишта није успела. Молимо проверите логове за детаље.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Грешка иницијализације</sys:String>
