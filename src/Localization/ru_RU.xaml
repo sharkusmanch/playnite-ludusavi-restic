@@ -239,6 +239,28 @@
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(нет)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Невозможно определить тег имени игры для этого снимка.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Изменения в игре</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Задайте интервал резервного копирования игрового процесса и политику хранения для конкретных игр. Для игр, не указанных в списке, используются глобальные настройки по умолчанию. Добавьте изменения через контекстное меню игры (по щелчку правой кнопкой мыши). Пустые поля для хранения отключены (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Интервал (мин)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Хранить последним</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Ежедневно</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Сохранять еженедельный</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Хранить ежемесячно</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Ежегодно хранить</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Удалить выбранное</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Установить интервал резервного копирования</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Переопределение интервала резервного копирования</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Введите интервал резервного копирования в минутах для {0} (текущий: {1}, глобальный по умолчанию: {2}). Оставьте поле пустым, чтобы отключить переопределение.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Установить политику хранения</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Отмена политики хранения данных</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Задайте значения, которые переопределят глобальную политику хранения данных для этой игры. Пустые поля отключены (установите значение 0), поэтому будут применяться только указанные вами значения.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Сохранять</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Отмена</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} игры имеют возможность переопределения параметров сохранения для каждой игры.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Краткий обзор списка...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">В репозитории не найдено ни одного снимка состояния.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Мастер настройки</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Резервное копирование всех игр</sys:String>
@@ -286,6 +308,9 @@
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Проверка целостности репозитория...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Выполняется сухий пробег...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Очистка неиспользуемых данных...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Обрезка репозитория...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Не удалось применить политику хранения данных для одной или нескольких игр. Подробности смотрите в исходном выводе.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Никакие снимки не будут удалены. Все снимки соответствуют текущей политике хранения.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Проверка целостности репозитория с помощью проверки данных...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Не удалось инициализировать репозиторий. Пожалуйста, проверьте журналы для подробностей.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Ошибка инициализации</sys:String>
