@@ -1,320 +1,320 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup under gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Sikkerhedskopiering under gameplay</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Sikkerhedskopiering når spillet stoppes</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Sikkerhedskopier når spillet stoppede</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Spørg efter backup-tag når spillet stoppes</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Spørg om backup-tag, når spillet stoppede</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Spil backup tag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Indtast sikkerhedskopi tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Indtast backup-tag for</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Spar backup interval for gameplay (minutter)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay gemme backup interval (minutter)</sys:String>
 
     <sys:String x:Key="LOCLuduRestBrowse">Gennemse</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository sti</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Restic depotsti</sys:String>
 
     <sys:String x:Key="LOCLuduRestRepoPass">Restic repository adgangskode</sys:String>
-    <sys:String x:Key="LOCLuduRestShow">Vis</sys:String>
-    <sys:String x:Key="LOCLuduRestHide">Skjul</sys:String>
+    <sys:String x:Key="LOCLuduRestShow">Show</sys:String>
+    <sys:String x:Key="LOCLuduRestHide">Hide</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone konfiguration</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone konfig</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone konfigurer adgangskode</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config adgangskode</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verificér</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Verificere</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restisk eksekverbar sti</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Restic eksekverbar sti</sys:String>
 
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi eksekverbar sti</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabBackup">Sikkerhedskopi</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">Backup</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabRepo">Lagre</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">Depot</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Tilføj additonal tags til snapshots for at differentiere begivenheder</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Tilføj yderligere tags til snapshots for at adskille begivenheder</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Manuel sikkerhedskopi tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Manuel backup tag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Spil stoppet backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Spillet stoppede backup tag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay sikkerhedskopi tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Opret gem snapshot</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Tilføj sikkerhedskopi indeholder tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Tilføj backup include tag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Fjern sikkerhedskopi indeholder tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Fjern backup include tag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Tilføj backup eksklusiv tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Tilføj backup-ekskluderingstag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Fjern sikkerhedskopi eksklusiv tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Fjern backup-ekskluderingstag</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Sikkerhedskopierer</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Støtte op om</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Behandler</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Forarbejdning</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupMode">Sikkerhedskopi Tilstand</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupMode">Backup-tilstand</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Udeluk Tilstand: Alle spil er berettiget til backup som standard. Spil kan få eksklusiv tag tilføjet for at forhindre backing.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Ekskluderingstilstand: Alle spil er kvalificeret til backup som standard. Spil kan få tilføjet ekskluderingstagget for at forhindre sikkerhedskopiering.
 
-Inkluder Tilstand: Ingen spil er sikkerhedskopieret. Spil kan få inkluderet tag tilføjet for at være berettiget til backup.</sys:String>
+Inkluder-tilstand: Ingen spil er sikkerhedskopieret. Spil kan have inkluderet tag tilføjet for at være berettiget til backup.</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Udeluk Tilstand</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Ekskluder tilstand</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Inkluder Tilstand</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Inkluder tilstand</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Inkluder Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Inkluder sikkerhedskopiering</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Udeluk Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Udelad sikkerhedskopiering</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Opret gem backup når spillet er afinstalleret</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Opret gem backup, når spillet er afinstalleret</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Restic eksekverbar fundet og verificeret.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Kunne ikke automatisk detektere restic. Angiv venligst stien manuelt.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi eksekverbar fundet og verificeret.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ Kunne ikke automatisk detektere ludusavi. Angiv venligst stien manuelt.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticRequired">Angiv stien til restic eksekverbare.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restic eksekverbar er gyldig.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">● Ugyldig restisk eksekverbar eller ikke tilgængelig.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Angiv stien til ludusavi eksekverbar.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi eksekverbar er gyldig.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">Ugyldig ludusavi-eksekverbare eller ikke tilgængelige.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Ja</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryNo">Nej</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticRequired">Please specify the path to restic executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Please specify the path to ludusavi executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Yes</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryNo">No</sys:String>
 
     <!-- Game Menu Items -->
-    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Se snapshots for sikkerhedskopier</sys:String>
+    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">View backup snapshots</sys:String>
 
     <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-Detektering Lykkedes</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-Detektering Mislykkedes</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi-eksekverbar detekteret på: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Kunne ikke automatisk detektere eksekverbar ludusavi. Angiv stien manuelt.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Gentisk eksekverbar detekteret på: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Kunne ikke automatisk detektere restic eksekverbar. Angiv stien manuelt.</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-Detection Successful</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-Detection Failed</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">Restic executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
 
     <!-- Settings verification -->
-    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Verificering Af Ludusavi Restiske Indstillinger:</sys:String>
-    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - repository forbindelse lykkedes</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - verifikation lykkedes</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Auto-Detektering Lykkedes</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Auto-Detektering Mislykkedes</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Ludusavi-eksekverbar detekteret på: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Kunne ikke automatisk detektere eksekverbar ludusavi. Angiv stien manuelt.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Gentisk eksekverbar detekteret på: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Kunne ikke automatisk detektere restic eksekverbar. Angiv stien manuelt.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Bekræftelse af Ludusavi Restic Indstillinger fejlede: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verificerer restic repository forbindelse...</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Verificerer ludusavi eksekverbar...</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Settings Verification:</sys:String>
+    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - repository connection succeeded</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - verification succeeded</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Auto-Detection Successful</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Auto-Detection Failed</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restic executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Settings Verification failed: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verifying restic repository connection...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Verifying ludusavi executable...</sys:String>
 
     <!-- Maintenance operation strings -->
-    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Vedligeholdelse Fuldført</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Fuld vedligeholdelse fuldført med succes.</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationComplete">Bekræftelse Fuldført</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Bekræftelse af lageret blev gennemført.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Tilbageholdelsespolitik Deaktiveret</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Tilbageholdelsespolitik er deaktiveret. Aktivér den i udvidelsesindstillingerne for at bruge denne funktion.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Tilbageholdelsespolitik Fuldført</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Tilbageholdelsespolitik anvendt. Gamle snapshots er blevet slettet.</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Maintenance Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Full maintenance completed successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationComplete">Verification Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Repository verification completed successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Retention Policy Disabled</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Retention policy is disabled. Please enable it in the extension settings to use this feature.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Retention Policy Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Retention policy applied successfully. Old snapshots have been deleted.</sys:String>
     <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Afbryd operation gennemført.</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Prune operation completed successfully.</sys:String>
 
     <!-- Dialog prompts -->
-    <sys:String x:Key="LOCLuduRestFullMaintenance">Fuld Vedligeholdelse</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Vil du først udføre en tør kørsel for at se, hvad der ville blive beskåret, før du rent faktisk sletter data?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicy">Tilbageholdelsespolitik</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Vil du udføre en tør kørsel først for at se, hvad der ville blive slettet, før du rent faktisk fjerner snapshots?</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Afbryd</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Vil du først udføre en tør kørsel for at se, hvad der ville blive beskåret, før du rent faktisk sletter data?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithPruning">Fortsæt med Beskæring?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Tørkørsel fuldført. {0} snapshots ville blive beskåret. Vil du fortsætte med den egentlige beskæring?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Tørkørsel fuldført. {0} snapshots ville blive slettet. Vil du fortsætte med at anvende opbevaringspolitikken?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithRetention">Fortsæt med opbevaringspolitik?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Dette vil slette gamle snapshots i henhold til din retention politik:
+    <sys:String x:Key="LOCLuduRestFullMaintenance">Full Maintenance</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicy">Retention Policy</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Would you like to perform a dry run first to see what would be deleted before actually removing snapshots?</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">Prune</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithPruning">Proceed with Pruning?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Dry run completed. {0} snapshots would be pruned. Do you want to proceed with the actual pruning?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Dry run completed. {0} snapshots would be deleted. Do you want to proceed with applying the retention policy?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithRetention">Proceed with Retention Policy?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
 
-• Behold sidste {0} snapshots
-• Behold daglige snapshots i {1} dage
-• Behold ugentlige snapshots i {2} uger
-• Behold månedlige snapshots i {3} måneder
-• Behold årlige snapshots i {4} år
+• Keep last {0} snapshots
+• Keep daily snapshots for {1} days
+• Keep weekly snapshots for {2} weeks
+• Keep monthly snapshots for {3} months
+• Keep yearly snapshots for {4} years
 
-Vil du udføre en tør kørsel først for at se, hvad der ville blive slettet?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Forhåndsvisning fuldført. {0} snapshots vil blive slettet i henhold til opbevaringspolitikken. Vil du fortsætte med sletningen?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Fortsæt med sletning?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">Afbryd Lageret</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning vil fjerne ubrugte datablobs fra lageret. Denne handling er irreversibel.
+Would you like to perform a dry run first to see what would be deleted?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Proceed with Deletion?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">Prune Repository</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is irreversible.
 
-Vil du først udføre en tør kørsel for at se, hvad der ville blive fjernet, før du rent faktisk sletter data?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Dry run completed. This operation would remove unused data from the repository. Do you want to proceed with the actual pruning? (Automatic Copy)</sys:String>
+Would you like to perform a dry run first to see what would be removed before actually deleting data?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Dry run completed. This operation would remove unused data from the repository. Do you want to proceed with the actual pruning?</sys:String>
 
     <!-- Welcome and setup -->
-    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Velkommen - Opsætning Kræves</sys:String>
-    <sys:String x:Key="LOCLuduRestWelcomeMessage">Velkommen til Ludusavi Restic!
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - Setup Required</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeMessage">Welcome to Ludusavi Restic!
 
-Dette ser ud til at være din første gang ved hjælp af udvidelsen eller din konfiguration er ufuldstændig. Vil du køre installationsguiden for at konfigurere dit backup-repository?</sys:String>
-    <sys:String x:Key="LOCLuduRestConfigurationRequired">Konfiguration Påkrævet</sys:String>
-    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic er ikke konfigureret endnu. Vil du køre opsætningsguiden?</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Ugyldig Konfiguration</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticMessage">Den indstillede restiske eksekverbare kan ikke være gyldig eller tilgængelig. Vil du køre opsætningsguiden for at rette dette?</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupComplete">Opsætning Fuldført</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Opsætning fuldført! Du kan nu bruge alle sikkerhedskopieringsfunktioner.</sys:String>
+This appears to be your first time using the extension or your configuration is incomplete. Would you like to run the setup wizard to configure your backup repository?</sys:String>
+    <sys:String x:Key="LOCLuduRestConfigurationRequired">Configuration Required</sys:String>
+    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic is not configured yet. Would you like to run the setup wizard?</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Invalid Configuration</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticMessage">The configured restic executable is not valid or accessible. Would you like to run the setup wizard to fix this?</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupComplete">Setup Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Setup completed successfully! You can now use all backup features.</sys:String>
 
     <!-- Backup browser -->
-    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Slet Snapshot Af Sikkerhedskopi</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Er du sikker på, at du vil slette snapshot {0} fra {1}?</sys:String>
-    <sys:String x:Key="LOCLuduRestSuccess">Succes</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Snapshot slettet.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Gendan seneste snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Ingen snapshots fundet for dette spil.</sys:String>
-    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Gendan snapshot {0} for {1} til mappen:\n{2}\n\nEksisterende filer kan blive overskrevet. Fortsæt?</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Delete Backup Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Are you sure you want to delete snapshot {0} from {1}?</sys:String>
+    <sys:String x:Key="LOCLuduRestSuccess">Success</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Snapshot deleted successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restore latest snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">No snapshots found for this game.</sys:String>
+    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restore snapshot {0} for {1} to folder:\n{2}\n\nExisting files may be overwritten. Continue?</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Gendanner snapshot...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompleted">Snapshot gendannet med succes.</sys:String>
-    <sys:String x:Key="LOCLuduRestRefresh">Opdater</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSelected">Gendan Valgte</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSelected">Slet Valgte</sys:String>
-    <sys:String x:Key="LOCLuduRestFilterByGame">Filtrer efter spil:</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restoring snapshot...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompleted">Snapshot restored successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestRefresh">Refresh</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSelected">Restore Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSelected">Delete Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestFilterByGame">Filter by Game:</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotIdHeader">Snapshot ID</sys:String>
-    <sys:String x:Key="LOCLuduRestDateHeader">Dato</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsHeader">Mærker</sys:String>
+    <sys:String x:Key="LOCLuduRestDateHeader">Date</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsHeader">Tags</sys:String>
     <sys:String x:Key="LOCLuduRestTotalSnapshots">Total snapshots</sys:String>
     <sys:String x:Key="LOCLuduRestAutoDetect">Auto-Detect</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Tilbageholdelsespolitik</sys:String>
-    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Aktiver automatisk opbevaringspolitik</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">Når aktiveret, vil disse politikker blive anvendt under vedligeholdelsesoperationer for automatisk at fjerne gamle øjebliksbilleder.</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastLabel">Behold sidste N snapshots:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastHelp">Behold de seneste øjebliksbilleder uanset alder</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Hold daglige snapshots i N dage:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Behold et øjebliksbillede pr. dag i så mange dage</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Hold ugentlige snapshots i N uger:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Behold et øjebliksbillede om ugen i så mange uger</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Hold månedlige snapshots i N måneder:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Behold et øjebliksbillede pr. måned i dette mange måneder</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Hold årlige snapshots i N år:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Behold et øjebliksbillede om året i disse mange år</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Eksempel med standardindstillinger:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Behold de seneste 10 øjebliksbilleder
-• Plus 1 øjebliksbillede pr. dag i 7 dage
-• Plus 1 øjebliksbillede pr. uge i 4 uger
-• Plus 1 øjebliksbillede pr. måned i 12 måneder
-• Plus 1 øjebliksbillede pr. år i 5 år</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Beskæring Resultater</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Sammenfattende information vises her</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Snapshots Slettet</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesAffected">Spil Påvirket</sys:String>
-    <sys:String x:Key="LOCLuduRestDataDeleted">Data Slettet</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Retention Policy</sys:String>
+    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Enable automatic retention policy</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">When enabled, these policies will be applied during maintenance operations to automatically remove old snapshots.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastLabel">Keep last N snapshots:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastHelp">Keep the most recent snapshots regardless of age</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Keep daily snapshots for N days:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Keep one snapshot per day for this many days</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Keep weekly snapshots for N weeks:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Keep one snapshot per week for this many weeks</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Keep monthly snapshots for N months:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Keep one snapshot per month for this many months</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Keep yearly snapshots for N years:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Keep one snapshot per year for this many years</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Example with default settings:</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Pruning Results</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Summary information will appear here</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Snapshots Deleted</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesAffected">Games Affected</sys:String>
+    <sys:String x:Key="LOCLuduRestDataDeleted">Data Deleted</sys:String>
     <sys:String x:Key="LOCLuduRestStatus">Status</sys:String>
-    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Slettede Snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestClearFilter">Ryd Filter</sys:String>
-    <sys:String x:Key="LOCLuduRestGameHeader">Spil</sys:String>
-    <sys:String x:Key="LOCLuduRestDateTimeHeader">Dato/Tid</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Spil Resumé</sys:String>
-    <sys:String x:Key="LOCLuduRestGameNameHeader">Spil Navn</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Tags Resumé</sys:String>
-    <sys:String x:Key="LOCLuduRestTagHeader">Mærke</sys:String>
-    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Forekomster</sys:String>
-    <sys:String x:Key="LOCLuduRestRawOutputTab">Rå Output</sys:String>
-    <sys:String x:Key="LOCLuduRestClose">Luk</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Angiv et valgfrit brugerdefineret mærke til denne manuelle sikkerhedskopi (efterlad blank for ingen):</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Manuel Sikkerhedskopi Tag</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreConfirm">Gendan snapshot {0} til {1}? Dette kan overskrive eksisterende filer.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Gendanner snapshot {0}...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} gendannet med succes.</sys:String>
+    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Deleted Snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestClearFilter">Clear Filter</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">Game</sys:String>
+    <sys:String x:Key="LOCLuduRestDateTimeHeader">Date/Time</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Games Summary</sys:String>
+    <sys:String x:Key="LOCLuduRestGameNameHeader">Game Name</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Tags Summary</sys:String>
+    <sys:String x:Key="LOCLuduRestTagHeader">Tag</sys:String>
+    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Occurrences</sys:String>
+    <sys:String x:Key="LOCLuduRestRawOutputTab">Raw Output</sys:String>
+    <sys:String x:Key="LOCLuduRestClose">Close</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Enter an optional custom tag for this manual backup (leave blank for none):</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Manual Backup Tag</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreConfirm">Restore snapshot {0} to {1}? This may overwrite existing files.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restoring snapshot {0}...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} restored successfully.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreFailed">Kunne ikke gendanne snapshot: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreError">Fejl under gendannelse af snapshot: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (spil: {1}) indeholder {2} filer.
-Nye filer: {3}
-Eksisterende filer (vil blive overskrevet): {4}
-Foreslået gendannelsesmappe: {5}
+    <sys:String x:Key="LOCLuduRestRestoreFailed">Failed to restore snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreError">Error restoring snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (game: {1}) contains {2} files.
+New files: {3}
+Existing files (will be overwritten): {4}
+Suggested restore folder: {5}
 
-Vælg Ja for at bruge foreslået mappe, Nej til at vælge en anden, eller Annuller for at afbryde.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(ingen)</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Kan ikke bestemme spilnavn tag for dette øjebliksbillede.</sys:String>
+Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(none)</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Cannot determine game name tag for this snapshot.</sys:String>
 
     <!-- Game overrides -->
-    <sys:String x:Key="LOCLuduRestTabGameOverrides">Spiloverstyringer</sys:String>
-    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Tilsidesæt intervallet for backup af spil og opbevaringspolitikken for specifikke spil. Spil, der ikke er angivet, bruger de globale standardindstillinger. Tilføj tilsidesættelser fra spillets højreklikmenu. Tomme opbevaringsfelter er deaktiveret (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Game Overrides</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Override the gameplay backup interval and retention policy for specific games. Games not listed use the global defaults. Add overrides from the game right-click menu. Blank retention fields are disabled (0).</sys:String>
     <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Hold sidst</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Hold dagligt</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Hold ugentligt</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Behold månedligt</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Opbevares årligt</sys:String>
-    <sys:String x:Key="LOCLuduRestRemoveOverride">Fjern valgte</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupInterval">Indstil backupinterval</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Tilsidesættelse af backupinterval</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Indtast backup-interval i minutter for {0} (nuværende: {1}, global standard: {2}). Lad feltet være tomt for at fjerne tilsidesættelsen.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Angiv opbevaringspolitik</sys:String>
-    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Tilsidesættelse af opbevaringspolitik</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Angiv værdier for at tilsidesætte den globale opbevaringspolitik for dette spil. Tomme felter er deaktiveret (indstillet til 0), så kun de værdier, du angiver, gælder.</sys:String>
-    <sys:String x:Key="LOCLuduRestSave">Spare</sys:String>
-    <sys:String x:Key="LOCLuduRestCancel">Ophæve</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} spil har tilsidesættelser af tilbageholdelse pr. spil.</sys:String>
-    <sys:String x:Key="LOCLuduRestListingSnapshots">Viser snapshots...</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Ingen snapshots fundet i arkivet.</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Keep Last</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Keep Daily</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Keep Weekly</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Keep Monthly</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Keep Yearly</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Remove Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Set backup interval</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Backup Interval Override</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Enter backup interval in minutes for {0} (current: {1}, global default: {2}). Leave blank to remove override.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Set retention policy</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Retention Policy Override</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Set values to override the global retention policy for this game. Blank fields are disabled (set to 0), so only the values you specify will apply.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Save</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Cancel</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} game(s) have per-game retention overrides.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Listing snapshots...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">No snapshots found in the repository.</sys:String>
 
     <!-- Main menu items -->
-    <sys:String x:Key="LOCLuduRestSetupWizard">Opsætning af guide</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllGames">Sikkerhedskopiér alle spil</sys:String>
-    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Gennemse backup snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceAll">Alle (tjek + beskæring)</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceVerify">Verificér</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Slet gamle øjebliksbilleder</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenancePrune">Afbryd ubrugte data</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceSection">Vedligeholdelse</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSection">Opsætning</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllGames">Backup all games</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Browse backup snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceAll">All (check + prune)</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceVerify">Verificere</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Delete old snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenancePrune">Prune unused data</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceSection">Maintenance</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSection">Setup</sys:String>
 
     <!-- Dialog strings -->
-    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Vælg Restisk Kørbar</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Vælg Ludusavi-eksekverbar</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Vælg Lagerplacering</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Eksekverbare filer (*.exe)- *.exe- Alle filer (*.*)- * .*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Eksekverbare *.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Konfekt *.conf</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Kører fuld vedligeholdelse...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verificerer repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Select Restic Executable</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Select Ludusavi Executable</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Select Repository Location</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Running full maintenance...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifying repository...</sys:String>
 
     <!-- Validation messages -->
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Angiv stien til restic eksekverbare.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restic eksekverbar er gyldig.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">● Ugyldig restisk eksekverbar eller ikke tilgængelig.</sys:String>
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Angiv stien til ludusavi eksekverbar.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi eksekverbar er gyldig.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">Ugyldig ludusavi-eksekverbare eller ikke tilgængelige.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Please specify the path to restic executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Please specify the path to ludusavi executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
-    <sys:String x:Key="LOCLuduRestValidationError">Valideringsfejl</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticPath">Angiv stien til restic eksekverbare.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticInvalid">Den angivne restic eksekverbare er ikke gyldig eller tilgængelig.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Angiv venligst stien til lageret.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Indtast venligst et kodeord for repositorie.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Adgangskoder stemmer ikke overens.</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryYes">Ja</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryNo">Nej</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationError">Validation Error</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticPath">Please specify the path to restic executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticInvalid">The specified restic executable is not valid or accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Please specify the repository path.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Please enter a repository password.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Passwords do not match.</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryYes">Yes</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryNo">No</sys:String>
 
     <!-- Progress and initialization messages -->
-    <sys:String x:Key="LOCLuduRestInitializingRepository">Initialiserer repository...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Anvendelse af opbevaringspolitikken...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Kører opbevaring politik forhåndsvisning...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Anvendelse af opbevaringspolitik og beskæring...</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Kontrollerer repository integritet...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Kører beskære tør kørsel...</sys:String>
-    <sys:String x:Key="LOCLuduRestPruningUnusedData">Beskærer ubrugte data...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Beskæring af opbevaringssted...</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Ansøgning om opbevaringspolitik mislykkedes for et eller flere spil. Tjek det rå output for detaljer.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Ingen snapshots ville blive slettet. Alle snapshots overholder den nuværende opbevaringspolitik.</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Kontrollerer repository integritet med data verifikation...</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationFailed">Kunne ikke initialisere lageret. Tjek logfilerne for detaljer.</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationError">Initialiseringsfejl</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupError">Fejl ved opsætning</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupErrorMessage">Der opstod en fejl under opsætningen: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializingRepository">Initializing repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Applying retention policy...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Running retention policy preview...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Applying retention policy and pruning...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Checking repository integrity...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Running prune dry run...</sys:String>
+    <sys:String x:Key="LOCLuduRestPruningUnusedData">Pruning unused data...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Pruning repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Retention policy application failed for one or more games. Check the raw output for details.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">No snapshots would be deleted. All snapshots match the current retention policy.</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Checking repository integrity with data verification...</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationFailed">Failed to initialize the repository. Please check the logs for details.</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationError">Initialization Error</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupError">Setup Error</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupErrorMessage">An error occurred during setup: {0}</sys:String>
 
 </ResourceDictionary>
