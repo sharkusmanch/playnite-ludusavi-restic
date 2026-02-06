@@ -239,6 +239,28 @@ Mevcut dosyalar (üzerine yazılacak): {4}
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(hiçbiri)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Bu anlık görüntü için oyun adı etiketini belirleyemiyorum.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Oyun Geçersiz Kılmaları</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Belirli oyunlar için oyun içi yedekleme aralığını ve saklama politikasını geçersiz kılın. Listede yer almayan oyunlar genel varsayılan ayarları kullanır. Geçersiz kılmaları oyunun sağ tıklama menüsünden ekleyin. Boş saklama alanları devre dışıdır (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Aralık (dk)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">En Sonuncuyu Sakla</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Günlük olarak takip edin.</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Haftalık olarak saklayın</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Aylık olarak devam ettirin</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Yıllık olarak saklayın</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Seçilenleri Kaldır</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Yedekleme aralığını ayarlayın</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Yedekleme Aralığı Geçersiz Kılma</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">{0} için yedekleme aralığını dakika cinsinden girin (mevcut: {1}, genel varsayılan: {2}). Geçersiz kılmayı kaldırmak için boş bırakın.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Saklama politikasını belirleyin</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Saklama Politikası Geçersiz Kılma</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Bu oyun için geçerli olan genel saklama politikasını geçersiz kılmak üzere değerler belirleyin. Boş alanlar devre dışı bırakılmıştır (0 olarak ayarlanmıştır), bu nedenle yalnızca belirttiğiniz değerler geçerli olacaktır.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Kaydetmek</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">İptal etmek</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} oyun(lar)da oyun başına kalıcılık geçersiz kılma ayarları bulunmaktadır.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Listeleme anlık görüntüleri...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Depoda hiçbir anlık görüntü bulunamadı.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Kurulum sihirbazı</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Tüm oyunların yedeğini alın.</sys:String>
@@ -286,6 +308,9 @@ Mevcut dosyalar (üzerine yazılacak): {4}
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Depo bütünlüğünü kontrol ediliyor...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Kuru budama denemesi yapılıyor...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Kullanılmayan veriler budanıyor...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Depoyu budama işlemi...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Bir veya daha fazla oyun için saklama politikası uygulaması başarısız oldu. Ayrıntılar için ham çıktıyı kontrol edin.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Hiçbir anlık görüntü silinmeyecektir. Tüm anlık görüntüler mevcut saklama politikasına uygundur.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Veri doğrulama ile depo bütünlüğünü kontrol etme...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Depo başlatılamadı. Ayrıntılar için lütfen günlükleri kontrol edin.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Başlatma Hatası</sys:String>
