@@ -1,320 +1,320 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Varmuuskopio pelin aikana</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Varmuuskopiointi pelin aikana</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Varmuuskopioi pelin pysäyttämisen jälkeen</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Varmuuskopiointi pelin pysähtyessä</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Kysy varmuuskopion tagia, kun peli on pysäytetty</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Pyydä varmuuskopiotagia pelin pysähtyessä</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Pelin varmuuskopio tagi</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Pelin varmuuskopiotunniste</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Syötä varmuuskopio tagi</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Anna varatunniste kohteelle</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Pelattavuus tallenna varmuuskopiointiväli (minuutteina)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Pelin varmuuskopiointiväli (minuutteja)</sys:String>
 
     <sys:String x:Key="LOCLuduRestBrowse">Selaa</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Resistentti repo polku</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Rajoitettu arkiston polku</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Resistentti repo salasana</sys:String>
-    <sys:String x:Key="LOCLuduRestShow">Näytä</sys:String>
-    <sys:String x:Key="LOCLuduRestHide">Piilota</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Restic arkiston salasana</sys:String>
+    <sys:String x:Key="LOCLuduRestShow">Show</sys:String>
+    <sys:String x:Key="LOCLuduRestHide">Hide</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rkloonien asetukset</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone-asetus</sys:String>
 
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config salasana</sys:String>
 
     <sys:String x:Key="LOCLuduRestVerify">Vahvista</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable polku</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Rajoita suoritettavaa polkua</sys:String>
 
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi suoritettava polku</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabBackup">Varmuuskopio</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">Varmuuskopioida</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabRepo">Versiovarasto</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">Arkisto</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Lisää lisätunnisteita tilannekuviin tapahtumien erottamiseksi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Erota tapahtumat lisäämällä tilannekuviin lisätageja</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Manuaalinen varmuuskopio tagi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Manuaalinen varmuuskopiotunniste</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Peli pysäytti varmuuskopion tagin</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Peli pysäytetty varmuuskopiointitunniste</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Pelien varmuuskopioinnin tagi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Pelin varmuuskopiotunniste</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Luo tilannekuva</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Luo tallennustilanne</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Lisää varmuuskopio sisältäen tagin</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Lisää varmuuskopiotagi</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Poista varmuuskopio sisältäen tagin</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Poista varmuuskopion sisällyttämistunniste</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Lisää varmuuskopiointi pois tagi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Lisää poissulkemisen varatunniste</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Poista varmuuskopio pois tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Poista varmuuskopion poissulkemistagi</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Varmuuskopiointi</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Käsitellään</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Käsittely</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupMode">Varmuuskopiointitila</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Ohita tila: Kaikki pelit ovat oletusarvoisesti oikeutettuja varmuuskopiointiin. Peleissä voi olla pois sulkeva tagi, joka estää varmuuskopioinnin.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Poissulkemistila: Kaikki pelit ovat oletuksena varmuuskopioitavia. Peleihin voidaan lisätä poissulkemistunniste varmuuskopioinnin estämiseksi.
 
-Sisällytä tila: Ei pelejä varmuuskopioida. Pelit voivat sisältää lisätyn tunnisteen, joka oikeuttaa varmuuskopiointiin.</sys:String>
+Sisällystila: Pelejä ei varmuuskopioida. Peleihin voidaan lisätä include-tunniste, jotta ne voidaan varmuuskopioida.</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Jätä Pois Tila</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Sulje tila pois</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Sisällytä Tila</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Sisällytä tila</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Sisällytä Varmuuskopio</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Sisällytä varmuuskopio</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Ohita Varmuuskopiointi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Sulje pois varmuuskopio</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Luo varmuuskopio kun peli on poistettu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Luo varmuuskopio, kun peli poistetaan</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Resistentti suoritettava tiedosto löytyi ja vahvistettiin.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Restic. Ei voitu tunnistaa automaattisesti. Ole hyvä ja määritä polku manuaalisesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi executable löytyi ja vahvistettiin.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ Ei voitu tunnistaa automaattisesti ludusavia. Määritä polku manuaalisesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticRequired">Ole hyvä ja määritä restic executable polku.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restaali suoritettava tiedosto on voimassa.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">•Virheellinen restaali suoritettava tiedosto tai ei käytettävissä.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Määritä polku ludusavi suoritettavaan tiedostoon.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi suoritettava tiedosto on voimassa.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">¶ Virheellinen ludusavi suoritettava tai ei käytettävissä.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Kyllä</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryNo">Ei</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticRequired">Please specify the path to restic executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Please specify the path to ludusavi executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Yes</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryNo">No</sys:String>
 
     <!-- Game Menu Items -->
-    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Näytä varmuuskopioitavat tilannekuvat</sys:String>
+    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">View backup snapshots</sys:String>
 
     <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Automaattinen Tunnistus Onnistui</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Automaattinen Tunnistaminen Epäonnistui</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi suoritettava tiedosto löydetty osoitteesta: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Ludusavi-suoritettavaa tiedostoa ei voitu tunnistaa automaattisesti. Määritä polku manuaalisesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Resistentti suoritettava tiedosto löydetty: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Restic suoritettavaa ohjelmaa ei voitu tunnistaa automaattisesti. Määritä polku manuaalisesti.</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-Detection Successful</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-Detection Failed</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">Restic executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
 
     <!-- Settings verification -->
-    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Asetukset Todentaminen:</sys:String>
-    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - repo yhteys onnistui</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - todentaminen onnistui</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Automaattinen Tunnistus Onnistui</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Automaattinen Tunnistaminen Epäonnistui</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Ludusavi suoritettava tiedosto löydetty osoitteesta: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Ludusavi-suoritettavaa tiedostoa ei voitu tunnistaa automaattisesti. Määritä polku manuaalisesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Resistentti suoritettava tiedosto löydetty: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Restic suoritettavaa ohjelmaa ei voitu tunnistaa automaattisesti. Määritä polku manuaalisesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Settings Verification epäonnistui: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingRestic">Varmistetaan restic repo yhteyttä...</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Tarkistetaan ludusavi suoritettavaa tiedostoa...</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Settings Verification:</sys:String>
+    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - repository connection succeeded</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - verification succeeded</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Auto-Detection Successful</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Auto-Detection Failed</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restic executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Settings Verification failed: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verifying restic repository connection...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Verifying ludusavi executable...</sys:String>
 
     <!-- Maintenance operation strings -->
-    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Huolto Valmis</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Täysi huolto suoritettu onnistuneesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationComplete">Vahvistus Valmis</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Versiovaraston vahvistus suoritettu onnistuneesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Säilytyskäytäntö Pois Käytöstä</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Säilytyskäytäntö on poistettu käytöstä. Ota se käyttöön lisäosien asetuksissa käyttääksesi tätä ominaisuutta.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Säilyttämiskäytäntö Valmis</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Säilytyskäytäntö käytössä onnistuneesti. Vanhat tilannekuvat on poistettu.</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Maintenance Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Full maintenance completed successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationComplete">Verification Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Repository verification completed successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Retention Policy Disabled</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Retention policy is disabled. Please enable it in the extension settings to use this feature.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Retention Policy Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Retention policy applied successfully. Old snapshots have been deleted.</sys:String>
     <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Karsinta suoritettu onnistuneesti.</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Prune operation completed successfully.</sys:String>
 
     <!-- Dialog prompts -->
-    <sys:String x:Key="LOCLuduRestFullMaintenance">Täysi Huolto</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Haluaisitko ensin tehdä kuivan juoksun nähdäksesi, mitä karsittiin ennen tietojen varsinaista poistamista?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicy">Säilöönottoa Koskeva Politiikka</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Haluatko suorittaa ensin kuivan ajon nähdäksesi, mitä poistettaisiin ennen kuin todella poistaisit tilannekuvia?</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Karsi</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Haluaisitko ensin tehdä kuivan juoksun nähdäksesi, mitä karsittiin ennen tietojen varsinaista poistamista?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithPruning">Jatketaanko karsintaa?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Kuiva suoritus valmis. {0} tilannekuvaa karsittiin. Haluatko jatkaa varsinaisella leikkauksella?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Kuiva suoritus valmis. {0} tilannekuvaa poistetaan. Haluatko jatkaa säilytyskäytännön soveltamista?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithRetention">Jatketaanko pidätystä koskevaa politiikkaa?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Tämä poistaa vanhat kuvakaappaukset säilyttämiskäytäntösi mukaisesti:
+    <sys:String x:Key="LOCLuduRestFullMaintenance">Full Maintenance</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicy">Retention Policy</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Would you like to perform a dry run first to see what would be deleted before actually removing snapshots?</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">Prune</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithPruning">Proceed with Pruning?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Dry run completed. {0} snapshots would be pruned. Do you want to proceed with the actual pruning?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Dry run completed. {0} snapshots would be deleted. Do you want to proceed with applying the retention policy?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithRetention">Proceed with Retention Policy?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
 
-• Pidä viimeiset {0} kuvakaappaukset
-• Pidä päivittäiset kuvakaappaukset {1} päivän
-• Säilytä viikoittaiset kuvakaappaukset {2} viikon
-• Säilytä kuukausittaiset kuvakaappaukset {3} kuukauden
-• Pidä vuosittaiset kuvakaappaukset {4} vuoden
+• Keep last {0} snapshots
+• Keep daily snapshots for {1} days
+• Keep weekly snapshots for {2} weeks
+• Keep monthly snapshots for {3} months
+• Keep yearly snapshots for {4} years
 
-Haluaisitko tehdä kuivan ensin nähdä, mitä poistetaan?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Esikatselu valmis. {0} tilannekuvia poistettaisiin säilytyskäytännön mukaisesti. Haluatko jatkaa poistamista?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Jatketaanko poistamista?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">Karsi Repo</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Karsinta poistaa käyttämättömät tietolohkot reposta. Tämä toiminto on peruuttamaton.
+Would you like to perform a dry run first to see what would be deleted?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Proceed with Deletion?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">Prune Repository</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is irreversible.
 
-Haluaisitko ensin suorittaa kuivan ajon nähdäksesi, mitä poistettaisiin ennen tietojen varsinaista poistamista?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Kuiva suoritus valmis. Tämä toiminto poistaisi käyttämättömät tiedot arkistosta. Haluatko jatkaa varsinaisella poistolla?</sys:String>
+Would you like to perform a dry run first to see what would be removed before actually deleting data?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Dry run completed. This operation would remove unused data from the repository. Do you want to proceed with the actual pruning?</sys:String>
 
     <!-- Welcome and setup -->
-    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Tervetuloa - Asennus Vaaditaan</sys:String>
-    <sys:String x:Key="LOCLuduRestWelcomeMessage">Tervetuloa Ludusavi Resticiin!
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - Setup Required</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeMessage">Welcome to Ludusavi Restic!
 
-Tämä näyttää olevan ensimmäinen kerta, kun käytät laajennusta tai asetuksesi on epätäydellinen. Haluatko suorittaa asetusvelho määrittääksesi varmuuskopion repostasi? @ info</sys:String>
-    <sys:String x:Key="LOCLuduRestConfigurationRequired">Asetukset Vaaditaan</sys:String>
-    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic ei ole vielä määritetty. Haluatko suorittaa asennusohjaimen?</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Virheellinen Määritys</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticMessage">Määritetty restaali suoritettava tiedosto ei ole kelvollinen tai käytettävissä. Haluatko suorittaa asennusohjaimen korjataksesi tämän?</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupComplete">Asennus Valmis</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Asennus suoritettu onnistuneesti! Voit nyt käyttää kaikkia varmuuskopiointiominaisuuksia.</sys:String>
+This appears to be your first time using the extension or your configuration is incomplete. Would you like to run the setup wizard to configure your backup repository?</sys:String>
+    <sys:String x:Key="LOCLuduRestConfigurationRequired">Configuration Required</sys:String>
+    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic is not configured yet. Would you like to run the setup wizard?</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Invalid Configuration</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticMessage">The configured restic executable is not valid or accessible. Would you like to run the setup wizard to fix this?</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupComplete">Setup Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Setup completed successfully! You can now use all backup features.</sys:String>
 
     <!-- Backup browser -->
-    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Poista Varmuuskopion Tilannevedos</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Oletko varma, että haluat poistaa tilannekuvan {0} {1}?</sys:String>
-    <sys:String x:Key="LOCLuduRestSuccess">Onnistui</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Tilannevedos poistettu onnistuneesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Palauta uusin tilannekuva</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Tälle pelille ei löytynyt tilannekuvia.</sys:String>
-    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Palauta tilannekuvan {0} {1} kansioon:\n{2}\n\nOlemassaolevat tiedostot voidaan korvata. Jatketaanko?</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Delete Backup Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Are you sure you want to delete snapshot {0} from {1}?</sys:String>
+    <sys:String x:Key="LOCLuduRestSuccess">Success</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Snapshot deleted successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restore latest snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">No snapshots found for this game.</sys:String>
+    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restore snapshot {0} for {1} to folder:\n{2}\n\nExisting files may be overwritten. Continue?</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Palautetaan tilannekuvaa...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompleted">Tilannevedos palautettu onnistuneesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestRefresh">Päivitä</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSelected">Palauta Valitut</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSelected">Poista Valitut</sys:String>
-    <sys:String x:Key="LOCLuduRestFilterByGame">Suodata pelin mukaan:</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">Tilannevedon Tunnus</sys:String>
-    <sys:String x:Key="LOCLuduRestDateHeader">Päivämäärä</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsHeader">Tunnisteet</sys:String>
-    <sys:String x:Key="LOCLuduRestTotalSnapshots">Kuvakaappauksia yhteensä</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetect">Tunnista Automaattisesti</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Säilöönottoa Koskeva Politiikka</sys:String>
-    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Ota automaattinen säilytyskäytäntö käyttöön</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">Kun käytössä, näitä käytäntöjä sovelletaan kunnossapitotoimien aikana vanhojen tilannekuvien poistamiseksi automaattisesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastLabel">Säilytä viimeiset N-tilannekuvat:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastHelp">Pidä viimeisimmät tilannekuvat iästä riippumatta</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Pidä päivittäin tilannekuvia N päivälle:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Pidä yksi tilannekuva päivässä tämän monta päivää</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Pidä viikoittaiset kuvakaappaukset N viikon ajan:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Pidä yksi tilannekuva viikossa tämän monta viikkoa</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Säilytä kuukausittaiset kuvakaappaukset N kuukauden ajan:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Pidä yksi tilannekuva kuukaudessa tämän monta kuukautta</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Säilytä vuosittaiset tilannekuvat N-vuodeksi:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Pidä yksi tilannekuva vuodessa tämän monta vuotta</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Esimerkki oletusasetuksista:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Pidä viimeisin 10 kuvakaappausta
-• Plus 1 kuvakaappaus päivässä 7 päivää
-• Plus 1 kuvakaappaus viikossa 4 viikkoa
-• Plus 1 kuvakaappaus kuukaudessa 12 kuukautta
-• Plus 1 kuvakaappaus vuodessa 5 vuotta</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Karsitaan Tuloksia</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Tiivistelmä tulee näkyviin tässä</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Kuvakaappaukset Poistettu</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesAffected">Vaikutukset Pelit</sys:String>
-    <sys:String x:Key="LOCLuduRestDataDeleted">Tiedot Poistettu</sys:String>
-    <sys:String x:Key="LOCLuduRestStatus">Tila</sys:String>
-    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Poistetut Tilannekaappaukset</sys:String>
-    <sys:String x:Key="LOCLuduRestClearFilter">Tyhjennä Suodatin</sys:String>
-    <sys:String x:Key="LOCLuduRestGameHeader">Peli</sys:String>
-    <sys:String x:Key="LOCLuduRestDateTimeHeader">Päivämäärä/aika</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Pelin Yhteenveto</sys:String>
-    <sys:String x:Key="LOCLuduRestGameNameHeader">Pelin Nimi</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Tagien Yhteenveto</sys:String>
-    <sys:String x:Key="LOCLuduRestTagHeader">Tunniste</sys:String>
-    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Esiintymät</sys:String>
-    <sys:String x:Key="LOCLuduRestRawOutputTab">Raaka Ulostulo</sys:String>
-    <sys:String x:Key="LOCLuduRestClose">Sulje</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Syötä valinnainen mukautettu tagi tälle manuaaliselle varmuuskopiolle (jätä tyhjäksi tyhjäksi):</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Manuaalinen Varmuuskopioinnin Tagi</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreConfirm">Palauta kuvakaappaus {0} {1}? Tämä saattaa korvata olemassa olevia tiedostoja.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Palautetaan tilannekuva {0}...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} palautettu onnistuneesti.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restoring snapshot...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompleted">Snapshot restored successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestRefresh">Refresh</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSelected">Restore Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSelected">Delete Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestFilterByGame">Filter by Game:</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">Snapshot ID</sys:String>
+    <sys:String x:Key="LOCLuduRestDateHeader">Date</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsHeader">Tags</sys:String>
+    <sys:String x:Key="LOCLuduRestTotalSnapshots">Total snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetect">Auto-Detect</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Retention Policy</sys:String>
+    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Enable automatic retention policy</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">When enabled, these policies will be applied during maintenance operations to automatically remove old snapshots.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastLabel">Keep last N snapshots:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastHelp">Keep the most recent snapshots regardless of age</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Keep daily snapshots for N days:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Keep one snapshot per day for this many days</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Keep weekly snapshots for N weeks:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Keep one snapshot per week for this many weeks</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Keep monthly snapshots for N months:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Keep one snapshot per month for this many months</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Keep yearly snapshots for N years:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Keep one snapshot per year for this many years</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Example with default settings:</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Pruning Results</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Summary information will appear here</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Snapshots Deleted</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesAffected">Games Affected</sys:String>
+    <sys:String x:Key="LOCLuduRestDataDeleted">Data Deleted</sys:String>
+    <sys:String x:Key="LOCLuduRestStatus">Status</sys:String>
+    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Deleted Snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestClearFilter">Clear Filter</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">Game</sys:String>
+    <sys:String x:Key="LOCLuduRestDateTimeHeader">Date/Time</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Games Summary</sys:String>
+    <sys:String x:Key="LOCLuduRestGameNameHeader">Game Name</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Tags Summary</sys:String>
+    <sys:String x:Key="LOCLuduRestTagHeader">Tag</sys:String>
+    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Occurrences</sys:String>
+    <sys:String x:Key="LOCLuduRestRawOutputTab">Raw Output</sys:String>
+    <sys:String x:Key="LOCLuduRestClose">Close</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Enter an optional custom tag for this manual backup (leave blank for none):</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Manual Backup Tag</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreConfirm">Restore snapshot {0} to {1}? This may overwrite existing files.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restoring snapshot {0}...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} restored successfully.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreFailed">Ei voitu palauttaa tilannekuvaa: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreError">Virhe palautettaessa tilannekuvaa: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (peli: {1}) sisältää {2} tiedostoja.
-Uudet tiedostot: {3}
-Olemassa olevat tiedostot (ylikirjoitetaan): {4}
-Ehdotettu palautuskansio: {5}
+    <sys:String x:Key="LOCLuduRestRestoreFailed">Failed to restore snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreError">Error restoring snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (game: {1}) contains {2} files.
+New files: {3}
+Existing files (will be overwritten): {4}
+Suggested restore folder: {5}
 
-Valitse Kyllä käyttääksesi ehdotettua kansiota, Ei valita toista, tai Peruuta keskeytettäväksi.</sys:String>
+Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(none)</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Ei voida määrittää pelin nimeä tälle tilannekuvalle.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Cannot determine game name tag for this snapshot.</sys:String>
 
     <!-- Game overrides -->
-    <sys:String x:Key="LOCLuduRestTabGameOverrides">Pelin ohitukset</sys:String>
-    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Ohita tiettyjen pelien pelin varmuuskopiointiväli ja säilytyskäytäntö. Muut kuin luettelossa olevat pelit käyttävät yleisiä oletusasetuksia. Lisää ohitukset pelin hiiren kakkospainikkeen valikosta. Tyhjät säilytyskentät ovat poissa käytöstä (0).</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Väli (min)</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Pidä viimeinen</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Pidä päivittäin</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Pidä viikoittain</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Pidä kuukausittain</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Pidä vuosittain</sys:String>
-    <sys:String x:Key="LOCLuduRestRemoveOverride">Poista valitut</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupInterval">Varmuuskopiointivälin asettaminen</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Varmuuskopiointivälin ohitus</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Syötä varmuuskopiointiväli minuutteina kohtaan {0} (nykyinen: {1}, globaali oletusarvo: {2}). Jätä tyhjäksi poistaaksesi ohituksen.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Säilytyskäytännön asettaminen</sys:String>
-    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Säilytyskäytännön ohitus</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Aseta arvot, jotka ohittavat pelin yleisen säilytyskäytännön. Tyhjät kentät on poistettu käytöstä (asetettu arvoon 0), joten vain määrittämäsi arvot ovat voimassa.</sys:String>
-    <sys:String x:Key="LOCLuduRestSave">Tallentaa</sys:String>
-    <sys:String x:Key="LOCLuduRestCancel">Peruuttaa</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} pelissä/peleissä on pelikohtaisia säilytysrajoituksia.</sys:String>
-    <sys:String x:Key="LOCLuduRestListingSnapshots">Listataan tilannekuvia...</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Arkistosta ei löytynyt tilannekuvia.</sys:String>
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Game Overrides</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Override the gameplay backup interval and retention policy for specific games. Games not listed use the global defaults. Add overrides from the game right-click menu. Blank retention fields are disabled (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Keep Last</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Keep Daily</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Keep Weekly</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Keep Monthly</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Keep Yearly</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Remove Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Set backup interval</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Backup Interval Override</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Enter backup interval in minutes for {0} (current: {1}, global default: {2}). Leave blank to remove override.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Set retention policy</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Retention Policy Override</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Set values to override the global retention policy for this game. Blank fields are disabled (set to 0), so only the values you specify will apply.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Save</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Cancel</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} game(s) have per-game retention overrides.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Listing snapshots...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">No snapshots found in the repository.</sys:String>
 
     <!-- Main menu items -->
-    <sys:String x:Key="LOCLuduRestSetupWizard">Asetusten ohjattu toiminto</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllGames">Varmuuskopioi kaikki pelit</sys:String>
-    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Selaa varmuuskopioita</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceAll">Kaikki (tarkista + luumu)</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllGames">Backup all games</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Browse backup snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceAll">All (check + prune)</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceVerify">Vahvista</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Poista vanhat tilannekuvat</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenancePrune">Karsi käyttämättömät tiedot</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceSection">Huolto</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSection">Asetukset</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Delete old snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenancePrune">Prune unused data</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceSection">Maintenance</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSection">Setup</sys:String>
 
     <!-- Dialog strings -->
-    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Valitse Resettinen Suoritusohjelma</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Valitse Ludusavi Suoritettava</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Valitse Repo Sijainti</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Suoritettavat tiedostot (*.exe)©️*.exe¶ Kaikki tiedostot (*.*)¶ *.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Suorituskykyinen *.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Mielipiteet *.conf</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Käynnissä täysi huolto...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Tarkistetaan repoa...</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Select Restic Executable</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Select Ludusavi Executable</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Select Repository Location</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Running full maintenance...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifying repository...</sys:String>
 
     <!-- Validation messages -->
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Ole hyvä ja määritä restic executable polku.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restaali suoritettava tiedosto on voimassa.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">•Virheellinen restaali suoritettava tiedosto tai ei käytettävissä.</sys:String>
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Määritä polku ludusavi suoritettavaan tiedostoon.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi suoritettava tiedosto on voimassa.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">¶ Virheellinen ludusavi suoritettava tai ei käytettävissä.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Please specify the path to restic executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Please specify the path to ludusavi executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
-    <sys:String x:Key="LOCLuduRestValidationError">Vahvistusvirhe</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticPath">Ole hyvä ja määritä restic executable polku.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticInvalid">Määritetty restaali suoritettava tiedosto ei ole kelvollinen tai käytettävissä.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Ole hyvä ja määritä repo polku.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Ole hyvä ja kirjoita repo salasana.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Salasanat eivät täsmää.</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryYes">Kyllä</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryNo">Ei</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationError">Validation Error</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticPath">Please specify the path to restic executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticInvalid">The specified restic executable is not valid or accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Please specify the repository path.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Please enter a repository password.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Passwords do not match.</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryYes">Yes</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryNo">No</sys:String>
 
     <!-- Progress and initialization messages -->
-    <sys:String x:Key="LOCLuduRestInitializingRepository">Alustetaan repoa...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Noudatetaan säilyttämisen politiikkaa...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Käynnissä säilyttämispolitiikan esikatselu...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Säilyttämispolitiikan soveltaminen ja leikkaaminen...</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Tarkistetaan arkiston eheys...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Juokse kuivalla juoksulla...</sys:String>
-    <sys:String x:Key="LOCLuduRestPruningUnusedData">Karsitaan käyttämättömiä tietoja...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Karsitaan arkistoa...</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Säilytyskäytännön soveltaminen epäonnistui yhdessä tai useammassa pelissä. Tarkista raakadatasta lisätietoja.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Yhtäkään tilannevedosta ei poistettaisi. Kaikki tilannevedokset vastaavat nykyistä säilytyskäytäntöä.</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Tarkistetaan arkiston eheyttä tietojen verifioinnissa...</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationFailed">Arkiston alustus epäonnistui. Ole hyvä ja tarkista lokit saadaksesi lisätietoja.</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationError">Alustusvirhe</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupError">Virhe Asennuksessa</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupErrorMessage">Asetusten aikana tapahtui virhe: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializingRepository">Initializing repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Applying retention policy...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Running retention policy preview...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Applying retention policy and pruning...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Checking repository integrity...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Running prune dry run...</sys:String>
+    <sys:String x:Key="LOCLuduRestPruningUnusedData">Pruning unused data...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Pruning repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Retention policy application failed for one or more games. Check the raw output for details.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">No snapshots would be deleted. All snapshots match the current retention policy.</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Checking repository integrity with data verification...</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationFailed">Failed to initialize the repository. Please check the logs for details.</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationError">Initialization Error</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupError">Setup Error</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupErrorMessage">An error occurred during setup: {0}</sys:String>
 
 </ResourceDictionary>
