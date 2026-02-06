@@ -137,15 +137,15 @@
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">干燥已经完成。 {0} 快照将被打印。您想要继续实际打印吗？</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">运行完成。 {0} 快照将被删除。您想要继续应用保留政策吗？</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">是否继续保留政策？</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">这将根据您的保留策略删除旧快照：
 
-• Keep last {0} snapshots
-• Keep daily snapshots for {1} days
-• Keep weekly snapshots for {2} weeks
-• Keep monthly snapshots for {3} months
-• Keep yearly snapshots for {4} years
+• 保留最近 {0} 个快照
+• 保留每日快照 {1} 天
+• 保留每周快照 {2} 周
+• 保留每月快照 {3} 个月
+• 保留每年快照 {4} 年
 
-Would you like to perform a dry run first to see what would be deleted?</sys:String>
+您是否想先进行一次试运行，看看哪些内容会被删除？</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">预览已完成。 {0} 快照将根据保留政策被删除。您想要继续删除吗？</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">是否继续删除？</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">修理仓库</sys:String>
@@ -168,12 +168,12 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
 
     <!-- Backup browser -->
     <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">删除备份快照</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Are you sure you want to delete snapshot {0} from {1}?</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">您确定要从 {1}中删除快照 {0} 吗？</sys:String>
     <sys:String x:Key="LOCLuduRestSuccess">成功</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">快照已成功删除。</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">恢复最新快照</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">没有找到这场游戏的快照。</sys:String>
-    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restore snapshot {0} for {1} to folder:\n{2}\n\nExisting files may be overwritten. Continue?</sys:String>
+    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">将快照 {0} 还原到文件夹\n{2}\n\n，目标文件夹为 {1} 。现有文件可能会被覆盖。是否继续？</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">正在恢复快照...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">快照已成功恢复。</sys:String>
@@ -200,11 +200,11 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">保持每年的 N 年快照：</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">这么多年每年保持一张快照</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">使用默认设置的示例：</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
-• Plus 1 snapshot per day for 7 days
-• Plus 1 snapshot per week for 4 weeks
-• Plus 1 snapshot per month for 12 months
-• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample">• 保留最新的 10 个快照
+• 每天额外保留 1 个快照，持续 7 天
+• 每周额外保留 1 个快照，持续 4 周
+• 每月额外保留 1 个快照，持续 12 个月
+• 每年额外保留 1 个快照，持续 5 年</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">打印结果</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">摘要信息将显示在此处</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">快照已删除</sys:String>
