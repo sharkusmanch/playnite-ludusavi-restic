@@ -254,6 +254,7 @@ namespace LudusaviRestic
             return null;
         }
 
+
         public void BeginEdit()
         {
             this.errors = new List<string>();
