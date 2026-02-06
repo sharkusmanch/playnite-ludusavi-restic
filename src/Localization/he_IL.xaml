@@ -239,6 +239,28 @@
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(אַף לֹא אֶחָד)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">לא ניתן לקבוע את תגית שם המשחק עבור תמונת מצב זו.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">עקיפות משחק</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">עקיפת מרווח הגיבוי ומדיניות השמירה של המשחק עבור משחקים ספציפיים. משחקים שאינם רשומים משתמשים בברירות המחדל הגלובליות. הוספת עקיפות מתפריט לחיצה ימנית של המשחק. שדות שמירה ריקים מושבתים (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">מרווח זמן (דקות)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">שמור אחרון</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">שמור יומי</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">שמור שבועי</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">שמור חודשי</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">שמור מדי שנה</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">הסר את הנבחרים</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">הגדר מרווח גיבוי</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">עקיפת מרווח זמן גיבוי</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">הזן את מרווח הגיבוי בדקות עבור {0} (נוכחי: {1}, ברירת מחדל גלובלית: {2}). השאר ריק כדי להסיר את העקיפה.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">הגדר מדיניות שמירה</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">עקיפת מדיניות שמירה</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">הגדר ערכים כדי לעקוף את מדיניות השמירה הגלובלית עבור משחק זה. שדות ריקים מושבתים (מוגדרים כ-0), כך שרק הערכים שתציין יחולו.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">לְהַצִיל</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">לְבַטֵל</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">למשחק/ים {0} יש עקיפות שמירה לפי משחק.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">מציג תמונות מצב...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">לא נמצאו תמונות מצב במאגר.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">אשף ההתקנה</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">גיבוי כל המשחקים</sys:String>
@@ -286,6 +308,9 @@
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">בדיקת שלמות המאגר...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">ריצת שזיפים מיובשים...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">גיזום נתונים שאינם בשימוש...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">גיזום מאגר...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">יישום מדיניות שמירה נכשל עבור משחק אחד או יותר. בדוק את הפלט הגולמי לקבלת פרטים.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">לא יימחקו תמונות. כל התמונות תואמות למדיניות השמירה הנוכחית.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">בדיקת שלמות המאגר באמצעות אימות נתונים...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">אתחול המאגר נכשל. אנא בדוק את היומנים לקבלת פרטים.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">שגיאת אתחול</sys:String>
