@@ -239,6 +239,28 @@
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(ніхто)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Неможливо визначити тег назви гри для цього знімка.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Перевизначення гри</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Змінити інтервал резервного копіювання ігрового процесу та політику зберігання для певних ігор. Ігри, яких немає в списку, використовують глобальні значення за замовчуванням. Додайте зміни з контекстного меню гри, яке відображається клацанням правою кнопкою миші. Пусті поля зберігання вимкнено (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Інтервал (хв)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Залишати останнім</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Зберігати щодня</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Зберігати щотижня</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Зберігати щомісяця</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Зберігати щорічно</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Видалити вибране</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Встановити інтервал резервного копіювання</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Перевизначення інтервалу резервного копіювання</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Введіть інтервал резервного копіювання в хвилинах для {0} (поточний: {1}, глобальний за замовчуванням: {2}). Залиште поле порожнім, щоб видалити заміну.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Встановити політику збереження</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Заміна політики зберігання</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Встановіть значення, щоб замінити глобальну політику збереження для цієї гри. Пусті поля вимкнено (встановлено значення 0), тому застосовуватимуться лише вказані вами значення.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Зберегти</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Скасувати</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} ігор мають налаштування збереження для кожної гри.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Список знімків...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">У репозиторії не знайдено знімків.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Майстер налаштування</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Резервне копіювання всіх ігор</sys:String>
@@ -286,6 +308,9 @@
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Перевірка цілісності репозиторію...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Запуск підйому сухого бігу...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Очищення невикористаних даних...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Обрізання репозиторію...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Застосування політики збереження не вдалося для однієї або кількох ігор. Перегляньте вихідні дані для отримання детальної інформації.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Жодні знімки не будуть видалені. Усі знімки відповідають поточній політиці зберігання.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Перевірка цілісності репозиторію з перевіркою даних...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Не вдалося ініціалізувати репозиторій. Будь ласка, перевірте логи для деталей.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Помилка ініціалізації</sys:String>
