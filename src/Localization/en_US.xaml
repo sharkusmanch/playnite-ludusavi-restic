@@ -239,14 +239,27 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(none)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Cannot determine game name tag for this snapshot.</sys:String>
 
-    <!-- Game interval overrides -->
+    <!-- Game overrides -->
     <sys:String x:Key="LOCLuduRestTabGameOverrides">Game Overrides</sys:String>
-    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Override the gameplay backup interval for specific games. Games not listed use the global default. Add overrides from the game right-click menu.</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Override the gameplay backup interval and retention policy for specific games. Games not listed use the global defaults. Add overrides from the game right-click menu. Blank retention fields are disabled (0).</sys:String>
     <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Keep Last</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Keep Daily</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Keep Weekly</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Keep Monthly</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Keep Yearly</sys:String>
     <sys:String x:Key="LOCLuduRestRemoveOverride">Remove Selected</sys:String>
     <sys:String x:Key="LOCLuduRestSetBackupInterval">Set backup interval</sys:String>
     <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Backup Interval Override</sys:String>
     <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Enter backup interval in minutes for {0} (current: {1}, global default: {2}). Leave blank to remove override.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Set retention policy</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Retention Policy Override</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Set values to override the global retention policy for this game. Blank fields are disabled (set to 0), so only the values you specify will apply.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Save</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Cancel</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} game(s) have per-game retention overrides.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Listing snapshots...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">No snapshots found in the repository.</sys:String>
 
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>
@@ -295,6 +308,9 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Checking repository integrity...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Running prune dry run...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Pruning unused data...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Pruning repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Retention policy application failed for one or more games. Check the raw output for details.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">No snapshots would be deleted. All snapshots match the current retention policy.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Checking repository integrity with data verification...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Failed to initialize the repository. Please check the logs for details.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Initialization Error</sys:String>

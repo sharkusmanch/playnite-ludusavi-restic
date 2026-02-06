@@ -1,3 +1,7 @@
+using System.Collections.Generic;
+using System.Linq;
+using Newtonsoft.Json.Linq;
+
 namespace LudusaviRestic
 {
     public class ResticCommand : BaseCommand
@@ -82,6 +86,81 @@ namespace LudusaviRestic
             }
 
             return ResticExecute(context, BuildRetentionArgs(context.Settings, true));
+        }
+
+        internal static string BuildPerGameRetentionArgs(string gameTag, int keepLast, int keepDaily,
+            int keepWeekly, int keepMonthly, int keepYearly, bool dryRun)
+        {
+            var suffix = dryRun ? "--dry-run" : "--prune";
+            var parts = new List<string> { $"forget --tag \"{gameTag}\"" };
+            if (keepLast > 0) parts.Add($"--keep-last {keepLast}");
+            if (keepDaily > 0) parts.Add($"--keep-daily {keepDaily}");
+            if (keepWeekly > 0) parts.Add($"--keep-weekly {keepWeekly}");
+            if (keepMonthly > 0) parts.Add($"--keep-monthly {keepMonthly}");
+            if (keepYearly > 0) parts.Add($"--keep-yearly {keepYearly}");
+            parts.Add("--json");
+            parts.Add(suffix);
+            return string.Join(" ", parts);
+        }
+
+        internal static IList<string> ExtractGameTags(string snapshotsJson)
+        {
+            var tags = new HashSet<string>();
+            try
+            {
+                var array = JArray.Parse(snapshotsJson);
+                foreach (var snapshot in array)
+                {
+                    var snapshotTags = snapshot["tags"]?.ToObject<List<string>>();
+                    if (snapshotTags != null && snapshotTags.Count > 0)
+                    {
+                        tags.Add(snapshotTags[0]);
+                    }
+                }
+            }
+            catch
+            {
+                // Return empty list on parse failure
+            }
+            return tags.ToList();
+        }
+
+        public static IList<CommandResult> ForgetWithPerGameRetention(BackupContext context,
+            IList<string> gameTags, bool dryRun)
+        {
+            var results = new List<CommandResult>();
+            logger.Debug($"ForgetWithPerGameRetention: {gameTags.Count} game tags, dryRun={dryRun}");
+            foreach (var gameTag in gameTags)
+            {
+                var over = context.Settings.FindOverrideByGameName(gameTag);
+                RetentionValues retention;
+                if (over != null && over.HasRetentionOverride)
+                {
+                    retention = over.GetEffectiveRetention(context.Settings);
+                    logger.Debug($"Game '{gameTag}': using override retention (last={retention.KeepLast}, daily={retention.KeepDaily}, weekly={retention.KeepWeekly}, monthly={retention.KeepMonthly}, yearly={retention.KeepYearly})");
+                }
+                else
+                {
+                    retention = new RetentionValues(
+                        context.Settings.KeepLast, context.Settings.KeepDaily,
+                        context.Settings.KeepWeekly, context.Settings.KeepMonthly,
+                        context.Settings.KeepYearly);
+                    logger.Debug($"Game '{gameTag}': using global retention (last={retention.KeepLast}, daily={retention.KeepDaily}, weekly={retention.KeepWeekly}, monthly={retention.KeepMonthly}, yearly={retention.KeepYearly})");
+                }
+
+                var args = BuildPerGameRetentionArgs(gameTag,
+                    retention.KeepLast, retention.KeepDaily, retention.KeepWeekly,
+                    retention.KeepMonthly, retention.KeepYearly, dryRun);
+                logger.Debug($"Executing: restic {args}");
+                var result = ResticExecute(context, args);
+                logger.Debug($"Result for '{gameTag}': exitCode={result.ExitCode}, stdout length={result.StdOut?.Length ?? 0}, stderr length={result.StdErr?.Length ?? 0}");
+                if (result.StdOut?.Length > 0)
+                    logger.Debug($"Stdout for '{gameTag}': {result.StdOut.Substring(0, System.Math.Min(500, result.StdOut.Length))}");
+                if (result.StdErr?.Length > 0)
+                    logger.Debug($"Stderr for '{gameTag}': {result.StdErr.Substring(0, System.Math.Min(500, result.StdErr.Length))}");
+                results.Add(result);
+            }
+            return results;
         }
 
         public static CommandResult Check(BackupContext context)

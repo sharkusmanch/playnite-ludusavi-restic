@@ -281,26 +281,106 @@ namespace LudusaviRestic
                                     "Enter backup interval in minutes for {0} (current: {1}, global default: {2}). Leave blank to remove override."),
                                 game.Name, effective, settings.GameplayBackupInterval);
 
+                            var existingInterval = settings.GameIntervalOverrides.ContainsKey(key)
+                                && settings.GameIntervalOverrides[key].HasIntervalOverride
+                                    ? settings.GameIntervalOverrides[key].IntervalMinutes.Value.ToString()
+                                    : "";
+
                             var result = PlayniteApi.Dialogs.SelectString(
                                 prompt,
                                 GetLocalizedString("LOCLuduRestSetBackupIntervalTitle", "Backup Interval Override"),
-                                settings.GameIntervalOverrides.ContainsKey(key)
-                                    ? settings.GameIntervalOverrides[key].IntervalMinutes.ToString()
-                                    : "");
+                                existingInterval);
 
                             if (result.Result)
                             {
                                 if (string.IsNullOrWhiteSpace(result.SelectedString))
                                 {
-                                    settings.GameIntervalOverrides.Remove(key);
+                                    // Clear interval; remove entry entirely if no retention override either
+                                    if (settings.GameIntervalOverrides.ContainsKey(key))
+                                    {
+                                        var entry = settings.GameIntervalOverrides[key];
+                                        entry.IntervalMinutes = null;
+                                        if (!entry.HasRetentionOverride)
+                                        {
+                                            settings.GameIntervalOverrides.Remove(key);
+                                        }
+                                    }
                                 }
                                 else
                                 {
                                     int val;
                                     if (int.TryParse(result.SelectedString, out val) && val > 0)
                                     {
-                                        settings.GameIntervalOverrides[key] = new GameIntervalOverride(game.Name, val);
+                                        if (!settings.GameIntervalOverrides.ContainsKey(key))
+                                        {
+                                            settings.GameIntervalOverrides[key] = new GameOverride(game.Name, val);
+                                        }
+                                        else
+                                        {
+                                            settings.GameIntervalOverrides[key].IntervalMinutes = val;
+                                            settings.GameIntervalOverrides[key].GameName = game.Name.Replace(",", "_");
+                                        }
                                     }
+                                }
+                                settings.Save();
+                            }
+                        }
+                    }
+                },
+                new GameMenuItem
+                {
+                    Description = GetLocalizedString("LOCLuduRestSetRetentionPolicy", "Set retention policy"),
+                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
+
+                    Action = args => {
+                        if (args.Games.Count == 1)
+                        {
+                            var game = args.Games.First();
+                            var key = game.Id.ToString();
+                            var sanitizedName = game.Name.Replace(",", "_");
+
+                            GameOverride existing = null;
+                            if (settings.GameIntervalOverrides.ContainsKey(key))
+                            {
+                                existing = settings.GameIntervalOverrides[key];
+                            }
+
+                            var window = new RetentionOverrideWindow(game.Name, settings, existing);
+                            window.Owner = PlayniteApi.Dialogs.GetCurrentAppWindow();
+
+                            if (window.ShowDialog() == true)
+                            {
+                                if (window.Removed)
+                                {
+                                    // Remove retention override; remove entry entirely if no interval override either
+                                    if (settings.GameIntervalOverrides.ContainsKey(key))
+                                    {
+                                        var entry = settings.GameIntervalOverrides[key];
+                                        entry.KeepLast = null;
+                                        entry.KeepDaily = null;
+                                        entry.KeepWeekly = null;
+                                        entry.KeepMonthly = null;
+                                        entry.KeepYearly = null;
+                                        if (!entry.HasIntervalOverride)
+                                        {
+                                            settings.GameIntervalOverrides.Remove(key);
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (!settings.GameIntervalOverrides.ContainsKey(key))
+                                    {
+                                        settings.GameIntervalOverrides[key] = new GameOverride(sanitizedName, 0);
+                                    }
+
+                                    var over = settings.GameIntervalOverrides[key];
+                                    over.GameName = sanitizedName;
+                                    over.KeepLast = window.KeepLast;
+                                    over.KeepDaily = window.KeepDaily;
+                                    over.KeepWeekly = window.KeepWeekly;
+                                    over.KeepMonthly = window.KeepMonthly;
+                                    over.KeepYearly = window.KeepYearly;
                                 }
                                 settings.Save();
                             }
@@ -475,10 +555,25 @@ namespace LudusaviRestic
                 return;
             }
 
+            // Count per-game overrides with retention
+            int overrideCount = 0;
+            foreach (var kvp in this.settings.GameIntervalOverrides)
+            {
+                if (kvp.Value.HasRetentionOverride)
+                    overrideCount++;
+            }
+
             // Show confirmation dialog with retention policy details and ask about dry run
             var message = string.Format(GetLocalizedString("LOCLuduRestRetentionPolicyDetails", "LOCLuduRestRetentionPolicyDetails"),
                          this.settings.KeepLast, this.settings.KeepDaily, this.settings.KeepWeekly,
                          this.settings.KeepMonthly, this.settings.KeepYearly);
+
+            if (overrideCount > 0)
+            {
+                message += "\n\n" + string.Format(
+                    GetLocalizedString("LOCLuduRestRetentionOverrideCount", "{0} game(s) have per-game retention overrides."),
+                    overrideCount);
+            }
 
             var dryRunResult = PlayniteApi.Dialogs.ShowMessage(
                 message,
@@ -501,38 +596,66 @@ namespace LudusaviRestic
             {
                 try
                 {
-                    // Perform dry run if requested
+                    // Step 1: List snapshots and extract game tags
+                    activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestListingSnapshots", "Listing snapshots...");
+                    var snapshotsResult = ResticCommand.ListSnapshots(context);
+                    if (snapshotsResult.ExitCode != 0)
+                    {
+                        logger.Error($"Failed to list snapshots: {snapshotsResult.StdErr}");
+                        PlayniteApi.Dialogs.ShowErrorMessage($"Failed to list snapshots:\n{snapshotsResult.StdErr}");
+                        return;
+                    }
+
+                    var gameTags = ResticCommand.ExtractGameTags(snapshotsResult.StdOut);
+                    if (gameTags.Count == 0)
+                    {
+                        PlayniteApi.Dialogs.ShowMessage(
+                            GetLocalizedString("LOCLuduRestNoSnapshotsFound", "No snapshots found in the repository."),
+                            GetLocalizedString("LOCLuduRestRetentionPolicy", "LOCLuduRestRetentionPolicy"));
+                        return;
+                    }
+
+                    // Step 2: Perform dry run if requested
                     if (performDryRun)
                     {
                         activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestRunningRetentionPreview", "LOCLuduRestRunningRetentionPreview");
-                        var dryRunForgetResult = ResticCommand.ForgetWithRetentionDryRun(context);
-                        var parsedDryRun = PruneResultParser.ParseForgetOutput(dryRunForgetResult, true);
+                        var dryRunResults = ResticCommand.ForgetWithPerGameRetention(context, gameTags, true);
+                        var parsedDryRun = PruneResultParser.MergeForgetResults(dryRunResults, true);
 
-                        // Show dry run results
+                        // Show dry run results window
                         System.Windows.Application.Current.Dispatcher.Invoke(() =>
                         {
                             var dryRunWindow = new PruneResultsWindow(parsedDryRun);
                             dryRunWindow.Owner = PlayniteApi.Dialogs.GetCurrentAppWindow();
                             dryRunWindow.ShowDialog();
-
-                            // Ask if user wants to proceed
-                            var proceedResult = PlayniteApi.Dialogs.ShowMessage(
-                                string.Format(GetLocalizedString("LOCLuduRestRetentionPreviewCompleted", "LOCLuduRestRetentionPreviewCompleted"), parsedDryRun.SnapshotsDeleted),
-                                GetLocalizedString("LOCLuduRestProceedWithDeletion", "LOCLuduRestProceedWithDeletion"),
-                                System.Windows.MessageBoxButton.YesNo,
-                                System.Windows.MessageBoxImage.Question);
-
-                            if (proceedResult != System.Windows.MessageBoxResult.Yes)
-                                return;
                         });
+
+                        // Skip confirmation if nothing to delete
+                        if (parsedDryRun.SnapshotsDeleted == 0)
+                        {
+                            PlayniteApi.Dialogs.ShowMessage(
+                                GetLocalizedString("LOCLuduRestRetentionNothingToDelete", "No snapshots would be deleted. All snapshots match the current retention policy."),
+                                GetLocalizedString("LOCLuduRestRetentionPolicy", "LOCLuduRestRetentionPolicy"));
+                            return;
+                        }
+
+                        // Ask if user wants to proceed (outside Dispatcher.Invoke — Playnite handles dispatching)
+                        var proceedResult = PlayniteApi.Dialogs.ShowMessage(
+                            string.Format(GetLocalizedString("LOCLuduRestRetentionPreviewCompleted", "LOCLuduRestRetentionPreviewCompleted"), parsedDryRun.SnapshotsDeleted),
+                            GetLocalizedString("LOCLuduRestProceedWithDeletion", "LOCLuduRestProceedWithDeletion"),
+                            System.Windows.MessageBoxButton.YesNo,
+                            System.Windows.MessageBoxImage.Question);
+
+                        if (proceedResult != System.Windows.MessageBoxResult.Yes)
+                            return;
                     }
 
-                    // Apply actual retention policy
+                    // Step 3: Apply actual retention policy per game
                     activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestApplyingRetentionAndPruning", "LOCLuduRestApplyingRetentionAndPruning");
-                    var retentionResult = ResticCommand.ForgetWithRetention(context);
-                    var parsedResult = PruneResultParser.ParseForgetOutput(retentionResult, false);
+                    var retentionResults = ResticCommand.ForgetWithPerGameRetention(context, gameTags, false);
+                    var parsedResult = PruneResultParser.MergeForgetResults(retentionResults, false);
 
-                    if (retentionResult.ExitCode == 0)
+                    if (parsedResult.Success)
                     {
                         // Show detailed results
                         System.Windows.Application.Current.Dispatcher.Invoke(() =>
@@ -546,8 +669,8 @@ namespace LudusaviRestic
                     }
                     else
                     {
-                        logger.Error($"Retention policy application failed: {retentionResult.StdErr}");
-                        PlayniteApi.Dialogs.ShowErrorMessage($"Retention policy application failed:\n{retentionResult.StdErr}");
+                        logger.Error("Retention policy application failed for one or more games");
+                        PlayniteApi.Dialogs.ShowErrorMessage(GetLocalizedString("LOCLuduRestRetentionPolicyPartialFailure", "Retention policy application failed for one or more games. Check the raw output for details."));
                     }
                 }
                 catch (Exception ex)
@@ -575,7 +698,7 @@ namespace LudusaviRestic
             bool performDryRun = dryRunResult == System.Windows.MessageBoxResult.Yes;
 
             GlobalProgressOptions globalProgressOptions = new GlobalProgressOptions(
-                "Pruning repository...",
+                GetLocalizedString("LOCLuduRestProgressPruningRepository", "Pruning repository..."),
                 true
             );
             globalProgressOptions.IsIndeterminate = true;
@@ -591,23 +714,23 @@ namespace LudusaviRestic
                         var dryRunPruneResult = ResticCommand.PruneDryRun(context);
                         var parsedDryRun = PruneResultParser.ParsePruneOutput(dryRunPruneResult, true);
 
-                        // Show dry run results
+                        // Show dry run results window
                         System.Windows.Application.Current.Dispatcher.Invoke(() =>
                         {
                             var dryRunWindow = new PruneResultsWindow(parsedDryRun);
                             dryRunWindow.Owner = PlayniteApi.Dialogs.GetCurrentAppWindow();
                             dryRunWindow.ShowDialog();
-
-                            // Ask if user wants to proceed
-                            var proceedResult = PlayniteApi.Dialogs.ShowMessage(
-                                GetLocalizedString("LOCLuduRestPruneDryRunCompleted", "LOCLuduRestPruneDryRunCompleted"),
-                                GetLocalizedString("LOCLuduRestProceedWithPruning", "LOCLuduRestProceedWithPruning"),
-                                System.Windows.MessageBoxButton.YesNo,
-                                System.Windows.MessageBoxImage.Question);
-
-                            if (proceedResult != System.Windows.MessageBoxResult.Yes)
-                                return;
                         });
+
+                        // Ask if user wants to proceed (outside Dispatcher.Invoke — Playnite handles dispatching)
+                        var proceedResult = PlayniteApi.Dialogs.ShowMessage(
+                            GetLocalizedString("LOCLuduRestPruneDryRunCompleted", "LOCLuduRestPruneDryRunCompleted"),
+                            GetLocalizedString("LOCLuduRestProceedWithPruning", "LOCLuduRestProceedWithPruning"),
+                            System.Windows.MessageBoxButton.YesNo,
+                            System.Windows.MessageBoxImage.Question);
+
+                        if (proceedResult != System.Windows.MessageBoxResult.Yes)
+                            return;
                     }
 
                     // Perform actual prune

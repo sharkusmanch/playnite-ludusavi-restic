@@ -126,7 +126,7 @@ namespace LudusaviRestic.Tests
         {
             var settings = new LudusaviResticSettings();
             var gameId = Guid.NewGuid();
-            settings.GameIntervalOverrides[gameId.ToString()] = new GameIntervalOverride("Test Game", 15);
+            settings.GameIntervalOverrides[gameId.ToString()] = new GameOverride("Test Game", 15);
 
             Assert.Equal(15, settings.GetEffectiveInterval(gameId));
         }
@@ -145,7 +145,7 @@ namespace LudusaviRestic.Tests
         {
             var settings = new LudusaviResticSettings();
             var gameId = Guid.NewGuid();
-            settings.GameIntervalOverrides[gameId.ToString()] = new GameIntervalOverride("Test Game", 0);
+            settings.GameIntervalOverrides[gameId.ToString()] = new GameOverride("Test Game", 0);
 
             Assert.Equal(settings.GameplayBackupInterval, settings.GetEffectiveInterval(gameId));
         }
@@ -156,8 +156,8 @@ namespace LudusaviRestic.Tests
             var settings = new LudusaviResticSettings();
             var id1 = Guid.NewGuid().ToString();
             var id2 = Guid.NewGuid().ToString();
-            settings.GameIntervalOverrides[id1] = new GameIntervalOverride("Game A", 10);
-            settings.GameIntervalOverrides[id2] = new GameIntervalOverride("Game B", 30);
+            settings.GameIntervalOverrides[id1] = new GameOverride("Game A", 10);
+            settings.GameIntervalOverrides[id2] = new GameOverride("Game B", 30);
 
             var json = JsonConvert.SerializeObject(settings);
             var deserialized = JsonConvert.DeserializeObject<LudusaviResticSettings>(json);
@@ -167,6 +167,145 @@ namespace LudusaviRestic.Tests
             Assert.Equal(10, deserialized.GameIntervalOverrides[id1].IntervalMinutes);
             Assert.Equal("Game B", deserialized.GameIntervalOverrides[id2].GameName);
             Assert.Equal(30, deserialized.GameIntervalOverrides[id2].IntervalMinutes);
+        }
+
+        [Fact]
+        public void HasRetentionOverride_DefaultIsFalse()
+        {
+            var over = new GameOverride("Test", 5);
+
+            Assert.False(over.HasRetentionOverride);
+        }
+
+        [Fact]
+        public void HasRetentionOverride_TrueWhenAnyFieldSet()
+        {
+            var over = new GameOverride("Test", 5);
+            over.KeepLast = 20;
+
+            Assert.True(over.HasRetentionOverride);
+        }
+
+        [Fact]
+        public void HasRetentionOverride_TrueWhenMultipleFieldsSet()
+        {
+            var over = new GameOverride("Test", 5);
+            over.KeepDaily = 14;
+            over.KeepYearly = 3;
+
+            Assert.True(over.HasRetentionOverride);
+        }
+
+        [Fact]
+        public void GetEffectiveRetention_UsesOverrideWhenSet()
+        {
+            var settings = new LudusaviResticSettings();
+            var over = new GameOverride("Test", 5);
+            over.KeepLast = 20;
+            over.KeepDaily = 14;
+
+            var retention = over.GetEffectiveRetention(settings);
+
+            Assert.Equal(20, retention.KeepLast);
+            Assert.Equal(14, retention.KeepDaily);
+            // Unset fields default to 0 (disabled), not global
+            Assert.Equal(0, retention.KeepWeekly);
+            Assert.Equal(0, retention.KeepMonthly);
+            Assert.Equal(0, retention.KeepYearly);
+        }
+
+        [Fact]
+        public void GetEffectiveRetention_UnsetFieldsDefaultToZero()
+        {
+            var settings = new LudusaviResticSettings();
+            var over = new GameOverride("Test", 5);
+
+            var retention = over.GetEffectiveRetention(settings);
+
+            Assert.Equal(0, retention.KeepLast);
+            Assert.Equal(0, retention.KeepDaily);
+            Assert.Equal(0, retention.KeepWeekly);
+            Assert.Equal(0, retention.KeepMonthly);
+            Assert.Equal(0, retention.KeepYearly);
+        }
+
+        [Fact]
+        public void RetentionOverride_SerializationRoundTrip()
+        {
+            var settings = new LudusaviResticSettings();
+            var id = Guid.NewGuid().ToString();
+            var over = new GameOverride("Test Game", 5);
+            over.KeepLast = 20;
+            over.KeepDaily = null;
+            over.KeepWeekly = 8;
+            settings.GameIntervalOverrides[id] = over;
+
+            var json = JsonConvert.SerializeObject(settings);
+            var deserialized = JsonConvert.DeserializeObject<LudusaviResticSettings>(json);
+
+            var result = deserialized.GameIntervalOverrides[id];
+            Assert.Equal(20, result.KeepLast);
+            Assert.Null(result.KeepDaily);
+            Assert.Equal(8, result.KeepWeekly);
+            Assert.Null(result.KeepMonthly);
+            Assert.Null(result.KeepYearly);
+            Assert.True(result.HasRetentionOverride);
+        }
+
+        [Fact]
+        public void BackwardCompat_OldJsonWithoutRetentionFields_DeserializesToNulls()
+        {
+            // Simulate old JSON that only had GameName and IntervalMinutes
+            string json = @"{""GameIntervalOverrides"":{""test-id"":{""GameName"":""Old Game"",""IntervalMinutes"":10}}}";
+
+            var deserialized = JsonConvert.DeserializeObject<LudusaviResticSettings>(json);
+
+            var over = deserialized.GameIntervalOverrides["test-id"];
+            Assert.Equal("Old Game", over.GameName);
+            Assert.Equal(10, over.IntervalMinutes);
+            Assert.Null(over.KeepLast);
+            Assert.Null(over.KeepDaily);
+            Assert.Null(over.KeepWeekly);
+            Assert.Null(over.KeepMonthly);
+            Assert.Null(over.KeepYearly);
+            Assert.False(over.HasRetentionOverride);
+        }
+
+        [Fact]
+        public void FindOverrideByGameName_Found()
+        {
+            var settings = new LudusaviResticSettings();
+            var id = Guid.NewGuid().ToString();
+            settings.GameIntervalOverrides[id] = new GameOverride("My Game", 10);
+
+            var found = settings.FindOverrideByGameName("My Game");
+
+            Assert.NotNull(found);
+            Assert.Equal("My Game", found.GameName);
+        }
+
+        [Fact]
+        public void FindOverrideByGameName_NotFound()
+        {
+            var settings = new LudusaviResticSettings();
+            var id = Guid.NewGuid().ToString();
+            settings.GameIntervalOverrides[id] = new GameOverride("My Game", 10);
+
+            var found = settings.FindOverrideByGameName("Other Game");
+
+            Assert.Null(found);
+        }
+
+        [Fact]
+        public void FindOverrideByGameName_CaseInsensitive()
+        {
+            var settings = new LudusaviResticSettings();
+            var id = Guid.NewGuid().ToString();
+            settings.GameIntervalOverrides[id] = new GameOverride("My Game", 10);
+
+            var found = settings.FindOverrideByGameName("my game");
+
+            Assert.NotNull(found);
         }
     }
 }
