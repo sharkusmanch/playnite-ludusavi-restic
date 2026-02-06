@@ -239,6 +239,28 @@ Valitse Kyllä käyttääksesi ehdotettua kansiota, Ei valita toista, tai Peruut
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(none)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Ei voida määrittää pelin nimeä tälle tilannekuvalle.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Pelin ohitukset</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Ohita tiettyjen pelien pelin varmuuskopiointiväli ja säilytyskäytäntö. Muut kuin luettelossa olevat pelit käyttävät yleisiä oletusasetuksia. Lisää ohitukset pelin hiiren kakkospainikkeen valikosta. Tyhjät säilytyskentät ovat poissa käytöstä (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Väli (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Pidä viimeinen</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Pidä päivittäin</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Pidä viikoittain</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Pidä kuukausittain</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Pidä vuosittain</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Poista valitut</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Varmuuskopiointivälin asettaminen</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Varmuuskopiointivälin ohitus</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Syötä varmuuskopiointiväli minuutteina kohtaan {0} (nykyinen: {1}, globaali oletusarvo: {2}). Jätä tyhjäksi poistaaksesi ohituksen.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Säilytyskäytännön asettaminen</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Säilytyskäytännön ohitus</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Aseta arvot, jotka ohittavat pelin yleisen säilytyskäytännön. Tyhjät kentät on poistettu käytöstä (asetettu arvoon 0), joten vain määrittämäsi arvot ovat voimassa.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Tallentaa</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Peruuttaa</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} pelissä/peleissä on pelikohtaisia säilytysrajoituksia.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Listataan tilannekuvia...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Arkistosta ei löytynyt tilannekuvia.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Asetusten ohjattu toiminto</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Varmuuskopioi kaikki pelit</sys:String>
@@ -286,6 +308,9 @@ Valitse Kyllä käyttääksesi ehdotettua kansiota, Ei valita toista, tai Peruut
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Tarkistetaan arkiston eheys...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Juokse kuivalla juoksulla...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Karsitaan käyttämättömiä tietoja...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Karsitaan arkistoa...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Säilytyskäytännön soveltaminen epäonnistui yhdessä tai useammassa pelissä. Tarkista raakadatasta lisätietoja.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Yhtäkään tilannevedosta ei poistettaisi. Kaikki tilannevedokset vastaavat nykyistä säilytyskäytäntöä.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Tarkistetaan arkiston eheyttä tietojen verifioinnissa...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Arkiston alustus epäonnistui. Ole hyvä ja tarkista lokit saadaksesi lisätietoja.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Alustusvirhe</sys:String>
