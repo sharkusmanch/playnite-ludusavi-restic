@@ -239,6 +239,28 @@
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(없음)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">이 스냅샷에 대한 게임 이름 태그를 확인할 수 없습니다.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">게임 오버라이드</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">특정 게임에 대한 게임플레이 백업 간격 및 보존 정책을 재정의합니다. 목록에 없는 게임은 전역 기본값을 사용합니다. 게임을 마우스 오른쪽 버튼으로 클릭하여 재정의를 추가할 수 있습니다. 보존 필드가 비어 있으면 비활성화됩니다(0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">간격(분)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">마지막에 유지하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">매일 보관하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">매주 구독해주세요</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">월간 구독 유지</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">매년 보관하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">선택한 항목 제거</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">백업 간격 설정</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">백업 간격 재정의</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">{0} 에 대한 백업 간격을 분 단위로 입력하십시오(현재: {1}, 전역 기본값: {2}). 재정의를 제거하려면 비워 두십시오.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">보존 정책 설정</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">보존 정책 재정의</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">이 게임의 전역 보존 정책을 재정의할 값을 설정하세요. 빈 필드는 비활성화(0으로 설정)되므로 지정한 값만 적용됩니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">구하다</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">취소</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} 게임에는 게임별 유지 재정의 기능이 있습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">스냅샷 목록...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">해당 저장소에서 스냅샷을 찾을 수 없습니다.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">설정 마법사</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">모든 게임을 백업하세요</sys:String>
@@ -286,6 +308,9 @@
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">저장소 무결성을 확인하는 중...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">자두 재배 예열 실행 중...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">사용하지 않는 데이터를 정리합니다...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">저장소 정리 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">하나 이상의 게임에 대해 보존 정책 적용에 실패했습니다. 자세한 내용은 원시 출력 내용을 확인하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">스냅샷은 삭제되지 않습니다. 모든 스냅샷은 현재 보존 정책을 준수합니다.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">데이터 검증을 통해 저장소 무결성을 확인합니다...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">저장소 초기화에 실패했습니다. 자세한 내용은 로그를 확인하세요.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">초기화 오류</sys:String>
