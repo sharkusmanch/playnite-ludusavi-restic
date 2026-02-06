@@ -1,295 +1,295 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Резервна копија током играња</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Резервна копија када је игра заустављена</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Захтевај резервну ознаку када се игра заустави</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Ознака резервне копије игре</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Унесите резервну ознаку за</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Интервал прављења резервне копије сачуваног играња (минути)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Прегледај</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Путања репозиторијума Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
-    <sys:String x:Key="LOCLuduRestShow">Show</sys:String>
-    <sys:String x:Key="LOCLuduRestHide">Hide</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Лозинка за Рестиц репозиторијум</sys:String>
+    <sys:String x:Key="LOCLuduRestShow">Прикажи</sys:String>
+    <sys:String x:Key="LOCLuduRestHide">Сакриј</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Конфигурација Rclone-а</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Лозинка за конфигурацију Rclone-а</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Верификуј</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Путања за извршни програм Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Путања за извршни фајл Ludusavi-ја</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabBackup">Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">Резервна копија</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabRepo">Repository</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">Репозиторијум</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Add additonal tags to snapshots to differentiate events</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Додајте додатне ознаке снимцима да бисте разликовали догађаје</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Manual backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Ручна резервна ознака</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Game stopped backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Ознака резервне копије игре заустављена</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Ознака резервне копије играња</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Create save snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Направи снимак сачуваног садржаја</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Add backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Додај резервну ознаку за укључивање</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Remove backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Уклони ознаку за укључивање резервне копије</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Add backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Додај ознаку за изузеће резервне копије</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Remove backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Уклони ознаку за изузеће из резервне копије</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGM">ЛудусавиРестик</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Backing up</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Прављење резервне копије</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Processing</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Обрада</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupMode">Backup Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupMode">Режим резервне копије</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Exclude Mode: All games are eligible to backup by default. Games can have the exclude tag added to prevent backing up.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Режим искључења: Све игре подразумевано испуњавају услове за прављење резервне копије. Играма се може додати ознака за искључење како би се спречило прављење резервне копије.
 
-Include Mode: No games are backed up. Games can have the include tag added to be eligible for backup.</sys:String>
+Режим укључивања: Ниједна игра се не резервно копира. Играма се може додати ознака за укључивање да би испуњавале услове за прављење резервне копије.</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exclude Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Режим искључења</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Include Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Укључи режим</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Include Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Укључи резервну копију</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Искључи резервну копију</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Направите резервну копију када се игра деинсталира</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Restic executable found and verified.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ Could not automatically detect restic. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi executable found and verified.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticRequired">Please specify the path to restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ Invalid restic executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Please specify the path to ludusavi executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ Invalid ludusavi executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Yes</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryNo">No</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Пронађен и верификован Restic извршни фајл.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ Није могуће аутоматски детектовати restic. Молимо вас да ручно наведете путању.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Извршна датотека Лудусавија пронађена је и верификована.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ Није могуће аутоматски детектовати ludusavi. Молимо вас да ручно наведете путању.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticRequired">Молимо вас да наведете путању до извршне датотеке restic.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Рестиц извршна датотека је валидна.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ Неважећи restic извршни фајл или није доступан.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Молимо вас да наведете путању до извршне датотеке ludusavi.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Извршна датотека Лудусавија је важећа.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ Неважећи извршни фајл ludusavi-ја или није доступан.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Да</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryNo">Не</sys:String>
 
     <!-- Game Menu Items -->
-    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">View backup snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Погледајте снимке резервних копија</sys:String>
 
     <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-Detection Successful</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-Detection Failed</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Аутоматско откривање је успешно</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Аутоматско откривање није успело</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviDetected">Извршна датотека Лудусави откривена је на: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Није могуће аутоматски детектовати извршну датотеку ludusavi. Молимо вас да ручно наведете путању.</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">Рестиц извршни фајл је откривен на: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticNotDetected">Није могуће аутоматски детектовати restic извршну датотеку. Молимо вас да ручно наведете путању.</sys:String>
 
     <!-- Settings verification -->
-    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Settings Verification:</sys:String>
-    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - repository connection succeeded</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - verification succeeded</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Auto-Detection Successful</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Auto-Detection Failed</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restic executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Settings Verification failed: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verifying restic repository connection...</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Verifying ludusavi executable...</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Верификација подешавања Лудусавија Рестика:</sys:String>
+    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - веза са репозиторијумом је успела</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - верификација је успела</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Аутоматско откривање је успешно</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Аутоматско откривање није успело</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Извршна датотека Лудусави откривена је на: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Није могуће аутоматски детектовати извршну датотеку ludusavi. Молимо вас да ручно наведете путању.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Рестиц извршни фајл је откривен на: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Није могуће аутоматски детектовати restic извршну датотеку. Молимо вас да ручно наведете путању.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Верификација подешавања Лудусавија Рестик није успела: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">Провера везе са restic репозиторијумом...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Провера извршне датотеке ludusavi...</sys:String>
 
     <!-- Maintenance operation strings -->
-    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Maintenance Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Full maintenance completed successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationComplete">Verification Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Repository verification completed successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Retention Policy Disabled</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Retention policy is disabled. Please enable it in the extension settings to use this feature.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Retention Policy Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Retention policy applied successfully. Old snapshots have been deleted.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Prune operation completed successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Одржавање завршено</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Комплетно одржавање је успешно завршено.</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationComplete">Верификација завршена</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Верификација репозиторијума је успешно завршена.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Политика задржавања је онемогућена</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Политика задржавања је онемогућена. Омогућите је у подешавањима проширења да бисте користили ову функцију.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Политика задржавања података је завршена</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Политика задржавања је успешно примењена. Стари снимци су обрисани.</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Орезивање је завршено</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Операција оштрења је успешно завршена.</sys:String>
 
     <!-- Dialog prompts -->
-    <sys:String x:Key="LOCLuduRestFullMaintenance">Full Maintenance</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicy">Retention Policy</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Would you like to perform a dry run first to see what would be deleted before actually removing snapshots?</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Prune</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithPruning">Proceed with Pruning?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Dry run completed. {0} snapshots would be pruned. Do you want to proceed with the actual pruning?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Dry run completed. {0} snapshots would be deleted. Do you want to proceed with applying the retention policy?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithRetention">Proceed with Retention Policy?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
+    <sys:String x:Key="LOCLuduRestFullMaintenance">Комплетно одржавање</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Да ли желите прво да извршите пробни рад да видите шта би било обрисано пре него што заправо обришете податке?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicy">Политика задржавања података</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Да ли желите прво да извршите пробни рад да видите шта би било обрисано пре него што заправо уклоните снимке?</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">Сува шљива</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Да ли желите прво да извршите пробни рад да видите шта би било обрисано пре него што заправо обришете податке?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithPruning">Наставити са орезивањем?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Пробно покретање завршено. {0} снимака ће бити обрезано. Да ли желите да наставите са стварним обрезивањем?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Пробно покретање је завршено. {0} снимака би било обрисано. Да ли желите да наставите са применом политике задржавања?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithRetention">Желите ли да наставите са Политиком задржавања?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Овим ће се обрисати стари снимци у складу са вашом политиком задржавања:
 
-• Keep last {0} snapshots
-• Keep daily snapshots for {1} days
-• Keep weekly snapshots for {2} weeks
-• Keep monthly snapshots for {3} months
-• Keep yearly snapshots for {4} years
+• Чувајте последњих {0} снимака
+• Чувајте дневне снимке {1} дана
+• Чувајте недељне снимке {2} недеља
+• Чувајте месечне снимке {3} месеци
+• Чувајте годишње снимке {4} година
 
-Would you like to perform a dry run first to see what would be deleted?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Proceed with Deletion?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">Prune Repository</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is irreversible.
+Да ли желите прво да извршите пробно покретање да бисте видели шта ће бити обрисано?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Преглед је завршен. {0} снимака ће бити обрисано у складу са политиком задржавања. Да ли желите да наставите са брисањем?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Наставити са брисањем?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">Репозиторијум оштрих реза</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Орезивање ће уклонити неискоришћене блобове података из спремишта. Ова операција је неповратна.
 
-Would you like to perform a dry run first to see what would be removed before actually deleting data?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Dry run completed. This operation would remove unused data from the repository. Do you want to proceed with the actual pruning?</sys:String>
+Да ли желите прво да извршите пробно покретање да бисте видели шта ће бити уклоњено пре него што заправо обришете податке?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Пробни рад је завршен. Ова операција би уклонила неискоришћене податке из спремишта. Да ли желите да наставите са стварним одсецањем?</sys:String>
 
     <!-- Welcome and setup -->
-    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - Setup Required</sys:String>
-    <sys:String x:Key="LOCLuduRestWelcomeMessage">Welcome to Ludusavi Restic!
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Добродошли - Потребно је подешавање</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeMessage">Добродошли у Лудусави Рестиц!
 
-This appears to be your first time using the extension or your configuration is incomplete. Would you like to run the setup wizard to configure your backup repository?</sys:String>
-    <sys:String x:Key="LOCLuduRestConfigurationRequired">Configuration Required</sys:String>
-    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic is not configured yet. Would you like to run the setup wizard?</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Invalid Configuration</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticMessage">The configured restic executable is not valid or accessible. Would you like to run the setup wizard to fix this?</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupComplete">Setup Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Setup completed successfully! You can now use all backup features.</sys:String>
+Изгледа да први пут користите екстензију или је ваша конфигурација непотпуна. Да ли желите да покренете чаробњак за подешавање да бисте конфигурисали спремиште резервних копија?</sys:String>
+    <sys:String x:Key="LOCLuduRestConfigurationRequired">Потребна конфигурација</sys:String>
+    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Лудусави Рестик још није конфигурисан. Да ли желите да покренете чаробњака за подешавање?</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Неважећа конфигурација</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticMessage">Конфигурисана извршна датотека restic није важећа или јој није могуће приступити. Да ли желите да покренете чаробњак за подешавање да бисте ово поправили?</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupComplete">Подешавање завршено</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Подешавање је успешно завршено! Сада можете да користите све функције резервних копија.</sys:String>
 
     <!-- Backup browser -->
-    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Delete Backup Snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Are you sure you want to delete snapshot {0} from {1}?</sys:String>
-    <sys:String x:Key="LOCLuduRestSuccess">Success</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Snapshot deleted successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restore latest snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">No snapshots found for this game.</sys:String>
-    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restore snapshot {0} for {1} to folder:\n{2}\n\nExisting files may be overwritten. Continue?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restoring snapshot...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompleted">Snapshot restored successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRefresh">Refresh</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSelected">Restore Selected</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSelected">Delete Selected</sys:String>
-    <sys:String x:Key="LOCLuduRestFilterByGame">Filter by Game:</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">Snapshot ID</sys:String>
-    <sys:String x:Key="LOCLuduRestDateHeader">Date</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsHeader">Tags</sys:String>
-    <sys:String x:Key="LOCLuduRestTotalSnapshots">Total snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetect">Auto-Detect</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Retention Policy</sys:String>
-    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Enable automatic retention policy</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">When enabled, these policies will be applied during maintenance operations to automatically remove old snapshots.</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastLabel">Keep last N snapshots:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastHelp">Keep the most recent snapshots regardless of age</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Keep daily snapshots for N days:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Keep one snapshot per day for this many days</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Keep weekly snapshots for N weeks:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Keep one snapshot per week for this many weeks</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Keep monthly snapshots for N months:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Keep one snapshot per month for this many months</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Keep yearly snapshots for N years:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Keep one snapshot per year for this many years</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Example with default settings:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
-• Plus 1 snapshot per day for 7 days
-• Plus 1 snapshot per week for 4 weeks
-• Plus 1 snapshot per month for 12 months
-• Plus 1 snapshot per year for 5 years</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Pruning Results</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Summary information will appear here</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Snapshots Deleted</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesAffected">Games Affected</sys:String>
-    <sys:String x:Key="LOCLuduRestDataDeleted">Data Deleted</sys:String>
-    <sys:String x:Key="LOCLuduRestStatus">Status</sys:String>
-    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Deleted Snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestClearFilter">Clear Filter</sys:String>
-    <sys:String x:Key="LOCLuduRestGameHeader">Game</sys:String>
-    <sys:String x:Key="LOCLuduRestDateTimeHeader">Date/Time</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Games Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestGameNameHeader">Game Name</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Tags Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestTagHeader">Tag</sys:String>
-    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Occurrences</sys:String>
-    <sys:String x:Key="LOCLuduRestRawOutputTab">Raw Output</sys:String>
-    <sys:String x:Key="LOCLuduRestClose">Close</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Enter an optional custom tag for this manual backup (leave blank for none):</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Manual Backup Tag</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreConfirm">Restore snapshot {0} to {1}? This may overwrite existing files.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restoring snapshot {0}...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} restored successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreFailed">Failed to restore snapshot: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreError">Error restoring snapshot: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (game: {1}) contains {2} files.
-New files: {3}
-Existing files (will be overwritten): {4}
-Suggested restore folder: {5}
+    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Обриши снимак резервне копије</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Да ли сте сигурни да желите да обришете снимак {0} из {1}?</sys:String>
+    <sys:String x:Key="LOCLuduRestSuccess">Успех</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Снимак је успешно обрисан.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Врати најновији снимак</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Нису пронађени снимци за ову игру.</sys:String>
+    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Врати снимак {0} за {1} у фасциклу:\n{2}\n\nПостојеће датотеке могу бити пребрисане. Да ли желите да наставите?</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Врати снимак</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Враћање снимка...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompleted">Снимак је успешно враћен.</sys:String>
+    <sys:String x:Key="LOCLuduRestRefresh">Освежи</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSelected">Врати изабрано</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSelected">Обриши изабрано</sys:String>
+    <sys:String x:Key="LOCLuduRestFilterByGame">Филтрирај по игри:</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">ИД снимка</sys:String>
+    <sys:String x:Key="LOCLuduRestDateHeader">Датум</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsHeader">Ознаке</sys:String>
+    <sys:String x:Key="LOCLuduRestTotalSnapshots">Укупан број снимака</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetect">Аутоматско откривање</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Политика задржавања података</sys:String>
+    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Омогући политику аутоматског задржавања</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">Када су омогућене, ове смернице ће се примењивати током операција одржавања како би се аутоматски уклонили стари снимци.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastLabel">Сачувај последњих N снимака:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastHelp">Чувајте најновије снимке без обзира на године</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Чувајте дневне снимке током N дана:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Чувајте један снимак дневно током овог броја дана</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Чувајте недељне снимке током N недеља:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Чувајте један снимак недељно током овог броја недеља</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Чувајте месечне снимке током N месеци:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Чувајте један снимак месечно током овог броја месеци</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Чувајте годишње снимке током N година:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Чувајте један снимак годишње током толико година</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Пример са подразумеваним подешавањима:</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample">• Чувајте последњих 10 снимака
+• Плус 1 снимак дневно током 7 дана
+• Плус 1 снимак недељно током 4 недеље
+• Плус 1 снимак месечно током 12 месеци
+• Плус 1 снимак годишње током 5 година</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Резултати орезивања</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Овде ће се појавити резиме информација</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Снимци су обрисани</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesAffected">Погођене игре</sys:String>
+    <sys:String x:Key="LOCLuduRestDataDeleted">Подаци су обрисани</sys:String>
+    <sys:String x:Key="LOCLuduRestStatus">Статус</sys:String>
+    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Обрисани снимци</sys:String>
+    <sys:String x:Key="LOCLuduRestClearFilter">Обриши филтер</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">Игра</sys:String>
+    <sys:String x:Key="LOCLuduRestDateTimeHeader">Датум/Време</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Резиме игара</sys:String>
+    <sys:String x:Key="LOCLuduRestGameNameHeader">Назив игре</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Резиме ознака</sys:String>
+    <sys:String x:Key="LOCLuduRestTagHeader">Ознака</sys:String>
+    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Догађаји</sys:String>
+    <sys:String x:Key="LOCLuduRestRawOutputTab">Сирови излаз</sys:String>
+    <sys:String x:Key="LOCLuduRestClose">Затвори</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Унесите опциону прилагођену ознаку за ову ручну резервну копију (оставите празно ако ниједна ниједна):</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Ручна ознака за резервну копију</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreConfirm">Врати снимак {0} на {1}? Ово може пребрисати постојеће датотеке.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Враћање снимка {0}...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Снимак {0} је успешно враћен.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Враћање завршено</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreFailed">Није успело враћање снимка: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreError">Грешка при враћању снимка: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestorePreview">Снимак {0} (игра: {1}) садржи {2} датотека.
+Нове датотеке: {3}
+Постојеће датотеке (биће преписане): {4}
+Предложена фасцикла за враћање: {5}
 
-Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(none)</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Cannot determine game name tag for this snapshot.</sys:String>
+Изаберите Да да бисте користили предложену фасциклу, Не да бисте изабрали другу или Откажи да бисте отказали.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(ниједан)</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Није могуће одредити ознаку имена игре за овај снимак.</sys:String>
 
     <!-- Main menu items -->
-    <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllGames">Backup all games</sys:String>
-    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Browse backup snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceAll">All (check + prune)</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceVerify">Verify</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Delete old snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenancePrune">Prune unused data</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceSection">Maintenance</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSection">Setup</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupWizard">Чаробњак за подешавање</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllGames">Направите резервну копију свих игара</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Прегледајте снимке резервних копија</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceAll">Све (провери + орежи)</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceVerify">Верификуј</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Обришите старе снимке</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenancePrune">Очистите неискоришћене податке</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceSection">Одржавање</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSection">Подешавање</sys:String>
 
     <!-- Dialog strings -->
-    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Select Restic Executable</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Select Ludusavi Executable</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Select Repository Location</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Running full maintenance...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifying repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Изаберите Restic извршну датотеку</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Изаберите извршну датотеку Лудусави</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Изаберите локацију спремишта</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Извршне датотеке (*.exe)|*.exe|Све датотеке (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Извршна датотека|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Конф|*.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">У току је комплетно одржавање...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Верификовање спремишта...</sys:String>
 
     <!-- Validation messages -->
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Please specify the path to restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ Invalid restic executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Please specify the path to ludusavi executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ Invalid ludusavi executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Молимо вас да наведете путању до restic извршне датотеке.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Рестиц извршна датотека је валидна.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ Неважећи restic извршни фајл или није доступан.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Молимо вас да наведете путању до извршне датотеке ludusavi.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Извршна датотека Лудусавија је важећа.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ Неважећи извршни фајл ludusavi-ја или није доступан.</sys:String>
 
     <!-- Setup validation -->
-    <sys:String x:Key="LOCLuduRestValidationError">Validation Error</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticPath">Please specify the path to restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticInvalid">The specified restic executable is not valid or accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Please specify the repository path.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Please enter a repository password.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Passwords do not match.</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryYes">Yes</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryNo">No</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationError">Грешка при валидацији</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticPath">Молимо вас да наведете путању до restic извршне датотеке.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticInvalid">Наведена restic извршна датотека није важећа или доступна.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Молимо вас да наведете путању до спремишта.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Молимо вас да унесете лозинку за спремиште.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Лозинке се не подударају.</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryYes">Да</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryNo">Не</sys:String>
 
     <!-- Progress and initialization messages -->
-    <sys:String x:Key="LOCLuduRestInitializingRepository">Initializing repository...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Applying retention policy...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Running retention policy preview...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Applying retention policy and pruning...</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Checking repository integrity...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Running prune dry run...</sys:String>
-    <sys:String x:Key="LOCLuduRestPruningUnusedData">Pruning unused data...</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Checking repository integrity with data verification...</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationFailed">Failed to initialize the repository. Please check the logs for details.</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationError">Initialization Error</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupError">Setup Error</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupErrorMessage">An error occurred during setup: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializingRepository">Иницијализација спремишта...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Примена политике задржавања...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Покреће се преглед политике задржавања...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Примена политике задржавања и скраћивања...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Провера интегритета спремишта...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Трчање пробног тренинга са сувим шљивама...</sys:String>
+    <sys:String x:Key="LOCLuduRestPruningUnusedData">Уклањање неискоришћених података...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Провера интегритета спремишта са верификацијом података...</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationFailed">Иницијализација спремишта није успела. Молимо проверите логове за детаље.</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationError">Грешка иницијализације</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupError">Грешка у подешавању</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupErrorMessage">Дошло је до грешке током подешавања: {0}</sys:String>
 
 </ResourceDictionary>
