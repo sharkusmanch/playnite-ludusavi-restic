@@ -137,15 +137,15 @@
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">ドライランが完了しました。 {0} スナップショットを削除します。実際の剪定を続行しますか？</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">ドライランが完了しました。 {0} スナップショットは削除されます。保持ポリシーの適用を続行しますか？</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">保存ポリシーを続行しますか？</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">これにより、保持ポリシーに従って古いスナップショットが削除されます。
 
-• Keep last {0} snapshots
-• Keep daily snapshots for {1} days
-• Keep weekly snapshots for {2} weeks
-• Keep monthly snapshots for {3} months
-• Keep yearly snapshots for {4} years
+• 最新の {0} 個のスナップショットを保持します
+• 毎日のスナップショットを {1} 日間保持します
+• 毎週のスナップショットを {2} 週間保持します
+• 毎月のスナップショットを {3} か月間保持します
+• 毎年のスナップショットを {4} 年間保持します
 
-Would you like to perform a dry run first to see what would be deleted?</sys:String>
+何が削除されるかを確認するために、最初にドライ ランを実行しますか?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">プレビューが完了しました。 {0} スナップショットは保持ポリシーに従って削除されます。削除を続行しますか？</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">削除を続けますか？</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">リポジトリを削除</sys:String>
@@ -200,11 +200,11 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">年間スナップショットをN年間保持する：</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">この長年の間、年間1つのスナップショットを保持します</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">デフォルト設定の例:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
-• Plus 1 snapshot per day for 7 days
-• Plus 1 snapshot per week for 4 weeks
-• Plus 1 snapshot per month for 12 months
-• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample">• 最新の 10 個のスナップショットを保持
+• 7 日間、毎日 1 個のスナップショットを追加
+• 4 週間、毎週 1 個のスナップショットを追加
+• 12 か月間、毎月 1 個のスナップショットを追加
+• 5 年間、毎年 1 個のスナップショットを追加</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">剪定結果</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">概要情報がここに表示されます</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">スナップショットを削除しました</sys:String>
@@ -230,12 +230,12 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
     <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">スナップショットの復元に失敗しました: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">スナップショットの復元エラー: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (game: {1}) contains {2} files.
-New files: {3}
-Existing files (will be overwritten): {4}
-Suggested restore folder: {5}
+    <sys:String x:Key="LOCLuduRestRestorePreview">スナップショット {0} (ゲーム: {1}) には {2} ファイルが含まれています。
+新しいファイル: {3}
+既存のファイル (上書きされます): {4}
+推奨される復元フォルダー: {5}
 
-Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys:String>
+推奨フォルダーを使用する場合は [はい] を、別のフォルダーを選択する場合は [いいえ] を、中止する場合は [キャンセル] を選択してください。</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(なし)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">このスナップショットのゲーム名タグを決定できません。</sys:String>
 
