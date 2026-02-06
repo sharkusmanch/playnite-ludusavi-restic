@@ -52,41 +52,36 @@ namespace LudusaviRestic
             return ResticExecute(context, "prune --json --dry-run");
         }
 
+        internal static string BuildRetentionArgs(LudusaviResticSettings settings, bool dryRun)
+        {
+            var suffix = dryRun ? "--dry-run" : "--prune";
+            return $"forget --keep-last {settings.KeepLast} " +
+                   $"--keep-daily {settings.KeepDaily} " +
+                   $"--keep-weekly {settings.KeepWeekly} " +
+                   $"--keep-monthly {settings.KeepMonthly} " +
+                   $"--keep-yearly {settings.KeepYearly} " +
+                   $"--group-by tags --json {suffix}";
+        }
+
         public static CommandResult ForgetWithRetention(BackupContext context)
         {
-            var settings = context.Settings;
-            if (!settings.EnableRetentionPolicy)
+            if (!context.Settings.EnableRetentionPolicy)
             {
                 return Prune(context);
             }
 
-            var retentionArgs = $"forget --keep-last {settings.KeepLast} " +
-                               $"--keep-daily {settings.KeepDaily} " +
-                               $"--keep-weekly {settings.KeepWeekly} " +
-                               $"--keep-monthly {settings.KeepMonthly} " +
-                               $"--keep-yearly {settings.KeepYearly} " +
-                               "--group-by tags --json --prune";
-
-            return ResticExecute(context, retentionArgs);
+            return ResticExecute(context, BuildRetentionArgs(context.Settings, false));
         }
 
         public static CommandResult ForgetWithRetentionDryRun(BackupContext context)
         {
-            var settings = context.Settings;
-            if (!settings.EnableRetentionPolicy)
+            if (!context.Settings.EnableRetentionPolicy)
             {
                 // Return a check command as a placeholder when retention is disabled
                 return Check(context);
             }
 
-            var retentionArgs = $"forget --keep-last {settings.KeepLast} " +
-                               $"--keep-daily {settings.KeepDaily} " +
-                               $"--keep-weekly {settings.KeepWeekly} " +
-                               $"--keep-monthly {settings.KeepMonthly} " +
-                               $"--keep-yearly {settings.KeepYearly} " +
-                               "--group-by tags --json --dry-run";
-
-            return ResticExecute(context, retentionArgs);
+            return ResticExecute(context, BuildRetentionArgs(context.Settings, true));
         }
 
         public static CommandResult Check(BackupContext context)

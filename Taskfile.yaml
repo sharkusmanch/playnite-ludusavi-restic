@@ -35,6 +35,10 @@ tasks:
     cmds:
     - powershell ./dist/*.pext
 
+  test:
+    cmds:
+    - dotnet test tests/LudusaviRestic.Tests.csproj
+
   logs:
     cmds:
     - powershell "Get-Content ~/Appdata/Roaming/Playnite/extensions.log" -Wait

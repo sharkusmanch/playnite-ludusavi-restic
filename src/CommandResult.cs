@@ -1,5 +1,8 @@
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Text;
+
+[assembly: InternalsVisibleTo("LudusaviRestic.Tests")]
 
 namespace LudusaviRestic
 {
@@ -13,6 +16,13 @@ namespace LudusaviRestic
         public string StdOut { get { return this.stdout; } }
         public string StdErr { get { return this.stderr; } }
 
+        internal CommandResult(int exitCode, string stdout, string stderr)
+        {
+            this.exitCode = exitCode;
+            this.stdout = stdout;
+            this.stderr = stderr;
+        }
+
         public CommandResult(Process process)
         {
             process.Start();
@@ -22,7 +32,7 @@ namespace LudusaviRestic
             this.exitCode = process.ExitCode;
         }
 
-        private string TransformProcessOutput(string output)
+        internal static string TransformProcessOutput(string output)
         {
             byte[] bytes = Encoding.Default.GetBytes(output);
             return Encoding.UTF8.GetString(bytes);

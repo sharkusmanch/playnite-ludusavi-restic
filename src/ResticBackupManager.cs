@@ -33,9 +33,32 @@ namespace LudusaviRestic
             PerformBackup(game, new List<string>());
         }
 
-        private bool GameHasTag(Game game, Guid tagId)
+        internal static bool GameHasTag(Game game, Guid tagId)
         {
             return game.TagIds != null && game.TagIds.Contains(tagId);
+        }
+
+        internal static bool ShouldSkipBackup(ExecutionMode mode, Game game, Guid excludeTagId, Guid includeTagId)
+        {
+            if (mode == ExecutionMode.Exclude && GameHasTag(game, excludeTagId))
+            {
+                return true;
+            }
+            if (mode == ExecutionMode.Include && !GameHasTag(game, includeTagId))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        internal static IList<string> BuildBackupTags(bool additionalTagging, string tagValue)
+        {
+            IList<string> tags = new List<string>();
+            if (additionalTagging)
+            {
+                tags.Add(tagValue);
+            }
+            return tags;
         }
 
         public void PerformBackup(Game game, IList<string> extraTags)
@@ -43,14 +66,9 @@ namespace LudusaviRestic
             logger.Debug($"Backup #{game.Name}");
             LudusaviResticSettings settings = this.context.Settings;
 
-            if (settings.BackupExecutionMode == ExecutionMode.Exclude && GameHasTag(game, settings.ExcludeTagID))
+            if (ShouldSkipBackup(settings.BackupExecutionMode, game, settings.ExcludeTagID, settings.IncludeTagID))
             {
-                logger.Info($"Skipping backup of {game.Name} due to exclude tag");
-                return;
-            }
-            else if (settings.BackupExecutionMode == ExecutionMode.Include && !GameHasTag(game, settings.IncludeTagID))
-            {
-                logger.Info($"Skipping backup of {game.Name} due to lacking include tag");
+                logger.Info($"Skipping backup of {game.Name}");
                 return;
             }
 
@@ -105,36 +123,17 @@ namespace LudusaviRestic
 
         private IList<string> ManualBackupTags()
         {
-            IList<string> tags = new List<string>();
-
-            if (this.context.Settings.AdditionalTagging)
-            {
-                tags.Add(this.context.Settings.ManualSnapshotTag);
-            }
-
-            return tags;
+            return BuildBackupTags(this.context.Settings.AdditionalTagging, this.context.Settings.ManualSnapshotTag);
         }
+
         private IList<string> GameplayBackupTags()
         {
-            IList<string> tags = new List<string>();
-
-            if (this.context.Settings.AdditionalTagging)
-            {
-                tags.Add(this.context.Settings.GameplaySnapshotTag);
-            }
-
-            return tags;
+            return BuildBackupTags(this.context.Settings.AdditionalTagging, this.context.Settings.GameplaySnapshotTag);
         }
+
         private IList<string> GamestoppedBackupTags()
         {
-            IList<string> tags = new List<string>();
-
-            if (this.context.Settings.AdditionalTagging)
-            {
-                tags.Add(this.context.Settings.GameStoppedSnapshotTag);
-            }
-
-            return tags;
+            return BuildBackupTags(this.context.Settings.AdditionalTagging, this.context.Settings.GameStoppedSnapshotTag);
         }
     }
 }

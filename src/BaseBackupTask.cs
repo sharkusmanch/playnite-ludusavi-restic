@@ -36,7 +36,7 @@ namespace LudusaviRestic
 
         protected abstract void Backup();
 
-        protected static IList<String> GameFilesToList(JObject filesMap)
+        internal static IList<String> GameFilesToList(JObject filesMap)
         {
             IList<string> files = new List<string>();
 
@@ -53,7 +53,7 @@ namespace LudusaviRestic
             return tag.Replace(",", "_");
         }
 
-        protected static string ConstructTags(string game, IList<string> extraTags)
+        internal static string ConstructTags(string game, IList<string> extraTags)
         {
             string tags = $"--tag \"{SanitizeTag(game)}\"";
 
