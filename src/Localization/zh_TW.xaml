@@ -239,6 +239,28 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">（沒有任何）</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">無法確定此快照的遊戲名稱標籤。</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">遊戲覆蓋</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">為特定遊戲覆蓋遊戲備份間隔和保留策略。未列出的遊戲使用全域預設值。可透過遊戲右鍵選單新增覆蓋設定。空白的保留欄位將被停用 (0)。</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">間隔（分鐘）</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">保持最後</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">每日保持</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">每周保持</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">每月續訂</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">每年保留</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">移除所選內容</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">設定備份間隔</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">備份間隔覆蓋</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">請輸入備份間隔（分鐘），範圍為 {0} （目前： {1}，全域預設值： {2}）。留空則不進行覆蓋。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">設定保留策略</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">保留策略覆蓋</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">設定值以覆寫此遊戲的全域保留策略。空白欄位將被停用（設定為 0），因此只有您指定的值才會生效。</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">節省</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">取消</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} 遊戲具有按遊戲劃分的保留策略。</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">列出快照…</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">儲存庫中未找到快照。</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">設定嚮導</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">備份所有遊戲</sys:String>
@@ -286,6 +308,9 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">正在檢查儲存庫完整性...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">進行修剪乾演…</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">清理未使用的資料…</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">正在清理儲存庫…</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">一個或多個遊戲的保留策略應用失敗。請查看原始輸出以獲取詳細資訊。</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">不會刪除任何快照。所有快照均符合目前的保留策略。</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">透過資料驗證檢查儲存庫的完整性…</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">初始化儲存庫失敗。請查看日誌以了解詳情。</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">初始化錯誤</sys:String>
