@@ -146,7 +146,7 @@ Inkluder modus: Ingen spill er sikkerhetskopiert. Spill kan ha den inkludere tag
 • Holde årlig gjennomsnapshots for {4} år
 
 først å utføre en tørr løp for å se hva som vil bli slettet?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Forhåndsvisning fullført. {0} øyeblikksbilder vil bli slettet i henhold til oppbevaringspolicyen. Vil du fortsette med slettingen?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">Fortsett med sletting?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">Prune repository</sys:String>
     <sys:String x:Key="LOCLuduRestPruneWarningMessage">Innkjøring vil fjerne ubrukte data fra arkivet. Denne operasjonen er irreversibel.
@@ -225,7 +225,7 @@ Det ser ut til å være første gang du bruker utvidelsen eller konfigurasjonen 
     <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Angi en valgfri egendefinert tag for denne manuelle sikkerhetskopien (la stå tom for ingen):</sys:String>
     <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Manuell sikkerhetskopierings tagg</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Vil du gjenopprette øyeblikksbilde {0} til {1}? Dette kan overskrive eksisterende filer.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restoring snapshot {0}...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Gjenoppretter øyeblikksbilde {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} gjenopprettet.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Kunne ikke gjenopprette snapshot: {0}</sys:String>
