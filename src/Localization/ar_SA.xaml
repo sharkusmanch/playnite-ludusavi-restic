@@ -239,6 +239,28 @@
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(لا شيء)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">لا يمكن تحديد اسم اللعبة لهذه اللقطة.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">تجاوزات اللعبة</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">يمكنك تجاوز فترة النسخ الاحتياطي وسياسة الاحتفاظ بالبيانات لألعاب محددة. أما الألعاب غير المدرجة فتستخدم الإعدادات الافتراضية العامة. يمكنك إضافة التجاوزات من قائمة النقر بزر الماوس الأيمن على اللعبة. حقول الاحتفاظ الفارغة معطلة (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">الفاصل الزمني (بالدقائق)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">احتفظ بالنهاية</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">حافظ على ذلك يوميًا</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">تابع أسبوعيًا</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">احتفظ بالدفع الشهري</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">احتفظ به سنوياً</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">إزالة المحدد</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">اضبط فاصل النسخ الاحتياطي</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">تجاوز فاصل النسخ الاحتياطي</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">أدخل فاصل النسخ الاحتياطي بالدقائق لـ {0} (الحالي: {1}، القيمة الافتراضية العامة: {2}). اتركه فارغًا لإزالة التجاوز.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">تحديد سياسة الاحتفاظ</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">تجاوز سياسة الاحتفاظ</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">قم بتعيين القيم لتجاوز سياسة الاحتفاظ العامة لهذه اللعبة. الحقول الفارغة معطلة (مُعيّنة على 0)، لذا لن تُطبّق إلا القيم التي تُحدّدها.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">يحفظ</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">يلغي</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} تحتوي اللعبة (الألعاب) على تجاوزات الاحتفاظ لكل لعبة.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">لقطات من القوائم...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">لم يتم العثور على أي لقطات في المستودع.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">معالج الإعداد</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">النسخ الاحتياطي لجميع الألعاب</sys:String>
@@ -286,6 +308,9 @@
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">التحقق من سلامة المستودع...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">جارٍ تشغيل التجفيف...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">تشويش البيانات غير المستخدمة...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">جاري تنظيف المستودع...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">فشل تطبيق سياسة الاحتفاظ بالبيانات لواحدة أو أكثر من الألعاب. راجع المخرجات الأصلية للاطلاع على التفاصيل.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">لن يتم حذف أي لقطات. جميع اللقطات تتوافق مع سياسة الاحتفاظ الحالية.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">التحقق من سلامة المستودع مع التحقق من البيانات...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">فشل في تهيئة المستودع. الرجاء التحقق من السجلات للحصول على التفاصيل.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">خطأ في التهيئة</sys:String>
