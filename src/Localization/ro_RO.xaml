@@ -239,6 +239,28 @@ Alegeți Da pentru a utiliza folderul sugerat, Nu poți alege altul sau anula pe
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(niciunul)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Nu se poate determina eticheta numelui jocului pentru această instantaneu.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Suprascrieri de joc</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Suprascrie intervalul de backup al jocului și politica de retenție pentru anumite jocuri. Jocurile care nu sunt listate utilizează setările implicite globale. Adăugați suprascrieri din meniul contextual al jocului. Câmpurile de retenție goale sunt dezactivate (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Păstrează ultimul</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Păstrați zilnic</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Păstrați săptămânal</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Păstrați lunar</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Păstrați anual</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Eliminați selecția</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Setați intervalul de backup</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Suprascrierea intervalului de rezervă</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Introduceți intervalul de backup în minute pentru {0} (curent: {1}, implicit global: {2}). Lăsați necompletat pentru a elimina suprascrierea.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Setați politica de retenție</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Suprascrierea politicii de păstrare</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Setați valori pentru a suprascrie politica globală de retenție pentru acest joc. Câmpurile goale sunt dezactivate (setate la 0), deci se vor aplica doar valorile pe care le specificați.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Salva</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Anula</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} jocuri au suprascrieri pentru păstrarea per joc.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Se înregistrează instantanee...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Nu s-au găsit instantanee în depozit.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Asistent de instalare</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Copie de rezervă toate jocurile</sys:String>
@@ -286,6 +308,9 @@ Alegeți Da pentru a utiliza folderul sugerat, Nu poți alege altul sau anula pe
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Se verifică integritatea depozitului...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Rulare cursă uscată...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Se afişează datele neutilizate...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Se taie depozitul...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Aplicarea politicii de retenție a eșuat pentru unul sau mai multe jocuri. Verificați rezultatul brut pentru detalii.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Nicio instantanee nu va fi ștearsă. Toate instantaneele corespund politicii actuale de păstrare.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Se verifică integritatea depozitului cu verificarea datelor...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Eșuare inițializare repo. Verificați jurnalele pentru detalii.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Eroare de iniţializare</sys:String>
