@@ -239,6 +239,15 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(none)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Cannot determine game name tag for this snapshot.</sys:String>
 
+    <!-- Game interval overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Game Overrides</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Override the gameplay backup interval for specific games. Games not listed use the global default. Add overrides from the game right-click menu.</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Remove Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Set backup interval</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Backup Interval Override</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Enter backup interval in minutes for {0} (current: {1}, global default: {2}). Leave blank to remove override.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Backup all games</sys:String>

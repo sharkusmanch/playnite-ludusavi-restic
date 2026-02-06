@@ -176,5 +176,24 @@
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
+            <TabItem Header="{DynamicResource LOCLuduRestTabGameOverrides}">
+                <DockPanel Margin="0,10,0,0">
+                    <TextBlock DockPanel.Dock="Top" Margin="15,5,15,10" TextWrapping="Wrap" FontStyle="Italic"
+                               Text="{DynamicResource LOCLuduRestGameOverridesHelp}" />
+                    <Button DockPanel.Dock="Bottom" Margin="15,10,15,15" HorizontalAlignment="Left"
+                            Content="{DynamicResource LOCLuduRestRemoveOverride}" Click="OnRemoveOverride" />
+                    <DataGrid x:Name="OverridesDataGrid" Margin="15,0" AutoGenerateColumns="False"
+                              CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single"
+                              HeadersVisibility="Column" GridLinesVisibility="Horizontal"
+                              CellEditEnding="OnOverrideCellEditEnding">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{DynamicResource LOCLuduRestGameNameHeader}"
+                                                Binding="{Binding GameName}" IsReadOnly="True" Width="*" />
+                            <DataGridTextColumn Header="{DynamicResource LOCLuduRestOverrideIntervalHeader}"
+                                                Binding="{Binding IntervalMinutes}" Width="120" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </TabItem>
         </TabControl>
 </UserControl>
