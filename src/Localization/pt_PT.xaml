@@ -239,6 +239,28 @@ Escolha Sim para usar a pasta sugerida, Não para escolher outro, ou Cancelar pa
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(nenhum)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Não é possível determinar a tag do jogo para este snapshot.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Comandos de jogo</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Substitua o intervalo de cópia de segurança e a política de retenção de jogos específicos. Os jogos não listados utilizam as definições padrão globais. Adicione definições personalizadas clicando com o botão direito do rato no jogo. Os campos de retenção em branco estão desativados (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Intervalo (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Mantenha por último</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Mantenha diariamente</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Manter semanal</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Manter mensal</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Manter anualmente</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Remover selecionado</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Defina o intervalo de cópia de segurança.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Substituição do intervalo de cópia de segurança</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Introduza o intervalo de cópia de segurança em minutos para {0} (atual: {1}, predefinição global: {2}). Deixe em branco para remover a substituição.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Definir política de retenção</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Substituição da política de retenção</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Defina valores para substituir a política de retenção global deste jogo. Os campos em branco são desativados (definidos para 0), pelo que apenas os valores que especificar serão aplicados.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Guardar</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Cancelar</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">Os jogos {0} têm definições de retenção específicas para cada jogo.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Listagem de instantâneos...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Nenhuma imagem capturada foi encontrada no repositório.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Assistente de configuração</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Backup de todos os jogos</sys:String>
@@ -286,6 +308,9 @@ Escolha Sim para usar a pasta sugerida, Não para escolher outro, ou Cancelar pa
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Verificando integridade do repositório...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Executando uma limpeza seca...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Limpeza de dados não usados...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Repositório de poda...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">A aplicação da política de retenção falhou para um ou mais jogos. Verifique a saída em bruto para obter detalhes.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Nenhum instantâneo será eliminado. Todos os instantâneos estão em conformidade com a política de retenção atual.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Verificando a integridade do repositório com a verificação de dados...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Não foi possível inicializar o repositório. Confira os logs para obter detalhes.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Erro de inicialização</sys:String>
