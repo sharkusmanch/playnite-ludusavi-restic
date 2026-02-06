@@ -264,6 +264,48 @@ namespace LudusaviRestic
                             PlayniteApi.Database.Games.Update(game);
                         }
                     }
+                },
+                new GameMenuItem
+                {
+                    Description = GetLocalizedString("LOCLuduRestSetBackupInterval", "Set backup interval"),
+                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
+
+                    Action = args => {
+                        if (args.Games.Count == 1)
+                        {
+                            var game = args.Games.First();
+                            var key = game.Id.ToString();
+                            var effective = settings.GetEffectiveInterval(game.Id);
+                            var prompt = string.Format(
+                                GetLocalizedString("LOCLuduRestSetBackupIntervalPrompt",
+                                    "Enter backup interval in minutes for {0} (current: {1}, global default: {2}). Leave blank to remove override."),
+                                game.Name, effective, settings.GameplayBackupInterval);
+
+                            var result = PlayniteApi.Dialogs.SelectString(
+                                prompt,
+                                GetLocalizedString("LOCLuduRestSetBackupIntervalTitle", "Backup Interval Override"),
+                                settings.GameIntervalOverrides.ContainsKey(key)
+                                    ? settings.GameIntervalOverrides[key].IntervalMinutes.ToString()
+                                    : "");
+
+                            if (result.Result)
+                            {
+                                if (string.IsNullOrWhiteSpace(result.SelectedString))
+                                {
+                                    settings.GameIntervalOverrides.Remove(key);
+                                }
+                                else
+                                {
+                                    int val;
+                                    if (int.TryParse(result.SelectedString, out val) && val > 0)
+                                    {
+                                        settings.GameIntervalOverrides[key] = new GameIntervalOverride(game.Name, val);
+                                    }
+                                }
+                                settings.Save();
+                            }
+                        }
+                    }
                 }
             };
         }
@@ -640,9 +682,10 @@ namespace LudusaviRestic
 
             if (settings.BackupDuringGameplay)
             {
+                var interval = settings.GetEffectiveInterval(args.Game.Id);
                 this.timer = new Timer(GameplayBackupTimerElapsed, args.Game,
-                    settings.GameplayBackupInterval * 60000,
-                    settings.GameplayBackupInterval * 60000);
+                    interval * 60000,
+                    interval * 60000);
             }
         }
 

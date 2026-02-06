@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Threading.Tasks;
@@ -28,6 +30,10 @@ namespace LudusaviRestic
                     if (RclonePasswordBox != null)
                     {
                         RclonePasswordBox.Password = this.plugin.settings.RcloneConfigPassword ?? string.Empty;
+                    }
+                    if (OverridesDataGrid != null)
+                    {
+                        RefreshOverridesGrid();
                     }
                 }
                 catch (Exception ex)
@@ -145,6 +151,46 @@ namespace LudusaviRestic
             KeepWeekly.IsEnabled = false;
             KeepMonthly.IsEnabled = false;
             KeepYearly.IsEnabled = false;
+        }
+
+        private void RefreshOverridesGrid()
+        {
+            var items = this.plugin.settings.GameIntervalOverrides.Select(kvp =>
+            {
+                var item = kvp.Value;
+                item.GameId = kvp.Key;
+                return item;
+            }).ToList();
+            OverridesDataGrid.ItemsSource = items;
+        }
+
+        public void OnRemoveOverride(object sender, RoutedEventArgs e)
+        {
+            if (OverridesDataGrid.SelectedItem is GameIntervalOverride selected && selected.GameId != null)
+            {
+                this.plugin.settings.GameIntervalOverrides.Remove(selected.GameId);
+                RefreshOverridesGrid();
+            }
+        }
+
+        private void OnOverrideCellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            if (e.EditAction == DataGridEditAction.Commit && e.Row.Item is GameIntervalOverride item && item.GameId != null)
+            {
+                var textBox = e.EditingElement as System.Windows.Controls.TextBox;
+                if (textBox != null)
+                {
+                    int val;
+                    if (int.TryParse(textBox.Text, out val) && val > 0)
+                    {
+                        this.plugin.settings.GameIntervalOverrides[item.GameId].IntervalMinutes = val;
+                    }
+                    else
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            }
         }
 
         public void OnVerify(object sender, RoutedEventArgs e)

@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Newtonsoft.Json;
 using Xunit;
 
 namespace LudusaviRestic.Tests
@@ -31,6 +33,8 @@ namespace LudusaviRestic.Tests
             Assert.Equal(4, settings.KeepWeekly);
             Assert.Equal(12, settings.KeepMonthly);
             Assert.Equal(5, settings.KeepYearly);
+            Assert.NotNull(settings.GameIntervalOverrides);
+            Assert.Empty(settings.GameIntervalOverrides);
         }
 
         [Fact]
@@ -115,6 +119,54 @@ namespace LudusaviRestic.Tests
             bool valid = settings.VerifySettings(out errors);
             Assert.True(valid);
             Assert.Equal(10, settings.GameplayBackupInterval);
+        }
+
+        [Fact]
+        public void GetEffectiveInterval_WithOverride_ReturnsOverrideValue()
+        {
+            var settings = new LudusaviResticSettings();
+            var gameId = Guid.NewGuid();
+            settings.GameIntervalOverrides[gameId.ToString()] = new GameIntervalOverride("Test Game", 15);
+
+            Assert.Equal(15, settings.GetEffectiveInterval(gameId));
+        }
+
+        [Fact]
+        public void GetEffectiveInterval_WithoutOverride_ReturnsGlobalDefault()
+        {
+            var settings = new LudusaviResticSettings();
+            var gameId = Guid.NewGuid();
+
+            Assert.Equal(settings.GameplayBackupInterval, settings.GetEffectiveInterval(gameId));
+        }
+
+        [Fact]
+        public void GetEffectiveInterval_WithZeroOverride_ReturnsGlobalDefault()
+        {
+            var settings = new LudusaviResticSettings();
+            var gameId = Guid.NewGuid();
+            settings.GameIntervalOverrides[gameId.ToString()] = new GameIntervalOverride("Test Game", 0);
+
+            Assert.Equal(settings.GameplayBackupInterval, settings.GetEffectiveInterval(gameId));
+        }
+
+        [Fact]
+        public void GameIntervalOverrides_SerializationRoundTrip()
+        {
+            var settings = new LudusaviResticSettings();
+            var id1 = Guid.NewGuid().ToString();
+            var id2 = Guid.NewGuid().ToString();
+            settings.GameIntervalOverrides[id1] = new GameIntervalOverride("Game A", 10);
+            settings.GameIntervalOverrides[id2] = new GameIntervalOverride("Game B", 30);
+
+            var json = JsonConvert.SerializeObject(settings);
+            var deserialized = JsonConvert.DeserializeObject<LudusaviResticSettings>(json);
+
+            Assert.Equal(2, deserialized.GameIntervalOverrides.Count);
+            Assert.Equal("Game A", deserialized.GameIntervalOverrides[id1].GameName);
+            Assert.Equal(10, deserialized.GameIntervalOverrides[id1].IntervalMinutes);
+            Assert.Equal("Game B", deserialized.GameIntervalOverrides[id2].GameName);
+            Assert.Equal(30, deserialized.GameIntervalOverrides[id2].IntervalMinutes);
         }
     }
 }
