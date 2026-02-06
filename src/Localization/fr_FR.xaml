@@ -239,6 +239,28 @@ Choisissez Oui pour utiliser le dossier suggéré, Non pour en choisir un autre,
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(aucun)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Impossible de déterminer le nom du jeu pour cet instantané.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Remplacements du jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Modifiez l'intervalle de sauvegarde et la politique de conservation des données pour certains jeux. Les jeux non listés utilisent les valeurs par défaut globales. Ajoutez des modifications via le menu contextuel (clic droit) du jeu. Les champs de conservation vides sont désactivés (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Intervalle (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Conserver le dernier</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Gardez quotidiennement</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Gardez-le chaque semaine</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Conserver mensuellement</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Conserver annuellement</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Supprimer la sélection</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Définir l'intervalle de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Remplacement de l'intervalle de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Saisissez l'intervalle de sauvegarde en minutes pour {0} (actuel : {1}, valeur par défaut globale : {2}). Laissez vide pour supprimer la modification.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Définir la politique de conservation</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Modification de la politique de rétention</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Définissez des valeurs pour remplacer la politique de rétention globale de ce jeu. Les champs vides sont désactivés (valeur 0) ; seules les valeurs que vous spécifiez seront prises en compte.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Sauvegarder</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Annuler</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} jeu(x) dispose(nt) de paramètres de rétention spécifiques à chaque jeu.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Liste des instantanés...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Aucun instantané trouvé dans le dépôt.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Assistant d'installation</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Sauvegarder tous les jeux</sys:String>
@@ -286,6 +308,9 @@ Choisissez Oui pour utiliser le dossier suggéré, Non pour en choisir un autre,
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Vérification de l'intégrité du référentiel...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Course à sec de pruneaux en cours...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Nettoyage des données inutilisées...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Élagage du dépôt...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">L'application de la politique de rétention a échoué pour un ou plusieurs jeux. Consultez le rapport brut pour plus de détails.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Aucune capture instantanée ne sera supprimée. Toutes les captures instantanées sont conformes à la politique de conservation actuelle.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Vérification de l'intégrité du référentiel avec la vérification des données...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Impossible d'initialiser le référentiel. Veuillez vérifier les logs pour plus de détails.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Erreur d'initialisation</sys:String>
