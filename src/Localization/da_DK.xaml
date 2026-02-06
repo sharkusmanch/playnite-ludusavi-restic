@@ -239,6 +239,28 @@ Vælg Ja for at bruge foreslået mappe, Nej til at vælge en anden, eller Annull
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(ingen)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Kan ikke bestemme spilnavn tag for dette øjebliksbillede.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Spiloverstyringer</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Tilsidesæt intervallet for backup af spil og opbevaringspolitikken for specifikke spil. Spil, der ikke er angivet, bruger de globale standardindstillinger. Tilføj tilsidesættelser fra spillets højreklikmenu. Tomme opbevaringsfelter er deaktiveret (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Hold sidst</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Hold dagligt</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Hold ugentligt</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Behold månedligt</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Opbevares årligt</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Fjern valgte</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Indstil backupinterval</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Tilsidesættelse af backupinterval</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Indtast backup-interval i minutter for {0} (nuværende: {1}, global standard: {2}). Lad feltet være tomt for at fjerne tilsidesættelsen.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Angiv opbevaringspolitik</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Tilsidesættelse af opbevaringspolitik</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Angiv værdier for at tilsidesætte den globale opbevaringspolitik for dette spil. Tomme felter er deaktiveret (indstillet til 0), så kun de værdier, du angiver, gælder.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Spare</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Ophæve</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} spil har tilsidesættelser af tilbageholdelse pr. spil.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Viser snapshots...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Ingen snapshots fundet i arkivet.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Opsætning af guide</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Sikkerhedskopiér alle spil</sys:String>
@@ -286,6 +308,9 @@ Vælg Ja for at bruge foreslået mappe, Nej til at vælge en anden, eller Annull
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Kontrollerer repository integritet...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Kører beskære tør kørsel...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Beskærer ubrugte data...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Beskæring af opbevaringssted...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Ansøgning om opbevaringspolitik mislykkedes for et eller flere spil. Tjek det rå output for detaljer.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Ingen snapshots ville blive slettet. Alle snapshots overholder den nuværende opbevaringspolitik.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Kontrollerer repository integritet med data verifikation...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Kunne ikke initialisere lageret. Tjek logfilerne for detaljer.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Initialiseringsfejl</sys:String>
