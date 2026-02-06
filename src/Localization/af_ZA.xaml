@@ -239,6 +239,28 @@ Kies Ja om die voorgestelde vouer te gebruik, Nee om 'n ander een te kies, of Ka
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(geen)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Kan nie die spelnaam-etiket vir hierdie momentopname bepaal nie.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Speloorskrywings</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Ignoreer die spelrugsteuninterval en behoudbeleid vir spesifieke speletjies. Speletjies wat nie gelys word nie, gebruik die globale verstekwaardes. Voeg oorskrywings by vanaf die spel se regskliekkieslys. Leë behoudvelde is gedeaktiveer (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Hou Laaste</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Hou daagliks</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Hou Weekliks</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Hou maandeliks</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Hou Jaarliks</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Verwyder Geselekteerde</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Stel rugsteuninterval</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Rugsteuninterval-oorskrywing</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Voer rugsteuninterval in minute in vir {0} (huidig: {1}, globale verstekwaarde: {2}). Los leeg om oorskrywing te verwyder.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Stel behoudbeleid</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Oorskryding van behoudbeleid</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Stel waardes om die globale behoudbeleid vir hierdie speletjie te ignoreer. Leë velde is gedeaktiveer (gestel op 0), dus slegs die waardes wat jy spesifiseer, sal van toepassing wees.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Stoor</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Kanselleer</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} speletjie(s) het per-speletjie-retensie-oorskrywings.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Lys momentopnames...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Geen kiekies in die bewaarplek gevind nie.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Opstelassistent</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Rugsteun alle speletjies</sys:String>
@@ -286,6 +308,9 @@ Kies Ja om die voorgestelde vouer te gebruik, Nee om 'n ander een te kies, of Ka
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Kontroleer die integriteit van die bewaarplek...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Hardloop pruimedant droë lopie...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Snoei ongebruikte data...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Snoei-bewaarplek...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Behoudbeleidtoepassing het vir een of meer speletjies misluk. Gaan die rou uitvoer na vir besonderhede.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Geen kiekies sal uitgevee word nie. Alle kiekies stem ooreen met die huidige bewaringsbeleid.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Kontroleer die integriteit van die bewaarplek met dataverifikasie...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Kon nie die bewaarplek inisialiseer nie. Gaan asseblief die logboeke na vir besonderhede.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Inisialiseringsfout</sys:String>
