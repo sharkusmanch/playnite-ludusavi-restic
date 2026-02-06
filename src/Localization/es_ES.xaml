@@ -134,8 +134,8 @@ Modo de inclusión: No hay juegos respaldados. Los juegos pueden tener la etique
     <sys:String x:Key="LOCLuduRestPrune">Limpiar</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">¿Le gustaría realizar una carrera seca primero para ver qué se podaría antes de eliminar los datos?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithPruning">¿Continuar con la poda?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Dry run completed. {0} snapshots would be pruned. Do you want to proceed with the actual pruning?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Dry run completed. {0} snapshots would be deleted. Do you want to proceed with applying the retention policy?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Prueba completada. Se eliminarán las {0} instantáneas. ¿Desea continuar con la eliminación?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Prueba completada. Se eliminarán {0} instantáneas. ¿Desea continuar con la aplicación de la política de retención?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">¿Continuar con la política de retención?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Esto eliminará las instantáneas antiguas de acuerdo con su política de retención:
 
@@ -146,12 +146,12 @@ Modo de inclusión: No hay juegos respaldados. Los juegos pueden tener la etique
 • Mantener instantáneas anuales durante {4} años
 
 ¿Te gustaría hacer una carrera seca primero para ver qué se eliminaría?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Vista previa completada. Las instantáneas {0} se eliminarán según la política de retención. ¿Desea continuar con la eliminación?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">¿Continuar con la eliminación?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">Limpiar repositorio</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is irreversible.
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">La poda eliminará los blobs de datos no utilizados del repositorio. Esta operación es irreversible.
 
-Would you like to perform a dry run first to see what would be removed before actually deleting data?</sys:String>
+¿Desea realizar un simulacro primero para ver qué se eliminaría antes de eliminar los datos?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Ejecutado en seco completado. Esta operación eliminaría los datos no utilizados del repositorio. ¿Desea continuar con la limpieza real?</sys:String>
 
     <!-- Welcome and setup -->
@@ -239,6 +239,28 @@ Elige Sí para usar la carpeta sugerida, No para elegir otro, o Cancelar para ab
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(ninguno)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">No se puede determinar la etiqueta del nombre del juego para esta instantánea.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Anulaciones del juego</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Anula el intervalo de copia de seguridad del juego y la política de retención para juegos específicos. Los juegos no listados usan los valores predeterminados globales. Agrega anulaciones desde el menú contextual del juego. Los campos de retención en blanco están deshabilitados (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Intervalo (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Mantener el último</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Mantener diariamente</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Mantener semanal</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Mantener mensual</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Mantener anualmente</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Eliminar seleccionados</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Establecer intervalo de copia de seguridad</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Anulación del intervalo de copia de seguridad</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Introduzca el intervalo de copia de seguridad en minutos para {0} (actual: {1}, valor predeterminado global: {2}). Deje este campo en blanco para anular la anulación.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Establecer política de retención</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Anulación de la política de retención</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Establece valores para anular la política de retención global de este juego. Los campos en blanco están deshabilitados (establecidos a 0), por lo que solo se aplicarán los valores que especifiques.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Ahorrar</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Cancelar</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} juego(s) tienen anulaciones de retención por juego.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Listado de instantáneas...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">No se encontraron instantáneas en el repositorio.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Configurar asistente</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Copiar todos los juegos</sys:String>
@@ -286,6 +308,9 @@ Elige Sí para usar la carpeta sugerida, No para elegir otro, o Cancelar para ab
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Comprobando la integridad del repositorio...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Ejecutando poda seca...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Limpiando datos no utilizados...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Podando repositorio...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">La aplicación de la política de retención falló en uno o más juegos. Consulte la salida sin procesar para obtener más detalles.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">No se eliminará ninguna instantánea. Todas cumplen con la política de retención actual.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Comprobando integridad del repositorio con verificación de datos...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Error al inicializar el repositorio. Por favor, compruebe los registros para más detalles.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Error de inicialización</sys:String>

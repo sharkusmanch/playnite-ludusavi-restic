@@ -1,295 +1,320 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup during gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Rugsteun tydens spel</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Rugsteun wanneer die spel gestop het</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Prompt for backup tag when game stopped</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Vra vir rugsteun-etiket wanneer die spel gestop het</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Spel rugsteun etiket</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Voer rugsteun-etiket in vir</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Rugsteuninterval vir spelstoor (minute)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Browse</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Blaai</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Restik-bewaarplekpad</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
-    <sys:String x:Key="LOCLuduRestShow">Show</sys:String>
-    <sys:String x:Key="LOCLuduRestHide">Hide</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Wagwoord vir die Restic-bewaarplek</sys:String>
+    <sys:String x:Key="LOCLuduRestShow">Wys</sys:String>
+    <sys:String x:Key="LOCLuduRestHide">Versteek</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone-konfigurasie</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone-konfigurasiewagwoord</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verify</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Verifieer</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Restik uitvoerbare pad</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi uitvoerbare pad</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabBackup">Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">Rugsteun</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabRepo">Repository</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">Bewaarplek</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Add additonal tags to snapshots to differentiate events</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Voeg bykomende etikette by kiekies om gebeurtenisse te onderskei</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Manual backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Handmatige rugsteun-etiket</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Game stopped backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Rugsteun-etiket vir die spel het gestop</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Spel rugsteun etiket</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Create save snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Skep stoorkiekie</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Add backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Voeg rugsteun-insluit-etiket by</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Remove backup include tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Verwyder rugsteun-insluit-etiket</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Add backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Voeg rugsteun-uitsluitingsetiket by</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Remove backup exclude tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Verwyder rugsteun-uitsluitingsetiket</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Backing up</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Rugsteun</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Processing</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">Verwerking</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupMode">Backup Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupMode">Rugsteunmodus</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Exclude Mode: All games are eligible to backup by default. Games can have the exclude tag added to prevent backing up.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Uitsluitingsmodus: Alle speletjies kan standaard gerugsteun word. Speletjies kan die uitsluitingsetiket hê om rugsteun te voorkom.
 
-Include Mode: No games are backed up. Games can have the include tag added to be eligible for backup.</sys:String>
+Insluitingsmodus: Geen speletjies word gerugsteun nie. Speletjies kan die insluitingsetiket hê om vir rugsteun in aanmerking te kom.</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exclude Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Uitsluitingsmodus</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Include Mode</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Insluitmodus</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Include Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Sluit rugsteun in</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Sluit rugsteun uit</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Skep 'n rugsteunkopie wanneer die speletjie verwyder word</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Restic executable found and verified.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ Could not automatically detect restic. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi executable found and verified.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticRequired">Please specify the path to restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ Invalid restic executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Please specify the path to ludusavi executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ Invalid ludusavi executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Yes</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryNo">No</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Restic-uitvoerbare lêer gevind en geverifieer.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ Kon nie outomaties restic opspoor nie. Spesifiseer asseblief die pad handmatig.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi-uitvoerbare lêer gevind en geverifieer.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ Kon nie ludusavi outomaties opspoor nie. Spesifiseer asseblief die pad handmatig.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticRequired">Spesifiseer asseblief die pad na die restic uitvoerbare lêer.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restic-uitvoerbare lêer is geldig.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ Ongeldige restic uitvoerbare lêer of nie toeganklik nie.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Spesifiseer asseblief die pad na die ludusavi-uitvoerbare lêer.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi-uitvoerbare lêer is geldig.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ Ongeldige ludusavi-uitvoerbare lêer of nie toeganklik nie.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Ja</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryNo">Nee</sys:String>
 
     <!-- Game Menu Items -->
-    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">View backup snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Bekyk rugsteun-kiekies</sys:String>
 
     <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-Detection Successful</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-Detection Failed</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Outomatiese opsporing suksesvol</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Outomatiese opsporing het misluk</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi-uitvoerbare program opgespoor by: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Kon nie outomaties die uitvoerbare ludusavi opspoor nie. Spesifiseer asseblief die pad handmatig.</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">Restik uitvoerbare lêer bespeur by: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticNotDetected">Kon nie outomaties die restic uitvoerbare lêer opspoor nie. Spesifiseer asseblief die pad handmatig.</sys:String>
 
     <!-- Settings verification -->
-    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Settings Verification:</sys:String>
-    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - repository connection succeeded</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - verification succeeded</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Auto-Detection Successful</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Auto-Detection Failed</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restic executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Settings Verification failed: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verifying restic repository connection...</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Verifying ludusavi executable...</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic-instellingsverifikasie:</sys:String>
+    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - bewaarplekverbinding het geslaag</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - verifikasie geslaag</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Outomatiese opsporing suksesvol</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Outomatiese opsporing het misluk</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Ludusavi-uitvoerbare program opgespoor by: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Kon nie outomaties die uitvoerbare ludusavi opspoor nie. Spesifiseer asseblief die pad handmatig.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restik uitvoerbare lêer bespeur by: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Kon nie outomaties die restic uitvoerbare lêer opspoor nie. Spesifiseer asseblief die pad handmatig.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic-instellingsverifikasie het misluk: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verifieer tans restic-bewaarplekverbinding...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Verifieer tans ludusavi-uitvoerbare lêer...</sys:String>
 
     <!-- Maintenance operation strings -->
-    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Maintenance Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Full maintenance completed successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationComplete">Verification Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Repository verification completed successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Retention Policy Disabled</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Retention policy is disabled. Please enable it in the extension settings to use this feature.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Retention Policy Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Retention policy applied successfully. Old snapshots have been deleted.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Prune operation completed successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Onderhoud voltooi</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Volledige onderhoud suksesvol voltooi.</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationComplete">Verifikasie voltooi</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Bewaarplekverifikasie suksesvol voltooi.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Behoudbeleid gedeaktiveer</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Behoudbeleid is gedeaktiveer. Aktiveer dit asseblief in die uitbreidingsinstellings om hierdie kenmerk te gebruik.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Behoudbeleid Voltooi</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Bewaringsbeleid suksesvol toegepas. Ou kiekies is uitgevee.</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Snoei Voltooi</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Snoei-operasie suksesvol voltooi.</sys:String>
 
     <!-- Dialog prompts -->
-    <sys:String x:Key="LOCLuduRestFullMaintenance">Full Maintenance</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicy">Retention Policy</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Would you like to perform a dry run first to see what would be deleted before actually removing snapshots?</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Prune</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithPruning">Proceed with Pruning?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Dry run completed. {0} snapshots would be pruned. Do you want to proceed with the actual pruning?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Dry run completed. {0} snapshots would be deleted. Do you want to proceed with applying the retention policy?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithRetention">Proceed with Retention Policy?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
+    <sys:String x:Key="LOCLuduRestFullMaintenance">Volledige Onderhoud</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Wil jy eers 'n droë lopie doen om te sien wat gesnoei sal word voordat jy data eintlik verwyder?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicy">Behoudbeleid</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Wil jy eers 'n droë lopie doen om te sien wat uitgevee sal word voordat jy eintlik kiekies verwyder?</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">Snoei</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Wil jy eers 'n droë lopie doen om te sien wat gesnoei sal word voordat jy data eintlik verwyder?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithPruning">Gaan voort met snoei?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Droë lopie voltooi. {0} kiekies sal gesnoei word. Wil jy voortgaan met die werklike snoei?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Droë lopie voltooi. {0} kiekies sal uitgevee word. Wil jy voortgaan met die toepassing van die behoudbeleid?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithRetention">Gaan voort met die behoudbeleid?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Dit sal ou kiekies uitvee volgens jou bewaringsbeleid:
 
-• Keep last {0} snapshots
-• Keep daily snapshots for {1} days
-• Keep weekly snapshots for {2} weeks
-• Keep monthly snapshots for {3} months
-• Keep yearly snapshots for {4} years
+• Hou laaste {0} kiekies
+• Hou daaglikse kiekies vir {1} dae
+• Hou weeklikse kiekies vir {2} weke
+• Hou maandelikse kiekies vir {3} maande
+• Hou jaarlikse kiekies vir {4} jaar
 
-Would you like to perform a dry run first to see what would be deleted?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Proceed with Deletion?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">Prune Repository</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is irreversible.
+Wil jy eers 'n droë lopie doen om te sien wat uitgevee sal word?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Voorskou voltooi. {0} kiekies sal volgens die bewaringsbeleid uitgevee word. Wil jy voortgaan met die uitvee?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Gaan voort met verwydering?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">Prune-bewaarplek</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Snoei sal ongebruikte data-blokke uit die bewaarplek verwyder. Hierdie bewerking is onomkeerbaar.
 
-Would you like to perform a dry run first to see what would be removed before actually deleting data?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Dry run completed. This operation would remove unused data from the repository. Do you want to proceed with the actual pruning?</sys:String>
+Wil jy eers 'n droë lopie doen om te sien wat verwyder sal word voordat jy data eintlik verwyder?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Droë lopie voltooi. Hierdie bewerking sal ongebruikte data uit die bewaarplek verwyder. Wil jy voortgaan met die werklike snoei?</sys:String>
 
     <!-- Welcome and setup -->
-    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - Setup Required</sys:String>
-    <sys:String x:Key="LOCLuduRestWelcomeMessage">Welcome to Ludusavi Restic!
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welkom - Opstelling Vereis</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeMessage">Welkom by Ludusavi Restic!
 
-This appears to be your first time using the extension or your configuration is incomplete. Would you like to run the setup wizard to configure your backup repository?</sys:String>
-    <sys:String x:Key="LOCLuduRestConfigurationRequired">Configuration Required</sys:String>
-    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic is not configured yet. Would you like to run the setup wizard?</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Invalid Configuration</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticMessage">The configured restic executable is not valid or accessible. Would you like to run the setup wizard to fix this?</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupComplete">Setup Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Setup completed successfully! You can now use all backup features.</sys:String>
+Dit lyk asof dit jou eerste keer is dat jy die uitbreiding gebruik, of jou konfigurasie is onvolledig. Wil jy die opstelassistent laat loop om jou rugsteunbewaarplek te konfigureer?</sys:String>
+    <sys:String x:Key="LOCLuduRestConfigurationRequired">Konfigurasie Vereis</sys:String>
+    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic is nog nie gekonfigureer nie. Wil jy die opstelassistent laat loop?</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Ongeldige konfigurasie</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticMessage">Die gekonfigureerde restic-uitvoerbare lêer is nie geldig of toeganklik nie. Wil jy die opstelassistent laat loop om dit reg te stel?</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupComplete">Opstelling voltooi</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Opstelling suksesvol voltooi! Jy kan nou alle rugsteunfunksies gebruik.</sys:String>
 
     <!-- Backup browser -->
-    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Delete Backup Snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Are you sure you want to delete snapshot {0} from {1}?</sys:String>
-    <sys:String x:Key="LOCLuduRestSuccess">Success</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Snapshot deleted successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restore latest snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">No snapshots found for this game.</sys:String>
-    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restore snapshot {0} for {1} to folder:\n{2}\n\nExisting files may be overwritten. Continue?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restoring snapshot...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompleted">Snapshot restored successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRefresh">Refresh</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSelected">Restore Selected</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSelected">Delete Selected</sys:String>
-    <sys:String x:Key="LOCLuduRestFilterByGame">Filter by Game:</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">Snapshot ID</sys:String>
-    <sys:String x:Key="LOCLuduRestDateHeader">Date</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsHeader">Tags</sys:String>
-    <sys:String x:Key="LOCLuduRestTotalSnapshots">Total snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetect">Auto-Detect</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Retention Policy</sys:String>
-    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Enable automatic retention policy</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">When enabled, these policies will be applied during maintenance operations to automatically remove old snapshots.</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastLabel">Keep last N snapshots:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastHelp">Keep the most recent snapshots regardless of age</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Keep daily snapshots for N days:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Keep one snapshot per day for this many days</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Keep weekly snapshots for N weeks:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Keep one snapshot per week for this many weeks</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Keep monthly snapshots for N months:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Keep one snapshot per month for this many months</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Keep yearly snapshots for N years:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Keep one snapshot per year for this many years</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Example with default settings:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
-• Plus 1 snapshot per day for 7 days
-• Plus 1 snapshot per week for 4 weeks
-• Plus 1 snapshot per month for 12 months
-• Plus 1 snapshot per year for 5 years</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Pruning Results</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Summary information will appear here</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Snapshots Deleted</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesAffected">Games Affected</sys:String>
-    <sys:String x:Key="LOCLuduRestDataDeleted">Data Deleted</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Vee rugsteunkiekie uit</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Is jy seker jy wil die momentopname {0} van {1}verwyder?</sys:String>
+    <sys:String x:Key="LOCLuduRestSuccess">Sukses</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Kiekie suksesvol uitgevee.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Herstel die nuutste momentopname</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Geen kiekies vir hierdie speletjie gevind nie.</sys:String>
+    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Herstel momentopname {0} vir {1} na vouer:\n{2}\n\nBestaande lêers kan oorskryf word. Gaan voort?</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Herstel momentopname</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Herstel momentopname...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompleted">Kiekie suksesvol herstel.</sys:String>
+    <sys:String x:Key="LOCLuduRestRefresh">Verfris</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSelected">Herstel Geselekteerde</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSelected">Vee Geselekteerde uit</sys:String>
+    <sys:String x:Key="LOCLuduRestFilterByGame">Filter volgens Speletjie:</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">Snapshot-ID</sys:String>
+    <sys:String x:Key="LOCLuduRestDateHeader">Datum</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsHeader">Etikette</sys:String>
+    <sys:String x:Key="LOCLuduRestTotalSnapshots">Totale momentopnames</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetect">Outomatiese opsporing</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Behoudbeleid</sys:String>
+    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Aktiveer outomatiese bewaringsbeleid</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">Wanneer dit geaktiveer is, sal hierdie beleide tydens onderhoudsbedrywighede toegepas word om ou kiekies outomaties te verwyder.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastLabel">Behou laaste N kiekies:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastHelp">Hou die mees onlangse kiekies ongeag ouderdom</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Hou daaglikse kiekies vir N dae:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Hou een momentopname per dag vir soveel dae</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Hou weeklikse kiekies vir N weke:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Hou een momentopname per week vir soveel weke</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Hou maandelikse momentopnames vir N maande:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Hou een momentopname per maand vir soveel maande</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Hou jaarlikse momentopnames vir N jaar:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Hou een momentopname per jaar vir soveel jare</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Voorbeeld met standaardinstellings:</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample">• Hou die laaste 10 kiekies
+• Plus 1 kiekie per dag vir 7 dae
+• Plus 1 kiekie per week vir 4 weke
+• Plus 1 kiekie per maand vir 12 maande
+• Plus 1 kiekie per jaar vir 5 jaar</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Snoei Resultate</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Opsommingsinligting sal hier verskyn</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Snapshots uitgevee</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesAffected">Speletjies wat geraak word</sys:String>
+    <sys:String x:Key="LOCLuduRestDataDeleted">Data uitgevee</sys:String>
     <sys:String x:Key="LOCLuduRestStatus">Status</sys:String>
-    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Deleted Snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestClearFilter">Clear Filter</sys:String>
-    <sys:String x:Key="LOCLuduRestGameHeader">Game</sys:String>
-    <sys:String x:Key="LOCLuduRestDateTimeHeader">Date/Time</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Games Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestGameNameHeader">Game Name</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Tags Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestTagHeader">Tag</sys:String>
-    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Occurrences</sys:String>
-    <sys:String x:Key="LOCLuduRestRawOutputTab">Raw Output</sys:String>
-    <sys:String x:Key="LOCLuduRestClose">Close</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Enter an optional custom tag for this manual backup (leave blank for none):</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Manual Backup Tag</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreConfirm">Restore snapshot {0} to {1}? This may overwrite existing files.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restoring snapshot {0}...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} restored successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreFailed">Failed to restore snapshot: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreError">Error restoring snapshot: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (game: {1}) contains {2} files.
-New files: {3}
-Existing files (will be overwritten): {4}
-Suggested restore folder: {5}
+    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Verwyderde kiekies</sys:String>
+    <sys:String x:Key="LOCLuduRestClearFilter">Vee filter uit</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">Spel</sys:String>
+    <sys:String x:Key="LOCLuduRestDateTimeHeader">Datum/Tyd</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Speletjies Opsomming</sys:String>
+    <sys:String x:Key="LOCLuduRestGameNameHeader">Spelnaam</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Etiket Opsomming</sys:String>
+    <sys:String x:Key="LOCLuduRestTagHeader">Etiket</sys:String>
+    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Voorvalle</sys:String>
+    <sys:String x:Key="LOCLuduRestRawOutputTab">Rou Uitvoer</sys:String>
+    <sys:String x:Key="LOCLuduRestClose">Maak toe</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Voer 'n opsionele persoonlike etiket vir hierdie handmatige rugsteun in (los leeg vir niks):</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Handmatige rugsteun-etiket</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreConfirm">Herstel momentopname {0} na {1}? Dit mag dalk bestaande lêers oorskryf.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Herstel momentopname {0}...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Skermkiekie {0} suksesvol herstel.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Herstel voltooi</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreFailed">Kon nie momentopname herstel nie: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreError">Fout met die herstel van momentopname: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestorePreview">Kiekie {0} (spel: {1}) bevat {2} lêers.
+Nuwe lêers: {3}
+Bestaande lêers (sal oorskryf word): {4}
+Voorgestelde herstelvouer: {5}
 
-Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(none)</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Cannot determine game name tag for this snapshot.</sys:String>
+Kies Ja om die voorgestelde vouer te gebruik, Nee om 'n ander een te kies, of Kanselleer om te staak.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(geen)</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Kan nie die spelnaam-etiket vir hierdie momentopname bepaal nie.</sys:String>
+
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Speloorskrywings</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Ignoreer die spelrugsteuninterval en behoudbeleid vir spesifieke speletjies. Speletjies wat nie gelys word nie, gebruik die globale verstekwaardes. Voeg oorskrywings by vanaf die spel se regskliekkieslys. Leë behoudvelde is gedeaktiveer (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Hou Laaste</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Hou daagliks</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Hou Weekliks</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Hou maandeliks</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Hou Jaarliks</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Verwyder Geselekteerde</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Stel rugsteuninterval</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Rugsteuninterval-oorskrywing</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Voer rugsteuninterval in minute in vir {0} (huidig: {1}, globale verstekwaarde: {2}). Los leeg om oorskrywing te verwyder.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Stel behoudbeleid</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Oorskryding van behoudbeleid</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Stel waardes om die globale behoudbeleid vir hierdie speletjie te ignoreer. Leë velde is gedeaktiveer (gestel op 0), dus slegs die waardes wat jy spesifiseer, sal van toepassing wees.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Stoor</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Kanselleer</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} speletjie(s) het per-speletjie-retensie-oorskrywings.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Lys momentopnames...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Geen kiekies in die bewaarplek gevind nie.</sys:String>
 
     <!-- Main menu items -->
-    <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllGames">Backup all games</sys:String>
-    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Browse backup snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceAll">All (check + prune)</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceVerify">Verify</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Delete old snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenancePrune">Prune unused data</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceSection">Maintenance</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSection">Setup</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupWizard">Opstelassistent</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllGames">Rugsteun alle speletjies</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Blaai deur rugsteun-kiekies</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceAll">Alles (merk + snoei)</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceVerify">Verifieer</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Vee ou kiekies uit</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenancePrune">Snoei ongebruikte data</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceSection">Onderhoud</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSection">Opstelling</sys:String>
 
     <!-- Dialog strings -->
-    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Select Restic Executable</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Select Ludusavi Executable</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Select Repository Location</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Running full maintenance...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifying repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Kies Restik Uitvoerbare</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Kies Ludusavi Uitvoerbare</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Kies Bewaarplekligging</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Uitvoerbare lêers (*.exe)|*.exe|Alle lêers (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Uitvoerbare|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Konf|*.konf</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Volledige onderhoudswerk word uitgevoer...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifieer tans bewaarplek...</sys:String>
 
     <!-- Validation messages -->
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Please specify the path to restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ Invalid restic executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Please specify the path to ludusavi executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ Invalid ludusavi executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Spesifiseer asseblief die pad na die restic uitvoerbare lêer.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restic-uitvoerbare lêer is geldig.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ Ongeldige restic uitvoerbare lêer of nie toeganklik nie.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Spesifiseer asseblief die pad na die ludusavi-uitvoerbare lêer.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi-uitvoerbare lêer is geldig.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ Ongeldige ludusavi-uitvoerbare lêer of nie toeganklik nie.</sys:String>
 
     <!-- Setup validation -->
-    <sys:String x:Key="LOCLuduRestValidationError">Validation Error</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticPath">Please specify the path to restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticInvalid">The specified restic executable is not valid or accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Please specify the repository path.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Please enter a repository password.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Passwords do not match.</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryYes">Yes</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryNo">No</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationError">Valideringsfout</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticPath">Spesifiseer asseblief die pad na die restic uitvoerbare lêer.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticInvalid">Die gespesifiseerde restic-uitvoerbare lêer is nie geldig of toeganklik nie.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Spesifiseer asseblief die pad na die bewaarplek.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Voer asseblief 'n wagwoord vir die bewaarplek in.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Wagwoorde stem nie ooreen nie.</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryYes">Ja</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryNo">Nee</sys:String>
 
     <!-- Progress and initialization messages -->
-    <sys:String x:Key="LOCLuduRestInitializingRepository">Initializing repository...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Applying retention policy...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Running retention policy preview...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Applying retention policy and pruning...</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Checking repository integrity...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Running prune dry run...</sys:String>
-    <sys:String x:Key="LOCLuduRestPruningUnusedData">Pruning unused data...</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Checking repository integrity with data verification...</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationFailed">Failed to initialize the repository. Please check the logs for details.</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationError">Initialization Error</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupError">Setup Error</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupErrorMessage">An error occurred during setup: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializingRepository">Inisialiseer tans bewaarplek...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Pas tans behoudbeleid toe...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Begin voorskou van behoudbeleid...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Toepassing van behoudbeleid en snoei...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Kontroleer die integriteit van die bewaarplek...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Hardloop pruimedant droë lopie...</sys:String>
+    <sys:String x:Key="LOCLuduRestPruningUnusedData">Snoei ongebruikte data...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Snoei-bewaarplek...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Behoudbeleidtoepassing het vir een of meer speletjies misluk. Gaan die rou uitvoer na vir besonderhede.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Geen kiekies sal uitgevee word nie. Alle kiekies stem ooreen met die huidige bewaringsbeleid.</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Kontroleer die integriteit van die bewaarplek met dataverifikasie...</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationFailed">Kon nie die bewaarplek inisialiseer nie. Gaan asseblief die logboeke na vir besonderhede.</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationError">Inisialiseringsfout</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupError">Opstellingsfout</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupErrorMessage">'n Fout het tydens die opstelling voorgekom: {0}</sys:String>
 
 </ResourceDictionary>

@@ -239,6 +239,28 @@ Wählen Sie Ja zum Verwenden des empfohlenen Ordners, Nein um einen anderen ausz
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(keine)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Spielname Tag für diesen Snapshot kann nicht bestimmt werden.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Spielüberschreibungen</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Legen Sie für einzelne Spiele das Backup-Intervall und die Aufbewahrungsrichtlinie fest. Nicht aufgeführte Spiele verwenden die globalen Standardeinstellungen. Änderungen können Sie über das Kontextmenü des jeweiligen Spiels vornehmen. Leere Aufbewahrungsfelder sind deaktiviert (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Intervall (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Zuletzt aufbewahren</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Tägliche Einhaltung</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Wöchentlich einhalten</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Monatlich behalten</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Jährlich aufbewahren</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Ausgewählte entfernen</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Sicherungsintervall festlegen</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Backup-Intervall überschreiben</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Geben Sie das Sicherungsintervall in Minuten für {0} ein (aktuell: {1}, globaler Standard: {2}). Lassen Sie das Feld leer, um die Überschreibung zu deaktivieren.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Aufbewahrungsrichtlinie festlegen</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Überschreibung der Aufbewahrungsrichtlinie</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Legen Sie Werte fest, um die globale Aufbewahrungsrichtlinie für dieses Spiel zu überschreiben. Leere Felder sind deaktiviert (auf 0 gesetzt), daher gelten nur die von Ihnen angegebenen Werte.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Speichern</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Stornieren</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} Spiel(e) haben spielspezifische Aufbewahrungsüberschreibungen.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Momentaufnahmen der Auflistung...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Im Repository wurden keine Snapshots gefunden.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Assistent einrichten</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Alle Spiele sichern</sys:String>
@@ -286,6 +308,9 @@ Wählen Sie Ja zum Verwenden des empfohlenen Ordners, Nein um einen anderen ausz
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Überprüfung der Repository-Integrität...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Läuft prune trocken...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Unbenutzte Daten entfernen...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Repository wird bereinigt...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Die Anwendung der Aufbewahrungsrichtlinie ist für ein oder mehrere Spiele fehlgeschlagen. Weitere Details finden Sie in der Rohausgabe.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Es würden keine Snapshots gelöscht. Alle Snapshots entsprechen der aktuellen Aufbewahrungsrichtlinie.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Prüfe Repository-Integrität mit Datenprüfung...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Fehler beim Initialisieren des Projektarchivs. Bitte überprüfen Sie die Protokolle auf Details.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Initialisierungsfehler</sys:String>

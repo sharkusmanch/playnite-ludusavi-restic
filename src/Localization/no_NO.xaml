@@ -146,7 +146,7 @@ Inkluder modus: Ingen spill er sikkerhetskopiert. Spill kan ha den inkludere tag
 • Holde årlig gjennomsnapshots for {4} år
 
 først å utføre en tørr løp for å se hva som vil bli slettet?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Forhåndsvisning fullført. {0} øyeblikksbilder vil bli slettet i henhold til oppbevaringspolicyen. Vil du fortsette med slettingen?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">Fortsett med sletting?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">Prune repository</sys:String>
     <sys:String x:Key="LOCLuduRestPruneWarningMessage">Innkjøring vil fjerne ubrukte data fra arkivet. Denne operasjonen er irreversibel.
@@ -225,7 +225,7 @@ Det ser ut til å være første gang du bruker utvidelsen eller konfigurasjonen 
     <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Angi en valgfri egendefinert tag for denne manuelle sikkerhetskopien (la stå tom for ingen):</sys:String>
     <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Manuell sikkerhetskopierings tagg</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Vil du gjenopprette øyeblikksbilde {0} til {1}? Dette kan overskrive eksisterende filer.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restoring snapshot {0}...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Gjenoppretter øyeblikksbilde {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} gjenopprettet.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Kunne ikke gjenopprette snapshot: {0}</sys:String>
@@ -238,6 +238,28 @@ Foreslått gjenopprettingsmappe: {5}
 Velg Ja for å bruke foreslått mappe, Ingen å velge en annen, eller Avbryt for å avbryte.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(ingen)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Kan ikke bestemme spillnavn tag for dette øyeblikksbildet.</sys:String>
+
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Spilloverstyringer</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Overstyr sikkerhetskopieringsintervallet for spillingen og oppbevaringspolicyen for spesifikke spill. Spill som ikke er oppført bruker de globale standardinnstillingene. Legg til overstyringer fra spillets høyreklikkmeny. Blanke oppbevaringsfelt er deaktivert (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Intervall (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Behold sist</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Hold daglig</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Hold ukentlig</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Behold månedlig</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Oppbevares årlig</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Fjern valgte</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Angi sikkerhetskopieringsintervall</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Overstyring av sikkerhetskopieringsintervall</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Skriv inn sikkerhetskopieringsintervallet i minutter for {0} (gjeldende: {1}, global standard: {2}). La stå tomt for å fjerne overstyring.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Angi oppbevaringsregler</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Overstyring av oppbevaringspolicy</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Angi verdier for å overstyre den globale oppbevaringspolicyen for dette spillet. Blanke felt er deaktivert (satt til 0), så bare verdiene du angir vil gjelde.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Spare</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Kansellere</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} spill har overstyringer for oppbevaring per spill.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Viser øyeblikksbilder ...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Ingen øyeblikksbilder funnet i depotet.</sys:String>
 
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Installasjonsveiviser</sys:String>
@@ -286,6 +308,9 @@ Velg Ja for å bruke foreslått mappe, Ingen å velge en annen, eller Avbryt for
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Kontrollerer kodelagerets integritet...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Kjører auto-slette...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Står på ubrukte data...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Beskjæring av lager...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Oppbevaringspolicyapplikasjonen mislyktes for ett eller flere spill. Sjekk råutdataene for detaljer.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Ingen øyeblikksbilder ville bli slettet. Alle øyeblikksbilder samsvarer med gjeldende oppbevaringspolicy.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Kontrollerer integriteten til kodelageret med data verifikasjon...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Kunne ikke initialisere depotet. Vennligst sjekk loggene for detaljer.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Initialisering Feil</sys:String>

@@ -71,7 +71,7 @@
 
     <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Включити резервне копіювання</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Виключити резервну копію</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Створити резервну копію при вилученні гри</sys:String>
 
@@ -137,21 +137,21 @@
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Сухий запуск завершений. Знімки буде вичищено {0} . Хочете перейти з фактичним обрізанням?</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Пробний біг завершено. Знімки {0} будуть видалені. Ви хочете продовжити застосування політики збереження?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">Продовжити на дотримання політики?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Це видалить старі знімки відповідно до вашої політики зберігання:
 
-• Keep last {0} snapshots
-• Keep daily snapshots for {1} days
-• Keep weekly snapshots for {2} weeks
-• Keep monthly snapshots for {3} months
-• Keep yearly snapshots for {4} years
+• Зберігати останні {0} знімків
+• Зберігати щоденні знімки протягом {1} днів
+• Зберігати щотижневі знімки протягом {2} тижнів
+• Зберігати щомісячні знімки протягом {3} місяців
+• Зберігати річні знімки протягом {4} років
 
-Would you like to perform a dry run first to see what would be deleted?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
+Бажаєте спочатку виконати пробне виконання, щоб побачити, що буде видалено?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Попередній перегляд завершено. {0} знімків буде видалено відповідно до політики зберігання. Продовжити видалення?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">Продовжити після видалення?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">Очистити репозиторій</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is irreversible.
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Видалення видалить невикористані блоби даних з репозиторію. Ця операція незворотна.
 
-Would you like to perform a dry run first to see what would be removed before actually deleting data?</sys:String>
+Бажаєте спочатку виконати пробне виконання, щоб побачити, що буде видалено, перш ніж фактично видаляти дані?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Завершено мут. Ця операція призведе до видалення невикористаних даних із репозиторію. Ви хочете продовжити з фактичною обрізкою?</sys:String>
 
     <!-- Welcome and setup -->
@@ -200,11 +200,11 @@ Would you like to perform a dry run first to see what would be removed before ac
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Ведіть щочні знімки на N років:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Зробити один знімок на рік протягом багатьох років</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Приклад з налаштуваннями за замовчуванням:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
-• Plus 1 snapshot per day for 7 days
-• Plus 1 snapshot per week for 4 weeks
-• Plus 1 snapshot per month for 12 months
-• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample">• Зберігайте останні 10 знімків
+• Плюс 1 знімок на день протягом 7 днів
+• Плюс 1 знімок на тиждень протягом 4 тижнів
+• Плюс 1 знімок на місяць протягом 12 місяців
+• Плюс 1 знімок на рік протягом 5 років</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Обрізки результатів</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Тут з'явиться інформація про резюме</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Знімки видалено</sys:String>
@@ -229,15 +229,37 @@ Would you like to perform a dry run first to see what would be removed before ac
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Знімка {0} успішно відновлена.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Не вдалося відновити знімок: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreError">Error restoring snapshot: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (game: {1}) contains {2} files.
-New files: {3}
-Existing files (will be overwritten): {4}
-Suggested restore folder: {5}
+    <sys:String x:Key="LOCLuduRestRestoreError">Помилка відновлення знімка: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestorePreview">Знімок {0} (гра: {1}) містить {2} файлів.
+Нові файли: {3}
+Існуючі файли (будуть перезаписані): {4}
+Рекомендована папка для відновлення: {5}
 
-Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys:String>
+Виберіть «Так», щоб використати запропоновану папку, «Ні», щоб вибрати іншу, або «Скасувати», щоб скасувати.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(ніхто)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Неможливо визначити тег назви гри для цього знімка.</sys:String>
+
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Перевизначення гри</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Змінити інтервал резервного копіювання ігрового процесу та політику зберігання для певних ігор. Ігри, яких немає в списку, використовують глобальні значення за замовчуванням. Додайте зміни з контекстного меню гри, яке відображається клацанням правою кнопкою миші. Пусті поля зберігання вимкнено (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Інтервал (хв)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Залишати останнім</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Зберігати щодня</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Зберігати щотижня</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Зберігати щомісяця</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Зберігати щорічно</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Видалити вибране</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Встановити інтервал резервного копіювання</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Перевизначення інтервалу резервного копіювання</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Введіть інтервал резервного копіювання в хвилинах для {0} (поточний: {1}, глобальний за замовчуванням: {2}). Залиште поле порожнім, щоб видалити заміну.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Встановити політику збереження</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Заміна політики зберігання</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Встановіть значення, щоб замінити глобальну політику збереження для цієї гри. Пусті поля вимкнено (встановлено значення 0), тому застосовуватимуться лише вказані вами значення.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Зберегти</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Скасувати</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} ігор мають налаштування збереження для кожної гри.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Список знімків...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">У репозиторії не знайдено знімків.</sys:String>
 
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Майстер налаштування</sys:String>
@@ -286,10 +308,13 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Перевірка цілісності репозиторію...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Запуск підйому сухого бігу...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Очищення невикористаних даних...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Обрізання репозиторію...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Застосування політики збереження не вдалося для однієї або кількох ігор. Перегляньте вихідні дані для отримання детальної інформації.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Жодні знімки не будуть видалені. Усі знімки відповідають поточній політиці зберігання.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Перевірка цілісності репозиторію з перевіркою даних...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Не вдалося ініціалізувати репозиторій. Будь ласка, перевірте логи для деталей.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Помилка ініціалізації</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Помилка налаштування</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupErrorMessage">An error occurred during setup: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupErrorMessage">Під час налаштування сталася помилка: {0}</sys:String>
 
 </ResourceDictionary>

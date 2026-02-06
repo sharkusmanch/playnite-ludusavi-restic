@@ -137,15 +137,15 @@
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">干燥已经完成。 {0} 快照将被打印。您想要继续实际打印吗？</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">运行完成。 {0} 快照将被删除。您想要继续应用保留政策吗？</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">是否继续保留政策？</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">这将根据您的保留策略删除旧快照：
 
-• Keep last {0} snapshots
-• Keep daily snapshots for {1} days
-• Keep weekly snapshots for {2} weeks
-• Keep monthly snapshots for {3} months
-• Keep yearly snapshots for {4} years
+• 保留最近 {0} 个快照
+• 保留每日快照 {1} 天
+• 保留每周快照 {2} 周
+• 保留每月快照 {3} 个月
+• 保留每年快照 {4} 年
 
-Would you like to perform a dry run first to see what would be deleted?</sys:String>
+您是否想先进行一次试运行，看看哪些内容会被删除？</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">预览已完成。 {0} 快照将根据保留政策被删除。您想要继续删除吗？</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">是否继续删除？</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">修理仓库</sys:String>
@@ -168,12 +168,12 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
 
     <!-- Backup browser -->
     <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">删除备份快照</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Are you sure you want to delete snapshot {0} from {1}?</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">您确定要从 {1}中删除快照 {0} 吗？</sys:String>
     <sys:String x:Key="LOCLuduRestSuccess">成功</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">快照已成功删除。</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">恢复最新快照</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">没有找到这场游戏的快照。</sys:String>
-    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restore snapshot {0} for {1} to folder:\n{2}\n\nExisting files may be overwritten. Continue?</sys:String>
+    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">将快照 {0} 还原到文件夹\n{2}\n\n，目标文件夹为 {1} 。现有文件可能会被覆盖。是否继续？</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">正在恢复快照...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">快照已成功恢复。</sys:String>
@@ -200,11 +200,11 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">保持每年的 N 年快照：</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">这么多年每年保持一张快照</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">使用默认设置的示例：</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
-• Plus 1 snapshot per day for 7 days
-• Plus 1 snapshot per week for 4 weeks
-• Plus 1 snapshot per month for 12 months
-• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample">• 保留最新的 10 个快照
+• 每天额外保留 1 个快照，持续 7 天
+• 每周额外保留 1 个快照，持续 4 周
+• 每月额外保留 1 个快照，持续 12 个月
+• 每年额外保留 1 个快照，持续 5 年</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">打印结果</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">摘要信息将显示在此处</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">快照已删除</sys:String>
@@ -238,6 +238,28 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
 选择使用建议的文件夹， 不选择另一个，或取消中止。</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(无)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">无法确定这个快照的游戏名称标签。</sys:String>
+
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">游戏覆盖</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">为特定游戏覆盖游戏备份间隔和保留策略。未列出的游戏使用全局默认值。从游戏右键菜单添加覆盖设置。空白的保留字段将被禁用 (0)。</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">间隔（分钟）</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">保持最后</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">每日保持</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">每周保持</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">每月续订</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">每年保留</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">移除所选内容</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">设置备份间隔</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">备份间隔覆盖</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">请输入备份间隔（分钟），范围为 {0} （当前： {1}，全局默认值： {2}）。留空则不进行覆盖。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">设置保留策略</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">保留策略覆盖</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">设置值以覆盖此游戏的全局保留策略。空白字段将被禁用（设置为 0），因此只有您指定的值才会生效。</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">节省</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">取消</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} 游戏具有按游戏划分的保留策略。</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">列出快照……</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">存储库中未找到快照。</sys:String>
 
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">设置向导</sys:String>
@@ -286,6 +308,9 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">正在检查仓库完整性...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">正在干燥运行...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">正在打印未使用的数据...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">正在清理存储库……</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">一个或多个游戏的保留策略应用失败。请查看原始输出以获取详细信息。</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">不会删除任何快照。所有快照均符合当前的保留策略。</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">正在通过数据验证检查仓库的完整性...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">无法初始化仓库。请检查日志的详细信息。</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">初始化错误</sys:String>

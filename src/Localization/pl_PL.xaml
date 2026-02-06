@@ -239,6 +239,28 @@ Wybierz Tak, aby użyć sugerowanego folderu, Nie można wybrać innego, lub Anu
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(brak)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Nie można określić tagu nazwy gry dla tego zrzutu.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Nadpisania gry</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Zastąp interwał tworzenia kopii zapasowej rozgrywki i zasady przechowywania dla określonych gier. Gry niewymienione na liście korzystają z globalnych ustawień domyślnych. Dodaj zastąpienia z menu gry po kliknięciu prawym przyciskiem myszy. Puste pola przechowywania są wyłączone (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interwał (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Zachowaj ostatni</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Zachowaj codziennie</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Zachowaj co tydzień</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Zachowaj miesięczny</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Zachowaj corocznie</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Usuń wybrane</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Ustaw interwał tworzenia kopii zapasowej</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Nadpisanie interwału kopii zapasowej</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Wprowadź interwał tworzenia kopii zapasowej w minutach dla {0} (aktualny: {1}, globalny domyślny: {2}). Pozostaw puste, aby usunąć nadpisanie.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Ustaw zasady przechowywania</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Ominięcie zasad przechowywania danych</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Ustaw wartości, aby zastąpić globalną zasadę przechowywania dla tej gry. Puste pola są wyłączone (ustawione na 0), więc będą miały zastosowanie tylko określone przez Ciebie wartości.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Ratować</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Anulować</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} gier ma nadpisane ustawienia retencji dla każdej gry.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Wyświetlanie migawek...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Nie znaleziono migawek w repozytorium.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Kreator konfiguracji</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Kopia zapasowa wszystkich gier</sys:String>
@@ -286,6 +308,9 @@ Wybierz Tak, aby użyć sugerowanego folderu, Nie można wybrać innego, lub Anu
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Sprawdzanie integralności repozytorium...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Uruchamianie suchego biegu...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Przerażanie nieużywanych danych...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Przycinanie repozytorium...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Nie można zastosować zasad przechowywania dla co najmniej jednej gry. Sprawdź nieprzetworzone dane wyjściowe, aby uzyskać więcej informacji.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Żadne migawki nie zostaną usunięte. Wszystkie migawki są zgodne z aktualną polityką przechowywania.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Sprawdzanie integralności repozytorium z weryfikacją danych...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Nie udało się zainicjować repozytorium. Sprawdź logi, aby uzyskać szczegółowe informacje.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Błąd inicjalizacji</sys:String>

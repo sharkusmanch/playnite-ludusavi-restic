@@ -239,6 +239,28 @@ Vyberte Ano pro použití navrhované složky, Ne vybrat jinou, nebo zrušit zru
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(žádný)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Nelze určit název hry pro tento snímek.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Herní přepsání</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Přepsat interval zálohování herního systému a zásady uchovávání pro konkrétní hry. Hry, které nejsou uvedeny v seznamu, používají globální výchozí nastavení. Přepsání můžete přidat z kontextové nabídky hry po kliknutí pravým tlačítkem myši. Prázdná pole pro uchovávání jsou zakázána (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Ponechat poslední</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Uchovávejte denně</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Udržujte týdně</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Uchovávejte měsíčně</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Uchovávejte ročně</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Odebrat vybrané</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Nastavení intervalu zálohování</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Přepsání intervalu zálohování</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Zadejte interval zálohování v minutách pro {0} (aktuální: {1}, globální výchozí nastavení: {2}). Pro odstranění přepsání ponechte prázdné.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Nastavení zásad uchovávání informací</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Přepsání zásad uchovávání dat</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Nastavte hodnoty, které přepíší globální zásady uchovávání pro tuto hru. Prázdná pole jsou zakázána (nastavena na 0), takže se použijí pouze hodnoty, které zadáte.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Uložit</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Zrušit</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} her má přepsání uchování pro jednotlivé hry.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Zobrazení snímků...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">V repozitáři nebyly nalezeny žádné snímky.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Průvodce nastavením</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Zálohovat všechny hry</sys:String>
@@ -286,6 +308,9 @@ Vyberte Ano pro použití navrhované složky, Ne vybrat jinou, nebo zrušit zru
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Kontrola integrity repozitáře...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Probíhá suchý běh pruny...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Vypínání nevyužitých dat...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Prořezávání repozitáře...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Aplikace zásad uchovávání dat selhala u jedné nebo více her. Podrobnosti naleznete v nezpracovaném výstupu.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Žádné snímky nebudou smazány. Všechny snímky odpovídají aktuálním zásadám uchovávání.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Kontrola integrity repozitáře s ověřováním údajů...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Nepodařilo se inicializovat repozitář. Zkontrolujte záznamy pro podrobnosti.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Chyba inicializace</sys:String>

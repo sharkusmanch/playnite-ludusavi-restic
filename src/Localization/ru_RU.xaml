@@ -69,9 +69,9 @@
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Режим включения</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Include Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Включить резервную копию</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Исключить резервную копию</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Создать резервную копию при удалении игры</sys:String>
 
@@ -134,19 +134,19 @@
     <sys:String x:Key="LOCLuduRestPrune">Очищать</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Вы хотели бы сначала выполнить сухой пробег, чтобы увидеть, что будет выведено перед удалением данных?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithPruning">Продолжить обрезку?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Dry run completed. {0} snapshots would be pruned. Do you want to proceed with the actual pruning?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Dry run completed. {0} snapshots would be deleted. Do you want to proceed with applying the retention policy?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Пробный запуск завершен. {0} снимков будут удалены. Вы хотите продолжить фактическое удаление?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Пробный запуск завершен. {0} снимков будут удалены. Вы хотите продолжить применение политики хранения?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">Продолжить с политикой удержания?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Это удалит старые снимки в соответствии с вашей политикой хранения:
 
-• Keep last {0} snapshots
-• Keep daily snapshots for {1} days
-• Keep weekly snapshots for {2} weeks
-• Keep monthly snapshots for {3} months
-• Keep yearly snapshots for {4} years
+• Сохранить последние {0} снимки
+• Сохранить ежедневные снимки за {1} дней
+• Сохранить еженедельные снимки за {2} недель
+• Сохранить ежемесячные снимки за {3} месяцев
+• Сохранить годовые снимки за {4} лет
 
-Would you like to perform a dry run first to see what would be deleted?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
+Хотите сначала выполнить пробный запуск, чтобы увидеть, что будет удалено?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Предварительный просмотр завершен. {0} снимки будут удалены в соответствии с политикой хранения. Вы хотите продолжить удаление?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">Продолжить с Удалением?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">Очистить репозиторий</sys:String>
     <sys:String x:Key="LOCLuduRestPruneWarningMessage">Удаление неиспользуемых пузырьков данных из репозитория. Эта операция необратима.
@@ -200,11 +200,11 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Храните ежегодные снимки в течение N лет:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Держите один снимок в год в течение многих лет</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Пример с настройками по умолчанию:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
-• Plus 1 snapshot per day for 7 days
-• Plus 1 snapshot per week for 4 weeks
-• Plus 1 snapshot per month for 12 months
-• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample">• Сохранять 10 последних снимков
+• Плюс 1 снимок в день в течение 7 дней
+• Плюс 1 снимок в неделю в течение 4 недель
+• Плюс 1 снимок в месяц в течение 12 месяцев
+• Плюс 1 снимок в год в течение 5 лет</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Результаты обработки</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Сводная информация появится здесь</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Снимок удален</sys:String>
@@ -238,6 +238,28 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
 Выберите &quot;Да&quot; для использования предложенной папки, Нет для выбора другого или отменить для отмены.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(нет)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Невозможно определить тег имени игры для этого снимка.</sys:String>
+
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Изменения в игре</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Задайте интервал резервного копирования игрового процесса и политику хранения для конкретных игр. Для игр, не указанных в списке, используются глобальные настройки по умолчанию. Добавьте изменения через контекстное меню игры (по щелчку правой кнопкой мыши). Пустые поля для хранения отключены (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Интервал (мин)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Хранить последним</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Ежедневно</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Сохранять еженедельный</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Хранить ежемесячно</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Ежегодно хранить</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Удалить выбранное</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Установить интервал резервного копирования</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Переопределение интервала резервного копирования</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Введите интервал резервного копирования в минутах для {0} (текущий: {1}, глобальный по умолчанию: {2}). Оставьте поле пустым, чтобы отключить переопределение.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Установить политику хранения</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Отмена политики хранения данных</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Задайте значения, которые переопределят глобальную политику хранения данных для этой игры. Пустые поля отключены (установите значение 0), поэтому будут применяться только указанные вами значения.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Сохранять</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Отмена</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} игры имеют возможность переопределения параметров сохранения для каждой игры.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Краткий обзор списка...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">В репозитории не найдено ни одного снимка состояния.</sys:String>
 
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Мастер настройки</sys:String>
@@ -286,6 +308,9 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Проверка целостности репозитория...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Выполняется сухий пробег...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Очистка неиспользуемых данных...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Обрезка репозитория...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Не удалось применить политику хранения данных для одной или нескольких игр. Подробности смотрите в исходном выводе.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Никакие снимки не будут удалены. Все снимки соответствуют текущей политике хранения.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Проверка целостности репозитория с помощью проверки данных...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Не удалось инициализировать репозиторий. Пожалуйста, проверьте журналы для подробностей.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Ошибка инициализации</sys:String>

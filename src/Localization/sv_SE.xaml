@@ -239,6 +239,28 @@ Välj Ja att använda föreslagen mapp, Nej att välja en annan, eller Avbryt at
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(ingen)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Kan inte bestämma spelnamntaggen för denna ögonblicksbild.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Spelöverstyrningar</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Åsidosätt intervallet för säkerhetskopiering av spelet och lagringspolicyn för specifika spel. Spel som inte listas använder de globala standardvärdena. Lägg till åsidosättningar från spelets högerklicksmeny. Tomma lagringsfält är inaktiverade (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Intervall (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Behåll sist</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Håll dagligen</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Behåll varje vecka</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Behåll månadsvis</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Behåll årligen</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Ta bort markerade</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Ställ in säkerhetskopieringsintervall</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Åsidosättning av säkerhetskopieringsintervall</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Ange säkerhetskopieringsintervall i minuter för {0} (nuvarande: {1}, global standard: {2}). Lämna tomt för att ta bort åsidosättningen.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Ange lagringspolicy</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Åsidosättning av lagringspolicy</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Ange värden för att åsidosätta den globala lagringspolicyn för det här spelet. Tomma fält är inaktiverade (inställda på 0), så endast de värden du anger gäller.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Spara</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Avboka</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} spel har åsidosättningar för kvarhållning per spel.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Listar ögonblicksbilder...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Inga ögonblicksbilder hittades i arkivet.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Installationsguide</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Säkerhetskopiera alla spel</sys:String>
@@ -286,6 +308,9 @@ Välj Ja att använda föreslagen mapp, Nej att välja en annan, eller Avbryt at
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Kontrollerar utvecklingskatalogens integritet...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Kör beskär torr körning...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Beskär oanvända data...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Beskärning av förråd...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Tillämpningen av lagringspolicy misslyckades för ett eller flera spel. Kontrollera råutdata för mer information.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Inga ögonblicksbilder skulle raderas. Alla ögonblicksbilder matchar den aktuella lagringspolicyn.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Kontrollerar utvecklingskatalogens integritet med verifiering av data...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Det gick inte att initiera utvecklingskatalogen. Kontrollera loggarna för detaljer.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Initiering fel</sys:String>

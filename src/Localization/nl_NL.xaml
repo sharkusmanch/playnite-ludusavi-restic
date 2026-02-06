@@ -239,6 +239,28 @@ Kies Ja om de voorgestelde map te gebruiken, Nee om een andere te kiezen, of Ann
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(geen)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Kan de spelnaamtag voor deze momentopname niet bepalen.</sys:String>
 
+    <!-- Game overrides -->
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Speloverrides</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Overschrijf het back-upinterval en het bewaarbeleid voor specifieke games. Games die niet in de lijst staan, gebruiken de algemene standaardinstellingen. Voeg overrides toe via het rechtermuisklikmenu van de game. Lege bewaarvelden zijn uitgeschakeld (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Bewaar als laatste</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Houd dagelijks</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Blijf wekelijks</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Maandelijks behouden</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Jaarlijks behouden</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Verwijder geselecteerde</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Stel het back-upinterval in.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Override van het back-upinterval</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Voer het back-upinterval in minuten in voor {0} (huidig: {1}, globale standaard: {2}). Laat dit veld leeg om de overschrijving te verwijderen.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Stel een bewaarbeleid in.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Override van het bewaarbeleid</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Stel waarden in om het algemene bewaarbeleid voor dit spel te overschrijven. Lege velden zijn uitgeschakeld (ingesteld op 0), dus alleen de waarden die u opgeeft, zijn van toepassing.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Redden</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Annuleren</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} spel(len) hebben per-spel retentie-overrides.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Momentopnamen weergeven...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Er zijn geen momentopnamen gevonden in de repository.</sys:String>
+
     <!-- Main menu items -->
     <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Back-up van alle spellen</sys:String>
@@ -286,6 +308,9 @@ Kies Ja om de voorgestelde map te gebruiken, Nee om een andere te kiezen, of Ann
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Controleren repository integriteit...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Bezig met snoeien drogen lopen...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Ongebruikte data opstarten...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Opschonen van de repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Het toepassen van het bewaarbeleid is mislukt voor een of meer spellen. Raadpleeg de onbewerkte uitvoer voor meer informatie.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Er worden geen momentopnamen verwijderd. Alle momentopnamen voldoen aan het huidige bewaarbeleid.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Controleren repository integriteit met data verificatie...</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationFailed">Kan de repository niet initialiseren. Controleer de logs voor details.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Initialisatie fout</sys:String>
