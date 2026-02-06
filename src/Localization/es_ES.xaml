@@ -134,8 +134,8 @@ Modo de inclusión: No hay juegos respaldados. Los juegos pueden tener la etique
     <sys:String x:Key="LOCLuduRestPrune">Limpiar</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">¿Le gustaría realizar una carrera seca primero para ver qué se podaría antes de eliminar los datos?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithPruning">¿Continuar con la poda?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Dry run completed. {0} snapshots would be pruned. Do you want to proceed with the actual pruning?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Dry run completed. {0} snapshots would be deleted. Do you want to proceed with applying the retention policy?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Prueba completada. Se eliminarán las {0} instantáneas. ¿Desea continuar con la eliminación?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Prueba completada. Se eliminarán {0} instantáneas. ¿Desea continuar con la aplicación de la política de retención?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">¿Continuar con la política de retención?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Esto eliminará las instantáneas antiguas de acuerdo con su política de retención:
 
@@ -146,12 +146,12 @@ Modo de inclusión: No hay juegos respaldados. Los juegos pueden tener la etique
 • Mantener instantáneas anuales durante {4} años
 
 ¿Te gustaría hacer una carrera seca primero para ver qué se eliminaría?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Vista previa completada. Las instantáneas {0} se eliminarán según la política de retención. ¿Desea continuar con la eliminación?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">¿Continuar con la eliminación?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">Limpiar repositorio</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is irreversible.
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">La poda eliminará los blobs de datos no utilizados del repositorio. Esta operación es irreversible.
 
-Would you like to perform a dry run first to see what would be removed before actually deleting data?</sys:String>
+¿Desea realizar un simulacro primero para ver qué se eliminaría antes de eliminar los datos?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Ejecutado en seco completado. Esta operación eliminaría los datos no utilizados del repositorio. ¿Desea continuar con la limpieza real?</sys:String>
 
     <!-- Welcome and setup -->
