@@ -1,320 +1,320 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Copie de rezervă în timpul jocului</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Backup în timpul jocului</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Copie de rezervă la oprirea jocului</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Backup atunci când jocul s-a oprit</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Solicită o copie de rezervă la oprirea jocului</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Solicitați eticheta de rezervă când jocul s-a oprit</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Etichetă copie de rezervă</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Etichetă de rezervă a jocului</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Introduceți eticheta copie de rezervă pentru</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Introduceți eticheta de rezervă pentru</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Interval salvare salvare joc de rezervă (minute)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Interval de rezervă pentru salvarea jocului (minute)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">Răsfoiţi</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">Naviga</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Calea repozitoriului de restaurare</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Calea depozitului Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic parola repo-ului</sys:String>
-    <sys:String x:Key="LOCLuduRestShow">Afișare</sys:String>
-    <sys:String x:Key="LOCLuduRestHide">Ascunde</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Parola pentru depozitul Restic</sys:String>
+    <sys:String x:Key="LOCLuduRestShow">Show</sys:String>
+    <sys:String x:Key="LOCLuduRestHide">Hide</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Configurare Rclone</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone config</sys:String>
 
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Parola de configurare Rclone</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">Verifică</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">Verifica</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Calea executabilă restic</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Cale executabilă Restic</sys:String>
 
     <sys:String x:Key="LOCLuduRestLuduPath">Calea executabilă Ludusavi</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Backup</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabRepo">Depozit</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">Repertoriu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Adaugă tag-uri additonal la imaginile pentru a diferenția evenimentele</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Adăugați etichete suplimentare la instantanee pentru a diferenția evenimentele</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupManualTag">Etichetă de rezervă manuală</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Etichetă copie de rezervă oprită</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Etichetă de rezervă pentru joc oprit</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Etichetă copie de rezervă</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Etichetă de rezervă pentru joc</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Crează instantaneu de salvare</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Creați un instantaneu de salvare</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Adaugă copie de rezervă include eticheta</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Adăugați eticheta include backup</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Elimină copia de rezervă include eticheta</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Eliminați eticheta include backup</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Adaugă etichetă de excludere backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Adăugați eticheta de excludere de rezervă</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Elimină eticheta de excludere backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Eliminați eticheta de excludere de rezervă</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Copie de rezervă</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">Făcând înapoi</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPProcessing">Prelucrare</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupMode">Mod backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupMode">Modul de rezervă</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Excludere Mod: Toate jocurile sunt eligibile pentru a face o copie de rezervă în mod implicit. Jocurile pot avea eticheta de excludere adăugată pentru a preveni crearea de backup.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Modul Excludere: toate jocurile sunt eligibile pentru backup în mod implicit. Jocurile pot avea eticheta de excludere adăugată pentru a preveni copierea de rezervă.
 
-Modul Include : niciun joc nu este salvat. Jocurile pot avea eticheta include adăugată pentru a fi eligibilă pentru copia de rezervă.</sys:String>
+Mod Include: Nu se face backup pentru niciun joc. Jocurile pot avea eticheta include adăugată pentru a fi eligibile pentru backup.</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exclude modul</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Modul de includere</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Include Mode</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Include backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Includeți backup</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclude Backup-ul</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Excludeți Backup</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Creați o copie de rezervă atunci când jocul este dezinstalat</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Creați o copie de rezervă pentru salvare când jocul este dezinstalat</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Executabil restic găsit și verificat.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Nu s-a putut detecta automat restul. Vă rugăm să specificați calea manual.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Executabilul Ludusavi a fost găsit și verificat.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ ludusavi, nu a putut fi detectat automat. Vă rugăm să specificați calea manual.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticRequired">Vă rugăm să specificați calea către restabilire executabilului.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Executabilitatea de restic este validă.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">&lt;unk&gt; Executabil restic invalid sau inaccesibil.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Vă rugăm să specificați calea către executabilul ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Executabilul Ludusavi este valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">…………Ludusavi executabil nevalid sau inaccesibil.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Da</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryNo">Nr</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticRequired">Please specify the path to restic executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Please specify the path to ludusavi executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Yes</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryNo">No</sys:String>
 
     <!-- Game Menu Items -->
-    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Vezi instantanee de rezervă</sys:String>
+    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">View backup snapshots</sys:String>
 
     <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-Detectare cu succes</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-detectare eșuată</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Executabil Ludusavi detectat la: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Nu s-a putut detecta automat ludusavi executabil. Vă rugăm să specificaţi calea manual.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Executabil de restic detectat la: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Nu s-a putut detecta automat executabilitatea de restic. Vă rugăm să specificați calea manual.</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-Detection Successful</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-Detection Failed</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">Restic executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
 
     <!-- Settings verification -->
-    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Verificare setări de restaurare Ludusavi:</sys:String>
-    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - conexiunea repo-ului a reușit</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - verificarea a reușit</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Auto-Detectare cu succes</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Auto-detectare eșuată</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Executabil Ludusavi detectat la: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Nu s-a putut detecta automat ludusavi executabil. Vă rugăm să specificaţi calea manual.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Executabil de restic detectat la: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Nu s-a putut detecta automat executabilitatea de restic. Vă rugăm să specificați calea manual.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Verificarea setărilor de restaurare Ludusavi a eșuat: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingRestic">Se verifică conexiunea repo-ului de restaurare...</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Verificare ludusavi executabil...</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Settings Verification:</sys:String>
+    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - repository connection succeeded</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - verification succeeded</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Auto-Detection Successful</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Auto-Detection Failed</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restic executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Settings Verification failed: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verifying restic repository connection...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Verifying ludusavi executable...</sys:String>
 
     <!-- Maintenance operation strings -->
-    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Mentenanță Completă</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Întreţinere completă finalizată cu succes.</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationComplete">Verificare completă</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Verificarea depozitului a fost finalizată.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Politica de reținere dezactivată</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Politica de reținere este dezactivată. Vă rugăm să o activați în setările extensiei pentru a utiliza această caracteristică.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Politica de reținere completă</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Politica de reținere a fost aplicată. Imaginile vechi au fost șterse.</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Maintenance Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Full maintenance completed successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationComplete">Verification Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Repository verification completed successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Retention Policy Disabled</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Retention policy is disabled. Please enable it in the extension settings to use this feature.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Retention Policy Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Retention policy applied successfully. Old snapshots have been deleted.</sys:String>
     <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Operația de curățare finalizată cu succes.</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Prune operation completed successfully.</sys:String>
 
     <!-- Dialog prompts -->
-    <sys:String x:Key="LOCLuduRestFullMaintenance">Întreţinere completă</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Doriți să efectuați mai întâi o execuție uscată pentru a vedea ce ar fi curățat înainte de a șterge efectiv datele?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicy">Politica de reținere</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Doriți mai întâi să efectuați o cursă uscată pentru a vedea ce ar fi șters înainte de a elimina instantanee?</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Curățare</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Doriți să efectuați mai întâi o execuție uscată pentru a vedea ce ar fi curățat înainte de a șterge efectiv datele?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithPruning">Continuați cu Pruning?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Rulare uscată finalizată. Imaginile {0} vor fi curățate. Doriți să continuați cu curățarea reală?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Rulare uscată finalizată. {0} instantanee ar fi șterse. Doriți să continuați aplicarea politicii de reținere?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithRetention">Continuați cu politica de reținere?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Acest lucru va șterge imaginile vechi în funcție de politica de retenție:
+    <sys:String x:Key="LOCLuduRestFullMaintenance">Full Maintenance</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicy">Retention Policy</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Would you like to perform a dry run first to see what would be deleted before actually removing snapshots?</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">Prune</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithPruning">Proceed with Pruning?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Dry run completed. {0} snapshots would be pruned. Do you want to proceed with the actual pruning?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Dry run completed. {0} snapshots would be deleted. Do you want to proceed with applying the retention policy?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithRetention">Proceed with Retention Policy?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
 
-• Păstrați ultimele imagini {0}
-• Păstrați instantanee zilnice pentru {1} zile
-• Păstrați instantanee săptămânale timp de {2} săptămâni
-• Păstrați instantanee lunare pentru {3} luni
-• Păstrați instantanee anuale timp de {4} ani
+• Keep last {0} snapshots
+• Keep daily snapshots for {1} days
+• Keep weekly snapshots for {2} weeks
+• Keep monthly snapshots for {3} months
+• Keep yearly snapshots for {4} years
 
-Doriți să efectuați mai întâi o execuție uscată pentru a vedea ce ar fi șters?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Previzualizare finalizată. Imaginile {0} vor fi șterse în conformitate cu politica de reținere. Doriți să continuați cu ștergerea?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Continuați cu ștergerea?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">Repertoriu de curățare</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning va elimina buletinele de date neutilizate din depozit. Această operațiune este ireversibilă.
+Would you like to perform a dry run first to see what would be deleted?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Proceed with Deletion?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">Prune Repository</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is irreversible.
 
-Doriți să efectuați mai întâi o execuție uscată pentru a vedea ce ar fi eliminat înainte de a șterge efectiv datele?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Rulare uscată finalizată. Această operațiune ar elimina datele neutilizate din depozit. Doriți să continuați cu pruningul real?</sys:String>
+Would you like to perform a dry run first to see what would be removed before actually deleting data?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Dry run completed. This operation would remove unused data from the repository. Do you want to proceed with the actual pruning?</sys:String>
 
     <!-- Welcome and setup -->
-    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Bine ați venit - este necesară configurarea</sys:String>
-    <sys:String x:Key="LOCLuduRestWelcomeMessage">Bine ați venit la Ludusavi Restic!
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - Setup Required</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeMessage">Welcome to Ludusavi Restic!
 
-Aceasta pare să fie prima dată când folosiți extensia sau configurația dvs. este incompletă. Doriți să rulați asistentul de instalare pentru a configura copia de rezervă a depozitului?</sys:String>
-    <sys:String x:Key="LOCLuduRestConfigurationRequired">Este necesară configurarea</sys:String>
-    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic nu este configurat încă. Doriți să rulați asistentul de configurare?</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Configurare invalidă</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticMessage">Executabilul de restic configurat nu este valid sau accesibil. Doriți să rulați asistentul de configurare pentru a repara asta?</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupComplete">Configurare completă</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Configurare finalizată cu succes! Acum puteţi utiliza toate caracteristicile copiei de rezervă.</sys:String>
+This appears to be your first time using the extension or your configuration is incomplete. Would you like to run the setup wizard to configure your backup repository?</sys:String>
+    <sys:String x:Key="LOCLuduRestConfigurationRequired">Configuration Required</sys:String>
+    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic is not configured yet. Would you like to run the setup wizard?</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Invalid Configuration</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticMessage">The configured restic executable is not valid or accessible. Would you like to run the setup wizard to fix this?</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupComplete">Setup Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Setup completed successfully! You can now use all backup features.</sys:String>
 
     <!-- Backup browser -->
-    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Sterge instantaneu Backup</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Sunteţi sigur că doriţi să ştergeţi instantaneul {0} din {1}?</sys:String>
-    <sys:String x:Key="LOCLuduRestSuccess">Succes</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Instantaneu şters cu succes.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restaurează ultimul instantaneu</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Nu s-au găsit imagini pentru acest joc.</sys:String>
-    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restaurează instantaneul {0} pentru directorul {1} :\n{2}\n\nFișierele existente pot fi suprascrise. Continuați?</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Delete Backup Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Are you sure you want to delete snapshot {0} from {1}?</sys:String>
+    <sys:String x:Key="LOCLuduRestSuccess">Success</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Snapshot deleted successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restore latest snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">No snapshots found for this game.</sys:String>
+    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restore snapshot {0} for {1} to folder:\n{2}\n\nExisting files may be overwritten. Continue?</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restaurare instantaneu...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompleted">Instantaneu restaurat cu succes.</sys:String>
-    <sys:String x:Key="LOCLuduRestRefresh">Împrospătează</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSelected">Restaurează cele selectate</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSelected">Şterge cele selectate</sys:String>
-    <sys:String x:Key="LOCLuduRestFilterByGame">Filtrare după joc:</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">ID imagine</sys:String>
-    <sys:String x:Key="LOCLuduRestDateHeader">Data</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsHeader">Etichete</sys:String>
-    <sys:String x:Key="LOCLuduRestTotalSnapshots">Total instantanee</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetect">Detectare automată</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Politica de reținere</sys:String>
-    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Activați politica de reținere automată</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">Când este activată, aceste politici vor fi aplicate în timpul operațiunilor de întreținere pentru a elimina automat imaginile vechi.</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastLabel">Păstraţi ultimele N instantanei:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastHelp">Păstrează cele mai recente imagini indiferent de vârstă</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Păstraţi instantanee zilnice timp de N zile:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Păstrați un instantaneu pe zi pentru atâtea zile</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Păstraţi imaginile săptămânale timp de N săptămâni:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Păstrați un instantaneu pe săptămână pentru aceste săptămâni</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Păstraţi instantanee lunare timp de N luni:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Păstraţi un instantaneu pe lună pentru atâtea luni</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Păstrați instantaneu anual timp de N ani:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Păstrați un instantaneu pe an pentru atâția ani</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exemplu cu setările implicite:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Păstrați ultimele 10 instantanee
-• Plus 1 instantaneu pe zi timp de 7 zile
-• Plus 1 instantaneu pe săptămână timp de 4 săptămâni
-• Plus 1 instantaneu pe lună timp de 12 luni
-• Plus 1 instantaneu pe an timp de 5 ani</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Rezultate de printare</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Informații sumare vor apărea aici</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Instantanee șterse</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesAffected">Partide afectate</sys:String>
-    <sys:String x:Key="LOCLuduRestDataDeleted">Date șterse</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restoring snapshot...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompleted">Snapshot restored successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestRefresh">Refresh</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSelected">Restore Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSelected">Delete Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestFilterByGame">Filter by Game:</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">Snapshot ID</sys:String>
+    <sys:String x:Key="LOCLuduRestDateHeader">Date</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsHeader">Tags</sys:String>
+    <sys:String x:Key="LOCLuduRestTotalSnapshots">Total snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetect">Auto-Detect</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Retention Policy</sys:String>
+    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Enable automatic retention policy</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">When enabled, these policies will be applied during maintenance operations to automatically remove old snapshots.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastLabel">Keep last N snapshots:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastHelp">Keep the most recent snapshots regardless of age</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Keep daily snapshots for N days:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Keep one snapshot per day for this many days</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Keep weekly snapshots for N weeks:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Keep one snapshot per week for this many weeks</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Keep monthly snapshots for N months:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Keep one snapshot per month for this many months</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Keep yearly snapshots for N years:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Keep one snapshot per year for this many years</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Example with default settings:</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Pruning Results</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Summary information will appear here</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Snapshots Deleted</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesAffected">Games Affected</sys:String>
+    <sys:String x:Key="LOCLuduRestDataDeleted">Data Deleted</sys:String>
     <sys:String x:Key="LOCLuduRestStatus">Status</sys:String>
-    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Instantanee șterse</sys:String>
-    <sys:String x:Key="LOCLuduRestClearFilter">Curăță Filtrul</sys:String>
-    <sys:String x:Key="LOCLuduRestGameHeader">Joc</sys:String>
-    <sys:String x:Key="LOCLuduRestDateTimeHeader">Data/Ora</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Rezumat Jocuri</sys:String>
-    <sys:String x:Key="LOCLuduRestGameNameHeader">Numele jocului</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Rezumatul etichetelor</sys:String>
-    <sys:String x:Key="LOCLuduRestTagHeader">Etichetă</sys:String>
-    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Apariţii</sys:String>
-    <sys:String x:Key="LOCLuduRestRawOutputTab">Ieșire crudă</sys:String>
-    <sys:String x:Key="LOCLuduRestClose">Inchide</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Introduceți o etichetă personalizată opțională pentru această copie de rezervă manuală (lăsați necompletat pentru nimeni):</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Etichetă pentru backup manual</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreConfirm">Restaurați instantaneul {0} la {1}? Acest lucru poate suprascrie fișierele existente.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restaurare instantaneu {0}...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Instantaneul {0} a fost restaurat cu succes.</sys:String>
+    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Deleted Snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestClearFilter">Clear Filter</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">Game</sys:String>
+    <sys:String x:Key="LOCLuduRestDateTimeHeader">Date/Time</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Games Summary</sys:String>
+    <sys:String x:Key="LOCLuduRestGameNameHeader">Game Name</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Tags Summary</sys:String>
+    <sys:String x:Key="LOCLuduRestTagHeader">Tag</sys:String>
+    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Occurrences</sys:String>
+    <sys:String x:Key="LOCLuduRestRawOutputTab">Raw Output</sys:String>
+    <sys:String x:Key="LOCLuduRestClose">Close</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Enter an optional custom tag for this manual backup (leave blank for none):</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Manual Backup Tag</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreConfirm">Restore snapshot {0} to {1}? This may overwrite existing files.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restoring snapshot {0}...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} restored successfully.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreFailed">Nu s-a reușit restaurarea instantaneului: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreError">Eroare la restaurarea instantaneului: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestorePreview">Instantaneu {0} (joc: {1}) conține fișiere {2} .
-Fișiere noi: {3}
-Fișiere existente (vor fi suprascrise): {4}
-Dosar de restaurare sugerat: {5}
+    <sys:String x:Key="LOCLuduRestRestoreFailed">Failed to restore snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreError">Error restoring snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (game: {1}) contains {2} files.
+New files: {3}
+Existing files (will be overwritten): {4}
+Suggested restore folder: {5}
 
-Alegeți Da pentru a utiliza folderul sugerat, Nu poți alege altul sau anula pentru a abandona.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(niciunul)</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Nu se poate determina eticheta numelui jocului pentru această instantaneu.</sys:String>
+Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(none)</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Cannot determine game name tag for this snapshot.</sys:String>
 
     <!-- Game overrides -->
-    <sys:String x:Key="LOCLuduRestTabGameOverrides">Suprascrieri de joc</sys:String>
-    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Suprascrie intervalul de backup al jocului și politica de retenție pentru anumite jocuri. Jocurile care nu sunt listate utilizează setările implicite globale. Adăugați suprascrieri din meniul contextual al jocului. Câmpurile de retenție goale sunt dezactivate (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Game Overrides</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Override the gameplay backup interval and retention policy for specific games. Games not listed use the global defaults. Add overrides from the game right-click menu. Blank retention fields are disabled (0).</sys:String>
     <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Păstrează ultimul</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Păstrați zilnic</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Păstrați săptămânal</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Păstrați lunar</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Păstrați anual</sys:String>
-    <sys:String x:Key="LOCLuduRestRemoveOverride">Eliminați selecția</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupInterval">Setați intervalul de backup</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Suprascrierea intervalului de rezervă</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Introduceți intervalul de backup în minute pentru {0} (curent: {1}, implicit global: {2}). Lăsați necompletat pentru a elimina suprascrierea.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Setați politica de retenție</sys:String>
-    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Suprascrierea politicii de păstrare</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Setați valori pentru a suprascrie politica globală de retenție pentru acest joc. Câmpurile goale sunt dezactivate (setate la 0), deci se vor aplica doar valorile pe care le specificați.</sys:String>
-    <sys:String x:Key="LOCLuduRestSave">Salva</sys:String>
-    <sys:String x:Key="LOCLuduRestCancel">Anula</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} jocuri au suprascrieri pentru păstrarea per joc.</sys:String>
-    <sys:String x:Key="LOCLuduRestListingSnapshots">Se înregistrează instantanee...</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Nu s-au găsit instantanee în depozit.</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Keep Last</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Keep Daily</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Keep Weekly</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Keep Monthly</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Keep Yearly</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Remove Selected</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Set backup interval</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Backup Interval Override</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Enter backup interval in minutes for {0} (current: {1}, global default: {2}). Leave blank to remove override.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Set retention policy</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Retention Policy Override</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Set values to override the global retention policy for this game. Blank fields are disabled (set to 0), so only the values you specify will apply.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Save</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Cancel</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} game(s) have per-game retention overrides.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Listing snapshots...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">No snapshots found in the repository.</sys:String>
 
     <!-- Main menu items -->
-    <sys:String x:Key="LOCLuduRestSetupWizard">Asistent de instalare</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllGames">Copie de rezervă toate jocurile</sys:String>
-    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Răsfoiește instantanee de rezervă</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceAll">Toate (bifează + prun)</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceVerify">Verifică</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Șterge imaginile vechi</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenancePrune">Curăță datele neutilizate</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceSection">Mentenanţă</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSection">Configurare</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllGames">Backup all games</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Browse backup snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceAll">All (check + prune)</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceVerify">Verifica</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Delete old snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenancePrune">Prune unused data</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceSection">Maintenance</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSection">Setup</sys:String>
 
     <!-- Dialog strings -->
-    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Selectați Restic Executabil</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Selectați Ludusavi executabil</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Selectează locația depozitului</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Fișiere executabile (*.exe)&lt;unk&gt; *.exe&lt;unk&gt; Toate fișierele (*.*)&lt;unk&gt; *.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executabil* .exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">*.conf</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Se execută întreținerea completă...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verificare repo...</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Select Restic Executable</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Select Ludusavi Executable</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Select Repository Location</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Running full maintenance...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifying repository...</sys:String>
 
     <!-- Validation messages -->
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Vă rugăm să specificați calea către restabilire executabilului.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Executabilitatea de restic este validă.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">&lt;unk&gt; Executabil restic invalid sau inaccesibil.</sys:String>
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Vă rugăm să specificați calea către executabilul ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Executabilul Ludusavi este valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">…………Ludusavi executabil nevalid sau inaccesibil.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Please specify the path to restic executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Please specify the path to ludusavi executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
-    <sys:String x:Key="LOCLuduRestValidationError">Eroare de validare</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticPath">Vă rugăm să specificați calea către restabilire executabilului.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticInvalid">Executabilul restic specificat nu este valid sau accesibil.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Vă rugăm să specificați calea de repo.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Vă rugăm să introduceți o parolă pentru depozit.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Parolele nu se potrivesc.</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryYes">Da</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryNo">Nr</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationError">Validation Error</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticPath">Please specify the path to restic executable.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticInvalid">The specified restic executable is not valid or accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Please specify the repository path.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Please enter a repository password.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Passwords do not match.</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryYes">Yes</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryNo">No</sys:String>
 
     <!-- Progress and initialization messages -->
-    <sys:String x:Key="LOCLuduRestInitializingRepository">Se inițializează depozitul...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Se aplică politica de reținere...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Executând previzualizarea politicii de reţinere...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Aplicarea politicii de reținere și ștergerea...</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Se verifică integritatea depozitului...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Rulare cursă uscată...</sys:String>
-    <sys:String x:Key="LOCLuduRestPruningUnusedData">Se afişează datele neutilizate...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Se taie depozitul...</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Aplicarea politicii de retenție a eșuat pentru unul sau mai multe jocuri. Verificați rezultatul brut pentru detalii.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Nicio instantanee nu va fi ștearsă. Toate instantaneele corespund politicii actuale de păstrare.</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Se verifică integritatea depozitului cu verificarea datelor...</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationFailed">Eșuare inițializare repo. Verificați jurnalele pentru detalii.</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationError">Eroare de iniţializare</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupError">Eroare de instalare</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupErrorMessage">A aparut o eroare la setare: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializingRepository">Initializing repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Applying retention policy...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Running retention policy preview...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Applying retention policy and pruning...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Checking repository integrity...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Running prune dry run...</sys:String>
+    <sys:String x:Key="LOCLuduRestPruningUnusedData">Pruning unused data...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Pruning repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Retention policy application failed for one or more games. Check the raw output for details.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">No snapshots would be deleted. All snapshots match the current retention policy.</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Checking repository integrity with data verification...</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationFailed">Failed to initialize the repository. Please check the logs for details.</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationError">Initialization Error</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupError">Setup Error</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupErrorMessage">An error occurred during setup: {0}</sys:String>
 
 </ResourceDictionary>
