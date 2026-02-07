@@ -76,16 +76,16 @@ Belefoglalás mód: Egyetlen játékról sem készül biztonsági mentés. A já
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Biztonsági mentés létrehozása a játék eltávolításakor</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ A Restic futtatható fájl megtalálható és ellenőrizve van.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ Nem sikerült automatikusan észlelni a restic-et. Kérjük, adja meg manuálisan az elérési utat.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ A Ludusavi futtatható fájl megtalálható és ellenőrizve van.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ Nem sikerült automatikusan felismerni a ludusavi-t. Kérjük, adja meg manuálisan az elérési utat.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Kérjük, adja meg a restic futtatható fájl elérési útját.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ A Restic futtatható fájl érvényes.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ Érvénytelen restic futtatható fájl vagy nem elérhető.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Kérjük, adja meg a ludusavi futtatható fájl elérési útját.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ A Ludusavi futtatható fájlja érvényes.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ Érvénytelen vagy nem elérhető ludusavi futtatható fájl.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Igen</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">Nem</sys:String>
 
@@ -200,11 +200,11 @@ Szeretne először egy próbafuttatást végrehajtani, hogy lássa, mi kerül el
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Éves pillanatképek megőrzése N évig:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Évente egy pillanatképet őrizzen meg ennyi éven keresztül</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Példa alapértelmezett beállításokkal:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Tartsa meg a legutóbbi 10 pillanatképet
-• Plusz napi 1 pillanatkép 7 napig
-• Plusz heti 1 pillanatkép 4 héten keresztül
-• Plusz havi 1 pillanatkép 12 hónapig
-• Plusz évi 1 pillanatkép 5 évig</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Metszés eredményei</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Összefoglaló információk jelennek meg itt</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Pillanatképek törölve</sys:String>
@@ -284,11 +284,11 @@ Válassza az Igen lehetőséget a javasolt mappa használatához, a Nem lehetős
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Kérjük, adja meg a restic futtatható fájl elérési útját.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ A Restic futtatható fájl érvényes.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ Érvénytelen restic futtatható fájl vagy nem elérhető.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Kérjük, adja meg a ludusavi futtatható fájl elérési útját.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ A Ludusavi futtatható fájlja érvényes.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ Érvénytelen vagy nem elérhető ludusavi futtatható fájl.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Érvényesítési hiba</sys:String>
