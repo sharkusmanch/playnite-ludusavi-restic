@@ -76,16 +76,16 @@ Tryb uwzględnienia: Brak kopii zapasowych gier. Gry mogą mieć dodany znacznik
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Utwórz kopię zapasową, gdy gra jest odinstalowana</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Znaleziono i zweryfikowano plik wykonywalny.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Nie można automatycznie wykryć przywrócenia. Proszę określić ścieżkę ręcznie.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Znaleziono i zweryfikowano plik wykonywalny Ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ Nie można automatycznie wykryć ludusavi. Proszę określić ścieżkę ręcznie.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Proszę określić ścieżkę do przywrócenia pliku wykonywalnego.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Przywracanie pliku wykonywalnego jest prawidłowe.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">&lt;unk&gt; Niepoprawny plik wykonywalny lub niedostępny.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Proszę określić ścieżkę do pliku wykonywalnego ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Plik wykonywalny Ludusavi jest prawidłowy.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">&lt;unk&gt; Niepoprawny plik wykonywalny ludusavi lub niedostępny.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Tak</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">Nie</sys:String>
 
@@ -200,11 +200,11 @@ Wygląda na to, że po raz pierwszy korzystasz z rozszerzenia lub Twoja konfigur
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Trzymaj zrzuty roczne przez N lat:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Zachowaj jeden zrzut ekranu rocznie przez wiele lat</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Przykład z ustawieniami domyślnymi:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Trzymać ostatnie 10 migawek
-• Plus 1 migawka na dobę przez 7 dni
-• Plus 1 migawka na tydzień przez 4 tygodnie
-• Plus 1 migawka na miesiąc przez 12 miesięcy
-• Plus 1 migawka na rok przez 5 lat</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Wyniki ruszania</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Informacje podsumowujące pojawią się tutaj</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Usunięto zrzuty stanu</sys:String>
@@ -284,11 +284,11 @@ Wybierz Tak, aby użyć sugerowanego folderu, Nie można wybrać innego, lub Anu
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Proszę określić ścieżkę do przywrócenia pliku wykonywalnego.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Przywracanie pliku wykonywalnego jest prawidłowe.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">&lt;unk&gt; Niepoprawny plik wykonywalny lub niedostępny.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Proszę określić ścieżkę do pliku wykonywalnego ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Plik wykonywalny Ludusavi jest prawidłowy.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">&lt;unk&gt; Niepoprawny plik wykonywalny ludusavi lub niedostępny.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Błąd weryfikacji</sys:String>
