@@ -76,16 +76,16 @@ Include Mode: No games are backed up. Games can have the include tag added to be
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Oyun kaldırıldığında kayıt dosyasını yedekle</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Restic yürütülebilir dosyası bulundu ve doğrulandı.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ Restic otomatik olarak algılanamadı. Lütfen yolu manuel olarak belirtin.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi yürütülebilir dosyası bulundu ve doğrulandı.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ Ludusavi otomatik olarak algılanamadı. Lütfen yolu manuel olarak belirtin.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Lütfen restic yürütülebilir dosyasının yolunu belirtin.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restic yürütülebilir dosyası geçerlidir.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ Geçersiz restic yürütülebilir dosyası veya erişilemiyor.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Lütfen ludusavi yürütülebilir dosyasının yolunu belirtin.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi yürütülebilir dosyası geçerlidir.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ Geçersiz ludusavi yürütülebilir dosyası veya erişilemiyor.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Evet</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">HAYIR</sys:String>
 
@@ -200,11 +200,11 @@ Görünüşe göre bu uzantıyı ilk kez kullanıyorsunuz veya yapılandırmanı
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">N yıl boyunca yıllık anlık görüntüler saklayın:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Bu süre boyunca her yıl bir fotoğraf saklayın.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Varsayılan ayarlarla örnek:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Son 10 anlık görüntüyü saklayın
-• 7 gün boyunca günde 1 anlık görüntü ekleyin
-• 4 hafta boyunca haftada 1 anlık görüntü ekleyin
-• 12 ay boyunca ayda 1 anlık görüntü ekleyin
-• 5 yıl boyunca yılda 1 anlık görüntü ekleyin</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Budama Sonuçları</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Özet bilgiler burada görünecektir.</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Anlık Görüntüler Silindi</sys:String>
@@ -284,11 +284,11 @@ Mevcut dosyalar (üzerine yazılacak): {4}
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Lütfen restic yürütülebilir dosyasının yolunu belirtin.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restic yürütülebilir dosyası geçerlidir.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ Geçersiz restic yürütülebilir dosyası veya erişilemiyor.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Lütfen ludusavi yürütülebilir dosyasının yolunu belirtin.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi yürütülebilir dosyası geçerlidir.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ Geçersiz ludusavi yürütülebilir dosyası veya erişilemiyor.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Doğrulama Hatası</sys:String>
