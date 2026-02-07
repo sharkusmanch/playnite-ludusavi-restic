@@ -76,16 +76,16 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">当游戏卸载时创建保存备份</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ 可以找到并验证庄严的可执行文件。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ 无法自动检测树脂. 请手动指定路径.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">★ 发现并验证Ludusavi可执行文件。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ 无法自动检测ludusavi。请手动指定路径。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">请指定重新设置可执行文件的路径。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ 神圣可执行程序有效。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">无效的restic 可执行文件或不可访问。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">请指定用于 ludusavi 可执行文件的路径。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi可执行程序有效。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">无效的 ludusavi 可执行文件或不可访问。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">否</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">否</sys:String>
 
@@ -200,11 +200,11 @@
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">保持每年的 N 年快照：</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">这么多年每年保持一张快照</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">使用默认设置的示例：</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• 保留最新的 10 个快照
-• 每天额外保留 1 个快照，持续 7 天
-• 每周额外保留 1 个快照，持续 4 周
-• 每月额外保留 1 个快照，持续 12 个月
-• 每年额外保留 1 个快照，持续 5 年</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">打印结果</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">摘要信息将显示在此处</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">快照已删除</sys:String>
@@ -284,11 +284,11 @@
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">请指定重新设置可执行文件的路径。</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ 神圣可执行程序有效。</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">无效的restic 可执行文件或不可访问。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">请指定用于 ludusavi 可执行文件的路径。</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi可执行程序有效。</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">无效的 ludusavi 可执行文件或不可访问。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">验证错误</sys:String>
