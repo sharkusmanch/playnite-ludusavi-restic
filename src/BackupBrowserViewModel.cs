@@ -209,6 +209,15 @@ namespace LudusaviRestic
 
         private bool CanDeleteSnapshot() => SelectedSnapshot != null && !IsLoading;
 
+        internal static void RemoveSnapshotFromCache(
+            ICollection<BackupSnapshot> allSnapshots,
+            ICollection<BackupSnapshot> visibleSnapshots,
+            BackupSnapshot snapshot)
+        {
+            allSnapshots.Remove(snapshot);
+            visibleSnapshots.Remove(snapshot);
+        }
+
         private void DeleteSnapshot()
         {
             if (SelectedSnapshot == null) return;
@@ -223,8 +232,7 @@ namespace LudusaviRestic
                 var deleteResult = ResticCommand.ForgetSnapshot(context, SelectedSnapshot.Id);
                 if (deleteResult.ExitCode == 0)
                 {
-                    allSnapshots.Remove(SelectedSnapshot);
-                    Snapshots.Remove(SelectedSnapshot);
+                    RemoveSnapshotFromCache(allSnapshots, Snapshots, SelectedSnapshot);
                     SelectedSnapshot = null;
                     context.API.Dialogs.ShowMessage(ResourceProvider.GetString("LOCLuduRestSnapshotDeletedSuccessfully"), ResourceProvider.GetString("LOCLuduRestSuccess"));
                 }
