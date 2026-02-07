@@ -76,16 +76,16 @@ Modul Include : niciun joc nu este salvat. Jocurile pot avea eticheta include ad
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Creați o copie de rezervă atunci când jocul este dezinstalat</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Executabil restic găsit și verificat.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Nu s-a putut detecta automat restul. Vă rugăm să specificați calea manual.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Executabilul Ludusavi a fost găsit și verificat.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ ludusavi, nu a putut fi detectat automat. Vă rugăm să specificați calea manual.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Vă rugăm să specificați calea către restabilire executabilului.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Executabilitatea de restic este validă.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">&lt;unk&gt; Executabil restic invalid sau inaccesibil.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Vă rugăm să specificați calea către executabilul ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Executabilul Ludusavi este valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">…………Ludusavi executabil nevalid sau inaccesibil.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Da</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">Nr</sys:String>
 
@@ -200,11 +200,11 @@ Aceasta pare să fie prima dată când folosiți extensia sau configurația dvs.
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Păstrați instantaneu anual timp de N ani:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Păstrați un instantaneu pe an pentru atâția ani</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exemplu cu setările implicite:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Păstrați ultimele 10 instantanee
-• Plus 1 instantaneu pe zi timp de 7 zile
-• Plus 1 instantaneu pe săptămână timp de 4 săptămâni
-• Plus 1 instantaneu pe lună timp de 12 luni
-• Plus 1 instantaneu pe an timp de 5 ani</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Rezultate de printare</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Informații sumare vor apărea aici</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Instantanee șterse</sys:String>
@@ -284,11 +284,11 @@ Alegeți Da pentru a utiliza folderul sugerat, Nu poți alege altul sau anula pe
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Vă rugăm să specificați calea către restabilire executabilului.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Executabilitatea de restic este validă.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">&lt;unk&gt; Executabil restic invalid sau inaccesibil.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Vă rugăm să specificați calea către executabilul ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Executabilul Ludusavi este valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">…………Ludusavi executabil nevalid sau inaccesibil.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Eroare de validare</sys:String>
