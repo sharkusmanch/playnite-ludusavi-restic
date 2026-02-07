@@ -75,6 +75,15 @@ Inkluder-tilstand: Ingen spil er sikkerhedskopieret. Spil kan have inkluderet ta
 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Opret gem backup, når spillet er afinstalleret</sys:String>
 
+    <!-- Notification settings -->
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
