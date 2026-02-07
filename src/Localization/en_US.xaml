@@ -76,16 +76,16 @@ Include Mode: No games are backed up. Games can have the include tag added to be
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Create save backup when game is uninstalled</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Restic executable found and verified.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ Could not automatically detect restic. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi executable found and verified.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Please specify the path to restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ Invalid restic executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Please specify the path to ludusavi executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ Invalid ludusavi executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Yes</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">No</sys:String>
 
@@ -200,7 +200,7 @@ This appears to be your first time using the extension or your configuration is 
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Keep yearly snapshots for N years:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Keep one snapshot per year for this many years</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Example with default settings:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
 • Plus 1 snapshot per day for 7 days
 • Plus 1 snapshot per week for 4 weeks
 • Plus 1 snapshot per month for 12 months
@@ -284,11 +284,11 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Please specify the path to restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ Invalid restic executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Please specify the path to ludusavi executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ Invalid ludusavi executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Validation Error</sys:String>
