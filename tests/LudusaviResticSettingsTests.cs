@@ -35,6 +35,8 @@ namespace LudusaviRestic.Tests
             Assert.Equal(5, settings.KeepYearly);
             Assert.NotNull(settings.GameIntervalOverrides);
             Assert.Empty(settings.GameIntervalOverrides);
+            Assert.Equal(NotificationLevel.Summary, settings.NotificationLevel);
+            Assert.True(settings.NotifyOnManualBackup);
         }
 
         [Fact]
@@ -77,6 +79,30 @@ namespace LudusaviRestic.Tests
             Assert.Contains("AdditionalTagging", fired);
             Assert.Contains("BackupWhenGameStopped", fired);
             Assert.Contains("BackupOnUninstall", fired);
+        }
+
+        [Fact]
+        public void PropertyChanged_FiresForNotificationLevel()
+        {
+            var settings = new LudusaviResticSettings();
+            var fired = new List<string>();
+            settings.PropertyChanged += (s, e) => fired.Add(e.PropertyName);
+
+            settings.NotificationLevel = NotificationLevel.Verbose;
+
+            Assert.Contains("NotificationLevel", fired);
+        }
+
+        [Fact]
+        public void PropertyChanged_FiresForNotifyOnManualBackup()
+        {
+            var settings = new LudusaviResticSettings();
+            var fired = new List<string>();
+            settings.PropertyChanged += (s, e) => fired.Add(e.PropertyName);
+
+            settings.NotifyOnManualBackup = false;
+
+            Assert.Contains("NotifyOnManualBackup", fired);
         }
 
         [Fact]
@@ -306,6 +332,48 @@ namespace LudusaviRestic.Tests
             var found = settings.FindOverrideByGameName("my game");
 
             Assert.NotNull(found);
+        }
+
+        // --- NotificationLevel serialization ---
+
+        [Fact]
+        public void NotificationLevel_SerializationRoundTrip()
+        {
+            var settings = new LudusaviResticSettings();
+            settings.NotificationLevel = NotificationLevel.ErrorsOnly;
+            settings.NotifyOnManualBackup = false;
+
+            var json = JsonConvert.SerializeObject(settings);
+            var deserialized = JsonConvert.DeserializeObject<LudusaviResticSettings>(json);
+
+            Assert.Equal(NotificationLevel.ErrorsOnly, deserialized.NotificationLevel);
+            Assert.False(deserialized.NotifyOnManualBackup);
+        }
+
+        [Fact]
+        public void NotificationLevel_SerializationRoundTrip_Verbose()
+        {
+            var settings = new LudusaviResticSettings();
+            settings.NotificationLevel = NotificationLevel.Verbose;
+            settings.NotifyOnManualBackup = true;
+
+            var json = JsonConvert.SerializeObject(settings);
+            var deserialized = JsonConvert.DeserializeObject<LudusaviResticSettings>(json);
+
+            Assert.Equal(NotificationLevel.Verbose, deserialized.NotificationLevel);
+            Assert.True(deserialized.NotifyOnManualBackup);
+        }
+
+        [Fact]
+        public void BackwardCompat_OldJsonWithoutNotificationFields_DeserializesToDefaults()
+        {
+            // Simulate old JSON without notification settings
+            string json = @"{""LudusaviExecutablePath"":""ludusavi"",""ResticExecutablePath"":""restic""}";
+
+            var deserialized = JsonConvert.DeserializeObject<LudusaviResticSettings>(json);
+
+            Assert.Equal(NotificationLevel.Summary, deserialized.NotificationLevel);
+            Assert.True(deserialized.NotifyOnManualBackup);
         }
     }
 }

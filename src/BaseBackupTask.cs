@@ -8,6 +8,8 @@ using System.Threading;
 
 namespace LudusaviRestic
 {
+    internal enum SnapshotResult { Success, Failed, PartialFailure, Error }
+
     public abstract class BaseBackupTask
     {
         protected static readonly ILogger logger = LogManager.GetLogger();
@@ -107,7 +109,7 @@ namespace LudusaviRestic
             return listfile;
         }
 
-        protected static void CreateSnapshot(IList<string> files, BackupContext context, string game, IList<string> extraTags)
+        internal static SnapshotResult CreateSnapshot(IList<string> files, BackupContext context, string game, IList<string> extraTags)
         {
             string listfile = WriteFilesToTempFile(files);
             string tags = ConstructTags(game, extraTags);
@@ -122,45 +124,47 @@ namespace LudusaviRestic
             catch (Exception e)
             {
                 logger.Debug(e, "Encountered error executing restic");
-                return;
+                return SnapshotResult.Error;
             }
 
             switch (process.ExitCode)
             {
                 case 1:
                     logger.Error($"Failed to create restic game saves snapshot {game}");
-                    SendErrorNotification($"Failed to create restic game saves snapshot {game}", context);
-                    break;
+                    return SnapshotResult.Failed;
                 case 3:
                     logger.Error($"Restic failed to read some game save files for {game}");
-                    SendErrorNotification($"Restic failed to read some game save files for {game}", context);
-                    break;
+                    return SnapshotResult.PartialFailure;
                 default:
-                    SendInfoNotification($"Successfully created game data snapshot for {game}", context);
                     // Delete file list on success
                     System.IO.File.Delete(listfile);
-                    break;
+                    return SnapshotResult.Success;
             }
         }
 
-        protected static void CreateSnapshot(IList<string> files, BackupContext context, Game game, IList<string> extraTags)
+        internal static SnapshotResult CreateSnapshot(IList<string> files, BackupContext context, Game game, IList<string> extraTags)
         {
-            CreateSnapshot(files, context, game.Name, extraTags);
+            return CreateSnapshot(files, context, game.Name, extraTags);
         }
 
-        protected static void SendNotification(string message, NotificationType type, BackupContext context)
+        protected static void SendNotification(string message, NotificationType type, BackupContext context, string notificationId = null)
         {
-            context.API.Notifications.Add(new NotificationMessage(context.NotificationID, message, type));
+            string id = notificationId ?? context.NotificationID;
+            context.API.Notifications.Add(new NotificationMessage(id, message, type));
         }
 
-        protected static void SendErrorNotification(string message, BackupContext context)
+        protected static void SendErrorNotification(string message, BackupContext context, string notificationId = null)
         {
-            SendNotification(message, NotificationType.Error, context);
+            // Errors always notify regardless of notification level
+            SendNotification(message, NotificationType.Error, context, notificationId);
         }
 
-        protected static void SendInfoNotification(string message, BackupContext context)
+        protected static void SendInfoNotification(string message, BackupContext context, string notificationId = null)
         {
-            SendNotification(message, NotificationType.Info, context);
+            if (context.Settings.NotificationLevel == NotificationLevel.Verbose)
+            {
+                SendNotification(message, NotificationType.Info, context, notificationId);
+            }
         }
     }
 }

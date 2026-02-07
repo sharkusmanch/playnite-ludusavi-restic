@@ -5,7 +5,7 @@ namespace LudusaviRestic
 {
     public class BackupContext
     {
-        public readonly string NotificationID = "Lususavi Restic";
+        public readonly string NotificationID = "LudusaviRestic";
         private IPlayniteAPI api;
         private LudusaviResticSettings settings;
 
@@ -17,6 +17,11 @@ namespace LudusaviRestic
             this.api = api;
             this.settings = settings;
             ApplyEnvironment();
+        }
+
+        public string UniqueNotificationID(string suffix)
+        {
+            return $"LudusaviRestic_{suffix}";
         }
 
         public void ApplyEnvironment()

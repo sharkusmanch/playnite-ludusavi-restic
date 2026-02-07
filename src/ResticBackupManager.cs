@@ -30,7 +30,7 @@ namespace LudusaviRestic
 
         public void PerformBackup(Game game)
         {
-            PerformBackup(game, new List<string>());
+            PerformBackup(game, new List<string>(), false);
         }
 
         internal static bool GameHasTag(Game game, Guid tagId)
@@ -61,7 +61,7 @@ namespace LudusaviRestic
             return tags;
         }
 
-        public void PerformBackup(Game game, IList<string> extraTags)
+        public void PerformBackup(Game game, IList<string> extraTags, bool isManual = false)
         {
             logger.Debug($"Backup #{game.Name}");
             LudusaviResticSettings settings = this.context.Settings;
@@ -72,7 +72,7 @@ namespace LudusaviRestic
                 return;
             }
 
-            BackupGameTask task = new BackupGameTask(game, this.semaphore, this.context, extraTags);
+            BackupGameTask task = new BackupGameTask(game, this.semaphore, this.context, extraTags, isManual);
             task.Run();
         }
 
@@ -112,7 +112,7 @@ namespace LudusaviRestic
             }
             foreach (var game in games)
             {
-                PerformBackup(game, tags);
+                PerformBackup(game, tags, true);
             }
         }
 

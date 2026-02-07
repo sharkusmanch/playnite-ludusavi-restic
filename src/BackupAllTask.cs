@@ -1,6 +1,7 @@
 using Playnite.SDK;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json.Linq;
 using System.Threading;
 
@@ -69,6 +70,11 @@ namespace LudusaviRestic
 
                 activateGlobalProgress.ProgressMaxValue = allFiles.Count;
 
+                int succeeded = 0;
+                int failed = 0;
+                int partial = 0;
+                var failedGames = new List<string>();
+
                 foreach (var entry in allFiles)
                 {
                     activateGlobalProgress.Text = $"{backupText} - {activateGlobalProgress.CurrentProgressValue + 1} of {allFiles.Count}";
@@ -78,9 +84,51 @@ namespace LudusaviRestic
                         break;
                     }
 
-                    CreateSnapshot(entry.Value, context, entry.Key, extraTags);
+                    var result = CreateSnapshot(entry.Value, context, entry.Key, extraTags);
+
+                    switch (result)
+                    {
+                        case SnapshotResult.Success:
+                            succeeded++;
+                            break;
+                        case SnapshotResult.Failed:
+                        case SnapshotResult.Error:
+                            failed++;
+                            failedGames.Add(entry.Key);
+                            break;
+                        case SnapshotResult.PartialFailure:
+                            partial++;
+                            failedGames.Add(entry.Key);
+                            break;
+                    }
 
                     activateGlobalProgress.CurrentProgressValue++;
+                }
+
+                int total = succeeded + failed + partial;
+                var level = context.Settings.NotificationLevel;
+                string notifId = context.UniqueNotificationID("backup_all");
+
+                if (failed > 0 || partial > 0)
+                {
+                    string failedList = failedGames.Count <= 5
+                        ? string.Join(", ", failedGames)
+                        : string.Join(", ", failedGames.Take(5)) + $" and {failedGames.Count - 5} more";
+
+                    string message = string.Format(
+                        ResourceProvider.GetString("LOCLuduRestBackupAllSummaryFailures"),
+                        succeeded, total, failed + partial, failedList);
+
+                    // Errors always notify regardless of level
+                    SendNotification(message, NotificationType.Error, context, notifId);
+                }
+                else if (level == NotificationLevel.Summary || level == NotificationLevel.Verbose)
+                {
+                    string message = string.Format(
+                        ResourceProvider.GetString("LOCLuduRestBackupAllSummarySuccess"),
+                        succeeded, total);
+
+                    SendNotification(message, NotificationType.Info, context, notifId);
                 }
             }, globalProgressOptions);
         }
