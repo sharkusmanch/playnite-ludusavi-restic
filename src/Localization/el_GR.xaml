@@ -76,16 +76,16 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Δημιουργία αντιγράφου ασφαλείας όταν το παιχνίδι απεγκατασταθεί</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Βρέθηκε και επαληθεύθηκε το Restic εκτελέσιμο.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Δεν ήταν δυνατή η αυτόματη ανίχνευση της αντίστασης. Παρακαλώ καθορίστε τη διαδρομή χειροκίνητα.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Βρέθηκαν και επαληθεύτηκαν εκτελέσιμα Ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ Δεν ήταν δυνατή η αυτόματη ανίχνευση του ludusavi. Παρακαλώ καθορίστε τη διαδρομή χειροκίνητα.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Παρακαλώ καθορίστε τη διαδρομή για το εκτελέσιμο restice.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Το Restic executable είναι έγκυρο.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">«Μη έγκυρο εκτελέσιμο restic ή μη προσιτό.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Παρακαλώ καθορίστε τη διαδρομή για το εκτελέσιμο ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Το εκτελέσιμο Ludusavi είναι έγκυρο.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">◆ Μη έγκυρο εκτελέσιμο ludusavi ή μη προσβάσιμο.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Ναι</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">Όχι</sys:String>
 
@@ -200,11 +200,11 @@
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Κρατήστε ετήσια στιγμιότυπα για τα έτη Ν:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Κρατήστε ένα στιγμιότυπο το χρόνο για πολλά χρόνια</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Παράδειγμα με προεπιλεγμένες ρυθμίσεις:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Κρατήστε τα τελευταία 10 στιγμιότυπα
-• Συν 1 στιγμιότυπο την ημέρα για 7 ημέρες
-• Συν 1 στιγμιότυπο την εβδομάδα για 4 εβδομάδες
-• Συν 1 στιγμιότυπο ανά μήνα για 12 μήνες
-• Συν 1 στιγμιότυπο ανά έτος για 5 χρόνια</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Αποτελέσματα Κλάδεσης</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Οι συνοπτικές πληροφορίες θα εμφανιστούν εδώ</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Διαγραμμένα Στιγμιότυπα</sys:String>
@@ -284,11 +284,11 @@
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Παρακαλώ καθορίστε τη διαδρομή για το εκτελέσιμο restice.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Το Restic executable είναι έγκυρο.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">«Μη έγκυρο εκτελέσιμο restic ή μη προσιτό.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Παρακαλώ καθορίστε τη διαδρομή για το εκτελέσιμο ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Το εκτελέσιμο Ludusavi είναι έγκυρο.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">◆ Μη έγκυρο εκτελέσιμο ludusavi ή μη προσβάσιμο.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Σφάλμα Επικύρωσης</sys:String>
