@@ -76,16 +76,16 @@ Zahrnout režim: Žádné hry nejsou zálohovány. Hry mohou mít přidaný tag 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Vytvořit zálohu uložení, pokud je hra odinstalována</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Spustitelný soubor byl nalezen a ověřen.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Nelze automaticky rozpoznat obnovu. Zadejte cestu ručně.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi spustitelný soubor nalezen a ověřen.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ Nelze automaticky rozpoznat ludusavi. Zadejte cestu ručně.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Zadejte cestu k restic spustitelnosti.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Spouštěč reklam je platný.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">&lt;unk&gt; Neplatný restic spustitelný nebo nedostupný.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Zadejte cestu k ludusavi spustitelnosti.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi spustitelný soubor je platný.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">&lt;unk&gt; Neplatný spustitelný soubor ludusavi nebo není přístupný.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Ano</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">Ne</sys:String>
 
@@ -200,11 +200,11 @@ Zdá se, že jste poprvé použili rozšíření, nebo je vaše konfigurace neú
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Uchovávejte roční snímky po dobu N let:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Udržujte jeden snímek za rok na mnoho let</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Příklad s výchozím nastavením:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Udržujte posledních 10 snímků
-• Plus 1 snímek za den po 7 dní
-• Plus 1 snímek týdně po dobu 4 týdnů
-• Plus 1 snímek za měsíc na 12 měsíců
-• Plus 1 snímek za rok na 5 let</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Výsledky prasknutí</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Zde se zobrazí shrnutí informací</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Snímky odstraněny</sys:String>
@@ -284,11 +284,11 @@ Vyberte Ano pro použití navrhované složky, Ne vybrat jinou, nebo zrušit zru
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Zadejte cestu k restic spustitelnosti.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Spouštěč reklam je platný.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">&lt;unk&gt; Neplatný restic spustitelný nebo nedostupný.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Zadejte cestu k ludusavi spustitelnosti.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi spustitelný soubor je platný.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">&lt;unk&gt; Neplatný spustitelný soubor ludusavi nebo není přístupný.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Chyba ověření</sys:String>
