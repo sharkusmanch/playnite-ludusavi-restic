@@ -1,57 +1,57 @@
 ﻿<?xml version="1.0"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Sauvegarder en cours de jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupDuringGameplay">Sauvegarde pendant le jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Sauvegarder à l’arrêt du jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">Sauvegarde lorsque le jeu est arrêté</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Solliciter une étiquette de sauvegarde à l’arrêt du jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Demander un tag de sauvegarde lorsque le jeu est arrêté</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Étiquette de sauvegarde du jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Balise de sauvegarde du jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Saisissez l’étiquette de sauvegarde pour</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Entrez la balise de sauvegarde pour</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervalle de sauvegarde en cours de jeu (en minutes)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervalle de sauvegarde de la sauvegarde de la Gameplay (minutes)</sys:String>
 
     <sys:String x:Key="LOCLuduRestBrowse">Parcourir</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Chemin d’accès au dépôt Restic</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Chemin du dépôt Restic</sys:String>
 
     <sys:String x:Key="LOCLuduRestRepoPass">Mot de passe du dépôt Restic</sys:String>
     <sys:String x:Key="LOCLuduRestShow">Afficher</sys:String>
-    <sys:String x:Key="LOCLuduRestHide">Masquer</sys:String>
+    <sys:String x:Key="LOCLuduRestHide">Cacher</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Configuration Rclone</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Configuration du Rclone</sys:String>
 
     <sys:String x:Key="LOCLuduRestRcloneConfPass">Mot de passe de configuration Rclone</sys:String>
 
     <sys:String x:Key="LOCLuduRestVerify">Vérifier</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Chemin d’accès à l’exécutable Restic</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Chemin de l'exécutable voluptueux</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Chemin d’accès à l’exécutable Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Chemin de l'exécutable de Ludusavi</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">Sauvegarde</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabRepo">Dépôt</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">Ajouter des étiquettes supplémentaires aux sauvegardes en fonction des circonstances</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">Ajouter des tags additionnels aux snapshots pour différencier les événements</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupManualTag">Étiquette de sauvegarde manuelle</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupManualTag">Balise de sauvegarde manuelle</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Étiquette de sauvegarde à l’arrêt du jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">Balise de sauvegarde arrêtée par le jeu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Étiquette de sauvegarde en cours de jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Balise de sauvegarde de la Gameplay</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">Créer une copie des fichiers de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">Créer un snapshot de sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Ajouter l’étiquette d’inclusion au système de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">Ajouter une balise de sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Retirer l’étiquette d’inclusion au système de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">Supprimer le tag d'inclusion de sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Ajouter l’étiquette d’exclusion du système de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">Ajouter une balise d'exclusion de sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Retirer l’étiquette d’exclusion du système de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">Supprimer la balise d'exclusion de sauvegarde</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
@@ -61,19 +61,19 @@
 
     <sys:String x:Key="LOCLuduRestBackupMode">Mode de sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Mode d’exclusion : Tous les jeux sont sauvegardés par défaut. Vous pouvez ajouter une étiquette d’exclusion aux jeux que vous ne souhaitez pas sauvegarder.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Mode Exclusion : Tous les jeux sont inclus dans la sauvegarde par défaut. Il est possible d'ajouter une étiquette d'exclusion à un jeu pour l'empêcher d'être sauvegardé.
 
-Mode d’inclusion : Aucun jeu n’est sauvegardé par défaut. Vous pouvez ajouter une étiquette d’inclusion aux jeux que vous souhaitez sauvegarder.</sys:String>
+Mode Inclusion : Aucun jeu n'est sauvegardé. Il est possible d'ajouter une étiquette d'inclusion à un jeu pour l'inclure dans la sauvegarde.</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Mode d’exclusion</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeMode">Mode Exclure</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Mode d’inclusion</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeMode">Inclure le mode</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Sauvegarder</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Inclure la sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Ne pas sauvegarder</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Exclure la sauvegarde</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Créer une copie des fichiers de sauvegarde lors de la désinstallation du jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">Créer une sauvegarde lorsque le jeu est désinstallé</sys:String>
 
     <!-- Notification settings -->
     <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
@@ -85,245 +85,245 @@ Mode d’inclusion : Aucun jeu n’est sauvegardé par défaut. Vous pouvez ajo
     <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Impossible de détecter Restic automatiquement. Veuillez indiquer le chemin d’accès manuellement.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Impossible de détecter Ludusavi automatiquement. Veuillez indiquer le chemin d’accès manuellement.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticRequired">Veuillez indiquer le chemin d’accès à l’exécutable Restic.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Veuillez indiquer le chemin d’accès à l’exécutable Ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Fichier exécutable Restic trouvé et vérifié.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Impossible de détecter automatiquement restic. Veuillez indiquer le chemin manuellement.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Fichier exécutable Ludusavi trouvé et vérifié.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Impossible de détecter automatiquement ludusavi. Veuillez indiquer le chemin manuellement.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticRequired">Veuillez spécifier le chemin vers l'exécutable resticy.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Le fichier exécutable Restic est valide.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Exécutable restic invalide ou inaccessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Veuillez spécifier le chemin de l'exécutable ludusavi.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Le fichier exécutable Ludusavi est valide.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Exécutable ludusavi invalide ou inaccessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Oui</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">Non</sys:String>
 
     <!-- Game Menu Items -->
-    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Afficher les copies des fichiers de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Voir les instantanés de sauvegarde</sys:String>
 
     <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">La détection automatique a réussi</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">La détection automatique a échoué</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">L’exécutable Ludusavi a été détecté sous : {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Impossible de détecter l’exécutable Ludusavi automatiquement. Veuillez indiquer le chemin d’accès manuellement.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">L’exécutable Restic a été détecté sous : {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Impossible de détecter l’exécutable Restic automatiquement. Veuillez indiquer le chemin d’accès manuellement.</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Détection automatique réussie</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Échec de la détection automatique</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviDetected">L'exécutable Ludusavi a été détecté à: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Impossible de détecter automatiquement l'exécutable ludusavi. Veuillez spécifier le chemin manuellement.</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">Exécutable volumineux détecté à: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticNotDetected">Impossible de détecter automatiquement l'exécutable resticy. Veuillez spécifier le chemin manuellement.</sys:String>
 
     <!-- Settings verification -->
-    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Vérification des paramètres de Ludusavi Restic :</sys:String>
-    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">Restic — connexion au dépôt réussie</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">Ludusavi — vérification réussie</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">La détection automatique a réussi</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">La détection automatique a échoué</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">L’exécutable Ludusavi a été détecté sous : {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Impossible de détecter l’exécutable Ludusavi automatiquement. Veuillez indiquer le chemin d’accès manuellement.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticDetected">L’exécutable Restic a été détecté sous : {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Impossible de détecter l’exécutable Restic automatiquement. Veuillez indiquer le chemin d’accès manuellement.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">La vérification des paramètres de Ludusavi Restic a échoué : {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingRestic">Vérification de la connexion au dépôt Restic…</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Vérification de l’exécutable Ludusavi…</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Vérification des paramètres de Ludusavi Restic :</sys:String>
+    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - connexion au dépôt réussie</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - vérification réussie</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Détection automatique réussie</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Échec de la détection automatique</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">L'exécutable Ludusavi a été détecté à: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Impossible de détecter automatiquement l'exécutable ludusavi. Veuillez spécifier le chemin manuellement.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Exécutable volumineux détecté à: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Impossible de détecter automatiquement l'exécutable resticy. Veuillez spécifier le chemin manuellement.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Échec de la vérification des paramètres Restic de Ludusavi : {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">Vérification de la connexion restic du référentiel...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Vérification de l'exécutable ludusavi...</sys:String>
 
     <!-- Maintenance operation strings -->
-    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Maintenance effectuée</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">La maintenance complète s’est terminée avec succès.</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Maintenance terminée</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">La maintenance complète s'est terminée avec succès.</sys:String>
     <sys:String x:Key="LOCLuduRestVerificationComplete">Vérification terminée</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">La vérification du dépôt s’est terminée avec succès.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Règles de conservation désactivées</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Les règles de conservation sont désactivées. Veuillez les activer dans les paramètres de l’extension afin d’utiliser cette fonctionnalité.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Règles de conservation appliquées</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Les règles de conservation ont été appliquées avec succès. Les anciennes copies ont été supprimées.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Nettoyage terminé</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">L’opération de nettoyage s’est terminée avec succès.</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Vérification du dépôt terminée avec succès.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Politique de rétention désactivée</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">La politique de rétention est désactivée. Veuillez l'activer dans les paramètres de l'extension pour utiliser cette fonctionnalité.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Politique de rétention terminée</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Politique de rétention appliquée avec succès. Les anciens instantanés ont été supprimés.</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Opération de suppression terminée avec succès.</sys:String>
 
     <!-- Dialog prompts -->
-    <sys:String x:Key="LOCLuduRestFullMaintenance">Maintenance complète</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Voulez-vous d’abord effectuer une simulation pour prévisualiser les données qui seront nettoyées ?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicy">Règles de conservation</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Voulez-vous d’abord effectuer une simulation pour prévisualiser les copies qui seront supprimées ?</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Nettoyer</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Voulez-vous d’abord effectuer une simulation pour prévisualiser les données qui seront nettoyées ?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithPruning">Procéder au nettoyage ?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Simulation terminée. {0} copies seront nettoyées. Voulez-vous procéder au nettoyage ?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Simulation terminée. {0} copies seront supprimées Voulez-vous appliquer les règles de conservation ?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithRetention">Appliquer les règles de conservation ?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Les anciennes copies seront supprimées conformément à vos règles de conservation :
+    <sys:String x:Key="LOCLuduRestFullMaintenance">Entretien complet</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Voulez-vous d'abord effectuer un run sec pour voir ce qui serait taillé avant de supprimer les données ?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicy">Politique de rétention</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Voulez-vous d'abord faire un run sec pour voir ce qui serait supprimé avant de supprimer des instantanés ?</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">Nettoyage</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Voulez-vous d'abord effectuer un run sec pour voir ce qui serait taillé avant de supprimer les données ?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithPruning">Poursuivre avec Pruning ?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Course à sec terminée. Les instantanés {0} seront supprimés. Voulez-vous procéder à la taille réelle ?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Séchage terminé. Les instantanés {0} seront supprimés. Voulez-vous poursuivre l'application de la politique de rétention ?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithRetention">Procéder à la politique de rétention ?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Cette opération supprimera les anciens instantanés conformément à votre politique de rétention :
 
-• Conserver les {0} dernières copies
-• Conserver les copies quotidiennes pendant {1} jours
-• Conserver les copies hebdomadaires pendant {2} semaines
-• Conserver les copies mensuelles pendant {3} mois
-• Conserver les copies annuelles pendant {4} ans
+• Conserver les {0} derniers instantanés
+• Conserver les instantanés quotidiens pendant {1} jours
+• Conserver les instantanés hebdomadaires pendant {2} semaines
+• Conserver les instantanés mensuels pendant {3} mois
+• Conserver les instantanés annuels pendant {4} ans
 
-Voulez-vous d’abord effectuer une simulation pour prévisualiser ce qui sera supprimé ?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Prévisualisation terminée. {0} copies seront supprimées conformément aux règles de conservation. Voulez-vous procéder à la suppression ?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Effectuer la suppression ?</sys:String>
+Souhaitez-vous effectuer une simulation au préalable pour voir ce qui serait supprimé ?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Aperçu terminé. Les instantanés {0} seront supprimés selon la politique de rétention. Voulez-vous continuer la suppression?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Procéder à la suppression ?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">Nettoyer le dépôt</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Le nettoyage supprimera les blocs de données inutilisés du dépôt. Cette opération est irréversible.
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">L'élagage supprimera les blocs de données inutilisés du référentiel. Cette opération est irréversible.
 
-Voulez-vous d’abord effectuer une simulation pour prévisualiser les données qui seront supprimées ?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Simulation terminée. Cette opération va supprimer les données inutilisées du dépôt. Voulez-vous procéder au nettoyage ?</sys:String>
+Souhaitez-vous effectuer une simulation au préalable pour visualiser les données qui seraient supprimées ?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Séchage terminé. Cette opération supprimera les données inutilisées du référentiel. Voulez-vous procéder à l'épuration réelle ?</sys:String>
 
     <!-- Welcome and setup -->
-    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Bienvenue — Configuration requise</sys:String>
-    <sys:String x:Key="LOCLuduRestWelcomeMessage">Bienvenue sur Ludusavi Restic !
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - Configuration requise</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeMessage">Bienvenue sur Ludusavi Restic!
 
-Cela semble être la première fois que vous utilisez l’extension, ou bien votre configuration est incomplète. Voulez-vous exécuter l’assistant de configuration pour configurer votre dépôt de sauvegarde ?</sys:String>
+Cela semble être votre première utilisation de l'extension ou votre configuration est incomplète. Voulez-vous exécuter l'assistant d'installation pour configurer votre dépôt de sauvegarde?</sys:String>
     <sys:String x:Key="LOCLuduRestConfigurationRequired">Configuration requise</sys:String>
-    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic n’est pas encore configuré. Désirez-vous exécuter l’assistant de configuration ?</sys:String>
+    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic n'est pas encore configuré. Voulez-vous exécuter l'assistant d'installation ?</sys:String>
     <sys:String x:Key="LOCLuduRestInvalidConfiguration">Configuration non valide</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticMessage">L’exécutable Restic configuré n’est pas valide ou n’est pas accessible. Désirez-vous exécuter l’assistant de configuration pour résoudre ce problème ?</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupComplete">Configuration terminée</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">La configuration est terminée ! Vous pouvez désormais utiliser toutes les fonctionnalités de sauvegarde.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticMessage">L'exécutable restic configuré n'est pas valide ou accessible. Voulez-vous exécuter l'assistant d'installation pour corriger cela ?</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupComplete">Installation terminée</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Installation terminée avec succès ! Vous pouvez maintenant utiliser toutes les fonctionnalités de sauvegarde.</sys:String>
 
     <!-- Backup browser -->
-    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Suppression de la copie des fichiers de sauvegarde</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Voulez-vous vraiment supprimer la copie {0} du {1} ?</sys:String>
-    <sys:String x:Key="LOCLuduRestSuccess">Opération réussie</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">La copie a été supprimée avec succès.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restaurer la dernière copie</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Aucune copie n’a été trouvée pour ce jeu.</sys:String>
-    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restaurer la copie {0} pour {1} vers le dossier :\n{2}\n\nCertains fichiers existants risquent d’être écrasés. Continuer ?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restaurer la copie</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restauration de la copie…</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompleted">La copie a été restaurée avec succès.</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Supprimer la sauvegarde instantanée</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Êtes-vous sûr de vouloir supprimer l'instantané {0} de {1}?</sys:String>
+    <sys:String x:Key="LOCLuduRestSuccess">Succès</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Instantané supprimé avec succès.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restaurer le dernier instantané</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Pas de snapshots trouvés pour ce jeu.</sys:String>
+    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restaurer la capture d’instantané {0} pour {1} dans le dossier :\n{2}\n\nLes fichiers existants peuvent être écrasés. Continuer ?</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restauration de l'instantané...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompleted">Instantané restauré avec succès.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Rafraîchir</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreSelected">Restaurer la sélection</sys:String>
     <sys:String x:Key="LOCLuduRestDeleteSelected">Supprimer la sélection</sys:String>
-    <sys:String x:Key="LOCLuduRestFilterByGame">Filtrer par jeu :</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">ID de copie</sys:String>
+    <sys:String x:Key="LOCLuduRestFilterByGame">Filtrer par Jeu:</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">ID de la capture instantanée</sys:String>
     <sys:String x:Key="LOCLuduRestDateHeader">Date</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsHeader">Étiquettes</sys:String>
-    <sys:String x:Key="LOCLuduRestTotalSnapshots">Nombre total de copies</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetect">Détection auto</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Règles de conservation</sys:String>
-    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Activer les règles de conservation automatiques</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">Une fois activées, ces règles s’appliqueront lors des opérations de maintenance afin de supprimer automatiquement les anciennes copies.</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastLabel">Conserver les N dernières copies :</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastHelp">Conserve les copies les plus récentes, quel que soit leur âge</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Conserver les copies quotidiennes pendant N jours :</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Conserve une copie par jour pendant ce nombre de jours</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Conserver les copies hebdomadaires pendant N semaines :</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Conserve une copie par semaine pendant ce nombre de semaines</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Conserver les copies mensuelles pendant N mois :</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Conserve une copie par mois pendant ce nombre de mois</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Conserver les copies annuelles pendant N années :</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Conserve une copie par an pendant ce nombre d’années</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exemple avec les paramètres par défaut :</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
-• Plus 1 snapshot per day for 7 days
-• Plus 1 snapshot per week for 4 weeks
-• Plus 1 snapshot per month for 12 months
-• Plus 1 snapshot per year for 5 years</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Résultats du nettoyage</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">La synthèse des données apparaîtra ici</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Copies supprimées</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesAffected">Jeux concernés</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsHeader">Tags</sys:String>
+    <sys:String x:Key="LOCLuduRestTotalSnapshots">Nombre total de snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetect">Détection automatique</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Politique de rétention</sys:String>
+    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Activer la politique de rétention automatique</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">Lorsque cette option est activée, ces règles seront appliquées pendant les opérations de maintenance pour supprimer automatiquement les anciens snapshots.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastLabel">Garder les derniers N instantanés :</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastHelp">Garder les instantanés les plus récents quel que soit l'âge</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Garder les instantanés quotidiens pendant N jours:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Garder un snapshot par jour pendant autant de jours</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Garder des instantanés hebdomadaires pendant N semaines:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Garder un instantané par semaine pour ces semaines</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Garder des instantanés mensuels pendant N mois :</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Garder un instantané par mois pour ce nombre de mois</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Garder des instantanés annuels pendant N ans :</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Garder un instantané par an pendant autant d'années</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exemple avec les paramètres par défaut :</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Conserver les 10 derniers instantanés
+• Plus 1 instantané par jour pendant 7 jours
+• Plus 1 instantané par semaine pendant 4 semaines
+• Plus 1 instantané par mois pendant 12 mois
+• Plus 1 instantané par an pendant 5 ans</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Résultats d'agrandissement</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Des informations sommaires apparaîtront ici</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Instantanés supprimés</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesAffected">Parties affectées</sys:String>
     <sys:String x:Key="LOCLuduRestDataDeleted">Données supprimées</sys:String>
-    <sys:String x:Key="LOCLuduRestStatus">État</sys:String>
-    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Copies supprimées</sys:String>
-    <sys:String x:Key="LOCLuduRestClearFilter">Réinitialiser le filtre</sys:String>
+    <sys:String x:Key="LOCLuduRestStatus">Statut</sys:String>
+    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Instantanés supprimés</sys:String>
+    <sys:String x:Key="LOCLuduRestClearFilter">Effacer le filtre</sys:String>
     <sys:String x:Key="LOCLuduRestGameHeader">Jeu</sys:String>
-    <sys:String x:Key="LOCLuduRestDateTimeHeader">Date / heure</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Synthèse par jeu</sys:String>
-    <sys:String x:Key="LOCLuduRestGameNameHeader">Nom du jeu</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Synthèse par étiquette</sys:String>
+    <sys:String x:Key="LOCLuduRestDateTimeHeader">Date/Heure</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Résumé des jeux</sys:String>
+    <sys:String x:Key="LOCLuduRestGameNameHeader">Nom de la partie</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Résumé des tags</sys:String>
     <sys:String x:Key="LOCLuduRestTagHeader">Étiquette</sys:String>
     <sys:String x:Key="LOCLuduRestOccurrencesHeader">Occurrences</sys:String>
     <sys:String x:Key="LOCLuduRestRawOutputTab">Sortie brute</sys:String>
     <sys:String x:Key="LOCLuduRestClose">Fermer</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Saisissez une étiquette personnalisée facultative pour cette sauvegarde manuelle (laissez vide pour ne pas en ajouter) :</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Étiquette de sauvegarde manuelle</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreConfirm">Restaurer la copie {0} vers {1} ? Certains fichiers existants risquent d’être écrasés.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restauration de la copie {0}…</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">La copie {0} a été restaurée avec succès.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restauration terminée</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreFailed">Échec de la restauration de la copie : {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreError">Erreur lors de la restauration de la copie : {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestorePreview">La copie {0} (jeu : {1}) contient {2} fichiers.
-Nouveaux fichiers : {3}
-Fichiers existants (qui seront écrasés) : {4}
-Dossier de restauration suggéré : {5}
+    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Entrez une balise personnalisée optionnelle pour cette sauvegarde manuelle (laissez vide pour aucun) :</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Balise de sauvegarde manuelle</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreConfirm">Restaurer la capture {0} à {1}? Cela peut écraser les fichiers existants.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restauration de l'instantané {0}...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Instantané {0} restauré avec succès.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreFailed">Échec de la restauration de la capture instantanée : {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreError">Erreur lors de la restauration de l'instantané : {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestorePreview">L'instantané {0} (jeu: {1}) contient des fichiers {2} .
+Nouveaux fichiers : {3}
+Fichiers existants (seront écrasés) : {4}
+Dossier de restauration suggéré : {5}
 
-Sélectionnez Oui pour utiliser le dossier suggéré, Non pour en choisir un autre, ou Annuler pour abandonner.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(aucun·e)</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Impossible de déterminer l’étiquette correspondant au nom du jeu pour cette copie.</sys:String>
+Choisissez Oui pour utiliser le dossier suggéré, Non pour en choisir un autre, ou Annuler pour annuler.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(aucun)</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Impossible de déterminer le nom du jeu pour cet instantané.</sys:String>
 
     <!-- Game overrides -->
-    <sys:String x:Key="LOCLuduRestTabGameOverrides">Game Overrides</sys:String>
-    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Override the gameplay backup interval and retention policy for specific games. Games not listed use the global defaults. Add overrides from the game right-click menu. Blank retention fields are disabled (0).</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Keep Last</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Keep Daily</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Keep Weekly</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Keep Monthly</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Keep Yearly</sys:String>
-    <sys:String x:Key="LOCLuduRestRemoveOverride">Remove Selected</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupInterval">Set backup interval</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Backup Interval Override</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Enter backup interval in minutes for {0} (current: {1}, global default: {2}). Leave blank to remove override.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Set retention policy</sys:String>
-    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Retention Policy Override</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Set values to override the global retention policy for this game. Blank fields are disabled (set to 0), so only the values you specify will apply.</sys:String>
-    <sys:String x:Key="LOCLuduRestSave">Save</sys:String>
-    <sys:String x:Key="LOCLuduRestCancel">Cancel</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} game(s) have per-game retention overrides.</sys:String>
-    <sys:String x:Key="LOCLuduRestListingSnapshots">Listing snapshots...</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">No snapshots found in the repository.</sys:String>
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">Remplacements du jeu</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Modifiez l'intervalle de sauvegarde et la politique de conservation des données pour certains jeux. Les jeux non listés utilisent les valeurs par défaut globales. Ajoutez des modifications via le menu contextuel (clic droit) du jeu. Les champs de conservation vides sont désactivés (0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Intervalle (min)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Conserver le dernier</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Gardez quotidiennement</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Gardez-le chaque semaine</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Conserver mensuellement</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Conserver annuellement</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">Supprimer la sélection</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">Définir l'intervalle de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Remplacement de l'intervalle de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Saisissez l'intervalle de sauvegarde en minutes pour {0} (actuel : {1}, valeur par défaut globale : {2}). Laissez vide pour supprimer la modification.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Définir la politique de conservation</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Modification de la politique de rétention</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Définissez des valeurs pour remplacer la politique de rétention globale de ce jeu. Les champs vides sont désactivés (valeur 0) ; seules les valeurs que vous spécifiez seront prises en compte.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Sauvegarder</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Annuler</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} jeu(x) dispose(nt) de paramètres de rétention spécifiques à chaque jeu.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">Liste des instantanés...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Aucun instantané trouvé dans le dépôt.</sys:String>
 
     <!-- Main menu items -->
-    <sys:String x:Key="LOCLuduRestSetupWizard">Assistant de configuration</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupWizard">Assistant d'installation</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Sauvegarder tous les jeux</sys:String>
-    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Parcourir les copies des sauvegardes</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceAll">Complète (vérifier + nettoyer)</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Parcourir les instantanés de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceAll">Tout (vérifier + prune)</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceVerify">Vérifier</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Supprimer les anciennes copies des sauvegardes</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Supprimer les anciens instantanés</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenancePrune">Nettoyer les données inutilisées</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceSection">Maintenance</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceSection">Entretien</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSection">Configuration</sys:String>
 
     <!-- Dialog strings -->
-    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Sélectionnez l’exécutable Restic</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Sélectionnez l’exécutable Ludusavi</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Sélectionnez l’emplacement du dépôt</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Sélectionner Exécutable Restic</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Sélectionner l'exécutable Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Sélectionnez l'emplacement du dépôt</sys:String>
     <sys:String x:Key="LOCLuduRestExecutableFilter">Fichiers exécutables (*.exe)|*.exe|Tous les fichiers (*.*)|*.*</sys:String>
     <sys:String x:Key="LOCLuduRestExecutableFilterShort">Exécutable|*.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Configuration|*.conf</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Exécution de la maintenance complète…</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Vérification du dépôt…</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Exécution de la maintenance complète...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Vérification du dépôt...</sys:String>
 
     <!-- Validation messages -->
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Veuillez indiquer le chemin d’accès à l’exécutable Restic.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Veuillez indiquer le chemin d’accès à l’exécutable Ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Veuillez spécifier le chemin vers l'exécutable resticy.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Le fichier exécutable Restic est valide.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Exécutable restic invalide ou inaccessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Veuillez spécifier le chemin de l'exécutable ludusavi.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Le fichier exécutable Ludusavi est valide.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Exécutable ludusavi invalide ou inaccessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Erreur de validation</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticPath">Veuillez indiquer le chemin d’accès à l’exécutable Restic.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticInvalid">L’exécutable Restic spécifié n’est pas valide ou n’est pas accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Veuillez indiquer le chemin d’accès au dépôt.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Veuillez saisir le mot de passe du dépôt.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticPath">Veuillez spécifier le chemin vers l'exécutable resticy.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticInvalid">L'exécutable restic spécifié n'est pas valide ou accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Veuillez spécifier le chemin du dépôt.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Veuillez entrer un mot de passe du référentiel.</sys:String>
     <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Les mots de passe ne correspondent pas.</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryYes">Oui</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryNo">Non</sys:String>
 
     <!-- Progress and initialization messages -->
-    <sys:String x:Key="LOCLuduRestInitializingRepository">Initialisation du dépôt…</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Application des règles de conservation…</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Prévisualisation de l’application des règles de conservation…</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Application des règles de conservation et nettoyage…</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Vérification de l’intégrité du dépôt…</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Simulation du nettoyage…</sys:String>
-    <sys:String x:Key="LOCLuduRestPruningUnusedData">Nettoyage des données inutilisées…</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Pruning repository...</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Retention policy application failed for one or more games. Check the raw output for details.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">No snapshots would be deleted. All snapshots match the current retention policy.</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Vérification de l’intégrité du dépôt avec vérification des données…</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationFailed">Impossible d’initialiser le dépôt. Veuillez consulter les journaux pour obtenir plus d’informations.</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationError">Erreur lors de l’initialisation</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializingRepository">Initialisation du dépôt...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Application de la politique de rétention...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Exécution de l'aperçu de la politique de rétention...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Application de la politique de rétention et d'épuration en cours...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Vérification de l'intégrité du référentiel...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Course à sec de pruneaux en cours...</sys:String>
+    <sys:String x:Key="LOCLuduRestPruningUnusedData">Nettoyage des données inutilisées...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Élagage du dépôt...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">L'application de la politique de rétention a échoué pour un ou plusieurs jeux. Consultez le rapport brut pour plus de détails.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Aucune capture instantanée ne sera supprimée. Toutes les captures instantanées sont conformes à la politique de conservation actuelle.</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Vérification de l'intégrité du référentiel avec la vérification des données...</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationFailed">Impossible d'initialiser le référentiel. Veuillez vérifier les logs pour plus de détails.</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationError">Erreur d'initialisation</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Erreur de configuration</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupErrorMessage">Une erreur est survenue lors de la configuration : {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupErrorMessage">Une erreur est survenue lors de la configuration : {0}</sys:String>
 
 </ResourceDictionary>

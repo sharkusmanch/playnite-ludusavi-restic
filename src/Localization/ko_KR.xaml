@@ -3,51 +3,51 @@
 
     <sys:String x:Key="LOCLuduRestBackupDuringGameplay">게임 플레이 중 백업</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">게임 중지 시 백업</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupWhenGameStopped">게임이 멈췄을 때 백업</sys:String>
 
-    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">게임이 중지되면 백업 태그를 묻는 메시지 표시</sys:String>
+    <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">게임이 멈췄을 때 백업 태그를 입력하라는 메시지를 표시합니다.</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">게임 백업 태그</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">에 대한 백업 태그 입력</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">백업 태그를 입력하세요</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">게임 플레이 저장 백업 간격(분)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">게임플레이 저장 백업 간격(분)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">검색</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">먹다</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">제한적 저장소 경로</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">레스틱 저장소 경로</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">제한적 저장소 비밀번호</sys:String>
-    <sys:String x:Key="LOCLuduRestShow">Show</sys:String>
-    <sys:String x:Key="LOCLuduRestHide">Hide</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">레스틱 저장소 비밀번호</sys:String>
+    <sys:String x:Key="LOCLuduRestShow">보여주다</sys:String>
+    <sys:String x:Key="LOCLuduRestHide">숨다</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone 구성</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone 설정</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone 구성 비밀번호</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone 설정 비밀번호</sys:String>
 
-    <sys:String x:Key="LOCLuduRestVerify">검증</sys:String>
+    <sys:String x:Key="LOCLuduRestVerify">확인하다</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">제한된 실행 경로</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Restic 실행 경로</sys:String>
 
-    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi 실행 경로</sys:String>
+    <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi 실행 파일 경로</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabBackup">지원</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabRepo">저장소</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupTagDiff">이벤트를 구별하기 위해 스냅샷에 추가 태그 추가</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupTagDiff">이벤트를 구분하기 위해 스냅샷에 추가 태그를 추가하세요.</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupManualTag">수동 백업 태그</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameStopTag">게임 중지 백업 태그</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameStopTag">게임이 중지되었습니다 백업 태그</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">게임 플레이 백업 태그</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">게임플레이 백업 태그</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMCreate">저장 스냅샷 생성</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMCreate">스냅샷을 생성하고 저장합니다.</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGMIncludeAdd">백업 포함 태그 추가</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">백업 포함 태그 제거</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGMIncludeRemove">백업 포함 태그를 제거합니다.</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGMExcludeAdd">백업 제외 태그 추가</sys:String>
 
@@ -55,15 +55,15 @@
 
     <sys:String x:Key="LOCLuduRestBackupGM">루두사비레스틱</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">백업</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPBackingUp">백업 중</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGPProcessing">처리</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGPProcessing">처리 중</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupMode">백업 모드</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">제외 모드: 모든 게임은 기본적으로 백업할 수 있습니다. 게임은 백업을 방지하기 위해 제외 태그를 추가할 수 있습니다.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">제외 모드: 기본적으로 모든 게임이 백업 대상입니다. 백업을 제외하려면 게임에 제외 태그를 추가할 수 있습니다.
 
-포함 모드: 백업된 게임이 없습니다. 게임은 백업에 적합하도록 포함 태그를 추가할 수 있습니다.</sys:String>
+포함 모드: 어떤 게임도 백업되지 않습니다. 백업 대상이 되려면 게임에 포함 태그를 추가할 수 있습니다.</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">제외 모드</sys:String>
 
@@ -73,7 +73,7 @@
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] 백업 제외</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupOnUninstall">게임 제거 시 세이브 백업 생성</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupOnUninstall">게임 삭제 시 저장 파일 백업 생성</sys:String>
 
     <!-- Notification settings -->
     <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
@@ -85,245 +85,245 @@
     <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticRequired">Please specify the path to restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Please specify the path to ludusavi executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryYes">Yes</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryNo">No</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic 실행 파일이 발견되어 검증되었습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">restic을 자동으로 감지할 수 없습니다. 경로를 수동으로 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi 실행 파일이 발견되어 검증되었습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">ludusavi를 자동으로 감지할 수 없습니다. 경로를 수동으로 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticRequired">restic 실행 파일의 경로를 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic 실행 파일이 유효합니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> 유효하지 않은 restic 실행 파일이거나 접근할 수 없습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">ludusavi 실행 파일의 경로를 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi 실행 파일이 유효합니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> ludusavi 실행 파일이 유효하지 않거나 접근할 수 없습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryYes">예</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryNo">아니요</sys:String>
 
     <!-- Game Menu Items -->
-    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">View backup snapshots</sys:String>
+    <sys:String x:Key="LOCLuduRestViewBackupSnapshots">백업 스냅샷 보기</sys:String>
 
     <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-Detection Successful</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-Detection Failed</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">자동 감지 성공</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">자동 감지 실패</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi 실행 파일이 다음 위치에서 감지되었습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">ludusavi 실행 파일을 자동으로 감지할 수 없습니다. 경로를 수동으로 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">Restic 실행 파일이 다음 위치에서 감지되었습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticNotDetected">restic 실행 파일을 자동으로 감지할 수 없습니다. 경로를 수동으로 지정해 주세요.</sys:String>
 
     <!-- Settings verification -->
-    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Settings Verification:</sys:String>
-    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - repository connection succeeded</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - verification succeeded</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Auto-Detection Successful</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Auto-Detection Failed</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restic executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Settings Verification failed: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verifying restic repository connection...</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Verifying ludusavi executable...</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic 설정 확인:</sys:String>
+    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - 저장소 연결 성공</sys:String>
+    <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - 인증 성공</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">자동 감지 성공</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">자동 감지 실패</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Ludusavi 실행 파일이 다음 위치에서 감지되었습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">ludusavi 실행 파일을 자동으로 감지할 수 없습니다. 경로를 수동으로 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restic 실행 파일이 다음 위치에서 감지되었습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">restic 실행 파일을 자동으로 감지할 수 없습니다. 경로를 수동으로 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic 설정 확인 실패: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">restic 저장소 연결을 확인하는 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingLudusavi">ludusavi 실행 파일을 확인하는 중...</sys:String>
 
     <!-- Maintenance operation strings -->
-    <sys:String x:Key="LOCLuduRestMaintenanceComplete">Maintenance Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Full maintenance completed successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationComplete">Verification Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Repository verification completed successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Retention Policy Disabled</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Retention policy is disabled. Please enable it in the extension settings to use this feature.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Retention Policy Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Retention policy applied successfully. Old snapshots have been deleted.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Prune operation completed successfully.</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceComplete">유지보수 완료</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">전체 점검이 성공적으로 완료되었습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationComplete">확인 완료</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">저장소 검증이 성공적으로 완료되었습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">보존 정책 비활성화됨</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">보존 정책이 비활성화되어 있습니다. 이 기능을 사용하려면 확장 프로그램 설정에서 보존 정책을 활성화하십시오.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">유지 정책 완료</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">보존 정책이 성공적으로 적용되었습니다. 이전 스냅샷이 삭제되었습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">가지치기 완료</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">가지치기 작업이 성공적으로 완료되었습니다.</sys:String>
 
     <!-- Dialog prompts -->
-    <sys:String x:Key="LOCLuduRestFullMaintenance">Full Maintenance</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicy">Retention Policy</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Would you like to perform a dry run first to see what would be deleted before actually removing snapshots?</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Prune</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Would you like to perform a dry run first to see what would be pruned before actually deleting data?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithPruning">Proceed with Pruning?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Dry run completed. {0} snapshots would be pruned. Do you want to proceed with the actual pruning?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Dry run completed. {0} snapshots would be deleted. Do you want to proceed with applying the retention policy?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithRetention">Proceed with Retention Policy?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
+    <sys:String x:Key="LOCLuduRestFullMaintenance">전체 유지보수</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">실제로 데이터를 삭제하기 전에 어떤 데이터가 삭제되는지 확인하기 위해 먼저 모의 실행을 해보시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicy">유지 정책</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">스냅샷을 실제로 삭제하기 전에 어떤 항목이 삭제되는지 확인하기 위해 먼저 모의 실행을 해보시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">치다</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">실제로 데이터를 삭제하기 전에 어떤 데이터가 삭제되는지 확인하기 위해 먼저 모의 실행을 해보시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithPruning">가지치기를 진행하시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">예행연습이 완료되었습니다. {0} 스냅샷이 삭제됩니다. 실제 삭제를 진행하시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">사전 테스트가 완료되었습니다. {0} 개의 스냅샷이 삭제됩니다. 보존 정책을 적용하시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithRetention">유지 정책을 진행하시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">이 작업은 보존 정책에 따라 오래된 스냅샷을 삭제합니다.
 
-• Keep last {0} snapshots
-• Keep daily snapshots for {1} days
-• Keep weekly snapshots for {2} weeks
-• Keep monthly snapshots for {3} months
-• Keep yearly snapshots for {4} years
+• 최근 {0} 개의 스냅샷 유지
+• 일별 스냅샷을 {1} 일 동안 유지
+• 주별 스냅샷을 {2} 주 동안 유지
+• 월별 스냅샷을 {3} 개월 동안 유지
+• 연별 스냅샷을 {4} 년 동안 유지
 
-Would you like to perform a dry run first to see what would be deleted?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Preview completed. {0} snapshots would be deleted according to the retention policy. Do you want to proceed with the deletion?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithDeletion">Proceed with Deletion?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">Prune Repository</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is irreversible.
+어떤 스냅샷이 삭제되는지 미리 확인하기 위해 시뮬레이션 실행을 해보시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">미리보기가 완료되었습니다. {0} 개의 스냅샷은 보존 정책에 따라 삭제됩니다. 삭제를 진행하시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithDeletion">삭제를 진행하시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">가지치기 저장소</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">가지치기를 하면 저장소에서 사용되지 않는 데이터 덩어리가 제거됩니다. 이 작업은 되돌릴 수 없습니다.
 
-Would you like to perform a dry run first to see what would be removed before actually deleting data?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Dry run completed. This operation would remove unused data from the repository. Do you want to proceed with the actual pruning?</sys:String>
+실제로 데이터를 삭제하기 전에 어떤 데이터가 제거되는지 확인하기 위해 먼저 모의 실행을 해보시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">사전 테스트가 완료되었습니다. 이 작업은 저장소에서 사용되지 않는 데이터를 제거합니다. 실제 삭제 작업을 진행하시겠습니까?</sys:String>
 
     <!-- Welcome and setup -->
-    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - Setup Required</sys:String>
-    <sys:String x:Key="LOCLuduRestWelcomeMessage">Welcome to Ludusavi Restic!
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">환영합니다 - 설정이 필요합니다</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeMessage">Ludusavi Restic에 오신 것을 환영합니다!
 
-This appears to be your first time using the extension or your configuration is incomplete. Would you like to run the setup wizard to configure your backup repository?</sys:String>
-    <sys:String x:Key="LOCLuduRestConfigurationRequired">Configuration Required</sys:String>
-    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic is not configured yet. Would you like to run the setup wizard?</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidConfiguration">Invalid Configuration</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticMessage">The configured restic executable is not valid or accessible. Would you like to run the setup wizard to fix this?</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupComplete">Setup Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">Setup completed successfully! You can now use all backup features.</sys:String>
+이 확장 프로그램을 처음 사용하시거나 구성이 완료되지 않은 것 같습니다. 백업 저장소를 구성하기 위해 설정 마법사를 실행하시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestConfigurationRequired">구성 필요</sys:String>
+    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic이 아직 구성되지 않았습니다. 설정 마법사를 실행하시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidConfiguration">잘못된 구성</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticMessage">설정된 restic 실행 파일이 유효하지 않거나 접근할 수 없습니다. 이 문제를 해결하기 위해 설치 마법사를 실행하시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupComplete">설치 완료</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupCompletedMessage">설치가 성공적으로 완료되었습니다! 이제 모든 백업 기능을 사용하실 수 있습니다.</sys:String>
 
     <!-- Backup browser -->
-    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Delete Backup Snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Are you sure you want to delete snapshot {0} from {1}?</sys:String>
-    <sys:String x:Key="LOCLuduRestSuccess">Success</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Snapshot deleted successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restore latest snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">No snapshots found for this game.</sys:String>
-    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restore snapshot {0} for {1} to folder:\n{2}\n\nExisting files may be overwritten. Continue?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restoring snapshot...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompleted">Snapshot restored successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRefresh">Refresh</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSelected">Restore Selected</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSelected">Delete Selected</sys:String>
-    <sys:String x:Key="LOCLuduRestFilterByGame">Filter by Game:</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">Snapshot ID</sys:String>
-    <sys:String x:Key="LOCLuduRestDateHeader">Date</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsHeader">Tags</sys:String>
-    <sys:String x:Key="LOCLuduRestTotalSnapshots">Total snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetect">Auto-Detect</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Retention Policy</sys:String>
-    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Enable automatic retention policy</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">When enabled, these policies will be applied during maintenance operations to automatically remove old snapshots.</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastLabel">Keep last N snapshots:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepLastHelp">Keep the most recent snapshots regardless of age</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyLabel">Keep daily snapshots for N days:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepDailyHelp">Keep one snapshot per day for this many days</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">Keep weekly snapshots for N weeks:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">Keep one snapshot per week for this many weeks</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">Keep monthly snapshots for N months:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Keep one snapshot per month for this many months</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Keep yearly snapshots for N years:</sys:String>
-    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Keep one snapshot per year for this many years</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Example with default settings:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
-• Plus 1 snapshot per day for 7 days
-• Plus 1 snapshot per week for 4 weeks
-• Plus 1 snapshot per month for 12 months
-• Plus 1 snapshot per year for 5 years</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Pruning Results</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Summary information will appear here</sys:String>
-    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Snapshots Deleted</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesAffected">Games Affected</sys:String>
-    <sys:String x:Key="LOCLuduRestDataDeleted">Data Deleted</sys:String>
-    <sys:String x:Key="LOCLuduRestStatus">Status</sys:String>
-    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Deleted Snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestClearFilter">Clear Filter</sys:String>
-    <sys:String x:Key="LOCLuduRestGameHeader">Game</sys:String>
-    <sys:String x:Key="LOCLuduRestDateTimeHeader">Date/Time</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Games Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestGameNameHeader">Game Name</sys:String>
-    <sys:String x:Key="LOCLuduRestTagsSummaryTab">Tags Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestTagHeader">Tag</sys:String>
-    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Occurrences</sys:String>
-    <sys:String x:Key="LOCLuduRestRawOutputTab">Raw Output</sys:String>
-    <sys:String x:Key="LOCLuduRestClose">Close</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">Enter an optional custom tag for this manual backup (leave blank for none):</sys:String>
-    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">Manual Backup Tag</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreConfirm">Restore snapshot {0} to {1}? This may overwrite existing files.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restoring snapshot {0}...</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} restored successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreFailed">Failed to restore snapshot: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreError">Error restoring snapshot: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (game: {1}) contains {2} files.
-New files: {3}
-Existing files (will be overwritten): {4}
-Suggested restore folder: {5}
+    <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">백업 스냅샷 삭제</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">스냅샷 {1}에서 스냅샷 {0} 을 삭제하시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestSuccess">성공</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">스냅샷이 성공적으로 삭제되었습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">최신 스냅샷 복원</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">이 게임에 대한 스냅샷을 찾을 수 없습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">스냅샷 {0} 을 {1} 폴더에 복원합니다. 폴더 이름은\n{2}\n\n입니다. 기존 파일이 덮어쓰여질 수 있습니다. 계속하시겠습니까?</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">스냅샷 복원</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">스냅샷 복원 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompleted">스냅샷이 성공적으로 복원되었습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestRefresh">새로 고치다</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSelected">선택한 항목 복원</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSelected">선택한 항목 삭제</sys:String>
+    <sys:String x:Key="LOCLuduRestFilterByGame">게임별 필터링:</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotIdHeader">스냅샷 ID</sys:String>
+    <sys:String x:Key="LOCLuduRestDateHeader">날짜</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsHeader">태그</sys:String>
+    <sys:String x:Key="LOCLuduRestTotalSnapshots">전체 스냅샷</sys:String>
+    <sys:String x:Key="LOCLuduRestAutoDetect">자동 감지</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">유지 정책</sys:String>
+    <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">자동 보존 정책을 활성화합니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">이 정책이 활성화되면 유지 관리 작업 중에 적용되어 오래된 스냅샷이 자동으로 제거됩니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastLabel">최근 N개의 스냅샷을 보관하세요:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepLastHelp">나이에 상관없이 가장 최근 사진을 보관하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyLabel">N일 동안 매일 스냅샷을 저장하세요:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepDailyHelp">이 기간 동안 매일 스냅샷을 하나씩 저장하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyLabel">N주 동안 매주 스냅샷을 보관하세요:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepWeeklyHelp">이 기간 동안 매주 스냅샷을 하나씩 저장하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyLabel">N개월 동안 매달 스냅샷을 보관하세요:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">이 기간 동안 매달 스냅샷을 하나씩 저장하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyLabel">N년 동안 매년 스냅샷을 보관하세요:</sys:String>
+    <sys:String x:Key="LOCLuduRestKeepYearlyHelp">이 기간 동안 매년 한 장씩 사진을 보관하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExampleHeader">기본 설정 예시:</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> 최근 10개의 스냅샷을 보관합니다
+• 추가로 7일 동안 매일 1개의 스냅샷을 보관합니다
+• 추가로 4주 동안 매주 1개의 스냅샷을 보관합니다
+• 추가로 12개월 동안 매달 1개의 스냅샷을 보관합니다
+• 추가로 5년 동안 매년 1개의 스냅샷을 보관합니다</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">가지치기 결과</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryPlaceholder">요약 정보가 여기에 표시됩니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotsDeleted">스냅샷 삭제됨</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesAffected">영향을 받는 게임</sys:String>
+    <sys:String x:Key="LOCLuduRestDataDeleted">데이터 삭제됨</sys:String>
+    <sys:String x:Key="LOCLuduRestStatus">상태</sys:String>
+    <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">삭제된 스냅샷</sys:String>
+    <sys:String x:Key="LOCLuduRestClearFilter">필터 지우기</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">게임</sys:String>
+    <sys:String x:Key="LOCLuduRestDateTimeHeader">날짜/시간</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesSummaryTab">게임 요약</sys:String>
+    <sys:String x:Key="LOCLuduRestGameNameHeader">게임 이름</sys:String>
+    <sys:String x:Key="LOCLuduRestTagsSummaryTab">태그 요약</sys:String>
+    <sys:String x:Key="LOCLuduRestTagHeader">꼬리표</sys:String>
+    <sys:String x:Key="LOCLuduRestOccurrencesHeader">발생</sys:String>
+    <sys:String x:Key="LOCLuduRestRawOutputTab">원시 출력</sys:String>
+    <sys:String x:Key="LOCLuduRestClose">닫다</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">이 수동 백업에 사용할 사용자 지정 태그를 입력하세요(선택 사항). (태그를 입력하지 않으려면 비워 두세요.)</sys:String>
+    <sys:String x:Key="LOCLuduRestManualBackupTagTitle">수동 백업 태그</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreConfirm">스냅샷 {0} 을 {1}으로 복원하시겠습니까? 이 작업은 기존 파일을 덮어쓸 수 있습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">스냅샷 {0}복원 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">스냅샷 {0} 이 성공적으로 복원되었습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">복원 완료</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreFailed">스냅샷 복원 실패: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreError">스냅샷 복원 중 오류 발생: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRestorePreview">스냅샷 {0} (게임: {1})에는 {2} 개의 파일이 있습니다.
+새 파일: {3}
+기존 파일(덮어쓰기됨): {4}
+복원 폴더 추천: {5}
 
-Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(none)</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Cannot determine game name tag for this snapshot.</sys:String>
+추천 폴더를 사용하려면 '예'를, 다른 폴더를 선택하려면 '아니요'를, 취소하려면 '취소'를 선택하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(없음)</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoGameTag">이 스냅샷에 대한 게임 이름 태그를 확인할 수 없습니다.</sys:String>
 
     <!-- Game overrides -->
-    <sys:String x:Key="LOCLuduRestTabGameOverrides">Game Overrides</sys:String>
-    <sys:String x:Key="LOCLuduRestGameOverridesHelp">Override the gameplay backup interval and retention policy for specific games. Games not listed use the global defaults. Add overrides from the game right-click menu. Blank retention fields are disabled (0).</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">Interval (min)</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">Keep Last</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">Keep Daily</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">Keep Weekly</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">Keep Monthly</sys:String>
-    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">Keep Yearly</sys:String>
-    <sys:String x:Key="LOCLuduRestRemoveOverride">Remove Selected</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupInterval">Set backup interval</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">Backup Interval Override</sys:String>
-    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">Enter backup interval in minutes for {0} (current: {1}, global default: {2}). Leave blank to remove override.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Set retention policy</sys:String>
-    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Retention Policy Override</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Set values to override the global retention policy for this game. Blank fields are disabled (set to 0), so only the values you specify will apply.</sys:String>
-    <sys:String x:Key="LOCLuduRestSave">Save</sys:String>
-    <sys:String x:Key="LOCLuduRestCancel">Cancel</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} game(s) have per-game retention overrides.</sys:String>
-    <sys:String x:Key="LOCLuduRestListingSnapshots">Listing snapshots...</sys:String>
-    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">No snapshots found in the repository.</sys:String>
+    <sys:String x:Key="LOCLuduRestTabGameOverrides">게임 오버라이드</sys:String>
+    <sys:String x:Key="LOCLuduRestGameOverridesHelp">특정 게임에 대한 게임플레이 백업 간격 및 보존 정책을 재정의합니다. 목록에 없는 게임은 전역 기본값을 사용합니다. 게임을 마우스 오른쪽 버튼으로 클릭하여 재정의를 추가할 수 있습니다. 보존 필드가 비어 있으면 비활성화됩니다(0).</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideIntervalHeader">간격(분)</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepLastHeader">마지막에 유지하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepDailyHeader">매일 보관하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepWeeklyHeader">매주 구독해주세요</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepMonthlyHeader">월간 구독 유지</sys:String>
+    <sys:String x:Key="LOCLuduRestOverrideKeepYearlyHeader">매년 보관하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestRemoveOverride">선택한 항목 제거</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupInterval">백업 간격 설정</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalTitle">백업 간격 재정의</sys:String>
+    <sys:String x:Key="LOCLuduRestSetBackupIntervalPrompt">{0} 에 대한 백업 간격을 분 단위로 입력하십시오(현재: {1}, 전역 기본값: {2}). 재정의를 제거하려면 비워 두십시오.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicy">보존 정책 설정</sys:String>
+    <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">보존 정책 재정의</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">이 게임의 전역 보존 정책을 재정의할 값을 설정하세요. 빈 필드는 비활성화(0으로 설정)되므로 지정한 값만 적용됩니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">구하다</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">취소</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} 게임에는 게임별 유지 재정의 기능이 있습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestListingSnapshots">스냅샷 목록...</sys:String>
+    <sys:String x:Key="LOCLuduRestNoSnapshotsFound">해당 저장소에서 스냅샷을 찾을 수 없습니다.</sys:String>
 
     <!-- Main menu items -->
-    <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllGames">Backup all games</sys:String>
-    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Browse backup snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceAll">All (check + prune)</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceVerify">검증</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Delete old snapshots</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenancePrune">Prune unused data</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceSection">Maintenance</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSection">Setup</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupWizard">설정 마법사</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllGames">모든 게임을 백업하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">백업 스냅샷 찾아보기</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceAll">모두 (확인 + 가지치기)</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceVerify">확인하다</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">오래된 스냅샷을 삭제하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenancePrune">사용하지 않는 데이터를 정리하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceSection">유지</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSection">설정</sys:String>
 
     <!-- Dialog strings -->
-    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Select Restic Executable</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Select Ludusavi Executable</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Select Repository Location</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Restic 실행 파일을 선택하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Ludusavi 실행 파일을 선택하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">저장소 위치를 선택하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">실행 파일(*.exe)|*.exe|모든 파일(*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">실행 파일|*.exe</sys:String>
         <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Running full maintenance...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifying repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">전체 점검을 진행 중입니다...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">저장소를 확인하는 중...</sys:String>
 
     <!-- Validation messages -->
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Please specify the path to restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Please specify the path to ludusavi executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">restic 실행 파일의 경로를 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic 실행 파일이 유효합니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> 유효하지 않은 restic 실행 파일이거나 접근할 수 없습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">ludusavi 실행 파일의 경로를 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi 실행 파일이 유효합니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> ludusavi 실행 파일이 유효하지 않거나 접근할 수 없습니다.</sys:String>
 
     <!-- Setup validation -->
-    <sys:String x:Key="LOCLuduRestValidationError">Validation Error</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticPath">Please specify the path to restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationResticInvalid">The specified restic executable is not valid or accessible.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Please specify the repository path.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Please enter a repository password.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Passwords do not match.</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryYes">Yes</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryNo">No</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationError">유효성 검사 오류</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticPath">restic 실행 파일의 경로를 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationResticInvalid">지정된 restic 실행 파일이 유효하지 않거나 접근할 수 없습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">저장소 경로를 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">저장소 비밀번호를 입력하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">비밀번호가 일치하지 않습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryYes">예</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryNo">아니요</sys:String>
 
     <!-- Progress and initialization messages -->
-    <sys:String x:Key="LOCLuduRestInitializingRepository">Initializing repository...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Applying retention policy...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Running retention policy preview...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Applying retention policy and pruning...</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Checking repository integrity...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Running prune dry run...</sys:String>
-    <sys:String x:Key="LOCLuduRestPruningUnusedData">Pruning unused data...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Pruning repository...</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Retention policy application failed for one or more games. Check the raw output for details.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">No snapshots would be deleted. All snapshots match the current retention policy.</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Checking repository integrity with data verification...</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationFailed">Failed to initialize the repository. Please check the logs for details.</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationError">Initialization Error</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupError">Setup Error</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupErrorMessage">An error occurred during setup: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializingRepository">저장소를 초기화하는 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">보존 정책 적용 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningRetentionPreview">보존 정책 미리보기 실행 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">보존 정책 적용 및 가지치기...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">저장소 무결성을 확인하는 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">자두 재배 예열 실행 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestPruningUnusedData">사용하지 않는 데이터를 정리합니다...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">저장소 정리 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">하나 이상의 게임에 대해 보존 정책 적용에 실패했습니다. 자세한 내용은 원시 출력 내용을 확인하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">스냅샷은 삭제되지 않습니다. 모든 스냅샷은 현재 보존 정책을 준수합니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">데이터 검증을 통해 저장소 무결성을 확인합니다...</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationFailed">저장소 초기화에 실패했습니다. 자세한 내용은 로그를 확인하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationError">초기화 오류</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupError">설정 오류</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupErrorMessage">설정 중 오류가 발생했습니다: {0}</sys:String>
 
 </ResourceDictionary>
