@@ -76,16 +76,16 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">게임 삭제 시 저장 파일 백업 생성</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Restic 실행 파일이 발견되어 확인되었습니다.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ restic을 자동으로 감지할 수 없습니다. 경로를 수동으로 지정해 주세요.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi 실행 파일이 발견되어 검증되었습니다.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ ludusavi를 자동으로 감지할 수 없습니다. 경로를 수동으로 지정해 주세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">restic 실행 파일의 경로를 지정해 주세요.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restic 실행 파일이 유효합니다.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ 유효하지 않은 restic 실행 파일이거나 접근할 수 없습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">ludusavi 실행 파일의 경로를 지정해 주세요.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi 실행 파일이 유효합니다.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ 유효하지 않은 ludusavi 실행 파일이거나 접근할 수 없습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">예</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">아니요</sys:String>
 
@@ -200,11 +200,11 @@
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">N년 동안 매년 스냅샷을 보관하세요:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">이 기간 동안 매년 한 장씩 사진을 보관하세요.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">기본 설정 예시:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• 최근 10개의 스냅샷을 보관합니다
-• 추가로 7일 동안 매일 1개의 스냅샷을 보관합니다
-• 추가로 4주 동안 매주 1개의 스냅샷을 보관합니다
-• 추가로 12개월 동안 매달 1개의 스냅샷을 보관합니다
-• 추가로 5년 동안 매년 1개의 스냅샷을 보관합니다</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">가지치기 결과</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">요약 정보가 여기에 표시됩니다.</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">스냅샷 삭제됨</sys:String>
@@ -284,11 +284,11 @@
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">restic 실행 파일의 경로를 지정해 주세요.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restic 실행 파일이 유효합니다.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ 유효하지 않은 restic 실행 파일이거나 접근할 수 없습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">ludusavi 실행 파일의 경로를 지정해 주세요.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi 실행 파일이 유효합니다.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ 유효하지 않은 ludusavi 실행 파일이거나 접근할 수 없습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">유효성 검사 오류</sys:String>
