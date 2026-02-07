@@ -76,16 +76,16 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">צור גיבוי שמירה לאחר הסרת ההתקנה של המשחק</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ קובץ ההפעלה של Restic נמצא ואומת</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ לא ניתן היה לזהות אוטומטית את restic. אנא ציין את הנתיב באופן ידני.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ קובץ ההפעלה של Ludusavi נמצא ואומת</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ לא ניתן היה לזהות אוטומטית את ludusavi. אנא ציין את הנתיב באופן ידני.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">אנא ציין את הנתיב לקובץ ההפעלה restic.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ קובץ ההפעלה Restic תקין.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ קובץ הרצה לא חוקי של restic או שאינו נגיש.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">אנא ציין את הנתיב לקובץ ההפעלה של ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ קובץ ההפעלה של Ludusavi תקין</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ קובץ הרצה של ludusavi לא חוקי או שאינו נגיש.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">כֵּן</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">לֹא</sys:String>
 
@@ -200,11 +200,11 @@
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">שמור תמונות מצב שנתיות במשך N שנים:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">שמרו תמונת מצב אחת לשנה במשך שנים רבות</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">דוגמה עם הגדרות ברירת מחדל:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• שמור את 10 תמונות הבזק האחרונות
-• ועוד תמונת בזק אחת ליום למשך 7 ימים
-• ועוד תמונת בזק אחת לשבוע למשך 4 שבועות
-• ועוד תמונת בזק אחת לחודש למשך 12 חודשים
-• ועוד תמונת בזק אחת לשנה למשך 5 שנים</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">תוצאות גיזום</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">מידע סיכום יופיע כאן</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">תמונות נמחקו</sys:String>
@@ -284,11 +284,11 @@
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">אנא ציין את הנתיב לקובץ ההפעלה restic.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ קובץ ההפעלה Restic תקין.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ קובץ הרצה לא חוקי של restic או שאינו נגיש.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">אנא ציין את הנתיב לקובץ ההפעלה של ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ קובץ ההפעלה של Ludusavi תקין</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ קובץ הרצה של ludusavi לא חוקי או שאינו נגיש.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">שגיאת אימות</sys:String>
