@@ -76,16 +76,16 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">إنشاء نسخة احتياطية عند إلغاء تثبيت اللعبة</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">○ يمكن العثور على Ra التنفيذي والتحقق منه.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ لا يمكن اكتشاف المقاومة تلقائيًا. الرجاء تحديد المسار يدوياً.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">○ عُثر على لودوسافي التنفيذي وتم التحقق منه.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ لا يمكن اكتشاف اللودسافي تلقائيًا. الرجاء تحديد المسار يدوياً.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">الرجاء تحديد المسار الذي يمكن تنفيذه.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">○ يمكن تنفيذ REA صحيح.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">● غير صالح قابل للتنفيذ أو غير قابل للوصول.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">الرجاء تحديد المسار الذي يمكن تنفيذه.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">○ يمكن تنفيذ لودسافي صالح.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">&lt;unk&gt; تطبيق Ludusavi غير صالح أو غير قابل للوصول.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">نعم</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">لا</sys:String>
 
@@ -200,11 +200,11 @@
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">الحفاظ على لقطات سنوية ل N سنة:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">احتفظ بلقطة واحدة في السنة لهذه السنوات العديدة</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">مثال مع الإعدادات الافتراضية:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• احتفظ بأحدث 10 لقطات
-• بلقطة زائد 1 في اليوم لمدة 7 أيام
-• بلقطة زائد 1 في الأسبوع لمدة 4 أسابيع
-• لقطة زائد 1 في الشهر لمدة 12 شهرا
-• لقطة زائد 1 في السنة لمدة 5 سنوات</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">تآكل النتائج</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">ستظهر معلومات موجزة هنا</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">تم حذف لقطات</sys:String>
@@ -284,11 +284,11 @@
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">الرجاء تحديد المسار الذي يمكن تنفيذه.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">○ يمكن تنفيذ REA صحيح.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">● غير صالح قابل للتنفيذ أو غير قابل للوصول.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">الرجاء تحديد المسار الذي يمكن تنفيذه.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">○ يمكن تنفيذ لودسافي صالح.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">&lt;unk&gt; تطبيق Ludusavi غير صالح أو غير قابل للوصول.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">خطأ في التحقق</sys:String>
