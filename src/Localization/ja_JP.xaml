@@ -76,16 +76,16 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">ゲームがアンインストールされたときにバックアップを作成します</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Restic executable found and verified。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Resticを自動的に検出できませんでした。手動でパスを指定してください。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi 実行可能ファイルを見つけて確認しました。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ ludusaviを自動的に検出できませんでした。手動でパスを指定してください。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Restic実行ファイルへのパスを指定してください。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">&lt;unk&gt; restic実行ファイルが無効かアクセスできません。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">実行可能ファイルへのパスを指定してください。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi 実行可能機能が有効です。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">&lt;unk&gt; ludusavi 実行可能ファイルが無効またはアクセスできません。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">はい</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">いいえ</sys:String>
 
@@ -200,11 +200,11 @@
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">年間スナップショットをN年間保持する：</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">この長年の間、年間1つのスナップショットを保持します</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">デフォルト設定の例:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• 最新の 10 個のスナップショットを保持
-• 7 日間、毎日 1 個のスナップショットを追加
-• 4 週間、毎週 1 個のスナップショットを追加
-• 12 か月間、毎月 1 個のスナップショットを追加
-• 5 年間、毎年 1 個のスナップショットを追加</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">剪定結果</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">概要情報がここに表示されます</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">スナップショットを削除しました</sys:String>
@@ -284,11 +284,11 @@
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Restic実行ファイルへのパスを指定してください。</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restic executable is valid.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">&lt;unk&gt; restic実行ファイルが無効かアクセスできません。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">実行可能ファイルへのパスを指定してください。</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi 実行可能機能が有効です。</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">&lt;unk&gt; ludusavi 実行可能ファイルが無効またはアクセスできません。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">検証エラー</sys:String>
