@@ -76,16 +76,16 @@ Inkludera läge: Inga spel är säkerhetskopierade. Spel kan få taggen tillagd 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Skapa säkerhetskopiering när spelet är avinstallerat</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Restic körbar hittade och verifierade.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Kunde inte automatiskt upptäcka restic. Ange sökvägen manuellt.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi körbar hittade och verifierade.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ Kunde inte automatiskt upptäcka ludusavi. Ange sökvägen manuellt.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Ange sökvägen till restic körbar.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restic körbar är giltigt.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">&lt;unk&gt; Ogiltig restic körbar eller inte tillgänglig.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Ange sökvägen till ludusavi körbar.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi körbar är giltig.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">&lt;unk&gt; Ogiltig ludusavi körbar eller inte tillgänglig.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Ja</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">Nej</sys:String>
 
@@ -200,11 +200,11 @@ Detta verkar vara första gången du använder tillägget eller din konfiguratio
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Behåll årliga ögonblicksbilder för N år:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Behåll en ögonblicksbild per år för så här många år</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exempel med standardinställningar:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Behåll de senaste 10 ögonblicksbilderna
-• Plus 1 ögonblicksbild per dag i 7 dagar
-• Plus 1 ögonblicksbild per vecka i 4 veckor
-• Plus 1 ögonblicksbild per månad i 12 månader
-• Plus 1 ögonblicksbild per år i 5 år</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Beskär resultat</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Sammanfattning visas här</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Ögonblicksbilder borttagna</sys:String>
@@ -284,11 +284,11 @@ Välj Ja att använda föreslagen mapp, Nej att välja en annan, eller Avbryt at
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Ange sökvägen till restic körbar.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restic körbar är giltigt.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">&lt;unk&gt; Ogiltig restic körbar eller inte tillgänglig.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Ange sökvägen till ludusavi körbar.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi körbar är giltig.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">&lt;unk&gt; Ogiltig ludusavi körbar eller inte tillgänglig.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Fel vid validering</sys:String>
