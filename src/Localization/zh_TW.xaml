@@ -76,16 +76,16 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">卸載遊戲時創建存檔備份</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ 已找到並驗證 Restic 可執行檔。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ 無法自動偵測到 restic。請手動指定路徑。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ 已找到並驗證 Ludusavi 可執行檔。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ 無法自動偵測到 ludusavi。請手動指定路徑。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">請指定 restic 可執行檔的路徑。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restic 可執行檔有效。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ restic 可執行檔無效或無法存取。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">請指定 ludusavi 可執行檔的路徑。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi 可執行檔有效。</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ ludusavi 可執行檔無效或無法存取。</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">是的</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">不</sys:String>
 
@@ -200,7 +200,7 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">保留 N 年的年度快照：</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">每年保留一份快照，持續這麼多年</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">使用預設設定的範例：</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Keep the latest 10 snapshots
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
 • Plus 1 snapshot per day for 7 days
 • Plus 1 snapshot per week for 4 weeks
 • Plus 1 snapshot per month for 12 months
@@ -284,11 +284,11 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">請指定 restic 可執行檔的路徑。</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restic 可執行檔有效。</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ restic 可執行檔無效或無法存取。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">請指定 ludusavi 可執行檔的路徑。</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi 可執行檔有效。</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ ludusavi 可執行檔無效或無法存取。</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">驗證錯誤</sys:String>
