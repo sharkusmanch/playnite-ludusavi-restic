@@ -76,16 +76,16 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Створити резервну копію при вилученні гри</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Відновлений виконуваний файл і підтверджений.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Не вдалося автоматично визначити рез. Будь ласка, вкажіть шлях вручну.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Знайдений і перевірений виконуваний файл Ludusav.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ Не вдалося автоматично визначити ludusavi. Будь ласка, вкажіть шлях вручну.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Будь ласка, вкажіть шлях до реститутчного виконання.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Відновлення виконуваного файлу дійсне.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">Недопустимий рестівний виконуваний або недоступний.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Будь ласка, вкажіть шлях до виконуваного файлу ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Одночасний виконуваний файл Ludusavi дійсний.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">&lt;unk&gt; Invalid ludusavi виконуваний або недоступний.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Так</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">Ні</sys:String>
 
@@ -200,11 +200,11 @@
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Ведіть щочні знімки на N років:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Зробити один знімок на рік протягом багатьох років</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Приклад з налаштуваннями за замовчуванням:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Зберігайте останні 10 знімків
-• Плюс 1 знімок на день протягом 7 днів
-• Плюс 1 знімок на тиждень протягом 4 тижнів
-• Плюс 1 знімок на місяць протягом 12 місяців
-• Плюс 1 знімок на рік протягом 5 років</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Обрізки результатів</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Тут з'явиться інформація про резюме</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Знімки видалено</sys:String>
@@ -284,11 +284,11 @@
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Будь ласка, вкажіть шлях до реститутчного виконання.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Відновлення виконуваного файлу дійсне.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">Недопустимий рестівний виконуваний або недоступний.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Будь ласка, вкажіть шлях до виконуваного файлу ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Одночасний виконуваний файл Ludusavi дійсний.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">&lt;unk&gt; Invalid ludusavi виконуваний або недоступний.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Помилка перевірки</sys:String>
