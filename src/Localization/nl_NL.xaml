@@ -76,16 +76,16 @@ Inclusief modus: er worden geen spellen geback-upt. Spellen kunnen de inclusief 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Maak een opslagback-up als het spel gedeïnstalleerd is</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Binnenlands uitvoerbaar gevonden en geverifieerd.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Kan niet automatisch restics detecteren. Geef het pad handmatig op.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Executable Ludusavi gevonden en geverifieerd.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ Kon ludusavie niet automatisch detecteren. Geef het pad handmatig op.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Specificeer het pad naar restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Binnenlands uitvoerbaar</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">± Ongeldig restic uitvoerbaar of niet toegankelijk.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Vul het pad in naar het uitvoerbare ludusavi</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Executable Ludusavi is geldig.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">・Ongeldig uitvoerbaar ludusavi of niet toegankelijk.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">ja</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">Neen</sys:String>
 
@@ -200,11 +200,11 @@ Dit lijkt je eerste keer te zijn met behulp van de extensie of je configuratie i
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Houd jaarlijkse snapshots voor N jaar:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Houd één momentopname per jaar voor zoveel jaren</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Voorbeeld met standaardinstellingen:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Houd de 10 meest recente momentopnamen
-• Plus 1 momentopname per dag gedurende 7 dagen
-• Plus 1 momentopname per week voor 4 weken
-• Plus 1 momentopname per maand voor 12 maanden
-• Plus 1 momentopname per jaar voor 5 jaar</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Opschonen resultaten</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Samenvatting informatie zal hier verschijnen</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Momentopnamen verwijderd</sys:String>
@@ -284,11 +284,11 @@ Kies Ja om de voorgestelde map te gebruiken, Nee om een andere te kiezen, of Ann
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Specificeer het pad naar restic executable.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Binnenlands uitvoerbaar</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">± Ongeldig restic uitvoerbaar of niet toegankelijk.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Vul het pad in naar het uitvoerbare ludusavi</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Executable Ludusavi is geldig.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">・Ongeldig uitvoerbaar ludusavi of niet toegankelijk.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Validatie fout</sys:String>
