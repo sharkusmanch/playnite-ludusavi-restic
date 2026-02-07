@@ -76,16 +76,16 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Направите резервну копију када се игра деинсталира</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Пронађен и верификован Restic извршни фајл.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ Није могуће аутоматски детектовати restic. Молимо вас да ручно наведете путању.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Извршна датотека Лудусавија пронађена је и верификована.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ Није могуће аутоматски детектовати ludusavi. Молимо вас да ручно наведете путању.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Молимо вас да наведете путању до извршне датотеке restic.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Рестиц извршна датотека је валидна.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ Неважећи restic извршни фајл или није доступан.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Молимо вас да наведете путању до извршне датотеке ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Извршна датотека Лудусавија је важећа.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ Неважећи извршни фајл ludusavi-ја или није доступан.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Да</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">Не</sys:String>
 
@@ -200,11 +200,11 @@
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Чувајте годишње снимке током N година:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Чувајте један снимак годишње током толико година</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Пример са подразумеваним подешавањима:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Чувајте последњих 10 снимака
-• Плус 1 снимак дневно током 7 дана
-• Плус 1 снимак недељно током 4 недеље
-• Плус 1 снимак месечно током 12 месеци
-• Плус 1 снимак годишње током 5 година</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Резултати орезивања</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Овде ће се појавити резиме информација</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Снимци су обрисани</sys:String>
@@ -284,11 +284,11 @@
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Молимо вас да наведете путању до restic извршне датотеке.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Рестиц извршна датотека је валидна.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ Неважећи restic извршни фајл или није доступан.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Молимо вас да наведете путању до извршне датотеке ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Извршна датотека Лудусавија је важећа.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ Неважећи извршни фајл ludusavi-ја или није доступан.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Грешка при валидацији</sys:String>
