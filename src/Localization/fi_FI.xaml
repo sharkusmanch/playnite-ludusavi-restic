@@ -76,16 +76,16 @@ Sisällytä tila: Ei pelejä varmuuskopioida. Pelit voivat sisältää lisätyn 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Luo varmuuskopio kun peli on poistettu</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Resistentti suoritettava tiedosto löytyi ja vahvistettiin.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠️ Restic. Ei voitu tunnistaa automaattisesti. Ole hyvä ja määritä polku manuaalisesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Ludusavi executable löytyi ja vahvistettiin.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠️ Ei voitu tunnistaa automaattisesti ludusavia. Määritä polku manuaalisesti.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Ole hyvä ja määritä restic executable polku.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Restaali suoritettava tiedosto on voimassa.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">•Virheellinen restaali suoritettava tiedosto tai ei käytettävissä.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Määritä polku ludusavi suoritettavaan tiedostoon.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Ludusavi suoritettava tiedosto on voimassa.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">¶ Virheellinen ludusavi suoritettava tai ei käytettävissä.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Kyllä</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">Ei</sys:String>
 
@@ -200,11 +200,11 @@ Tämä näyttää olevan ensimmäinen kerta, kun käytät laajennusta tai asetuk
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Säilytä vuosittaiset tilannekuvat N-vuodeksi:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Pidä yksi tilannekuva vuodessa tämän monta vuotta</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Esimerkki oletusasetuksista:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Pidä viimeisin 10 kuvakaappausta
-• Plus 1 kuvakaappaus päivässä 7 päivää
-• Plus 1 kuvakaappaus viikossa 4 viikkoa
-• Plus 1 kuvakaappaus kuukaudessa 12 kuukautta
-• Plus 1 kuvakaappaus vuodessa 5 vuotta</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Karsitaan Tuloksia</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Tiivistelmä tulee näkyviin tässä</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Kuvakaappaukset Poistettu</sys:String>
@@ -284,11 +284,11 @@ Valitse Kyllä käyttääksesi ehdotettua kansiota, Ei valita toista, tai Peruut
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Ole hyvä ja määritä restic executable polku.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Restaali suoritettava tiedosto on voimassa.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">•Virheellinen restaali suoritettava tiedosto tai ei käytettävissä.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Määritä polku ludusavi suoritettavaan tiedostoon.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Ludusavi suoritettava tiedosto on voimassa.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">¶ Virheellinen ludusavi suoritettava tai ei käytettävissä.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Vahvistusvirhe</sys:String>
