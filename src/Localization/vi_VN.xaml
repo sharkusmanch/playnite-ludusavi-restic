@@ -76,16 +76,16 @@ Chế độ bao gồm: Không có trò chơi nào được sao lưu. Có thể t
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Tạo bản sao lưu dữ liệu khi gỡ cài đặt trò chơi.</sys:String>
 
     <!-- Setup Wizard Strings -->
-    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified">✓ Đã tìm thấy và xác minh tệp thực thi Restic.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticNotFound">⚠ Không thể tự động phát hiện restic. Vui lòng chỉ định đường dẫn thủ công.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified">✓ Đã tìm thấy và xác minh tệp thực thi Ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">⚠ Không thể tự động phát hiện ludusavi. Vui lòng chỉ định đường dẫn thủ công.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticNotFound">Could not automatically detect restic. Please specify the path manually.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviFoundVerified"> Ludusavi executable found and verified.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviNotFound">Could not automatically detect ludusavi. Please specify the path manually.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupResticRequired">Vui lòng chỉ định đường dẫn đến tệp thực thi restic.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticValid">✓ Tệp thực thi Restic hợp lệ.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupResticInvalid">✗ Tệp thực thi restic không hợp lệ hoặc không thể truy cập.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticValid"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupResticInvalid"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviRequired">Vui lòng chỉ định đường dẫn đến tệp thực thi ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviValid">✓ Tệp thực thi Ludusavi hợp lệ.</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid">✗ Tệp thực thi ludusavi không hợp lệ hoặc không thể truy cập.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Invalid ludusavi executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Đúng</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryNo">KHÔNG</sys:String>
 
@@ -200,11 +200,11 @@ Có vẻ như đây là lần đầu tiên bạn sử dụng tiện ích mở r�
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Hãy chụp ảnh hàng năm trong N năm:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Hãy chụp một bức ảnh mỗi năm trong suốt số năm này.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Ví dụ với cài đặt mặc định:</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample">• Giữ lại 10 ảnh chụp nhanh gần nhất
-• Thêm 1 ảnh chụp nhanh mỗi ngày trong 7 ngày
-• Thêm 1 ảnh chụp nhanh mỗi tuần trong 4 tuần
-• Thêm 1 ảnh chụp nhanh mỗi tháng trong 12 tháng
-• Thêm 1 ảnh chụp nhanh mỗi năm trong 5 năm</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
+• Plus 1 snapshot per day for 7 days
+• Plus 1 snapshot per week for 4 weeks
+• Plus 1 snapshot per month for 12 months
+• Plus 1 snapshot per year for 5 years</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Kết quả cắt tỉa</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Thông tin tóm tắt sẽ xuất hiện ở đây.</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Ảnh chụp màn hình đã bị xóa</sys:String>
@@ -284,11 +284,11 @@ Chọn Có để sử dụng thư mục được đề xuất, Không để ch�
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Vui lòng chỉ định đường dẫn đến tệp thực thi restic.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidResticExecutable">✓ Tệp thực thi Restic hợp lệ.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidResticExecutable">✗ Tệp thực thi restic không hợp lệ hoặc không thể truy cập.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidResticExecutable"> Restic executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidResticExecutable"> Invalid restic executable or not accessible.</sys:String>
     <sys:String x:Key="LOCLuduRestPleaseSpecifyLudusaviPath">Vui lòng chỉ định đường dẫn đến tệp thực thi ludusavi.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable">✓ Tệp thực thi Ludusavi hợp lệ.</sys:String>
-    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable">✗ Tệp thực thi ludusavi không hợp lệ hoặc không thể truy cập.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidLudusaviExecutable"> Ludusavi executable is valid.</sys:String>
+    <sys:String x:Key="LOCLuduRestInvalidLudusaviExecutable"> Invalid ludusavi executable or not accessible.</sys:String>
 
     <!-- Setup validation -->
     <sys:String x:Key="LOCLuduRestValidationError">Lỗi xác thực</sys:String>
