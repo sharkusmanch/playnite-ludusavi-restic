@@ -11,20 +11,23 @@ namespace LudusaviRestic
     public class BackupGameTask : BaseBackupTask
     {
         private Game game;
+        private bool isManual;
 
-        public BackupGameTask(Game game, SemaphoreSlim semaphore, BackupContext context) : base(semaphore, context)
+        public BackupGameTask(Game game, SemaphoreSlim semaphore, BackupContext context, bool isManual = false) : base(semaphore, context)
         {
             this.game = game;
+            this.isManual = isManual;
         }
 
-        public BackupGameTask(Game game, SemaphoreSlim semaphore, BackupContext context, IList<string> extraTags) : base(semaphore, context, extraTags)
+        public BackupGameTask(Game game, SemaphoreSlim semaphore, BackupContext context, IList<string> extraTags, bool isManual = false) : base(semaphore, context, extraTags)
         {
             this.game = game;
+            this.isManual = isManual;
         }
 
         protected override void Backup()
         {
-            Backup(this.semaphore, this.context, this.game, this.extraTags);
+            Backup(this.semaphore, this.context, this.game, this.extraTags, this.isManual);
         }
 
         internal static IList<string> ParseGameFiles(string gameName, string ludusaviJson)
@@ -92,12 +95,12 @@ namespace LudusaviRestic
             }
         }
 
-        protected static void Backup(SemaphoreSlim semaphore, BackupContext context, Game game, IList<string> extraTags)
+        protected static void Backup(SemaphoreSlim semaphore, BackupContext context, Game game, IList<string> extraTags, bool isManual)
         {
             try
             {
                 semaphore.Wait();
-                Backup(game, context, extraTags);
+                Backup(game, context, extraTags, isManual);
             }
             finally
             {
@@ -105,7 +108,7 @@ namespace LudusaviRestic
             }
         }
 
-        protected static void Backup(Game game, BackupContext context, IList<string> extraTags)
+        protected static void Backup(Game game, BackupContext context, IList<string> extraTags, bool isManual)
         {
             IList<String> files = GameFiles(game, context);
 
@@ -114,7 +117,29 @@ namespace LudusaviRestic
                 return;
             }
 
-            CreateSnapshot(files, context, game, extraTags);
+            var result = CreateSnapshot(files, context, game, extraTags);
+            string notifId = context.UniqueNotificationID($"game_{game.Name}");
+
+            switch (result)
+            {
+                case SnapshotResult.Failed:
+                    SendNotification($"Failed to create restic game saves snapshot {game.Name}", NotificationType.Error, context, notifId);
+                    break;
+                case SnapshotResult.PartialFailure:
+                    SendNotification($"Restic failed to read some game save files for {game.Name}", NotificationType.Error, context, notifId);
+                    break;
+                case SnapshotResult.Error:
+                    SendNotification($"Error creating snapshot for {game.Name}", NotificationType.Error, context, notifId);
+                    break;
+                case SnapshotResult.Success:
+                    bool shouldNotify = (isManual && context.Settings.NotifyOnManualBackup)
+                        || context.Settings.NotificationLevel == NotificationLevel.Verbose;
+                    if (shouldNotify)
+                    {
+                        SendNotification($"Successfully created game data snapshot for {game.Name}", NotificationType.Info, context, notifId);
+                    }
+                    break;
+            }
         }
     }
 }

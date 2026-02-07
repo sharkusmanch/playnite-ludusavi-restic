@@ -88,6 +88,12 @@ namespace LudusaviRestic
         private string gameplaySnapshotTag = "gameplay";
         public string GameplaySnapshotTag { get { return gameplaySnapshotTag; } set { gameplaySnapshotTag = value; ; NotifyPropertyChanged("GameplaySnapshotTag"); } }
 
+        private NotificationLevel notificationLevel = NotificationLevel.Summary;
+        public NotificationLevel NotificationLevel { get { return notificationLevel; } set { notificationLevel = value; NotifyPropertyChanged("NotificationLevel"); } }
+
+        private bool notifyOnManualBackup = true;
+        public bool NotifyOnManualBackup { get { return notifyOnManualBackup; } set { notifyOnManualBackup = value; NotifyPropertyChanged("NotifyOnManualBackup"); } }
+
         private bool enableRetentionPolicy = false;
         public bool EnableRetentionPolicy { get { return enableRetentionPolicy; } set { enableRetentionPolicy = value; NotifyPropertyChanged("EnableRetentionPolicy"); } }
 
@@ -187,6 +193,10 @@ namespace LudusaviRestic
                 KeepYearly = savedSettings.KeepYearly;
                 EnableRetentionPolicy = savedSettings.EnableRetentionPolicy;
                 GameIntervalOverrides = savedSettings.GameIntervalOverrides;
+
+                // Load notification settings
+                NotificationLevel = savedSettings.NotificationLevel;
+                NotifyOnManualBackup = savedSettings.NotifyOnManualBackup;
             }
 
             // Auto-detect restic executable if not configured or invalid

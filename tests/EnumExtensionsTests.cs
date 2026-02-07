@@ -64,5 +64,41 @@ namespace LudusaviRestic.Tests
             var invalid = (TestEnum)999;
             Assert.Equal(string.Empty, invalid.GetDescription());
         }
+
+        // --- NotificationLevel enum ---
+
+        [Fact]
+        public void GetMax_NotificationLevel_ReturnsTwo()
+        {
+            Assert.Equal(2, NotificationLevel.ErrorsOnly.GetMax());
+        }
+
+        [Fact]
+        public void GetMin_NotificationLevel_ReturnsZero()
+        {
+            Assert.Equal(0, NotificationLevel.ErrorsOnly.GetMin());
+        }
+
+        [Fact]
+        public void GetDescription_NotificationLevel_ErrorsOnly()
+        {
+            // ResourceProvider wraps LOC keys in <!...!> outside Playnite runtime
+            var desc = NotificationLevel.ErrorsOnly.GetDescription();
+            Assert.Contains("LOCLuduRestNotificationLevelErrorsOnly", desc);
+        }
+
+        [Fact]
+        public void GetDescription_NotificationLevel_Summary()
+        {
+            var desc = NotificationLevel.Summary.GetDescription();
+            Assert.Contains("LOCLuduRestNotificationLevelSummary", desc);
+        }
+
+        [Fact]
+        public void GetDescription_NotificationLevel_Verbose()
+        {
+            var desc = NotificationLevel.Verbose.GetDescription();
+            Assert.Contains("LOCLuduRestNotificationLevelVerbose", desc);
+        }
     }
 }

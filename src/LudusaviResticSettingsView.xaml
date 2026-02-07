@@ -85,6 +85,18 @@
                             <TextBlock Margin="20,10,0,0" Text="{DynamicResource LOCLuduRestBackupModeNote}" TextWrapping="Wrap"/>
                         </StackPanel>
 
+                        <StackPanel Margin="10">
+                            <TextBlock Text="{DynamicResource LOCLuduRestNotificationLevel}" />
+                            <ComboBox MinWidth="100" Margin="10,0,0,0"
+                                SelectedValue="{Binding NotificationLevel}"
+                                beh:SelectorBehaviors.EnumSource="{x:Type LR:NotificationLevel}" />
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
+                            <CheckBox IsChecked="{Binding NotifyOnManualBackup}"
+                                      Content="{DynamicResource LOCLuduRestNotifyOnManualBackup}" />
+                        </StackPanel>
+
                         <StackPanel Margin="15">
                             <CheckBox IsChecked="{Binding BackupOnUninstall}" Content="{DynamicResource LOCLuduRestBackupOnUninstall}" />
                         </StackPanel>

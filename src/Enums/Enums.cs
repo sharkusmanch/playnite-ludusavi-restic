@@ -12,4 +12,14 @@ namespace LudusaviRestic
         [Description("LOCLuduRestBackupIncludeMode")]
         Include
     }
+
+    public enum NotificationLevel
+    {
+        [Description("LOCLuduRestNotificationLevelErrorsOnly")]
+        ErrorsOnly,
+        [Description("LOCLuduRestNotificationLevelSummary")]
+        Summary,
+        [Description("LOCLuduRestNotificationLevelVerbose")]
+        Verbose
+    }
 }
