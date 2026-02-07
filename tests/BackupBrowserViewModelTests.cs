@@ -210,5 +210,59 @@ namespace LudusaviRestic.Tests
             Assert.Single(result);
             Assert.Equal("All Games", result[0]);
         }
+        // --- RemoveSnapshotFromCache (issue #84) ---
+
+        [Fact]
+        public void RemoveSnapshotFromCache_RemovesFromBothCollections()
+        {
+            var snapshot1 = new BackupSnapshot { Id = "aaa", Tags = new List<string> { "Game1" } };
+            var snapshot2 = new BackupSnapshot { Id = "bbb", Tags = new List<string> { "Game2" } };
+            var allSnapshots = new List<BackupSnapshot> { snapshot1, snapshot2 };
+            var visibleSnapshots = new List<BackupSnapshot> { snapshot1, snapshot2 };
+
+            BackupBrowserViewModel.RemoveSnapshotFromCache(allSnapshots, visibleSnapshots, snapshot1);
+
+            Assert.Single(allSnapshots);
+            Assert.Single(visibleSnapshots);
+            Assert.DoesNotContain(snapshot1, allSnapshots);
+            Assert.DoesNotContain(snapshot1, visibleSnapshots);
+        }
+
+        [Fact]
+        public void RemoveSnapshotFromCache_DeletedSnapshotDoesNotReappearOnRefilter()
+        {
+            var snapshot1 = new BackupSnapshot { Id = "aaa", Tags = new List<string> { "Game1" } };
+            var snapshot2 = new BackupSnapshot { Id = "bbb", Tags = new List<string> { "Game1" } };
+            var snapshot3 = new BackupSnapshot { Id = "ccc", Tags = new List<string> { "Game2" } };
+            var allSnapshots = new List<BackupSnapshot> { snapshot1, snapshot2, snapshot3 };
+            var visibleGame1 = BackupBrowserViewModel.FilterSnapshots(allSnapshots, "Game1").ToList();
+
+            // Delete snapshot1 from cache (simulates the fix for issue #84)
+            BackupBrowserViewModel.RemoveSnapshotFromCache(allSnapshots, visibleGame1, snapshot1);
+
+            // Switch filter to All Games, then back to Game1 (the bug scenario)
+            var allGamesView = BackupBrowserViewModel.FilterSnapshots(allSnapshots, "All Games");
+            var game1ViewAgain = BackupBrowserViewModel.FilterSnapshots(allSnapshots, "Game1");
+
+            Assert.DoesNotContain(snapshot1, allGamesView);
+            Assert.DoesNotContain(snapshot1, game1ViewAgain);
+            Assert.Single(game1ViewAgain);
+            Assert.Equal("bbb", game1ViewAgain[0].Id);
+        }
+
+        [Fact]
+        public void RemoveSnapshotFromCache_SnapshotNotInVisible_StillRemovesFromAll()
+        {
+            var snapshot1 = new BackupSnapshot { Id = "aaa", Tags = new List<string> { "Game1" } };
+            var snapshot2 = new BackupSnapshot { Id = "bbb", Tags = new List<string> { "Game2" } };
+            var allSnapshots = new List<BackupSnapshot> { snapshot1, snapshot2 };
+            // Visible is filtered to Game2 only
+            var visibleSnapshots = new List<BackupSnapshot> { snapshot2 };
+
+            BackupBrowserViewModel.RemoveSnapshotFromCache(allSnapshots, visibleSnapshots, snapshot1);
+
+            Assert.Single(allSnapshots);
+            Assert.DoesNotContain(snapshot1, allSnapshots);
+        }
     }
 }

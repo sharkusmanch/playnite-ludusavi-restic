@@ -334,6 +334,30 @@ namespace LudusaviRestic.Tests
             Assert.NotNull(found);
         }
 
+        // --- PromptForGameStoppedTag serialization (issue #28) ---
+
+        [Fact]
+        public void PromptForGameStoppedTag_SerializationRoundTrip()
+        {
+            var settings = new LudusaviResticSettings();
+            settings.PromptForGameStoppedTag = true;
+
+            var json = JsonConvert.SerializeObject(settings);
+            var deserialized = JsonConvert.DeserializeObject<LudusaviResticSettings>(json);
+
+            Assert.True(deserialized.PromptForGameStoppedTag);
+        }
+
+        [Fact]
+        public void BackwardCompat_OldJsonWithoutPromptForTag_DeserializesToFalse()
+        {
+            string json = @"{""LudusaviExecutablePath"":""ludusavi"",""ResticExecutablePath"":""restic""}";
+
+            var deserialized = JsonConvert.DeserializeObject<LudusaviResticSettings>(json);
+
+            Assert.False(deserialized.PromptForGameStoppedTag);
+        }
+
         // --- NotificationLevel serialization ---
 
         [Fact]
