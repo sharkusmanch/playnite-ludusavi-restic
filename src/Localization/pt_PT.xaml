@@ -208,6 +208,8 @@ Parece ser a sua primeira vez utilizando a extensão ou a sua configuração inc
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Manter um instantâneo por mês para este número de meses</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Mantenha instantâneos anuais por N anos:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Manter um instantâneo por ano para estes muitos anos</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exemplo com as configurações padrão:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Manter os últimos 10 instantâneos
 • Mais 1 instantâneo por dia durante 7 dias
