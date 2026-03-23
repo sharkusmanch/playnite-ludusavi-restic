@@ -208,6 +208,8 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">每月保留一張快照，持續若干個月。</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">保留 N 年的年度快照：</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">每年保留一份快照，持續這麼多年</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">使用預設設定的範例：</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
 • Plus 1 snapshot per day for 7 days
