@@ -15,9 +15,9 @@
 
     <sys:String x:Key="LOCLuduRestBrowse">Bladeren</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Pad van binnenlandse repository</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository pad</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Huiselijk repository wachtwoord</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository wachtwoord</sys:String>
     <sys:String x:Key="LOCLuduRestShow">Weergeven</sys:String>
     <sys:String x:Key="LOCLuduRestHide">Verbergen</sys:String>
 
@@ -27,7 +27,7 @@
 
     <sys:String x:Key="LOCLuduRestVerify">Verifiëren</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Binnenlands uitvoerbaar pad</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Pad naar Restic programma</sys:String>
 
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi uitvoerbaar pad</sys:String>
 
@@ -76,13 +76,13 @@ Inclusief modus: er worden geen spellen geback-upt. Spellen kunnen de inclusief 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Maak een opslagback-up als het spel gedeïnstalleerd is</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Back-up meldingsniveau</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Alleen fouten</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Samenvatting</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Uitgebreid (per spel)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Melding tonen bij handmatige back-ups</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">{0} van {1} spellen succesvol geback-upt.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">{0} van {1} spellen geback-upt. {2} mislukt: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic-uitvoerbaar bestand gevonden en geverifieerd.</sys:String>
@@ -106,7 +106,7 @@ Inclusief modus: er worden geen spellen geback-upt. Spellen kunnen de inclusief 
     <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-detectie mislukt</sys:String>
     <sys:String x:Key="LOCLuduRestLudusaviDetected">Uitvoerbaar Ludusavi gedetecteerd op: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Kan ludusavi-uitvoerbaar niet automatisch detecteren. Geef het pad handmatig op.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Binnenlands uitvoerbaar gedetecteerd op: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">Restic programma gedetecteerd op: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestResticNotDetected">Kan restic uitvoerbaar niet automatisch detecteren. Specificeer het pad handmatig.</sys:String>
 
     <!-- Settings verification -->
@@ -117,10 +117,10 @@ Inclusief modus: er worden geen spellen geback-upt. Spellen kunnen de inclusief 
     <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Auto-detectie mislukt</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">Uitvoerbaar Ludusavi gedetecteerd op: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Kan ludusavi-uitvoerbaar niet automatisch detecteren. Geef het pad handmatig op.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Binnenlands uitvoerbaar gedetecteerd op: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restic programma gedetecteerd op: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Kan restic uitvoerbaar niet automatisch detecteren. Specificeer het pad handmatig.</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Settings verificatie mislukt: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verifiëren restische opslagplaatsverbinding...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">Restic repository verbinding verifiëren...</sys:String>
     <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Executable controleren van ludusavi...</sys:String>
 
     <!-- Maintenance operation strings -->
@@ -132,7 +132,7 @@ Inclusief modus: er worden geen spellen geback-upt. Spellen kunnen de inclusief 
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Het Retentiebeleid is uitgeschakeld. Activeer het in de extensie-instellingen om deze functie te gebruiken.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Behoud beleid compleet</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Het behoudsbeleid is succesvol toegepast. Oude snapshots werden verwijderd.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Opschonen voltooid</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Opschonen operatie met succes voltooid.</sys:String>
 
     <!-- Dialog prompts -->
@@ -164,7 +164,7 @@ Wil je eerst een droge uitvoeren om te zien wat er wordt verwijderd voordat je d
     <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Droog uitgevoerd voltooid. Deze bewerking verwijdert ongebruikte gegevens uit de repository. Wilt u doorgaan met het werkelijke opschonen?</sys:String>
 
     <!-- Welcome and setup -->
-    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - Setup vereist</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welkom - Installatie vereist</sys:String>
     <sys:String x:Key="LOCLuduRestWelcomeMessage">Welkom bij Ludusavi Restic!
 
 Dit lijkt je eerste keer te zijn met behulp van de extensie of je configuratie is onvolledig. Wilt u de installatiewizard uitvoeren om uw backup repository te configureren?</sys:String>
@@ -183,7 +183,7 @@ Dit lijkt je eerste keer te zijn met behulp van de extensie of je configuratie i
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Laatste momentopname herstellen</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Geen snapshots gevonden voor dit spel.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Momentopname {0} herstellen voor {1} naar map:\n{2}\n\nBestaande bestanden kunnen worden overschreven. Doorgaan?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Snapshot herstellen</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Momentopname herstellen...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Snapshot succesvol hersteld.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Vernieuwen</sys:String>
@@ -191,7 +191,7 @@ Dit lijkt je eerste keer te zijn met behulp van de extensie of je configuratie i
     <sys:String x:Key="LOCLuduRestDeleteSelected">Geselecteerde verwijderen</sys:String>
     <sys:String x:Key="LOCLuduRestFilterByGame">Filter op spel:</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotIdHeader">Momentopname ID</sys:String>
-    <sys:String x:Key="LOCLuduRestDateHeader">Datum:</sys:String>
+    <sys:String x:Key="LOCLuduRestDateHeader">Datum</sys:String>
     <sys:String x:Key="LOCLuduRestTagsHeader">Labels</sys:String>
     <sys:String x:Key="LOCLuduRestTotalSnapshots">Totaal aantal momentopnamen</sys:String>
     <sys:String x:Key="LOCLuduRestAutoDetect">Automatisch detecteren</sys:String>
@@ -219,14 +219,14 @@ Dit lijkt je eerste keer te zijn met behulp van de extensie of je configuratie i
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">Opschonen resultaten</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Samenvatting informatie zal hier verschijnen</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Momentopnamen verwijderd</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesAffected">Getroffen partijen</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesAffected">Getroffen spellen</sys:String>
     <sys:String x:Key="LOCLuduRestDataDeleted">Gegevens verwijderd</sys:String>
     <sys:String x:Key="LOCLuduRestStatus">status</sys:String>
     <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Verwijderde snapshots</sys:String>
     <sys:String x:Key="LOCLuduRestClearFilter">Filter wissen</sys:String>
-    <sys:String x:Key="LOCLuduRestGameHeader">Wedstrijd</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">Spel</sys:String>
     <sys:String x:Key="LOCLuduRestDateTimeHeader">Datum/Tijd</sys:String>
-    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Samenvatting wedstrijden</sys:String>
+    <sys:String x:Key="LOCLuduRestGamesSummaryTab">Spellen overzicht</sys:String>
     <sys:String x:Key="LOCLuduRestGameNameHeader">Spel naam</sys:String>
     <sys:String x:Key="LOCLuduRestTagsSummaryTab">Samenvatting tags</sys:String>
     <sys:String x:Key="LOCLuduRestTagHeader">Tagnaam</sys:String>
@@ -238,7 +238,7 @@ Dit lijkt je eerste keer te zijn met behulp van de extensie of je configuratie i
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Momentopname {0} herstellen naar {1}? Dit kan bestaande bestanden overschrijven.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Momentopname herstellen {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} is succesvol hersteld.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Herstel voltooid</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Fout bij het herstellen van snapshot: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Fout bij herstellen van momentopname: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (spel: {1}) bevat {2} bestanden.
@@ -266,7 +266,7 @@ Kies Ja om de voorgestelde map te gebruiken, Nee om een andere te kiezen, of Ann
     <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Stel een bewaarbeleid in.</sys:String>
     <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Override van het bewaarbeleid</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Stel waarden in om het algemene bewaarbeleid voor dit spel te overschrijven. Lege velden zijn uitgeschakeld (ingesteld op 0), dus alleen de waarden die u opgeeft, zijn van toepassing.</sys:String>
-    <sys:String x:Key="LOCLuduRestSave">Redden</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Opslaan</sys:String>
     <sys:String x:Key="LOCLuduRestCancel">Annuleren</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} spel(len) hebben per-spel retentie-overrides.</sys:String>
     <sys:String x:Key="LOCLuduRestListingSnapshots">Momentopnamen weergeven...</sys:String>
@@ -287,9 +287,9 @@ Kies Ja om de voorgestelde map te gebruiken, Nee om een andere te kiezen, of Ann
     <sys:String x:Key="LOCLuduRestSelectResticExecutable">Selecteer intern uitvoerbaar</sys:String>
     <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Selecteer Ludusavi Executable</sys:String>
     <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Selecteer opslaglocatie</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Uitvoerbare bestanden (*.exe)½ *.exe→Alle bestanden (*.*)½ *.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Uitvoerbaar: *.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Vertrouwelijke *.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
     <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Volledig onderhoud...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Repository controleren...</sys:String>
 

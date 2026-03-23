@@ -76,13 +76,13 @@ Belefoglalás mód: Egyetlen játékról sem készül biztonsági mentés. A já
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Biztonsági mentés létrehozása a játék eltávolításakor</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Biztonsági mentés értesítési szintje</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Csak hibák</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Összefoglalás</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Részletes (játékonként)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Értesítés megjelenítése kézi biztonsági mentésekhez</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">{0} / {1} játék biztonsági mentése sikeresen elkészült.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">{0} / {1} játék mentve. {2} sikertelen: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic futtatható fájl található és ellenőrizve van.</sys:String>
@@ -132,17 +132,17 @@ Belefoglalás mód: Egyetlen játékról sem készül biztonsági mentés. A já
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">A megőrzési szabályzat le van tiltva. A funkció használatához engedélyezze a bővítmény beállításaiban.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Megőrzési szabályzat kitöltve</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">A megőrzési szabályzat alkalmazása sikeresen megtörtént. A régi pillanatképek törölve lettek.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Szilva teljes</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">A metszési művelet sikeresen befejeződött.</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Takarítás kész</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">A takarítási művelet sikeresen befejeződött.</sys:String>
 
     <!-- Dialog prompts -->
     <sys:String x:Key="LOCLuduRestFullMaintenance">Teljes körű karbantartás</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Szeretne először egy próbaverziót végrehajtani, hogy lássa, mi kerüljön eltávolításra, mielőtt ténylegesen törölné az adatokat?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicy">Megőrzési szabályzat</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Szeretne először egy próbaverziót végrehajtani, hogy lássa, mi törlődne, mielőtt ténylegesen eltávolítaná a pillanatképeket?</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Szilva</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">Takarítás</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Szeretne először egy próbaverziót végrehajtani, hogy lássa, mi kerüljön eltávolításra, mielőtt ténylegesen törölné az adatokat?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithPruning">Folytatja a metszést?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithPruning">Folytatja a takarítást?</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">A próbaverzió befejeződött. {0} pillanatképet törölni fog a rendszer. Folytatja a tényleges tisztítást?</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">A próbaverzió befejeződött. {0} pillanatkép törlődne. Folytatja a megőrzési szabályzat alkalmazását?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">Folytatja a megőrzési szabályzattal?</sys:String>
@@ -157,7 +157,7 @@ Belefoglalás mód: Egyetlen játékról sem készül biztonsági mentés. A já
 Szeretne először egy próbaverziót végrehajtani, hogy lássa, mi törlődne?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Az előnézet elkészült. {0} pillanatkép törlődne a megőrzési szabályzatnak megfelelően. Folytatja a törlést?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">Folytatja a törléssel?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">Szilvatároló</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">Tároló takarítása</sys:String>
     <sys:String x:Key="LOCLuduRestPruneWarningMessage">A tisztítás eltávolítja a nem használt adatblokkokat a tárházból. Ez a művelet visszafordíthatatlan.
 
 Szeretne először egy próbafuttatást végrehajtani, hogy lássa, mi kerül eltávolításra, mielőtt ténylegesen törölné az adatokat?</sys:String>
@@ -216,7 +216,7 @@ Szeretne először egy próbafuttatást végrehajtani, hogy lássa, mi kerül el
 • Plusz heti 1 pillanatkép 4 héten keresztül
 • Plusz havi 1 pillanatkép 12 hónapig
 • Plusz évi 1 pillanatkép 5 évig</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Metszés eredményei</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Takarítás eredményei</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Összefoglaló információk jelennek meg itt</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Pillanatképek törölve</sys:String>
     <sys:String x:Key="LOCLuduRestGamesAffected">Érintett játékok</sys:String>
@@ -266,7 +266,7 @@ Válassza az Igen lehetőséget a javasolt mappa használatához, a Nem lehetős
     <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Megőrzési szabályzat beállítása</sys:String>
     <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Megőrzési szabályzat felülbírálása</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Állítson be értékeket a játék globális adatmegőrzési szabályzatának felülírásához. Az üres mezők le vannak tiltva (0-ra vannak állítva), így csak a megadott értékek lesznek érvényesek.</sys:String>
-    <sys:String x:Key="LOCLuduRestSave">Megtakarítás</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Mentés</sys:String>
     <sys:String x:Key="LOCLuduRestCancel">Mégsem</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} játék(ok) játékonkénti adatmegőrzési felülbírálatokkal rendelkeznek.</sys:String>
     <sys:String x:Key="LOCLuduRestListingSnapshots">Pillanatképek listázása...</sys:String>
@@ -276,10 +276,10 @@ Válassza az Igen lehetőséget a javasolt mappa használatához, a Nem lehetős
     <sys:String x:Key="LOCLuduRestSetupWizard">Beállítóvarázsló</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Az összes játék biztonsági mentése</sys:String>
     <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Biztonsági mentések pillanatképeinek böngészése</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceAll">Mind (pipáld ki + szilva)</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceAll">Mind (ellenőrzés + takarítás)</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceVerify">Ellenőrzés</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Régi pillanatképek törlése</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenancePrune">A nem használt adatok metszése</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenancePrune">Nem használt adatok takarítása</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceSection">Karbantartás</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSection">Beállítás</sys:String>
 
@@ -315,11 +315,11 @@ Válassza az Igen lehetőséget a javasolt mappa használatához, a Nem lehetős
     <sys:String x:Key="LOCLuduRestInitializingRepository">Adattár inicializálása...</sys:String>
     <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Megőrzési szabályzat alkalmazása...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Adatmegőrzési szabályzat előnézetének futtatása...</sys:String>
-    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Megőrzési szabályzat alkalmazása és metszés...</sys:String>
+    <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Megőrzési szabályzat alkalmazása és takarítás...</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">A tárház integritásának ellenőrzése...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Száraz futás aszalt szilvával...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Nem használt adatok törlése...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Adattár metszése...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Adattár takarítása...</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Egy vagy több játék adatmegőrzési szabályzatának alkalmazása sikertelen. A részletekért tekintse meg a nyers kimenetet.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Egyetlen pillanatkép sem törlődik. Minden pillanatkép megfelel a jelenlegi adatmegőrzési szabályzatnak.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Adattár integritásának ellenőrzése adatellenőrzéssel...</sys:String>

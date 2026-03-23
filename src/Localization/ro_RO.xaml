@@ -76,13 +76,13 @@ Modul Include : niciun joc nu este salvat. Jocurile pot avea eticheta include ad
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Creați o copie de rezervă atunci când jocul este dezinstalat</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Nivel notificare backup</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Doar erori</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Rezumat</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Detaliat (per joc)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Afișează notificare pentru backup-urile manuale</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backup realizat cu succes pentru {0} din {1} jocuri.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backup realizat pentru {0} din {1} jocuri. {2} au eșuat: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Executabilul Restic găsit și verificat.</sys:String>
@@ -132,7 +132,7 @@ Modul Include : niciun joc nu este salvat. Jocurile pot avea eticheta include ad
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Politica de reținere este dezactivată. Vă rugăm să o activați în setările extensiei pentru a utiliza această caracteristică.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Politica de reținere completă</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Politica de reținere a fost aplicată. Imaginile vechi au fost șterse.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Curățare finalizată</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Operația de curățare finalizată cu succes.</sys:String>
 
     <!-- Dialog prompts -->
@@ -183,7 +183,7 @@ Aceasta pare să fie prima dată când folosiți extensia sau configurația dvs.
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restaurează ultimul instantaneu</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Nu s-au găsit imagini pentru acest joc.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restaurează instantaneul {0} pentru directorul {1} :\n{2}\n\nFișierele existente pot fi suprascrise. Continuați?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restaurare instantaneu</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restaurare instantaneu...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Instantaneu restaurat cu succes.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Împrospătează</sys:String>
@@ -238,7 +238,7 @@ Aceasta pare să fie prima dată când folosiți extensia sau configurația dvs.
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Restaurați instantaneul {0} la {1}? Acest lucru poate suprascrie fișierele existente.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restaurare instantaneu {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Instantaneul {0} a fost restaurat cu succes.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Restaurare finalizată</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Nu s-a reușit restaurarea instantaneului: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Eroare la restaurarea instantaneului: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Instantaneu {0} (joc: {1}) conține fișiere {2} .
@@ -287,9 +287,9 @@ Alegeți Da pentru a utiliza folderul sugerat, Nu poți alege altul sau anula pe
     <sys:String x:Key="LOCLuduRestSelectResticExecutable">Selectați Restic Executabil</sys:String>
     <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Selectați Ludusavi executabil</sys:String>
     <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Selectează locația depozitului</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Fișiere executabile (*.exe)&lt;unk&gt; *.exe&lt;unk&gt; Toate fișierele (*.*)&lt;unk&gt; *.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executabil* .exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">*.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
     <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Se execută întreținerea completă...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verificare repo...</sys:String>
 

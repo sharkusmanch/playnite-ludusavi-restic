@@ -76,13 +76,13 @@ Sisällytä tila: Ei pelejä varmuuskopioida. Pelit voivat sisältää lisätyn 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Luo varmuuskopio kun peli on poistettu</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Varmuuskopioinnin ilmoitustaso</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Vain virheet</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Yhteenveto</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Yksityiskohtainen (pelikohtainen)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Näytä ilmoitus manuaalisista varmuuskopioista</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Varmuuskopioitiin onnistuneesti {0} / {1} peliä.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Varmuuskopioitiin {0} / {1} peliä. {2} epäonnistui: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic-suoritettava tiedosto löytyi ja varmistettu.</sys:String>
@@ -132,7 +132,7 @@ Sisällytä tila: Ei pelejä varmuuskopioida. Pelit voivat sisältää lisätyn 
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Säilytyskäytäntö on poistettu käytöstä. Ota se käyttöön lisäosien asetuksissa käyttääksesi tätä ominaisuutta.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Säilyttämiskäytäntö Valmis</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Säilytyskäytäntö käytössä onnistuneesti. Vanhat tilannekuvat on poistettu.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Karsinta valmis</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Karsinta suoritettu onnistuneesti.</sys:String>
 
     <!-- Dialog prompts -->
@@ -183,7 +183,7 @@ Tämä näyttää olevan ensimmäinen kerta, kun käytät laajennusta tai asetuk
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Palauta uusin tilannekuva</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Tälle pelille ei löytynyt tilannekuvia.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Palauta tilannekuvan {0} {1} kansioon:\n{2}\n\nOlemassaolevat tiedostot voidaan korvata. Jatketaanko?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Palauta tilannekuva</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Palautetaan tilannekuvaa...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Tilannevedos palautettu onnistuneesti.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Päivitä</sys:String>
@@ -238,7 +238,7 @@ Tämä näyttää olevan ensimmäinen kerta, kun käytät laajennusta tai asetuk
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Palauta kuvakaappaus {0} {1}? Tämä saattaa korvata olemassa olevia tiedostoja.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Palautetaan tilannekuva {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} palautettu onnistuneesti.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Palautus valmis</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Ei voitu palauttaa tilannekuvaa: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Virhe palautettaessa tilannekuvaa: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (peli: {1}) sisältää {2} tiedostoja.
@@ -247,7 +247,7 @@ Olemassa olevat tiedostot (ylikirjoitetaan): {4}
 Ehdotettu palautuskansio: {5}
 
 Valitse Kyllä käyttääksesi ehdotettua kansiota, Ei valita toista, tai Peruuta keskeytettäväksi.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(none)</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">(ei mitään)</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">Ei voida määrittää pelin nimeä tälle tilannekuvalle.</sys:String>
 
     <!-- Game overrides -->
@@ -287,9 +287,9 @@ Valitse Kyllä käyttääksesi ehdotettua kansiota, Ei valita toista, tai Peruut
     <sys:String x:Key="LOCLuduRestSelectResticExecutable">Valitse Resettinen Suoritusohjelma</sys:String>
     <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Valitse Ludusavi Suoritettava</sys:String>
     <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Valitse Repo Sijainti</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Suoritettavat tiedostot (*.exe)©️*.exe¶ Kaikki tiedostot (*.*)¶ *.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Suorituskykyinen *.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Mielipiteet *.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
     <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Käynnissä täysi huolto...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Tarkistetaan repoa...</sys:String>
 

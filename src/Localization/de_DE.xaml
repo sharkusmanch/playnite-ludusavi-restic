@@ -76,13 +76,13 @@ Einbeziehungsmodus: Keine Spiele sind gesichert. Spiele können das Include-Tag 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Backup beim Deinstallieren des Spiels erstellen</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Benachrichtigungsstufe für Backups</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Nur Fehler</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Zusammenfassung</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Ausführlich (pro Spiel)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Benachrichtigung bei manuellen Backups anzeigen</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">{0} von {1} Spielen erfolgreich gesichert.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">{0} von {1} Spielen gesichert. {2} fehlgeschlagen: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Die ausführbare Restic-Datei wurde gefunden und verifiziert.</sys:String>
@@ -132,7 +132,7 @@ Einbeziehungsmodus: Keine Spiele sind gesichert. Spiele können das Include-Tag 
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Die Retention-Richtlinie ist deaktiviert. Bitte aktivieren Sie sie in den Erweiterungseinstellungen, um diese Funktion zu nutzen.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Retention Policy abgeschlossen</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Retention Policy erfolgreich angewandt. Alte Snapshots wurden gelöscht.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Bereinigung abgeschlossen</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Prune Vorgang erfolgreich abgeschlossen.</sys:String>
 
     <!-- Dialog prompts -->
@@ -183,7 +183,7 @@ Dies scheint Ihr erstes Mal mit der Erweiterung zu sein oder Ihre Konfiguration 
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Neueste Schnappschuss wiederherstellen</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Keine Schnappschüsse für dieses Spiel gefunden.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Snapshot {0} für {1} im Ordner wiederherstellen:\n{2}\n\nBestehende Dateien können überschrieben werden. Fortfahren?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Snapshot wiederherstellen</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Momentaufnahme wiederherstellen...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Momentaufnahme erfolgreich wiederhergestellt.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Aktualisieren</sys:String>
@@ -238,7 +238,7 @@ Dies scheint Ihr erstes Mal mit der Erweiterung zu sein oder Ihre Konfiguration 
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Snapshot {0} auf {1}wiederherstellen? Dies kann vorhandene Dateien überschreiben.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Momentaufnahme wiederherstellen {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} erfolgreich wiederhergestellt.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Wiederherstellung abgeschlossen</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Fehler beim Wiederherstellen des Snapshots: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Fehler beim Wiederherstellen des Snapshots: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (Spiel: {1}) enthält {2} Dateien.

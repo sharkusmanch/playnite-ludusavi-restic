@@ -17,7 +17,7 @@
 
     <sys:String x:Key="LOCLuduRestRepoPath">Διαδρομή αντικατάστασης αποθετηρίου</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Κωδικός πρόσβασης Restic repository</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Κωδικός πρόσβασης αποθετηρίου Restic</sys:String>
     <sys:String x:Key="LOCLuduRestShow">Εμφάνιση</sys:String>
     <sys:String x:Key="LOCLuduRestHide">Απόκρυψη</sys:String>
 
@@ -76,13 +76,13 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Δημιουργία αντιγράφου ασφαλείας όταν το παιχνίδι απεγκατασταθεί</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Επίπεδο ειδοποιήσεων αντιγράφων ασφαλείας</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Μόνο σφάλματα</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Περίληψη</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Αναλυτικό (ανά παιχνίδι)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Εμφάνιση ειδοποίησης για χειροκίνητα αντίγραφα ασφαλείας</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Δημιουργήθηκαν αντίγραφα ασφαλείας για {0} από {1} παιχνίδια επιτυχώς.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Δημιουργήθηκαν αντίγραφα ασφαλείας για {0} από {1} παιχνίδια. {2} απέτυχαν: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Βρέθηκε και επαληθεύτηκε το εκτελέσιμο αρχείο Restic.</sys:String>
@@ -120,7 +120,7 @@
     <sys:String x:Key="LOCLuduRestSettingsResticDetected">Ανιχνεύθηκε στέρεο εκτελέσιμο στο: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Αδύνατη η αυτόματη ανίχνευση του εκτελέσιμου restic. Παρακαλώ καθορίστε τη διαδρομή χειροκίνητα.</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Ρυθμίσεις Επαλήθευση απέτυχε: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingRestic">Επαλήθευση σύνδεσης restic repository...</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">Επαλήθευση σύνδεσης αποθετηρίου Restic...</sys:String>
     <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Επαλήθευση εκτελέσιμου ludusavi...</sys:String>
 
     <!-- Maintenance operation strings -->
@@ -132,7 +132,7 @@
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Η πολιτική διατήρησης είναι απενεργοποιημένη. Παρακαλώ ενεργοποιήστε την στις ρυθμίσεις της επέκτασης για να χρησιμοποιήσετε αυτή τη δυνατότητα.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Η Πολιτική Διατήρησης Ολοκληρώθηκε</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Η πολιτική διατήρησης εφαρμόστηκε επιτυχώς. Τα παλιά στιγμιότυπα έχουν διαγραφεί.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Εκκαθάριση Ολοκληρώθηκε</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Η λειτουργία αυτόματης αποθήκευσης ολοκληρώθηκε επιτυχώς.</sys:String>
 
     <!-- Dialog prompts -->
@@ -183,7 +183,7 @@
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Επαναφορά τελευταίου στιγμιότυπου</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Δεν βρέθηκαν στιγμιότυπα για αυτό το παιχνίδι.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Επαναφορά στιγμιότυπου {0} για {1} στο φάκελο:\n{2}\n\nΤα υπάρχοντα αρχεία μπορεί να αντικατασταθούν. Συνέχεια?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Επαναφορά Στιγμιότυπου</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Επαναφορά στιγμιότυπου...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Το στιγμιότυπο επαναφέρθηκε επιτυχώς.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Ανανέωση</sys:String>
@@ -238,7 +238,7 @@
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Επαναφορά στιγμιότυπου {0} στο {1}? Αυτό μπορεί να αντικαταστήσει τα υπάρχοντα αρχεία.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Επαναφορά στιγμιότυπου {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} επαναφέρθηκε με επιτυχία.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Η Επαναφορά Ολοκληρώθηκε</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Αποτυχία επαναφοράς στιγμιοτύπου: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Σφάλμα επαναφοράς στιγμιότυπου: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Στιγμιότυπο {0} (παιχνίδι: {1}) περιέχει αρχεία {2} .
@@ -287,9 +287,9 @@
     <sys:String x:Key="LOCLuduRestSelectResticExecutable">Επιλέξτε Restic Executable</sys:String>
     <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Επιλέξτε Εκτελέσιμο Ludusavi</sys:String>
     <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Επιλέξτε Τοποθεσία Χώρου Αποθήκευσης</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Εκτελέσιμα αρχεία (*.exe) *.exeâ € ™️ Όλα τα αρχεία (*.*) *.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Εκτελέσιμο *.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Εμπιστευτικό *.Conf</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
     <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Εκτέλεση πλήρους συντήρησης...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Επαλήθευση αποθετηρίου...</sys:String>
 

@@ -61,9 +61,9 @@
 
     <sys:String x:Key="LOCLuduRestBackupMode">Yedekleme Modu</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Exclude Mode: All games are eligible to backup by default. Games can have the exclude tag added to prevent backing up.
+    <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Hariç Tutma Modu: Tüm oyunlar varsayılan olarak yedekleme için uygundur. Yedeklemeyi önlemek için oyunlara hariç tutma etiketi eklenebilir.
 
-Include Mode: No games are backed up. Games can have the include tag added to be eligible for backup.</sys:String>
+Dahil Etme Modu: Hiçbir oyun yedeklenmez. Yedekleme için uygun olmak üzere oyunlara dahil etme etiketi eklenebilir.</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Hariç Tutma Modu</sys:String>
 
@@ -76,13 +76,13 @@ Include Mode: No games are backed up. Games can have the include tag added to be
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Oyun kaldırıldığında kayıt dosyasını yedekle</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Yedekleme bildirim seviyesi</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Yalnızca hatalar</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Özet</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Ayrıntılı (oyun başına)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Manuel yedeklemelerde bildirim göster</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">{1} oyundan {0} tanesi başarıyla yedeklendi.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">{1} oyundan {0} tanesi yedeklendi. {2} başarısız: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic yürütülebilir dosyası bulundu ve doğrulandı.</sys:String>
@@ -96,7 +96,7 @@ Include Mode: No games are backed up. Games can have the include tag added to be
     <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> Ludusavi yürütülebilir dosyası geçerlidir.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Ludusavi yürütülebilir dosyası geçersiz veya erişilemiyor.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Evet</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryNo">HAYIR</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryNo">Hayır</sys:String>
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Yedekleme anlık görüntülerini görüntüle</sys:String>
@@ -130,15 +130,15 @@ Include Mode: No games are backed up. Games can have the include tag added to be
     <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Depo doğrulama işlemi başarıyla tamamlandı.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Saklama Politikası Devre Dışı Bırakıldı</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Saklama politikası devre dışı bırakılmıştır. Bu özelliği kullanmak için lütfen uzantı ayarlarından etkinleştirin.</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Müşteri Saklama Politikası Tamamlandı</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Saklama Politikası Tamamlandı</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Saklama politikası başarıyla uygulandı. Eski anlık görüntüler silindi.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Budama Tamamlandı</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Temizleme Tamamlandı</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Budama işlemi başarıyla tamamlandı.</sys:String>
 
     <!-- Dialog prompts -->
     <sys:String x:Key="LOCLuduRestFullMaintenance">Tam Bakım</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Verileri silmeden önce nelerin silineceğini görmek için önce bir deneme çalıştırması yapmak ister misiniz?</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicy">Müşteri Saklama Politikası</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicy">Saklama Politikası</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Gerçek anlık görüntüleri silmeden önce nelerin silineceğini görmek için önce bir deneme çalıştırması yapmak ister misiniz?</sys:String>
     <sys:String x:Key="LOCLuduRestPrune">Budamak</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Verileri silmeden önce nelerin silineceğini görmek için önce bir deneme çalıştırması yapmak ister misiniz?</sys:String>
@@ -195,7 +195,7 @@ Görünüşe göre bu uzantıyı ilk kez kullanıyorsunuz veya yapılandırmanı
     <sys:String x:Key="LOCLuduRestTagsHeader">Etiketler</sys:String>
     <sys:String x:Key="LOCLuduRestTotalSnapshots">Toplam anlık görüntüler</sys:String>
     <sys:String x:Key="LOCLuduRestAutoDetect">Otomatik Algılama</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Müşteri Saklama Politikası</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionPolicyTab">Saklama Politikası</sys:String>
     <sys:String x:Key="LOCLuduRestEnableRetentionPolicy">Otomatik saklama politikasını etkinleştirin</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyHelp">Etkinleştirildiğinde, bu politikalar bakım işlemleri sırasında eski anlık görüntüleri otomatik olarak kaldırmak için uygulanacaktır.</sys:String>
     <sys:String x:Key="LOCLuduRestKeepLastLabel">Son N anlık görüntüyü saklayın:</sys:String>
@@ -309,7 +309,7 @@ Mevcut dosyalar (üzerine yazılacak): {4}
     <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Lütfen depo şifresini girin.</sys:String>
     <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Şifreler eşleşmiyor.</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryYes">Evet</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryNo">HAYIR</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryNo">Hayır</sys:String>
 
     <!-- Progress and initialization messages -->
     <sys:String x:Key="LOCLuduRestInitializingRepository">Depo başlatılıyor...</sys:String>

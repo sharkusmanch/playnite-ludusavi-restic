@@ -76,13 +76,13 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Направите резервну копију када се игра деинсталира</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Ниво обавештења о резервним копијама</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Само грешке</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Резиме</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Детаљно (по игри)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Прикажи обавештење за ручне резервне копије</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Успешно направљена резервна копија {0} од {1} игара.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Направљена резервна копија {0} од {1} игара. {2} неуспешно: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Рестиц извршна датотека је пронађена и верификована.</sys:String>
@@ -132,17 +132,17 @@
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Политика задржавања је онемогућена. Омогућите је у подешавањима проширења да бисте користили ову функцију.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Политика задржавања података је завршена</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Политика задржавања је успешно примењена. Стари снимци су обрисани.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Орезивање је завршено</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Операција оштрења је успешно завршена.</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Чишћење је завршено</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Операција чишћења је успешно завршена.</sys:String>
 
     <!-- Dialog prompts -->
     <sys:String x:Key="LOCLuduRestFullMaintenance">Комплетно одржавање</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Да ли желите прво да извршите пробни рад да видите шта би било обрисано пре него што заправо обришете податке?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicy">Политика задржавања података</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Да ли желите прво да извршите пробни рад да видите шта би било обрисано пре него што заправо уклоните снимке?</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Сува шљива</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">Чишћење</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Да ли желите прво да извршите пробни рад да видите шта би било обрисано пре него што заправо обришете податке?</sys:String>
-    <sys:String x:Key="LOCLuduRestProceedWithPruning">Наставити са орезивањем?</sys:String>
+    <sys:String x:Key="LOCLuduRestProceedWithPruning">Наставити са чишћењем?</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Пробно покретање завршено. {0} снимака ће бити обрезано. Да ли желите да наставите са стварним обрезивањем?</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Пробно покретање је завршено. {0} снимака би било обрисано. Да ли желите да наставите са применом политике задржавања?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">Желите ли да наставите са Политиком задржавања?</sys:String>
@@ -157,11 +157,11 @@
 Да ли желите прво да извршите пробно покретање да бисте видели шта ће бити обрисано?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Преглед је завршен. {0} снимака ће бити обрисано у складу са политиком задржавања. Да ли желите да наставите са брисањем?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">Наставити са брисањем?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">Репозиторијум оштрих реза</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Орезивање ће уклонити неискоришћене блобове података из спремишта. Ова операција је неповратна.
+    <sys:String x:Key="LOCLuduRestPruneRepository">Чишћење складишта</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Чишћење ће уклонити неискоришћене блобове података из спремишта. Ова операција је неповратна.
 
 Да ли желите прво да извршите пробно покретање да бисте видели шта ће бити уклоњено пре него што заправо обришете податке?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Пробни рад је завршен. Ова операција би уклонила неискоришћене податке из спремишта. Да ли желите да наставите са стварним одсецањем?</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Пробни рад је завршен. Ова операција би уклонила неискоришћене податке из спремишта. Да ли желите да наставите са стварним чишћењем?</sys:String>
 
     <!-- Welcome and setup -->
     <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Добродошли - Потребно је подешавање</sys:String>
@@ -216,7 +216,7 @@
 • Плус 1 снимак недељно током 4 недеље
 • Плус 1 снимак месечно током 12 месеци
 • Плус 1 снимак годишње током 5 година</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Резултати орезивања</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneResultsTitle">Резултати чишћења</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">Овде ће се појавити резиме информација</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">Снимци су обрисани</sys:String>
     <sys:String x:Key="LOCLuduRestGamesAffected">Погођене игре</sys:String>
@@ -317,9 +317,9 @@
     <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Покреће се преглед политике задржавања...</sys:String>
     <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Примена политике задржавања и скраћивања...</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Провера интегритета спремишта...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Трчање пробног тренинга са сувим шљивама...</sys:String>
-    <sys:String x:Key="LOCLuduRestPruningUnusedData">Уклањање неискоришћених података...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Орезивање спремишта...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Покретање пробног чишћења...</sys:String>
+    <sys:String x:Key="LOCLuduRestPruningUnusedData">Чишћење некоришћених података...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Чишћење спремишта...</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Примена политике задржавања није успела за једну или више игара. Проверите сирови излаз за детаље.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Ниједан снимак неће бити обрисан. Сви снимци одговарају тренутној политици чувања.</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Провера интегритета спремишта са верификацијом података...</sys:String>

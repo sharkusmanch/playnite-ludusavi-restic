@@ -15,15 +15,15 @@
 
     <sys:String x:Key="LOCLuduRestBrowse">Bläddra</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic utvecklingskatalogens sökväg</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Restic arkiv sökväg</sys:String>
 
     <sys:String x:Key="LOCLuduRestRepoPass">Restic repo lösenord</sys:String>
     <sys:String x:Key="LOCLuduRestShow">Visa</sys:String>
     <sys:String x:Key="LOCLuduRestHide">Dölj</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConf">Rklona konfiguration</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConf">Rclone konfiguration</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rklone konfigurationslösenord</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone konfigurationslösenord</sys:String>
 
     <sys:String x:Key="LOCLuduRestVerify">Verifiera</sys:String>
 
@@ -33,7 +33,7 @@
 
     <sys:String x:Key="LOCLuduRestTabBackup">Säkerhetskopiera</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabRepo">Utveckling</sys:String>
+    <sys:String x:Key="LOCLuduRestTabRepo">Arkiv</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupTagDiff">Lägg till extra taggar till ögonblicksbilder för att differentiera händelser</sys:String>
 
@@ -76,13 +76,13 @@ Inkludera läge: Inga spel är säkerhetskopierade. Spel kan få taggen tillagd 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Skapa säkerhetskopiering när spelet är avinstallerat</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Aviseringsnivå för säkerhetskopiering</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Endast fel</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Sammanfattning</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Utförlig (per spel)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Visa avisering för manuella säkerhetskopieringar</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">{0} av {1} spel säkerhetskopierades.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">{0} av {1} spel säkerhetskopierades. {2} misslyckades: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic-körbar fil hittad och verifierad.</sys:String>
@@ -110,8 +110,8 @@ Inkludera läge: Inga spel är säkerhetskopierade. Spel kan få taggen tillagd 
     <sys:String x:Key="LOCLuduRestResticNotDetected">Kunde inte automatiskt upptäcka restic körbar. Vänligen ange sökvägen manuellt.</sys:String>
 
     <!-- Settings verification -->
-    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Settings Verifiering:</sys:String>
-    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - utvecklingskatalogsanslutning lyckades</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Inställningar Verifiering:</sys:String>
+    <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - arkivanslutning lyckades</sys:String>
     <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - verifiering lyckades</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">Auto-detektion lyckades</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Auto-detektion misslyckades</sys:String>
@@ -119,20 +119,20 @@ Inkludera läge: Inga spel är säkerhetskopierade. Spel kan få taggen tillagd 
     <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Kunde inte automatiskt upptäcka körbar ludusavi. Ange sökvägen manuellt.</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restic körbar detekteras på: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Kunde inte automatiskt upptäcka restic körbar. Vänligen ange sökvägen manuellt.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Settings Verifiering misslyckades: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verifierar restic repository connection...</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic Inställningar Verifiering misslyckades: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestVerifyingRestic">Verifierar restic arkivanslutning...</sys:String>
     <sys:String x:Key="LOCLuduRestVerifyingLudusavi">Verifierar ludusavi körbar...</sys:String>
 
     <!-- Maintenance operation strings -->
     <sys:String x:Key="LOCLuduRestMaintenanceComplete">Underhåll slutförd</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceCompletedSuccessfully">Fullständigt underhåll slutförts framgångsrikt.</sys:String>
     <sys:String x:Key="LOCLuduRestVerificationComplete">Verifiering slutförd</sys:String>
-    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Verifiering av utvecklingskatalogen slutfördes.</sys:String>
+    <sys:String x:Key="LOCLuduRestVerificationCompletedSuccessfully">Verifiering av arkivet slutfördes.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabled">Lagringspolicy inaktiverad</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Lagringspolicyn är inaktiverad. Aktivera den i tilläggsinställningarna för att använda den här funktionen.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Behållningspolicy slutförd</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Behållningspolicy tillämpas framgångsrikt. Gamla ögonblicksbilder har tagits bort.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Rensning slutförd</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Rensningsåtgärden har slutförts.</sys:String>
 
     <!-- Dialog prompts -->
@@ -157,8 +157,8 @@ Inkludera läge: Inga spel är säkerhetskopierade. Spel kan få taggen tillagd 
 Vill du utföra en torr körning först för att se vad som skulle tas bort?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Förhandsgranskningen slutförd. {0} ögonblicksbilder skulle raderas i enlighet med lagringspolicyn. Vill du fortsätta med borttagningen?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">Fortsätt med borttagning?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">Rensa utvecklingskatalog</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Beskärning kommer att ta bort oanvända data blobbar från utvecklingskatalogen. Denna åtgärd är oåterkallelig.
+    <sys:String x:Key="LOCLuduRestPruneRepository">Rensa arkiv</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Beskärning kommer att ta bort oanvända data blobbar från arkivet. Denna åtgärd är oåterkallelig.
 
 Vill du utföra en torrkörning först för att se vad som skulle tas bort innan du faktiskt raderar data?</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Torrkörning slutförd. Denna åtgärd skulle ta bort oanvända data från förrådet. Vill du fortsätta med den faktiska beskärningen?</sys:String>
@@ -167,7 +167,7 @@ Vill du utföra en torrkörning först för att se vad som skulle tas bort innan
     <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Välkommen - Konfiguration krävs</sys:String>
     <sys:String x:Key="LOCLuduRestWelcomeMessage">Välkommen till Ludusavi Restic!
 
-Detta verkar vara första gången du använder tillägget eller din konfiguration är ofullständig. Vill du köra installationsguiden för att konfigurera din säkerhetskopieringsutveckling?</sys:String>
+Detta verkar vara första gången du använder tillägget eller din konfiguration är ofullständig. Vill du köra installationsguiden för att konfigurera din säkerhetskopieringsarkiv?</sys:String>
     <sys:String x:Key="LOCLuduRestConfigurationRequired">Konfiguration krävs</sys:String>
     <sys:String x:Key="LOCLuduRestNotConfiguredMessage">Ludusavi Restic är inte konfigurerat än. Vill du köra installationsguiden?</sys:String>
     <sys:String x:Key="LOCLuduRestInvalidConfiguration">Ogiltig konfiguration</sys:String>
@@ -183,7 +183,7 @@ Detta verkar vara första gången du använder tillägget eller din konfiguratio
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Återställ senaste ögonblicksbild</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Inga ögonblicksbilder hittades för detta spel.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Återställ ögonblicksbild {0} för {1} till mapp:\n{2}\n\nBefintliga filer kan skrivas över. Fortsätt?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Återställ ögonblicksbild</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Återställer ögonblicksbild...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Ögonblicksbilden återställdes framgångsrikt.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Uppdatera</sys:String>
@@ -238,7 +238,7 @@ Detta verkar vara första gången du använder tillägget eller din konfiguratio
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Återställ ögonblicksbild {0} till {1}? Detta kan skriva över befintliga filer.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Återställer ögonblicksbild {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Ögonblicksbild {0} återställdes.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Återställning slutförd</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Det gick inte att återställa ögonblicksbilden: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Fel vid återställning av ögonblicksbild: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Ögonblicksbild {0} (spel: {1}) innehåller {2} filer.
@@ -267,7 +267,7 @@ Välj Ja att använda föreslagen mapp, Nej att välja en annan, eller Avbryt at
     <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Åsidosättning av lagringspolicy</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Ange värden för att åsidosätta den globala lagringspolicyn för det här spelet. Tomma fält är inaktiverade (inställda på 0), så endast de värden du anger gäller.</sys:String>
     <sys:String x:Key="LOCLuduRestSave">Spara</sys:String>
-    <sys:String x:Key="LOCLuduRestCancel">Avboka</sys:String>
+    <sys:String x:Key="LOCLuduRestCancel">Avbryt</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} spel har åsidosättningar för kvarhållning per spel.</sys:String>
     <sys:String x:Key="LOCLuduRestListingSnapshots">Listar ögonblicksbilder...</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Inga ögonblicksbilder hittades i arkivet.</sys:String>
@@ -286,12 +286,12 @@ Välj Ja att använda föreslagen mapp, Nej att välja en annan, eller Avbryt at
     <!-- Dialog strings -->
     <sys:String x:Key="LOCLuduRestSelectResticExecutable">Välj Restic körbar</sys:String>
     <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Välj Ludusavi körbar</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Välj utvecklingskatalog</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Körbara filer (*.exe)&lt;unk&gt; *.exe&lt;unk&gt; Alla filer (*.*)&lt;unk&gt; *.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Exekverbar &lt;unk&gt; *.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Konf&lt;unk&gt; *.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Välj arkivplats</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
     <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Kör fullt underhåll...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifierar utvecklingskatalog...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifierar arkiv...</sys:String>
 
     <!-- Validation messages -->
     <sys:String x:Key="LOCLuduRestPleaseSpecifyResticPath">Ange sökvägen till restic körbar.</sys:String>
@@ -305,25 +305,25 @@ Välj Ja att använda föreslagen mapp, Nej att välja en annan, eller Avbryt at
     <sys:String x:Key="LOCLuduRestValidationError">Fel vid validering</sys:String>
     <sys:String x:Key="LOCLuduRestValidationResticPath">Ange sökvägen till restic körbar.</sys:String>
     <sys:String x:Key="LOCLuduRestValidationResticInvalid">Den angivna restic körbara är inte giltig eller tillgänglig.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Vänligen ange sökvägen till utvecklingskatalogen.</sys:String>
-    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Ange ett utvecklingskatalogslösenord.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPath">Vänligen ange arkivsökvägen.</sys:String>
+    <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Ange ett arkivlösenord.</sys:String>
     <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Lösenorden matchar inte.</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryYes">Ja</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryNo">Nej</sys:String>
 
     <!-- Progress and initialization messages -->
-    <sys:String x:Key="LOCLuduRestInitializingRepository">Initierar utvecklingskatalog...</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializingRepository">Initierar arkiv...</sys:String>
     <sys:String x:Key="LOCLuduRestApplyingRetentionPolicy">Tillämpar lagringspolicy...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Kör retention policy förhandsgranskning...</sys:String>
     <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Tillämpar lagringspolicy och beskär...</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Kontrollerar utvecklingskatalogens integritet...</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Kontrollerar arkivets integritet...</sys:String>
     <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Kör beskär torr körning...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Beskär oanvända data...</sys:String>
-    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Beskärning av förråd...</sys:String>
+    <sys:String x:Key="LOCLuduRestProgressPruningRepository">Rensning av arkiv...</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Tillämpningen av lagringspolicy misslyckades för ett eller flera spel. Kontrollera råutdata för mer information.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">Inga ögonblicksbilder skulle raderas. Alla ögonblicksbilder matchar den aktuella lagringspolicyn.</sys:String>
-    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Kontrollerar utvecklingskatalogens integritet med verifiering av data...</sys:String>
-    <sys:String x:Key="LOCLuduRestInitializationFailed">Det gick inte att initiera utvecklingskatalogen. Kontrollera loggarna för detaljer.</sys:String>
+    <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrityWithData">Kontrollerar arkivets integritet med verifiering av data...</sys:String>
+    <sys:String x:Key="LOCLuduRestInitializationFailed">Det gick inte att initiera arkivet. Kontrollera loggarna för detaljer.</sys:String>
     <sys:String x:Key="LOCLuduRestInitializationError">Initiering fel</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Fel vid installation</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Ett fel inträffade under inställningen: {0}</sys:String>

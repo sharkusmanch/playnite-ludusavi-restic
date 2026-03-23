@@ -15,9 +15,9 @@
 
     <sys:String x:Key="LOCLuduRestBrowse">تصفح</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">مسار مستودع Rash</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">مسار مستودع Restic</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">كلمة مرور مستودع Rash</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">كلمة مرور مستودع Restic</sys:String>
     <sys:String x:Key="LOCLuduRestShow">إظهار</sys:String>
     <sys:String x:Key="LOCLuduRestHide">إخفاء</sys:String>
 
@@ -27,7 +27,7 @@
 
     <sys:String x:Key="LOCLuduRestVerify">تحقق</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">المسار القابل للتنفيذ</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">مسار ملف Restic القابل للتنفيذ</sys:String>
 
     <sys:String x:Key="LOCLuduRestLuduPath">مسار لودوسافي القابل للتنفيذ</sys:String>
 
@@ -76,13 +76,13 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">إنشاء نسخة احتياطية عند إلغاء تثبيت اللعبة</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">مستوى إشعار النسخ الاحتياطي</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">الأخطاء فقط</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">ملخص</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">تفصيلي (لكل لعبة)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">إظهار إشعار للنسخ الاحتياطي اليدوي</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">تم نسخ {0} من {1} لعبة احتياطياً بنجاح.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">تم نسخ {0} من {1} لعبة احتياطياً. فشل {2}: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> تم العثور على ملف Restic القابل للتنفيذ والتحقق منه.</sys:String>
@@ -106,20 +106,20 @@
     <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">فشل الكشف التلقائي</sys:String>
     <sys:String x:Key="LOCLuduRestLudusaviDetected">تم اكتشاف إمكانية تنفيذ لودوسافي في: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestLudusaviNotDetected">لا يمكن الكشف تلقائياً عن إمكانية تنفيذ Ludusavi. الرجاء تحديد المسار يدوياً.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">تم الكشف عن الجذر القابل للتنفيذ في: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">لا يمكن الكشف تلقائيًا عن إمكانية تنفيذ إعادة التطبيق. الرجاء تحديد المسار يدوياً.</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">تم الكشف عن ملف Restic القابل للتنفيذ في: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticNotDetected">لا يمكن الكشف تلقائيًا عن ملف Restic القابل للتنفيذ. الرجاء تحديد المسار يدوياً.</sys:String>
 
     <!-- Settings verification -->
-    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">التحقق من إعدادات لودوسافي:</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">التحقق من إعدادات Ludusavi Restic:</sys:String>
     <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">الراستيك--اتصال المستودع نجح</sys:String>
     <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">لودوسافي - تم التحقق بنجاح</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">تم الكشف التلقائي بنجاح</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">فشل الكشف التلقائي</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">تم اكتشاف إمكانية تنفيذ لودوسافي في: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">لا يمكن الكشف تلقائياً عن إمكانية تنفيذ Ludusavi. الرجاء تحديد المسار يدوياً.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticDetected">تم الكشف عن الجذر القابل للتنفيذ في: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">لا يمكن الكشف تلقائيًا عن إمكانية تنفيذ إعادة التطبيق. الرجاء تحديد المسار يدوياً.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">فشل التحقق من إعدادات لودوسافي: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">تم الكشف عن ملف Restic القابل للتنفيذ في: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">لا يمكن الكشف تلقائيًا عن ملف Restic القابل للتنفيذ. الرجاء تحديد المسار يدوياً.</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">فشل التحقق من إعدادات Ludusavi Restic: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestVerifyingRestic">التحقق من اتصال المستودع...</sys:String>
     <sys:String x:Key="LOCLuduRestVerifyingLudusavi">التحقق من إمكانية تنفيذ Ludusavi...</sys:String>
 
@@ -132,7 +132,7 @@
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">سياسة الاحتفاظ معطلة. الرجاء تمكينها في إعدادات الملحق لاستخدام هذه الميزة.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">سياسة الاحتفاظ مكتملة</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">تطبيق سياسة الحفظ بنجاح. تم حذف لقطات قديمة.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">اكتمل التنظيف</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">اكتملت عملية التوقف بنجاح.</sys:String>
 
     <!-- Dialog prompts -->
@@ -140,7 +140,7 @@
     <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">هل ترغب في إجراء تشغيل جاف أولاً لترى ما سيتم تقليله قبل حذف البيانات بالفعل؟</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicy">سياسة الاحتفاظ</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">هل ترغب في إجراء تشغيل جاف أولاً لترى ما سيتم حذفه قبل إزالة لقطات سريعة؟</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">تشويش</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">تنظيف</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">هل ترغب في إجراء تشغيل جاف أولاً لترى ما سيتم تقليله قبل حذف البيانات بالفعل؟</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithPruning">هل تريد المضي قدما في التبرينج؟</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">تشغيل جاف. سيتم تقطيع لقطات {0} . هل تريد المضي قدما في التقسيم الفعلي؟</sys:String>
@@ -169,7 +169,7 @@
 
 يبدو أن هذه هي المرة الأولى التي تستخدم فيها الإضافة، أو أن إعداداتك غير مكتملة. هل ترغب بتشغيل معالج الإعداد لضبط مستودع النسخ الاحتياطي؟</sys:String>
     <sys:String x:Key="LOCLuduRestConfigurationRequired">التكوين مطلوب</sys:String>
-    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">لم يتم تكوين Ludusavi Ra بعد. هل ترغب في تشغيل معالج الإعداد؟</sys:String>
+    <sys:String x:Key="LOCLuduRestNotConfiguredMessage">لم يتم تكوين Ludusavi Restic بعد. هل ترغب في تشغيل معالج الإعداد؟</sys:String>
     <sys:String x:Key="LOCLuduRestInvalidConfiguration">تكوين غير صالح</sys:String>
     <sys:String x:Key="LOCLuduRestInvalidResticMessage">قابلة التنفيذ لإعادة التكوين غير صالحة أو غير متوفرة. هل ترغب في تشغيل معالج التثبيت لإصلاح هذا؟</sys:String>
     <sys:String x:Key="LOCLuduRestSetupComplete">اكتمل الإعداد</sys:String>
@@ -183,7 +183,7 @@
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">استعادة أحدث لقطة</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">لم يتم العثور على لقطات لهذه اللعبة.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">استعادة لقطة {0} لمجلد {1} :\n{2}\n\nيمكن الكتابة فوق الملفات الموجودة. هل تريد المتابعة؟</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">استعادة اللقطة</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">جارٍ استعادة اللوحة...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">تم إستعادة اللقطة بنجاح.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">تحديث</sys:String>
@@ -238,7 +238,7 @@
     <sys:String x:Key="LOCLuduRestRestoreConfirm">استعادة لقطة {0} إلى {1}؟ هذا قد يستبدل الملفات الموجودة.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">استعادة لقطة {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">تم إستعادة لقطة {0} بنجاح.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">اكتملت الاستعادة</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">فشل في استعادة اللوحة: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">خطأ في استعادة اللوحة: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">لقطة {0} (لعبة: {1}) تحتوي على ملفات {2} .
@@ -284,12 +284,12 @@
     <sys:String x:Key="LOCLuduRestSetupSection">الإعداد</sys:String>
 
     <!-- Dialog strings -->
-    <sys:String x:Key="LOCLuduRestSelectResticExecutable">حدد RT قابل للتنفيذ</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectResticExecutable">حدد ملف Restic القابل للتنفيذ</sys:String>
     <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">حدد لودسافي قابل للتنفيذ</sys:String>
     <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">حدد موقع المستودع</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">الملفات القابلة للتنفيذ (*.exe)&lt;unk&gt; *.exe&lt;unk&gt; جميع الملفات (*.*)&lt;unk&gt; *.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">تنفيذ *.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Conf&lt;unk&gt; *.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
     <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">تشغيل الصيانة الكاملة...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">التحقق من المستودع...</sys:String>
 
@@ -317,8 +317,8 @@
     <sys:String x:Key="LOCLuduRestRunningRetentionPreview">تشغيل معاينة سياسة الاحتفاظ...</sys:String>
     <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">تطبيق سياسة الاستبقاء والتقسيم...</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">التحقق من سلامة المستودع...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">جارٍ تشغيل التجفيف...</sys:String>
-    <sys:String x:Key="LOCLuduRestPruningUnusedData">تشويش البيانات غير المستخدمة...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">جارٍ تشغيل التجربة الأولية للتنظيف...</sys:String>
+    <sys:String x:Key="LOCLuduRestPruningUnusedData">حذف البيانات غير المستخدمة...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressPruningRepository">جاري تنظيف المستودع...</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">فشل تطبيق سياسة الاحتفاظ بالبيانات لواحدة أو أكثر من الألعاب. راجع المخرجات الأصلية للاطلاع على التفاصيل.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionNothingToDelete">لن يتم حذف أي لقطات. جميع اللقطات تتوافق مع سياسة الاحتفاظ الحالية.</sys:String>

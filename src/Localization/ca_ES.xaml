@@ -76,13 +76,13 @@ Mode d'inclusió: No es fa cap còpia de seguretat dels jocs. Es pot afegir l'et
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Crea una còpia de seguretat quan es desinstal·li el joc</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Nivell de notificació de còpia de seguretat</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Només errors</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Resum</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Detallat (per joc)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Mostra notificació per a còpies de seguretat manuals</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Còpia de seguretat de {0} de {1} jocs completada correctament.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Còpia de seguretat de {0} de {1} jocs. {2} han fallat: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> S'ha trobat i verificat l'executable Restic.</sys:String>

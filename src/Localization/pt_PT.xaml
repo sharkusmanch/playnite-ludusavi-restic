@@ -69,20 +69,20 @@ Modo Incluir: Nenhum jogo é incluído no backup. É possível adicionar a etiqu
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Incluir modo</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupIncludeTag">U[LR] Incluir Backup</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupIncludeTag">[LR] Incluir Backup</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeTag">[LR] Excluir Backup</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Criar backup quando o jogo for desinstalado</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Nível de notificação de cópia de segurança</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Apenas erros</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Resumo</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Detalhado (por jogo)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Mostrar notificação para cópias de segurança manuais</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Cópia de segurança de {0} de {1} jogos concluída com sucesso.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Cópia de segurança de {0} de {1} jogos. {2} falharam: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Executável do Restic encontrado e verificado.</sys:String>
@@ -132,7 +132,7 @@ Modo Incluir: Nenhum jogo é incluído no backup. É possível adicionar a etiqu
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">A política de retenção está desativada. Por favor, ative-a nas configurações da extensão para usar esse recurso.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Política de retenção completa</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Política de retenção aplicada com sucesso. Os snapshots antigos foram excluídos.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Limpeza concluída</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Operação de limpeza concluída com sucesso.</sys:String>
 
     <!-- Dialog prompts -->
@@ -183,7 +183,7 @@ Parece ser a sua primeira vez utilizando a extensão ou a sua configuração inc
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restaurar último snapshot</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Nenhum instantâneo encontrado para este jogo.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restaurar snapshot {0} para {1} para a pasta:\n{2}\n\nArquivos existentes podem ser substituídos. Continuar?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restaurar instantâneo</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restaurando snapshot...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Instantâneo restaurado com sucesso.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">atualizar</sys:String>
@@ -224,7 +224,7 @@ Parece ser a sua primeira vez utilizando a extensão ou a sua configuração inc
     <sys:String x:Key="LOCLuduRestStatus">SItuação</sys:String>
     <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Instantâneos excluídos</sys:String>
     <sys:String x:Key="LOCLuduRestClearFilter">Limpar Filtro</sys:String>
-    <sys:String x:Key="LOCLuduRestGameHeader">Partida</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">Jogo</sys:String>
     <sys:String x:Key="LOCLuduRestDateTimeHeader">Data/Hora</sys:String>
     <sys:String x:Key="LOCLuduRestGamesSummaryTab">Resumo de Jogos</sys:String>
     <sys:String x:Key="LOCLuduRestGameNameHeader">Nome do Jogo</sys:String>
@@ -238,7 +238,7 @@ Parece ser a sua primeira vez utilizando a extensão ou a sua configuração inc
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Restaurar snapshot {0} para {1}? Isto pode substituir arquivos existentes.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restaurando snapshot {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Instantâneo {0} restaurado com sucesso.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Restauração concluída</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Falha ao restaurar snapshot: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Erro ao restaurar snapshot: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (jogo: {1}) contém arquivos {2} .
@@ -287,9 +287,9 @@ Escolha Sim para usar a pasta sugerida, Não para escolher outro, ou Cancelar pa
     <sys:String x:Key="LOCLuduRestSelectResticExecutable">Selecione Restic Executable</sys:String>
     <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Selecione o executável Ludusavi</sys:String>
     <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Selecionar Local do Repositório</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Arquivos executáveis (*.exe)├*.exe├Todos os arquivos (*.*)├*.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executável + *.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Conf➲ *.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
     <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Executando manutenção completa...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verificando repositório...</sys:String>
 

@@ -76,13 +76,13 @@ Insluitingsmodus: Geen speletjies word gerugsteun nie. Speletjies kan die inslui
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Skep 'n rugsteunkopie wanneer die speletjie verwyder word</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Rugsteun-kennisgewingvlak</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Slegs foute</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Opsomming</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Uitgebreid (per speletjie)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Wys kennisgewing vir handmatige rugsteun</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">{0} van {1} speletjies suksesvol gerugsteun.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">{0} van {1} speletjies gerugsteun. {2} het misluk: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic-uitvoerbare lêer gevind en geverifieer.</sys:String>
@@ -289,7 +289,7 @@ Kies Ja om die voorgestelde vouer te gebruik, Nee om 'n ander een te kies, of Ka
     <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Kies Bewaarplekligging</sys:String>
     <sys:String x:Key="LOCLuduRestExecutableFilter">Uitvoerbare lêers (*.exe)|*.exe|Alle lêers (*.*)|*.*</sys:String>
     <sys:String x:Key="LOCLuduRestExecutableFilterShort">Uitvoerbare|*.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Konf|*.konf</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
     <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Volledige onderhoudswerk word uitgevoer...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifieer tans bewaarplek...</sys:String>
 

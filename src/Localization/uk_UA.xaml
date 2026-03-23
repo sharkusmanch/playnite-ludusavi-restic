@@ -11,7 +11,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Введіть мітку резервної копії для</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay економить інтервал резервного копіювання (хвилин)</sys:String>
+    <sys:String x:Key="LOCLuduRestGameplayBackupInt">Інтервал резервного копіювання під час гри (хвилин)</sys:String>
 
     <sys:String x:Key="LOCLuduRestBrowse">Переглянути</sys:String>
 
@@ -41,7 +41,7 @@
 
     <sys:String x:Key="LOCLuduRestBackupGameStopTag">Мітку бекапу зупинено</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Тег резервного копіювання Gameplay</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Тег резервного копіювання під час гри</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Створення збереження знімка</sys:String>
 
@@ -76,13 +76,13 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Створити резервну копію при вилученні гри</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Рівень сповіщень про резервне копіювання</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Лише помилки</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Підсумок</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Детальний (для кожної гри)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Показувати сповіщення для ручних резервних копій</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Резервне копіювання {0} з {1} ігор виконано успішно.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Резервне копіювання {0} з {1} ігор. {2} не вдалося: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Виконуваний файл Restic знайдено та перевірено.</sys:String>
@@ -132,7 +132,7 @@
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Політика безпеки вимкнена. Будь ласка, увімкніть її в налаштуваннях розширення для використання цієї функції.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Політика збереження завершена</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Політика повернення успішно застосована. Старі знімки було видалено.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Очищення завершено</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Очистку успішно завершено.</sys:String>
 
     <!-- Dialog prompts -->
@@ -143,7 +143,7 @@
     <sys:String x:Key="LOCLuduRestPrune">Підчищати</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Чи хотіли б ви спочатку зробити сухий запуск, щоб побачити, що буде вичищено перед тим, як насправді видалити дані?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithPruning">Продовжити на чистку?</sys:String>
-    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Сухий запуск завершений. Знімки буде вичищено {0} . Хочете перейти з фактичним обрізанням?</sys:String>
+    <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Пробний запуск завершено. {0} знімків буде видалено. Бажаєте продовжити фактичне очищення?</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">Пробний біг завершено. Знімки {0} будуть видалені. Ви хочете продовжити застосування політики збереження?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">Продовжити на дотримання політики?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">Це видалить старі знімки відповідно до вашої політики зберігання:
@@ -183,7 +183,7 @@
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Відновити останній знімок</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Для цієї гри не знайдено знімків.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Відновити знімок {0} для теки {1} :\n{2}\n\nІснуючі файли можуть бути перезаписані. Продовжити?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Відновити знімок</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Відновлення знімку...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Знімок успішно відновлено.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Оновити</sys:String>
@@ -238,7 +238,7 @@
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Відновити знімок {0} на {1}? Це може перезаписати існуючі файли.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Відновлення знімку {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Знімка {0} успішно відновлена.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Відновлення завершено</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Не вдалося відновити знімок: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Помилка відновлення знімка: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Знімок {0} (гра: {1}) містить {2} файлів.

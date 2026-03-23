@@ -15,19 +15,19 @@
 
     <sys:String x:Key="LOCLuduRestBrowse">検索</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPath">Restic repository path</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPath">Restic リポジトリパス</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Restic リポジトリパスワード</sys:String>
     <sys:String x:Key="LOCLuduRestShow">表示</sys:String>
     <sys:String x:Key="LOCLuduRestHide">非表示</sys:String>
 
     <sys:String x:Key="LOCLuduRestRcloneConf">Rclone の設定</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone config password</sys:String>
+    <sys:String x:Key="LOCLuduRestRcloneConfPass">Rclone 設定パスワード</sys:String>
 
     <sys:String x:Key="LOCLuduRestVerify">確認する</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Restic executable path</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Restic 実行ファイルのパス</sys:String>
 
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi 実行ファイルのパス</sys:String>
 
@@ -76,13 +76,13 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">ゲームがアンインストールされたときにバックアップを作成します</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">バックアップ通知レベル</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">エラーのみ</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">サマリー</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">詳細（ゲームごと）</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">手動バックアップ時に通知を表示</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">{1} 件中 {0} 件のゲームのバックアップに成功しました。</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">{1} 件中 {0} 件のゲームをバックアップしました。{2} 件失敗: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic 実行可能ファイルが見つかり、検証されました。</sys:String>
@@ -106,18 +106,18 @@
     <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">自動検出失敗</sys:String>
     <sys:String x:Key="LOCLuduRestLudusaviDetected">{0} でLudusavi実行可能ファイルを検出しました</sys:String>
     <sys:String x:Key="LOCLuduRestLudusaviNotDetected">ludusavi実行ファイルを自動的に検出できませんでした。手動でパスを指定してください。</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">{0} で Restic 実行ファイルが検出されました</sys:String>
     <sys:String x:Key="LOCLuduRestResticNotDetected">Restic実行ファイルを自動的に検出できませんでした。手動でパスを指定してください。</sys:String>
 
     <!-- Settings verification -->
-    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Settings Verification:</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic 設定の確認:</sys:String>
     <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - リポジトリの接続に成功しました</sys:String>
     <sys:String x:Key="LOCLuduRestLudusaviVerificationSucceeded">ludusavi - 検証が成功しました</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsAutoDetectSuccess">自動検出成功</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">自動検出失敗</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">{0} でLudusavi実行可能ファイルを検出しました</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">ludusavi実行ファイルを自動的に検出できませんでした。手動でパスを指定してください。</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Restic executable detected at: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">{0} で Restic 実行ファイルが検出されました</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Restic実行ファイルを自動的に検出できませんでした。手動でパスを指定してください。</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Ludusavi Restic 設定の検証に失敗しました: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestVerifyingRestic">Restic リポジトリ接続を確認しています...</sys:String>
@@ -132,7 +132,7 @@
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">保持ポリシーは無効になっています。この機能を使用するには拡張機能の設定で有効にしてください。</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">保持ポリシーが完了しました</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">保持ポリシーが正常に適用されました。古いスナップショットが削除されました。</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">プルーン完了</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">削除操作が正常に完了しました。</sys:String>
 
     <!-- Dialog prompts -->
@@ -140,7 +140,7 @@
     <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">実際にデータを削除する前に削除されるものを最初にドライランを実行しますか？</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicy">保持方針</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">実際にスナップショットを削除する前に削除されるものを最初にドライランを実行しますか？</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Prune</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">プルーン</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">実際にデータを削除する前に削除されるものを最初にドライランを実行しますか？</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithPruning">剪定を続行しますか？</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">ドライランが完了しました。 {0} スナップショットを削除します。実際の剪定を続行しますか？</sys:String>
@@ -158,13 +158,13 @@
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">プレビューが完了しました。 {0} スナップショットは保持ポリシーに従って削除されます。削除を続行しますか？</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">削除を続けますか？</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">リポジトリを削除</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneWarningMessage">Pruning will remove unused data blobs from the repository. This operation is unreversible
+    <sys:String x:Key="LOCLuduRestPruneWarningMessage">プルーンはリポジトリから未使用のデータブロブを削除します。この操作は元に戻せません。
 
 実際にデータを削除する前に削除されるものを最初にドライランを実行しますか？</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">ドライランが完了しました。この操作は、リポジトリから未使用のデータを削除します。実際の剪定を続行しますか？</sys:String>
 
     <!-- Welcome and setup -->
-    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - セットアップが必要</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">ようこそ - セットアップが必要です</sys:String>
     <sys:String x:Key="LOCLuduRestWelcomeMessage">Ludusavi Resticへようこそ！
 
 拡張機能を使用する初めてのようです。または設定が不完全です。 バックアップ リポジトリを設定するためのセットアップ ウィザードを実行しますか?</sys:String>
@@ -183,7 +183,7 @@
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">最新のスナップショットを復元</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">このゲームのスナップショットは見つかりませんでした。</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">{0} のスナップショット {1} をフォルダに復元:\n{2}\n\n既存のファイルが上書きされる可能性があります。続行しますか？</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">スナップショットの復元</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">スナップショットを復元しています...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">スナップショットは正常に復元されました。</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">更新</sys:String>
@@ -230,7 +230,7 @@
     <sys:String x:Key="LOCLuduRestGameNameHeader">ゲーム名</sys:String>
     <sys:String x:Key="LOCLuduRestTagsSummaryTab">タグの概要</sys:String>
     <sys:String x:Key="LOCLuduRestTagHeader">タグ</sys:String>
-    <sys:String x:Key="LOCLuduRestOccurrencesHeader">Occurrences</sys:String>
+    <sys:String x:Key="LOCLuduRestOccurrencesHeader">出現回数</sys:String>
     <sys:String x:Key="LOCLuduRestRawOutputTab">生の出力</sys:String>
     <sys:String x:Key="LOCLuduRestClose">閉じる</sys:String>
     <sys:String x:Key="LOCLuduRestManualBackupTagPrompt">この手動バックアップ用のオプションのカスタムタグを入力してください（空白のままにしてください）：</sys:String>
@@ -238,7 +238,7 @@
     <sys:String x:Key="LOCLuduRestRestoreConfirm">スナップショット {0} を {1}に復元しますか？既存のファイルを上書きする可能性があります。</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">スナップショット {0}を復元しています...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">スナップショット {0} は正常に復元されました。</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">復元完了</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">スナップショットの復元に失敗しました: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">スナップショットの復元エラー: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">スナップショット {0} (ゲーム: {1}) には {2} ファイルが含まれています。
@@ -284,8 +284,8 @@
     <sys:String x:Key="LOCLuduRestSetupSection">セットアップ</sys:String>
 
     <!-- Dialog strings -->
-    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Restic Executable を選択</sys:String>
-    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Ludusavi Executable を選択</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectResticExecutable">Restic 実行ファイルを選択</sys:String>
+    <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Ludusavi 実行ファイルを選択</sys:String>
     <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">リポジトリの場所を選択</sys:String>
     <sys:String x:Key="LOCLuduRestExecutableFilter">実行可能なファイル (*.exe)|*.exe|すべてのファイル (*.*)|*.*</sys:String>
     <sys:String x:Key="LOCLuduRestExecutableFilterShort">*.exe</sys:String>
