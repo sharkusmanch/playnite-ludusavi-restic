@@ -208,6 +208,8 @@ Szeretne először egy próbafuttatást végrehajtani, hogy lássa, mi kerül el
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Havonta egy pillanatképet őrizzen meg ennyi hónapon keresztül</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Éves pillanatképek megőrzése N évig:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Évente egy pillanatképet őrizzen meg ennyi éven keresztül</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max. újracsomagolási méret (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Korlátozza a Restic által törlési ciklusonként újracsomagolt adatok mennyiségét a memóriahasználat csökkentése érdekében. 0 = korlátlan (nagy tárolóknál memóriahiányt okozhat). Alapértelmezett: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Példa alapértelmezett beállításokkal:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Tartsa meg a legutóbbi 10 pillanatképet
 • Plusz napi 1 pillanatkép 7 napig

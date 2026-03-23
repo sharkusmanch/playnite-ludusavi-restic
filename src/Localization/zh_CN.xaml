@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">这么多个月每月保持一张快照</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">保持每年的 N 年快照：</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">这么多年每年保持一张快照</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">最大重打包大小 (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">限制每次清理周期中 Restic 重打包的数据量，以减少内存使用。0 = 不限制（大型仓库可能导致内存不足）。默认值: 500。</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">使用默认设置的示例：</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> 保留最新的 10 个快照
 • 每天额外保留 1 个快照，持续 7 天

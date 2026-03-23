@@ -48,23 +48,30 @@ namespace LudusaviRestic
 
         public static CommandResult Prune(BackupContext context)
         {
-            return ResticExecute(context, "prune --json");
+            var args = "prune --json";
+            if (context.Settings.MaxRepackSizeMB > 0)
+                args += $" --max-repack-size {context.Settings.MaxRepackSizeMB}M";
+            return ResticExecute(context, args);
         }
 
         public static CommandResult PruneDryRun(BackupContext context)
         {
-            return ResticExecute(context, "prune --json --dry-run");
+            var args = "prune --json --dry-run";
+            if (context.Settings.MaxRepackSizeMB > 0)
+                args += $" --max-repack-size {context.Settings.MaxRepackSizeMB}M";
+            return ResticExecute(context, args);
         }
 
         internal static string BuildRetentionArgs(LudusaviResticSettings settings, bool dryRun)
         {
-            var suffix = dryRun ? "--dry-run" : "--prune";
-            return $"forget --keep-last {settings.KeepLast} " +
+            var args = $"forget --keep-last {settings.KeepLast} " +
                    $"--keep-daily {settings.KeepDaily} " +
                    $"--keep-weekly {settings.KeepWeekly} " +
                    $"--keep-monthly {settings.KeepMonthly} " +
                    $"--keep-yearly {settings.KeepYearly} " +
-                   $"--group-by tags --json {suffix}";
+                   $"--group-by tags --json";
+            if (dryRun) args += " --dry-run";
+            return args;
         }
 
         public static CommandResult ForgetWithRetention(BackupContext context)
@@ -91,7 +98,6 @@ namespace LudusaviRestic
         internal static string BuildPerGameRetentionArgs(string gameTag, int keepLast, int keepDaily,
             int keepWeekly, int keepMonthly, int keepYearly, bool dryRun)
         {
-            var suffix = dryRun ? "--dry-run" : "--prune";
             var parts = new List<string> { $"forget --tag \"{gameTag}\"" };
             if (keepLast > 0) parts.Add($"--keep-last {keepLast}");
             if (keepDaily > 0) parts.Add($"--keep-daily {keepDaily}");
@@ -99,7 +105,7 @@ namespace LudusaviRestic
             if (keepMonthly > 0) parts.Add($"--keep-monthly {keepMonthly}");
             if (keepYearly > 0) parts.Add($"--keep-yearly {keepYearly}");
             parts.Add("--json");
-            parts.Add(suffix);
+            if (dryRun) parts.Add("--dry-run");
             return string.Join(" ", parts);
         }
 

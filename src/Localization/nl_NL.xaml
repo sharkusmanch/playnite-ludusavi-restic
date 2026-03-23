@@ -208,6 +208,8 @@ Dit lijkt je eerste keer te zijn met behulp van de extensie of je configuratie i
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Houd één snapshot per maand voor zoveel maanden</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Houd jaarlijkse snapshots voor N jaar:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Houd één momentopname per jaar voor zoveel jaren</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max. herpack-grootte (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Beperk de hoeveelheid gegevens die Restic per opschooncyclus herpakt om geheugengebruik te verminderen. 0 = onbeperkt (kan geheugenfouten veroorzaken bij grote repo's). Standaard: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Voorbeeld met standaardinstellingen:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Bewaar de 10 meest recente momentopnamen
 • Plus 1 momentopname per dag gedurende 7 dagen

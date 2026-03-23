@@ -208,6 +208,8 @@ Cela semble être votre première utilisation de l'extension ou votre configurat
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Garder un instantané par mois pour ce nombre de mois</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Garder des instantanés annuels pendant N ans :</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Garder un instantané par an pendant autant d'années</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Taille max. de reconditionnement (Mo) :</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limite les données que Restic reconditionne par cycle d'élagage pour réduire l'utilisation mémoire. 0 = illimité (peut provoquer un manque de mémoire sur les gros dépôts). Par défaut : 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exemple avec les paramètres par défaut :</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Conserver les 10 derniers instantanés
 • Plus 1 instantané par jour pendant 7 jours

@@ -208,6 +208,8 @@ Aceasta pare să fie prima dată când folosiți extensia sau configurația dvs.
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Păstraţi un instantaneu pe lună pentru atâtea luni</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Păstrați instantaneu anual timp de N ani:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Păstrați un instantaneu pe an pentru atâția ani</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Dimensiune maximă de reîmpachetare (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limitează datele pe care Restic le reîmpachetează per ciclu de curățare pentru a reduce utilizarea memoriei. 0 = nelimitat (poate cauza epuizarea memoriei pe depozite mari). Implicit: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exemplu cu setările implicite:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Păstrați ultimele 10 instantanee
 • Plus 1 instantaneu pe zi timp de 7 zile

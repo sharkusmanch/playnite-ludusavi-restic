@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Оставить один снимок в месяц в течение этого многомесячного периода</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Храните ежегодные снимки в течение N лет:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Держите один снимок в год в течение многих лет</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Макс. размер переупаковки (МБ):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Ограничивает объём данных, переупаковываемых Restic за цикл очистки, для снижения потребления памяти. 0 = без ограничений (может привести к нехватке памяти в больших репозиториях). По умолчанию: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Пример с настройками по умолчанию:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Сохраняйте последние 10 снимков
 • Плюс 1 снимок в день в течение 7 дней

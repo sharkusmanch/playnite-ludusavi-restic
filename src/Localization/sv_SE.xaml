@@ -208,6 +208,8 @@ Detta verkar vara första gången du använder tillägget eller din konfiguratio
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Behåll en ögonblicksbild per månad under så här många månader</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Behåll årliga ögonblicksbilder för N år:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Behåll en ögonblicksbild per år för så här många år</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max ompackningsstorlek (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Begränsa mängden data som Restic packar om per rensningscykel för att minska minnesanvändningen. 0 = obegränsat (kan orsaka minnesbrist på stora repon). Standard: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exempel med standardinställningar:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Behåll de senaste 10 ögonblicksbilderna
 • Plus 1 ögonblicksbild per dag i 7 dagar

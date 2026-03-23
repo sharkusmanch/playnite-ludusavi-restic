@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Чувајте један снимак месечно током овог броја месеци</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Чувајте годишње снимке током N година:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Чувајте један снимак годишње током толико година</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Макс. величина препаковања (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Ограничава количину података коју Restic препакује по циклусу чишћења ради смањења потрошње меморије. 0 = без ограничења (може изазвати недостатак меморије код великих репозиторијума). Подразумевано: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Пример са подразумеваним подешавањима:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Чувајте последњих 10 снимака
 • Плус 1 снимак дневно током 7 дана

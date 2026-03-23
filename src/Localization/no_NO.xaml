@@ -208,6 +208,8 @@ Det ser ut til å være første gang du bruker utvidelsen eller konfigurasjonen 
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Behold ett øyeblikksbilde per måned for denne mange måneder</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Holde årlige snapshots i N år:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Behold et øyeblikksbilde per år i dette antall år</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Maks. ompakkingsstørrelse (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Begrens mengden data som Restic pakker om per rensesyklus for å redusere minnebruk. 0 = ubegrenset (kan forårsake minneproblemer på store repoer). Standard: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Eksempel med standardinnstillinger:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Behold de siste 10 øyeblikksbildene
 • Pluss 1 øyeblikksbilde per dag i 7 dager

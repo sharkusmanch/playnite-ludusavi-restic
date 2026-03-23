@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">이 기간 동안 매달 스냅샷을 하나씩 저장하세요.</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">N년 동안 매년 스냅샷을 보관하세요:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">이 기간 동안 매년 한 장씩 사진을 보관하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">최대 리팩 크기 (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">프루닝 주기당 Restic이 리팩하는 데이터 양을 제한하여 메모리 사용량을 줄입니다. 0 = 무제한(대형 저장소에서 메모리 부족이 발생할 수 있음). 기본값: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">기본 설정 예시:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> 최근 10개의 스냅샷을 보관합니다
 • 추가로 7일 동안 매일 1개의 스냅샷을 보관합니다

@@ -208,6 +208,8 @@ Dette ser ud til at være din første gang ved hjælp af udvidelsen eller din ko
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Behold et øjebliksbillede pr. måned i dette mange måneder</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Hold årlige snapshots i N år:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Behold et øjebliksbillede om året i disse mange år</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Maks. genpakningsstørrelse (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Begræns mængden af data, som Restic genpakker per oprydningscyklus, for at reducere hukommelsesforbrug. 0 = ubegrænset (kan forårsage hukommelsesmangel på store repoer). Standard: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Eksempel med standardindstillinger:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Gem de seneste 10 snapshots
 • Plus 1 snapshot om dagen i 7 dage

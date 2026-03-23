@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Зберегти один знімок на місяць для цієї кількості місяців</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Ведіть щочні знімки на N років:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Зробити один знімок на рік протягом багатьох років</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Макс. розмір переупакування (МБ):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Обмежує обсяг даних, які Restic переупаковує за цикл очищення, для зменшення використання пам'яті. 0 = без обмежень (може спричинити брак пам'яті у великих сховищах). За замовчуванням: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Приклад з налаштуваннями за замовчуванням:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Зберігати останні 10 знімків
 • Плюс 1 знімок на день протягом 7 днів

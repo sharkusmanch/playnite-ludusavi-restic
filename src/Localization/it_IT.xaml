@@ -208,6 +208,8 @@ Sembra che sia la tua prima volta usando l'estensione o che la tua configurazion
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Mantieni un'istantanea al mese per molti mesi</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Tieni le istantanee annuali per N anni:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Mantieni un'istantanea all'anno per molti anni</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Dimensione max. reimpacchettamento (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limita i dati che Restic reimpacchetta per ciclo di pulizia per ridurre l'uso di memoria. 0 = illimitato (potrebbe causare esaurimento memoria su repository grandi). Predefinito: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Esempio con le impostazioni predefinite:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Conserva gli ultimi 10 snapshot
 • Più 1 snapshot al giorno per 7 giorni

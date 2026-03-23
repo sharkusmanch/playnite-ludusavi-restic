@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">この多くの月に1つのスナップショットを保持します</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">年間スナップショットをN年間保持する：</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">この長年の間、年間1つのスナップショットを保持します</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">最大リパックサイズ (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">プルーンサイクルごとに Restic がリパックするデータ量を制限し、メモリ使用量を削減します。0 = 無制限（大規模リポジトリではメモリ不足になる可能性があります）。デフォルト: 500。</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">デフォルト設定の例:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> 最新の 10 個のスナップショットを保持
 • 7 日間、毎日 1 個のスナップショットを追加

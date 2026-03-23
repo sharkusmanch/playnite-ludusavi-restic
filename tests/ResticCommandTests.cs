@@ -6,7 +6,7 @@ namespace LudusaviRestic.Tests
     public class ResticCommandTests
     {
         [Fact]
-        public void BuildRetentionArgs_DefaultSettings_WithPrune()
+        public void BuildRetentionArgs_DefaultSettings_NoPrune()
         {
             var settings = new LudusaviResticSettings();
 
@@ -17,7 +17,7 @@ namespace LudusaviRestic.Tests
             Assert.Contains("--keep-weekly 4", result);
             Assert.Contains("--keep-monthly 12", result);
             Assert.Contains("--keep-yearly 5", result);
-            Assert.Contains("--prune", result);
+            Assert.DoesNotContain("--prune", result);
             Assert.DoesNotContain("--dry-run", result);
         }
 
@@ -80,7 +80,7 @@ namespace LudusaviRestic.Tests
             Assert.Contains("--keep-weekly 8", result);
             Assert.Contains("--keep-monthly 6", result);
             Assert.Contains("--keep-yearly 3", result);
-            Assert.Contains("--prune", result);
+            Assert.DoesNotContain("--prune", result);
         }
 
         [Fact]
@@ -93,7 +93,7 @@ namespace LudusaviRestic.Tests
             Assert.DoesNotContain("--keep-weekly", result);
             Assert.DoesNotContain("--keep-monthly", result);
             Assert.DoesNotContain("--keep-yearly", result);
-            Assert.Contains("--prune", result);
+            Assert.DoesNotContain("--prune", result);
         }
 
         [Fact]

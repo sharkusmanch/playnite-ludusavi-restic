@@ -208,6 +208,8 @@ Esta parece ser su primera vez usando la extensión o su configuración está in
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Mantener una instantánea al mes durante estos meses</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Mantener instantáneas anuales durante N años:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Mantener una instantánea por año durante tantos años</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Tamaño máximo de reempaquetado (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limita los datos que Restic reempaqueta por ciclo de poda para reducir el uso de memoria. 0 = ilimitado (puede causar falta de memoria en repositorios grandes). Predeterminado: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Ejemplo con ajustes predeterminados:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Conservar las últimas 10 instantáneas
 • Más 1 instantánea por día durante 7 días
