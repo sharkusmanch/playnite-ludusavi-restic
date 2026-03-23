@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Зберегти один знімок на місяць для цієї кількості місяців</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Ведіть щочні знімки на N років:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Зробити один знімок на рік протягом багатьох років</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Приклад з налаштуваннями за замовчуванням:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Зберігати останні 10 знімків
 • Плюс 1 знімок на день протягом 7 днів
