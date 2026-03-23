@@ -5,13 +5,7 @@ Packages:
     ReleaseDate: 2026-03-23
     PackageUrl: https://github.com/sharkusmanch/playnite-ludusavi-restic/releases/download/v1.2.1/LudusaviRestic_v1.2.1.pext
     Changelog:
-      - New Crowdin updates (#97)
-      - 'feat: notification UX improvements (#100)'
-      - New Crowdin updates (#101)
-      - New Crowdin updates (#102)
-      - 'test: add regression tests for closed issues #10, #28, #84, #60 (#103)'
-      - Add max repack size setting and separate forget from prune (#104)
-      - 'Fix bump workflow: configure git identity for CI (#107)'
+      - Localization updates
   - Version: 1.2.0
     RequiredApiVersion: 6.14.0
     ReleaseDate: 2026-02-06
