@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Κρατήστε ένα στιγμιότυπο το μήνα για τόσους μήνες</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Κρατήστε ετήσια στιγμιότυπα για τα έτη Ν:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Κρατήστε ένα στιγμιότυπο το χρόνο για πολλά χρόνια</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Παράδειγμα με προεπιλεγμένες ρυθμίσεις:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Διατήρηση των τελευταίων 10 στιγμιότυπων
 • Συν 1 στιγμιότυπο ανά ημέρα για 7 ημέρες
