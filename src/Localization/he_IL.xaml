@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">שמור תמונת מצב אחת לחודש למשך מספר חודשים זה</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">שמור תמונות מצב שנתיות במשך N שנים:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">שמרו תמונת מצב אחת לשנה במשך שנים רבות</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">דוגמה עם הגדרות ברירת מחדל:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> שמור את 10 תמונות הבזק האחרונות
 • ועוד תמונת בזק אחת ליום למשך 7 ימים
