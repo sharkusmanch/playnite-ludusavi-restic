@@ -208,6 +208,8 @@ Dit lyk asof dit jou eerste keer is dat jy die uitbreiding gebruik, of jou konfi
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Hou een momentopname per maand vir soveel maande</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Hou jaarlikse momentopnames vir N jaar:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Hou een momentopname per jaar vir soveel jare</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Voorbeeld met standaardinstellings:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Hou die laaste 10 kiekies
 • Plus 1 kiekie per dag vir 7 dae
