@@ -53,7 +53,7 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">הסר תג אי הכללה של גיבוי</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGM">לודוסאבי ריסטיק</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">גיבוי</sys:String>
 
@@ -76,13 +76,13 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">צור גיבוי שמירה לאחר הסרת ההתקנה של המשחק</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">רמת התראת גיבוי</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">שגיאות בלבד</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">סיכום</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">מפורט (לכל משחק)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">הצג התראה עבור גיבויים ידניים</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">גיבוי {0} מתוך {1} משחקים הושלם בהצלחה.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">גיבוי {0} מתוך {1} משחקים. {2} נכשלו: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> קובץ ההפעלה של Restic נמצא ואומת.</sys:String>
@@ -132,7 +132,7 @@
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">מדיניות השמירה מושבתת. אנא הפעל אותה בהגדרות התוסף כדי להשתמש בתכונה זו.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">מדיניות השמירה הושלמה</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">מדיניות השמירה יושמה בהצלחה. תמונות מצב ישנות נמחקו.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">גיזום שלם</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">הניקוי הושלם</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">פעולת הגיזום הושלמה בהצלחה.</sys:String>
 
     <!-- Dialog prompts -->
@@ -157,7 +157,7 @@
 האם ברצונך לבצע ניסוי ראשון כדי לראות מה יימחק?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">התצוגה המקדימה הושלמה. תמונות {0} יימחקו בהתאם למדיניות השמירה. האם ברצונך להמשיך במחיקה?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">להמשיך עם המחיקה?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">מאגר שזיפים</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">ניקוי מאגר</sys:String>
     <sys:String x:Key="LOCLuduRestPruneWarningMessage">גיזום יסיר מהמאגר כתמי נתונים שאינם בשימוש. פעולה זו אינה הפיכה.
 
 האם ברצונך לבצע ניסוי יבש תחילה כדי לראות מה יוסר לפני מחיקת נתונים בפועל?</sys:String>
@@ -183,7 +183,7 @@
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">שחזור תמונת המצב האחרונה</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">לא נמצאו תמונות מצב עבור משחק זה.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">שחזר את תמונת המצב {0} עבור {1} לתיקייה:\n{2}\n\nקבצים קיימים עשויים להיות מוחלפים. להמשיך?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">שחזור תמונת מצב</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">שחזור תמונת מצב מגיבוי</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">משחזר תמונת מצב...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">תמונת המצב שוחזרה בהצלחה.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">לְרַעֲנֵן</sys:String>
@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">שמור תמונת מצב אחת לחודש למשך מספר חודשים זה</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">שמור תמונות מצב שנתיות במשך N שנים:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">שמרו תמונת מצב אחת לשנה במשך שנים רבות</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">גודל מרבי לאריזה מחדש (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">הגבלת כמות הנתונים ש-Restic אורז מחדש בכל מחזור גיזום כדי להפחית שימוש בזיכרון. 0 = ללא הגבלה (עלול לגרום לחריגת זיכרון במאגרים גדולים). ברירת מחדל: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">דוגמה עם הגדרות ברירת מחדל:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> שמור את 10 תמונות הבזק האחרונות
 • ועוד תמונת בזק אחת ליום למשך 7 ימים
@@ -315,7 +317,7 @@
     <sys:String x:Key="LOCLuduRestRunningRetentionPreview">מפעיל תצוגה מקדימה של מדיניות שמירה...</sys:String>
     <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">יישום מדיניות שימור וגיזום...</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">בדיקת שלמות המאגר...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">ריצת שזיפים מיובשים...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">מריץ ניסיון ניקוי...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">גיזום נתונים שאינם בשימוש...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressPruningRepository">גיזום מאגר...</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">יישום מדיניות שמירה נכשל עבור משחק אחד או יותר. בדוק את הפלט הגולמי לקבלת פרטים.</sys:String>

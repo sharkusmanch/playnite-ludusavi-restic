@@ -76,13 +76,13 @@ Insluitingsmodus: Geen speletjies word gerugsteun nie. Speletjies kan die inslui
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Skep 'n rugsteunkopie wanneer die speletjie verwyder word</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Rugsteun-kennisgewingvlak</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Slegs foute</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Opsomming</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Uitgebreid (per speletjie)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Wys kennisgewing vir handmatige rugsteun</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">{0} van {1} speletjies suksesvol gerugsteun.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">{0} van {1} speletjies gerugsteun. {2} het misluk: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic-uitvoerbare lêer gevind en geverifieer.</sys:String>
@@ -208,6 +208,8 @@ Dit lyk asof dit jou eerste keer is dat jy die uitbreiding gebruik, of jou konfi
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Hou een momentopname per maand vir soveel maande</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Hou jaarlikse momentopnames vir N jaar:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Hou een momentopname per jaar vir soveel jare</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Maks. herpak-grootte (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Beperk die hoeveelheid data wat Restic per snoei-siklus herpak om geheueverbruik te verminder. 0 = onbeperk (kan geheue-tekort veroorsaak by groot repo's). Verstek: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Voorbeeld met standaardinstellings:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Hou die laaste 10 kiekies
 • Plus 1 kiekie per dag vir 7 dae
@@ -287,7 +289,7 @@ Kies Ja om die voorgestelde vouer te gebruik, Nee om 'n ander een te kies, of Ka
     <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Kies Bewaarplekligging</sys:String>
     <sys:String x:Key="LOCLuduRestExecutableFilter">Uitvoerbare lêers (*.exe)|*.exe|Alle lêers (*.*)|*.*</sys:String>
     <sys:String x:Key="LOCLuduRestExecutableFilterShort">Uitvoerbare|*.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Konf|*.konf</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
     <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Volledige onderhoudswerk word uitgevoer...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifieer tans bewaarplek...</sys:String>
 

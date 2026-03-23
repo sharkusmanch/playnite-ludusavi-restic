@@ -182,6 +182,12 @@
                         </StackPanel>
 
                         <StackPanel Margin="15">
+                            <TextBlock Text="{DynamicResource LOCLuduRestMaxRepackSizeLabel}" />
+                            <TextBox Margin="0,2,0,0" Text="{Binding MaxRepackSizeMB}" x:Name="MaxRepackSizeMB"/>
+                            <TextBlock Margin="0,2,0,0" FontSize="11" Foreground="Gray" Text="{DynamicResource LOCLuduRestMaxRepackSizeHelp}" />
+                        </StackPanel>
+
+                        <StackPanel Margin="15">
                             <TextBlock TextWrapping="Wrap" FontWeight="Bold" Text="{DynamicResource LOCLuduRestRetentionExampleHeader}" />
                             <TextBlock Margin="0,5,0,0" TextWrapping="Wrap" FontSize="11" Text="{DynamicResource LOCLuduRestRetentionExample}" />
                         </StackPanel>

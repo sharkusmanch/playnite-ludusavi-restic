@@ -27,7 +27,7 @@
 
     <sys:String x:Key="LOCLuduRestVerify">Vérifier</sys:String>
 
-    <sys:String x:Key="LOCLuduRestResticPath">Chemin de l'exécutable voluptueux</sys:String>
+    <sys:String x:Key="LOCLuduRestResticPath">Chemin de l'exécutable Restic</sys:String>
 
     <sys:String x:Key="LOCLuduRestLuduPath">Chemin de l'exécutable de Ludusavi</sys:String>
 
@@ -76,13 +76,13 @@ Mode Inclusion : Aucun jeu n'est sauvegardé. Il est possible d'ajouter une ét
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Créer une sauvegarde lorsque le jeu est désinstallé</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Niveau de notification de sauvegarde</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Erreurs uniquement</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Résumé</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Détaillé (par jeu)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Afficher une notification pour les sauvegardes manuelles</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">{0} jeux sur {1} sauvegardés avec succès.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">{0} jeux sur {1} sauvegardés. {2} ont échoué : {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Fichier exécutable Restic trouvé et vérifié.</sys:String>
@@ -106,7 +106,7 @@ Mode Inclusion : Aucun jeu n'est sauvegardé. Il est possible d'ajouter une ét
     <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Échec de la détection automatique</sys:String>
     <sys:String x:Key="LOCLuduRestLudusaviDetected">L'exécutable Ludusavi a été détecté à: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Impossible de détecter automatiquement l'exécutable ludusavi. Veuillez spécifier le chemin manuellement.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Exécutable volumineux détecté à: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestResticDetected">Exécutable Restic détecté à : {0}</sys:String>
     <sys:String x:Key="LOCLuduRestResticNotDetected">Impossible de détecter automatiquement l'exécutable resticy. Veuillez spécifier le chemin manuellement.</sys:String>
 
     <!-- Settings verification -->
@@ -117,7 +117,7 @@ Mode Inclusion : Aucun jeu n'est sauvegardé. Il est possible d'ajouter une ét
     <sys:String x:Key="LOCLuduRestSettingsAutoDetectFailed">Échec de la détection automatique</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsLudusaviDetected">L'exécutable Ludusavi a été détecté à: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsLudusaviNotDetected">Impossible de détecter automatiquement l'exécutable ludusavi. Veuillez spécifier le chemin manuellement.</sys:String>
-    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Exécutable volumineux détecté à: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSettingsResticDetected">Exécutable Restic détecté à : {0}</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsResticNotDetected">Impossible de détecter automatiquement l'exécutable resticy. Veuillez spécifier le chemin manuellement.</sys:String>
     <sys:String x:Key="LOCLuduRestSettingsVerificationFailed">Échec de la vérification des paramètres Restic de Ludusavi : {0}</sys:String>
     <sys:String x:Key="LOCLuduRestVerifyingRestic">Vérification de la connexion restic du référentiel...</sys:String>
@@ -132,7 +132,7 @@ Mode Inclusion : Aucun jeu n'est sauvegardé. Il est possible d'ajouter une ét
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">La politique de rétention est désactivée. Veuillez l'activer dans les paramètres de l'extension pour utiliser cette fonctionnalité.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Politique de rétention terminée</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Politique de rétention appliquée avec succès. Les anciens instantanés ont été supprimés.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Nettoyage terminé</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Opération de suppression terminée avec succès.</sys:String>
 
     <!-- Dialog prompts -->
@@ -183,7 +183,7 @@ Cela semble être votre première utilisation de l'extension ou votre configurat
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restaurer le dernier instantané</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Pas de snapshots trouvés pour ce jeu.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restaurer la capture d’instantané {0} pour {1} dans le dossier :\n{2}\n\nLes fichiers existants peuvent être écrasés. Continuer ?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restaurer l'instantané</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restauration de l'instantané...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Instantané restauré avec succès.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Rafraîchir</sys:String>
@@ -208,6 +208,8 @@ Cela semble être votre première utilisation de l'extension ou votre configurat
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Garder un instantané par mois pour ce nombre de mois</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Garder des instantanés annuels pendant N ans :</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Garder un instantané par an pendant autant d'années</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Taille max. de reconditionnement (Mo) :</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limite les données que Restic reconditionne par cycle d'élagage pour réduire l'utilisation mémoire. 0 = illimité (peut provoquer un manque de mémoire sur les gros dépôts). Par défaut : 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exemple avec les paramètres par défaut :</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Conserver les 10 derniers instantanés
 • Plus 1 instantané par jour pendant 7 jours
@@ -236,7 +238,7 @@ Cela semble être votre première utilisation de l'extension ou votre configurat
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Restaurer la capture {0} à {1}? Cela peut écraser les fichiers existants.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restauration de l'instantané {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Instantané {0} restauré avec succès.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Restauration terminée</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Échec de la restauration de la capture instantanée : {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Erreur lors de la restauration de l'instantané : {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">L'instantané {0} (jeu: {1}) contient des fichiers {2} .

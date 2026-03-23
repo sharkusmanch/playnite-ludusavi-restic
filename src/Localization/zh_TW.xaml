@@ -53,7 +53,7 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">移除備份排除標籤</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGM">路德維拉斯蒂克</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">備份</sys:String>
 
@@ -76,13 +76,13 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">卸載遊戲時創建存檔備份</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">備份通知等級</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">僅錯誤</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">摘要</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">詳細（按遊戲）</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">手動備份時顯示通知</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">已成功備份 {0}/{1} 個遊戲。</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">已備份 {0}/{1} 個遊戲。{2} 個失敗：{3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> 已找到並驗證 Restic 可執行檔。</sys:String>
@@ -132,7 +132,7 @@
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">保留策略已停用。請在擴充功能設定中啟用此功能。</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">保留政策已完成</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">保留策略已成功應用。舊快照已被刪除。</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">完全修剪</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">清理完成</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">修剪操作已成功完成。</sys:String>
 
     <!-- Dialog prompts -->
@@ -146,15 +146,15 @@
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">試運行完成。 {0} 個快照將會被修剪。是否繼續執行實際修剪？</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedRetentionMessage">試運行完成。 {0} 個快照將會刪除。是否繼續應用保留策略？</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithRetention">繼續執行保留政策？</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">This will delete old snapshots according to your retention policy:
+    <sys:String x:Key="LOCLuduRestRetentionPolicyDetails">此操作將根據您的保留策略刪除舊快照：
 
-• Keep last {0} snapshots
-• Keep daily snapshots for {1} days
-• Keep weekly snapshots for {2} weeks
-• Keep monthly snapshots for {3} months
-• Keep yearly snapshots for {4} years
+• 保留最近 {0} 個快照
+• 保留每日快照 {1} 天
+• 保留每週快照 {2} 週
+• 保留每月快照 {3} 個月
+• 保留每年快照 {4} 年
 
-Would you like to perform a dry run first to see what would be deleted?</sys:String>
+您是否想先進行一次試運行，看看哪些內容會被刪除？</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">預覽完成。根據保留策略， {0} 個快照將被刪除。是否繼續刪除？</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">是否繼續刪除？</sys:String>
     <sys:String x:Key="LOCLuduRestPruneRepository">清理儲存庫</sys:String>
@@ -208,18 +208,20 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">每月保留一張快照，持續若干個月。</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">保留 N 年的年度快照：</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">每年保留一份快照，持續這麼多年</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">最大重新打包大小 (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">限制每次清理週期中 Restic 重新打包的資料量，以減少記憶體使用。0 = 不限制（大型儲存庫可能導致記憶體不足）。預設值: 500。</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">使用預設設定的範例：</sys:String>
-    <sys:String x:Key="LOCLuduRestRetentionExample"> Keep the latest 10 snapshots
-• Plus 1 snapshot per day for 7 days
-• Plus 1 snapshot per week for 4 weeks
-• Plus 1 snapshot per month for 12 months
-• Plus 1 snapshot per year for 5 years</sys:String>
+    <sys:String x:Key="LOCLuduRestRetentionExample"> 保留最新的 10 個快照
+• 每天額外保留 1 個快照，持續 7 天
+• 每週額外保留 1 個快照，持續 4 週
+• 每月額外保留 1 個快照，持續 12 個月
+• 每年額外保留 1 個快照，持續 5 年</sys:String>
     <sys:String x:Key="LOCLuduRestPruneResultsTitle">修剪結果</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryPlaceholder">摘要資訊將顯示在此。</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotsDeleted">快照已刪除</sys:String>
     <sys:String x:Key="LOCLuduRestGamesAffected">受影響的遊戲</sys:String>
     <sys:String x:Key="LOCLuduRestDataDeleted">數據已刪除</sys:String>
-    <sys:String x:Key="LOCLuduRestStatus">地位</sys:String>
+    <sys:String x:Key="LOCLuduRestStatus">狀態</sys:String>
     <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">已刪除的快照</sys:String>
     <sys:String x:Key="LOCLuduRestClearFilter">清除過濾器</sys:String>
     <sys:String x:Key="LOCLuduRestGameHeader">遊戲</sys:String>
@@ -236,15 +238,15 @@ Would you like to perform a dry run first to see what would be deleted?</sys:Str
     <sys:String x:Key="LOCLuduRestRestoreConfirm">將快照 {0} 還原到 {1}？這可能會覆蓋現有文件。</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">正在恢復快照 {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">快照 {0} 已成功復原。</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">完全恢復</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">恢復完成</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">復原快照失敗： {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">復原快照時發生錯誤： {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (game: {1}) contains {2} files.
-New files: {3}
-Existing files (will be overwritten): {4}
-Suggested restore folder: {5}
+    <sys:String x:Key="LOCLuduRestRestorePreview">快照 {0}（遊戲：{1}）包含 {2} 個檔案。
+新檔案：{3}
+現有檔案（將被覆蓋）：{4}
+建議還原資料夾：{5}
 
-Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys:String>
+選擇「是」使用建議的資料夾，「否」選擇其他資料夾，或「取消」中止。</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoSuggestion">（沒有任何）</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreNoGameTag">無法確定此快照的遊戲名稱標籤。</sys:String>
 
@@ -264,7 +266,7 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestSetRetentionPolicy">設定保留策略</sys:String>
     <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">保留策略覆蓋</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">設定值以覆寫此遊戲的全域保留策略。空白欄位將被停用（設定為 0），因此只有您指定的值才會生效。</sys:String>
-    <sys:String x:Key="LOCLuduRestSave">節省</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">儲存</sys:String>
     <sys:String x:Key="LOCLuduRestCancel">取消</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} 遊戲具有按遊戲劃分的保留策略。</sys:String>
     <sys:String x:Key="LOCLuduRestListingSnapshots">列出快照…</sys:String>

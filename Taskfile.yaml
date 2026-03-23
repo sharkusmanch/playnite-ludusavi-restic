@@ -42,3 +42,45 @@ tasks:
   logs:
     cmds:
     - powershell "Get-Content ~/Appdata/Roaming/Playnite/extensions.log" -Wait
+
+  bump:
+    desc: Create release branch and bump version
+    requires:
+      vars: [VERSION]
+    cmds:
+    - git checkout -b "release/v{{.VERSION}}"
+    - yq -i '.Version = "{{.VERSION}}"' extension.yaml
+    - |
+      addon_id=$(yq '.AddonId' manifest.yaml)
+      addon_name="${addon_id%%_*}"
+      repo_url=$(git remote get-url origin | sed 's|git@github.com:|https://github.com/|' | sed 's|\.git$||')
+      required_api=$(yq '.Packages[0].RequiredApiVersion' manifest.yaml)
+      package_url="${repo_url}/releases/download/v{{.VERSION}}/${addon_name}_v{{.VERSION}}.pext"
+      release_date=$(date +%Y-%m-%d)
+
+      last_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+      if [ -n "$last_tag" ]; then
+        range="${last_tag}..HEAD"
+      else
+        range="HEAD"
+      fi
+
+      VERSION="{{.VERSION}}" \
+      REQUIRED_API="$required_api" \
+      RELEASE_DATE="$release_date" \
+      PACKAGE_URL="$package_url" \
+      yq -i '.Packages = [{"Version": env(VERSION), "RequiredApiVersion": env(REQUIRED_API), "ReleaseDate": env(RELEASE_DATE), "PackageUrl": env(PACKAGE_URL), "Changelog": []}] + .Packages' manifest.yaml
+
+      git log $range --pretty=format:"%s" --no-merges --reverse | while IFS= read -r msg; do
+        ENTRY="$msg" yq -i '.Packages[0].Changelog += [env(ENTRY)]' manifest.yaml
+      done
+
+      echo ""
+      echo "Version bumped to {{.VERSION}}"
+      echo "Branch: release/v{{.VERSION}}"
+      echo ""
+      echo "Review the generated changelog in manifest.yaml"
+      echo "Then commit and push:"
+      echo "  git add extension.yaml manifest.yaml"
+      echo "  git commit -m 'Bump version to {{.VERSION}}'"
+      echo "  git push -u origin release/v{{.VERSION}}"

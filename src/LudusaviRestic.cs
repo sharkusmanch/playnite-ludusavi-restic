@@ -650,8 +650,8 @@ namespace LudusaviRestic
                             return;
                     }
 
-                    // Step 3: Apply actual retention policy per game
-                    activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestApplyingRetentionAndPruning", "LOCLuduRestApplyingRetentionAndPruning");
+                    // Step 3: Apply forget per game (no --prune)
+                    activateGlobalProgress.Text = GetLocalizedString("LOCLuduRestApplyingRetentionPolicy", "Applying retention policy...");
                     var retentionResults = ResticCommand.ForgetWithPerGameRetention(context, gameTags, false);
                     var parsedResult = PruneResultParser.MergeForgetResults(retentionResults, false);
 

@@ -76,13 +76,13 @@ Modo de inclusión: No hay juegos respaldados. Los juegos pueden tener la etique
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Crear copia de seguridad cuando se desinstale el juego</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Nivel de notificación de respaldo</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Solo errores</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Resumen</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Detallado (por juego)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Mostrar notificación para copias de seguridad manuales</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Copia de seguridad de {0} de {1} juegos realizada con éxito.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Copia de seguridad de {0} de {1} juegos. {2} fallaron: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Ejecutable Restic encontrado y verificado.</sys:String>
@@ -96,7 +96,7 @@ Modo de inclusión: No hay juegos respaldados. Los juegos pueden tener la etique
     <sys:String x:Key="LOCLuduRestSetupLudusaviValid"> El ejecutable de Ludusavi es válido.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupLudusaviInvalid"> Ejecutable ludusavi no válido o no accesible.</sys:String>
     <sys:String x:Key="LOCLuduRestSetupSummaryYes">Sí</sys:String>
-    <sys:String x:Key="LOCLuduRestSetupSummaryNo">Nu</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupSummaryNo">No</sys:String>
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Ver instantáneas de copia de seguridad</sys:String>
@@ -132,7 +132,7 @@ Modo de inclusión: No hay juegos respaldados. Los juegos pueden tener la etique
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">La política de retención está desactivada. Por favor, actívala en la configuración de la extensión para usar esta función.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Política de Retención Completa</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Política de retención aplicada con éxito. Las antiguas instantáneas han sido eliminadas.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Purga completada</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">La operación de purga se completó con éxito.</sys:String>
 
     <!-- Dialog prompts -->
@@ -183,7 +183,7 @@ Esta parece ser su primera vez usando la extensión o su configuración está in
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Restaurar la última instantánea</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">No se encontraron instantáneas para este juego.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Restaurar instantánea {0} para {1} a la carpeta:\n{2}\n\nLos archivos existentes pueden sobrescribirse. ¿Continuar?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restaurar instantánea</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Restaurando snapshot...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Instantánea restaurada con éxito.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Refrescar</sys:String>
@@ -208,6 +208,8 @@ Esta parece ser su primera vez usando la extensión o su configuración está in
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Mantener una instantánea al mes durante estos meses</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Mantener instantáneas anuales durante N años:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Mantener una instantánea por año durante tantos años</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Tamaño máximo de reempaquetado (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limita los datos que Restic reempaqueta por ciclo de poda para reducir el uso de memoria. 0 = ilimitado (puede causar falta de memoria en repositorios grandes). Predeterminado: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Ejemplo con ajustes predeterminados:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Conservar las últimas 10 instantáneas
 • Más 1 instantánea por día durante 7 días
@@ -236,7 +238,7 @@ Esta parece ser su primera vez usando la extensión o su configuración está in
     <sys:String x:Key="LOCLuduRestRestoreConfirm">¿Restaurar instantánea {0} a {1}? Esto puede sobrescribir archivos existentes.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Restaurando instantánea {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Instantánea {0} restaurada con éxito.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Restauración completada</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Error al restaurar instantánea: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Error al restaurar instantánea: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Instantánea {0} (juego: {1}) contiene archivos {2} .
@@ -264,7 +266,7 @@ Elige Sí para usar la carpeta sugerida, No para elegir otro, o Cancelar para ab
     <sys:String x:Key="LOCLuduRestSetRetentionPolicy">Establecer política de retención</sys:String>
     <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">Anulación de la política de retención</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">Establece valores para anular la política de retención global de este juego. Los campos en blanco están deshabilitados (establecidos a 0), por lo que solo se aplicarán los valores que especifiques.</sys:String>
-    <sys:String x:Key="LOCLuduRestSave">Ahorrar</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">Guardar</sys:String>
     <sys:String x:Key="LOCLuduRestCancel">Cancelar</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} juego(s) tienen anulaciones de retención por juego.</sys:String>
     <sys:String x:Key="LOCLuduRestListingSnapshots">Listado de instantáneas...</sys:String>
@@ -307,7 +309,7 @@ Elige Sí para usar la carpeta sugerida, No para elegir otro, o Cancelar para ab
     <sys:String x:Key="LOCLuduRestValidationRepositoryPassword">Por favor, introduzca una contraseña del repositorio.</sys:String>
     <sys:String x:Key="LOCLuduRestValidationPasswordMismatch">Las contraseñas no coinciden.</sys:String>
     <sys:String x:Key="LOCLuduRestSummaryYes">Sí</sys:String>
-    <sys:String x:Key="LOCLuduRestSummaryNo">Nu</sys:String>
+    <sys:String x:Key="LOCLuduRestSummaryNo">No</sys:String>
 
     <!-- Progress and initialization messages -->
     <sys:String x:Key="LOCLuduRestInitializingRepository">Inicializando repositorio...</sys:String>

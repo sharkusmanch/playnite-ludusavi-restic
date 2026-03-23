@@ -76,13 +76,13 @@ Zahrnout režim: Žádné hry nejsou zálohovány. Hry mohou mít přidaný tag 
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Vytvořit zálohu uložení, pokud je hra odinstalována</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Úroveň oznámení o zálohách</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Pouze chyby</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Shrnutí</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Podrobný (pro každou hru)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Zobrazit oznámení pro ruční zálohy</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Úspěšně zálohováno {0} z {1} her.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Zálohováno {0} z {1} her. {2} selhalo: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Spustitelný soubor Restic byl nalezen a ověřen.</sys:String>
@@ -132,7 +132,7 @@ Zahrnout režim: Žádné hry nejsou zálohovány. Hry mohou mít přidaný tag 
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Zásady uchovávání údajů jsou zakázány. Pro použití této funkce ji prosím povolte v nastavení rozšíření.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Zásady uchování dokončeny</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Zásady uchování byly úspěšně použity. Staré snímky byly odstraněny.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Vyčištění dokončeno</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Operace vyčištění byla úspěšně dokončena.</sys:String>
 
     <!-- Dialog prompts -->
@@ -164,7 +164,7 @@ Chcete nejprve provést suchý běh, abyste zjistili, co by bylo odstraněno, ne
     <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Suchý běh dokončen. Tato operace by odstranila nevyužitá data z repozitáře. Chcete pokračovat se skutečným prořezáváním?</sys:String>
 
     <!-- Welcome and setup -->
-    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - Vyžadováno nastavení</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Vítejte - Vyžadováno nastavení</sys:String>
     <sys:String x:Key="LOCLuduRestWelcomeMessage">Vítejte v Ludusavi Restic!
 
 Zdá se, že jste poprvé použili rozšíření, nebo je vaše konfigurace neúplná. Chcete spustit průvodce nastavením pro konfiguraci záložního repozitáře?</sys:String>
@@ -183,7 +183,7 @@ Zdá se, že jste poprvé použili rozšíření, nebo je vaše konfigurace neú
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Obnovit poslední snímek</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Pro tuto hru nebyly nalezeny žádné snímky.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Obnovit snímek {0} pro složku {1} :\n{2}\n\nexistující soubory mohou být přepsány. Chcete pokračovat?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Obnovit snímek</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Obnovování snímku...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Snímek byl úspěšně obnoven.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Aktualizovat</sys:String>
@@ -208,6 +208,8 @@ Zdá se, že jste poprvé použili rozšíření, nebo je vaše konfigurace neú
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Udržujte jeden snímek za měsíc na tento mnoho měsíců</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Uchovávejte roční snímky po dobu N let:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Udržujte jeden snímek za rok na mnoho let</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max. velikost přebalení (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Omezí objem dat, která Restic přebalí za jeden cyklus prořezávání, aby se snížilo využití paměti. 0 = bez limitu (u velkých repozitářů může dojít k vyčerpání paměti). Výchozí: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Příklad s výchozím nastavením:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Uchovávejte posledních 10 snímků
 • Plus 1 snímek denně po dobu 7 dnů
@@ -236,7 +238,7 @@ Zdá se, že jste poprvé použili rozšíření, nebo je vaše konfigurace neú
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Obnovit snímek {0} do {1}? To může přepsat existující soubory.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Obnovuji snímek {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snímek {0} byl úspěšně obnoven.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Obnovení dokončeno</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Nepodařilo se obnovit snímek: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Chyba při obnovování snímku: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Snímek {0} (hra: {1}) obsahuje soubory {2} .
@@ -285,9 +287,9 @@ Vyberte Ano pro použití navrhované složky, Ne vybrat jinou, nebo zrušit zru
     <sys:String x:Key="LOCLuduRestSelectResticExecutable">Vyberte spustitelný program Restic</sys:String>
     <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Vyberte spustitelný soubor Ludusavi</sys:String>
     <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Vybrat umístění repozitáře</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">Spustitelné soubory (*.exe)|*.exe|Všechny soubory (*.*)|*. *</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Spustitelné soubory (*.exe)|*.exe|Všechny soubory (*.*)|*.*</sys:String>
     <sys:String x:Key="LOCLuduRestExecutableFilterShort">Spustitelný|*.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Červen|*.conf</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
     <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Probíhá úplná údržba...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Ověřování repozitáře...</sys:String>
 

@@ -76,13 +76,13 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Создать резервную копию при удалении игры</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Уровень уведомлений о резервном копировании</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Только ошибки</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Сводка</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Подробный (для каждой игры)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Показывать уведомление для ручных резервных копий</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Резервное копирование {0} из {1} игр выполнено успешно.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Резервное копирование {0} из {1} игр. {2} не удалось: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Исполняемый файл Restic обнаружен и проверен.</sys:String>
@@ -132,7 +132,7 @@
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">Политика удержания отключена. Пожалуйста, включите ее в настройках расширения, чтобы использовать эту функцию.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Политика хранения завершена</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Политика удержания применена успешно. Старые снимки были удалены.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Очистка завершена</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Удаление успешно завершено.</sys:String>
 
     <!-- Dialog prompts -->
@@ -164,7 +164,7 @@
     <sys:String x:Key="LOCLuduRestPruneDryRunCompleted">Сухое выполнение завершено. Эта операция удалит неиспользованные данные из хранилища. Вы хотите продолжить?</sys:String>
 
     <!-- Welcome and setup -->
-    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Welcome - Необходима установка</sys:String>
+    <sys:String x:Key="LOCLuduRestWelcomeSetupRequired">Добро пожаловать - Требуется настройка</sys:String>
     <sys:String x:Key="LOCLuduRestWelcomeMessage">Добро пожаловать в Ludusavi Restic!
 
 Похоже, вы впервые используете расширение или ваша конфигурация неполна. Вы хотите запустить мастер установки для настройки вашего резервного копирования?</sys:String>
@@ -183,7 +183,7 @@
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Восстановить последний снимок</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Для этой игры не найдено снимков.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Восстановление снимка {0} для {1} в папку:\n{2}\n\nСуществующие файлы могут быть перезаписаны. Продолжить?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Восстановить снимок</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Восстановление снимка...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Снимок успешно восстановлен.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Обновить</sys:String>
@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Оставить один снимок в месяц в течение этого многомесячного периода</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Храните ежегодные снимки в течение N лет:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Держите один снимок в год в течение многих лет</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Макс. размер переупаковки (МБ):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Ограничивает объём данных, переупаковываемых Restic за цикл очистки, для снижения потребления памяти. 0 = без ограничений (может привести к нехватке памяти в больших репозиториях). По умолчанию: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Пример с настройками по умолчанию:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Сохраняйте последние 10 снимков
 • Плюс 1 снимок в день в течение 7 дней
@@ -236,7 +238,7 @@
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Восстановить снимок {0} на {1}? Это может перезаписать существующие файлы.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Восстановление снимка {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Снимок {0} успешно восстановлен.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Восстановление завершено</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Не удалось восстановить снимок: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Ошибка восстановления снимка: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Снимок {0} (игра: {1}) содержит файлы {2} .
@@ -274,7 +276,7 @@
     <sys:String x:Key="LOCLuduRestSetupWizard">Мастер настройки</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Резервное копирование всех игр</sys:String>
     <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Обзор резервных копий снимков</sys:String>
-    <sys:String x:Key="LOCLuduRestMaintenanceAll">Все (отметьте + prune)</sys:String>
+    <sys:String x:Key="LOCLuduRestMaintenanceAll">Все (проверка + очистка)</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceVerify">Подтвердить</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceDeleteOld">Удалить старые снимки</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenancePrune">Удалить неиспользуемые данные</sys:String>
@@ -315,7 +317,7 @@
     <sys:String x:Key="LOCLuduRestRunningRetentionPreview">Выполняется предпросмотр политики удержания...</sys:String>
     <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">Применение политики удержания и доработка...</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">Проверка целостности репозитория...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Выполняется сухий пробег...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">Выполняется пробный запуск очистки...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">Очистка неиспользуемых данных...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressPruningRepository">Обрезка репозитория...</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">Не удалось применить политику хранения данных для одной или нескольких игр. Подробности смотрите в исходном выводе.</sys:String>

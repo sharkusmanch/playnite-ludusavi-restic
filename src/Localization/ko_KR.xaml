@@ -13,7 +13,7 @@
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">게임플레이 저장 백업 간격(분)</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBrowse">먹다</sys:String>
+    <sys:String x:Key="LOCLuduRestBrowse">찾아보기</sys:String>
 
     <sys:String x:Key="LOCLuduRestRepoPath">레스틱 저장소 경로</sys:String>
 
@@ -31,7 +31,7 @@
 
     <sys:String x:Key="LOCLuduRestLuduPath">Ludusavi 실행 파일 경로</sys:String>
 
-    <sys:String x:Key="LOCLuduRestTabBackup">지원</sys:String>
+    <sys:String x:Key="LOCLuduRestTabBackup">백업</sys:String>
 
     <sys:String x:Key="LOCLuduRestTabRepo">저장소</sys:String>
 
@@ -53,7 +53,7 @@
 
     <sys:String x:Key="LOCLuduRestBackupGMExcludeRemove">백업 제외 태그 제거</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGM">루두사비레스틱</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGM">LudusaviRestic</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGPBackingUp">백업 중</sys:String>
 
@@ -76,13 +76,13 @@
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">게임 삭제 시 저장 파일 백업 생성</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">백업 알림 수준</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">오류만</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">요약</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">상세 (게임별)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">수동 백업 시 알림 표시</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">{1}개 중 {0}개 게임을 성공적으로 백업했습니다.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">{1}개 중 {0}개 게임을 백업했습니다. {2}개 실패: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Restic 실행 파일이 발견되어 검증되었습니다.</sys:String>
@@ -132,7 +132,7 @@
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">보존 정책이 비활성화되어 있습니다. 이 기능을 사용하려면 확장 프로그램 설정에서 보존 정책을 활성화하십시오.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">유지 정책 완료</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">보존 정책이 성공적으로 적용되었습니다. 이전 스냅샷이 삭제되었습니다.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">가지치기 완료</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">정리 완료</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">가지치기 작업이 성공적으로 완료되었습니다.</sys:String>
 
     <!-- Dialog prompts -->
@@ -183,7 +183,7 @@
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">최신 스냅샷 복원</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">이 게임에 대한 스냅샷을 찾을 수 없습니다.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">스냅샷 {0} 을 {1} 폴더에 복원합니다. 폴더 이름은\n{2}\n\n입니다. 기존 파일이 덮어쓰여질 수 있습니다. 계속하시겠습니까?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">스냅샷 복원</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">스냅샷 복원하기</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">스냅샷 복원 중...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">스냅샷이 성공적으로 복원되었습니다.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">새로 고치다</sys:String>
@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">이 기간 동안 매달 스냅샷을 하나씩 저장하세요.</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">N년 동안 매년 스냅샷을 보관하세요:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">이 기간 동안 매년 한 장씩 사진을 보관하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">최대 리팩 크기 (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">프루닝 주기당 Restic이 리팩하는 데이터 양을 제한하여 메모리 사용량을 줄입니다. 0 = 무제한(대형 저장소에서 메모리 부족이 발생할 수 있음). 기본값: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">기본 설정 예시:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> 최근 10개의 스냅샷을 보관합니다
 • 추가로 7일 동안 매일 1개의 스냅샷을 보관합니다
@@ -264,7 +266,7 @@
     <sys:String x:Key="LOCLuduRestSetRetentionPolicy">보존 정책 설정</sys:String>
     <sys:String x:Key="LOCLuduRestSetRetentionPolicyTitle">보존 정책 재정의</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideFieldHelp">이 게임의 전역 보존 정책을 재정의할 값을 설정하세요. 빈 필드는 비활성화(0으로 설정)되므로 지정한 값만 적용됩니다.</sys:String>
-    <sys:String x:Key="LOCLuduRestSave">구하다</sys:String>
+    <sys:String x:Key="LOCLuduRestSave">저장</sys:String>
     <sys:String x:Key="LOCLuduRestCancel">취소</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionOverrideCount">{0} 게임에는 게임별 유지 재정의 기능이 있습니다.</sys:String>
     <sys:String x:Key="LOCLuduRestListingSnapshots">스냅샷 목록...</sys:String>
@@ -315,7 +317,7 @@
     <sys:String x:Key="LOCLuduRestRunningRetentionPreview">보존 정책 미리보기 실행 중...</sys:String>
     <sys:String x:Key="LOCLuduRestApplyingRetentionAndPruning">보존 정책 적용 및 가지치기...</sys:String>
     <sys:String x:Key="LOCLuduRestCheckingRepositoryIntegrity">저장소 무결성을 확인하는 중...</sys:String>
-    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">자두 재배 예열 실행 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestRunningPruneDryRun">정리 시험 실행 중...</sys:String>
     <sys:String x:Key="LOCLuduRestPruningUnusedData">사용하지 않는 데이터를 정리합니다...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressPruningRepository">저장소 정리 중...</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyPartialFailure">하나 이상의 게임에 대해 보존 정책 적용에 실패했습니다. 자세한 내용은 원시 출력 내용을 확인하세요.</sys:String>

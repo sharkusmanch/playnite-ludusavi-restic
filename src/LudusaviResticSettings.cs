@@ -112,6 +112,9 @@ namespace LudusaviRestic
         private int keepYearly = 5;
         public int KeepYearly { get { return keepYearly; } set { keepYearly = value; NotifyPropertyChanged("KeepYearly"); } }
 
+        private int maxRepackSizeMB = 500;
+        public int MaxRepackSizeMB { get { return maxRepackSizeMB; } set { maxRepackSizeMB = value; NotifyPropertyChanged("MaxRepackSizeMB"); } }
+
         private Dictionary<string, GameOverride> gameIntervalOverrides = new Dictionary<string, GameOverride>();
         public Dictionary<string, GameOverride> GameIntervalOverrides
         {
@@ -192,6 +195,7 @@ namespace LudusaviRestic
                 KeepMonthly = savedSettings.KeepMonthly;
                 KeepYearly = savedSettings.KeepYearly;
                 EnableRetentionPolicy = savedSettings.EnableRetentionPolicy;
+                MaxRepackSizeMB = savedSettings.MaxRepackSizeMB;
                 GameIntervalOverrides = savedSettings.GameIntervalOverrides;
 
                 // Load notification settings

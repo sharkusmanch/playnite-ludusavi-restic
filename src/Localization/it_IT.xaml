@@ -17,7 +17,7 @@
 
     <sys:String x:Key="LOCLuduRestRepoPath">Percorso repository restico</sys:String>
 
-    <sys:String x:Key="LOCLuduRestRepoPass">Restic repository password</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoPass">Password del repository Restic</sys:String>
     <sys:String x:Key="LOCLuduRestShow">Mostra</sys:String>
     <sys:String x:Key="LOCLuduRestHide">Nascondi</sys:String>
 
@@ -76,13 +76,13 @@ Modalità inclusione: nessun gioco è stato eseguito il backup. I giochi possono
     <sys:String x:Key="LOCLuduRestBackupOnUninstall">Crea un backup di salvataggio quando il gioco è disinstallato</sys:String>
 
     <!-- Notification settings -->
-    <sys:String x:Key="LOCLuduRestNotificationLevel">Backup notification level</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Errors only</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Summary</sys:String>
-    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Verbose (per-game)</sys:String>
-    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Show notification for manual backups</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backed up {0} of {1} games successfully.</sys:String>
-    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backed up {0} of {1} games. {2} failed: {3}</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevel">Livello di notifica del backup</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelErrorsOnly">Solo errori</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelSummary">Riepilogo</sys:String>
+    <sys:String x:Key="LOCLuduRestNotificationLevelVerbose">Dettagliato (per gioco)</sys:String>
+    <sys:String x:Key="LOCLuduRestNotifyOnManualBackup">Mostra notifica per i backup manuali</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummarySuccess">Backup di {0} su {1} giochi completato con successo.</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupAllSummaryFailures">Backup di {0} su {1} giochi. {2} non riusciti: {3}</sys:String>
 
     <!-- Setup Wizard Strings -->
     <sys:String x:Key="LOCLuduRestSetupResticFoundVerified"> Eseguibile Restic trovato e verificato.</sys:String>
@@ -132,7 +132,7 @@ Modalità inclusione: nessun gioco è stato eseguito il backup. I giochi possono
     <sys:String x:Key="LOCLuduRestRetentionPolicyDisabledMessage">La politica di conservazione è disabilitata. Si prega di abilitarla nelle impostazioni di estensione per utilizzare questa funzione.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyComplete">Politica Di Conservazione Completata</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicyCompletedSuccessfully">Politica di conservazione applicata con successo. Le vecchie istantanee sono state eliminate.</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneComplete">Prune Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneComplete">Prune completato</sys:String>
     <sys:String x:Key="LOCLuduRestPruneCompletedSuccessfully">Operazione di pressione completata con successo.</sys:String>
 
     <!-- Dialog prompts -->
@@ -177,13 +177,13 @@ Sembra che sia la tua prima volta usando l'estensione o che la tua configurazion
 
     <!-- Backup browser -->
     <sys:String x:Key="LOCLuduRestDeleteBackupSnapshot">Elimina Backup Istantanea</sys:String>
-    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Are you sure you want to delete snapshot {0} from {1}?</sys:String>
+    <sys:String x:Key="LOCLuduRestDeleteSnapshotConfirmation">Sei sicuro di voler eliminare lo snapshot {0} da {1}?</sys:String>
     <sys:String x:Key="LOCLuduRestSuccess">Successo</sys:String>
     <sys:String x:Key="LOCLuduRestSnapshotDeletedSuccessfully">Snapshot cancellata con successo.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreLatestSnapshot">Ripristina ultima istantanea</sys:String>
     <sys:String x:Key="LOCLuduRestNoSnapshotsForGame">Nessuna istantanea trovata per questo gioco.</sys:String>
     <sys:String x:Key="LOCLuduRestConfirmRestoreLatest">Ripristinare istantanea {0} per {1} nella cartella:\n{2}\n\nI file esistenti possono essere sovrascritti. Continuare?</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Restore Snapshot</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreSnapshotTitle">Ripristina snapshot</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgress">Ripristino istantanea...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompleted">Istantanea ripristinata con successo.</sys:String>
     <sys:String x:Key="LOCLuduRestRefresh">Aggiorna</sys:String>
@@ -208,6 +208,8 @@ Sembra che sia la tua prima volta usando l'estensione o che la tua configurazion
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Mantieni un'istantanea al mese per molti mesi</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Tieni le istantanee annuali per N anni:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Mantieni un'istantanea all'anno per molti anni</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Dimensione max. reimpacchettamento (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limita i dati che Restic reimpacchetta per ciclo di pulizia per ridurre l'uso di memoria. 0 = illimitato (potrebbe causare esaurimento memoria su repository grandi). Predefinito: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Esempio con le impostazioni predefinite:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Conserva gli ultimi 10 snapshot
 • Più 1 snapshot al giorno per 7 giorni
@@ -222,7 +224,7 @@ Sembra che sia la tua prima volta usando l'estensione o che la tua configurazion
     <sys:String x:Key="LOCLuduRestStatus">Stato</sys:String>
     <sys:String x:Key="LOCLuduRestDeletedSnapshotsTab">Soppressione</sys:String>
     <sys:String x:Key="LOCLuduRestClearFilter">Pulisci Filtro</sys:String>
-    <sys:String x:Key="LOCLuduRestGameHeader">Partita</sys:String>
+    <sys:String x:Key="LOCLuduRestGameHeader">Gioco</sys:String>
     <sys:String x:Key="LOCLuduRestDateTimeHeader">Data/Ora</sys:String>
     <sys:String x:Key="LOCLuduRestGamesSummaryTab">Riepilogo Giochi</sys:String>
     <sys:String x:Key="LOCLuduRestGameNameHeader">Nome Del Gioco</sys:String>
@@ -236,7 +238,7 @@ Sembra che sia la tua prima volta usando l'estensione o che la tua configurazion
     <sys:String x:Key="LOCLuduRestRestoreConfirm">Ripristinare istantanea {0} in {1}? Questo potrebbe sovrascrivere file esistenti.</sys:String>
     <sys:String x:Key="LOCLuduRestRestoringSnapshotProgressFmt">Ripristino istantanea {0}...</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreCompletedFmt">Snapshot {0} ripristinato con successo.</sys:String>
-    <sys:String x:Key="LOCLuduRestRestoreComplete">Restore Complete</sys:String>
+    <sys:String x:Key="LOCLuduRestRestoreComplete">Ripristino completato</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreFailed">Recupero dello snapshot non riuscito: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestoreError">Errore nel ripristinare lo snapshot: {0}</sys:String>
     <sys:String x:Key="LOCLuduRestRestorePreview">Snapshot {0} (gioco: {1}) contiene file {2} .
@@ -285,9 +287,9 @@ Scegli Sì per usare la cartella suggerita, No a scegliere un altro, o Annulla p
     <sys:String x:Key="LOCLuduRestSelectResticExecutable">Seleziona Eseguibile Restico</sys:String>
     <sys:String x:Key="LOCLuduRestSelectLudusaviExecutable">Seleziona Ludusavi Eseguibile</sys:String>
     <sys:String x:Key="LOCLuduRestSelectRepositoryLocation">Seleziona Posizione Del Repository</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilter">File eseguibili (*.exe)&lt;unk&gt; *.exe&lt;unk&gt; Tutti i file (*.*)&lt;unk&gt; *.*</sys:String>
-    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Eseguibile*.exe</sys:String>
-        <sys:String x:Key="LOCLuduRestConfigFilter">Conf&lt;unk&gt; *.conf</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilter">Executable files (*.exe)|*.exe|All files (*.*)|*.*</sys:String>
+    <sys:String x:Key="LOCLuduRestExecutableFilterShort">Executable|*.exe</sys:String>
+        <sys:String x:Key="LOCLuduRestConfigFilter">Conf|*.conf</sys:String>
     <sys:String x:Key="LOCLuduRestProgressRunningMaintenance">Esecuzione manutenzione completa...</sys:String>
     <sys:String x:Key="LOCLuduRestProgressVerifyingRepository">Verifica repository...</sys:String>
 
