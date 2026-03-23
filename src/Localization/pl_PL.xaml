@@ -208,6 +208,8 @@ Wygląda na to, że po raz pierwszy korzystasz z rozszerzenia lub Twoja konfigur
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Zachowaj jeden zrzut miesięczny przez wiele miesięcy</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Trzymaj zrzuty roczne przez N lat:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Zachowaj jeden zrzut ekranu rocznie przez wiele lat</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Przykład z ustawieniami domyślnymi:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Zachowaj 10 najnowszych migawek
 • Plus 1 migawka dziennie przez 7 dni
