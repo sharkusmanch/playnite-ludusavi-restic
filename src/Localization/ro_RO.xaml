@@ -208,6 +208,8 @@ Aceasta pare să fie prima dată când folosiți extensia sau configurația dvs.
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Păstraţi un instantaneu pe lună pentru atâtea luni</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Păstrați instantaneu anual timp de N ani:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Păstrați un instantaneu pe an pentru atâția ani</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Exemplu cu setările implicite:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Păstrați ultimele 10 instantanee
 • Plus 1 instantaneu pe zi timp de 7 zile
