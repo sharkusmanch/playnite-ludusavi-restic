@@ -72,7 +72,7 @@ tasks:
       yq -i '.Packages = [{"Version": env(VERSION), "RequiredApiVersion": env(REQUIRED_API), "ReleaseDate": env(RELEASE_DATE), "PackageUrl": env(PACKAGE_URL), "Changelog": []}] + .Packages' manifest.yaml
 
       git log $range --pretty=format:"%s" --no-merges --reverse | while IFS= read -r msg; do
-        ENTRY="$msg" yq -i '.Packages[0].Changelog += [env(ENTRY)]' manifest.yaml
+        ENTRY="$msg" yq -i '.Packages[0].Changelog += [strenv(ENTRY)]' manifest.yaml
       done
 
       echo ""
