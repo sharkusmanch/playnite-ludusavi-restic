@@ -208,6 +208,8 @@ Sembra che sia la tua prima volta usando l'estensione o che la tua configurazion
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Mantieni un'istantanea al mese per molti mesi</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Tieni le istantanee annuali per N anni:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Mantieni un'istantanea all'anno per molti anni</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Esempio con le impostazioni predefinite:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Conserva gli ultimi 10 snapshot
 • Più 1 snapshot al giorno per 7 giorni
