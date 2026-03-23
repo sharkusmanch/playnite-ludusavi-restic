@@ -5,7 +5,47 @@ on:
   workflow_dispatch:
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Validate version consistency
+        run: |
+          ext_version=$(yq '.Version' extension.yaml)
+          manifest_version=$(yq '.Packages[0].Version' manifest.yaml)
+          addon_id=$(yq '.AddonId' manifest.yaml)
+          repo_url="https://github.com/${{ github.repository }}"
+
+          echo "extension.yaml version: $ext_version"
+          echo "manifest.yaml version:  $manifest_version"
+
+          errors=0
+
+          if [ "$ext_version" != "$manifest_version" ]; then
+            echo "::error::Version mismatch: extension.yaml ($ext_version) != manifest.yaml ($manifest_version)"
+            errors=$((errors + 1))
+          fi
+
+          expected_url="${repo_url}/releases/download/v${ext_version}/${addon_id%%_*}_v${ext_version}.pext"
+          actual_url=$(yq '.Packages[0].PackageUrl' manifest.yaml)
+
+          echo "Expected PackageUrl: $expected_url"
+          echo "Actual PackageUrl:   $actual_url"
+
+          if [ "$expected_url" != "$actual_url" ]; then
+            echo "::error::PackageUrl mismatch in manifest.yaml. Expected: $expected_url"
+            errors=$((errors + 1))
+          fi
+
+          if [ $errors -gt 0 ]; then
+            exit 1
+          fi
+
+          echo "All validations passed."
+
   build:
+    needs: validate
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v6
