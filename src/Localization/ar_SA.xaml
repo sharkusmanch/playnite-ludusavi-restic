@@ -208,6 +208,8 @@
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">احتفظ بلقطة واحدة في الشهر لهذا الشهور العديدة</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">الحفاظ على لقطات سنوية ل N سنة:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">احتفظ بلقطة واحدة في السنة لهذه السنوات العديدة</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">مثال مع الإعدادات الافتراضية:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> احتفظ بآخر 10 لقطات
 • بالإضافة إلى لقطة واحدة يوميًا لمدة 7 أيام
