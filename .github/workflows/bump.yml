@@ -73,6 +73,9 @@ jobs:
           version="${{ inputs.version }}"
           branch="release/v${version}"
 
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git checkout -b "$branch"
           git add extension.yaml manifest.yaml
           git commit -m "Bump version to ${version}"
