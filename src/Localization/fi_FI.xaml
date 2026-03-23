@@ -208,6 +208,8 @@ Tämä näyttää olevan ensimmäinen kerta, kun käytät laajennusta tai asetuk
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Pidä yksi tilannekuva kuukaudessa tämän monta kuukautta</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Säilytä vuosittaiset tilannekuvat N-vuodeksi:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Pidä yksi tilannekuva vuodessa tämän monta vuotta</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Esimerkki oletusasetuksista:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Säilytä 10 viimeisintä tilannekuvaa
 • Lisäksi 1 tilannekuva päivässä 7 päivän ajan
