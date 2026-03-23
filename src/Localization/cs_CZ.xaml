@@ -208,6 +208,8 @@ Zdá se, že jste poprvé použili rozšíření, nebo je vaše konfigurace neú
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Udržujte jeden snímek za měsíc na tento mnoho měsíců</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Uchovávejte roční snímky po dobu N let:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Udržujte jeden snímek za rok na mnoho let</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Příklad s výchozím nastavením:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Uchovávejte posledních 10 snímků
 • Plus 1 snímek denně po dobu 7 dnů
