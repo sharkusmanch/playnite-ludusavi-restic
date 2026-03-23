@@ -208,6 +208,8 @@ Dies scheint Ihr erstes Mal mit der Erweiterung zu sein oder Ihre Konfiguration 
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Behalte einen Schnappschuss pro Monat für diese vielen Monate</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">Behalte jährliche Schnappschüsse für N Jahre:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Behalte einen Schnappschuss pro Jahr für so viele Jahre</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Beispiel mit Standardeinstellungen:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Die letzten 10 Snapshots speichern
 • Zusätzlich 1 Snapshot pro Tag für 7 Tage
