@@ -208,6 +208,8 @@ Görünüşe göre bu uzantıyı ilk kez kullanıyorsunuz veya yapılandırmanı
     <sys:String x:Key="LOCLuduRestKeepMonthlyHelp">Bu süre boyunca her ay bir fotoğraf kaydedin.</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyLabel">N yıl boyunca yıllık anlık görüntüler saklayın:</sys:String>
     <sys:String x:Key="LOCLuduRestKeepYearlyHelp">Bu süre boyunca her yıl bir fotoğraf saklayın.</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeLabel">Max repack size (MB):</sys:String>
+    <sys:String x:Key="LOCLuduRestMaxRepackSizeHelp">Limit data restic repacks per prune cycle to reduce memory usage. 0 = unlimited (may cause out-of-memory on large repos). Default: 500.</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExampleHeader">Varsayılan ayarlarla örnek:</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionExample"> Son 10 anlık görüntüyü saklayın
 • 7 gün boyunca günde 1 anlık görüntü ekleyin
