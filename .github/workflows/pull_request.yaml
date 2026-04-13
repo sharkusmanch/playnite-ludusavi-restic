@@ -60,17 +60,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: robinraju/release-downloader@v1.12
-        id: download_playnite
-        with:
-          repository: "JosefNemec/Playnite"
-          latest: true
-          tarBall: false
-          zipBall: false
-          fileName: "Playnite*.zip"
-          out-file-path: playnite
-          extract: true
-
       - run: |
           dotnet build src -c Release
 
