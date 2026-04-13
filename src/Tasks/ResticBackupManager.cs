@@ -38,8 +38,12 @@ namespace LudusaviRestic
             return game.TagIds != null && game.TagIds.Contains(tagId);
         }
 
-        internal static bool ShouldSkipBackup(ExecutionMode mode, Game game, Guid excludeTagId, Guid includeTagId)
+        internal static bool ShouldSkipBackup(ExecutionMode mode, Game game, Guid excludeTagId, Guid includeTagId, IList<Guid> excludedSourceIds = null)
         {
+            if (excludedSourceIds != null && game.SourceId != Guid.Empty && excludedSourceIds.Contains(game.SourceId))
+            {
+                return true;
+            }
             if (mode == ExecutionMode.Exclude && GameHasTag(game, excludeTagId))
             {
                 return true;
@@ -66,7 +70,7 @@ namespace LudusaviRestic
             logger.Debug($"Backup #{game.Name}");
             LudusaviResticSettings settings = this.context.Settings;
 
-            if (ShouldSkipBackup(settings.BackupExecutionMode, game, settings.ExcludeTagID, settings.IncludeTagID))
+            if (ShouldSkipBackup(settings.BackupExecutionMode, game, settings.ExcludeTagID, settings.IncludeTagID, settings.ExcludedSourceIds))
             {
                 logger.Info($"Skipping backup of {game.Name}");
                 return;

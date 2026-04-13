@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Enter backup tag for {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay save backup interval (minutes)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Include Mode: No games are backed up. Games can have the include tag added to be eligible for backup.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Excluded sources</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Games from these sources will never be backed up, regardless of tags or backup mode.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exclude Mode</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Include Mode</sys:String>
@@ -100,14 +103,6 @@ Include Mode: No games are backed up. Games can have the include tag added to be
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">View backup snapshots</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-Detection Successful</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-Detection Failed</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Could not automatically detect ludusavi executable. Please specify the path manually.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic executable detected at: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Could not automatically detect restic executable. Please specify the path manually.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Settings Verification:</sys:String>
@@ -327,5 +322,33 @@ Choose Yes to use suggested folder, No to pick another, or Cancel to abort.</sys
     <sys:String x:Key="LOCLuduRestInitializationError">Initialization Error</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Setup Error</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">An error occurred during setup: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">No save files found for {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Failed to get files from ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} of {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">and {0} more</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Failed to create restic game saves snapshot {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic failed to read some game save files for {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Error creating snapshot for {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Successfully created game data snapshot for {0}</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Loading backup snapshots...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Failed to load backup snapshots. Check your restic configuration.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Error loading snapshots: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Failed to delete snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Error deleting snapshot: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Repository check failed: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Prune operation failed: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Error during maintenance: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Repository verification failed: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Error during verification: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Failed to list snapshots: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Error during retention policy: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Error during prune: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Error running setup wizard: {0}</sys:String>
 
 </ResourceDictionary>

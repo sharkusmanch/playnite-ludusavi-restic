@@ -79,7 +79,7 @@ namespace LudusaviRestic
                 if (files.Count == 0)
                 {
                     logger.Error("Unable to get game info from ludusavi");
-                    SendErrorNotification($"No save files found for {game.Name}", context);
+                    SendErrorNotification(string.Format(ResourceProvider.GetString("LOCLuduRestNoSaveFilesFound"), game.Name), context);
                 }
                 else
                 {
@@ -90,7 +90,7 @@ namespace LudusaviRestic
             catch (Exception e)
             {
                 logger.Debug(e, "Failed to get files from ludusavi");
-                SendErrorNotification("Failed to get files from ludusavi", context);
+                SendErrorNotification(ResourceProvider.GetString("LOCLuduRestFailedToGetLudusaviFiles"), context);
                 return new List<string>();
             }
         }
@@ -123,20 +123,20 @@ namespace LudusaviRestic
             switch (result)
             {
                 case SnapshotResult.Failed:
-                    SendNotification($"Failed to create restic game saves snapshot {game.Name}", NotificationType.Error, context, notifId);
+                    SendNotification(string.Format(ResourceProvider.GetString("LOCLuduRestFailedToCreateSnapshot"), game.Name), NotificationType.Error, context, notifId);
                     break;
                 case SnapshotResult.PartialFailure:
-                    SendNotification($"Restic failed to read some game save files for {game.Name}", NotificationType.Error, context, notifId);
+                    SendNotification(string.Format(ResourceProvider.GetString("LOCLuduRestPartialSnapshotFailure"), game.Name), NotificationType.Error, context, notifId);
                     break;
                 case SnapshotResult.Error:
-                    SendNotification($"Error creating snapshot for {game.Name}", NotificationType.Error, context, notifId);
+                    SendNotification(string.Format(ResourceProvider.GetString("LOCLuduRestErrorCreatingSnapshot"), game.Name), NotificationType.Error, context, notifId);
                     break;
                 case SnapshotResult.Success:
                     bool shouldNotify = (isManual && context.Settings.NotifyOnManualBackup)
                         || context.Settings.NotificationLevel == NotificationLevel.Verbose;
                     if (shouldNotify)
                     {
-                        SendNotification($"Successfully created game data snapshot for {game.Name}", NotificationType.Info, context, notifId);
+                        SendNotification(string.Format(ResourceProvider.GetString("LOCLuduRestSnapshotCreatedSuccessfully"), game.Name), NotificationType.Info, context, notifId);
                     }
                     break;
             }

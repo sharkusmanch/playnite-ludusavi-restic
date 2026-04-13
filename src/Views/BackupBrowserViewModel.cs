@@ -161,7 +161,7 @@ namespace LudusaviRestic
         private void RefreshSnapshots()
         {
             GlobalProgressOptions globalProgressOptions = new GlobalProgressOptions(
-                "Loading backup snapshots...",
+                ResourceProvider.GetString("LOCLuduRestLoadingBackupSnapshots"),
                 true
             )
             { IsIndeterminate = true };
@@ -196,13 +196,13 @@ namespace LudusaviRestic
                     else
                     {
                         logger.Error($"Failed to list snapshots: {result.StdErr}");
-                        context.API.Dialogs.ShowErrorMessage("Failed to load backup snapshots. Check your restic configuration.");
+                        context.API.Dialogs.ShowErrorMessage(ResourceProvider.GetString("LOCLuduRestFailedToLoadSnapshots"));
                     }
                 }
                 catch (Exception ex)
                 {
                     logger.Error(ex, "Error loading snapshots");
-                    context.API.Dialogs.ShowErrorMessage($"Error loading snapshots: {ex.Message}");
+                    context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestErrorLoadingSnapshots"), ex.Message));
                 }
             }, globalProgressOptions);
         }
@@ -239,13 +239,13 @@ namespace LudusaviRestic
                 else
                 {
                     logger.Error($"Failed to delete snapshot: {deleteResult.StdErr}");
-                    context.API.Dialogs.ShowErrorMessage($"Failed to delete snapshot: {deleteResult.StdErr}");
+                    context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestFailedToDeleteSnapshot"), deleteResult.StdErr));
                 }
             }
             catch (Exception ex)
             {
                 logger.Error(ex, "Error deleting snapshot");
-                context.API.Dialogs.ShowErrorMessage($"Error deleting snapshot: {ex.Message}");
+                context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestErrorDeletingSnapshot"), ex.Message));
             }
         }
 

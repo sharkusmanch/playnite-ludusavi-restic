@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">ゲームのバックアップタグ</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">バックアップタグを入力してください</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">{0} のバックアップタグを入力してください</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">ゲームプレイ保存のバックアップ間隔 (分)</sys:String>
 
@@ -65,6 +65,9 @@
 
 モードを含める: ゲームはバックアップされていません. ゲームはバックアップの対象となるためにインクルードタグを追加することができます.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">除外ソース</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">これらのソースのゲームは、タグやバックアップモードに関わらず、バックアップされることはありません。</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">除外モード</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">含めるモード</sys:String>
@@ -100,14 +103,6 @@
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">バックアップスナップショットを表示</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">自動検出成功</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">自動検出失敗</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">{0} でLudusavi実行可能ファイルを検出しました</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">ludusavi実行ファイルを自動的に検出できませんでした。手動でパスを指定してください。</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">{0} で Restic 実行ファイルが検出されました</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Restic実行ファイルを自動的に検出できませんでした。手動でパスを指定してください。</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic 設定の確認:</sys:String>
@@ -327,5 +322,33 @@
     <sys:String x:Key="LOCLuduRestInitializationError">初期化エラー</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">セットアップエラー</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">セットアップ中にエラーが発生しました： {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">{0} のセーブファイルが見つかりません</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">ludusavi からファイルの取得に失敗しました</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {2}件中{1}件目</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">他{0}件</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">restic ゲームセーブのスナップショット {0} の作成に失敗しました</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic が {0} の一部のセーブファイルの読み込みに失敗しました</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">{0} のスナップショット作成中にエラーが発生しました</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">{0} のゲームデータスナップショットを正常に作成しました</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">バックアップスナップショットを読み込み中...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">バックアップスナップショットの読み込みに失敗しました。restic の設定を確認してください。</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">スナップショットの読み込み中にエラーが発生しました: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">スナップショットの削除に失敗しました: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">スナップショットの削除中にエラーが発生しました: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">リポジトリチェックに失敗しました: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">プルーン操作に失敗しました: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">メンテナンス中にエラーが発生しました: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">リポジトリの検証に失敗しました: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">検証中にエラーが発生しました: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">スナップショットの一覧取得に失敗しました: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">保持ポリシーの適用中にエラーが発生しました: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">プルーン中にエラーが発生しました: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">セットアップウィザードの実行中にエラーが発生しました: {0}</sys:String>
 
 </ResourceDictionary>

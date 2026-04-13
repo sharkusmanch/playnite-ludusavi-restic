@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Oyun yedekleme etiketi</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Yedekleme etiketini girin</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">{0} için yedekleme etiketini girin</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Oyun içi kayıt yedekleme aralığı (dakika)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Dahil Etme Modu: Hiçbir oyun yedeklenmez. Yedekleme için uygun olmak üzere oyunlara dahil etme etiketi eklenebilir.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Hariç Tutulan Kaynaklar</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Bu kaynaklardaki oyunlar, etiket veya yedekleme modundan bağımsız olarak hiçbir zaman yedeklenmez.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Hariç Tutma Modu</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Dahil Etme Modu</sys:String>
@@ -100,14 +103,6 @@ Dahil Etme Modu: Hiçbir oyun yedeklenmez. Yedekleme için uygun olmak üzere oy
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Yedekleme anlık görüntülerini görüntüle</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Otomatik Algılama Başarılı</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Otomatik Algılama Başarısız Oldu</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi yürütülebilir dosyası şu konumda tespit edildi: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Ludusavi yürütülebilir dosyası otomatik olarak algılanamadı. Lütfen yolu manuel olarak belirtin.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic yürütülebilir dosyası şu konumda tespit edildi: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Restic yürütülebilir dosyası otomatik olarak algılanamadı. Lütfen yolu manuel olarak belirtin.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Ayarlarının Doğrulanması:</sys:String>
@@ -327,5 +322,33 @@ Mevcut dosyalar (üzerine yazılacak): {4}
     <sys:String x:Key="LOCLuduRestInitializationError">Başlatma Hatası</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Kurulum Hatası</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Kurulum sırasında bir hata oluştu: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">{0} için kayıt dosyası bulunamadı</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">ludusavi'den dosyalar alınamadı</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {2} oyunundan {1}. oyun</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">ve {0} tane daha</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Restic oyun kayıt anlık görüntüsü {0} oluşturulamadı</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic, {0} için bazı oyun kayıt dosyalarını okuyamadı</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">{0} için anlık görüntü oluşturulurken hata oluştu</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">{0} için oyun verisi anlık görüntüsü başarıyla oluşturuldu</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Yedek anlık görüntüler yükleniyor...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Yedek anlık görüntüler yüklenemedi. Restic yapılandırmanızı kontrol edin.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Anlık görüntüler yüklenirken hata oluştu: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Anlık görüntü silinemedi: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Anlık görüntü silinirken hata oluştu: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Depo denetimi başarısız oldu: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Budama işlemi başarısız oldu: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Bakım sırasında hata oluştu: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Depo doğrulaması başarısız oldu: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Doğrulama sırasında hata oluştu: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Anlık görüntüler listelenemedi: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Saklama politikası uygulanırken hata oluştu: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Budama sırasında hata oluştu: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Kurulum sihirbazı çalıştırılırken hata oluştu: {0}</sys:String>
 
 </ResourceDictionary>

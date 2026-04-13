@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Znacznik kopii zapasowej gry</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Wprowadź tag kopii zapasowej dla</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Wprowadź tag kopii zapasowej dla {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Czas zapisywania kopii zapasowych w grze (minuty)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Tryb uwzględnienia: Brak kopii zapasowych gier. Gry mogą mieć dodany znacznik, aby zakwalifikować się do kopii zapasowej.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Wykluczone źródła</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Gry z tych źródeł nigdy nie będą tworzone kopie zapasowe, niezależnie od tagów ani trybu kopii zapasowej.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Wyklucz tryb</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Uwzględnij tryb</sys:String>
@@ -100,14 +103,6 @@ Tryb uwzględnienia: Brak kopii zapasowych gier. Gry mogą mieć dodany znacznik
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Zobacz zrzuty kopii zapasowej</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Automatyczne wykrywanie zakończone</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-wykrywanie nie powiodło się</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Wykryto plik wykonywalny Ludusavi w: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Nie można automatycznie wykryć pliku wykonywalnego ludusavi. Proszę określić ścieżkę ręcznie.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Znaleziono plik wykonywalny na: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Nie można automatycznie wykryć pliku wykonywalnego przywrócenia. Proszę określić ścieżkę ręcznie.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Weryfikacja ustawień Restic Ludusavi:</sys:String>
@@ -327,5 +322,33 @@ Wybierz Tak, aby użyć sugerowanego folderu, Nie można wybrać innego, lub Anu
     <sys:String x:Key="LOCLuduRestInitializationError">Błąd inicjalizacji</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Błąd konfiguracji</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Wystąpił błąd podczas konfiguracji: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Nie znaleziono plików zapisu dla {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Nie udało się pobrać plików z Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} z {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">i {0} więcej</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Nie udało się utworzyć migawki zapisów gry Restic {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic nie mógł odczytać niektórych plików zapisu gry dla {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Błąd podczas tworzenia migawki dla {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Pomyślnie utworzono migawkę danych gry dla {0}</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Ładowanie migawek kopii zapasowych...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Nie udało się załadować migawek kopii zapasowych. Sprawdź konfigurację Restic.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Błąd podczas ładowania migawek: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Nie udało się usunąć migawki: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Błąd podczas usuwania migawki: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Sprawdzenie repozytorium nie powiodło się: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Operacja czyszczenia nie powiodła się: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Błąd podczas konserwacji: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Weryfikacja repozytorium nie powiodła się: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Błąd podczas weryfikacji: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Nie udało się wyświetlić listy migawek: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Błąd podczas stosowania zasad przechowywania: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Błąd podczas czyszczenia: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Błąd podczas uruchamiania kreatora konfiguracji: {0}</sys:String>
 
 </ResourceDictionary>

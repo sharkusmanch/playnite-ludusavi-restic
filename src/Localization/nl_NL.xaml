@@ -7,9 +7,9 @@
 
     <sys:String x:Key="LOCLuduRestPromptForGameStoppedTag">Vraag naar backup tag wanneer het spel gestopt is</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Game backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Spelback-uptag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Back-up tag invoeren voor</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Back-up tag invoeren voor {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay opslaan back-up interval (minuten)</sys:String>
 
@@ -41,7 +41,7 @@
 
     <sys:String x:Key="LOCLuduRestBackupGameStopTag">Spel gestopt backup tag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay backup tag</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupGameplayTag">Gameplay back-uptag</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupGMCreate">Maak een save snapshot</sys:String>
 
@@ -64,6 +64,9 @@
     <sys:String x:Key="LOCLuduRestBackupModeNote" xml:space="preserve">Uitsluiten modus: alle spellen komen standaard in aanmerking om te back-uppen. Spellen kunnen de uitsluiting tag toegevoegd hebben om back-up te voorkomen.
 
 Inclusief modus: er worden geen spellen geback-upt. Spellen kunnen de inclusief tag toegevoegd hebben om in aanmerking te komen voor back-up.</sys:String>
+
+    <sys:String x:Key="LOCLuduRestExcludedSources">Uitgesloten bronnen</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Spellen uit deze bronnen worden nooit geback-upt, ongeacht tags of back-upmodus.</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Modus uitsluiten</sys:String>
 
@@ -100,14 +103,6 @@ Inclusief modus: er worden geen spellen geback-upt. Spellen kunnen de inclusief 
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Bekijk backup snapshots</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-detectie geslaagd</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-detectie mislukt</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Uitvoerbaar Ludusavi gedetecteerd op: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Kan ludusavi-uitvoerbaar niet automatisch detecteren. Geef het pad handmatig op.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic programma gedetecteerd op: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Kan restic uitvoerbaar niet automatisch detecteren. Specificeer het pad handmatig.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Verificatie Ludusavi Instellingen:</sys:String>
@@ -273,7 +268,7 @@ Kies Ja om de voorgestelde map te gebruiken, Nee om een andere te kiezen, of Ann
     <sys:String x:Key="LOCLuduRestNoSnapshotsFound">Er zijn geen momentopnamen gevonden in de repository.</sys:String>
 
     <!-- Main menu items -->
-    <sys:String x:Key="LOCLuduRestSetupWizard">Setup wizard</sys:String>
+    <sys:String x:Key="LOCLuduRestSetupWizard">Installatiewizard</sys:String>
     <sys:String x:Key="LOCLuduRestBackupAllGames">Back-up van alle spellen</sys:String>
     <sys:String x:Key="LOCLuduRestBrowseBackupSnapshots">Blader door backup snapshots</sys:String>
     <sys:String x:Key="LOCLuduRestMaintenanceAll">Alles (check + prune)</sys:String>
@@ -327,5 +322,33 @@ Kies Ja om de voorgestelde map te gebruiken, Nee om een andere te kiezen, of Ann
     <sys:String x:Key="LOCLuduRestInitializationError">Initialisatie fout</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Fout bij instellen</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Er is een fout opgetreden tijdens het instellen: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Geen opslagbestanden gevonden voor {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Ophalen van bestanden uit Ludusavi mislukt</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} van {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">en {0} meer</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Maken van Restic-spelopslagsnapshot {0} mislukt</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic kon sommige spelopslagbestanden voor {0} niet lezen</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Fout bij het maken van snapshot voor {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Spelgegevenssnapshot voor {0} succesvol aangemaakt</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Back-upsnapshots laden...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Laden van back-upsnapshots mislukt. Controleer uw Restic-configuratie.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Fout bij het laden van snapshots: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Verwijderen van snapshot mislukt: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Fout bij het verwijderen van snapshot: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Repository-controle mislukt: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Snoeierbewerking mislukt: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Fout tijdens onderhoud: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Repository-verificatie mislukt: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Fout tijdens verificatie: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Snapshots weergeven mislukt: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Fout tijdens bewaarbeleid: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Fout tijdens snoeibewerking: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Fout bij het uitvoeren van de installatiewizard: {0}</sys:String>
 
 </ResourceDictionary>

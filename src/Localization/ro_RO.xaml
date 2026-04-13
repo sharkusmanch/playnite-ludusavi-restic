@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Etichetă copie de rezervă</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Introduceți eticheta copie de rezervă pentru</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Introduceți eticheta de backup pentru {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Interval salvare salvare joc de rezervă (minute)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Modul Include : niciun joc nu este salvat. Jocurile pot avea eticheta include adăugată pentru a fi eligibilă pentru copia de rezervă.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Surse excluse</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Jocurile din aceste surse nu vor fi niciodată incluse în backup, indiferent de etichete sau modul de backup.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exclude modul</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Modul de includere</sys:String>
@@ -100,14 +103,6 @@ Modul Include : niciun joc nu este salvat. Jocurile pot avea eticheta include ad
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Vezi instantanee de rezervă</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-Detectare cu succes</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-detectare eșuată</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Executabil Ludusavi detectat la: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Nu s-a putut detecta automat ludusavi executabil. Vă rugăm să specificaţi calea manual.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Executabil de restic detectat la: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Nu s-a putut detecta automat executabilitatea de restic. Vă rugăm să specificați calea manual.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Verificare setări de restaurare Ludusavi:</sys:String>
@@ -327,5 +322,33 @@ Alegeți Da pentru a utiliza folderul sugerat, Nu poți alege altul sau anula pe
     <sys:String x:Key="LOCLuduRestInitializationError">Eroare de iniţializare</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Eroare de instalare</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">A aparut o eroare la setare: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Nu s-au găsit fișiere de salvare pentru {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Eroare la obținerea fișierelor din Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} din {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">și încă {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Eroare la crearea instantaneei Restic a salvărilor pentru {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic nu a putut citi unele fișiere de salvare pentru {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Eroare la crearea instantaneei pentru {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Instantanee a datelor jocului creată cu succes pentru {0}</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Se încarcă instantaneele de rezervă...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Eroare la încărcarea instantaneelor de rezervă. Verificați configurația Restic.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Eroare la încărcarea instantaneelor: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Nu s-a putut șterge instantaneea: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Eroare la ștergerea instantaneei: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Verificarea integrității depozitului a eșuat: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Operațiunea de curățare a eșuat: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Eroare în timpul întreținerii: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Verificarea depozitului a eșuat: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Eroare în timpul verificării: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Eroare la listarea instantaneelor: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Eroare în timpul politicii de retenție: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Eroare în timpul curățării: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Eroare la rularea asistentului de configurare: {0}</sys:String>
 
 </ResourceDictionary>

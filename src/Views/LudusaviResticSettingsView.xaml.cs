@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -39,6 +40,13 @@ namespace LudusaviRestic
                 catch (Exception ex)
                 {
                     logger.Error(ex, "Error initializing password fields");
+                }
+            };
+            IsVisibleChanged += (s, e) =>
+            {
+                if ((bool)e.NewValue && ExcludedSourcesList != null)
+                {
+                    PopulateSourcesList();
                 }
             };
         }
@@ -151,6 +159,15 @@ namespace LudusaviRestic
             KeepWeekly.IsEnabled = false;
             KeepMonthly.IsEnabled = false;
             KeepYearly.IsEnabled = false;
+        }
+
+        private void PopulateSourcesList()
+        {
+            var sources = this.plugin.PlayniteApi.Database.Sources
+                .OrderBy(s => s.Name)
+                .Select(s => new SourceCheckItem(s.Name, s.Id, this.plugin.settings.ExcludedSourceIds))
+                .ToList();
+            ExcludedSourcesList.ItemsSource = sources;
         }
 
         private void RefreshOverridesGrid()
@@ -378,6 +395,34 @@ namespace LudusaviRestic
             {
                 logger.Error(ex, "Error toggling rclone password visibility");
             }
+        }
+    }
+
+    public class SourceCheckItem : INotifyPropertyChanged
+    {
+        private readonly List<Guid> excludedList;
+
+        public string Name { get; }
+        public Guid SourceId { get; }
+
+        public bool IsExcluded
+        {
+            get => excludedList.Contains(SourceId);
+            set
+            {
+                if (value) { if (!excludedList.Contains(SourceId)) excludedList.Add(SourceId); }
+                else { excludedList.Remove(SourceId); }
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsExcluded)));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public SourceCheckItem(string name, Guid sourceId, List<Guid> excludedList)
+        {
+            Name = name;
+            SourceId = sourceId;
+            this.excludedList = excludedList;
         }
     }
 }

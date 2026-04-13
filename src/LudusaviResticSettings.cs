@@ -122,6 +122,13 @@ namespace LudusaviRestic
             set { gameIntervalOverrides = value ?? new Dictionary<string, GameOverride>(); }
         }
 
+        private List<Guid> excludedSourceIds = new List<Guid>();
+        public List<Guid> ExcludedSourceIds
+        {
+            get { return excludedSourceIds; }
+            set { excludedSourceIds = value ?? new List<Guid>(); }
+        }
+
         private List<string> errors;
 
         private int gameplayBackupInterval = 5;
@@ -197,6 +204,7 @@ namespace LudusaviRestic
                 EnableRetentionPolicy = savedSettings.EnableRetentionPolicy;
                 MaxRepackSizeMB = savedSettings.MaxRepackSizeMB;
                 GameIntervalOverrides = savedSettings.GameIntervalOverrides;
+                ExcludedSourceIds = savedSettings.ExcludedSourceIds;
 
                 // Load notification settings
                 NotificationLevel = savedSettings.NotificationLevel;

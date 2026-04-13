@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Spil backup tag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Indtast sikkerhedskopi tag for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Indtast backup-tag for {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Spar backup interval for gameplay (minutter)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Inkluder Tilstand: Ingen spil er sikkerhedskopieret. Spil kan få inkluderet tag tilføjet for at være berettiget til backup.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Udelukkede kilder</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Spil fra disse kilder vil aldrig blive sikkerhedskopieret, uanset tags eller sikkerhedskopieringstilstand.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Udeluk Tilstand</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Inkluder Tilstand</sys:String>
@@ -100,14 +103,6 @@ Inkluder Tilstand: Ingen spil er sikkerhedskopieret. Spil kan få inkluderet tag
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Se snapshots for sikkerhedskopier</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-Detektering Lykkedes</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-Detektering Mislykkedes</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi-eksekverbar detekteret på: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Kunne ikke automatisk detektere eksekverbar ludusavi. Angiv stien manuelt.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic program fundet ved: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Kunne ikke automatisk detektere restic eksekverbar. Angiv stien manuelt.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Verificering Af Ludusavi Restiske Indstillinger:</sys:String>
@@ -327,5 +322,33 @@ Vælg Ja for at bruge foreslået mappe, Nej til at vælge en anden, eller Annull
     <sys:String x:Key="LOCLuduRestInitializationError">Initialiseringsfejl</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Fejl ved opsætning</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Der opstod en fejl under opsætningen: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Ingen gemtefiler fundet for {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Kunne ikke hente filer fra Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} af {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">og {0} mere</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Kunne ikke oprette Restic-spilgemme-snapshot {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic kunne ikke læse nogle spilgemmefiler for {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Fejl ved oprettelse af snapshot for {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Spildata-snapshot for {0} oprettet</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Indlæser backup-snapshots...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Kunne ikke indlæse backup-snapshots. Kontroller din Restic-konfiguration.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Fejl ved indlæsning af snapshots: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Kunne ikke slette snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Fejl ved sletning af snapshot: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Repository-kontrol mislykkedes: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Beskæringshandling mislykkedes: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Fejl under vedligeholdelse: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Repository-verifikation mislykkedes: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Fejl under verifikation: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Kunne ikke vise snapshots: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Fejl under opbevaringspolitik: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Fejl under beskæring: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Fejl ved kørsel af installationsguide: {0}</sys:String>
 
 </ResourceDictionary>

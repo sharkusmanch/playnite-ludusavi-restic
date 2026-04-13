@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Tag do backup do jogo</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Insira a tag de backup para</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Insira a etiqueta de backup para {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervalo de salvamento do jogo (minutos)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Modo Incluir: Nenhum jogo é incluído no backup. É possível adicionar a etiqueta de inclusão aos jogos para que sejam elegíveis para backup.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Fontes excluídas</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Os jogos destas fontes nunca serão incluídos na cópia de segurança, independentemente das etiquetas ou do modo de backup.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Modo de exclusão</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Incluir modo</sys:String>
@@ -100,14 +103,6 @@ Modo Incluir: Nenhum jogo é incluído no backup. É possível adicionar a etiqu
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Ver instantâneos de backup</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Detecção automática bem sucedida</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Falha na Detecção Automática</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Executável Ludusavi detectado em: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Não foi possível detectar automaticamente o executável ludusavi. Especifique o caminho manualmente.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Executável Rosa detectado em: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Não foi possível detectar automaticamente o executável reta. Por favor, especifique o caminho manualmente.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Verificação de Configurações Ludusavi Restic Settings:</sys:String>
@@ -327,5 +322,33 @@ Escolha Sim para usar a pasta sugerida, Não para escolher outro, ou Cancelar pa
     <sys:String x:Key="LOCLuduRestInitializationError">Erro de inicialização</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Erro de instalação</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Ocorreu um erro durante a configuração: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Não foram encontrados ficheiros de gravação para {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Falha ao obter ficheiros do Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} de {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">e mais {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Falha ao criar o instantâneo Restic das gravações para {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">O Restic não conseguiu ler alguns ficheiros de gravação para {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Erro ao criar instantâneo para {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Instantâneo dos dados do jogo criado com sucesso para {0}</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">A carregar instantâneos de cópia de segurança...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Falha ao carregar os instantâneos de cópia de segurança. Verifique a configuração do Restic.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Erro ao carregar instantâneos: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Falha ao eliminar instantâneo: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Erro ao eliminar instantâneo: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Verificação de integridade do repositório falhou: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Operação de limpeza falhou: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Erro durante a manutenção: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Verificação do repositório falhou: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Erro durante a verificação: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Falha ao listar instantâneos: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Erro durante a política de retenção: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Erro durante a limpeza: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Erro ao executar o assistente de configuração: {0}</sys:String>
 
 </ResourceDictionary>

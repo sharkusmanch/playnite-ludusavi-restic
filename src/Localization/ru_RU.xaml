@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Тег сохранения игры</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Введите тег резервной копии для</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Введите тег резервной копии для {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Интервал резервного копирования (минуты)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Включающий режим: Нет резервных копий игр. Игры могут иметь тег include для права на резервное копирование.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Исключённые источники</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Игры из этих источников никогда не будут резервно копироваться, независимо от тэгов или режима резервного копирования.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Исключить режим</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Режим включения</sys:String>
@@ -100,14 +103,6 @@
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Просмотр снимков резервной копии</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Автоматическое обнаружение выполнено</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Ошибка автоопределения</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Исполняемый файл Ludusavi обнаружен в: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Не удалось автоматически определить исполняемый файл ludusavi. Пожалуйста, укажите путь вручную.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Исполняемый файл Restic обнаружен в: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Не удаётся автоматически обнаружить исполняемый файл. Пожалуйста, укажите путь вручную.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Проверка настроек Ludusavi Restic:</sys:String>
@@ -327,5 +322,33 @@
     <sys:String x:Key="LOCLuduRestInitializationError">Ошибка инициализации</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Ошибка установки</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Произошла ошибка во время установки: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Файлы сохранений для {0} не найдены</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Не удалось получить файлы от Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} из {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">и ещё {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Не удалось создать снимок сохранений Restic {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic не смог прочитать некоторые файлы сохранений для {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Ошибка при создании снимка для {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Снимок данных игры для {0} успешно создан</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Загрузка резервных снимков...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Не удалось загрузить резервные снимки. Проверьте конфигурацию Restic.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Ошибка при загрузке снимков: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Не удалось удалить снимок: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Ошибка при удалении снимка: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Проверка репозитория не удалась: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Операция очистки не удалась: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Ошибка во время обслуживания: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Верификация репозитория не удалась: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Ошибка при верификации: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Не удалось получить список снимков: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Ошибка при применении политики хранения: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Ошибка при очистке: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Ошибка при запуске мастера настройки: {0}</sys:String>
 
 </ResourceDictionary>

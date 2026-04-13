@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Spiel-Backup-Tag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Sicherungs-Tag eingeben für</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Sicherungs-Tag eingeben für {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Spielstände Sicherungsintervall (Minuten)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Einbeziehungsmodus: Keine Spiele sind gesichert. Spiele können das Include-Tag als Sicherungsberechtigung hinzugefügt haben.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Ausgeschlossene Quellen</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Spiele aus diesen Quellen werden nie gesichert, unabhängig von Tags oder Backup-Modus.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Ausschluss Modus</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Einbinden Modus</sys:String>
@@ -101,14 +104,6 @@ Einbeziehungsmodus: Keine Spiele sind gesichert. Spiele können das Include-Tag 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Backup Snapshots anzeigen</sys:String>
 
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Automatische Erkennung erfolgreich</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-Erkennung fehlgeschlagen</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi ausführbar erkannt am: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Konnte ludusavi nicht automatisch erkennen. Bitte geben Sie den Pfad manuell an.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restische ausführbare Datei gefunden am: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Restic executable konnte nicht automatisch erkannt werden. Bitte geben Sie den Pfad manuell an.</sys:String>
-
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restische Einstellungen Überprüfung:</sys:String>
     <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - Verbindung zum Repository erfolgreich</sys:String>
@@ -140,7 +135,7 @@ Einbeziehungsmodus: Keine Spiele sind gesichert. Spiele können das Include-Tag 
     <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Möchten Sie zuerst einen Trockenlauf durchführen, um zu sehen, was vor dem Löschen der Daten beschnitten werden würde?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicy">Vorratsdatenspeicherung</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Möchten Sie zuerst einen Trockenlauf durchführen, um zu sehen, was gelöscht werden würde, bevor Sie die Schnappschüsse entfernen?</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Prune</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">Bereinigen</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Möchten Sie zuerst einen Trockenlauf durchführen, um zu sehen, was vor dem Löschen der Daten beschnitten werden würde?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithPruning">Mit Pruning fortfahren?</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Trockenlauf abgeschlossen. {0} Schnappschüsse würden abgeschnitten. Möchten Sie mit dem eigentlichen Schnitt fortfahren?</sys:String>
@@ -327,5 +322,33 @@ Wählen Sie Ja zum Verwenden des empfohlenen Ordners, Nein um einen anderen ausz
     <sys:String x:Key="LOCLuduRestInitializationError">Initialisierungsfehler</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Setup-Fehler</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Beim Setup ist ein Fehler aufgetreten: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Keine Speicherdateien für {0} gefunden</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Dateien konnten nicht von Ludusavi abgerufen werden</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} von {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">und {0} weitere</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Restic-Spielstand-Snapshot {0} konnte nicht erstellt werden</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic konnte einige Spielstand-Dateien für {0} nicht lesen</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Fehler beim Erstellen des Snapshots für {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Spieldaten-Snapshot für {0} erfolgreich erstellt</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Backup-Snapshots werden geladen...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Backup-Snapshots konnten nicht geladen werden. Überprüfen Sie Ihre Restic-Konfiguration.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Fehler beim Laden der Snapshots: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Snapshot konnte nicht gelöscht werden: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Fehler beim Löschen des Snapshots: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Repository-Prüfung fehlgeschlagen: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Bereinigungsvorgang fehlgeschlagen: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Fehler bei der Wartung: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Repository-Verifizierung fehlgeschlagen: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Fehler bei der Verifizierung: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Snapshots konnten nicht aufgelistet werden: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Fehler bei der Aufbewahrungsrichtlinie: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Fehler bei der Bereinigung: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Fehler beim Ausführen des Einrichtungsassistenten: {0}</sys:String>
 
 </ResourceDictionary>

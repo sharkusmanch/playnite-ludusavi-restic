@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Ознака резервне копије игре</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Унесите резервну ознаку за</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Унесите резервну ознаку за {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Интервал прављења резервне копије сачуваног играња (минути)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Режим укључивања: Ниједна игра се не резервно копира. Играма се може додати ознака за укључивање да би испуњавале услове за прављење резервне копије.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Искључени извори</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Игре из ових извора никада неће бити прављене резервне копије, без обзира на ознаке или режим резервне копије.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Режим искључења</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Укључи режим</sys:String>
@@ -100,14 +103,6 @@
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Погледајте снимке резервних копија</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Аутоматско откривање је успешно</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Аутоматско откривање није успело</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Извршна датотека Лудусави откривена је на: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Није могуће аутоматски детектовати извршну датотеку ludusavi. Молимо вас да ручно наведете путању.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Рестиц извршни фајл је откривен на: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Није могуће аутоматски детектовати restic извршну датотеку. Молимо вас да ручно наведете путању.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Верификација подешавања Лудусавија Рестика:</sys:String>
@@ -327,5 +322,33 @@
     <sys:String x:Key="LOCLuduRestInitializationError">Грешка иницијализације</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Грешка у подешавању</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Дошло је до грешке током подешавања: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Нису пронађени фајлови са сачуваним играма за {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Није успело преузимање фајлова из Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} od {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">и још {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Није успело прављење Restic снимка сачуваних игара {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic није могао да прочита неке фајлове сачуваних игара за {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Грешка при прављењу снимка за {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Снимак података игре за {0} је успешно направљен</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Учитавање резервних снимака...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Није успело учитавање резервних снимака. Проверите конфигурацију Restic.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Грешка при учитавању снимака: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Није успело брисање снимка: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Грешка при брисању снимка: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Провера спремишта није успела: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Операција чишћења није успела: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Грешка током одржавања: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Верификација спремишта није успела: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Грешка током верификације: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Није успело листање снимака: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Грешка током примене политике задржавања: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Грешка током чишћења: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Грешка при покретању чаробњака за подешавање: {0}</sys:String>
 
 </ResourceDictionary>

@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">תג גיבוי המשחק</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">הזן תג גיבוי עבור</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">הזן תג גיבוי עבור {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">מרווח גיבוי של שמירת משחק (בדקות)</sys:String>
 
@@ -65,6 +65,9 @@
 
 מצב הכללה: לא מגובים משחקים. ניתן להוסיף תגית הכללה למשחקים כדי שיהיו זכאים לגיבוי.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">מקורות מוחרגים</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">משחקים ממקורות אלה לעולם לא יגובו, ללא קשר לתגים או למצב הגיבוי.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">מצב אי הכללה</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">מצב הכללה</sys:String>
@@ -100,14 +103,6 @@
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">צפה בתמונות גיבוי</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">זיהוי אוטומטי הצליח</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">זיהוי אוטומטי נכשל</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">הפעלת Ludusavi זוהתה ב: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">לא ניתן היה לזהות באופן אוטומטי את קובץ ההפעלה ludusavi. אנא ציין את הנתיב באופן ידני.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">הפעלת Restic זוהתה ב: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">לא ניתן היה לזהות באופן אוטומטי את קובץ ההפעלה restic. אנא ציין את הנתיב באופן ידני.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">אימות הגדרות Ludusavi Restic:</sys:String>
@@ -327,5 +322,33 @@
     <sys:String x:Key="LOCLuduRestInitializationError">שגיאת אתחול</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">שגיאת התקנה</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">אירעה שגיאה במהלך ההתקנה: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">לא נמצאו קובצי שמירה עבור {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">אחזור הקבצים מ-ludusavi נכשל</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} מתוך {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">ועוד {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">יצירת תמונת שמירת משחק {0} ב-restic נכשלה</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic נכשל בקריאת חלק מקובצי השמירה של {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">שגיאה ביצירת תמונה עבור {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">תמונת נתוני המשחק עבור {0} נוצרה בהצלחה</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">טוען תמונות גיבוי...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">טעינת תמונות הגיבוי נכשלה. בדוק את תצורת restic.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">שגיאה בטעינת תמונות: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">מחיקת התמונה נכשלה: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">שגיאה במחיקת תמונה: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">בדיקת המאגר נכשלה: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">פעולת הניקוי נכשלה: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">שגיאה במהלך תחזוקה: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">אימות המאגר נכשל: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">שגיאה במהלך אימות: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">הצגת רשימת תמונות נכשלה: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">שגיאה במהלך יישום מדיניות שמירה: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">שגיאה במהלך ניקוי: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">שגיאה בהפעלת אשף ההתקנה: {0}</sys:String>
 
 </ResourceDictionary>

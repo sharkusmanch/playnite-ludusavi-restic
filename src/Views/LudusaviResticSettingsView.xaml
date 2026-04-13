@@ -86,6 +86,20 @@
                         </StackPanel>
 
                         <StackPanel Margin="10">
+                            <TextBlock Text="{DynamicResource LOCLuduRestExcludedSources}" />
+                            <TextBlock Margin="0,2,0,4" FontSize="11" Foreground="Gray" TextWrapping="Wrap"
+                                       Text="{DynamicResource LOCLuduRestExcludedSourcesHelp}" />
+                            <ListBox x:Name="ExcludedSourcesList" MaxHeight="120" BorderThickness="1"
+                                     ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Content="{Binding Name}" IsChecked="{Binding IsExcluded, Mode=TwoWay}" />
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+
+                        <StackPanel Margin="10">
                             <TextBlock Text="{DynamicResource LOCLuduRestNotificationLevel}" />
                             <ComboBox MinWidth="100" Margin="10,0,0,0"
                                 SelectedValue="{Binding NotificationLevel}"

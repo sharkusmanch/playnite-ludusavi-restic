@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">게임 백업 태그</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">백업 태그를 입력하세요</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">{0}의 백업 태그를 입력하세요</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">게임플레이 저장 백업 간격(분)</sys:String>
 
@@ -65,6 +65,9 @@
 
 포함 모드: 어떤 게임도 백업되지 않습니다. 백업 대상이 되려면 게임에 포함 태그를 추가할 수 있습니다.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">제외된 소스</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">이 소스의 게임은 태그나 백업 모드에 관계없이 절대 백업되지 않습니다.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">제외 모드</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">포함 모드</sys:String>
@@ -100,14 +103,6 @@
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">백업 스냅샷 보기</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">자동 감지 성공</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">자동 감지 실패</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi 실행 파일이 다음 위치에서 감지되었습니다: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">ludusavi 실행 파일을 자동으로 감지할 수 없습니다. 경로를 수동으로 지정해 주세요.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic 실행 파일이 다음 위치에서 감지되었습니다: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">restic 실행 파일을 자동으로 감지할 수 없습니다. 경로를 수동으로 지정해 주세요.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic 설정 확인:</sys:String>
@@ -327,5 +322,33 @@
     <sys:String x:Key="LOCLuduRestInitializationError">초기화 오류</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">설정 오류</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">설정 중 오류가 발생했습니다: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">{0}의 세이브 파일을 찾을 수 없습니다</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">ludusavi에서 파일을 가져오지 못했습니다</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {2}개 중 {1}개</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">외 {0}개</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">restic 게임 세이브 스냅샷 {0} 생성에 실패했습니다</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic이 {0}의 일부 게임 세이브 파일을 읽는 데 실패했습니다</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">{0}의 스냅샷 생성 중 오류가 발생했습니다</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">{0}의 게임 데이터 스냅샷을 성공적으로 생성했습니다</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">백업 스냅샷을 불러오는 중...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">백업 스냅샷을 불러오지 못했습니다. restic 설정을 확인하세요.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">스냅샷 로드 중 오류가 발생했습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">스냅샷 삭제에 실패했습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">스냅샷 삭제 중 오류가 발생했습니다: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">저장소 점검에 실패했습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">정리 작업에 실패했습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">점검 중 오류가 발생했습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">저장소 검증에 실패했습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">검증 중 오류가 발생했습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">스냅샷 목록 조회에 실패했습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">보존 정책 적용 중 오류가 발생했습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">정리 중 오류가 발생했습니다: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">설정 마법사 실행 중 오류가 발생했습니다: {0}</sys:String>
 
 </ResourceDictionary>
