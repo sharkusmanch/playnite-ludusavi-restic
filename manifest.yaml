@@ -8,8 +8,6 @@ Packages:
       - 'Add excluded sources setting: skip games from specific library sources (e.g. Sunshine) regardless of tags or backup mode (#112)'
       - 'Context menu: hide View backup snapshots for multi-game selections; show tag add/remove items only when applicable (#112)'
       - 'Fix: BackupAllTask now also respects excluded sources (#112)'
-      - Add Claude Code GitHub Workflow (#111)
-      - 'chore(deps): update robinraju/release-downloader action to v1.12 (#57)'
   - Version: 1.2.1
     RequiredApiVersion: 6.14.0
     ReleaseDate: 2026-03-23
