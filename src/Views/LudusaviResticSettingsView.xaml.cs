@@ -36,10 +36,6 @@ namespace LudusaviRestic
                     {
                         RefreshOverridesGrid();
                     }
-                    if (ExcludedSourcesList != null)
-                    {
-                        PopulateSourcesList();
-                    }
                 }
                 catch (Exception ex)
                 {

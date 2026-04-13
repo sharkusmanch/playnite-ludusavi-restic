@@ -808,7 +808,7 @@ namespace LudusaviRestic
             if (this.settings.BackupWhenGameStopped)
             {
                 string caption = GetLocalizedString("LOCLuduRestGameStoppedPromptCaption", "LOCLuduRestGameStoppedPromptCaption");
-                string message = string.Format(GetLocalizedString("LOCLuduRestGameStoppedPromptMessage"), args.Game.Name);
+                string message = string.Format(GetLocalizedString("LOCLuduRestGameStoppedPromptMessage", "Enter backup tag for {0}"), args.Game.Name);
 
                 if (this.settings.PromptForGameStoppedTag)
                 {

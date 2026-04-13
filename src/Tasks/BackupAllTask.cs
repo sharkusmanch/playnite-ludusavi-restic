@@ -70,19 +70,22 @@ namespace LudusaviRestic
                 // Filter out games that are exclusively from excluded sources
                 if (context.Settings.ExcludedSourceIds != null && context.Settings.ExcludedSourceIds.Count > 0)
                 {
+                    var nameToSources = context.API.Database.Games
+                        .GroupBy(g => g.Name)
+                        .ToDictionary(grp => grp.Key, grp => grp.Select(g => g.SourceId).ToList());
+
                     var toRemove = allFiles.Keys
                         .Where(gameName =>
-                        {
-                            var matchingGames = context.API.Database.Games
-                                .Where(g => g.Name == gameName)
-                                .ToList();
-                            return matchingGames.Count > 0 && matchingGames.All(g =>
-                                g.SourceId != Guid.Empty &&
-                                context.Settings.ExcludedSourceIds.Contains(g.SourceId));
-                        })
+                            nameToSources.TryGetValue(gameName, out var sources) &&
+                            sources.Count > 0 &&
+                            sources.All(id => id != Guid.Empty && context.Settings.ExcludedSourceIds.Contains(id)))
                         .ToList();
+
                     foreach (var name in toRemove)
+                    {
+                        logger.Info($"Skipping backup-all for '{name}': source is excluded");
                         allFiles.Remove(name);
+                    }
                 }
 
                 string backupText = $"{ResourceProvider.GetString("LOCLuduRestBackupGM")} - {ResourceProvider.GetString("LOCLuduRestBackupGPBackingUp")}";
