@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Sikkerhetskopier tag</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Angi sikkerhetskopieringsknapp for</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Angi sikkerhetskopi-tag for {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Sikkerhetskopiintervall for spilllagring (minutter)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Inkluder modus: Ingen spill er sikkerhetskopiert. Spill kan ha den inkludere taggen lagt til for å bli kvalifisert for sikkerhetskopiering.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Ekskluderte kilder</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Spill fra disse kildene vil aldri bli sikkerhetskopiert, uavhengig av tagger eller sikkerhetskopieringsmodus.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Ekskluder modus</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Inkluder modus</sys:String>
@@ -100,14 +103,6 @@ Inkluder modus: Ingen spill er sikkerhetskopiert. Spill kan ha den inkludere tag
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Vis sikkerhetskopierte bilder</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-deteksjon vellykket</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-deteksjon mislyktes</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi kjørbar fil oppdaget på: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Kunne ikke automatisk oppdage Ludusavi-kjørbare. Angi banen manuelt.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic program funnet ved: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Kunne ikke automatisk oppdage Restic-kjørbar. Angi banen manuelt.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Verifikasjon av innstillinger for Ludusavi Restic</sys:String>
@@ -157,7 +152,7 @@ Inkluder modus: Ingen spill er sikkerhetskopiert. Spill kan ha den inkludere tag
 først å utføre en tørr løp for å se hva som vil bli slettet?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Forhåndsvisning fullført. {0} øyeblikksbilder vil bli slettet i henhold til oppbevaringspolicyen. Vil du fortsette med slettingen?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">Fortsett med sletting?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">Prune repository</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">Rydd opp i arkivet</sys:String>
     <sys:String x:Key="LOCLuduRestPruneWarningMessage">Innkjøring vil fjerne ubrukte data fra arkivet. Denne operasjonen er irreversibel.
 
 Vil du utføre en tørr kjøring først for å se hva som vil bli fjernet før du faktisk sletter data?</sys:String>
@@ -327,5 +322,33 @@ Velg Ja for å bruke foreslått mappe, Ingen å velge en annen, eller Avbryt for
     <sys:String x:Key="LOCLuduRestInitializationError">Initialisering Feil</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Feil ved oppsett</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">En feil oppstod under oppsett: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Ingen lagringsfiler funnet for {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Kunne ikke hente filer fra Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} av {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">og {0} til</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Kunne ikke opprette Restic-spillagring-øyeblikksbilde {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic kunne ikke lese noen spillagringsfiler for {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Feil ved oppretting av øyeblikksbilde for {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Spilldata-øyeblikksbilde for {0} ble opprettet</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Laster sikkerhetskopi-øyeblikksbilder...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Kunne ikke laste sikkerhetskopi-øyeblikksbilder. Sjekk Restic-konfigurasjonen din.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Feil ved lasting av øyeblikksbilder: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Kunne ikke slette øyeblikksbilde: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Feil ved sletting av øyeblikksbilde: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Arkivkontroll mislyktes: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Beskjæringsoperasjon mislyktes: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Feil under vedlikehold: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Arkivverifisering mislyktes: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Feil under verifisering: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Kunne ikke liste øyeblikksbilder: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Feil under oppbevaringspolicy: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Feil under beskjæring: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Feil ved kjøring av oppsettveiviser: {0}</sys:String>
 
 </ResourceDictionary>

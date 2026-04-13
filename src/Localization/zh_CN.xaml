@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">游戏备份标签</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">输入备份标签</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">输入 {0} 的备份标签</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">游戏保存备份间隔(分钟)</sys:String>
 
@@ -65,6 +65,9 @@
 
 包括模式：没有备份游戏。游戏可以添加包含标签以获得备份资格。</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">排除的来源</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">来自这些来源的游戏无论标签或备份模式如何，都不会被备份。</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">排除模式</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">包含模式</sys:String>
@@ -100,14 +103,6 @@
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">查看备份快照</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">自动检测成功</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">自动检测失败</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">在 {0} 检测到Ludusavi 可执行程序</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">无法自动检测ludusavi可执行文件。请手动指定路径。</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">在 {0} 检测到 Restic 可执行文件</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">无法自动检测 Restic 可执行文件。请手动指定路径。</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic 设置验证：</sys:String>
@@ -327,5 +322,33 @@
     <sys:String x:Key="LOCLuduRestInitializationError">初始化错误</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">设置错误</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">设置过程中发生错误: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">未找到 {0} 的存档文件</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">无法从 ludusavi 获取文件</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - 第 {1}/{2} 个</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">及其他 {0} 个</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">无法创建 restic 游戏存档快照 {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic 无法读取 {0} 的部分游戏存档文件</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">创建 {0} 的快照时出错</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">已成功创建 {0} 的游戏数据快照</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">正在加载备份快照...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">加载备份快照失败。请检查您的 restic 配置。</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">加载快照时出错：{0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">删除快照失败：{0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">删除快照时出错：{0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">仓库检查失败：{0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">清理操作失败：{0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">维护期间出错：{0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">仓库验证失败：{0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">验证期间出错：{0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">列出快照失败：{0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">应用保留策略期间出错：{0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">清理期间出错：{0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">运行设置向导时出错：{0}</sys:String>
 
 </ResourceDictionary>

@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Značka zálohy hry</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Zadejte záložní štítek pro</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Zadejte záložní štítek pro {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Interval zálohování hry (minuty)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Zahrnout režim: Žádné hry nejsou zálohovány. Hry mohou mít přidaný tag pro možnost zálohování.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Vyloučené zdroje</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Hry z těchto zdrojů nebudou nikdy zálohovány, bez ohledu na štítky nebo režim zálohování.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Vyloučit režim</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Zahrnout režim</sys:String>
@@ -100,14 +103,6 @@ Zahrnout režim: Žádné hry nejsou zálohovány. Hry mohou mít přidaný tag 
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Zobrazit záložní snímky</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Automatická detekce proběhla úspěšně</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Automatická detekce se nezdařila</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi spustitelný soubor byl zjištěn v: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Nelze automaticky rozpoznat spustitelný soubor ludusavi. Zadejte cestu ručně.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Byl zjištěn restart spustitelný soubor: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Nelze automaticky rozpoznat restic spustitelný. Zadejte cestu ručně.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ověření nastavení Ludusavi Restic nastavení:</sys:String>
@@ -327,5 +322,33 @@ Vyberte Ano pro použití navrhované složky, Ne vybrat jinou, nebo zrušit zru
     <sys:String x:Key="LOCLuduRestInitializationError">Chyba inicializace</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Chyba nastavení</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Došlo k chybě při nastavení: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Pro {0} nebyly nalezeny žádné soubory uložené hry</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Nepodařilo se získat soubory z Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} z {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">a {0} dalších</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Nepodařilo se vytvořit snímek uložených her Restic {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic nemohl přečíst některé soubory uložené hry pro {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Chyba při vytváření snímku pro {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Snímek dat hry pro {0} byl úspěšně vytvořen</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Načítání záložních snímků...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Nepodařilo se načíst záložní snímky. Zkontrolujte konfiguraci Restic.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Chyba při načítání snímků: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Nepodařilo se odstranit snímek: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Chyba při odstraňování snímku: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Kontrola repozitáře selhala: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Operace prořezání selhala: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Chyba při údržbě: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Ověření repozitáře selhalo: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Chyba při ověřování: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Nepodařilo se zobrazit seznam snímků: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Chyba při zpracování zásady uchování: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Chyba při prořezávání: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Chyba při spouštění průvodce nastavením: {0}</sys:String>
 
 </ResourceDictionary>

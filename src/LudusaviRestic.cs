@@ -9,8 +9,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
 using System.Threading;
-using System.IO;
-using System.Reflection;
 
 namespace LudusaviRestic
 {
@@ -32,35 +30,6 @@ namespace LudusaviRestic
                 HasSettings = true
             };
             this.manager = new ResticBackupManager(this.settings, this.PlayniteApi);
-
-            // Initialize localization
-            InitializeLocalization();
-        }
-
-        private void InitializeLocalization()
-        {
-            try
-            {
-                // Try to load the en_US localization file directly
-                var pluginDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                var localizationFile = Path.Combine(pluginDir, "Localization", "en_US.xaml");
-
-                logger.Debug($"Looking for localization file at: {localizationFile}");
-
-                if (File.Exists(localizationFile))
-                {
-                    logger.Debug("Localization file exists, attempting to load...");
-                    // The file exists, Playnite should be able to load it automatically
-                }
-                else
-                {
-                    logger.Error($"Localization file not found at: {localizationFile}");
-                }
-            }
-            catch (Exception ex)
-            {
-                logger.Error(ex, "Error checking localization file");
-            }
         }
 
         private string GetLocalizedString(string key, string fallback = null)
@@ -95,10 +64,6 @@ namespace LudusaviRestic
 
         public override IEnumerable<MainMenuItem> GetMainMenuItems(GetMainMenuItemsArgs menuArgs)
         {
-            // Debug: Check if we can access localization
-            logger.Debug($"Trying to get LOCLuduRestBackupGM: '{GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM")}'");
-            logger.Debug($"Trying to get LOCLuduRestSetupWizard: '{GetLocalizedString("LOCLuduRestSetupWizard", "LOCLuduRestSetupWizard")}'");
-
             return new List<MainMenuItem>
             {
                 new MainMenuItem
@@ -183,13 +148,21 @@ namespace LudusaviRestic
 
         public override IEnumerable<GameMenuItem> GetGameMenuItems(GetGameMenuItemsArgs menuArgs)
         {
-            return new List<GameMenuItem>
+            var games = menuArgs.Games;
+            string menuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM");
+
+            bool anyHasInclude = games.Any(g => g.TagIds != null && g.TagIds.Contains(settings.IncludeTagID));
+            bool anyMissingInclude = games.Any(g => g.TagIds == null || !g.TagIds.Contains(settings.IncludeTagID));
+            bool anyHasExclude = games.Any(g => g.TagIds != null && g.TagIds.Contains(settings.ExcludeTagID));
+            bool anyMissingExclude = games.Any(g => g.TagIds == null || !g.TagIds.Contains(settings.ExcludeTagID));
+            bool isSingleGame = games.Count == 1;
+
+            var items = new List<GameMenuItem>
             {
                 new GameMenuItem
                 {
                     Description = GetLocalizedString("LOCLuduRestBackupGMCreate", "LOCLuduRestBackupGMCreate"),
-                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
-
+                    MenuSection = menuSection,
                     Action = args => {
                         if (CheckConfiguration() && args.Games.Count > 0)
                         {
@@ -197,12 +170,15 @@ namespace LudusaviRestic
                         }
                     }
                 },
-                new GameMenuItem
+            };
+
+            if (isSingleGame)
+                items.Add(new GameMenuItem
                 {
                     Description = GetLocalizedString("LOCLuduRestViewBackupSnapshots", "LOCLuduRestViewBackupSnapshots"),
-                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
-
-                    Action = args => {
+                    MenuSection = menuSection,
+                    Action = args =>
+                    {
                         if (CheckConfiguration() && args.Games.Count > 0)
                         {
                             var game = args.Games.First();
@@ -212,182 +188,189 @@ namespace LudusaviRestic
                             window.ShowDialog();
                         }
                     }
-                },
-                new GameMenuItem
+                });
+
+            if (anyMissingInclude)
+                items.Add(new GameMenuItem
                 {
                     Description = GetLocalizedString("LOCLuduRestBackupGMIncludeAdd", "LOCLuduRestBackupGMIncludeAdd"),
-                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
-
-                    Action = args => {
+                    MenuSection = menuSection,
+                    Action = args =>
+                    {
                         foreach (var game in args.Games)
                         {
-                            AddTag(game, this.settings.IncludeTagID);
-                            PlayniteApi.Database.Games.Update(game);
+                            if (AddTag(game, this.settings.IncludeTagID))
+                                PlayniteApi.Database.Games.Update(game);
                         }
                     }
-                },
-                new GameMenuItem
+                });
+
+            if (anyHasInclude)
+                items.Add(new GameMenuItem
                 {
                     Description = GetLocalizedString("LOCLuduRestBackupGMIncludeRemove", "LOCLuduRestBackupGMIncludeRemove"),
-                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
-
-                    Action = args => {
+                    MenuSection = menuSection,
+                    Action = args =>
+                    {
                         foreach (var game in args.Games)
                         {
-                            RemoveTag(game, this.settings.IncludeTagID);
-                            PlayniteApi.Database.Games.Update(game);
+                            if (RemoveTag(game, this.settings.IncludeTagID))
+                                PlayniteApi.Database.Games.Update(game);
                         }
                     }
-                },
-                new GameMenuItem
+                });
+
+            if (anyMissingExclude)
+                items.Add(new GameMenuItem
                 {
                     Description = GetLocalizedString("LOCLuduRestBackupGMExcludeAdd", "LOCLuduRestBackupGMExcludeAdd"),
-                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
-
-                    Action = args => {
+                    MenuSection = menuSection,
+                    Action = args =>
+                    {
                         foreach (var game in args.Games)
                         {
-                            AddTag(game, this.settings.ExcludeTagID);
-                            PlayniteApi.Database.Games.Update(game);
+                            if (AddTag(game, this.settings.ExcludeTagID))
+                                PlayniteApi.Database.Games.Update(game);
                         }
                     }
-                },
-                new GameMenuItem
+                });
+
+            if (anyHasExclude)
+                items.Add(new GameMenuItem
                 {
                     Description = GetLocalizedString("LOCLuduRestBackupGMExcludeRemove", "LOCLuduRestBackupGMExcludeRemove"),
-                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
-
-                    Action = args => {
+                    MenuSection = menuSection,
+                    Action = args =>
+                    {
                         foreach (var game in args.Games)
                         {
-                            RemoveTag(game, this.settings.ExcludeTagID);
-                            PlayniteApi.Database.Games.Update(game);
+                            if (RemoveTag(game, this.settings.ExcludeTagID))
+                                PlayniteApi.Database.Games.Update(game);
                         }
                     }
-                },
-                new GameMenuItem
+                });
+
+            if (isSingleGame)
+            {
+                items.Add(new GameMenuItem
                 {
                     Description = GetLocalizedString("LOCLuduRestSetBackupInterval", "Set backup interval"),
-                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
+                    MenuSection = menuSection,
+                    Action = args =>
+                    {
+                        var game = args.Games.First();
+                        var key = game.Id.ToString();
+                        var effective = settings.GetEffectiveInterval(game.Id);
+                        var prompt = string.Format(
+                            GetLocalizedString("LOCLuduRestSetBackupIntervalPrompt",
+                                "Enter backup interval in minutes for {0} (current: {1}, global default: {2}). Leave blank to remove override."),
+                            game.Name, effective, settings.GameplayBackupInterval);
 
-                    Action = args => {
-                        if (args.Games.Count == 1)
+                        var existingInterval = settings.GameIntervalOverrides.ContainsKey(key)
+                            && settings.GameIntervalOverrides[key].HasIntervalOverride
+                                ? settings.GameIntervalOverrides[key].IntervalMinutes.Value.ToString()
+                                : "";
+
+                        var result = PlayniteApi.Dialogs.SelectString(
+                            prompt,
+                            GetLocalizedString("LOCLuduRestSetBackupIntervalTitle", "Backup Interval Override"),
+                            existingInterval);
+
+                        if (result.Result)
                         {
-                            var game = args.Games.First();
-                            var key = game.Id.ToString();
-                            var effective = settings.GetEffectiveInterval(game.Id);
-                            var prompt = string.Format(
-                                GetLocalizedString("LOCLuduRestSetBackupIntervalPrompt",
-                                    "Enter backup interval in minutes for {0} (current: {1}, global default: {2}). Leave blank to remove override."),
-                                game.Name, effective, settings.GameplayBackupInterval);
-
-                            var existingInterval = settings.GameIntervalOverrides.ContainsKey(key)
-                                && settings.GameIntervalOverrides[key].HasIntervalOverride
-                                    ? settings.GameIntervalOverrides[key].IntervalMinutes.Value.ToString()
-                                    : "";
-
-                            var result = PlayniteApi.Dialogs.SelectString(
-                                prompt,
-                                GetLocalizedString("LOCLuduRestSetBackupIntervalTitle", "Backup Interval Override"),
-                                existingInterval);
-
-                            if (result.Result)
+                            if (string.IsNullOrWhiteSpace(result.SelectedString))
                             {
-                                if (string.IsNullOrWhiteSpace(result.SelectedString))
+                                // Clear interval; remove entry entirely if no retention override either
+                                if (settings.GameIntervalOverrides.ContainsKey(key))
                                 {
-                                    // Clear interval; remove entry entirely if no retention override either
-                                    if (settings.GameIntervalOverrides.ContainsKey(key))
+                                    var entry = settings.GameIntervalOverrides[key];
+                                    entry.IntervalMinutes = null;
+                                    if (!entry.HasRetentionOverride)
                                     {
-                                        var entry = settings.GameIntervalOverrides[key];
-                                        entry.IntervalMinutes = null;
-                                        if (!entry.HasRetentionOverride)
-                                        {
-                                            settings.GameIntervalOverrides.Remove(key);
-                                        }
+                                        settings.GameIntervalOverrides.Remove(key);
                                     }
                                 }
-                                else
-                                {
-                                    int val;
-                                    if (int.TryParse(result.SelectedString, out val) && val > 0)
-                                    {
-                                        if (!settings.GameIntervalOverrides.ContainsKey(key))
-                                        {
-                                            settings.GameIntervalOverrides[key] = new GameOverride(game.Name, val);
-                                        }
-                                        else
-                                        {
-                                            settings.GameIntervalOverrides[key].IntervalMinutes = val;
-                                            settings.GameIntervalOverrides[key].GameName = game.Name.Replace(",", "_");
-                                        }
-                                    }
-                                }
-                                settings.Save();
                             }
-                        }
-                    }
-                },
-                new GameMenuItem
-                {
-                    Description = GetLocalizedString("LOCLuduRestSetRetentionPolicy", "Set retention policy"),
-                    MenuSection = GetLocalizedString("LOCLuduRestBackupGM", "LOCLuduRestBackupGM"),
-
-                    Action = args => {
-                        if (args.Games.Count == 1)
-                        {
-                            var game = args.Games.First();
-                            var key = game.Id.ToString();
-                            var sanitizedName = game.Name.Replace(",", "_");
-
-                            GameOverride existing = null;
-                            if (settings.GameIntervalOverrides.ContainsKey(key))
+                            else
                             {
-                                existing = settings.GameIntervalOverrides[key];
-                            }
-
-                            var window = new RetentionOverrideWindow(game.Name, settings, existing);
-                            window.Owner = PlayniteApi.Dialogs.GetCurrentAppWindow();
-
-                            if (window.ShowDialog() == true)
-                            {
-                                if (window.Removed)
-                                {
-                                    // Remove retention override; remove entry entirely if no interval override either
-                                    if (settings.GameIntervalOverrides.ContainsKey(key))
-                                    {
-                                        var entry = settings.GameIntervalOverrides[key];
-                                        entry.KeepLast = null;
-                                        entry.KeepDaily = null;
-                                        entry.KeepWeekly = null;
-                                        entry.KeepMonthly = null;
-                                        entry.KeepYearly = null;
-                                        if (!entry.HasIntervalOverride)
-                                        {
-                                            settings.GameIntervalOverrides.Remove(key);
-                                        }
-                                    }
-                                }
-                                else
+                                int val;
+                                if (int.TryParse(result.SelectedString, out val) && val > 0)
                                 {
                                     if (!settings.GameIntervalOverrides.ContainsKey(key))
                                     {
-                                        settings.GameIntervalOverrides[key] = new GameOverride(sanitizedName, 0);
+                                        settings.GameIntervalOverrides[key] = new GameOverride(game.Name, val);
                                     }
-
-                                    var over = settings.GameIntervalOverrides[key];
-                                    over.GameName = sanitizedName;
-                                    over.KeepLast = window.KeepLast;
-                                    over.KeepDaily = window.KeepDaily;
-                                    over.KeepWeekly = window.KeepWeekly;
-                                    over.KeepMonthly = window.KeepMonthly;
-                                    over.KeepYearly = window.KeepYearly;
+                                    else
+                                    {
+                                        settings.GameIntervalOverrides[key].IntervalMinutes = val;
+                                        settings.GameIntervalOverrides[key].GameName = game.Name.Replace(",", "_");
+                                    }
                                 }
-                                settings.Save();
                             }
+                            settings.Save();
                         }
                     }
-                }
-            };
+                });
+                items.Add(new GameMenuItem
+                {
+                    Description = GetLocalizedString("LOCLuduRestSetRetentionPolicy", "Set retention policy"),
+                    MenuSection = menuSection,
+                    Action = args =>
+                    {
+                        var game = args.Games.First();
+                        var key = game.Id.ToString();
+                        var sanitizedName = game.Name.Replace(",", "_");
+
+                        GameOverride existing = null;
+                        if (settings.GameIntervalOverrides.ContainsKey(key))
+                        {
+                            existing = settings.GameIntervalOverrides[key];
+                        }
+
+                        var window = new RetentionOverrideWindow(game.Name, settings, existing);
+                        window.Owner = PlayniteApi.Dialogs.GetCurrentAppWindow();
+
+                        if (window.ShowDialog() == true)
+                        {
+                            if (window.Removed)
+                            {
+                                // Remove retention override; remove entry entirely if no interval override either
+                                if (settings.GameIntervalOverrides.ContainsKey(key))
+                                {
+                                    var entry = settings.GameIntervalOverrides[key];
+                                    entry.KeepLast = null;
+                                    entry.KeepDaily = null;
+                                    entry.KeepWeekly = null;
+                                    entry.KeepMonthly = null;
+                                    entry.KeepYearly = null;
+                                    if (!entry.HasIntervalOverride)
+                                    {
+                                        settings.GameIntervalOverrides.Remove(key);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (!settings.GameIntervalOverrides.ContainsKey(key))
+                                {
+                                    settings.GameIntervalOverrides[key] = new GameOverride(sanitizedName, 0);
+                                }
+
+                                var over = settings.GameIntervalOverrides[key];
+                                over.GameName = sanitizedName;
+                                over.KeepLast = window.KeepLast;
+                                over.KeepDaily = window.KeepDaily;
+                                over.KeepWeekly = window.KeepWeekly;
+                                over.KeepMonthly = window.KeepMonthly;
+                                over.KeepYearly = window.KeepYearly;
+                            }
+                            settings.Save();
+                        }
+                    }
+                });
+            }
+
+            return items;
         }
 
         private bool AddTag(Game game, Guid tagId)
@@ -449,7 +432,7 @@ namespace LudusaviRestic
                     if (checkResult.ExitCode != 0)
                     {
                         logger.Error($"Repository check failed: {checkResult.StdErr}");
-                        PlayniteApi.Dialogs.ShowErrorMessage($"Repository check failed:\n{checkResult.StdErr}");
+                        PlayniteApi.Dialogs.ShowErrorMessage(string.Format(GetLocalizedString("LOCLuduRestRepoCheckFailed"), checkResult.StdErr));
                         return;
                     }
 
@@ -499,13 +482,13 @@ namespace LudusaviRestic
                     else
                     {
                         logger.Error($"Prune operation failed: {pruneResult.StdErr}");
-                        PlayniteApi.Dialogs.ShowErrorMessage($"Prune operation failed:\n{pruneResult.StdErr}");
+                        PlayniteApi.Dialogs.ShowErrorMessage(string.Format(GetLocalizedString("LOCLuduRestPruneOperationFailed"), pruneResult.StdErr));
                     }
                 }
                 catch (Exception ex)
                 {
                     logger.Error(ex, "Error during full maintenance");
-                    PlayniteApi.Dialogs.ShowErrorMessage($"Error during maintenance: {ex.Message}");
+                    PlayniteApi.Dialogs.ShowErrorMessage(string.Format(GetLocalizedString("LOCLuduRestErrorDuringMaintenance"), ex.Message));
                 }
             }, globalProgressOptions);
         }
@@ -534,13 +517,13 @@ namespace LudusaviRestic
                     else
                     {
                         logger.Error($"Repository verification failed: {checkResult.StdErr}");
-                        PlayniteApi.Dialogs.ShowErrorMessage($"Repository verification failed:\n{checkResult.StdErr}");
+                        PlayniteApi.Dialogs.ShowErrorMessage(string.Format(GetLocalizedString("LOCLuduRestRepoVerificationFailed"), checkResult.StdErr));
                     }
                 }
                 catch (Exception ex)
                 {
                     logger.Error(ex, "Error during repository verification");
-                    PlayniteApi.Dialogs.ShowErrorMessage($"Error during verification: {ex.Message}");
+                    PlayniteApi.Dialogs.ShowErrorMessage(string.Format(GetLocalizedString("LOCLuduRestErrorDuringVerification"), ex.Message));
                 }
             }, globalProgressOptions);
         }
@@ -602,7 +585,7 @@ namespace LudusaviRestic
                     if (snapshotsResult.ExitCode != 0)
                     {
                         logger.Error($"Failed to list snapshots: {snapshotsResult.StdErr}");
-                        PlayniteApi.Dialogs.ShowErrorMessage($"Failed to list snapshots:\n{snapshotsResult.StdErr}");
+                        PlayniteApi.Dialogs.ShowErrorMessage(string.Format(GetLocalizedString("LOCLuduRestFailedToListSnapshots"), snapshotsResult.StdErr));
                         return;
                     }
 
@@ -676,7 +659,7 @@ namespace LudusaviRestic
                 catch (Exception ex)
                 {
                     logger.Error(ex, "Error during retention policy application");
-                    PlayniteApi.Dialogs.ShowErrorMessage($"Error during retention policy: {ex.Message}");
+                    PlayniteApi.Dialogs.ShowErrorMessage(string.Format(GetLocalizedString("LOCLuduRestErrorDuringRetentionPolicy"), ex.Message));
                 }
             }, globalProgressOptions);
         }
@@ -753,13 +736,13 @@ namespace LudusaviRestic
                     else
                     {
                         logger.Error($"Prune operation failed: {pruneResult.StdErr}");
-                        PlayniteApi.Dialogs.ShowErrorMessage($"Prune operation failed:\n{pruneResult.StdErr}");
+                        PlayniteApi.Dialogs.ShowErrorMessage(string.Format(GetLocalizedString("LOCLuduRestPruneOperationFailed"), pruneResult.StdErr));
                     }
                 }
                 catch (Exception ex)
                 {
                     logger.Error(ex, "Error during prune operation");
-                    PlayniteApi.Dialogs.ShowErrorMessage($"Error during prune: {ex.Message}");
+                    PlayniteApi.Dialogs.ShowErrorMessage(string.Format(GetLocalizedString("LOCLuduRestErrorDuringPrune"), ex.Message));
                 }
             }, globalProgressOptions);
         }
@@ -825,13 +808,12 @@ namespace LudusaviRestic
             if (this.settings.BackupWhenGameStopped)
             {
                 string caption = GetLocalizedString("LOCLuduRestGameStoppedPromptCaption", "LOCLuduRestGameStoppedPromptCaption");
-                string message = GetLocalizedString("LOCLuduRestGameStoppedPromptMessage", "LOCLuduRestGameStoppedPromptMessage");
-
+                string message = string.Format(GetLocalizedString("LOCLuduRestGameStoppedPromptMessage"), args.Game.Name);
 
                 if (this.settings.PromptForGameStoppedTag)
                 {
                     StringSelectionDialogResult result = PlayniteApi.Dialogs.SelectString(
-                        $"{message}: {args.Game.Name}",
+                        message,
                         caption,
                         ""
                     );
@@ -946,7 +928,7 @@ namespace LudusaviRestic
             catch (Exception ex)
             {
                 logger.Error(ex, "Error running setup wizard");
-                PlayniteApi.Dialogs.ShowErrorMessage($"Error running setup wizard: {ex.Message}");
+                PlayniteApi.Dialogs.ShowErrorMessage(string.Format(GetLocalizedString("LOCLuduRestErrorRunningSetupWizard"), ex.Message));
             }
         }
     }

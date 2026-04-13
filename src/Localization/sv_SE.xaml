@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Spel backup tagg</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Ange backup-tagg för</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Ange backup-tagg för {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Gameplay spara säkerhetskopieringsintervall (minuter)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Inkludera läge: Inga spel är säkerhetskopierade. Spel kan få taggen tillagd för att vara berättigad till säkerhetskopiering.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Uteslutna källor</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Spel från dessa källor kommer aldrig att säkerhetskopieras, oavsett taggar eller säkerhetskopieringsläge.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Exkludera läge</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Inkludera läge</sys:String>
@@ -100,14 +103,6 @@ Inkludera läge: Inga spel är säkerhetskopierade. Spel kan få taggen tillagd 
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Visa ögonblicksbilder av säkerhetskopior</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Auto-detektion lyckades</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Auto-detektion misslyckades</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi exekverbar upptäckt på: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Kunde inte automatiskt upptäcka körbar ludusavi. Ange sökvägen manuellt.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic körbar detekteras på: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Kunde inte automatiskt upptäcka restic körbar. Vänligen ange sökvägen manuellt.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic Inställningar Verifiering:</sys:String>
@@ -327,5 +322,33 @@ Välj Ja att använda föreslagen mapp, Nej att välja en annan, eller Avbryt at
     <sys:String x:Key="LOCLuduRestInitializationError">Initiering fel</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Fel vid installation</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Ett fel inträffade under inställningen: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Inga sparfiler hittades för {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Det gick inte att hämta filer från Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} av {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">och {0} till</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Det gick inte att skapa Restic-spelspara-ögonblicksbild {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic kunde inte läsa vissa spelspara-filer för {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Fel vid skapande av ögonblicksbild för {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Speldata-ögonblicksbild för {0} skapades</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Laddar säkerhetskopieringsögonblicksbilder...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Det gick inte att ladda säkerhetskopieringsögonblicksbilder. Kontrollera din Restic-konfiguration.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Fel vid laddning av ögonblicksbilder: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Det gick inte att ta bort ögonblicksbild: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Fel vid borttagning av ögonblicksbild: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Arkivkontroll misslyckades: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Rensningsåtgärd misslyckades: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Fel under underhåll: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Arkivverifiering misslyckades: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Fel under verifiering: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Det gick inte att lista ögonblicksbilder: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Fel under bevarandepolicy: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Fel under rensning: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Fel vid körning av installationsguiden: {0}</sys:String>
 
 </ResourceDictionary>

@@ -128,5 +128,75 @@ namespace LudusaviRestic.Tests
 
             Assert.True(ResticBackupManager.ShouldSkipBackup(ExecutionMode.Include, game, excludeId, includeId));
         }
+
+        // --- ShouldSkipBackup source exclusion ---
+
+        [Fact]
+        public void ShouldSkipBackup_ExcludedSource_ExcludeMode_ReturnsTrue()
+        {
+            var sourceId = Guid.NewGuid();
+            var excludeId = Guid.NewGuid();
+            var includeId = Guid.NewGuid();
+            var game = new Game("Test") { SourceId = sourceId };
+
+            Assert.True(ResticBackupManager.ShouldSkipBackup(ExecutionMode.Exclude, game, excludeId, includeId, new List<Guid> { sourceId }));
+        }
+
+        [Fact]
+        public void ShouldSkipBackup_ExcludedSource_IncludeMode_ReturnsTrue()
+        {
+            var sourceId = Guid.NewGuid();
+            var excludeId = Guid.NewGuid();
+            var includeId = Guid.NewGuid();
+            // Game has include tag but source is excluded — source wins
+            var game = new Game("Test") { SourceId = sourceId, TagIds = new List<Guid> { includeId } };
+
+            Assert.True(ResticBackupManager.ShouldSkipBackup(ExecutionMode.Include, game, excludeId, includeId, new List<Guid> { sourceId }));
+        }
+
+        [Fact]
+        public void ShouldSkipBackup_NonExcludedSource_DoesNotSkip()
+        {
+            var sourceId = Guid.NewGuid();
+            var otherSourceId = Guid.NewGuid();
+            var excludeId = Guid.NewGuid();
+            var includeId = Guid.NewGuid();
+            var game = new Game("Test") { SourceId = sourceId, TagIds = new List<Guid> { includeId } };
+
+            Assert.False(ResticBackupManager.ShouldSkipBackup(ExecutionMode.Include, game, excludeId, includeId, new List<Guid> { otherSourceId }));
+        }
+
+        [Fact]
+        public void ShouldSkipBackup_EmptyExcludedSources_DoesNotSkip()
+        {
+            var sourceId = Guid.NewGuid();
+            var excludeId = Guid.NewGuid();
+            var includeId = Guid.NewGuid();
+            var game = new Game("Test") { SourceId = sourceId, TagIds = new List<Guid> { includeId } };
+
+            Assert.False(ResticBackupManager.ShouldSkipBackup(ExecutionMode.Include, game, excludeId, includeId, new List<Guid>()));
+        }
+
+        [Fact]
+        public void ShouldSkipBackup_NullExcludedSources_DoesNotSkip()
+        {
+            var sourceId = Guid.NewGuid();
+            var excludeId = Guid.NewGuid();
+            var includeId = Guid.NewGuid();
+            var game = new Game("Test") { SourceId = sourceId, TagIds = new List<Guid> { includeId } };
+
+            Assert.False(ResticBackupManager.ShouldSkipBackup(ExecutionMode.Include, game, excludeId, includeId, null));
+        }
+
+        [Fact]
+        public void ShouldSkipBackup_GuidEmptySource_NotSkippedEvenIfInExcludedList()
+        {
+            var excludeId = Guid.NewGuid();
+            var includeId = Guid.NewGuid();
+            // Game has no source (SourceId == Guid.Empty)
+            var game = new Game("Test") { TagIds = new List<Guid> { includeId } };
+
+            Assert.False(ResticBackupManager.ShouldSkipBackup(ExecutionMode.Include, game, excludeId, includeId, new List<Guid> { Guid.Empty }));
+        }
     }
 }

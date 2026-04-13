@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Spel rugsteun etiket</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Voer rugsteun-etiket in vir</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Voer rugsteun-etiket in vir {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Rugsteuninterval vir spelstoor (minute)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Insluitingsmodus: Geen speletjies word gerugsteun nie. Speletjies kan die insluitingsetiket hê om vir rugsteun in aanmerking te kom.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Uitgeslote bronne</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Speletjies van hierdie bronne sal nooit gerugsteun word nie, ongeag van etikette of rugsteunmodus.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Uitsluitingsmodus</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Insluitmodus</sys:String>
@@ -100,14 +103,6 @@ Insluitingsmodus: Geen speletjies word gerugsteun nie. Speletjies kan die inslui
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Bekyk rugsteun-kiekies</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Outomatiese opsporing suksesvol</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Outomatiese opsporing het misluk</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi-uitvoerbare program opgespoor by: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Kon nie outomaties die uitvoerbare ludusavi opspoor nie. Spesifiseer asseblief die pad handmatig.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restik uitvoerbare lêer bespeur by: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Kon nie outomaties die restic uitvoerbare lêer opspoor nie. Spesifiseer asseblief die pad handmatig.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic-instellingsverifikasie:</sys:String>
@@ -327,5 +322,33 @@ Kies Ja om die voorgestelde vouer te gebruik, Nee om 'n ander een te kies, of Ka
     <sys:String x:Key="LOCLuduRestInitializationError">Inisialiseringsfout</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Opstellingsfout</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">'n Fout het tydens die opstelling voorgekom: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Geen stoorlêers gevind vir {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Kon nie lêers van Ludusavi kry nie</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} van {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">en {0} meer</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Kon nie Restic-spelstoor-kiekie {0} skep nie</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic kon sommige spelstoorlêers vir {0} nie lees nie</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Fout by die skep van kiekie vir {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Speldata-kiekie vir {0} suksesvol geskep</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Rugsteun-kiekies word gelaai...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Kon nie rugsteun-kiekies laai nie. Gaan u Restic-konfigurasie na.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Fout by die laai van kiekies: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Kon nie kiekie uitvee nie: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Fout by die uitvee van kiekie: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Bewaarplek-kontrole misluk: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Snoei-operasie misluk: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Fout tydens onderhoud: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Bewaarplek-verifikasie misluk: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Fout tydens verifikasie: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Kon nie kiekies lys nie: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Fout tydens bewaringsbeleid: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Fout tydens snoei: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Fout by die uitvoer van die opstelassistent: {0}</sys:String>
 
 </ResourceDictionary>

@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Ετικέτα αντιγράφου ασφαλείας παιχνιδιού</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Εισάγετε την ετικέτα αντιγράφου ασφαλείας για</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Εισάγετε ετικέτα αντιγράφου ασφαλείας για {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Χρονικό διάστημα αποθήκευσης αντιγράφων ασφαλείας παιχνιδιού (λεπτά)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Λειτουργία συμπερίληψης: Δεν δημιουργούνται αντίγραφα ασφαλείας παιχνιδιών. Τα παιχνίδια μπορούν να έχουν την ετικέτα ενσωμάτωσης ώστε να είναι επιλέξιμα για δημιουργία αντιγράφων ασφαλείας.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Εξαιρούμενες πηγές</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Τα παιχνίδια από αυτές τις πηγές δεν θα δημιουργούνται ποτέ αντίγραφα ασφαλείας, ανεξάρτητα από τις ετικέτες ή τη λειτουργία αντιγράφων ασφαλείας.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Λειτουργία Εξαίρεσης</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Λειτουργία Συμπερίληψης</sys:String>
@@ -100,14 +103,6 @@
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Προβολή στιγμιότυπων αντιγράφων ασφαλείας</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Αυτόματη Ανίχνευση Επιτυχής</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Αποτυχία Αυτόματης Ανίχνευσης</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ανιχνεύθηκε εκτελέσιμο Ludusavi στο: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Αδύνατη η αυτόματη ανίχνευση του εκτελέσιμου ludusavi. Παρακαλώ καθορίστε τη διαδρομή χειροκίνητα.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Ανιχνεύθηκε στέρεο εκτελέσιμο στο: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Αδύνατη η αυτόματη ανίχνευση του εκτελέσιμου restic. Παρακαλώ καθορίστε τη διαδρομή χειροκίνητα.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Επαλήθευση Ρυθμίσεων:</sys:String>
@@ -327,5 +322,33 @@
     <sys:String x:Key="LOCLuduRestInitializationError">Σφάλμα Αρχικοποίησης</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Σφάλμα Εγκατάστασης</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Παρουσιάστηκε σφάλμα κατά την εγκατάσταση: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Δεν βρέθηκαν αρχεία αποθήκευσης για το {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Αποτυχία λήψης αρχείων από το Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} από {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">και {0} ακόμα</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Αποτυχία δημιουργίας στιγμιότυπου αποθήκευσης Restic {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Το Restic δεν μπόρεσε να διαβάσει ορισμένα αρχεία αποθήκευσης για το {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Σφάλμα κατά τη δημιουργία στιγμιότυπου για το {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Το στιγμιότυπο δεδομένων παιχνιδιού για το {0} δημιουργήθηκε επιτυχώς</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Φόρτωση στιγμιότυπων αντιγράφων ασφαλείας...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Αποτυχία φόρτωσης στιγμιότυπων αντιγράφων ασφαλείας. Ελέγξτε τη ρύθμιση Restic.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Σφάλμα κατά τη φόρτωση στιγμιότυπων: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Αποτυχία διαγραφής στιγμιότυπου: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Σφάλμα κατά τη διαγραφή στιγμιότυπου: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Ο έλεγχος αποθετηρίου απέτυχε: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Η λειτουργία εκκαθάρισης απέτυχε: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Σφάλμα κατά τη συντήρηση: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Η επαλήθευση αποθετηρίου απέτυχε: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Σφάλμα κατά την επαλήθευση: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Αποτυχία λίστας στιγμιότυπων: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Σφάλμα κατά την εφαρμογή πολιτικής διατήρησης: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Σφάλμα κατά την εκκαθάριση: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Σφάλμα κατά την εκτέλεση του οδηγού ρύθμισης: {0}</sys:String>
 
 </ResourceDictionary>

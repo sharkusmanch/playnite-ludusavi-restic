@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Tag di backup del gioco</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Inserisci tag di backup per</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Inserisci il tag di backup per {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Intervallo di salvataggio del gioco (minuti)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Modalità inclusione: nessun gioco è stato eseguito il backup. I giochi possono avere il tag incluso aggiunto per essere idonei per il backup.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Sorgenti escluse</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">I giochi da queste sorgenti non verranno mai sottoposti a backup, indipendentemente dai tag o dalla modalità di backup.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Modalità Escludi</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Modalità Includi</sys:String>
@@ -101,14 +104,6 @@ Modalità inclusione: nessun gioco è stato eseguito il backup. I giochi possono
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Visualizza snapshot di backup</sys:String>
 
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Rilevamento Automatico Riuscito</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Rilevamento Automatico Fallito</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Eseguibile Ludusavi rilevato a: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">Impossibile rilevare automaticamente ludusavi eseguibile. Specificare manualmente il percorso.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Eseguibile restico rilevato a: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">Impossibile rilevare automaticamente l'eseguibile di restic. Specificare manualmente il percorso.</sys:String>
-
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Verifica Impostazioni Restic Ludusavi:</sys:String>
     <sys:String x:Key="LOCLuduRestResticConnectionSucceeded">restic - connessione repository riuscita</sys:String>
@@ -140,7 +135,7 @@ Modalità inclusione: nessun gioco è stato eseguito il backup. I giochi possono
     <sys:String x:Key="LOCLuduRestMaintenanceDryRunPrompt">Vuoi eseguire un'esecuzione a secco prima di vedere cosa sarebbe stato potato prima di eliminare effettivamente i dati?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPolicy">Politica Di Conservazione</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionDryRunPrompt">Vuoi eseguire un'esecuzione secca prima di vedere cosa sarebbe stato eliminato prima di rimuovere le istantanee?</sys:String>
-    <sys:String x:Key="LOCLuduRestPrune">Prune</sys:String>
+    <sys:String x:Key="LOCLuduRestPrune">Pulizia</sys:String>
     <sys:String x:Key="LOCLuduRestPruneDryRunPrompt">Vuoi eseguire un'esecuzione a secco prima di vedere cosa sarebbe stato potato prima di eliminare effettivamente i dati?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithPruning">Procedi con potatura?</sys:String>
     <sys:String x:Key="LOCLuduRestDryRunCompletedMessage">Esecuzione a secco completata. Le istantanee {0} saranno potate. Vuoi procedere con la potatura effettiva?</sys:String>
@@ -157,7 +152,7 @@ Modalità inclusione: nessun gioco è stato eseguito il backup. I giochi possono
 Vuoi prima eseguire una esecuzione asciutta per vedere cosa sarebbe stato eliminato?</sys:String>
     <sys:String x:Key="LOCLuduRestRetentionPreviewCompleted">Anteprima completata. Le istantanee {0} saranno eliminate in base alla politica di conservazione. Vuoi procedere con l'eliminazione?</sys:String>
     <sys:String x:Key="LOCLuduRestProceedWithDeletion">Procedi con la cancellazione?</sys:String>
-    <sys:String x:Key="LOCLuduRestPruneRepository">Prune Repository</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneRepository">Pulizia repository</sys:String>
     <sys:String x:Key="LOCLuduRestPruneWarningMessage">La potatura rimuoverà i dati inutilizzati dal repository. Questa operazione è irreversibile.
 
 Vuoi prima eseguire una esecuzione a secco per vedere cosa sarebbe stato rimosso prima di eliminare i dati?</sys:String>
@@ -327,5 +322,33 @@ Scegli Sì per usare la cartella suggerita, No a scegliere un altro, o Annulla p
     <sys:String x:Key="LOCLuduRestInitializationError">Errore Di Inizializzazione</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Errore Di Configurazione</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Si è verificato un errore durante l'installazione: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Nessun file di salvataggio trovato per {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Impossibile recuperare i file da Ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} di {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">e altri {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Impossibile creare lo snapshot Restic dei salvataggi per {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">Restic non è riuscito a leggere alcuni file di salvataggio per {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Errore durante la creazione dello snapshot per {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Snapshot dei dati di gioco creato con successo per {0}</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Caricamento degli snapshot di backup in corso...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Impossibile caricare gli snapshot di backup. Controlla la configurazione di Restic.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Errore durante il caricamento degli snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Impossibile eliminare lo snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Errore durante l'eliminazione dello snapshot: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">Verifica del repository fallita: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">Operazione di potatura fallita: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Errore durante la manutenzione: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">Verifica del repository non riuscita: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Errore durante la verifica: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Impossibile elencare gli snapshot: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Errore durante l'applicazione della politica di conservazione: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Errore durante la potatura: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Errore durante l'avvio della procedura guidata di configurazione: {0}</sys:String>
 
 </ResourceDictionary>

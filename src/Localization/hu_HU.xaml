@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">Játék biztonsági mentési címke</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Írja be a biztonsági mentési címkét a következőhöz:</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">Adja meg a biztonsági mentési címkét ehhez: {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">Játékmenet mentésének időköze (perc)</sys:String>
 
@@ -65,6 +65,9 @@
 
 Belefoglalás mód: Egyetlen játékról sem készül biztonsági mentés. A játékokhoz hozzáadható a beillesztés címke, hogy jogosultak legyenek a biztonsági mentésre.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">Kizárt források</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">Az ezekből a forrásokból származó játékokról soha nem készül biztonsági mentés, függetlenül a címkéktől vagy a biztonsági mentési módtól.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">Kizárási mód</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">Belefoglalási mód</sys:String>
@@ -100,14 +103,6 @@ Belefoglalás mód: Egyetlen játékról sem készül biztonsági mentés. A já
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">Biztonsági mentések pillanatképeinek megtekintése</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">Automatikus felismerés sikeres</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">Automatikus felismerés sikertelen</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">Ludusavi futtatható fájl észlelve itt: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">A ludusavi futtatható fájl automatikus észlelése nem sikerült. Kérjük, adja meg manuálisan az elérési utat.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">Restic futtatható fájl észlelve itt: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">A restic futtatható fájl automatikus észlelése nem sikerült. Kérjük, adja meg manuálisan az elérési utat.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">Ludusavi Restic beállítások ellenőrzése:</sys:String>
@@ -327,5 +322,33 @@ Válassza az Igen lehetőséget a javasolt mappa használatához, a Nem lehetős
     <sys:String x:Key="LOCLuduRestInitializationError">Inicializálási hiba</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">Beállítási hiba</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">Hiba történt a beállítás során: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">Nem találhatók mentési fájlok ehhez: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">Nem sikerült fájlokat lekérni a Ludusavi-tól</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} / {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">és még {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">Nem sikerült létrehozni a Restic játékmentés-pillanatképet: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">A Restic nem tudott beolvasni néhány mentési fájlt ehhez: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">Hiba a pillanatkép létrehozása során: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">Sikeresen létrehozva a játékadatok pillanatképe: {0}</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">Biztonsági mentés pillanatképeinek betöltése...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">Nem sikerült betölteni a biztonsági mentés pillanatképeit. Ellenőrizze a Restic konfigurációját.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">Hiba a pillanatképek betöltése során: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">Nem sikerült törölni a pillanatképet: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">Hiba a pillanatkép törlése során: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">A tárház ellenőrzése meghiúsult: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">A törlési művelet meghiúsult: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">Hiba karbantartás közben: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">A tárház ellenőrzése sikertelen: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">Hiba az ellenőrzés során: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">Nem sikerült listázni a pillanatképeket: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">Hiba a megőrzési szabályzat alkalmazása során: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">Hiba törlés közben: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">Hiba a beállítási varázsló futtatása során: {0}</sys:String>
 
 </ResourceDictionary>

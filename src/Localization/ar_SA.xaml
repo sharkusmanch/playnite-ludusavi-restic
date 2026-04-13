@@ -9,7 +9,7 @@
 
     <sys:String x:Key="LOCLuduRestGameStoppedPromptCaption">علامة النسخ الاحتياطي للعبة</sys:String>
 
-    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">أدخل علامة النسخ الاحتياطي لـ</sys:String>
+    <sys:String x:Key="LOCLuduRestGameStoppedPromptMessage">أدخل علامة النسخ الاحتياطي لـ {0}</sys:String>
 
     <sys:String x:Key="LOCLuduRestGameplayBackupInt">المباراة الفاصل الزمني لحفظ النسخ الاحتياطي (بالدقائق)</sys:String>
 
@@ -65,6 +65,9 @@
 
 وضع التضمين: لا يتم نسخ أي لعبة احتياطيًا. يمكن إضافة علامة التضمين إلى الألعاب لتكون مؤهلة للنسخ الاحتياطي.</sys:String>
 
+    <sys:String x:Key="LOCLuduRestExcludedSources">المصادر المستبعدة</sys:String>
+    <sys:String x:Key="LOCLuduRestExcludedSourcesHelp">لن يتم نسخ الألعاب من هذه المصادر احتياطيًا أبدًا، بغض النظر عن العلامات أو وضع النسخ الاحتياطي.</sys:String>
+
     <sys:String x:Key="LOCLuduRestBackupExcludeMode">وضع الاستبعاد</sys:String>
 
     <sys:String x:Key="LOCLuduRestBackupIncludeMode">تضمين الوضع</sys:String>
@@ -100,14 +103,6 @@
 
     <!-- Game Menu Items -->
     <sys:String x:Key="LOCLuduRestViewBackupSnapshots">عرض لقطات النسخ الاحتياطي</sys:String>
-
-    <!-- Settings Auto-Detection -->
-    <sys:String x:Key="LOCLuduRestAutoDetectSuccessTitle">تم الكشف التلقائي بنجاح</sys:String>
-    <sys:String x:Key="LOCLuduRestAutoDetectFailedTitle">فشل الكشف التلقائي</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviDetected">تم اكتشاف إمكانية تنفيذ لودوسافي في: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestLudusaviNotDetected">لا يمكن الكشف تلقائياً عن إمكانية تنفيذ Ludusavi. الرجاء تحديد المسار يدوياً.</sys:String>
-    <sys:String x:Key="LOCLuduRestResticDetected">تم الكشف عن ملف Restic القابل للتنفيذ في: {0}</sys:String>
-    <sys:String x:Key="LOCLuduRestResticNotDetected">لا يمكن الكشف تلقائيًا عن ملف Restic القابل للتنفيذ. الرجاء تحديد المسار يدوياً.</sys:String>
 
     <!-- Settings verification -->
     <sys:String x:Key="LOCLuduRestSettingsVerificationTitle">التحقق من إعدادات Ludusavi Restic:</sys:String>
@@ -327,5 +322,33 @@
     <sys:String x:Key="LOCLuduRestInitializationError">خطأ في التهيئة</sys:String>
     <sys:String x:Key="LOCLuduRestSetupError">خطأ في الإعداد</sys:String>
     <sys:String x:Key="LOCLuduRestSetupErrorMessage">حدث خطأ أثناء الإعداد: {0}</sys:String>
+
+    <!-- Backup task notifications -->
+    <sys:String x:Key="LOCLuduRestNoSaveFilesFound">لم يُعثر على ملفات حفظ لـ {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToGetLudusaviFiles">فشل الحصول على الملفات من ludusavi</sys:String>
+    <sys:String x:Key="LOCLuduRestBackupProgressCount">{0} - {1} من {2}</sys:String>
+    <sys:String x:Key="LOCLuduRestAndMore">و{0} آخرين</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToCreateSnapshot">فشل إنشاء لقطة حفظ لعبة restic {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPartialSnapshotFailure">فشل Restic في قراءة بعض ملفات حفظ اللعبة لـ {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorCreatingSnapshot">خطأ أثناء إنشاء لقطة لـ {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestSnapshotCreatedSuccessfully">تم إنشاء لقطة بيانات اللعبة لـ {0} بنجاح</sys:String>
+
+    <!-- Backup browser notifications -->
+    <sys:String x:Key="LOCLuduRestLoadingBackupSnapshots">جارٍ تحميل لقطات النسخ الاحتياطي...</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToLoadSnapshots">فشل تحميل لقطات النسخ الاحتياطي. تحقق من إعدادات restic.</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorLoadingSnapshots">خطأ أثناء تحميل اللقطات: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToDeleteSnapshot">فشل حذف اللقطة: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDeletingSnapshot">خطأ أثناء حذف اللقطة: {0}</sys:String>
+
+    <!-- Maintenance / operation error messages -->
+    <sys:String x:Key="LOCLuduRestRepoCheckFailed">فشل فحص المستودع: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestPruneOperationFailed">فشلت عملية التنظيف: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringMaintenance">خطأ أثناء الصيانة: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestRepoVerificationFailed">فشل التحقق من المستودع: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringVerification">خطأ أثناء التحقق: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestFailedToListSnapshots">فشل سرد اللقطات: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringRetentionPolicy">خطأ أثناء تطبيق سياسة الاحتفاظ: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorDuringPrune">خطأ أثناء التنظيف: {0}</sys:String>
+    <sys:String x:Key="LOCLuduRestErrorRunningSetupWizard">خطأ أثناء تشغيل معالج الإعداد: {0}</sys:String>
 
 </ResourceDictionary>

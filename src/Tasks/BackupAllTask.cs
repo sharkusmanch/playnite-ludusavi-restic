@@ -59,13 +59,32 @@ namespace LudusaviRestic
                 catch (Exception e)
                 {
                     logger.Debug(e, "Failed to get files from ludusavi");
-                    SendErrorNotification("Failed to get files from ludusavi", context);
+                    SendErrorNotification(ResourceProvider.GetString("LOCLuduRestFailedToGetLudusaviFiles"), context);
                     return;
                 }
 
                 logger.Debug($"Got all game data from ludusavi");
 
                 var allFiles = ParseAllGameFiles(ludusaviOutput);
+
+                // Filter out games that are exclusively from excluded sources
+                if (context.Settings.ExcludedSourceIds != null && context.Settings.ExcludedSourceIds.Count > 0)
+                {
+                    var toRemove = allFiles.Keys
+                        .Where(gameName =>
+                        {
+                            var matchingGames = context.API.Database.Games
+                                .Where(g => g.Name == gameName)
+                                .ToList();
+                            return matchingGames.Count > 0 && matchingGames.All(g =>
+                                g.SourceId != Guid.Empty &&
+                                context.Settings.ExcludedSourceIds.Contains(g.SourceId));
+                        })
+                        .ToList();
+                    foreach (var name in toRemove)
+                        allFiles.Remove(name);
+                }
+
                 string backupText = $"{ResourceProvider.GetString("LOCLuduRestBackupGM")} - {ResourceProvider.GetString("LOCLuduRestBackupGPBackingUp")}";
 
                 activateGlobalProgress.ProgressMaxValue = allFiles.Count;
@@ -77,7 +96,7 @@ namespace LudusaviRestic
 
                 foreach (var entry in allFiles)
                 {
-                    activateGlobalProgress.Text = $"{backupText} - {activateGlobalProgress.CurrentProgressValue + 1} of {allFiles.Count}";
+                    activateGlobalProgress.Text = string.Format(ResourceProvider.GetString("LOCLuduRestBackupProgressCount"), backupText, activateGlobalProgress.CurrentProgressValue + 1, allFiles.Count);
 
                     if (activateGlobalProgress.CancelToken.IsCancellationRequested)
                     {
@@ -113,7 +132,7 @@ namespace LudusaviRestic
                 {
                     string failedList = failedGames.Count <= 5
                         ? string.Join(", ", failedGames)
-                        : string.Join(", ", failedGames.Take(5)) + $" and {failedGames.Count - 5} more";
+                        : string.Join(", ", failedGames.Take(5)) + " " + string.Format(ResourceProvider.GetString("LOCLuduRestAndMore"), failedGames.Count - 5);
 
                     string message = string.Format(
                         ResourceProvider.GetString("LOCLuduRestBackupAllSummaryFailures"),
