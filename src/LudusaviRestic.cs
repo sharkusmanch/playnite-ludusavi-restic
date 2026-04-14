@@ -19,8 +19,8 @@ namespace LudusaviRestic
 
         public override Guid Id { get; } = Guid.Parse("e9861c36-68a8-4654-8071-a9c50612bc24");
 
-        private ResticBackupManager manager;
-        private Timer timer;
+        private ResticBackupManager _manager;
+        private Timer _timer;
 
         public LudusaviRestic(IPlayniteAPI api) : base(api)
         {
@@ -29,7 +29,7 @@ namespace LudusaviRestic
             {
                 HasSettings = true
             };
-            this.manager = new ResticBackupManager(this.settings, this.PlayniteApi);
+            this._manager = new ResticBackupManager(this.settings, this.PlayniteApi);
         }
 
         private string GetLocalizedString(string key, string fallback = null)
@@ -81,7 +81,7 @@ namespace LudusaviRestic
                     Action = args => {
                         if (CheckConfiguration())
                         {
-                            this.manager.BackupAllGames();
+                            this._manager.BackupAllGames();
                         }
                     }
                 },
@@ -166,7 +166,7 @@ namespace LudusaviRestic
                     Action = args => {
                         if (CheckConfiguration() && args.Games.Count > 0)
                         {
-                            this.manager.PerformManualBackup(args.Games);
+                            this._manager.PerformManualBackup(args.Games);
                         }
                     }
                 },
@@ -774,11 +774,16 @@ namespace LudusaviRestic
             }
         }
 
+        public override void OnApplicationStopped(OnApplicationStoppedEventArgs args)
+        {
+            _timer?.Dispose();
+        }
+
         public override void OnGameUninstalled(OnGameUninstalledEventArgs args)
         {
             if (settings.BackupOnUninstall)
             {
-                this.manager.PerformBackup(args.Game);
+                this._manager.PerformBackup(args.Game);
             }
         }
 
@@ -789,7 +794,7 @@ namespace LudusaviRestic
             if (settings.BackupDuringGameplay)
             {
                 var interval = settings.GetEffectiveInterval(args.Game.Id);
-                this.timer = new Timer(GameplayBackupTimerElapsed, args.Game,
+                this._timer = new Timer(GameplayBackupTimerElapsed, args.Game,
                     interval * 60000,
                     interval * 60000);
             }
@@ -798,12 +803,12 @@ namespace LudusaviRestic
         private void GameplayBackupTimerElapsed(Object obj)
         {
             Game game = (Game)obj;
-            this.manager.PerformGameplayBackup(game);
+            this._manager.PerformGameplayBackup(game);
         }
 
         public override void OnGameStopped(OnGameStoppedEventArgs args)
         {
-            this.timer?.Dispose();
+            this._timer?.Dispose();
 
             if (this.settings.BackupWhenGameStopped)
             {
@@ -823,11 +828,11 @@ namespace LudusaviRestic
                         logger.Debug($"Custom backup tag provided: {result.SelectedString}");
                     }
 
-                    this.manager.PerformGameStoppedBackup(args.Game, result.SelectedString);
+                    this._manager.PerformGameStoppedBackup(args.Game, result.SelectedString);
                 }
                 else
                 {
-                    this.manager.PerformGameStoppedBackup(args.Game);
+                    this._manager.PerformGameStoppedBackup(args.Game);
                 }
             }
         }

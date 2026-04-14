@@ -138,7 +138,7 @@ namespace LudusaviRestic
                 // For "restic" (no path), check if it's available in PATH
                 if (path == "restic")
                 {
-                    var process = new Process
+                    using (var process = new Process
                     {
                         StartInfo = new ProcessStartInfo
                         {
@@ -150,20 +150,20 @@ namespace LudusaviRestic
                             CreateNoWindow = true,
                             WindowStyle = ProcessWindowStyle.Hidden
                         }
-                    };
-
-                    process.Start();
-                    var output = process.StandardOutput.ReadToEnd();
-                    process.WaitForExit();
-
-                    return process.ExitCode == 0 && output.Contains("restic");
+                    })
+                    {
+                        process.Start();
+                        var output = process.StandardOutput.ReadToEnd();
+                        process.WaitForExit();
+                        return process.ExitCode == 0 && output.Contains("restic");
+                    }
                 }
 
                 // For full paths, check if file exists and is executable
                 if (!File.Exists(path))
                     return false;
 
-                var fileProcess = new Process
+                using (var fileProcess = new Process
                 {
                     StartInfo = new ProcessStartInfo
                     {
@@ -175,13 +175,13 @@ namespace LudusaviRestic
                         CreateNoWindow = true,
                         WindowStyle = ProcessWindowStyle.Hidden
                     }
-                };
-
-                fileProcess.Start();
-                var fileOutput = fileProcess.StandardOutput.ReadToEnd();
-                fileProcess.WaitForExit();
-
-                return fileProcess.ExitCode == 0 && fileOutput.Contains("restic");
+                })
+                {
+                    fileProcess.Start();
+                    var fileOutput = fileProcess.StandardOutput.ReadToEnd();
+                    fileProcess.WaitForExit();
+                    return fileProcess.ExitCode == 0 && fileOutput.Contains("restic");
+                }
             }
             catch (Exception ex)
             {
@@ -205,7 +205,7 @@ namespace LudusaviRestic
                 // For "ludusavi" (no path), check if it's available in PATH
                 if (path == "ludusavi")
                 {
-                    var process = new Process
+                    using (var process = new Process
                     {
                         StartInfo = new ProcessStartInfo
                         {
@@ -217,20 +217,20 @@ namespace LudusaviRestic
                             CreateNoWindow = true,
                             WindowStyle = ProcessWindowStyle.Hidden
                         }
-                    };
-
-                    process.Start();
-                    var output = process.StandardOutput.ReadToEnd();
-                    process.WaitForExit();
-
-                    return process.ExitCode == 0 && output.ToLower().Contains("ludusavi");
+                    })
+                    {
+                        process.Start();
+                        var output = process.StandardOutput.ReadToEnd();
+                        process.WaitForExit();
+                        return process.ExitCode == 0 && output.ToLower().Contains("ludusavi");
+                    }
                 }
 
                 // For full paths, check if file exists and is executable
                 if (!File.Exists(path))
                     return false;
 
-                var fileProcess = new Process
+                using (var fileProcess = new Process
                 {
                     StartInfo = new ProcessStartInfo
                     {
@@ -242,13 +242,13 @@ namespace LudusaviRestic
                         CreateNoWindow = true,
                         WindowStyle = ProcessWindowStyle.Hidden
                     }
-                };
-
-                fileProcess.Start();
-                var fileOutput = fileProcess.StandardOutput.ReadToEnd();
-                fileProcess.WaitForExit();
-
-                return fileProcess.ExitCode == 0 && fileOutput.ToLower().Contains("ludusavi");
+                })
+                {
+                    fileProcess.Start();
+                    var fileOutput = fileProcess.StandardOutput.ReadToEnd();
+                    fileProcess.WaitForExit();
+                    return fileProcess.ExitCode == 0 && fileOutput.ToLower().Contains("ludusavi");
+                }
             }
             catch (Exception ex)
             {
@@ -279,7 +279,7 @@ namespace LudusaviRestic
             var tempContext = new BackupContext(context.API, tempSettings);
 
             // Execute restic init command
-            var process = new Process
+            using (var process = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
@@ -291,16 +291,17 @@ namespace LudusaviRestic
                     CreateNoWindow = true,
                     WindowStyle = ProcessWindowStyle.Hidden
                 }
-            };
+            })
+            {
+                // Set environment variables for restic
+                process.StartInfo.Environment["RESTIC_REPOSITORY"] = repositoryPath;
+                process.StartInfo.Environment["RESTIC_PASSWORD"] = password;
 
-            // Set environment variables for restic
-            process.StartInfo.Environment["RESTIC_REPOSITORY"] = repositoryPath;
-            process.StartInfo.Environment["RESTIC_PASSWORD"] = password;
+                logger.Debug($"Executing: {process.StartInfo.FileName} {process.StartInfo.Arguments}");
+                logger.Debug($"Repository: {repositoryPath}");
 
-            logger.Debug($"Executing: {process.StartInfo.FileName} {process.StartInfo.Arguments}");
-            logger.Debug($"Repository: {repositoryPath}");
-
-            return new CommandResult(process);
+                return new CommandResult(process);
+            }
         }
 
         /// <summary>

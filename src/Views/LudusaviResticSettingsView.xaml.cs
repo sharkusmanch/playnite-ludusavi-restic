@@ -11,14 +11,14 @@ namespace LudusaviRestic
 {
     public partial class LudusaviResticSettingsView : UserControl
     {
-        private LudusaviRestic plugin;
+        private LudusaviRestic _plugin;
         private static readonly ILogger logger = LogManager.GetLogger();
 
         public LudusaviResticSettingsView(LudusaviRestic plugin)
         {
             logger.Debug("LudusaviResticSettingsView init");
             InitializeComponent();
-            this.plugin = plugin;
+            this._plugin = plugin;
             // Initialize password fields with current settings values
             Loaded += (s, e) =>
             {
@@ -26,11 +26,11 @@ namespace LudusaviRestic
                 {
                     if (ResticPasswordBox != null)
                     {
-                        ResticPasswordBox.Password = this.plugin.settings.ResticPassword ?? string.Empty;
+                        ResticPasswordBox.Password = this._plugin.settings.ResticPassword ?? string.Empty;
                     }
                     if (RclonePasswordBox != null)
                     {
-                        RclonePasswordBox.Password = this.plugin.settings.RcloneConfigPassword ?? string.Empty;
+                        RclonePasswordBox.Password = this._plugin.settings.RcloneConfigPassword ?? string.Empty;
                     }
                     if (OverridesDataGrid != null)
                     {
@@ -53,11 +53,11 @@ namespace LudusaviRestic
 
         public void OnBrowseLudusaviExecutablePath(object sender, RoutedEventArgs e)
         {
-            var choice = this.plugin.PlayniteApi.Dialogs.SelectFile(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestExecutableFilterShort"));
+            var choice = this._plugin.PlayniteApi.Dialogs.SelectFile(this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestExecutableFilterShort"));
 
             if (choice.Length > 0)
             {
-                this.plugin.settings.LudusaviExecutablePath = choice;
+                this._plugin.settings.LudusaviExecutablePath = choice;
             }
         }
 
@@ -66,22 +66,22 @@ namespace LudusaviRestic
             var detectedPath = ResticUtility.DetectLudusaviExecutable();
             if (!string.IsNullOrWhiteSpace(detectedPath))
             {
-                this.plugin.settings.LudusaviExecutablePath = detectedPath;
-                this.plugin.PlayniteApi.Dialogs.ShowMessage(string.Format(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsLudusaviDetected"), detectedPath), this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectSuccess"));
+                this._plugin.settings.LudusaviExecutablePath = detectedPath;
+                this._plugin.PlayniteApi.Dialogs.ShowMessage(string.Format(this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsLudusaviDetected"), detectedPath), this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectSuccess"));
             }
             else
             {
-                this.plugin.PlayniteApi.Dialogs.ShowMessage(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsLudusaviNotDetected"), this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectFailed"));
+                this._plugin.PlayniteApi.Dialogs.ShowMessage(this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsLudusaviNotDetected"), this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectFailed"));
             }
         }
 
         public void OnBrowseResticExecutablePath(object sender, RoutedEventArgs e)
         {
-            var choice = this.plugin.PlayniteApi.Dialogs.SelectFile(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestExecutableFilterShort"));
+            var choice = this._plugin.PlayniteApi.Dialogs.SelectFile(this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestExecutableFilterShort"));
 
             if (choice.Length > 0)
             {
-                this.plugin.settings.ResticExecutablePath = choice;
+                this._plugin.settings.ResticExecutablePath = choice;
             }
         }
 
@@ -90,22 +90,22 @@ namespace LudusaviRestic
             var detectedPath = ResticUtility.DetectResticExecutable();
             if (!string.IsNullOrWhiteSpace(detectedPath))
             {
-                this.plugin.settings.ResticExecutablePath = detectedPath;
-                this.plugin.PlayniteApi.Dialogs.ShowMessage(string.Format(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsResticDetected"), detectedPath), this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectSuccess"));
+                this._plugin.settings.ResticExecutablePath = detectedPath;
+                this._plugin.PlayniteApi.Dialogs.ShowMessage(string.Format(this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsResticDetected"), detectedPath), this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectSuccess"));
             }
             else
             {
-                this.plugin.PlayniteApi.Dialogs.ShowMessage(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsResticNotDetected"), this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectFailed"));
+                this._plugin.PlayniteApi.Dialogs.ShowMessage(this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsResticNotDetected"), this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestSettingsAutoDetectFailed"));
             }
         }
 
         public void OnBrowseRcloneConfPath(object sender, RoutedEventArgs e)
         {
-            var choice = this.plugin.PlayniteApi.Dialogs.SelectFile(this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestConfigFilter"));
+            var choice = this._plugin.PlayniteApi.Dialogs.SelectFile(this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestConfigFilter"));
 
             if (choice.Length > 0)
             {
-                this.plugin.settings.RcloneConfigPath = choice;
+                this._plugin.settings.RcloneConfigPath = choice;
             }
         }
 
@@ -163,16 +163,16 @@ namespace LudusaviRestic
 
         private void PopulateSourcesList()
         {
-            var sources = this.plugin.PlayniteApi.Database.Sources
+            var sources = this._plugin.PlayniteApi.Database.Sources
                 .OrderBy(s => s.Name)
-                .Select(s => new SourceCheckItem(s.Name, s.Id, this.plugin.settings.ExcludedSourceIds))
+                .Select(s => new SourceCheckItem(s.Name, s.Id, this._plugin.settings.ExcludedSourceIds))
                 .ToList();
             ExcludedSourcesList.ItemsSource = sources;
         }
 
         private void RefreshOverridesGrid()
         {
-            var items = this.plugin.settings.GameIntervalOverrides.Select(kvp =>
+            var items = this._plugin.settings.GameIntervalOverrides.Select(kvp =>
             {
                 var item = kvp.Value;
                 item.GameId = kvp.Key;
@@ -185,7 +185,7 @@ namespace LudusaviRestic
         {
             if (OverridesDataGrid.SelectedItem is GameOverride selected && selected.GameId != null)
             {
-                this.plugin.settings.GameIntervalOverrides.Remove(selected.GameId);
+                this._plugin.settings.GameIntervalOverrides.Remove(selected.GameId);
                 RefreshOverridesGrid();
             }
         }
@@ -198,7 +198,7 @@ namespace LudusaviRestic
                 if (textBox == null) return;
 
                 int columnIndex = e.Column.DisplayIndex;
-                var target = this.plugin.settings.GameIntervalOverrides[item.GameId];
+                var target = this._plugin.settings.GameIntervalOverrides[item.GameId];
 
                 if (columnIndex == 1) // IntervalMinutes (nullable)
                 {
@@ -254,8 +254,8 @@ namespace LudusaviRestic
 
         public void OnVerify(object sender, RoutedEventArgs e)
         {
-            BackupContext context = new BackupContext(this.plugin.PlayniteApi, this.plugin.settings);
-            var api = this.plugin.PlayniteApi;
+            BackupContext context = new BackupContext(this._plugin.PlayniteApi, this._plugin.settings);
+            var api = this._plugin.PlayniteApi;
             var resources = api.Resources;
             string title = resources.GetString("LOCLuduRestSettingsVerificationTitle");
             string verifyingRestic = resources.GetString("LOCLuduRestVerifyingRestic");
@@ -305,12 +305,12 @@ namespace LudusaviRestic
 
         private void SyncResticPasswordToSettings(string value)
         {
-            this.plugin.settings.ResticPassword = value;
+            this._plugin.settings.ResticPassword = value;
         }
 
         private void SyncRclonePasswordToSettings(string value)
         {
-            this.plugin.settings.RcloneConfigPassword = value;
+            this._plugin.settings.RcloneConfigPassword = value;
         }
 
         public void OnResticPasswordChanged(object sender, RoutedEventArgs e)
@@ -355,7 +355,7 @@ namespace LudusaviRestic
                     ResticPasswordText.Text = ResticPasswordBox.Password;
                     ResticPasswordBox.Visibility = Visibility.Collapsed;
                     ResticPasswordText.Visibility = Visibility.Visible;
-                    ResticPasswordToggle.Content = this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestHide");
+                    ResticPasswordToggle.Content = this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestHide");
                 }
                 else
                 {
@@ -363,7 +363,7 @@ namespace LudusaviRestic
                     ResticPasswordBox.Password = ResticPasswordText.Text;
                     ResticPasswordText.Visibility = Visibility.Collapsed;
                     ResticPasswordBox.Visibility = Visibility.Visible;
-                    ResticPasswordToggle.Content = this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestShow");
+                    ResticPasswordToggle.Content = this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestShow");
                 }
             }
             catch (Exception ex)
@@ -381,14 +381,14 @@ namespace LudusaviRestic
                     RclonePasswordText.Text = RclonePasswordBox.Password;
                     RclonePasswordBox.Visibility = Visibility.Collapsed;
                     RclonePasswordText.Visibility = Visibility.Visible;
-                    RclonePasswordToggle.Content = this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestHide");
+                    RclonePasswordToggle.Content = this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestHide");
                 }
                 else
                 {
                     RclonePasswordBox.Password = RclonePasswordText.Text;
                     RclonePasswordText.Visibility = Visibility.Collapsed;
                     RclonePasswordBox.Visibility = Visibility.Visible;
-                    RclonePasswordToggle.Content = this.plugin.PlayniteApi.Resources.GetString("LOCLuduRestShow");
+                    RclonePasswordToggle.Content = this._plugin.PlayniteApi.Resources.GetString("LOCLuduRestShow");
                 }
             }
             catch (Exception ex)
@@ -400,18 +400,18 @@ namespace LudusaviRestic
 
     public class SourceCheckItem : INotifyPropertyChanged
     {
-        private readonly List<Guid> excludedList;
+        private readonly List<Guid> _excludedList;
 
         public string Name { get; }
         public Guid SourceId { get; }
 
         public bool IsExcluded
         {
-            get => excludedList.Contains(SourceId);
+            get => _excludedList.Contains(SourceId);
             set
             {
-                if (value) { if (!excludedList.Contains(SourceId)) excludedList.Add(SourceId); }
-                else { excludedList.Remove(SourceId); }
+                if (value) { if (!_excludedList.Contains(SourceId)) _excludedList.Add(SourceId); }
+                else { _excludedList.Remove(SourceId); }
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsExcluded)));
             }
         }
@@ -422,7 +422,7 @@ namespace LudusaviRestic
         {
             Name = name;
             SourceId = sourceId;
-            this.excludedList = excludedList;
+            this._excludedList = excludedList;
         }
     }
 }
