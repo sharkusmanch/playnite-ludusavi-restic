@@ -398,7 +398,7 @@ namespace LudusaviRestic
         }
     }
 
-    public class SourceCheckItem : INotifyPropertyChanged
+    internal class SourceCheckItem : INotifyPropertyChanged
     {
         private readonly List<Guid> _excludedList;
 

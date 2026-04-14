@@ -10,24 +10,24 @@ namespace LudusaviRestic
 {
     public class BackupGameTask : BaseBackupTask
     {
-        private Game game;
-        private bool isManual;
+        private Game _game;
+        private bool _isManual;
 
         public BackupGameTask(Game game, SemaphoreSlim semaphore, BackupContext context, bool isManual = false) : base(semaphore, context)
         {
-            this.game = game;
-            this.isManual = isManual;
+            this._game = game;
+            this._isManual = isManual;
         }
 
         public BackupGameTask(Game game, SemaphoreSlim semaphore, BackupContext context, IList<string> extraTags, bool isManual = false) : base(semaphore, context, extraTags)
         {
-            this.game = game;
-            this.isManual = isManual;
+            this._game = game;
+            this._isManual = isManual;
         }
 
         protected override void Backup()
         {
-            Backup(this.semaphore, this.context, this.game, this.extraTags, this.isManual);
+            Backup(this.semaphore, this.context, this._game, this.extraTags, this._isManual);
         }
 
         internal static IList<string> ParseGameFiles(string gameName, string ludusaviJson)
