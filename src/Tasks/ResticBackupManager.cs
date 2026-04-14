@@ -9,23 +9,23 @@ namespace LudusaviRestic
     public class ResticBackupManager
     {
         private static readonly ILogger logger = LogManager.GetLogger();
-        private BackupContext context;
-        private SemaphoreSlim semaphore;
+        private BackupContext _context;
+        private SemaphoreSlim _semaphore;
 
         public ResticBackupManager(LudusaviResticSettings settings, IPlayniteAPI api)
         {
-            this.semaphore = new SemaphoreSlim(1);
-            this.context = new BackupContext(api, settings);
+            this._semaphore = new SemaphoreSlim(1);
+            this._context = new BackupContext(api, settings);
         }
 
         public void BackupAllGames()
         {
-            new BackupAllTask(this.semaphore, this.context, new List<string>()).Run();
+            new BackupAllTask(this._semaphore, this._context, new List<string>()).Run();
         }
 
         public void BackupAllGames(IList<string> extraTags)
         {
-            new BackupAllTask(this.semaphore, this.context, extraTags).Run();
+            new BackupAllTask(this._semaphore, this._context, extraTags).Run();
         }
 
         public void PerformBackup(Game game)
@@ -68,7 +68,7 @@ namespace LudusaviRestic
         public void PerformBackup(Game game, IList<string> extraTags, bool isManual = false)
         {
             logger.Debug($"Backup #{game.Name}");
-            LudusaviResticSettings settings = this.context.Settings;
+            LudusaviResticSettings settings = this._context.Settings;
 
             if (ShouldSkipBackup(settings.BackupExecutionMode, game, settings.ExcludeTagID, settings.IncludeTagID, settings.ExcludedSourceIds))
             {
@@ -76,7 +76,7 @@ namespace LudusaviRestic
                 return;
             }
 
-            BackupGameTask task = new BackupGameTask(game, this.semaphore, this.context, extraTags, isManual);
+            BackupGameTask task = new BackupGameTask(game, this._semaphore, this._context, extraTags, isManual);
             task.Run();
         }
 
@@ -105,7 +105,7 @@ namespace LudusaviRestic
         {
             var tags = ManualBackupTags();
             // Prompt user for an optional custom tag
-            var result = this.context.API.Dialogs.SelectString(
+            var result = this._context.API.Dialogs.SelectString(
                 ResourceProvider.GetString("LOCLuduRestManualBackupTagPrompt"),
                 ResourceProvider.GetString("LOCLuduRestManualBackupTagTitle"),
                 ""
@@ -127,17 +127,17 @@ namespace LudusaviRestic
 
         private IList<string> ManualBackupTags()
         {
-            return BuildBackupTags(this.context.Settings.AdditionalTagging, this.context.Settings.ManualSnapshotTag);
+            return BuildBackupTags(this._context.Settings.AdditionalTagging, this._context.Settings.ManualSnapshotTag);
         }
 
         private IList<string> GameplayBackupTags()
         {
-            return BuildBackupTags(this.context.Settings.AdditionalTagging, this.context.Settings.GameplaySnapshotTag);
+            return BuildBackupTags(this._context.Settings.AdditionalTagging, this._context.Settings.GameplaySnapshotTag);
         }
 
         private IList<string> GamestoppedBackupTags()
         {
-            return BuildBackupTags(this.context.Settings.AdditionalTagging, this.context.Settings.GameStoppedSnapshotTag);
+            return BuildBackupTags(this._context.Settings.AdditionalTagging, this._context.Settings.GameStoppedSnapshotTag);
         }
     }
 }

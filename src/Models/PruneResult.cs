@@ -58,7 +58,7 @@ namespace LudusaviRestic
         }
     }
 
-    public static class PruneResultParser
+    internal static class PruneResultParser
     {
         private static readonly ILogger logger = LogManager.GetLogger();
         public static PruneResult ParsePruneOutput(CommandResult result, bool isDryRun = false)
@@ -83,7 +83,7 @@ namespace LudusaviRestic
             catch (Exception ex)
             {
                 // If parsing fails, we still have the raw output
-                System.Diagnostics.Debug.WriteLine($"Error parsing prune output: {ex.Message}");
+                logger.Debug(ex, "Error parsing prune output, raw output preserved");
             }
 
             return pruneResult;
@@ -109,7 +109,7 @@ namespace LudusaviRestic
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Error parsing forget output: {ex.Message}");
+                logger.Debug(ex, "Error parsing forget output, raw output preserved");
             }
 
             return pruneResult;
@@ -146,9 +146,10 @@ namespace LudusaviRestic
                     ParseDeletedSnapshotsText(result, output);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 // If JSON parsing fails, fall back to text parsing
+                logger.Debug(ex, "JSON parsing failed, falling back to text parser");
                 ParseDeletedSnapshotsText(result, output);
             }
 
@@ -266,7 +267,7 @@ namespace LudusaviRestic
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Error parsing forget JSON: {ex.Message}");
+                logger.Error(ex, "Error parsing forget JSON");
             }
         }
 

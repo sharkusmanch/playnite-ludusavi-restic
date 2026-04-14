@@ -16,27 +16,27 @@ namespace LudusaviRestic
     public class BackupBrowserViewModel : INotifyPropertyChanged
     {
         private static readonly ILogger logger = LogManager.GetLogger();
-        private BackupContext context;
-        private ObservableCollection<BackupSnapshot> snapshots;
-        private ObservableCollection<BackupSnapshot> allSnapshots;
-        private BackupSnapshot selectedSnapshot;
-        private bool isLoading;
-        private string selectedGameFilter;
-        private ObservableCollection<string> gameFilters;
+        private BackupContext _context;
+        private ObservableCollection<BackupSnapshot> _snapshots;
+        private ObservableCollection<BackupSnapshot> _allSnapshots;
+        private BackupSnapshot _selectedSnapshot;
+        private bool _isLoading;
+        private string _selectedGameFilter;
+        private ObservableCollection<string> _gameFilters;
 
         public ObservableCollection<BackupSnapshot> Snapshots
         {
-            get => snapshots;
+            get => _snapshots;
             set
             {
-                if (snapshots != null)
+                if (_snapshots != null)
                 {
-                    snapshots.CollectionChanged -= Snapshots_CollectionChanged;
+                    _snapshots.CollectionChanged -= Snapshots_CollectionChanged;
                 }
-                snapshots = value;
-                if (snapshots != null)
+                _snapshots = value;
+                if (_snapshots != null)
                 {
-                    snapshots.CollectionChanged += Snapshots_CollectionChanged;
+                    _snapshots.CollectionChanged += Snapshots_CollectionChanged;
                 }
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(SnapshotCount));
@@ -52,20 +52,20 @@ namespace LudusaviRestic
 
         public ObservableCollection<string> GameFilters
         {
-            get => gameFilters;
+            get => _gameFilters;
             set
             {
-                gameFilters = value;
+                _gameFilters = value;
                 OnPropertyChanged();
             }
         }
 
         public string SelectedGameFilter
         {
-            get => selectedGameFilter;
+            get => _selectedGameFilter;
             set
             {
-                selectedGameFilter = value;
+                _selectedGameFilter = value;
                 OnPropertyChanged();
                 ApplyFilter();
             }
@@ -73,20 +73,20 @@ namespace LudusaviRestic
 
         public BackupSnapshot SelectedSnapshot
         {
-            get => selectedSnapshot;
+            get => _selectedSnapshot;
             set
             {
-                selectedSnapshot = value;
+                _selectedSnapshot = value;
                 OnPropertyChanged();
             }
         }
 
         public bool IsLoading
         {
-            get => isLoading;
+            get => _isLoading;
             set
             {
-                isLoading = value;
+                _isLoading = value;
                 OnPropertyChanged();
             }
         }
@@ -96,9 +96,9 @@ namespace LudusaviRestic
 
         public BackupBrowserViewModel(BackupContext context)
         {
-            this.context = context;
+            this._context = context;
             this.Snapshots = new ObservableCollection<BackupSnapshot>();
-            this.allSnapshots = new ObservableCollection<BackupSnapshot>();
+            this._allSnapshots = new ObservableCollection<BackupSnapshot>();
             this.GameFilters = new ObservableCollection<string>();
 
             RefreshCommand = new RelayCommand(RefreshSnapshots);
@@ -108,11 +108,11 @@ namespace LudusaviRestic
 
         public BackupBrowserViewModel(BackupContext context, string gameFilter)
         {
-            this.context = context;
+            this._context = context;
             this.Snapshots = new ObservableCollection<BackupSnapshot>();
-            this.allSnapshots = new ObservableCollection<BackupSnapshot>();
+            this._allSnapshots = new ObservableCollection<BackupSnapshot>();
             this.GameFilters = new ObservableCollection<string>();
-            this.selectedGameFilter = gameFilter; // preset desired filter; will be applied after load
+            this._selectedGameFilter = gameFilter; // preset desired filter; will be applied after load
             RefreshCommand = new RelayCommand(RefreshSnapshots);
             DeleteSnapshotCommand = new RelayCommand(DeleteSnapshot, CanDeleteSnapshot);
             RefreshSnapshots();
@@ -130,8 +130,8 @@ namespace LudusaviRestic
 
         private void ApplyFilter()
         {
-            if (allSnapshots == null) return;
-            Snapshots = new ObservableCollection<BackupSnapshot>(FilterSnapshots(allSnapshots, SelectedGameFilter));
+            if (_allSnapshots == null) return;
+            Snapshots = new ObservableCollection<BackupSnapshot>(FilterSnapshots(_allSnapshots, SelectedGameFilter));
         }
 
         internal static IList<BackupSnapshot> ParseSnapshots(string json)
@@ -166,20 +166,20 @@ namespace LudusaviRestic
             )
             { IsIndeterminate = true };
 
-            context.API.Dialogs.ActivateGlobalProgress(_ =>
+            _context.API.Dialogs.ActivateGlobalProgress(_ =>
             {
                 try
                 {
-                    var result = ResticCommand.ListSnapshots(context);
+                    var result = ResticCommand.ListSnapshots(_context);
                     if (result.ExitCode == 0)
                     {
                         var parsed = ParseSnapshots(result.StdOut);
-                        allSnapshots = new ObservableCollection<BackupSnapshot>(parsed);
+                        _allSnapshots = new ObservableCollection<BackupSnapshot>(parsed);
                         GameFilters = new ObservableCollection<string>(BuildGameFilters(parsed));
                         // If a specific game filter was preset (e.g., via game context menu), try to apply it
-                        if (!string.IsNullOrEmpty(selectedGameFilter) && GameFilters.Contains(selectedGameFilter))
+                        if (!string.IsNullOrEmpty(_selectedGameFilter) && GameFilters.Contains(_selectedGameFilter))
                         {
-                            SelectedGameFilter = selectedGameFilter; // triggers ApplyFilter()
+                            SelectedGameFilter = _selectedGameFilter; // triggers ApplyFilter()
                         }
                         else
                         {
@@ -196,13 +196,13 @@ namespace LudusaviRestic
                     else
                     {
                         logger.Error($"Failed to list snapshots: {result.StdErr}");
-                        context.API.Dialogs.ShowErrorMessage(ResourceProvider.GetString("LOCLuduRestFailedToLoadSnapshots"));
+                        _context.API.Dialogs.ShowErrorMessage(ResourceProvider.GetString("LOCLuduRestFailedToLoadSnapshots"));
                     }
                 }
                 catch (Exception ex)
                 {
                     logger.Error(ex, "Error loading snapshots");
-                    context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestErrorLoadingSnapshots"), ex.Message));
+                    _context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestErrorLoadingSnapshots"), ex.Message));
                 }
             }, globalProgressOptions);
         }
@@ -221,7 +221,7 @@ namespace LudusaviRestic
         private void DeleteSnapshot()
         {
             if (SelectedSnapshot == null) return;
-            var result = context.API.Dialogs.ShowMessage(
+            var result = _context.API.Dialogs.ShowMessage(
                 string.Format(ResourceProvider.GetString("LOCLuduRestDeleteSnapshotConfirmation"), SelectedSnapshot.ShortId, SelectedSnapshot.Date.ToString("yyyy-MM-dd HH:mm")),
                 ResourceProvider.GetString("LOCLuduRestDeleteBackupSnapshot"),
                 System.Windows.MessageBoxButton.YesNo,
@@ -229,23 +229,23 @@ namespace LudusaviRestic
             if (result != System.Windows.MessageBoxResult.Yes) return;
             try
             {
-                var deleteResult = ResticCommand.ForgetSnapshot(context, SelectedSnapshot.Id);
+                var deleteResult = ResticCommand.ForgetSnapshot(_context, SelectedSnapshot.Id);
                 if (deleteResult.ExitCode == 0)
                 {
-                    RemoveSnapshotFromCache(allSnapshots, Snapshots, SelectedSnapshot);
+                    RemoveSnapshotFromCache(_allSnapshots, Snapshots, SelectedSnapshot);
                     SelectedSnapshot = null;
-                    context.API.Dialogs.ShowMessage(ResourceProvider.GetString("LOCLuduRestSnapshotDeletedSuccessfully"), ResourceProvider.GetString("LOCLuduRestSuccess"));
+                    _context.API.Dialogs.ShowMessage(ResourceProvider.GetString("LOCLuduRestSnapshotDeletedSuccessfully"), ResourceProvider.GetString("LOCLuduRestSuccess"));
                 }
                 else
                 {
                     logger.Error($"Failed to delete snapshot: {deleteResult.StdErr}");
-                    context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestFailedToDeleteSnapshot"), deleteResult.StdErr));
+                    _context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestFailedToDeleteSnapshot"), deleteResult.StdErr));
                 }
             }
             catch (Exception ex)
             {
                 logger.Error(ex, "Error deleting snapshot");
-                context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestErrorDeletingSnapshot"), ex.Message));
+                _context.API.Dialogs.ShowErrorMessage(string.Format(ResourceProvider.GetString("LOCLuduRestErrorDeletingSnapshot"), ex.Message));
             }
         }
 
@@ -256,15 +256,15 @@ namespace LudusaviRestic
         }
     }
 
-    public class RelayCommand : ICommand
+    internal class RelayCommand : ICommand
     {
-        private readonly Action execute;
-        private readonly Func<bool> canExecute;
+        private readonly Action _execute;
+        private readonly Func<bool> _canExecute;
 
         public RelayCommand(Action execute, Func<bool> canExecute = null)
         {
-            this.execute = execute ?? throw new ArgumentNullException(nameof(execute));
-            this.canExecute = canExecute;
+            this._execute = execute ?? throw new ArgumentNullException(nameof(execute));
+            this._canExecute = canExecute;
         }
 
         public event EventHandler CanExecuteChanged
@@ -275,12 +275,12 @@ namespace LudusaviRestic
 
         public bool CanExecute(object parameter)
         {
-            return canExecute?.Invoke() ?? true;
+            return _canExecute?.Invoke() ?? true;
         }
 
         public void Execute(object parameter)
         {
-            execute();
+            _execute();
         }
     }
 }

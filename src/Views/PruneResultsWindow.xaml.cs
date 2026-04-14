@@ -10,14 +10,14 @@ namespace LudusaviRestic
 {
     public partial class PruneResultsWindow : Window
     {
-        private PruneResult pruneResult;
-        private ObservableCollection<DeletedSnapshotViewModel> allSnapshots;
-        private ObservableCollection<DeletedSnapshotViewModel> filteredSnapshots;
+        private PruneResult _pruneResult;
+        private ObservableCollection<DeletedSnapshotViewModel> _allSnapshots;
+        private ObservableCollection<DeletedSnapshotViewModel> _filteredSnapshots;
 
         public PruneResultsWindow(PruneResult result)
         {
             InitializeComponent();
-            this.pruneResult = result;
+            this._pruneResult = result;
             ApplyPlayniteTheme();
             InitializeData();
         }
@@ -44,48 +44,48 @@ namespace LudusaviRestic
         private void InitializeData()
         {
             // Set title based on operation type
-            TitleText.Text = pruneResult.IsDryRun ? "Pruning Preview (Dry Run)" : "Pruning Results";
+            TitleText.Text = _pruneResult.IsDryRun ? "Pruning Preview (Dry Run)" : "Pruning Results";
 
             // Set summary text
-            var operationType = pruneResult.IsDryRun ? "would be" : "were";
+            var operationType = _pruneResult.IsDryRun ? "would be" : "were";
             SummaryText.Text = $"The following snapshots {operationType} deleted from the repository.";
 
             // Update statistics
-            SnapshotsDeletedText.Text = pruneResult.SnapshotsDeleted.ToString();
-            GamesAffectedText.Text = pruneResult.GamesAffected.ToString();
-            DataDeletedText.Text = string.IsNullOrEmpty(pruneResult.DataDeleted) ? "N/A" : pruneResult.DataDeleted;
-            StatusText.Text = pruneResult.Success ? "Success" : "Failed";
-            StatusText.Foreground = pruneResult.Success ?
+            SnapshotsDeletedText.Text = _pruneResult.SnapshotsDeleted.ToString();
+            GamesAffectedText.Text = _pruneResult.GamesAffected.ToString();
+            DataDeletedText.Text = string.IsNullOrEmpty(_pruneResult.DataDeleted) ? "N/A" : _pruneResult.DataDeleted;
+            StatusText.Text = _pruneResult.Success ? "Success" : "Failed";
+            StatusText.Foreground = _pruneResult.Success ?
                 System.Windows.Media.Brushes.Green :
                 System.Windows.Media.Brushes.Red;
 
             // Convert snapshots to view models
-            allSnapshots = new ObservableCollection<DeletedSnapshotViewModel>(
-                pruneResult.DeletedSnapshots.Select(s => new DeletedSnapshotViewModel(s))
+            _allSnapshots = new ObservableCollection<DeletedSnapshotViewModel>(
+                _pruneResult.DeletedSnapshots.Select(s => new DeletedSnapshotViewModel(s))
             );
-            filteredSnapshots = new ObservableCollection<DeletedSnapshotViewModel>(allSnapshots);
+            _filteredSnapshots = new ObservableCollection<DeletedSnapshotViewModel>(_allSnapshots);
 
             // Set up data grids
-            SnapshotsDataGrid.ItemsSource = filteredSnapshots;
+            SnapshotsDataGrid.ItemsSource = _filteredSnapshots;
 
             // Games summary
-            var gamesSummary = pruneResult.GetGameDeletionCounts()
+            var gamesSummary = _pruneResult.GetGameDeletionCounts()
                 .OrderByDescending(kvp => kvp.Value)
                 .ThenBy(kvp => kvp.Key);
             GamesSummaryDataGrid.ItemsSource = gamesSummary;
 
             // Tags summary
-            var tagsSummary = pruneResult.GetTagDeletionCounts()
+            var tagsSummary = _pruneResult.GetTagDeletionCounts()
                 .OrderByDescending(kvp => kvp.Value)
                 .ThenBy(kvp => kvp.Key);
             TagsSummaryDataGrid.ItemsSource = tagsSummary;
 
             // Raw output
-            RawOutputTextBox.Text = pruneResult.RawOutput;
+            RawOutputTextBox.Text = _pruneResult.RawOutput;
 
             // Set up game filter
             var gameNames = new List<string> { "All Games" };
-            gameNames.AddRange(pruneResult.DeletedSnapshots
+            gameNames.AddRange(_pruneResult.DeletedSnapshots
                 .Where(s => !string.IsNullOrEmpty(s.GameName))
                 .Select(s => s.GameName)
                 .Distinct()
@@ -110,18 +110,18 @@ namespace LudusaviRestic
 
             if (string.IsNullOrEmpty(selectedGame) || selectedGame == "All Games")
             {
-                filteredSnapshots.Clear();
-                foreach (var snapshot in allSnapshots)
+                _filteredSnapshots.Clear();
+                foreach (var snapshot in _allSnapshots)
                 {
-                    filteredSnapshots.Add(snapshot);
+                    _filteredSnapshots.Add(snapshot);
                 }
             }
             else
             {
-                filteredSnapshots.Clear();
-                foreach (var snapshot in allSnapshots.Where(s => s.GameName == selectedGame))
+                _filteredSnapshots.Clear();
+                foreach (var snapshot in _allSnapshots.Where(s => s.GameName == selectedGame))
                 {
-                    filteredSnapshots.Add(snapshot);
+                    _filteredSnapshots.Add(snapshot);
                 }
             }
         }
@@ -132,21 +132,21 @@ namespace LudusaviRestic
         }
     }
 
-    public class DeletedSnapshotViewModel
+    internal class DeletedSnapshotViewModel
     {
-        private readonly DeletedSnapshot snapshot;
+        private readonly DeletedSnapshot _snapshot;
 
         public DeletedSnapshotViewModel(DeletedSnapshot snapshot)
         {
-            this.snapshot = snapshot;
+            this._snapshot = snapshot;
         }
 
-        public string ShortId => snapshot.ShortId;
-        public string GameName => string.IsNullOrEmpty(snapshot.GameName) ? "Unknown" : snapshot.GameName;
-        public DateTime Time => snapshot.Time;
-        public string TagsString => string.Join(", ", snapshot.Tags);
-        public List<string> Tags => snapshot.Tags;
-        public string Host => snapshot.Host;
-        public List<string> Paths => snapshot.Paths;
+        public string ShortId => _snapshot.ShortId;
+        public string GameName => string.IsNullOrEmpty(_snapshot.GameName) ? "Unknown" : _snapshot.GameName;
+        public DateTime Time => _snapshot.Time;
+        public string TagsString => string.Join(", ", _snapshot.Tags);
+        public List<string> Tags => _snapshot.Tags;
+        public string Host => _snapshot.Host;
+        public List<string> Paths => _snapshot.Paths;
     }
 }

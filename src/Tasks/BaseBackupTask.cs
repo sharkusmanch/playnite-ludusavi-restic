@@ -95,17 +95,14 @@ namespace LudusaviRestic
         private static string WriteFilesToTempFile(IList<string> files)
         {
             string listfile = System.IO.Path.GetTempFileName();
-            System.IO.FileInfo listfileinfo = new System.IO.FileInfo(listfile);
-            listfileinfo.Attributes = System.IO.FileAttributes.Temporary;
-            System.IO.StreamWriter listfilewriter = System.IO.File.AppendText(listfile);
-
-            foreach (string filename in files)
+            new System.IO.FileInfo(listfile).Attributes = System.IO.FileAttributes.Temporary;
+            using (var writer = System.IO.File.AppendText(listfile))
             {
-                listfilewriter.WriteLine(NormalizePath(filename));
+                foreach (string filename in files)
+                {
+                    writer.WriteLine(NormalizePath(filename));
+                }
             }
-            listfilewriter.Flush();
-            listfilewriter.Close();
-
             return listfile;
         }
 
