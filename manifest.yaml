@@ -1,5 +1,18 @@
 AddonId: LudusaviRestic_e9861c36-68a8-4654-8071-a9c50612bc24
 Packages:
+  - Version: 1.3.1
+    RequiredApiVersion: 6.14.0
+    ReleaseDate: 2026-07-26
+    PackageUrl: https://github.com/sharkusmanch/playnite-ludusavi-restic/releases/download/v1.3.1/LudusaviRestic_v1.3.1.pext
+    Changelog:
+      - 'Security: the restic repository password is no longer written into Playnite''s process environment, where every launched game, launcher and emulator inherited it. Credentials are now passed per-invocation.'
+      - 'Fix: answering No to "Proceed with pruning?" during full maintenance no longer prunes the repository anyway'
+      - 'Fix: restic failures (missing repository, locked repository, wrong password) are no longer reported as successful snapshots'
+      - 'Fix: backups no longer deadlock when restic writes more than 4 KB to stderr, which previously blocked every subsequent backup for the session'
+      - 'Fix: gameplay backup timers are tracked per game, so starting a second game no longer leaves the first game backing up for the rest of the session'
+      - 'Fix: adding a backup tag to a game with no existing tags is now persisted instead of being lost on restart'
+      - 'Fix: repository initialization no longer clears the rclone configuration for the session'
+      - 'Fix: temporary file lists are no longer leaked when a backup fails'
   - Version: 1.3.0
     RequiredApiVersion: 6.14.0
     ReleaseDate: 2026-04-13

@@ -187,7 +187,7 @@ namespace LudusaviRestic
         private static CommandResult ResticExecute(BackupContext context, string args)
         {
             string command = context.Settings.ResticExecutablePath.Trim();
-            return ExecuteCommand(command, args);
+            return ExecuteCommand(command, args, context.BuildResticEnvironment());
         }
     }
 }

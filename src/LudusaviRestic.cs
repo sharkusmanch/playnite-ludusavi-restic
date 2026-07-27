@@ -20,7 +20,12 @@ namespace LudusaviRestic
         public override Guid Id { get; } = Guid.Parse("e9861c36-68a8-4654-8071-a9c50612bc24");
 
         private ResticBackupManager _manager;
-        private Timer _timer;
+
+        // Keyed by Game.Id: Playnite can have several games running at once, and a single
+        // field left the previous game's timer running — and its Game pinned — for the
+        // rest of the session.
+        private readonly System.Collections.Concurrent.ConcurrentDictionary<Guid, Timer> _timers =
+            new System.Collections.Concurrent.ConcurrentDictionary<Guid, Timer>();
 
         public LudusaviRestic(IPlayniteAPI api) : base(api)
         {
@@ -383,7 +388,11 @@ namespace LudusaviRestic
                 }
                 else
                 {
+                    // Only reachable when TagIds is null, so assigning a fresh list drops
+                    // nothing. This branch mutates the game, so it must report true or the
+                    // caller skips Games.Update and the tag is lost on restart.
                     game.TagIds = new List<Guid> { tagId };
+                    return true;
                 }
             }
             return false;
@@ -449,17 +458,17 @@ namespace LudusaviRestic
                             var dryRunWindow = new PruneResultsWindow(parsedDryRun);
                             dryRunWindow.Owner = PlayniteApi.Dialogs.GetCurrentAppWindow();
                             dryRunWindow.ShowDialog();
-
-                            // Ask if user wants to proceed
-                            var proceedResult = PlayniteApi.Dialogs.ShowMessage(
-                                string.Format(GetLocalizedString("LOCLuduRestDryRunCompletedMessage", "LOCLuduRestDryRunCompletedMessage"), parsedDryRun.SnapshotsDeleted),
-                                GetLocalizedString("LOCLuduRestProceedWithPruning", "LOCLuduRestProceedWithPruning"),
-                                System.Windows.MessageBoxButton.YesNo,
-                                System.Windows.MessageBoxImage.Question);
-
-                            if (proceedResult != System.Windows.MessageBoxResult.Yes)
-                                return;
                         });
+
+                        // Ask if user wants to proceed (outside Dispatcher.Invoke — Playnite handles dispatching)
+                        var proceedResult = PlayniteApi.Dialogs.ShowMessage(
+                            string.Format(GetLocalizedString("LOCLuduRestDryRunCompletedMessage", "LOCLuduRestDryRunCompletedMessage"), parsedDryRun.SnapshotsDeleted),
+                            GetLocalizedString("LOCLuduRestProceedWithPruning", "LOCLuduRestProceedWithPruning"),
+                            System.Windows.MessageBoxButton.YesNo,
+                            System.Windows.MessageBoxImage.Question);
+
+                        if (proceedResult != System.Windows.MessageBoxResult.Yes)
+                            return;
                     }
 
                     // Perform actual prune
@@ -776,7 +785,10 @@ namespace LudusaviRestic
 
         public override void OnApplicationStopped(OnApplicationStoppedEventArgs args)
         {
-            _timer?.Dispose();
+            foreach (var gameId in this._timers.Keys.ToList())
+            {
+                StopGameplayTimer(gameId);
+            }
         }
 
         public override void OnGameUninstalled(OnGameUninstalledEventArgs args)
@@ -794,9 +806,26 @@ namespace LudusaviRestic
             if (settings.BackupDuringGameplay)
             {
                 var interval = settings.GetEffectiveInterval(args.Game.Id);
-                this._timer = new Timer(GameplayBackupTimerElapsed, args.Game,
+                var timer = new Timer(GameplayBackupTimerElapsed, args.Game,
                     interval * 60000,
                     interval * 60000);
+
+                // Swap atomically: a separate remove-then-assign leaves a window in which
+                // an interleaved OnGameStopped orphans the timer we just created.
+                this._timers.AddOrUpdate(args.Game.Id, timer, (gameId, previous) =>
+                {
+                    previous.Dispose();
+                    return timer;
+                });
+            }
+        }
+
+        private void StopGameplayTimer(Guid gameId)
+        {
+            Timer existing;
+            if (this._timers.TryRemove(gameId, out existing))
+            {
+                existing.Dispose();
             }
         }
 
@@ -808,7 +837,9 @@ namespace LudusaviRestic
 
         public override void OnGameStopped(OnGameStoppedEventArgs args)
         {
-            this._timer?.Dispose();
+            if (args?.Game is null) return;
+
+            StopGameplayTimer(args.Game.Id);
 
             if (this.settings.BackupWhenGameStopped)
             {

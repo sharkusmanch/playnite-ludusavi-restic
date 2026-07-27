@@ -14,6 +14,6 @@ repos:
       - id: format
         name: format
         language: system
-        entry: dotnet format src
+        entry: dotnet format src/LudusaviRestic.csproj
         types: [c#]
         pass_filenames: false
