@@ -107,7 +107,7 @@ namespace LudusaviRestic
                 // Both waits share one deadline: waiting them independently would either
                 // double the worst-case bound or, if short-circuited, skip stderr entirely
                 // whenever stdout timed out first.
-                int deadline = Environment.TickCount + flushTimeoutMilliseconds;
+                int deadline = unchecked(Environment.TickCount + flushTimeoutMilliseconds);
                 bool stdoutFlushed = stdoutClosed.Wait(RemainingMilliseconds(deadline));
                 bool stderrFlushed = stderrClosed.Wait(RemainingMilliseconds(deadline));
 
