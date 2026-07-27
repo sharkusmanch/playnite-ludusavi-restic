@@ -14,12 +14,18 @@ namespace LudusaviRestic
         private static readonly ILogger logger = LogManager.GetLogger();
 
         /// <summary>
-        /// Upper bound on a single restic/ludusavi invocation. Generous, because a first
-        /// backup or a "check --read-data" over a large repository legitimately takes a
-        /// long time; the point is to eventually release the backup semaphore rather than
-        /// to hold the session hostage to a wedged child process.
+        /// Last-resort bound on a single restic/ludusavi invocation. This exists only to
+        /// eventually release a *wedged* process, not to police how long legitimate work
+        /// may take, so it is deliberately far beyond any plausible real runtime.
+        ///
+        /// Sizing it tightly is a trap: "check --read-data" downloads and re-hashes the
+        /// entire repository, so it scales with repository size and backend latency, not
+        /// with anything the plugin controls. On a real 6 GiB rclone-backed repository a
+        /// metadata-only "check" already takes ~8 minutes, which puts the read-data
+        /// variant within striking distance of an hour on an average connection and past
+        /// it on a slow one — and repositories only grow.
         /// </summary>
-        internal const int DefaultTimeoutMilliseconds = 60 * 60 * 1000;
+        internal const int DefaultTimeoutMilliseconds = 24 * 60 * 60 * 1000;
 
         private int _exitCode;
         private string _stdout;
