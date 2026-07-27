@@ -104,8 +104,14 @@ namespace LudusaviRestic
                 }
 
                 // The child has exited, but its output may not have been delivered yet.
-                if (!stdoutClosed.Wait(flushTimeoutMilliseconds) ||
-                    !stderrClosed.Wait(flushTimeoutMilliseconds))
+                // Both waits share one deadline: waiting them independently would either
+                // double the worst-case bound or, if short-circuited, skip stderr entirely
+                // whenever stdout timed out first.
+                int deadline = Environment.TickCount + flushTimeoutMilliseconds;
+                bool stdoutFlushed = stdoutClosed.Wait(RemainingMilliseconds(deadline));
+                bool stderrFlushed = stderrClosed.Wait(RemainingMilliseconds(deadline));
+
+                if (!stdoutFlushed || !stderrFlushed)
                 {
                     logger.Warn($"'{process.StartInfo.FileName}' exited but its output streams did not " +
                                 "reach EOF; a surviving child process may still hold them. Output may be incomplete.");
@@ -128,6 +134,16 @@ namespace LudusaviRestic
             // Deliberately not disposed: an in-flight handler on a threadpool thread may
             // still touch them after the unsubscribe above, and ObjectDisposedException
             // there would be unobservable. They are finalizable and cost nothing to drop.
+        }
+
+        /// <summary>
+        /// Milliseconds left until <paramref name="deadline"/>, never negative. Uses
+        /// unchecked subtraction so a TickCount rollover still yields a correct interval.
+        /// </summary>
+        private static int RemainingMilliseconds(int deadline)
+        {
+            int remaining = unchecked(deadline - Environment.TickCount);
+            return remaining > 0 ? remaining : 0;
         }
 
         private static void TryKill(Process process)

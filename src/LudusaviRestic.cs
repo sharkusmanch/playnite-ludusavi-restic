@@ -27,6 +27,10 @@ namespace LudusaviRestic
         private readonly System.Collections.Concurrent.ConcurrentDictionary<Guid, Timer> _timers =
             new System.Collections.Concurrent.ConcurrentDictionary<Guid, Timer>();
 
+        // Serializes start/stop for a game so a stop cannot run between constructing a
+        // timer and registering it, which would leave it firing against an ended session.
+        private readonly object _timerLock = new object();
+
         public LudusaviRestic(IPlayniteAPI api) : base(api)
         {
             this.settings = new LudusaviResticSettings(this);
@@ -806,26 +810,33 @@ namespace LudusaviRestic
             if (settings.BackupDuringGameplay)
             {
                 var interval = settings.GetEffectiveInterval(args.Game.Id);
-                var timer = new Timer(GameplayBackupTimerElapsed, args.Game,
-                    interval * 60000,
-                    interval * 60000);
 
-                // Swap atomically: a separate remove-then-assign leaves a window in which
-                // an interleaved OnGameStopped orphans the timer we just created.
-                this._timers.AddOrUpdate(args.Game.Id, timer, (gameId, previous) =>
+                lock (this._timerLock)
                 {
-                    previous.Dispose();
-                    return timer;
-                });
+                    var timer = new Timer(GameplayBackupTimerElapsed, args.Game,
+                        interval * 60000,
+                        interval * 60000);
+
+                    // Swap atomically: a separate remove-then-assign leaves a window in
+                    // which an interleaved OnGameStopped orphans the timer just created.
+                    this._timers.AddOrUpdate(args.Game.Id, timer, (gameId, previous) =>
+                    {
+                        previous.Dispose();
+                        return timer;
+                    });
+                }
             }
         }
 
         private void StopGameplayTimer(Guid gameId)
         {
-            Timer existing;
-            if (this._timers.TryRemove(gameId, out existing))
+            lock (this._timerLock)
             {
-                existing.Dispose();
+                Timer existing;
+                if (this._timers.TryRemove(gameId, out existing))
+                {
+                    existing.Dispose();
+                }
             }
         }
 
