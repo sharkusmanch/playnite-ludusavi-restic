@@ -106,36 +106,72 @@ namespace LudusaviRestic
             return listfile;
         }
 
+        /// <summary>
+        /// Maps a restic exit code to a snapshot outcome. Only 0 means a snapshot was
+        /// written: restic 0.17+ also returns 10 (no repository), 11 (lock failed) and
+        /// 12 (wrong password), all of which previously reported success.
+        /// </summary>
+        internal static SnapshotResult MapExitCode(int exitCode)
+        {
+            switch (exitCode)
+            {
+                case 0:
+                    return SnapshotResult.Success;
+                case 3:
+                    return SnapshotResult.PartialFailure;
+                default:
+                    return SnapshotResult.Failed;
+            }
+        }
+
         internal static SnapshotResult CreateSnapshot(IList<string> files, BackupContext context, string game, IList<string> extraTags)
         {
             string listfile = WriteFilesToTempFile(files);
-            string tags = ConstructTags(game, extraTags);
-            string backupArgs = $"{tags} --files-from-verbatim \"{listfile}\"";
-
-            CommandResult process;
 
             try
             {
-                process = ResticCommand.Backup(context, backupArgs);
-            }
-            catch (Exception e)
-            {
-                logger.Debug(e, "Encountered error executing restic");
-                return SnapshotResult.Error;
-            }
+                string tags = ConstructTags(game, extraTags);
+                string backupArgs = $"{tags} --files-from-verbatim \"{listfile}\"";
 
-            switch (process.ExitCode)
+                CommandResult process;
+
+                try
+                {
+                    process = ResticCommand.Backup(context, backupArgs);
+                }
+                catch (Exception e)
+                {
+                    logger.Error(e, "Encountered error executing restic");
+                    return SnapshotResult.Error;
+                }
+
+                SnapshotResult result = MapExitCode(process.ExitCode);
+
+                switch (result)
+                {
+                    case SnapshotResult.PartialFailure:
+                        logger.Error($"Restic failed to read some game save files for {game}: {process.StdErr}");
+                        break;
+                    case SnapshotResult.Failed:
+                        logger.Error($"Failed to create restic game saves snapshot {game} (exit code {process.ExitCode}): {process.StdErr}");
+                        break;
+                }
+
+                return result;
+            }
+            finally
             {
-                case 1:
-                    logger.Error($"Failed to create restic game saves snapshot {game}");
-                    return SnapshotResult.Failed;
-                case 3:
-                    logger.Error($"Restic failed to read some game save files for {game}");
-                    return SnapshotResult.PartialFailure;
-                default:
-                    // Delete file list on success
+                try
+                {
                     System.IO.File.Delete(listfile);
-                    return SnapshotResult.Success;
+                }
+                catch (Exception e)
+                {
+                    // Cleanup only. GetTempFileName creates the file, so leaking one per
+                    // failed backup eventually exhausts the 65535-name limit, but failing
+                    // the backup over an undeletable temp file would be worse.
+                    logger.Warn(e, $"Failed to delete temporary file list {listfile}");
+                }
             }
         }
 

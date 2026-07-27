@@ -11,6 +11,12 @@ namespace LudusaviRestic
         private static readonly ILogger logger = LogManager.GetLogger();
 
         /// <summary>
+        /// Timeout for executable detection probes. Detection walks a list of candidate
+        /// paths on the UI thread, so each probe must fail fast rather than block.
+        /// </summary>
+        private const int ProbeTimeoutMilliseconds = 10 * 1000;
+
+        /// <summary>
         /// Attempts to automatically detect the restic executable path
         /// </summary>
         /// <returns>The path to restic executable, or null if not found</returns>
@@ -130,64 +136,7 @@ namespace LudusaviRestic
         /// <returns>True if valid restic executable</returns>
         public static bool IsValidResticExecutable(string path)
         {
-            if (string.IsNullOrWhiteSpace(path))
-                return false;
-
-            try
-            {
-                // For "restic" (no path), check if it's available in PATH
-                if (path == "restic")
-                {
-                    using (var process = new Process
-                    {
-                        StartInfo = new ProcessStartInfo
-                        {
-                            FileName = "restic",
-                            Arguments = "version",
-                            UseShellExecute = false,
-                            RedirectStandardOutput = true,
-                            RedirectStandardError = true,
-                            CreateNoWindow = true,
-                            WindowStyle = ProcessWindowStyle.Hidden
-                        }
-                    })
-                    {
-                        process.Start();
-                        var output = process.StandardOutput.ReadToEnd();
-                        process.WaitForExit();
-                        return process.ExitCode == 0 && output.Contains("restic");
-                    }
-                }
-
-                // For full paths, check if file exists and is executable
-                if (!File.Exists(path))
-                    return false;
-
-                using (var fileProcess = new Process
-                {
-                    StartInfo = new ProcessStartInfo
-                    {
-                        FileName = path,
-                        Arguments = "version",
-                        UseShellExecute = false,
-                        RedirectStandardOutput = true,
-                        RedirectStandardError = true,
-                        CreateNoWindow = true,
-                        WindowStyle = ProcessWindowStyle.Hidden
-                    }
-                })
-                {
-                    fileProcess.Start();
-                    var fileOutput = fileProcess.StandardOutput.ReadToEnd();
-                    fileProcess.WaitForExit();
-                    return fileProcess.ExitCode == 0 && fileOutput.Contains("restic");
-                }
-            }
-            catch (Exception ex)
-            {
-                logger.Debug($"Error checking restic executable at {path}: {ex.Message}");
-                return false;
-            }
+            return ProbeExecutable(path, "restic", "version", "restic");
         }
 
         /// <summary>
@@ -197,62 +146,32 @@ namespace LudusaviRestic
         /// <returns>True if valid ludusavi executable</returns>
         public static bool IsValidLudusaviExecutable(string path)
         {
+            return ProbeExecutable(path, "ludusavi", "--version", "ludusavi");
+        }
+
+        /// <summary>
+        /// Runs a version probe against a candidate executable. These run while settings
+        /// load, on Playnite's main thread, so the probe is given a short timeout: a path
+        /// on an unreachable network share would otherwise stall startup indefinitely.
+        /// </summary>
+        private static bool ProbeExecutable(string path, string bareName, string versionArgs, string expectedOutput)
+        {
             if (string.IsNullOrWhiteSpace(path))
+                return false;
+
+            // A bare name is resolved through PATH; anything else must exist on disk.
+            if (path != bareName && !File.Exists(path))
                 return false;
 
             try
             {
-                // For "ludusavi" (no path), check if it's available in PATH
-                if (path == "ludusavi")
-                {
-                    using (var process = new Process
-                    {
-                        StartInfo = new ProcessStartInfo
-                        {
-                            FileName = "ludusavi",
-                            Arguments = "--version",
-                            UseShellExecute = false,
-                            RedirectStandardOutput = true,
-                            RedirectStandardError = true,
-                            CreateNoWindow = true,
-                            WindowStyle = ProcessWindowStyle.Hidden
-                        }
-                    })
-                    {
-                        process.Start();
-                        var output = process.StandardOutput.ReadToEnd();
-                        process.WaitForExit();
-                        return process.ExitCode == 0 && output.ToLower().Contains("ludusavi");
-                    }
-                }
-
-                // For full paths, check if file exists and is executable
-                if (!File.Exists(path))
-                    return false;
-
-                using (var fileProcess = new Process
-                {
-                    StartInfo = new ProcessStartInfo
-                    {
-                        FileName = path,
-                        Arguments = "--version",
-                        UseShellExecute = false,
-                        RedirectStandardOutput = true,
-                        RedirectStandardError = true,
-                        CreateNoWindow = true,
-                        WindowStyle = ProcessWindowStyle.Hidden
-                    }
-                })
-                {
-                    fileProcess.Start();
-                    var fileOutput = fileProcess.StandardOutput.ReadToEnd();
-                    fileProcess.WaitForExit();
-                    return fileProcess.ExitCode == 0 && fileOutput.ToLower().Contains("ludusavi");
-                }
+                var result = BaseCommand.ExecuteCommand(path, versionArgs, null, ProbeTimeoutMilliseconds);
+                return result.ExitCode == 0
+                    && result.StdOut.IndexOf(expectedOutput, StringComparison.OrdinalIgnoreCase) >= 0;
             }
             catch (Exception ex)
             {
-                logger.Debug($"Error checking ludusavi executable at {path}: {ex.Message}");
+                logger.Debug($"Error checking {bareName} executable at {path}: {ex.Message}");
                 return false;
             }
         }
@@ -268,40 +187,15 @@ namespace LudusaviRestic
         {
             logger.Info($"Initializing restic repository at: {repositoryPath}");
 
-            // Create a temporary context with the new repository settings
-            var tempSettings = new LudusaviResticSettings
-            {
-                ResticExecutablePath = context.Settings.ResticExecutablePath,
-                ResticRepository = repositoryPath,
-                ResticPassword = password
-            };
+            // Start from the configured environment so an rclone-backed repository still
+            // resolves, then point restic at the repository being created.
+            var environment = context.BuildResticEnvironment();
+            environment["RESTIC_REPOSITORY"] = repositoryPath;
+            environment["RESTIC_PASSWORD"] = password;
 
-            var tempContext = new BackupContext(context.API, tempSettings);
+            logger.Debug($"Repository: {repositoryPath}");
 
-            // Execute restic init command
-            using (var process = new Process
-            {
-                StartInfo = new ProcessStartInfo
-                {
-                    FileName = tempSettings.ResticExecutablePath,
-                    Arguments = "init",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true,
-                    CreateNoWindow = true,
-                    WindowStyle = ProcessWindowStyle.Hidden
-                }
-            })
-            {
-                // Set environment variables for restic
-                process.StartInfo.Environment["RESTIC_REPOSITORY"] = repositoryPath;
-                process.StartInfo.Environment["RESTIC_PASSWORD"] = password;
-
-                logger.Debug($"Executing: {process.StartInfo.FileName} {process.StartInfo.Arguments}");
-                logger.Debug($"Repository: {repositoryPath}");
-
-                return new CommandResult(process);
-            }
+            return BaseCommand.ExecuteCommand(context.Settings.ResticExecutablePath.Trim(), "init", environment);
         }
 
         /// <summary>

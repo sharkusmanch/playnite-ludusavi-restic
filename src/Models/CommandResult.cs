@@ -1,6 +1,9 @@
+using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
+using Playnite.SDK;
 
 [assembly: InternalsVisibleTo("LudusaviRestic.Tests")]
 
@@ -8,6 +11,22 @@ namespace LudusaviRestic
 {
     public class CommandResult
     {
+        private static readonly ILogger logger = LogManager.GetLogger();
+
+        /// <summary>
+        /// Last-resort bound on a single restic/ludusavi invocation. This exists only to
+        /// eventually release a *wedged* process, not to police how long legitimate work
+        /// may take, so it is deliberately far beyond any plausible real runtime.
+        ///
+        /// Sizing it tightly is a trap: "check --read-data" downloads and re-hashes the
+        /// entire repository, so it scales with repository size and backend latency, not
+        /// with anything the plugin controls. On a real 6 GiB rclone-backed repository a
+        /// metadata-only "check" already takes ~8 minutes, which puts the read-data
+        /// variant within striking distance of an hour on an average connection and past
+        /// it on a slow one — and repositories only grow.
+        /// </summary>
+        internal const int DefaultTimeoutMilliseconds = 24 * 60 * 60 * 1000;
+
         private int _exitCode;
         private string _stdout;
         private string _stderr;
@@ -23,19 +42,128 @@ namespace LudusaviRestic
             this._stderr = stderr;
         }
 
-        public CommandResult(Process process)
+        public CommandResult(Process process) : this(process, DefaultTimeoutMilliseconds)
         {
-            process.Start();
-            this._stdout = TransformProcessOutput(process.StandardOutput.ReadToEnd());
-            process.WaitForExit(4000);
-            this._stderr = TransformProcessOutput(process.StandardError.ReadToEnd());
-            this._exitCode = process.ExitCode;
         }
 
-        internal static string TransformProcessOutput(string output)
+        /// <summary>
+        /// How long to wait, after the child has exited, for its output pipes to reach EOF.
+        /// A grandchild that inherited the pipes (restic spawning rclone) can hold them open
+        /// after restic itself is gone, so this wait must be bounded: an unbounded one would
+        /// hang the caller and hold the backup semaphore for the rest of the session.
+        /// </summary>
+        internal const int StreamFlushTimeoutMilliseconds = 10 * 1000;
+
+        internal CommandResult(Process process, int timeoutMilliseconds)
+            : this(process, timeoutMilliseconds, StreamFlushTimeoutMilliseconds)
         {
-            byte[] bytes = Encoding.Default.GetBytes(output);
-            return Encoding.UTF8.GetString(bytes);
+        }
+
+        internal CommandResult(Process process, int timeoutMilliseconds, int flushTimeoutMilliseconds)
+        {
+            var stdout = new StringBuilder();
+            var stderr = new StringBuilder();
+            var outputLock = new object();
+
+            var stdoutClosed = new ManualResetEventSlim(false);
+            var stderrClosed = new ManualResetEventSlim(false);
+
+            // Both pipes must be drained concurrently. Reading one to EOF before touching
+            // the other deadlocks permanently as soon as the unread pipe's buffer fills
+            // (~4 KB), which restic reaches easily on any error-heavy run.
+            //
+            // A null Data signals EOF on that stream. The lock guards against a torn read
+            // if the flush wait below times out while a handler is still appending.
+            DataReceivedEventHandler onStdout = (sender, e) =>
+            {
+                if (e.Data == null) { stdoutClosed.Set(); }
+                else { lock (outputLock) { stdout.AppendLine(e.Data); } }
+            };
+            DataReceivedEventHandler onStderr = (sender, e) =>
+            {
+                if (e.Data == null) { stderrClosed.Set(); }
+                else { lock (outputLock) { stderr.AppendLine(e.Data); } }
+            };
+
+            process.OutputDataReceived += onStdout;
+            process.ErrorDataReceived += onStderr;
+
+            try
+            {
+                process.Start();
+
+                // Hand the child an immediately-closed stdin so anything that would prompt
+                // interactively (restic asking for a password) fails fast instead of hanging.
+                if (process.StartInfo.RedirectStandardInput)
+                {
+                    process.StandardInput.Close();
+                }
+
+                process.BeginOutputReadLine();
+                process.BeginErrorReadLine();
+
+                if (!process.WaitForExit(timeoutMilliseconds))
+                {
+                    TryKill(process);
+                    throw new TimeoutException(
+                        $"'{process.StartInfo.FileName}' did not exit within {timeoutMilliseconds} ms and was terminated");
+                }
+
+                // The child has exited, but its output may not have been delivered yet.
+                // Both waits share one deadline: waiting them independently would either
+                // double the worst-case bound or, if short-circuited, skip stderr entirely
+                // whenever stdout timed out first.
+                int deadline = unchecked(Environment.TickCount + flushTimeoutMilliseconds);
+                bool stdoutFlushed = stdoutClosed.Wait(RemainingMilliseconds(deadline));
+                bool stderrFlushed = stderrClosed.Wait(RemainingMilliseconds(deadline));
+
+                if (!stdoutFlushed || !stderrFlushed)
+                {
+                    logger.Warn($"'{process.StartInfo.FileName}' exited but its output streams did not " +
+                                "reach EOF; a surviving child process may still hold them. Output may be incomplete.");
+                }
+
+                this._exitCode = process.ExitCode;
+            }
+            finally
+            {
+                process.OutputDataReceived -= onStdout;
+                process.ErrorDataReceived -= onStderr;
+            }
+
+            lock (outputLock)
+            {
+                this._stdout = stdout.ToString();
+                this._stderr = stderr.ToString();
+            }
+
+            // Deliberately not disposed: an in-flight handler on a threadpool thread may
+            // still touch them after the unsubscribe above, and ObjectDisposedException
+            // there would be unobservable. They are finalizable and cost nothing to drop.
+        }
+
+        /// <summary>
+        /// Milliseconds left until <paramref name="deadline"/>, never negative. Uses
+        /// unchecked subtraction so a TickCount rollover still yields a correct interval.
+        /// </summary>
+        private static int RemainingMilliseconds(int deadline)
+        {
+            int remaining = unchecked(deadline - Environment.TickCount);
+            return remaining > 0 ? remaining : 0;
+        }
+
+        private static void TryKill(Process process)
+        {
+            try
+            {
+                if (!process.HasExited) { process.Kill(); }
+            }
+            catch (Exception e)
+            {
+                // Best-effort cleanup: the process may have exited between the check and
+                // the kill, and the timeout is reported either way.
+                logger.Debug(e, "Failed to terminate timed-out process");
+            }
         }
     }
 }

@@ -159,7 +159,7 @@ namespace LudusaviRestic
         private static void ParseDeletedSnapshotsText(PruneResult result, string output)
         {
             // Fallback text parsing for prune output
-            var lines = output.Split('\n');
+            var lines = output.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (var line in lines)
             {
@@ -295,7 +295,7 @@ namespace LudusaviRestic
         private static void ParseForgetSnapshotsText(PruneResult result, string output)
         {
             // Fallback text parsing for forget output
-            var lines = output.Split('\n');
+            var lines = output.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
             DeletedSnapshot currentSnapshot = null;
 
             foreach (var line in lines.Where(l => !string.IsNullOrWhiteSpace(l)))

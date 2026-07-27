@@ -3,7 +3,21 @@
   "extends": [
     "config:recommended"
   ],
-  "ignoreDeps": [
-    "Newtonsoft.Json"
+  "packageRules": [
+    {
+      "description": "Pinned to 10.0.3 deliberately: Playnite loads its own Newtonsoft.Json into the plugin AppDomain, and referencing a different version causes assembly load failures at runtime. Those surface as silently swallowed exceptions inside try/catch blocks rather than build errors, so an upgrade here looks green and fails in production. The test project pins the same version plus a binding redirect for the same reason.",
+      "matchPackageNames": [
+        "Newtonsoft.Json"
+      ],
+      "enabled": false
+    },
+    {
+      "description": "xunit v3 dropped .NET Framework 4.6.2 and requires net472 or later; this project targets net462. Upgrades fail restore with NU1202 rather than producing a usable build, so hold at 2.x. Minor and patch updates within 2.x are still proposed.",
+      "matchPackageNames": [
+        "xunit",
+        "xunit.runner.visualstudio"
+      ],
+      "allowedVersions": "<3"
+    }
   ]
 }
